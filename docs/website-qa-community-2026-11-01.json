@@ -1,0 +1,178 @@
+{
+  "headless": true,
+  "browser": "156.0.8078.4",
+  "pages": [
+    {
+      "path": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/projects",
+      "status": 200
+    },
+    {
+      "path": "/de/story",
+      "status": 200
+    },
+    {
+      "path": "/de/platform",
+      "status": 200
+    },
+    {
+      "path": "/de/qa",
+      "status": 200
+    },
+    {
+      "path": "/de/build",
+      "status": 200
+    },
+    {
+      "path": "/de/contribute",
+      "status": 200
+    },
+    {
+      "path": "/de/contact",
+      "status": 200
+    },
+    {
+      "path": "/de/sources",
+      "status": 200
+    },
+    {
+      "path": "/de/privacy",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/projects",
+      "status": 200
+    },
+    {
+      "path": "/en/story",
+      "status": 200
+    },
+    {
+      "path": "/en/platform",
+      "status": 200
+    },
+    {
+      "path": "/en/qa",
+      "status": 200
+    },
+    {
+      "path": "/en/build",
+      "status": 200
+    },
+    {
+      "path": "/en/contribute",
+      "status": 200
+    },
+    {
+      "path": "/en/contact",
+      "status": 200
+    },
+    {
+      "path": "/en/sources",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/build",
+      "status": 200
+    }
+  ],
+  "checks": [
+    "5 native videos: manual playback, bilingual captions and downloadable sources",
+    "Language switch preserves matching project",
+    "Bilingual Q&A, preserved entry anchors, project references and tablet navigation",
+    "Anonymous form confirmed server storage",
+    "Anonymous inbox API forbidden",
+    "Cross-origin writes forbidden",
+    "Owner login, read, complete and delete persisted; synthetic message removed",
+    "Mobile menu and keyboard focus work; reduced motion respected",
+    "Q&A desktop and mobile captures inspected internally in both layouts; no visible clipping or obscured content.",
+    "Source changes checked against private sender details, message identifiers, submission metadata and distinctive equipment details; no matches.",
+    "TypeScript check and six core/content checks passed; sitemap contains 38 language pages."
+  ],
+  "errors": [],
+  "status": "PASS",
+  "scope": "Community Q&A introduction; German and English; 1 November 2026",
+  "limits": [
+    "Browser checks ran against the local Sites development server with its documented mock owner identity and local D1 storage. Production identity enforcement is checked separately by anonymous/forged-header readback.",
+    "The Q&A describes existing tests and outstanding boat trials; it adds no new device or on-water evidence."
+  ]
+}

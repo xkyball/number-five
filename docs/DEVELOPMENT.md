@@ -6,6 +6,12 @@ This is the public Number Five site. The separate private No5 Project Cockpit is
 
 `content/projects.ts` holds paired German/English module content, timeline, credits and source-note links. `content/editorial.ts` supplies the shared story, extension paths, costs and case-study insights. `content/demos.json` identifies native recordings, bilingual captions and their limits. `content/media.json` holds paired captions and provenance; original images are in `public/images/`. `content/downloads.json` lists actual source archives with sizes and SHA-256. Avoid unsupported claims or substituting simulated screenshots for physical proof.
 
+## Public questions and answers
+
+`content/qa.json` contains only curated, published German/English questions, answers, fictional comic roles, consequences, open items and links. New entries are prepared on request in the project chat. Do not place raw feedback, personal details, private message identifiers, mailbox links or draft provenance in this file, Git or deployment output. Generalise distinctive circumstances as well as names; paraphrase rather than quote. Comic roles belong to questions and never map to real senders. Check both languages against the selected feedback and response before publication. No automatic inbox-to-Q&A publication or admin editor is configured.
+
+The `/de/qa` and `/en/qa` pages use matching stable entry anchors. The shared language switch retains the current fragment. Contact copy explains the distinction between private original messages and public, editorially paraphrased questions. The Q&A content test checks paired text and the public field allowlist; visual and rendered-output privacy checks remain necessary.
+
 ## Database and contact
 
 The Sites manifest binds D1 as `DB`. Schema lives in `db/schema.ts`; generated SQL, snapshots and journal are in `drizzle/`. Do not change applied migrations. After schema changes, generate a new migration with `npm run db:generate`.
@@ -29,7 +35,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ## Validation
 
-`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises36 bilingual pages, images, both native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
+`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises 38 bilingual pages, images, the native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
 
 `outputs/` contains ignored local QA captures and logs. The public QA report identifies performed checks and limits.
 
