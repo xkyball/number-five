@@ -1,0 +1,176 @@
+{
+  "origin": "https://no5.christophhoffmann.net",
+  "pages": [
+    {
+      "path": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/projects",
+      "status": 200
+    },
+    {
+      "path": "/de/story",
+      "status": 200
+    },
+    {
+      "path": "/de/build",
+      "status": 200
+    },
+    {
+      "path": "/de/contribute",
+      "status": 200
+    },
+    {
+      "path": "/de/contact",
+      "status": 200
+    },
+    {
+      "path": "/de/sources",
+      "status": 200
+    },
+    {
+      "path": "/de/privacy",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/projects",
+      "status": 200
+    },
+    {
+      "path": "/en/story",
+      "status": 200
+    },
+    {
+      "path": "/en/build",
+      "status": 200
+    },
+    {
+      "path": "/en/contribute",
+      "status": 200
+    },
+    {
+      "path": "/en/contact",
+      "status": 200
+    },
+    {
+      "path": "/en/sources",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/de/platform",
+      "status": 200
+    },
+    {
+      "path": "/en/platform",
+      "status": 200
+    }
+  ],
+  "checks": [
+    "All36 public language pages serve the correct language on the custom domain",
+    "Live contact endpoint issues signed token",
+    "Live honeypot rejected without creating a message",
+    "Anonymous and forged-identity inbox requests forbidden (403)"
+  ],
+  "limits": [
+    "Contact persistence, owner state changes and deletion tested against isolated local D1; live schema and endpoint inspected without injecting a production message.",
+    "No new on-water, app-performance or two-client audio proof implied."
+  ],
+  "testedVersion": 4,
+  "unchangedForNextVersion": "Only translated metadata description and verification documentation added.",
+  "externalLinks": {
+    "checked": 34,
+    "reachable": 32,
+    "unresolved": [
+      {
+        "url": "https://www.wellenvogel.net/software/avnav/docs/",
+        "reason": "HEAD and GET denied automated access (403); official reference retained."
+      },
+      {
+        "url": "https://www.gnu.org/licenses/gpl-3.0.html",
+        "reason": "HEAD and GET denied automated access (403); official licence reference retained."
+      }
+    ],
+    "note": "Two newly published GitHub provenance links were rechecked after source push and returned200."
+  }
+}

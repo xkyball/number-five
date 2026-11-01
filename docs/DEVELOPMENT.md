@@ -4,7 +4,7 @@ This is the public Number Five site. The separate private No5 Project Cockpit is
 
 ## Content
 
-`content/projects.ts` holds paired German/English module content, timeline, credits and source-note links. `content/media.json` holds paired captions and provenance; original images are in `public/images/`. `content/downloads.json` lists actual source archives with sizes and SHA-256. Avoid unsupported claims or substituting simulated screenshots for physical proof.
+`content/projects.ts` holds paired German/English module content, timeline, credits and source-note links. `content/editorial.ts` supplies the shared story, extension paths, costs and case-study insights. `content/demos.json` identifies native recordings, bilingual captions and their limits. `content/media.json` holds paired captions and provenance; original images are in `public/images/`. `content/downloads.json` lists actual source archives with sizes and SHA-256. Avoid unsupported claims or substituting simulated screenshots for physical proof.
 
 ## Database and contact
 
