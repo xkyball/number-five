@@ -1,0 +1,4 @@
+# Observed runtime and synthetic test versions, 2026-11-01
+shapely==2.2.0
+pyshp==2.4.2
+pytest==9.1.1

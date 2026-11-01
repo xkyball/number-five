@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/header_shell" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="#09202a">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+        android:layout_marginTop="2dp" android:layout_marginBottom="22dp"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingStart="20dp" android:paddingEnd="20dp">
+        <LinearLayout android:id="@+id/header_home" android:layout_width="wrap_content"
+            android:layout_height="match_parent" android:minWidth="112dp"
+            android:gravity="center_vertical" android:orientation="vertical"
+            android:paddingEnd="28dp" android:contentDescription="No5 · Android-System-HOME öffnen">
+            <TextView android:id="@+id/header_brand" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="NO5" android:textSize="28sp"
+                android:fontFamily="@font/barlow_condensed_extrabold" android:textColor="#f6f8f7" />
+            <TextView android:id="@+id/header_version" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:textSize="12sp"
+                android:fontFamily="@font/barlow_condensed_regular" android:textColor="#f6f8f7" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="0dp" android:layout_weight="1"
+            android:layout_height="match_parent" android:orientation="vertical"
+            android:gravity="center_vertical">
+            <TextView android:id="@+id/header_context" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="SYSTEMUI · SLOT-TEST"
+                android:textSize="24sp" android:fontFamily="@font/barlow_condensed_semibold"
+                android:textColor="#f6f8f7" android:maxLines="1" />
+            <TextView android:id="@+id/header_data" android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:text="App-Bereich · keine Messdaten"
+                android:textSize="16sp" android:fontFamily="@font/barlow_condensed_regular"
+                android:textColor="#f6f8f7" android:maxLines="1" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView android:id="@+id/header_bottom" android:layout_width="match_parent"
+        android:layout_height="20dp" android:layout_gravity="bottom"
+        android:paddingStart="20dp" android:text="UNTERKANTE · SYSTEMUI-SLOT"
+        android:textSize="12sp" android:fontFamily="@font/barlow_condensed_regular"
+        android:textColor="#f6f8f7" />
+    <TextView android:id="@+id/header_top_rule" android:layout_width="match_parent"
+        android:layout_height="1dp" android:layout_gravity="top" android:background="#ff5b00" />
+    <TextView android:id="@+id/header_bottom_rule" android:layout_width="match_parent"
+        android:layout_height="1dp" android:layout_gravity="bottom" android:background="#ff5b00" />
+</FrameLayout>

@@ -1,0 +1,107 @@
+{
+  "api": {
+    "apply_scoped_locality(raw,allowlist,expected_sha256)": "The expected hash pins the external allowlist. Source bytes/hash, immutable kernel pins, freshly recomputed per-tile plan and all visual/admission/query proof pins must match. Both semantic dispositions must be IDENTICAL_WITHIN_PROVED_SOURCE_DOMAIN. Native source IDs/scale stay unchanged. No query-loss override.",
+    "prepare_scoped_plan(raw,tiles,*,command_scope=\"pure_ac_fill\")": "Read-only candidate metadata, not approval. Explicit existing L15 vector leaves only. Every raw record/context, complete RO/AO hash, part mapping/certificate and compacted buffer hash is bound into a canonical per-tile plan SHA. The exact command scope is part of every per-tile plan hash."
+  },
+  "currentKernels": {
+    "arena": {
+      "bytes": 8318,
+      "packagePath": "src/no_chart_converter/rx5/arena.py",
+      "sha256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+    },
+    "wholeOwner": {
+      "bytes": 4341,
+      "packagePath": "src/no_chart_converter/rx5/locality_empty.py",
+      "sha256": "786245e2c155f59b0b7c7961bf38786cc7b785a9b958ea38be1d8a5b7cf614d7"
+    },
+    "wholePart": {
+      "bytes": 10572,
+      "packagePath": "src/no_chart_converter/rx5/locality_parts.py",
+      "sha256": "0ef90896b6897139fa5c5bd25416247df1536d65de286c646056b85027445540"
+    }
+  },
+  "externalProofMathIndependentlyRecomputed": false,
+  "format": "no5-scoped-locality-apply-port-provenance/1",
+  "guardScope": {
+    "atLeastOneRecordMustRemain": true,
+    "broaderReviewedKernelsMode": "Proposal only; not authorised by this V31 release",
+    "defaultCommandScope": "pure_ac_fill",
+    "destinationProofLevels": [
+      15,
+      29
+    ],
+    "knownDrawingContextKeys": [
+      196608,
+      196609
+    ],
+    "noAutomaticDefault": true,
+    "sourceLeafMustHaveNoDescendants": true,
+    "sourceLevels": [
+      15
+    ]
+  },
+  "independentV31SourceApproval": {
+    "bytes": 6099,
+    "path": "work/AP11/product-completion-20261017/decoder-locality-review-v31/SOURCE_APPROVAL.json",
+    "sha256": "a3e338414ddf0ae396113e1b740db002349ae75085e0dd81809dae5ae9d4670d"
+  },
+  "noCLIOrGitFilesChangedByThisAgent": true,
+  "noHistoricalAbsoluteRuntimeImports": true,
+  "noOEMLibraryImports": true,
+  "noRuntimeChartOrProofDataImported": true,
+  "originalExactPortKernels": {
+    "arena": {
+      "bytes": 8318,
+      "module": "no_chart_converter.rx5.arena",
+      "sha256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+    },
+    "wholeOwner": {
+      "bytes": 4180,
+      "module": "no_chart_converter.rx5.locality_empty",
+      "sha256": "d2f9ae8c77295a1453874fbe95f0b1d00097687ea63b39e34b8b2c6200fa6b70"
+    },
+    "wholePart": {
+      "bytes": 7406,
+      "module": "no_chart_converter.rx5.locality_parts",
+      "sha256": "3d4decba065b9bddb50ffa167a0a056a1ba0b8fa18ed16d6b5e9e3505c98a004"
+    }
+  },
+  "ownSource": {
+    "adaptation": "OWN_V31_SCOPE_BOUND_PURE_AC_DEFAULT_AND_VALID_PLAIN_HEADER_GUARD; ORIGINAL_PORT_SOURCE_HASH_RETAINED",
+    "bytes": 15793,
+    "packagePath": "src/no_chart_converter/rx5/locality_apply.py",
+    "priorExactPortBytes": 14291,
+    "priorExactPortSHA256": "2e06edc6db6c14e0a2664c02f0fcb5f8a1553a71e6b2804dd2d25602b705c1d0",
+    "sha256": "2dccb986a6870029dbe63693c124e19cbc08bb1fcf524d6827690255337cbd9a",
+    "source": "work/AP04/product-completion-20261016/portable-locality-cli-v25/locality_apply.py"
+  },
+  "preservation": "Original master prefix, source IDs/scales, RO/AO addresses, title, retained28-byte records, typed XY/XYZ+Dcm/high8/order/aliases; only UUID and approved8-byte ancestor references change in the prefix.",
+  "priorOwnProducer": {
+    "adaptation": "Only own plan/append/inverse orchestration reused; fixed machine/source/tile literals and title updates removed.",
+    "bytes": 14780,
+    "sha256": "92141784c214b9a5e7164035e91baac2cb56f3216041140763e660a065ec5096",
+    "source": "work/AP04/product-completion-20261016/native-loading-v25/loading_tool.py"
+  },
+  "tests": {
+    "bytes": 11310,
+    "checks": [
+      "Source/allowlist/kernel/plan/proof hash binding",
+      "No query-loss or source-gate override",
+      "Candidate metadata cannot approve itself",
+      "Original prefix inverse and other active payloads",
+      "Title/RO/AO/Kind4+9 signed depth and aliases",
+      "L15 leaf only and explicit nonempty scope",
+      "No all-owner-empty vector state"
+    ],
+    "combinedWithExistingLocalityKernelTests": 52,
+    "inventedDataOnly": true,
+    "newProjectionAndScopeControls": {
+      "bytes": 7770,
+      "path": "tests/test_locality_projection_domain.py",
+      "sha256": "e7a2e10701f5be65c94cba0b59207196e0eef6f47431669fefccf6e4b2e05776"
+    },
+    "passed": 19,
+    "path": "tests/test_locality_apply.py",
+    "sha256": "7611ac128bb61f321f5b97a2a38b26c14b4c1e9ef6f471b2b637bed033bcadae"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "countryRuntimeProvenance": "src/no_chart_converter/country_runtime/SOURCE_PROVENANCE_COUNTRY.json",
+  "format": "no5-chart-converter-port-provenance/1",
+  "ownTestSources": [
+    {
+      "adaptation": "Only own synthetic BinaryFailures and GeometryTests retained; imports point to packaged decoder.",
+      "packagePath": "tests/test_decoder_geometry.py",
+      "source": "work/AP02/test_decoder.py"
+    }
+  ],
+  "rows": [
+    {
+      "adaptation": "EXACT_OWN_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/rx5/wire.py",
+      "packagedBytes": 8223,
+      "packagedSHA256": "182d9059b340f20f309b56ce49f4c8cfc4082cd3f6d737df65f95bb2067deb96",
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/wire.py",
+      "sourceBytes": 8223,
+      "sourceSHA256": "182d9059b340f20f309b56ce49f4c8cfc4082cd3f6d737df65f95bb2067deb96"
+    },
+    {
+      "adaptation": "EXACT_OWN_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/rx5/mask_merge.py",
+      "packagedBytes": 7295,
+      "packagedSHA256": "39c5dcfcc204bbd147ea9fd2c6d8781ed71ba55b524d5e3a8ecc55cb33548c10",
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/merge_core.py",
+      "sourceBytes": 7295,
+      "sourceSHA256": "39c5dcfcc204bbd147ea9fd2c6d8781ed71ba55b524d5e3a8ecc55cb33548c10"
+    },
+    {
+      "adaptation": "EXACT_OWN_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/rx5/arena.py",
+      "packagedBytes": 8318,
+      "packagedSHA256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335",
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/arena_companion.py",
+      "sourceBytes": 8318,
+      "sourceSHA256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+    },
+    {
+      "adaptation": "EXACT_OWN_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/rx5/pruning.py",
+      "packagedBytes": 6406,
+      "packagedSHA256": "4fddfd6c15628d6e2dd66889228bdf48de661394ae609fa528c640f89756f758",
+      "source": "work/AP04/product-completion-20261016/native-visual-prune-v23/apply_core.py",
+      "sourceBytes": 6406,
+      "sourceSHA256": "4fddfd6c15628d6e2dd66889228bdf48de661394ae609fa528c640f89756f758"
+    },
+    {
+      "adaptation": "EXACT_OWN_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/rx5/metadata.py",
+      "packagedBytes": 4337,
+      "packagedSHA256": "d47a5481ec95006b1f40f16f7566ec779897a0e0ba9086205efac9dd54a5047d",
+      "source": "work/AP11/product-completion-20261015/country-v10-native-portrayal-v1/localize_metadata.py",
+      "sourceBytes": 4337,
+      "sourceSHA256": "d47a5481ec95006b1f40f16f7566ec779897a0e0ba9086205efac9dd54a5047d"
+    },
+    {
+      "adaptation": "PACKAGED_WIRE_AND_METADATA_IMPORTS; EXPLICIT_SOURCE_STORE_CONFIG; LEVEL21_INVERSE; KIND4_9_XYZ; FULL_LEVEL_RETIREMENT_GUARDS; NO_FIXED_MACHINE_OR_DATASET",
+      "packagePath": "src/no_chart_converter/rx5/region.py",
+      "packagedBytes": 28476,
+      "packagedSHA256": "c9b061d05d89847c73e67e98c0a8497403d4c12cc8385e56a431d90da810b981",
+      "source": "work/AP11/product-completion-20261015/region-export-v1/region_export.py",
+      "sourceBytes": 29088,
+      "sourceSHA256": "15cb96cb86aed06e029652761e474eb8decf00a6ee0b173a8276e8d5ef8f1130"
+    },
+    {
+      "adaptation": "EXPLICIT_PATH_AND_HASH_ARGUMENTS_AND_PACKAGED_OWN_SCHEMA; GEOMETRY_AND_ARCHIVE_VALIDATION_PRESERVED; EXPLICIT_OUTPUT_BYTE_BUDGET; EXACT_ATOMIC_PUBLISH_CAPABILITY_ERRORS_NO_UNSAFE_FALLBACK",
+      "packagePath": "src/no_chart_converter/cache_decoder.py",
+      "packagedBytes": 46819,
+      "packagedSHA256": "5fe34b2445ab355d9fcbdc9653a53e3d62bb81c61f7946d735df0662fc16a790",
+      "source": "work/AP02/decoder.py",
+      "sourceBytes": 47886,
+      "sourceSHA256": "d061208dafea0a4ef1f9c3d0aefbcc14d743ea19fe9c7e64ad3e4e07b8c86a3f"
+    },
+    {
+      "adaptation": "EXACT_OWN_SCHEMA_COPY",
+      "packagePath": "src/no_chart_converter/resources/ir-schema.json",
+      "packagedBytes": 34933,
+      "packagedSHA256": "974ed38e899a345dec1500d0baf21b9d3c2c1301b659c964e280930e30280e52",
+      "source": "work/AP01/ir-schema.json",
+      "sourceBytes": 34933,
+      "sourceSHA256": "974ed38e899a345dec1500d0baf21b9d3c2c1301b659c964e280930e30280e52"
+    },
+    {
+      "adaptation": "EXPLICIT_SOURCE_STORE_AND_PACKAGED_REGION_IMPORT; LOOPBACK; NO_CODE_LOADER; NO_AUTO_BROWSER_OR_EXTERNAL_TILES; HASH_BOUND_EXPORT_DOWNLOADS",
+      "packagePath": "src/no_chart_converter/area_picker.py",
+      "packagedBytes": 14583,
+      "packagedSHA256": "a47b1c961050d84e7736f936c9b5e1e67fbf72cf7c42a59a4f32a38d9f862232",
+      "source": "tools/area-picker-v15/server.py",
+      "sourceBytes": 18569,
+      "sourceSHA256": "cccfe07aeb67bd1c9e4d01f76930366cb8ab49f67bf49e544f73419797db3630"
+    },
+    {
+      "adaptation": "PORTABLE_EXACT_SOURCE_AND_EXTERNAL_PROOF_PIN_RECHECKS; CURRENT_V23_QUERY_IDENTITY_ONLY_POLICY; OPTIONAL_SEPARATE_TITLE_APPEND_AND_PREFIX_INVERSE",
+      "packagePath": "src/no_chart_converter/rx5/approvals.py",
+      "packagedBytes": 5726,
+      "packagedSHA256": "2bfafd1d170fb402cefba294943c315883c70697ad62d1574bb6c618b7e526ea",
+      "source": "work/AP04/product-completion-20261016/native-visual-prune-v23/prune_tool.py",
+      "sourceBytes": 8312,
+      "sourceSHA256": "64e5c0c63652ba7ca02fa87b304e8aa50b1d6b9beeb862d7c8574ae76989b0d4"
+    },
+    {
+      "adaptation": "OWN_EXISTING_UI_WITH_DATASTORE_LABEL_GENERALIZED",
+      "packagePath": "src/no_chart_converter/area_static/app.js",
+      "packagedBytes": 27461,
+      "packagedSHA256": "cfab91449b475b6ac3943d4d1e41f920b9ee0c2d4e033bf8c96f488dc6d7631b",
+      "source": "tools/area-picker-v15/static/app.js",
+      "sourceBytes": 27445,
+      "sourceSHA256": "00096d7f9037c3e199359091f7df50eea6e408f28396abac8cf11758c57ec6c1"
+    },
+    {
+      "adaptation": "EXACT_OWN_UI_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/area_static/index.html",
+      "packagedBytes": 8189,
+      "packagedSHA256": "91a88d7c07d33a2fb77024ff5bbf2fb500891f3170f371d3d2ca1639c7656555",
+      "source": "tools/area-picker-v15/static/index.html",
+      "sourceBytes": 8189,
+      "sourceSHA256": "91a88d7c07d33a2fb77024ff5bbf2fb500891f3170f371d3d2ca1639c7656555"
+    },
+    {
+      "adaptation": "EXACT_OWN_UI_SOURCE_COPY",
+      "packagePath": "src/no_chart_converter/area_static/style.css",
+      "packagedBytes": 12682,
+      "packagedSHA256": "5403b64e04a7b6af25ad69112606ec5b51ad4f61f115c6e185923b417d482f8b",
+      "source": "tools/area-picker-v15/static/style.css",
+      "sourceBytes": 12682,
+      "sourceSHA256": "5403b64e04a7b6af25ad69112606ec5b51ad4f61f115c6e185923b417d482f8b"
+    }
+  ]
+}

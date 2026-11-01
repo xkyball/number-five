@@ -1,0 +1,50 @@
+{
+  "OEMOrPurchasedPayloadsBundled": false,
+  "additiveEvidence": {
+    "fixedDescriptorStaticContract": {
+      "bytes": 119585,
+      "sha256": "530636f5141df4fe5cd121b85bb426945851e861d5b1ce239f06b62bf7e3c558"
+    },
+    "independent246QA": {
+      "bytes": 22518,
+      "sha256": "b29f4f0d4f71c61eba0ff28060444990bbd4603aaa28a382bc4cce016fea8909"
+    },
+    "independent246Readback": {
+      "bytes": 2545,
+      "sha256": "bcf9621482044e1cf586a5932caef68c6fd36fdabfe9498957ff870b2fccd2ac"
+    },
+    "original246Actual": {
+      "bytes": 83445,
+      "sha256": "e45f38ec1864bbf6cd2a9122a3ee142a00145083a6ed7f61b635bfa47c8f13a8"
+    }
+  },
+  "authOrKeysOrIdentityInvented": false,
+  "currentMetadataSource": {
+    "bytes": 4392,
+    "sha256": "cb51327c76ace99a4edbb3432deffdffcda9af7867473923d8af85c9d70df2a4"
+  },
+  "currentPointSource": {
+    "bytes": 6818,
+    "sha256": "ba5136ba6afa755a590b2db5dcb2bdd6ad5e381d55ea951a5b63b4cdfe0592cf"
+  },
+  "format": "no5-own-plain-metadata-provenance/1",
+  "genuineLoadXF2ModeEstablishedByWriter": false,
+  "nativeCallsOnImportOrWrite": false,
+  "new370NativeAcceptance": "SEPARATE_EXTERNAL_OBLIGATION",
+  "olderPointProvenance": "UNCHANGED_HISTORICAL_PRE_246_NATIVE_RESULT",
+  "own254BytePayloadDescriptor": {
+    "addedReserve": "OWN_ZERO_BYTES",
+    "fileOffset": 144,
+    "observedBitComponents": [
+      0,
+      0,
+      0
+    ],
+    "unsignedWord": 0
+  },
+  "scope": "OWN_EXTENDED_TYPE16_AND_FIXED_POINT_PRESET",
+  "sourceCompatibility": {
+    "old130ByteEncoderFunctionASTUnchanged": true,
+    "old150And246FilesAndCompleteReadbacksUnchanged": true
+  }
+}

@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "archivedProjects": [
+    {
+      "key": "screenviewer",
+      "label": "Layoutviewer",
+      "module": "screenviewer/app",
+      "packageName": "com.no5.layoutreview",
+      "catalogue": "screenviewer/releases.json",
+      "versionName": "0.2.4-release-info",
+      "versionCode": 6,
+      "archiveRef": "archive/screenviewer-20261008",
+      "archiveCommit": "3ddf1b3660bf7a5dd6afcab54aad034be44c0536",
+      "localSnapshotCommit": "ce8d924a0b39addf67e987d6b7b186a9f697b703",
+      "reason": "User-authorized GitHub-only source archive after verified preservation push."
+    },
+    {
+      "key": "knob-diagnosis",
+      "label": "Knob diagnosis",
+      "module": "knob-diagnosis",
+      "packageName": "com.no5.knobdiagnostic",
+      "catalogue": "knob-diagnosis/releases.json",
+      "versionName": "0.1.1-release-info",
+      "versionCode": 2,
+      "archiveRef": "archive/legacy-apps-20261009",
+      "archiveCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "localSnapshotCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "reason": "User selected this source project for permanent Git archive and removal on 2026-10-09; evidence and assets preserved separately.",
+      "sourceManifest": "project-archives/legacy-apps-20261009/SOURCE_MANIFEST.json"
+    },
+    {
+      "key": "knob-measurement",
+      "label": "Knob measurement",
+      "module": "knob-measurement",
+      "packageName": "com.no5.knobmeasurement",
+      "catalogue": "knob-measurement/releases.json",
+      "versionName": "0.1.9-release-info",
+      "versionCode": 10,
+      "archiveRef": "archive/legacy-apps-20261009",
+      "archiveCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "localSnapshotCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "reason": "User selected this source project for permanent Git archive and removal on 2026-10-09; evidence and assets preserved separately.",
+      "sourceManifest": "project-archives/legacy-apps-20261009/SOURCE_MANIFEST.json"
+    },
+    {
+      "key": "header",
+      "label": "Header fixture",
+      "module": "header/fixture",
+      "packageName": "org.no5.headerfixture",
+      "catalogue": "header/fixture/releases.json",
+      "versionName": "1.1-release-info",
+      "versionCode": 2,
+      "archiveRef": "archive/legacy-apps-20261009",
+      "archiveCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "localSnapshotCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "reason": "User selected this source project for permanent Git archive and removal on 2026-10-09; evidence and assets preserved separately.",
+      "sourceManifest": "project-archives/legacy-apps-20261009/SOURCE_MANIFEST.json"
+    },
+    {
+      "key": "emulator-header-preview",
+      "label": "Lumina Header TEST preview",
+      "module": "emulator-header-preview",
+      "packageName": "com.no5.emulator.headerpreview",
+      "versionName": "0.1-test-preview",
+      "versionCode": 1,
+      "archiveRef": "archive/legacy-apps-20261009",
+      "archiveCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "localSnapshotCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "reason": "User selected this source project for permanent Git archive and removal on 2026-10-09; evidence and assets preserved separately.",
+      "sourceManifest": "project-archives/legacy-apps-20261009/SOURCE_MANIFEST.json"
+    },
+    {
+      "key": "native-screen-preview",
+      "label": "Isolated native UI simulation preview",
+      "module": "native-screen-preview/app",
+      "packageName": "com.no5.preparation.harness",
+      "versionName": "0.1-isolated-simulation",
+      "versionCode": 1,
+      "archiveRef": "archive/legacy-apps-20261009",
+      "archiveCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "localSnapshotCommit": "727def9bf6783d10896de6e73adf5ba7a81a0505",
+      "reason": "User selected this source project for permanent Git archive and removal on 2026-10-09; evidence and assets preserved separately.",
+      "sourceManifest": "project-archives/legacy-apps-20261009/SOURCE_MANIFEST.json"
+    }
+  ],
+  "apps": [
+    {
+      "key": "helm",
+      "label": "No5 HELM",
+      "module": "helm/app",
+      "packageName": "com.no5.helm",
+      "catalogue": "helm/releases.json",
+      "versionName": "0.8.134-sonar-start-depth-controls",
+      "versionCode": 206
+    },
+    {
+      "key": "map",
+      "label": "No5 MAP",
+      "module": "map/app",
+      "packageName": "com.no5.map",
+      "catalogue": "map/releases.json",
+      "versionName": "0.5.42-memory-budget-v8",
+      "versionCode": 110
+    },
+    {
+      "key": "launcher",
+      "label": "Launcher",
+      "module": "launcher",
+      "packageName": "com.no5.home",
+      "catalogue": "launcher/releases.json",
+      "versionName": "0.5.12-ui-parity-v8",
+      "versionCode": 31
+    },
+    {
+      "key": "systemwindow-ime-test",
+      "label": "Systemwindow / IME",
+      "module": "systemwindow-ime-test",
+      "packageName": "com.no5.systemwindowtest",
+      "catalogue": "systemwindow-ime-test/releases.json",
+      "versionName": "0.2.1-release-info",
+      "versionCode": 3
+    },
+    {
+      "key": "map-outline-probe",
+      "label": "Outline V1",
+      "module": "map-outline-probe/app",
+      "packageName": "com.no5.map.outlineprobe",
+      "catalogue": "map-outline-probe/releases.json",
+      "versionName": "0.2-release-info",
+      "versionCode": 2
+    },
+    {
+      "key": "map-outline-probe-v2",
+      "label": "Outline V2",
+      "module": "map-outline-probe-v2/app",
+      "packageName": "com.no5.map.outlineprobe.v2",
+      "catalogue": "map-outline-probe-v2/releases.json",
+      "versionName": "0.6-release-info",
+      "versionCode": 6
+    },
+    {
+      "key": "map-fullrender-probe",
+      "label": "Fullrenderer A/B",
+      "module": "map-fullrender-probe/app",
+      "packageName": "com.no5.map.fullrenderprobe",
+      "catalogue": "map-fullrender-probe/releases.json",
+      "versionName": "0.4-release-info",
+      "versionCode": 4
+    },
+    {
+      "key": "renderer-baseline",
+      "label": "Renderer baseline",
+      "module": "renderer-baseline/app",
+      "packageName": "com.no5.map.rendererbaseline",
+      "catalogue": "renderer-baseline/releases.json",
+      "versionName": "0.4.16-release-info",
+      "versionCode": 4
+    },
+    {
+      "key": "map/preparation/native-five-screens",
+      "label": "UI simulation harness",
+      "module": "map/preparation/native-five-screens/harness",
+      "packageName": "com.no5.preparation.harness",
+      "catalogue": "map/preparation/native-five-screens/releases.json",
+      "versionName": "0.3-dock-gesture-contract",
+      "versionCode": 3
+    }
+  ],
+  "pendingOwnerIntegrations": []
+}

@@ -1,0 +1,32 @@
+{
+  "LoadXF2ModeOrAdmissionClaim": false,
+  "acceptedFiniteScope": [
+    "GetEncryptInfo unsigned words [0,0,0]",
+    "Metadata",
+    "Directory",
+    "Point40",
+    "Both end records",
+    "Normal lifecycle cleanup"
+  ],
+  "actualOriginalReadback": {
+    "bytes": 84659,
+    "sha256": "1b606f3a475b7830380f3ce4b964b7b2f46a2c8f28fff1f586f373e191e4ba99"
+  },
+  "format": "no5-own-plain-metadata-actual-addendum/1",
+  "fullCollectionDiscoveryOrRendererClaim": false,
+  "independentQA": {
+    "bytes": 11043,
+    "sha256": "e82c63e19f1c6680196929c884054ec1c37fd5761cb225e0f4ffd96f6671b2ae"
+  },
+  "independentReadback": {
+    "bytes": 2622,
+    "sha256": "8d3a24df3c8dc8eab8d6e9a052ecf5a236d34ebb65801dadc2c5a303fb896d33"
+  },
+  "oldSourceOrArtifactsRewritten": false,
+  "ownFixture": {
+    "bytes": 370,
+    "sha256": "e4a9c11fad40af1adeab9c09fbb9634fb46661552d4643fa3acb1326493218b9"
+  },
+  "priorSourceNativePendingState": "PRESERVED_HISTORICAL_RECORD",
+  "priorSourceVersion": "0.2.19"
+}

@@ -1,0 +1,728 @@
+{
+  "kind": "synthetic-gateway-v1-projections-from-strict-0416-atomic-context",
+  "inputFixtureSha256": "b9ff41f7a72f09bfa7583f96e6bba99c3283119dd7bec197d67ba7f94d413769",
+  "wheelSha256": "590af7330c4ac5dbb9a23d91c91a47ebe1030fc45ffb96515f268bf13bf36ed3",
+  "cases": [
+    {
+      "name": "full_legacy_window",
+      "synthetic": true,
+      "state": {
+        "version": 1,
+        "kind": "sonar.state",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "66773a7d-f264-4928-923a-3cc594083028",
+        "generation": 1,
+        "revision": 0,
+        "publishedAtEpochMs": 1792170003800,
+        "running": true,
+        "status": "LIVE",
+        "capabilities": {
+          "canStart": false,
+          "canStop": false,
+          "bottomDetection": true,
+          "filterControl": true,
+          "confirmedTracks": true,
+          "sourceSelection": true,
+          "diagnostics": true
+        },
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "cadenceHz": 20.0,
+        "observedAtEpochMs": 1792170003800,
+        "lastPingId": 7,
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 2,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 7,
+          "observedAtEpochMs": 1792170003800,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": null,
+          "fullScaleCode": null,
+          "normalizationSource": "UNCONFIRMED",
+          "rawSamplesModified": null
+        },
+        "hostPackageVersion": "0.4.16",
+        "observationReason": null
+      },
+      "pingMetadata": {
+        "version": 1,
+        "kind": "sonar.ping",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "66773a7d-f264-4928-923a-3cc594083028",
+        "generation": 1,
+        "pingId": 7,
+        "observedAtEpochMs": 1792170003800,
+        "publishedAtEpochMs": 1792170003800,
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "bottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 2,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 7,
+          "observedAtEpochMs": 1792170003800,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": 12,
+          "fullScaleCode": 4095,
+          "normalizationSource": "HELLO_12bit_checked_host_contract",
+          "rawSamplesModified": false,
+          "displayTransform": "background_reduction_then_max_pool_or_interpolate",
+          "noiseRevision": 2,
+          "noiseActive": true
+        },
+        "pingSource": "own",
+        "geometry": {
+          "displayedMaxDepthM": 24.576000213623047,
+          "txReference": "HOST_VERIFIED",
+          "flags": 1,
+          "adcSamplePeriodUs": 2.0
+        },
+        "presentation": null,
+        "hostPackageVersion": "0.4.16",
+        "legacyBottom": {
+          "bin": 50.57556247323418,
+          "confidence": 1.0,
+          "strength": null
+        },
+        "publication": {
+          "version": 1,
+          "sourceEvidence": "physical_own_marker_raw_match",
+          "sequence": "1",
+          "sequenceGap": 0
+        }
+      },
+      "frameBase64": "lAUAAHsidmVyc2lvbiI6MSwia2luZCI6InNvbmFyLnBpbmciLCJzb3VyY2UiOiJubzUtc29uYXJkIiwic291cmNlS2luZCI6IlJFQUwiLCJzaW11bGF0ZWQiOmZhbHNlLCJzZXJ2ZXJTZXNzaW9uSWQiOiI2Njc3M2E3ZC1mMjY0LTQ5MjgtOTIzYS0zY2M1OTQwODMwMjgiLCJnZW5lcmF0aW9uIjoxLCJwaW5nSWQiOjcsIm9ic2VydmVkQXRFcG9jaE1zIjoxNzkyMTcwMDAzODAwLCJwdWJsaXNoZWRBdEVwb2NoTXMiOjE3OTIxNzAwMDM4MDAsImZvcm1hdCI6eyJiaW5zIjoxMDI0LCJzYW1wbGVUeXBlIjoiVUlOVDE2IiwiYnl0ZU9yZGVyIjoiTElUVExFX0VORElBTiJ9LCJjYWxpYnJhdGlvbiI6eyJyZXZpc2lvbiI6MCwidmFsaWQiOmZhbHNlLCJzYW1wbGVQZXJpb2RVcyI6bnVsbCwic291bmRTcGVlZE1wcyI6MTUwMC4wLCJkZXB0aFJlZmVyZW5jZSI6IlRSQU5TRFVDRVIiLCJ0cmFuc2R1Y2VyT2Zmc2V0TSI6bnVsbCwia2VlbE9mZnNldE0iOm51bGx9LCJib3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sImRpc3BsYXlTZWxlY3Rpb24iOnsidmVyc2lvbiI6MSwic291cmNlIjoib3duIiwiZ2VuZXJhdGlvbiI6MiwicHVibGlzaGVkSHoiOjE4LjEyLCJsYXN0UHVibGlzaGVkUGluZ0lkIjo3LCJvYnNlcnZlZEF0RXBvY2hNcyI6MTc5MjE3MDAwMzgwMCwicmF3QXJjaGl2ZVNvdXJjZSI6ImFsbCIsImF1dG9tYXRpY05hdGl2ZUZhbGxiYWNrIjpmYWxzZSwic2VsZWN0aW9uR2VuZXJhdGlvbiI6MX0sImFtcGxpdHVkZSI6eyJ2ZXJzaW9uIjoxLCJlbmNvZGluZyI6IlVJTlQxNl9MRSIsInVuaXQiOiJBRENfQ09ERSIsInNpZ25pZmljYW50Qml0cyI6MTIsImZ1bGxTY2FsZUNvZGUiOjQwOTUsIm5vcm1hbGl6YXRpb25Tb3VyY2UiOiJIRUxMT18xMmJpdF9jaGVja2VkX2hvc3RfY29udHJhY3QiLCJyYXdTYW1wbGVzTW9kaWZpZWQiOmZhbHNlLCJkaXNwbGF5VHJhbnNmb3JtIjoiYmFja2dyb3VuZF9yZWR1Y3Rpb25fdGhlbl9tYXhfcG9vbF9vcl9pbnRlcnBvbGF0ZSIsIm5vaXNlUmV2aXNpb24iOjIsIm5vaXNlQWN0aXZlIjp0cnVlfSwicGluZ1NvdXJjZSI6Im93biIsImdlb21ldHJ5Ijp7ImRpc3BsYXllZE1heERlcHRoTSI6MjQuNTc2MDAwMjEzNjIzMDQ3LCJ0eFJlZmVyZW5jZSI6IkhPU1RfVkVSSUZJRUQiLCJmbGFncyI6MSwiYWRjU2FtcGxlUGVyaW9kVXMiOjIuMH0sInByZXNlbnRhdGlvbiI6bnVsbCwiaG9zdFBhY2thZ2VWZXJzaW9uIjoiMC40LjE2IiwibGVnYWN5Qm90dG9tIjp7ImJpbiI6NTAuNTc1NTYyNDczMjM0MTgsImNvbmZpZGVuY2UiOjEuMCwic3RyZW5ndGgiOm51bGx9LCJwdWJsaWNhdGlvbiI6eyJ2ZXJzaW9uIjoxLCJzb3VyY2VFdmlkZW5jZSI6InBoeXNpY2FsX293bl9tYXJrZXJfcmF3X21hdGNoIiwic2VxdWVuY2UiOiIxIiwic2VxdWVuY2VHYXAiOjB9fQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABQAoAKEAWAGQAX4B2gBCAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "frameSha256": "611bfeb55d9cc7005e2538d6276aa521883c2c27440c681526b517da4ee16c36",
+      "sourceEnvelopeSha256": "91579b6f6269d6f183150c8f33b6e61749c9e0a9d899ceba5b1298864d6434f8",
+      "originalM1Sha256": "9bac8cc3a49230c160bea8a310ded77096e9185fdefe3d88fe375c15e5f04330"
+    },
+    {
+      "name": "qualified_display_window",
+      "synthetic": true,
+      "state": {
+        "version": 1,
+        "kind": "sonar.state",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "e5b9be2a-1987-4dc9-b514-5db3b39679b5",
+        "generation": 1,
+        "revision": 0,
+        "publishedAtEpochMs": 1792170004200,
+        "running": true,
+        "status": "LIVE",
+        "capabilities": {
+          "canStart": false,
+          "canStop": false,
+          "bottomDetection": true,
+          "filterControl": true,
+          "confirmedTracks": true,
+          "sourceSelection": true,
+          "diagnostics": true
+        },
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "cadenceHz": 20.0,
+        "observedAtEpochMs": 1792170004200,
+        "lastPingId": 8,
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 8,
+          "observedAtEpochMs": 1792170004200,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": null,
+          "fullScaleCode": null,
+          "normalizationSource": "UNCONFIRMED",
+          "rawSamplesModified": null
+        },
+        "hostPackageVersion": "0.4.16",
+        "observationReason": null
+      },
+      "pingMetadata": {
+        "version": 1,
+        "kind": "sonar.ping",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "e5b9be2a-1987-4dc9-b514-5db3b39679b5",
+        "generation": 1,
+        "pingId": 8,
+        "observedAtEpochMs": 1792170004200,
+        "publishedAtEpochMs": 1792170004200,
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "bottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 8,
+          "observedAtEpochMs": 1792170004200,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": 12,
+          "fullScaleCode": 4095,
+          "normalizationSource": "HELLO_12bit_checked_host_contract",
+          "rawSamplesModified": false,
+          "displayTransform": "background_reduction_then_max_pool_or_interpolate",
+          "noiseRevision": 3,
+          "noiseActive": true
+        },
+        "pingSource": "own",
+        "geometry": {
+          "displayedMaxDepthM": 3.072000026702881,
+          "txReference": "HOST_VERIFIED",
+          "flags": 1,
+          "adcSamplePeriodUs": 2.0
+        },
+        "presentation": null,
+        "hostPackageVersion": "0.4.16",
+        "legacyBottom": {
+          "bin": 404.60449978587343,
+          "confidence": 1.0,
+          "strength": null
+        },
+        "publication": {
+          "version": 1,
+          "sourceEvidence": "physical_own_marker_raw_match",
+          "sequence": "1",
+          "sequenceGap": 0
+        }
+      },
+      "frameBase64": "lAUAAHsidmVyc2lvbiI6MSwia2luZCI6InNvbmFyLnBpbmciLCJzb3VyY2UiOiJubzUtc29uYXJkIiwic291cmNlS2luZCI6IlJFQUwiLCJzaW11bGF0ZWQiOmZhbHNlLCJzZXJ2ZXJTZXNzaW9uSWQiOiJlNWI5YmUyYS0xOTg3LTRkYzktYjUxNC01ZGIzYjM5Njc5YjUiLCJnZW5lcmF0aW9uIjoxLCJwaW5nSWQiOjgsIm9ic2VydmVkQXRFcG9jaE1zIjoxNzkyMTcwMDA0MjAwLCJwdWJsaXNoZWRBdEVwb2NoTXMiOjE3OTIxNzAwMDQyMDAsImZvcm1hdCI6eyJiaW5zIjoxMDI0LCJzYW1wbGVUeXBlIjoiVUlOVDE2IiwiYnl0ZU9yZGVyIjoiTElUVExFX0VORElBTiJ9LCJjYWxpYnJhdGlvbiI6eyJyZXZpc2lvbiI6MCwidmFsaWQiOmZhbHNlLCJzYW1wbGVQZXJpb2RVcyI6bnVsbCwic291bmRTcGVlZE1wcyI6MTUwMC4wLCJkZXB0aFJlZmVyZW5jZSI6IlRSQU5TRFVDRVIiLCJ0cmFuc2R1Y2VyT2Zmc2V0TSI6bnVsbCwia2VlbE9mZnNldE0iOm51bGx9LCJib3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sImRpc3BsYXlTZWxlY3Rpb24iOnsidmVyc2lvbiI6MSwic291cmNlIjoib3duIiwiZ2VuZXJhdGlvbiI6MywicHVibGlzaGVkSHoiOjE4LjEyLCJsYXN0UHVibGlzaGVkUGluZ0lkIjo4LCJvYnNlcnZlZEF0RXBvY2hNcyI6MTc5MjE3MDAwNDIwMCwicmF3QXJjaGl2ZVNvdXJjZSI6ImFsbCIsImF1dG9tYXRpY05hdGl2ZUZhbGxiYWNrIjpmYWxzZSwic2VsZWN0aW9uR2VuZXJhdGlvbiI6MX0sImFtcGxpdHVkZSI6eyJ2ZXJzaW9uIjoxLCJlbmNvZGluZyI6IlVJTlQxNl9MRSIsInVuaXQiOiJBRENfQ09ERSIsInNpZ25pZmljYW50Qml0cyI6MTIsImZ1bGxTY2FsZUNvZGUiOjQwOTUsIm5vcm1hbGl6YXRpb25Tb3VyY2UiOiJIRUxMT18xMmJpdF9jaGVja2VkX2hvc3RfY29udHJhY3QiLCJyYXdTYW1wbGVzTW9kaWZpZWQiOmZhbHNlLCJkaXNwbGF5VHJhbnNmb3JtIjoiYmFja2dyb3VuZF9yZWR1Y3Rpb25fdGhlbl9tYXhfcG9vbF9vcl9pbnRlcnBvbGF0ZSIsIm5vaXNlUmV2aXNpb24iOjMsIm5vaXNlQWN0aXZlIjp0cnVlfSwicGluZ1NvdXJjZSI6Im93biIsImdlb21ldHJ5Ijp7ImRpc3BsYXllZE1heERlcHRoTSI6My4wNzIwMDAwMjY3MDI4ODEsInR4UmVmZXJlbmNlIjoiSE9TVF9WRVJJRklFRCIsImZsYWdzIjoxLCJhZGNTYW1wbGVQZXJpb2RVcyI6Mi4wfSwicHJlc2VudGF0aW9uIjpudWxsLCJob3N0UGFja2FnZVZlcnNpb24iOiIwLjQuMTYiLCJsZWdhY3lCb3R0b20iOnsiYmluIjo0MDQuNjA0NDk5Nzg1ODczNDMsImNvbmZpZGVuY2UiOjEuMCwic3RyZW5ndGgiOm51bGx9LCJwdWJsaWNhdGlvbiI6eyJ2ZXJzaW9uIjoxLCJzb3VyY2VFdmlkZW5jZSI6InBoeXNpY2FsX293bl9tYXJrZXJfcmF3X21hdGNoIiwic2VxdWVuY2UiOiIxIiwic2VxdWVuY2VHYXAiOjB9fQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAwAEAAUABwAJAAwADwAUABkAIAAoADEAPABIAFcAZwB4AIwAoQC3AM4A5gD/ABcBLgFEAVgBaQF4AYQBjAGQAZABjgGIAX4BcQFhAU4BOQEiAQsB8wDaAMMArACWAIIAbwBeAE8AQgA2ACwAJAAcABYAEgAOAAoACAAGAAQAAwACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "frameSha256": "f3506318da9e63d042ed6cfc38636d28d50c6a1691e46fb69b38bf5e82cf3dc4",
+      "sourceEnvelopeSha256": "9d94d0544e2fa3153e43b276dc33075e865c5079f15f07e6db541caeccbdb3d0",
+      "originalM1Sha256": "e08e94a22426592fc55f62d3e39d81f96cfbafeafea068bdabcc7458a8ce5afc"
+    },
+    {
+      "name": "unverified_own",
+      "synthetic": true,
+      "state": {
+        "version": 1,
+        "kind": "sonar.state",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "1ba8a555-4a28-4ee5-a8de-855c79ea131d",
+        "generation": 1,
+        "revision": 0,
+        "publishedAtEpochMs": 1792170004600,
+        "running": true,
+        "status": "LIVE",
+        "capabilities": {
+          "canStart": false,
+          "canStop": false,
+          "bottomDetection": true,
+          "filterControl": true,
+          "confirmedTracks": true,
+          "sourceSelection": true,
+          "diagnostics": true
+        },
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "cadenceHz": 20.0,
+        "observedAtEpochMs": 1792170004600,
+        "lastPingId": 9,
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 9,
+          "observedAtEpochMs": 1792170004600,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": null,
+          "fullScaleCode": null,
+          "normalizationSource": "UNCONFIRMED",
+          "rawSamplesModified": null
+        },
+        "hostPackageVersion": "0.4.16",
+        "observationReason": null
+      },
+      "pingMetadata": {
+        "version": 1,
+        "kind": "sonar.ping",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "1ba8a555-4a28-4ee5-a8de-855c79ea131d",
+        "generation": 1,
+        "pingId": 9,
+        "observedAtEpochMs": 1792170004600,
+        "publishedAtEpochMs": 1792170004600,
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "bottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "displaySelection": {
+          "version": 1,
+          "source": "own",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 9,
+          "observedAtEpochMs": 1792170004600,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": 12,
+          "fullScaleCode": 4095,
+          "normalizationSource": "HELLO_12bit_checked_host_contract",
+          "rawSamplesModified": false,
+          "displayTransform": "max_pool_or_interpolate_without_amplitude_scaling",
+          "noiseRevision": 3,
+          "noiseActive": false
+        },
+        "pingSource": "own",
+        "geometry": {
+          "displayedMaxDepthM": null,
+          "txReference": "UNVERIFIED",
+          "flags": 32,
+          "adcSamplePeriodUs": 2.0
+        },
+        "presentation": null,
+        "hostPackageVersion": "0.4.16",
+        "legacyBottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "publication": {
+          "version": 1,
+          "sourceEvidence": "physical_own_marker_raw_match",
+          "sequence": "1",
+          "sequenceGap": 0
+        }
+      },
+      "frameBase64": "eQUAAHsidmVyc2lvbiI6MSwia2luZCI6InNvbmFyLnBpbmciLCJzb3VyY2UiOiJubzUtc29uYXJkIiwic291cmNlS2luZCI6IlJFQUwiLCJzaW11bGF0ZWQiOmZhbHNlLCJzZXJ2ZXJTZXNzaW9uSWQiOiIxYmE4YTU1NS00YTI4LTRlZTUtYThkZS04NTVjNzllYTEzMWQiLCJnZW5lcmF0aW9uIjoxLCJwaW5nSWQiOjksIm9ic2VydmVkQXRFcG9jaE1zIjoxNzkyMTcwMDA0NjAwLCJwdWJsaXNoZWRBdEVwb2NoTXMiOjE3OTIxNzAwMDQ2MDAsImZvcm1hdCI6eyJiaW5zIjoxMDI0LCJzYW1wbGVUeXBlIjoiVUlOVDE2IiwiYnl0ZU9yZGVyIjoiTElUVExFX0VORElBTiJ9LCJjYWxpYnJhdGlvbiI6eyJyZXZpc2lvbiI6MCwidmFsaWQiOmZhbHNlLCJzYW1wbGVQZXJpb2RVcyI6bnVsbCwic291bmRTcGVlZE1wcyI6MTUwMC4wLCJkZXB0aFJlZmVyZW5jZSI6IlRSQU5TRFVDRVIiLCJ0cmFuc2R1Y2VyT2Zmc2V0TSI6bnVsbCwia2VlbE9mZnNldE0iOm51bGx9LCJib3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sImRpc3BsYXlTZWxlY3Rpb24iOnsidmVyc2lvbiI6MSwic291cmNlIjoib3duIiwiZ2VuZXJhdGlvbiI6MywicHVibGlzaGVkSHoiOjE4LjEyLCJsYXN0UHVibGlzaGVkUGluZ0lkIjo5LCJvYnNlcnZlZEF0RXBvY2hNcyI6MTc5MjE3MDAwNDYwMCwicmF3QXJjaGl2ZVNvdXJjZSI6ImFsbCIsImF1dG9tYXRpY05hdGl2ZUZhbGxiYWNrIjpmYWxzZSwic2VsZWN0aW9uR2VuZXJhdGlvbiI6MX0sImFtcGxpdHVkZSI6eyJ2ZXJzaW9uIjoxLCJlbmNvZGluZyI6IlVJTlQxNl9MRSIsInVuaXQiOiJBRENfQ09ERSIsInNpZ25pZmljYW50Qml0cyI6MTIsImZ1bGxTY2FsZUNvZGUiOjQwOTUsIm5vcm1hbGl6YXRpb25Tb3VyY2UiOiJIRUxMT18xMmJpdF9jaGVja2VkX2hvc3RfY29udHJhY3QiLCJyYXdTYW1wbGVzTW9kaWZpZWQiOmZhbHNlLCJkaXNwbGF5VHJhbnNmb3JtIjoibWF4X3Bvb2xfb3JfaW50ZXJwb2xhdGVfd2l0aG91dF9hbXBsaXR1ZGVfc2NhbGluZyIsIm5vaXNlUmV2aXNpb24iOjMsIm5vaXNlQWN0aXZlIjpmYWxzZX0sInBpbmdTb3VyY2UiOiJvd24iLCJnZW9tZXRyeSI6eyJkaXNwbGF5ZWRNYXhEZXB0aE0iOm51bGwsInR4UmVmZXJlbmNlIjoiVU5WRVJJRklFRCIsImZsYWdzIjozMiwiYWRjU2FtcGxlUGVyaW9kVXMiOjIuMH0sInByZXNlbnRhdGlvbiI6bnVsbCwiaG9zdFBhY2thZ2VWZXJzaW9uIjoiMC40LjE2IiwibGVnYWN5Qm90dG9tIjp7ImJpbiI6bnVsbCwiY29uZmlkZW5jZSI6bnVsbCwic3RyZW5ndGgiOm51bGx9LCJwdWJsaWNhdGlvbiI6eyJ2ZXJzaW9uIjoxLCJzb3VyY2VFdmlkZW5jZSI6InBoeXNpY2FsX293bl9tYXJrZXJfcmF3X21hdGNoIiwic2VxdWVuY2UiOiIxIiwic2VxdWVuY2VHYXAiOjB9fUEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEARgBpAOIAmQHRAb8BGwGDAEsAQgBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEA",
+      "frameSha256": "092acd3482149bdacab90e373d49134006757c981db815e82639cf663e54dedf",
+      "sourceEnvelopeSha256": "04dc545cd2fca4009d9b8daf81497ee76953827a8b1a6ed4970659e32477413a",
+      "originalM1Sha256": "4a9359bd004648c2ba7c666e9e7d3a84e397f061cde1dcae13f6573b15ce1c19"
+    },
+    {
+      "name": "confirmed_native",
+      "synthetic": true,
+      "state": {
+        "version": 1,
+        "kind": "sonar.state",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "568b7789-c44c-47fa-9259-df5ccdcfa1af",
+        "generation": 1,
+        "revision": 0,
+        "publishedAtEpochMs": 1792170003800,
+        "running": true,
+        "status": "LIVE",
+        "capabilities": {
+          "canStart": false,
+          "canStop": false,
+          "bottomDetection": true,
+          "filterControl": true,
+          "confirmedTracks": true,
+          "sourceSelection": true,
+          "diagnostics": true
+        },
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "cadenceHz": 20.0,
+        "observedAtEpochMs": 1792170003800,
+        "lastPingId": 7,
+        "displaySelection": {
+          "version": 1,
+          "source": "native",
+          "generation": 2,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 7,
+          "observedAtEpochMs": 1792170003800,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": null,
+          "fullScaleCode": null,
+          "normalizationSource": "UNCONFIRMED",
+          "rawSamplesModified": null
+        },
+        "hostPackageVersion": "0.4.16",
+        "observationReason": null
+      },
+      "pingMetadata": {
+        "version": 1,
+        "kind": "sonar.ping",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "568b7789-c44c-47fa-9259-df5ccdcfa1af",
+        "generation": 1,
+        "pingId": 7,
+        "observedAtEpochMs": 1792170003800,
+        "publishedAtEpochMs": 1792170003800,
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "bottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "displaySelection": {
+          "version": 1,
+          "source": "native",
+          "generation": 2,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 7,
+          "observedAtEpochMs": 1792170003800,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": 12,
+          "fullScaleCode": 4095,
+          "normalizationSource": "HELLO_12bit_checked_host_contract",
+          "rawSamplesModified": false,
+          "displayTransform": "background_reduction_then_max_pool_or_interpolate",
+          "noiseRevision": 2,
+          "noiseActive": true
+        },
+        "pingSource": "native",
+        "geometry": {
+          "displayedMaxDepthM": 24.576000213623047,
+          "txReference": "HOST_VERIFIED",
+          "flags": 1,
+          "adcSamplePeriodUs": 2.0
+        },
+        "presentation": null,
+        "hostPackageVersion": "0.4.16",
+        "legacyBottom": {
+          "bin": 50.57556247323418,
+          "confidence": 1.0,
+          "strength": null
+        },
+        "publication": {
+          "version": 1,
+          "sourceEvidence": "qualified_native_marker_raw_match",
+          "sequence": "1",
+          "sequenceGap": 0
+        }
+      },
+      "frameBase64": "ngUAAHsidmVyc2lvbiI6MSwia2luZCI6InNvbmFyLnBpbmciLCJzb3VyY2UiOiJubzUtc29uYXJkIiwic291cmNlS2luZCI6IlJFQUwiLCJzaW11bGF0ZWQiOmZhbHNlLCJzZXJ2ZXJTZXNzaW9uSWQiOiI1NjhiNzc4OS1jNDRjLTQ3ZmEtOTI1OS1kZjVjY2RjZmExYWYiLCJnZW5lcmF0aW9uIjoxLCJwaW5nSWQiOjcsIm9ic2VydmVkQXRFcG9jaE1zIjoxNzkyMTcwMDAzODAwLCJwdWJsaXNoZWRBdEVwb2NoTXMiOjE3OTIxNzAwMDM4MDAsImZvcm1hdCI6eyJiaW5zIjoxMDI0LCJzYW1wbGVUeXBlIjoiVUlOVDE2IiwiYnl0ZU9yZGVyIjoiTElUVExFX0VORElBTiJ9LCJjYWxpYnJhdGlvbiI6eyJyZXZpc2lvbiI6MCwidmFsaWQiOmZhbHNlLCJzYW1wbGVQZXJpb2RVcyI6bnVsbCwic291bmRTcGVlZE1wcyI6MTUwMC4wLCJkZXB0aFJlZmVyZW5jZSI6IlRSQU5TRFVDRVIiLCJ0cmFuc2R1Y2VyT2Zmc2V0TSI6bnVsbCwia2VlbE9mZnNldE0iOm51bGx9LCJib3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sImRpc3BsYXlTZWxlY3Rpb24iOnsidmVyc2lvbiI6MSwic291cmNlIjoibmF0aXZlIiwiZ2VuZXJhdGlvbiI6MiwicHVibGlzaGVkSHoiOjE4LjEyLCJsYXN0UHVibGlzaGVkUGluZ0lkIjo3LCJvYnNlcnZlZEF0RXBvY2hNcyI6MTc5MjE3MDAwMzgwMCwicmF3QXJjaGl2ZVNvdXJjZSI6ImFsbCIsImF1dG9tYXRpY05hdGl2ZUZhbGxiYWNrIjpmYWxzZSwic2VsZWN0aW9uR2VuZXJhdGlvbiI6MX0sImFtcGxpdHVkZSI6eyJ2ZXJzaW9uIjoxLCJlbmNvZGluZyI6IlVJTlQxNl9MRSIsInVuaXQiOiJBRENfQ09ERSIsInNpZ25pZmljYW50Qml0cyI6MTIsImZ1bGxTY2FsZUNvZGUiOjQwOTUsIm5vcm1hbGl6YXRpb25Tb3VyY2UiOiJIRUxMT18xMmJpdF9jaGVja2VkX2hvc3RfY29udHJhY3QiLCJyYXdTYW1wbGVzTW9kaWZpZWQiOmZhbHNlLCJkaXNwbGF5VHJhbnNmb3JtIjoiYmFja2dyb3VuZF9yZWR1Y3Rpb25fdGhlbl9tYXhfcG9vbF9vcl9pbnRlcnBvbGF0ZSIsIm5vaXNlUmV2aXNpb24iOjIsIm5vaXNlQWN0aXZlIjp0cnVlfSwicGluZ1NvdXJjZSI6Im5hdGl2ZSIsImdlb21ldHJ5Ijp7ImRpc3BsYXllZE1heERlcHRoTSI6MjQuNTc2MDAwMjEzNjIzMDQ3LCJ0eFJlZmVyZW5jZSI6IkhPU1RfVkVSSUZJRUQiLCJmbGFncyI6MSwiYWRjU2FtcGxlUGVyaW9kVXMiOjIuMH0sInByZXNlbnRhdGlvbiI6bnVsbCwiaG9zdFBhY2thZ2VWZXJzaW9uIjoiMC40LjE2IiwibGVnYWN5Qm90dG9tIjp7ImJpbiI6NTAuNTc1NTYyNDczMjM0MTgsImNvbmZpZGVuY2UiOjEuMCwic3RyZW5ndGgiOm51bGx9LCJwdWJsaWNhdGlvbiI6eyJ2ZXJzaW9uIjoxLCJzb3VyY2VFdmlkZW5jZSI6InF1YWxpZmllZF9uYXRpdmVfbWFya2VyX3Jhd19tYXRjaCIsInNlcXVlbmNlIjoiMSIsInNlcXVlbmNlR2FwIjowfX0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAUAKAChAFgBkAF+AdoAQgAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+      "frameSha256": "064c388098efc6ac15687bf17f98952b76f860a39b8c8c9f8805689a64ed8ebb",
+      "sourceEnvelopeSha256": "ffeadf1d66ee9dea8d4e66f058d99bc00285e4ab40e336e26a3bfbf886f4f8e4",
+      "originalM1Sha256": "9bac8cc3a49230c160bea8a310ded77096e9185fdefe3d88fe375c15e5f04330"
+    },
+    {
+      "name": "unconfirmed_source",
+      "synthetic": true,
+      "state": {
+        "version": 1,
+        "kind": "sonar.state",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "8be396d2-4940-4dea-9b31-5e0627dfb2a6",
+        "generation": 1,
+        "revision": 0,
+        "publishedAtEpochMs": 1792170004600,
+        "running": true,
+        "status": "LIVE",
+        "capabilities": {
+          "canStart": false,
+          "canStop": false,
+          "bottomDetection": true,
+          "filterControl": true,
+          "confirmedTracks": true,
+          "sourceSelection": true,
+          "diagnostics": true
+        },
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "cadenceHz": 20.0,
+        "observedAtEpochMs": 1792170004600,
+        "lastPingId": 9,
+        "displaySelection": {
+          "version": 1,
+          "source": "all",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 9,
+          "observedAtEpochMs": 1792170004600,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": null,
+          "fullScaleCode": null,
+          "normalizationSource": "UNCONFIRMED",
+          "rawSamplesModified": null
+        },
+        "hostPackageVersion": "0.4.16",
+        "observationReason": null
+      },
+      "pingMetadata": {
+        "version": 1,
+        "kind": "sonar.ping",
+        "source": "no5-sonard",
+        "sourceKind": "REAL",
+        "simulated": false,
+        "serverSessionId": "8be396d2-4940-4dea-9b31-5e0627dfb2a6",
+        "generation": 1,
+        "pingId": 9,
+        "observedAtEpochMs": 1792170004600,
+        "publishedAtEpochMs": 1792170004600,
+        "format": {
+          "bins": 1024,
+          "sampleType": "UINT16",
+          "byteOrder": "LITTLE_ENDIAN"
+        },
+        "calibration": {
+          "revision": 0,
+          "valid": false,
+          "samplePeriodUs": null,
+          "soundSpeedMps": 1500.0,
+          "depthReference": "TRANSDUCER",
+          "transducerOffsetM": null,
+          "keelOffsetM": null
+        },
+        "bottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "displaySelection": {
+          "version": 1,
+          "source": "all",
+          "generation": 3,
+          "publishedHz": 18.12,
+          "lastPublishedPingId": 9,
+          "observedAtEpochMs": 1792170004600,
+          "rawArchiveSource": "all",
+          "automaticNativeFallback": false,
+          "selectionGeneration": 1
+        },
+        "amplitude": {
+          "version": 1,
+          "encoding": "UINT16_LE",
+          "unit": "ADC_CODE",
+          "significantBits": 12,
+          "fullScaleCode": 4095,
+          "normalizationSource": "HELLO_12bit_checked_host_contract",
+          "rawSamplesModified": false,
+          "displayTransform": "max_pool_or_interpolate_without_amplitude_scaling",
+          "noiseRevision": 3,
+          "noiseActive": false
+        },
+        "pingSource": null,
+        "geometry": {
+          "displayedMaxDepthM": null,
+          "txReference": "UNVERIFIED",
+          "flags": 32,
+          "adcSamplePeriodUs": 2.0
+        },
+        "presentation": null,
+        "hostPackageVersion": "0.4.16",
+        "legacyBottom": {
+          "bin": null,
+          "confidence": null,
+          "strength": null
+        },
+        "publication": {
+          "version": 1,
+          "sourceEvidence": "unconfirmed",
+          "sequence": "1",
+          "sequenceGap": 0
+        }
+      },
+      "frameBase64": "ZgUAAHsidmVyc2lvbiI6MSwia2luZCI6InNvbmFyLnBpbmciLCJzb3VyY2UiOiJubzUtc29uYXJkIiwic291cmNlS2luZCI6IlJFQUwiLCJzaW11bGF0ZWQiOmZhbHNlLCJzZXJ2ZXJTZXNzaW9uSWQiOiI4YmUzOTZkMi00OTQwLTRkZWEtOWIzMS01ZTA2MjdkZmIyYTYiLCJnZW5lcmF0aW9uIjoxLCJwaW5nSWQiOjksIm9ic2VydmVkQXRFcG9jaE1zIjoxNzkyMTcwMDA0NjAwLCJwdWJsaXNoZWRBdEVwb2NoTXMiOjE3OTIxNzAwMDQ2MDAsImZvcm1hdCI6eyJiaW5zIjoxMDI0LCJzYW1wbGVUeXBlIjoiVUlOVDE2IiwiYnl0ZU9yZGVyIjoiTElUVExFX0VORElBTiJ9LCJjYWxpYnJhdGlvbiI6eyJyZXZpc2lvbiI6MCwidmFsaWQiOmZhbHNlLCJzYW1wbGVQZXJpb2RVcyI6bnVsbCwic291bmRTcGVlZE1wcyI6MTUwMC4wLCJkZXB0aFJlZmVyZW5jZSI6IlRSQU5TRFVDRVIiLCJ0cmFuc2R1Y2VyT2Zmc2V0TSI6bnVsbCwia2VlbE9mZnNldE0iOm51bGx9LCJib3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sImRpc3BsYXlTZWxlY3Rpb24iOnsidmVyc2lvbiI6MSwic291cmNlIjoiYWxsIiwiZ2VuZXJhdGlvbiI6MywicHVibGlzaGVkSHoiOjE4LjEyLCJsYXN0UHVibGlzaGVkUGluZ0lkIjo5LCJvYnNlcnZlZEF0RXBvY2hNcyI6MTc5MjE3MDAwNDYwMCwicmF3QXJjaGl2ZVNvdXJjZSI6ImFsbCIsImF1dG9tYXRpY05hdGl2ZUZhbGxiYWNrIjpmYWxzZSwic2VsZWN0aW9uR2VuZXJhdGlvbiI6MX0sImFtcGxpdHVkZSI6eyJ2ZXJzaW9uIjoxLCJlbmNvZGluZyI6IlVJTlQxNl9MRSIsInVuaXQiOiJBRENfQ09ERSIsInNpZ25pZmljYW50Qml0cyI6MTIsImZ1bGxTY2FsZUNvZGUiOjQwOTUsIm5vcm1hbGl6YXRpb25Tb3VyY2UiOiJIRUxMT18xMmJpdF9jaGVja2VkX2hvc3RfY29udHJhY3QiLCJyYXdTYW1wbGVzTW9kaWZpZWQiOmZhbHNlLCJkaXNwbGF5VHJhbnNmb3JtIjoibWF4X3Bvb2xfb3JfaW50ZXJwb2xhdGVfd2l0aG91dF9hbXBsaXR1ZGVfc2NhbGluZyIsIm5vaXNlUmV2aXNpb24iOjMsIm5vaXNlQWN0aXZlIjpmYWxzZX0sInBpbmdTb3VyY2UiOm51bGwsImdlb21ldHJ5Ijp7ImRpc3BsYXllZE1heERlcHRoTSI6bnVsbCwidHhSZWZlcmVuY2UiOiJVTlZFUklGSUVEIiwiZmxhZ3MiOjMyLCJhZGNTYW1wbGVQZXJpb2RVcyI6Mi4wfSwicHJlc2VudGF0aW9uIjpudWxsLCJob3N0UGFja2FnZVZlcnNpb24iOiIwLjQuMTYiLCJsZWdhY3lCb3R0b20iOnsiYmluIjpudWxsLCJjb25maWRlbmNlIjpudWxsLCJzdHJlbmd0aCI6bnVsbH0sInB1YmxpY2F0aW9uIjp7InZlcnNpb24iOjEsInNvdXJjZUV2aWRlbmNlIjoidW5jb25maXJtZWQiLCJzZXF1ZW5jZSI6IjEiLCJzZXF1ZW5jZUdhcCI6MH19QQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBGAGkA4gCZAdEBvwEbAYMASwBCAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQBBAEEAQQA=",
+      "frameSha256": "6da3f7b616be73e2b1f8d1f12f79b256348b80b2d5a6bf23f32aee36e5bf49be",
+      "sourceEnvelopeSha256": "cb37c75dbbe3564430bfcc9d3eeb72f3790df2351cd61c4f736b5cdb7fcc44cb",
+      "originalM1Sha256": "4a9359bd004648c2ba7c666e9e7d3a84e397f061cde1dcae13f6573b15ce1c19"
+    }
+  ],
+  "unsupportedHostBoundaryCases": [
+    "uint64_int64_max_utf8",
+    "utc_int64_min"
+  ],
+  "hardwareOpened": false,
+  "liveAcceptance": false
+}

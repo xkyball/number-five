@@ -1,0 +1,21 @@
+{
+  "reason": "Tests require intentionally omitted optional tools; installed core remains complete.",
+  "paths": [
+    "tests/test_navionics_road_full_inventory.py",
+    "tests/test_navionics_fsm_probe_sources.py",
+    "tests/test_navionics_file_observer_sources.py",
+    "tests/test_navionics_whole_area_rectangular_reheader.py",
+    "tests/test_navionics_native_probe_sources.py",
+    "tests/test_navionics_geographic_converter.py",
+    "tests/test_navionics_vector_error_reference.py",
+    "tests/test_navionics_graphics_probe_sources.py",
+    "tests/test_original_query_probe_tools.py",
+    "tests/test_navionics_w2_proof_tools.py",
+    "tests/test_navionics_normal_profile16.py",
+    "tests/test_navionics_square_header_search.py",
+    "tests/test_stream_collector.py",
+    "tests/test_navionics_attribute_readback.py",
+    "tests/test_full_cache_atlas.py",
+    "tests/test_navionics_geographic_probe_tools.py"
+  ]
+}

@@ -1,0 +1,40 @@
+cmake_minimum_required(VERSION 3.13)
+include(${PICO_SDK_PATH}/external/pico_sdk_import.cmake)
+project(no5_tx_marker_05 C CXX ASM)
+set(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+pico_sdk_init()
+option(NO5_CLIP_DIAGNOSTIC "Finite Q10 clip-injection diagnostic on GPIO18/22" OFF)
+if(NO5_CLIP_DIAGNOSTIC)
+    set(TX_HW_SOURCE src/modules/transmit_hw_clip.c src/modules/clip_diagnostic.c)
+else()
+    set(TX_HW_SOURCE src/modules/transmit_hw.c)
+endif()
+
+add_executable(no5_tx_marker
+    src/main.c src/base/wire.c src/base/acquisition.c src/base/session.c
+    src/modules/capture.c src/modules/scope_stream.c src/modules/sonard_ping.c
+    src/modules/transmit.c ${TX_HW_SOURCE} src/usb/usb_descriptors.c)
+if(NO5_CLIP_DIAGNOSTIC)
+    pico_generate_pio_header(no5_tx_marker ${CMAKE_CURRENT_LIST_DIR}/src/modules/clip_burst.pio)
+else()
+    pico_generate_pio_header(no5_tx_marker ${CMAKE_CURRENT_LIST_DIR}/src/modules/burst.pio)
+endif()
+target_include_directories(no5_tx_marker PRIVATE src src/usb)
+target_link_libraries(no5_tx_marker PRIVATE pico_stdlib pico_unique_id hardware_adc hardware_dma hardware_irq hardware_pio hardware_clocks tinyusb_device tinyusb_board)
+target_compile_definitions(no5_tx_marker PRIVATE CFG_TUSB_OS=OPT_OS_PICO)
+target_compile_definitions(no5_tx_marker PRIVATE NO5_CLIP_DIAGNOSTIC=$<BOOL:${NO5_CLIP_DIAGNOSTIC}>)
+target_compile_options(no5_tx_marker PRIVATE -Wall -Wextra -Werror -fstack-usage)
+target_link_options(no5_tx_marker PRIVATE -flto=auto -fstack-usage)
+set_source_files_properties(
+    src/main.c src/base/wire.c src/base/acquisition.c src/base/session.c
+    src/modules/capture.c src/modules/scope_stream.c src/modules/sonard_ping.c
+    PROPERTIES COMPILE_OPTIONS "-flto")
+if(NO5_CLIP_DIAGNOSTIC)
+    pico_set_program_name(no5_tx_marker "OpenEcho Clip GPIO18-22")
+    pico_set_program_version(no5_tx_marker "0.7.13-reference-median")
+else()
+    pico_set_program_name(no5_tx_marker "OpenEcho Shared TX 0.7")
+    pico_set_program_version(no5_tx_marker "0.7.0-finite-transmit")
+endif()
+pico_add_extra_outputs(no5_tx_marker)

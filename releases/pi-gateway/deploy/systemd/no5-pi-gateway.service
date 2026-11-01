@@ -1,0 +1,24 @@
+[Unit]
+Description=No5 app-facing Pi V1 gateway (SONAR, HELM, AUDIO)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=no5gateway
+Group=no5gateway
+WorkingDirectory=/opt/no5-pi-gateway/current
+EnvironmentFile=-/etc/no5-pi-gateway/environment
+ExecStart=/opt/no5-pi-gateway/current/.venv/bin/no5-pi-gateway --config /etc/no5-pi-gateway/config.toml
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=15
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/lib/no5-pi-gateway
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

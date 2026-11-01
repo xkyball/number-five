@@ -1,0 +1,801 @@
+{
+  "schema": "number-five.source-release/1",
+  "component": "spotify-receiver",
+  "prepared_on": "2026-11-01",
+  "base_commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+  "base_commit_date": "2026-10-29T16:26:01+02:00",
+  "included_scope": "Complete current Rust Spotify Connect receiver,local control/state/media/EQ-volume code,Cargo.lock,own librespot patches,vendored librespot-connect source and public deployment templates.",
+  "limitations": [
+    "Spotify accounts/content are not included; live Spotify/ALSA behavior is not verified by source packaging.",
+    "Cargo downloads pinned public dependencies on first clean build unless you provide a Cargo cache.",
+    "Existing MIT licenses remain; other crate licenses apply to their own crates."
+  ],
+  "files": [
+    {
+      "path": "CONCURRENCY_MODEL.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/CONCURRENCY_MODEL.md",
+      "source_sha256": "4f88376939c38422c1d4368c3393663fdd631342d673c8b39851ce4b3dbf2e38",
+      "sha256": "4f88376939c38422c1d4368c3393663fdd631342d673c8b39851ce4b3dbf2e38",
+      "bytes": 6085,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "Cargo.lock",
+      "source_path": "no-pi/projects/no5-spotify-connect/Cargo.lock",
+      "source_sha256": "203d4999ea55a4ce52e8f4cda5d04f8c44357c21bd626fae3e182f2a1d437eef",
+      "sha256": "203d4999ea55a4ce52e8f4cda5d04f8c44357c21bd626fae3e182f2a1d437eef",
+      "bytes": 87304,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "Cargo.toml",
+      "source_path": "no-pi/projects/no5-spotify-connect/Cargo.toml",
+      "source_sha256": "6ee9e74415c2ac3ddb84d831df6e0716c839a25f1cd2f9f1b17fe9302f6b3b40",
+      "sha256": "6ee9e74415c2ac3ddb84d831df6e0716c839a25f1cd2f9f1b17fe9302f6b3b40",
+      "bytes": 1241,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "DEPLOYMENT.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/DEPLOYMENT.md",
+      "source_sha256": "58a0d6c6aa05ae22b3f6fc5b51c8282982620ae574e8ccbbb7260a5c3b10c550",
+      "sha256": "58a0d6c6aa05ae22b3f6fc5b51c8282982620ae574e8ccbbb7260a5c3b10c550",
+      "bytes": 4651,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "MEDIA_BROWSER.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/MEDIA_BROWSER.md",
+      "source_sha256": "a463d7959d29b7fae039a93517f71bb4a777afbaae63f7cad9fbbf9844cd45aa",
+      "sha256": "a463d7959d29b7fae039a93517f71bb4a777afbaae63f7cad9fbbf9844cd45aa",
+      "bytes": 2365,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "MEDIA_SELECTION.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/MEDIA_SELECTION.md",
+      "source_sha256": "4d4fb48129d13d42911d7583c164eb9bf5f6796504b0ed36769159f73bb0ae7a",
+      "sha256": "4d4fb48129d13d42911d7583c164eb9bf5f6796504b0ed36769159f73bb0ae7a",
+      "bytes": 3135,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "Makefile",
+      "source_path": "no-pi/projects/no5-spotify-connect/Makefile",
+      "source_sha256": "04d42c351071281bebe2d6af807c71bf03ec80bd9901137d73d124f53d67e2da",
+      "sha256": "04d42c351071281bebe2d6af807c71bf03ec80bd9901137d73d124f53d67e2da",
+      "bytes": 274,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "PLAYLISTS.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/PLAYLISTS.md",
+      "source_sha256": "4c17e8404d9bc34ca92c651f8367b092171f32bcc66197213a6921d8cea8e382",
+      "sha256": "4c17e8404d9bc34ca92c651f8367b092171f32bcc66197213a6921d8cea8e382",
+      "bytes": 2197,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "README.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/README.md",
+      "source_sha256": "866fe8b7057ca287b2bd18f51779284f6d6bc3c42a985e6dd3b64b4b443a8388",
+      "sha256": "866fe8b7057ca287b2bd18f51779284f6d6bc3c42a985e6dd3b64b4b443a8388",
+      "bytes": 6120,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "SPOTIFY_FEATURES.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/SPOTIFY_FEATURES.md",
+      "source_sha256": "36429e4b2b37afd8b0b3aa013f9766e53ab2d59d21d2f1f7b0add09068d00b9a",
+      "sha256": "36429e4b2b37afd8b0b3aa013f9766e53ab2d59d21d2f1f7b0add09068d00b9a",
+      "bytes": 14704,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "VOLUME_ARCHITECTURE.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/VOLUME_ARCHITECTURE.md",
+      "source_sha256": "53cc04242ed2285c47d9055ffb36e31418884913b3eb06b32ae9768efb64a45a",
+      "sha256": "53cc04242ed2285c47d9055ffb36e31418884913b3eb06b32ae9768efb64a45a",
+      "bytes": 8289,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "deploy/environment.example",
+      "source_path": "no-pi/projects/no5-spotify-connect/deploy/environment.example",
+      "source_sha256": "e6c89b7649ffef726b6c2032f28a4e3bbd1d0534309f00f743c363c9f68680b2",
+      "sha256": "e6c89b7649ffef726b6c2032f28a4e3bbd1d0534309f00f743c363c9f68680b2",
+      "bytes": 339,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "deploy/systemd/no5-spotify-connect.service",
+      "source_path": "no-pi/projects/no5-spotify-connect/deploy/systemd/no5-spotify-connect.service",
+      "source_sha256": "5647b90b79a3c9893728c422e4beccf808601f285e48535bbf8f325eb5062b25",
+      "sha256": "5647b90b79a3c9893728c422e4beccf808601f285e48535bbf8f325eb5062b25",
+      "bytes": 1521,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/control.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/control.rs",
+      "source_sha256": "30359326e41eaf2b2ef42a8facacaa7fb6c72a7584b2b2831e8d42e9e289e7c7",
+      "sha256": "30359326e41eaf2b2ef42a8facacaa7fb6c72a7584b2b2831e8d42e9e289e7c7",
+      "bytes": 10357,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/lib.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/lib.rs",
+      "source_sha256": "a2c1f6579a912ddf3d121e3c87244c335713b6d78bf50ddd2024bbbb4886056d",
+      "sha256": "a2c1f6579a912ddf3d121e3c87244c335713b6d78bf50ddd2024bbbb4886056d",
+      "bytes": 327,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/main.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/main.rs",
+      "source_sha256": "c14f3f84d61b8c692fc443505a1c9ea4bca26d7cafbb0d74f5f256be984ec54c",
+      "sha256": "c14f3f84d61b8c692fc443505a1c9ea4bca26d7cafbb0d74f5f256be984ec54c",
+      "bytes": 41897,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/media.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/media.rs",
+      "source_sha256": "065ca1ed83ede7d5a0dff8fa0b58c1107f5b8d0038f7bdb6539a5695ff5d0ef0",
+      "sha256": "065ca1ed83ede7d5a0dff8fa0b58c1107f5b8d0038f7bdb6539a5695ff5d0ef0",
+      "bytes": 37766,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/state.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/state.rs",
+      "source_sha256": "63f4e46c03b2e3a2ac02eb13256ce8f411ee4c85737634922a28a9bc2cf09629",
+      "sha256": "63f4e46c03b2e3a2ac02eb13256ce8f411ee4c85737634922a28a9bc2cf09629",
+      "bytes": 13664,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "src/volume.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/src/volume.rs",
+      "source_sha256": "c75f52f1d510941f3eccc7533c044f1f76fee5b6c39941f4f66dbe7a4dd3e6dd",
+      "sha256": "c75f52f1d510941f3eccc7533c044f1f76fee5b6c39941f4f66dbe7a4dd3e6dd",
+      "bytes": 34655,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "tools/prepare_core_initial_retry.py",
+      "source_path": "no-pi/projects/no5-spotify-connect/tools/prepare_core_initial_retry.py",
+      "source_sha256": "67a57e018594c29adecea6a9dfecdb2e07f1bf377d2553fef89060b2081891f3",
+      "sha256": "67a57e018594c29adecea6a9dfecdb2e07f1bf377d2553fef89060b2081891f3",
+      "bytes": 5699,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/Cargo.toml",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/Cargo.toml",
+      "source_sha256": "22fe6a94a7dec166e73c6e27e2ba75b28aea0b8d1efe799026847c3ea5806924",
+      "sha256": "22fe6a94a7dec166e73c6e27e2ba75b28aea0b8d1efe799026847c3ea5806924",
+      "bytes": 2026,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/LICENSE",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/LICENSE",
+      "source_sha256": "b6e979ad38c429c5811e9eb6930040a984619786f55ebc60660db05df5325ed6",
+      "sha256": "b6e979ad38c429c5811e9eb6930040a984619786f55ebc60660db05df5325ed6",
+      "bytes": 1078,
+      "license": "upstream license text",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/NO5_PATCH.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/NO5_PATCH.md",
+      "source_sha256": "32c1427853168d116525df5f34aa87853f1ff82ba3dbdf259c31910a1eaf8c61",
+      "sha256": "32c1427853168d116525df5f34aa87853f1ff82ba3dbdf259c31910a1eaf8c61",
+      "bytes": 13301,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/README.md",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/README.md",
+      "source_sha256": "09ede30379d4b25eec1af4795fc18a1d785ab2526abdc85fc89b71197732c09d",
+      "sha256": "09ede30379d4b25eec1af4795fc18a1d785ab2526abdc85fc89b71197732c09d",
+      "bytes": 2043,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/context_resolver.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/context_resolver.rs",
+      "source_sha256": "d6ea7ca925675bc300ad45e9534a51572c8a183e6cbff40c921e2175fd83d1a2",
+      "sha256": "d6ea7ca925675bc300ad45e9534a51572c8a183e6cbff40c921e2175fd83d1a2",
+      "bytes": 10816,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/lib.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/lib.rs",
+      "source_sha256": "e782594e621c5dc602f78fe1afd15b47af5ad55dcd9c12d24cf1095f998e509f",
+      "sha256": "e782594e621c5dc602f78fe1afd15b47af5ad55dcd9c12d24cf1095f998e509f",
+      "bytes": 321,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/model.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/model.rs",
+      "source_sha256": "d4b60cc6f45fc24f1fe638ace4533c703a29e7a79ce4443864c38e071f82b25e",
+      "sha256": "d4b60cc6f45fc24f1fe638ace4533c703a29e7a79ce4443864c38e071f82b25e",
+      "bytes": 5448,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/no5_setup_retry.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/no5_setup_retry.rs",
+      "source_sha256": "26b1724abeb6e7856efa4962d14f2b3c3a9f28cc0536e872091062041fc80d18",
+      "sha256": "26b1724abeb6e7856efa4962d14f2b3c3a9f28cc0536e872091062041fc80d18",
+      "bytes": 15446,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/shuffle_vec.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/shuffle_vec.rs",
+      "source_sha256": "0a07ec7bae11695f5390d16c12bf5fceda82032f45949a40f9cd3c5e4bd81a1a",
+      "sha256": "0a07ec7bae11695f5390d16c12bf5fceda82032f45949a40f9cd3c5e4bd81a1a",
+      "bytes": 5611,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/spirc.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/spirc.rs",
+      "source_sha256": "10c4e5c8933f4ac84e4b3f41a8577d4e8cdd4454428577916b819edb4c337cb1",
+      "sha256": "10c4e5c8933f4ac84e4b3f41a8577d4e8cdd4454428577916b819edb4c337cb1",
+      "bytes": 111734,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/context.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/context.rs",
+      "source_sha256": "3dee1ace100d7774d1ca4b766d285727f6a7bfbc72bfd06288b47a08f113fb32",
+      "sha256": "3dee1ace100d7774d1ca4b766d285727f6a7bfbc72bfd06288b47a08f113fb32",
+      "bytes": 17342,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/handle.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/handle.rs",
+      "source_sha256": "89bad17ce8d342a9283cd68d5f09dae7effb619a3ad3fcc3d3aa1ae44ef9f20f",
+      "sha256": "89bad17ce8d342a9283cd68d5f09dae7effb619a3ad3fcc3d3aa1ae44ef9f20f",
+      "bytes": 1846,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/metadata.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/metadata.rs",
+      "source_sha256": "e71ea21f91211a6f1c2bb654902049997c866b4fc47842fa7c311d1bd45d717e",
+      "sha256": "e71ea21f91211a6f1c2bb654902049997c866b4fc47842fa7c311d1bd45d717e",
+      "bytes": 3238,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/options.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/options.rs",
+      "source_sha256": "d6ffbbb9c2f1dd1069878d09340465ede09d1e80011ad042d91ec4c15c5c3b18",
+      "sha256": "d6ffbbb9c2f1dd1069878d09340465ede09d1e80011ad042d91ec4c15c5c3b18",
+      "bytes": 3127,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/provider.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/provider.rs",
+      "source_sha256": "528c3359c2d050d61c99e14f79a1674c7aede1e9dc33e438152f00f5a5396354",
+      "sha256": "528c3359c2d050d61c99e14f79a1674c7aede1e9dc33e438152f00f5a5396354",
+      "bytes": 1773,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/restrictions.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/restrictions.rs",
+      "source_sha256": "b081c8285b7f8de5ac65b418c644b8a3ac3f9304969242a0f74b24fc0e2a8317",
+      "sha256": "b081c8285b7f8de5ac65b418c644b8a3ac3f9304969242a0f74b24fc0e2a8317",
+      "bytes": 2431,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/tracks.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/tracks.rs",
+      "source_sha256": "b2294a4b01b5da39b140b7a41c761090ec21a057fc94faad9d2fdcf4b0411813",
+      "sha256": "b2294a4b01b5da39b140b7a41c761090ec21a057fc94faad9d2fdcf4b0411813",
+      "bytes": 14664,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state/transfer.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state/transfer.rs",
+      "source_sha256": "66eb3641fc970c49d457c648ff2ef1037b4bc544b698489f7d60413b41996d67",
+      "sha256": "66eb3641fc970c49d457c648ff2ef1037b4bc544b698489f7d60413b41996d67",
+      "bytes": 6843,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-connect/src/state.rs",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-connect/src/state.rs",
+      "source_sha256": "4653f48835dc158f2004b5f17a10907ba37fb4d87d2314300e7811b510b063a4",
+      "sha256": "4653f48835dc158f2004b5f17a10907ba37fb4d87d2314300e7811b510b063a4",
+      "bytes": 17219,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-core-0.8.0-dealer-error-source.patch",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-core-0.8.0-dealer-error-source.patch",
+      "source_sha256": "653999f572a21e53f4b2683cd83d9eaf6699daa01159b14841810b100c97371c",
+      "sha256": "653999f572a21e53f4b2683cd83d9eaf6699daa01159b14841810b100c97371c",
+      "bytes": 331,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-core-0.8.0-initial-retry.json",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-core-0.8.0-initial-retry.json",
+      "source_sha256": "f082d61dcce1d86317749f6bd7bbc3d0d9d86060b44bb12f721138768780c131",
+      "sha256": "f082d61dcce1d86317749f6bd7bbc3d0d9d86060b44bb12f721138768780c131",
+      "bytes": 1268,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "vendor/librespot-core-0.8.0-initial-retry.patch",
+      "source_path": "no-pi/projects/no5-spotify-connect/vendor/librespot-core-0.8.0-initial-retry.patch",
+      "source_sha256": "8a542c90793e9e2797788540e2ecb1f0a9d70cd2e6cf8332b398dbbf805771d6",
+      "sha256": "8a542c90793e9e2797788540e2ecb1f0a9d70cd2e6cf8332b398dbbf805771d6",
+      "bytes": 19422,
+      "license": "MIT",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/CERN-OHL-S-2.0.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "d6475a84171f0cf7ff52667dea714df268fc65cea42f0bf328b0b70d4cd0ebab",
+      "bytes": 13419,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/GPL-3.0-only.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966",
+      "bytes": 18375,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES.md",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "b8d0f85e3e6db8bc48547211db4a642af43e4c24e14446f81be74248dcab7946",
+      "bytes": 890,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "README_RELEASE.md",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "eeb97cb237937194bf5d1662eceea4b4934e9750eaedcf79c0aa4fb0f9080a4d",
+      "bytes": 1637,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    }
+  ],
+  "exclusions": [
+    {
+      "path": "FEATURE_FEASIBILITY.md",
+      "reason": "outside bounded public source allowlist"
+    },
+    {
+      "path": "SPOTIFY_CAPABILITIES_20261009.md",
+      "reason": "outside bounded public source allowlist"
+    },
+    {
+      "path": "evidence/concurrency-20261009/activation.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/concurrency-20261009/native-build.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/concurrency-20261009/transport-runtime.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/concurrency-20261009/validation.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/README.md",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/activation.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/build-export-lifetime.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/build-result.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/first-attempt-rollback.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/gateway-result.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/gateway-tests.log",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/guard-tests.log",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/https.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/native-tests.log",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/preflight-final.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/preflight-first.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/release.log",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/runtime.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/source-manifest.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/test-wheel-manifest.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/toolchain.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-deployment-20261009/vendor-tests.log",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-evaluation-20261009/README.md",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-evaluation-20261009/media-https-active-context.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/media-evaluation-20261009/media-live-paging.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/README.md",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/activation-preflight.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/activation-result.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/active-read.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/gateway-tests.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/host-native.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-build-result.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-gateway-summary.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-gateway.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-native.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-release.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/linux-vendor.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/manual-acceptance.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/music-selection-20261009/vendor-tests.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/paused-position-20261008/README.md",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/paused-position-20261008/continuous-before.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/paused-position-20261008/hold-before.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/README.md",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/activation-preflight.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/activation.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/host-gateway.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/host-native.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/host-vendor.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/https-active.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/https-readback.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/inventory-after.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/inventory-before.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/linux-build.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/linux-gateway-tests.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/linux-native-tests.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/linux-release.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/linux-vendor-tests.txt",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/media-active.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/media-readback.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/playlist-start-live.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/publication.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/playlist-details-20261010/shuffle-after-readback.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/volume-websocket-read-benchmark.py",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    },
+    {
+      "path": "evidence/volume-websocket-read-latency-20261008.json",
+      "reason": "cache,generated artifact,runtime/evidence or publication record"
+    }
+  ],
+  "license_policy": "Per-file license,existing third-party notices preserved;see LICENSES.md",
+  "new_runtime_or_hardware_tests": false,
+  "publication_transformations": []
+}

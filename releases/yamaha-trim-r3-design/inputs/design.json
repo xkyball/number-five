@@ -1,0 +1,2950 @@
+{
+  "schema": "trim.open-carrier/2",
+  "revision": "trim-open-carrier-r3",
+  "units": "mm",
+  "board": {
+    "outline": [
+      135,
+      65,
+      1
+    ],
+    "columns": 51,
+    "rows": 24,
+    "pitch": 2.54,
+    "origin": [
+      3,
+      3
+    ],
+    "strip_direction": "x",
+    "strip_width": 2.0,
+    "copper_thickness": 0.035,
+    "stock_sku": "Micro Robotics:VERO65145",
+    "stock_outline": [
+      145,
+      65,
+      1
+    ],
+    "cut_width": 0.7,
+    "mounts": [
+      {
+        "id": "B1_FL",
+        "xy": [
+          3,
+          3
+        ],
+        "diameter": 3.4,
+        "copper_clearance": 8,
+        "purpose": "M3x8 board screw"
+      },
+      {
+        "id": "B1_FR",
+        "xy": [
+          130,
+          3
+        ],
+        "diameter": 3.4,
+        "copper_clearance": 8,
+        "purpose": "M3x8 board screw"
+      },
+      {
+        "id": "B1_RL",
+        "xy": [
+          3,
+          48.72
+        ],
+        "diameter": 3.4,
+        "copper_clearance": 8,
+        "purpose": "M3x8 board screw"
+      },
+      {
+        "id": "B1_RR",
+        "xy": [
+          130,
+          43.64
+        ],
+        "diameter": 3.4,
+        "copper_clearance": 8,
+        "purpose": "M3x8 board screw"
+      },
+      {
+        "id": "NANO_L",
+        "xy": [
+          5.54,
+          17.9
+        ],
+        "diameter": 5.9,
+        "copper_clearance": 8,
+        "purpose": "M3 screwed positive keeper frame"
+      },
+      {
+        "id": "NANO_R",
+        "xy": [
+          31.54,
+          17.9
+        ],
+        "diameter": 5.9,
+        "copper_clearance": 8,
+        "purpose": "M3 screwed positive keeper frame"
+      },
+      {
+        "id": "DAC_R",
+        "xy": [
+          56.5,
+          10
+        ],
+        "diameter": 5.9,
+        "copper_clearance": 8,
+        "purpose": "M3 screwed DAC keeper frame"
+      },
+      {
+        "id": "DAC_R2",
+        "xy": [
+          56.5,
+          26
+        ],
+        "diameter": 5.9,
+        "copper_clearance": 8,
+        "purpose": "Second screw prevents DAC keeper rotation"
+      }
+    ]
+  },
+  "mechanics": {
+    "width": 188,
+    "depth": 106,
+    "height": 48,
+    "wall": 2.4,
+    "floor": 5.5,
+    "board_xy": [
+      10,
+      12
+    ],
+    "board_z": 10.3,
+    "buck_xy": [
+      158,
+      21
+    ],
+    "buck_z": 10.3,
+    "buck_outline": [
+      25,
+      48,
+      1.6
+    ],
+    "buck_measured_height": 13,
+    "buck_reserved_height": 18,
+    "fit": 0.3,
+    "ambient_limit_C": 50,
+    "driver_diameter": 8,
+    "gland_x": [
+      77,
+      116,
+      157
+    ],
+    "gland_z": 22,
+    "gland_hole": 12.8,
+    "hood_screws": [
+      [
+        6,
+        9
+      ],
+      [
+        182,
+        9
+      ],
+      [
+        6,
+        97
+      ],
+      [
+        182,
+        97
+      ]
+    ],
+    "material": "Creality CR-PETG; real thermal/creep acceptance OPEN",
+    "buck_mount": {
+      "frame": "Source top view, IN at left / OUT at right; x along48mm, y along25mm. User31Oct: mirror y=25-y relative to DBv3; rotate+90deg into assembly: X=25-y,Y=x. No geometric reflection in placement.",
+      "source_dimension_id": 60,
+      "source_version": 3,
+      "source_sha256": "862c5bb69995fee41e7f002d507680f7b27e9783cd21b631eb6976a2f2d9dd94",
+      "raw_holes_before_correction": [
+        [
+          6.1,
+          3.2
+        ],
+        [
+          41.9,
+          21.8
+        ]
+      ],
+      "corrected_source_holes": [
+        [
+          6.1,
+          21.8
+        ],
+        [
+          41.9,
+          3.2
+        ]
+      ],
+      "local_holes": [
+        [
+          3.2,
+          6.1
+        ],
+        [
+          21.8,
+          41.9
+        ]
+      ],
+      "diameter": 3.0,
+      "diameter_basis": "Approximate prior user photo3mm +/-0.5; compare before assembly; no new drilling of module",
+      "screw": "NO module-hole screw; M3x8 edge clamps",
+      "pilot": 2.5,
+      "correction_authority": "Direct user31Oct2026: DB hole diagonal mirrored; use existing holes, screw all practicable assemblies"
+    },
+    "seal": false,
+    "hood_gap": 0.3,
+    "blind_floor": 2.5,
+    "buck_fastening": "M3x8 screwed edge clamps; no screw through purchase holes",
+    "connector_anchor_y": 92,
+    "front_clamp_y": 9.6,
+    "front_clamp_jacket_diameter_mm": 5.0,
+    "connector_keys": {
+      "J1": -4.5,
+      "J2": -6.7,
+      "J3": 4.5,
+      "J5": 9.3
+    }
+  },
+  "ecu": {
+    "open_v": 5.027,
+    "source_ohm": 201.92192192192192,
+    "source": "Historical measurement, not new motor measurement",
+    "minimum_requested_ohm": 5,
+    "maximum_requested_ohm": 500
+  },
+  "components": [
+    {
+      "ref": "U1",
+      "kind": "nano",
+      "value": "NANO3-USBC",
+      "pins": {
+        "1": null,
+        "2": null,
+        "3": null,
+        "4": "GND",
+        "5": null,
+        "6": null,
+        "7": "RELAY_ENABLE",
+        "8": "HEARTBEAT",
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": null,
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": null,
+        "19": "SENSOR_ADC",
+        "20": "PINK_THIRD",
+        "21": "INHIBIT_GPIO",
+        "22": "EXCITE_ADC",
+        "23": "SDA",
+        "24": "SCL",
+        "25": "BOAT_ADC",
+        "26": null,
+        "27": "V5",
+        "28": null,
+        "29": "GND",
+        "30": null
+      },
+      "pin_names": {
+        "1": "TX",
+        "2": "RX",
+        "3": "RESET",
+        "4": "GND",
+        "5": "D2",
+        "6": "D3",
+        "7": "D4",
+        "8": "D5",
+        "9": "D6",
+        "10": "D7",
+        "11": "D8",
+        "12": "D9",
+        "13": "D10",
+        "14": "D11",
+        "15": "D12",
+        "16": "D13",
+        "17": "3V3",
+        "18": "AREF",
+        "19": "A0",
+        "20": "A1",
+        "21": "A2",
+        "22": "A3",
+        "23": "A4/SDA",
+        "24": "A5/SCL",
+        "25": "A6",
+        "26": "A7",
+        "27": "5V",
+        "28": "RESET",
+        "29": "GND",
+        "30": "VIN"
+      },
+      "sku": "Micro Robotics:NANO3-USBC",
+      "buses": [
+        [
+          "4",
+          "29"
+        ]
+      ],
+      "pads": {
+        "1": {
+          "hole": [
+            9,
+            17
+          ],
+          "net": null
+        },
+        "2": {
+          "hole": [
+            9,
+            16
+          ],
+          "net": null
+        },
+        "3": {
+          "hole": [
+            9,
+            15
+          ],
+          "net": null
+        },
+        "4": {
+          "hole": [
+            9,
+            14
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "hole": [
+            9,
+            13
+          ],
+          "net": null
+        },
+        "6": {
+          "hole": [
+            9,
+            12
+          ],
+          "net": null
+        },
+        "7": {
+          "hole": [
+            9,
+            11
+          ],
+          "net": "RELAY_ENABLE"
+        },
+        "8": {
+          "hole": [
+            9,
+            10
+          ],
+          "net": "HEARTBEAT"
+        },
+        "9": {
+          "hole": [
+            9,
+            9
+          ],
+          "net": null
+        },
+        "10": {
+          "hole": [
+            9,
+            8
+          ],
+          "net": null
+        },
+        "11": {
+          "hole": [
+            9,
+            7
+          ],
+          "net": null
+        },
+        "12": {
+          "hole": [
+            9,
+            6
+          ],
+          "net": null
+        },
+        "13": {
+          "hole": [
+            9,
+            5
+          ],
+          "net": null
+        },
+        "14": {
+          "hole": [
+            9,
+            4
+          ],
+          "net": null
+        },
+        "15": {
+          "hole": [
+            9,
+            3
+          ],
+          "net": null
+        },
+        "16": {
+          "hole": [
+            3,
+            3
+          ],
+          "net": null
+        },
+        "17": {
+          "hole": [
+            3,
+            4
+          ],
+          "net": null
+        },
+        "18": {
+          "hole": [
+            3,
+            5
+          ],
+          "net": null
+        },
+        "19": {
+          "hole": [
+            3,
+            6
+          ],
+          "net": "SENSOR_ADC"
+        },
+        "20": {
+          "hole": [
+            3,
+            7
+          ],
+          "net": "PINK_THIRD"
+        },
+        "21": {
+          "hole": [
+            3,
+            8
+          ],
+          "net": "INHIBIT_GPIO"
+        },
+        "22": {
+          "hole": [
+            3,
+            9
+          ],
+          "net": "EXCITE_ADC"
+        },
+        "23": {
+          "hole": [
+            3,
+            10
+          ],
+          "net": "SDA"
+        },
+        "24": {
+          "hole": [
+            3,
+            11
+          ],
+          "net": "SCL"
+        },
+        "25": {
+          "hole": [
+            3,
+            12
+          ],
+          "net": "BOAT_ADC"
+        },
+        "26": {
+          "hole": [
+            3,
+            13
+          ],
+          "net": null
+        },
+        "27": {
+          "hole": [
+            3,
+            14
+          ],
+          "net": "V5"
+        },
+        "28": {
+          "hole": [
+            3,
+            15
+          ],
+          "net": null
+        },
+        "29": {
+          "hole": [
+            3,
+            16
+          ],
+          "net": "GND"
+        },
+        "30": {
+          "hole": [
+            3,
+            17
+          ],
+          "net": null
+        }
+      }
+    },
+    {
+      "ref": "U2",
+      "kind": "dac",
+      "value": "MCP4725-MOD",
+      "pins": {
+        "1": "DAC_OUT",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA",
+        "5": "V5",
+        "6": "GND"
+      },
+      "pin_names": {
+        "1": "OUT",
+        "2": "GND",
+        "3": "SCL",
+        "4": "SDA",
+        "5": "VCC",
+        "6": "GND"
+      },
+      "sku": "Micro Robotics:MCP4725-MOD",
+      "buses": [
+        [
+          "2",
+          "6"
+        ]
+      ],
+      "pads": {
+        "1": {
+          "hole": [
+            14,
+            2
+          ],
+          "net": "DAC_OUT"
+        },
+        "2": {
+          "hole": [
+            14,
+            3
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "hole": [
+            14,
+            4
+          ],
+          "net": "SCL"
+        },
+        "4": {
+          "hole": [
+            14,
+            5
+          ],
+          "net": "SDA"
+        },
+        "5": {
+          "hole": [
+            14,
+            6
+          ],
+          "net": "V5"
+        },
+        "6": {
+          "hole": [
+            14,
+            7
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "U3",
+      "kind": "dual_opamp",
+      "value": "LM358N DIP-8",
+      "pins": {
+        "1": "DRIVE",
+        "2": "DAC_THIRD",
+        "3": "PINK_THIRD",
+        "4": "GND",
+        "5": "SENSOR_HALF",
+        "6": "SENSOR_BUFFER",
+        "7": "SENSOR_BUFFER",
+        "8": "V5"
+      },
+      "sku": "Micro Robotics:LM358N-DIP",
+      "pads": {
+        "1": {
+          "hole": [
+            22,
+            11
+          ],
+          "net": "DRIVE"
+        },
+        "2": {
+          "hole": [
+            22,
+            12
+          ],
+          "net": "DAC_THIRD"
+        },
+        "3": {
+          "hole": [
+            22,
+            13
+          ],
+          "net": "PINK_THIRD"
+        },
+        "4": {
+          "hole": [
+            22,
+            14
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "hole": [
+            25,
+            14
+          ],
+          "net": "SENSOR_HALF"
+        },
+        "6": {
+          "hole": [
+            25,
+            13
+          ],
+          "net": "SENSOR_BUFFER"
+        },
+        "7": {
+          "hole": [
+            25,
+            12
+          ],
+          "net": "SENSOR_BUFFER"
+        },
+        "8": {
+          "hole": [
+            25,
+            11
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "U5",
+      "kind": "dual_opamp",
+      "value": "LM358N DIP-8",
+      "pins": {
+        "1": "EXCITE_BUFFER",
+        "2": "EXCITE_BUFFER",
+        "3": "EXCITE_THIRD",
+        "4": "GND",
+        "5": "BOAT_SIXTH",
+        "6": "BOAT_BUFFER",
+        "7": "BOAT_BUFFER",
+        "8": "V5"
+      },
+      "sku": "Micro Robotics:LM358N-DIP",
+      "pads": {
+        "1": {
+          "hole": [
+            28,
+            2
+          ],
+          "net": "EXCITE_BUFFER"
+        },
+        "2": {
+          "hole": [
+            28,
+            3
+          ],
+          "net": "EXCITE_BUFFER"
+        },
+        "3": {
+          "hole": [
+            28,
+            4
+          ],
+          "net": "EXCITE_THIRD"
+        },
+        "4": {
+          "hole": [
+            28,
+            5
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "hole": [
+            31,
+            5
+          ],
+          "net": "BOAT_SIXTH"
+        },
+        "6": {
+          "hole": [
+            31,
+            4
+          ],
+          "net": "BOAT_BUFFER"
+        },
+        "7": {
+          "hole": [
+            31,
+            3
+          ],
+          "net": "BOAT_BUFFER"
+        },
+        "8": {
+          "hole": [
+            31,
+            2
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "Q1",
+      "kind": "npn",
+      "value": "BC547",
+      "pins": {
+        "C": "PINK_INT",
+        "B": "BASE",
+        "E": "GND"
+      },
+      "sku": "Micro Robotics:BC547",
+      "pads": {
+        "C": {
+          "hole": [
+            27,
+            17
+          ],
+          "net": "PINK_INT"
+        },
+        "B": {
+          "hole": [
+            28,
+            17
+          ],
+          "net": "BASE"
+        },
+        "E": {
+          "hole": [
+            29,
+            17
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "Q2",
+      "kind": "npn",
+      "value": "BC547",
+      "pins": {
+        "C": "BASE",
+        "B": "INHIBIT",
+        "E": "GND"
+      },
+      "sku": "Micro Robotics:BC547",
+      "pads": {
+        "C": {
+          "hole": [
+            22,
+            17
+          ],
+          "net": "BASE"
+        },
+        "B": {
+          "hole": [
+            23,
+            17
+          ],
+          "net": "INHIBIT"
+        },
+        "E": {
+          "hole": [
+            24,
+            17
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "Q3",
+      "kind": "npn",
+      "value": "2N2222A",
+      "pins": {
+        "C": "COIL_LOW",
+        "B": "RELAY_BASE",
+        "E": "COIL_MID"
+      },
+      "sku": "Micro Robotics:2N2222A-TO-92",
+      "pads": {
+        "C": {
+          "hole": [
+            43,
+            17
+          ],
+          "net": "COIL_LOW"
+        },
+        "B": {
+          "hole": [
+            44,
+            17
+          ],
+          "net": "RELAY_BASE"
+        },
+        "E": {
+          "hole": [
+            45,
+            17
+          ],
+          "net": "COIL_MID"
+        }
+      }
+    },
+    {
+      "ref": "Q4",
+      "kind": "npn",
+      "value": "2N2222A",
+      "pins": {
+        "C": "COIL_MID",
+        "B": "WATCH_BASE",
+        "E": "GND"
+      },
+      "sku": "Micro Robotics:2N2222A-TO-92",
+      "pads": {
+        "C": {
+          "hole": [
+            46,
+            15
+          ],
+          "net": "COIL_MID"
+        },
+        "B": {
+          "hole": [
+            47,
+            15
+          ],
+          "net": "WATCH_BASE"
+        },
+        "E": {
+          "hole": [
+            48,
+            15
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "Q5",
+      "kind": "npn",
+      "value": "BC547",
+      "pins": {
+        "C": "V5",
+        "B": "WATCH_HOLD",
+        "E": "WATCH_BUFFER"
+      },
+      "sku": "Micro Robotics:BC547",
+      "pads": {
+        "C": {
+          "hole": [
+            43,
+            12
+          ],
+          "net": "V5"
+        },
+        "B": {
+          "hole": [
+            44,
+            12
+          ],
+          "net": "WATCH_HOLD"
+        },
+        "E": {
+          "hole": [
+            45,
+            12
+          ],
+          "net": "WATCH_BUFFER"
+        }
+      }
+    },
+    {
+      "ref": "K1",
+      "kind": "relay",
+      "value": "FBR211SBD012-M /12V",
+      "pins": {
+        "1": "PINK",
+        "12": "PINK",
+        "5": "BOAT12_PROTECTED",
+        "6": "COIL_LOW",
+        "8": "PINK_INT",
+        "7": null
+      },
+      "sku": "Mantech:65M1937-H",
+      "buses": [
+        [
+          "1",
+          "12"
+        ]
+      ],
+      "pin_names": {
+        "1": "COM duplicate",
+        "12": "COM",
+        "5": "COIL+",
+        "6": "COIL-",
+        "8": "NO / open without power",
+        "7": "NC / unused"
+      },
+      "contact": {
+        "common": [
+          "1",
+          "12"
+        ],
+        "no": "8",
+        "nc": "7"
+      },
+      "orientation": "v",
+      "reference": "references/fbr211.pdf p5 B-type; bottom mirroredY toTOP then proper+90degree rotation",
+      "pads": {
+        "1": {
+          "hole": [
+            44,
+            2
+          ],
+          "net": "PINK"
+        },
+        "12": {
+          "hole": [
+            47,
+            2
+          ],
+          "net": "PINK"
+        },
+        "5": {
+          "hole": [
+            44,
+            6
+          ],
+          "net": "BOAT12_PROTECTED"
+        },
+        "6": {
+          "hole": [
+            44,
+            7
+          ],
+          "net": "COIL_LOW"
+        },
+        "8": {
+          "hole": [
+            47,
+            6
+          ],
+          "net": "PINK_INT"
+        },
+        "7": {
+          "hole": [
+            47,
+            7
+          ],
+          "net": null
+        }
+      }
+    },
+    {
+      "ref": "J1",
+      "kind": "connector",
+      "value": "Geber 2P",
+      "pins": {
+        "1": "SENSOR_RAW",
+        "2": "GND"
+      },
+      "pin_names": {
+        "1": "Geber Widerstand",
+        "2": "Geber Rueckleiter"
+      },
+      "sku": "Micro Robotics:YC100-508-2P-MF",
+      "pads": {
+        "1": {
+          "hole": [
+            3,
+            21
+          ],
+          "net": "SENSOR_RAW"
+        },
+        "2": {
+          "hole": [
+            5,
+            21
+          ],
+          "net": "GND"
+        }
+      },
+      "mounting": "2mm raised header on printed spacer; solder top-side wires to exposed leads, no double conductor forced into eye. Delivered pin length >=3.5mm and1.2mm wire OD must be checked."
+    },
+    {
+      "ref": "J2",
+      "kind": "connector",
+      "value": "Yamaha 3P codiert",
+      "pins": {
+        "1": "PINK",
+        "2": null,
+        "3": "GND"
+      },
+      "pin_names": {
+        "1": "Yamaha PINK",
+        "2": "gesperrt / NC",
+        "3": "Yamaha BLACK"
+      },
+      "sku": "Micro Robotics:YC100-508-3P-MF",
+      "pads": {
+        "1": {
+          "hole": [
+            13,
+            21
+          ],
+          "net": "PINK"
+        },
+        "2": {
+          "hole": [
+            15,
+            21
+          ],
+          "net": null
+        },
+        "3": {
+          "hole": [
+            17,
+            21
+          ],
+          "net": "GND"
+        }
+      },
+      "mounting": "2mm raised header on printed spacer; solder top-side wires to exposed leads, no double conductor forced into eye. Delivered pin length >=3.5mm and1.2mm wire OD must be checked."
+    },
+    {
+      "ref": "J3",
+      "kind": "connector",
+      "value": "Bordnetz 4P codiert",
+      "pins": {
+        "1": "FUSED12",
+        "2": null,
+        "3": null,
+        "4": "GND"
+      },
+      "pin_names": {
+        "1": "+12V abgesichert",
+        "2": "gesperrt / NC",
+        "3": "gesperrt / NC",
+        "4": "0V"
+      },
+      "sku": "Micro Robotics:YC100-508-4P-MF",
+      "pads": {
+        "1": {
+          "hole": [
+            26,
+            21
+          ],
+          "net": "FUSED12"
+        },
+        "2": {
+          "hole": [
+            28,
+            21
+          ],
+          "net": null
+        },
+        "3": {
+          "hole": [
+            30,
+            21
+          ],
+          "net": null
+        },
+        "4": {
+          "hole": [
+            32,
+            21
+          ],
+          "net": "GND"
+        }
+      },
+      "mounting": "2mm raised header on printed spacer; solder top-side wires to exposed leads, no double conductor forced into eye. Delivered pin length >=3.5mm and1.2mm wire OD must be checked."
+    },
+    {
+      "ref": "J5",
+      "kind": "connector",
+      "value": "Wandler 4P",
+      "pins": {
+        "1": "BOAT12_PROTECTED",
+        "2": "GND",
+        "3": "V5_BUCK",
+        "4": "GND"
+      },
+      "sku": "Micro Robotics:YC100-508-4P-MF",
+      "pads": {
+        "1": {
+          "hole": [
+            40,
+            21
+          ],
+          "net": "BOAT12_PROTECTED"
+        },
+        "2": {
+          "hole": [
+            42,
+            21
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "hole": [
+            44,
+            21
+          ],
+          "net": "V5_BUCK"
+        },
+        "4": {
+          "hole": [
+            46,
+            21
+          ],
+          "net": "GND"
+        }
+      },
+      "mounting": "2mm raised header on printed spacer; solder top-side wires to exposed leads, no double conductor forced into eye. Delivered pin length >=3.5mm and1.2mm wire OD must be checked."
+    },
+    {
+      "ref": "U4",
+      "kind": "buck",
+      "value": "XL6009AUD / 15M3540-A",
+      "pins": {
+        "1": "BOAT12_PROTECTED",
+        "2": "GND",
+        "3": "V5_BUCK",
+        "4": "GND"
+      },
+      "pin_names": {
+        "1": "IN+",
+        "2": "IN-",
+        "3": "OUT+",
+        "4": "OUT-"
+      },
+      "sku": "GeeWiz:15M3540-A",
+      "buses": [
+        [
+          "2",
+          "4"
+        ]
+      ]
+    },
+    {
+      "ref": "JP1",
+      "kind": "jumper",
+      "value": "USB-Service: REMOVE",
+      "pins": {
+        "1": "V5_BUCK",
+        "2": "V5"
+      },
+      "sku": "DESIGN:SHUNT-2P-254",
+      "removable_link": true,
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            2
+          ],
+          "net": "V5_BUCK"
+        },
+        "2": {
+          "hole": [
+            12,
+            3
+          ],
+          "net": "V5"
+        }
+      }
+    },
+    {
+      "ref": "D1",
+      "kind": "diode",
+      "value": "10SQ050 reverse protection",
+      "pins": {
+        "A": "FUSED12",
+        "K": "BOAT12_PROTECTED"
+      },
+      "sku": "GeeWiz:35M9741",
+      "body_size": [
+        9.1,
+        9.1,
+        9.1
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "A": {
+          "hole": [
+            34,
+            17
+          ],
+          "net": "FUSED12"
+        },
+        "K": {
+          "hole": [
+            42,
+            17
+          ],
+          "net": "BOAT12_PROTECTED"
+        }
+      }
+    },
+    {
+      "ref": "C2",
+      "kind": "capacitor",
+      "value": "10uF/16V",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "sku": "Communica:10UF 16VR",
+      "body_size": [
+        5,
+        5,
+        7
+      ],
+      "body_z": 4.3,
+      "polarized": true,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            27,
+            14
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "hole": [
+            27,
+            15
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "D2",
+      "kind": "tvs",
+      "value": "P6KE18A",
+      "pins": {
+        "A": "GND",
+        "K": "BOAT12_PROTECTED"
+      },
+      "sku": "GEN:P6KE18A",
+      "body_size": [
+        6.75,
+        3.53,
+        3.53
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "A": {
+          "hole": [
+            26,
+            12
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            30,
+            12
+          ],
+          "net": "BOAT12_PROTECTED"
+        }
+      }
+    },
+    {
+      "ref": "CH1",
+      "kind": "capacitor",
+      "value": "10uF/50V",
+      "pins": {
+        "1": "HB_SOURCE",
+        "2": "HB_PUMP"
+      },
+      "sku": "Micro Robotics:CAPKIT:10UF-50V",
+      "body_size": [
+        4,
+        4,
+        7
+      ],
+      "body_z": 4.3,
+      "polarized": true,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            24,
+            1
+          ],
+          "net": "HB_SOURCE"
+        },
+        "2": {
+          "hole": [
+            25,
+            1
+          ],
+          "net": "HB_PUMP"
+        }
+      }
+    },
+    {
+      "ref": "CH2",
+      "kind": "capacitor",
+      "value": "10uF/50V",
+      "pins": {
+        "1": "WATCH_HOLD",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:CAPKIT:10UF-50V",
+      "body_size": [
+        4,
+        4,
+        7
+      ],
+      "body_z": 4.3,
+      "polarized": true,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            25,
+            17
+          ],
+          "net": "WATCH_HOLD"
+        },
+        "2": {
+          "hole": [
+            26,
+            17
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "R1",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "resistance_ohm": 1000,
+      "pins": {
+        "1": "EXCITE",
+        "2": "SENSOR_RAW"
+      },
+      "sku": "Micro Robotics:RES-1K-025W",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            11,
+            16
+          ],
+          "net": "EXCITE"
+        },
+        "2": {
+          "hole": [
+            11,
+            19
+          ],
+          "net": "SENSOR_RAW"
+        }
+      }
+    },
+    {
+      "ref": "R4",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "SENSOR_RAW",
+        "2": "SENSOR_HALF"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            13,
+            16
+          ],
+          "net": "SENSOR_RAW"
+        },
+        "2": {
+          "hole": [
+            13,
+            19
+          ],
+          "net": "SENSOR_HALF"
+        }
+      }
+    },
+    {
+      "ref": "R17",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "SENSOR_HALF",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            21,
+            14
+          ],
+          "net": "SENSOR_HALF"
+        },
+        "2": {
+          "hole": [
+            21,
+            17
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "R18",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "resistance_ohm": 1000,
+      "pins": {
+        "1": "SENSOR_BUFFER",
+        "2": "SENSOR_ADC"
+      },
+      "sku": "Micro Robotics:RES-1K-025W",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            11,
+            9
+          ],
+          "net": "SENSOR_BUFFER"
+        },
+        "2": {
+          "hole": [
+            11,
+            12
+          ],
+          "net": "SENSOR_ADC"
+        }
+      }
+    },
+    {
+      "ref": "RP1",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "PINK_INT",
+        "2": "DIV_P"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            40,
+            7
+          ],
+          "net": "PINK_INT"
+        },
+        "2": {
+          "hole": [
+            40,
+            10
+          ],
+          "net": "DIV_P"
+        }
+      }
+    },
+    {
+      "ref": "RP2",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "DIV_P",
+        "2": "PINK_THIRD"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            36,
+            8
+          ],
+          "net": "DIV_P"
+        },
+        "2": {
+          "hole": [
+            36,
+            11
+          ],
+          "net": "PINK_THIRD"
+        }
+      }
+    },
+    {
+      "ref": "RP3",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "PINK_THIRD",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            30,
+            13
+          ],
+          "net": "PINK_THIRD"
+        },
+        "2": {
+          "hole": [
+            30,
+            16
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RD1",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "DAC_OUT",
+        "2": "DIV_D"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            9
+          ],
+          "net": "DAC_OUT"
+        },
+        "2": {
+          "hole": [
+            15,
+            9
+          ],
+          "net": "DIV_D"
+        }
+      }
+    },
+    {
+      "ref": "RD2",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "DIV_D",
+        "2": "DAC_THIRD"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            18,
+            9
+          ],
+          "net": "DIV_D"
+        },
+        "2": {
+          "hole": [
+            18,
+            12
+          ],
+          "net": "DAC_THIRD"
+        }
+      }
+    },
+    {
+      "ref": "RD3",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "DAC_THIRD",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            20,
+            11
+          ],
+          "net": "DAC_THIRD"
+        },
+        "2": {
+          "hole": [
+            20,
+            14
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RX1",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "EXCITE",
+        "2": "DIV_X"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            11,
+            15
+          ],
+          "net": "EXCITE"
+        },
+        "2": {
+          "hole": [
+            14,
+            15
+          ],
+          "net": "DIV_X"
+        }
+      }
+    },
+    {
+      "ref": "RX2",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "DIV_X",
+        "2": "EXCITE_THIRD"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            25,
+            5
+          ],
+          "net": "DIV_X"
+        },
+        "2": {
+          "hole": [
+            25,
+            8
+          ],
+          "net": "EXCITE_THIRD"
+        }
+      }
+    },
+    {
+      "ref": "RX3",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "EXCITE_THIRD",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            25,
+            10
+          ],
+          "net": "EXCITE_THIRD"
+        },
+        "2": {
+          "hole": [
+            28,
+            10
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RB1",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT12_PROTECTED",
+        "2": "BOAT_DIV1"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            37,
+            14
+          ],
+          "net": "BOAT12_PROTECTED"
+        },
+        "2": {
+          "hole": [
+            40,
+            14
+          ],
+          "net": "BOAT_DIV1"
+        }
+      }
+    },
+    {
+      "ref": "RB2",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT_DIV1",
+        "2": "BOAT_DIV2"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            37,
+            12
+          ],
+          "net": "BOAT_DIV1"
+        },
+        "2": {
+          "hole": [
+            40,
+            12
+          ],
+          "net": "BOAT_DIV2"
+        }
+      }
+    },
+    {
+      "ref": "RB3",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT_DIV2",
+        "2": "BOAT_DIV3"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            38,
+            8
+          ],
+          "net": "BOAT_DIV2"
+        },
+        "2": {
+          "hole": [
+            38,
+            11
+          ],
+          "net": "BOAT_DIV3"
+        }
+      }
+    },
+    {
+      "ref": "RB4",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT_DIV3",
+        "2": "BOAT_DIV4"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            36,
+            7
+          ],
+          "net": "BOAT_DIV3"
+        },
+        "2": {
+          "hole": [
+            39,
+            7
+          ],
+          "net": "BOAT_DIV4"
+        }
+      }
+    },
+    {
+      "ref": "RB5",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT_DIV4",
+        "2": "BOAT_SIXTH"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            32,
+            3
+          ],
+          "net": "BOAT_DIV4"
+        },
+        "2": {
+          "hole": [
+            32,
+            6
+          ],
+          "net": "BOAT_SIXTH"
+        }
+      }
+    },
+    {
+      "ref": "RB6",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BOAT_SIXTH",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            29,
+            8
+          ],
+          "net": "BOAT_SIXTH"
+        },
+        "2": {
+          "hole": [
+            29,
+            11
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RB7",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "resistance_ohm": 1000,
+      "pins": {
+        "1": "BOAT_BUFFER",
+        "2": "BOAT_ADC"
+      },
+      "sku": "Micro Robotics:RES-1K-025W",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            27,
+            3
+          ],
+          "net": "BOAT_BUFFER"
+        },
+        "2": {
+          "hole": [
+            27,
+            6
+          ],
+          "net": "BOAT_ADC"
+        }
+      }
+    },
+    {
+      "ref": "RX4",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "resistance_ohm": 1000,
+      "pins": {
+        "1": "EXCITE_BUFFER",
+        "2": "EXCITE_ADC"
+      },
+      "sku": "Micro Robotics:RES-1K-025W",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            20,
+            6
+          ],
+          "net": "EXCITE_BUFFER"
+        },
+        "2": {
+          "hole": [
+            23,
+            6
+          ],
+          "net": "EXCITE_ADC"
+        }
+      }
+    },
+    {
+      "ref": "R9",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "resistance_ohm": 1000,
+      "pins": {
+        "1": "DRIVE",
+        "2": "BASE"
+      },
+      "sku": "Micro Robotics:RES-1K-025W",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            19,
+            14
+          ],
+          "net": "DRIVE"
+        },
+        "2": {
+          "hole": [
+            19,
+            17
+          ],
+          "net": "BASE"
+        }
+      }
+    },
+    {
+      "ref": "R12",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "BASE",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            18,
+            18
+          ],
+          "net": "BASE"
+        },
+        "2": {
+          "hole": [
+            21,
+            18
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "R13",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "V5",
+        "2": "INHIBIT"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            16,
+            8
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "hole": [
+            16,
+            11
+          ],
+          "net": "INHIBIT"
+        }
+      }
+    },
+    {
+      "ref": "R14",
+      "kind": "resistor",
+      "value": "330 ohm",
+      "resistance_ohm": 330,
+      "pins": {
+        "1": "INHIBIT_GPIO",
+        "2": "INHIBIT"
+      },
+      "sku": "Micro Robotics:RES-330E-50",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            14,
+            12
+          ],
+          "net": "INHIBIT_GPIO"
+        },
+        "2": {
+          "hole": [
+            17,
+            12
+          ],
+          "net": "INHIBIT"
+        }
+      }
+    },
+    {
+      "ref": "R15",
+      "kind": "resistor",
+      "value": "330 ohm",
+      "resistance_ohm": 330,
+      "pins": {
+        "1": "RELAY_ENABLE",
+        "2": "RELAY_BASE"
+      },
+      "sku": "Micro Robotics:RES-330E-50",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            13,
+            10
+          ],
+          "net": "RELAY_ENABLE"
+        },
+        "2": {
+          "hole": [
+            13,
+            13
+          ],
+          "net": "RELAY_BASE"
+        }
+      }
+    },
+    {
+      "ref": "R16",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "RELAY_BASE",
+        "2": "COIL_MID"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            42,
+            15
+          ],
+          "net": "RELAY_BASE"
+        },
+        "2": {
+          "hole": [
+            45,
+            15
+          ],
+          "net": "COIL_MID"
+        }
+      }
+    },
+    {
+      "ref": "RH1",
+      "kind": "resistor",
+      "value": "330 ohm",
+      "resistance_ohm": 330,
+      "pins": {
+        "1": "WATCH_BUFFER",
+        "2": "WATCH_BASE"
+      },
+      "sku": "Micro Robotics:RES-330E-50",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            46,
+            10
+          ],
+          "net": "WATCH_BUFFER"
+        },
+        "2": {
+          "hole": [
+            46,
+            13
+          ],
+          "net": "WATCH_BASE"
+        }
+      }
+    },
+    {
+      "ref": "RH2",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "WATCH_BASE",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            31,
+            10
+          ],
+          "net": "WATCH_BASE"
+        },
+        "2": {
+          "hole": [
+            31,
+            13
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RH3",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "resistance_ohm": 10000,
+      "pins": {
+        "1": "WATCH_HOLD",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:RES-10K-025",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            32,
+            13
+          ],
+          "net": "WATCH_HOLD"
+        },
+        "2": {
+          "hole": [
+            32,
+            16
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "RH4",
+      "kind": "resistor",
+      "value": "330 ohm",
+      "resistance_ohm": 330,
+      "pins": {
+        "1": "HEARTBEAT",
+        "2": "HB_SOURCE"
+      },
+      "sku": "Micro Robotics:RES-330E-50",
+      "body_size": [
+        6.3,
+        2.2,
+        2.2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "1": {
+          "hole": [
+            23,
+            3
+          ],
+          "net": "HEARTBEAT"
+        },
+        "2": {
+          "hole": [
+            26,
+            3
+          ],
+          "net": "HB_SOURCE"
+        }
+      }
+    },
+    {
+      "ref": "C1",
+      "kind": "capacitor",
+      "value": "100nF",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "sku": "Communica:X7R0104K55T",
+      "body_size": [
+        4,
+        3,
+        4
+      ],
+      "body_z": 4.3,
+      "polarized": false,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            27,
+            7
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "hole": [
+            27,
+            9
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "C3",
+      "kind": "capacitor",
+      "value": "100nF",
+      "pins": {
+        "1": "SENSOR_ADC",
+        "2": "GND"
+      },
+      "sku": "Communica:X7R0104K55T",
+      "body_size": [
+        4,
+        3,
+        4
+      ],
+      "body_z": 4.3,
+      "polarized": false,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            31,
+            17
+          ],
+          "net": "SENSOR_ADC"
+        },
+        "2": {
+          "hole": [
+            31,
+            19
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "C4",
+      "kind": "capacitor",
+      "value": "100nF",
+      "pins": {
+        "1": "DRIVE",
+        "2": "DAC_THIRD"
+      },
+      "sku": "Communica:X7R0104K55T",
+      "body_size": [
+        4,
+        3,
+        4
+      ],
+      "body_z": 4.3,
+      "polarized": false,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            17,
+            13
+          ],
+          "net": "DRIVE"
+        },
+        "2": {
+          "hole": [
+            17,
+            15
+          ],
+          "net": "DAC_THIRD"
+        }
+      }
+    },
+    {
+      "ref": "C5",
+      "kind": "capacitor",
+      "value": "100nF",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:CAPKIT:100NF-50V",
+      "body_size": [
+        4,
+        3,
+        4
+      ],
+      "body_z": 4.3,
+      "polarized": false,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            33,
+            10
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "hole": [
+            33,
+            12
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "C6",
+      "kind": "capacitor",
+      "value": "100nF",
+      "pins": {
+        "1": "V5",
+        "2": "GND"
+      },
+      "sku": "Micro Robotics:CAPKIT:100NF-50V",
+      "body_size": [
+        4,
+        3,
+        4
+      ],
+      "body_z": 4.3,
+      "polarized": false,
+      "orientation": "v",
+      "pads": {
+        "1": {
+          "hole": [
+            31,
+            7
+          ],
+          "net": "V5"
+        },
+        "2": {
+          "hole": [
+            31,
+            9
+          ],
+          "net": "GND"
+        }
+      }
+    },
+    {
+      "ref": "D3",
+      "kind": "diode",
+      "value": "1N4148 coil flyback",
+      "pins": {
+        "A": "COIL_LOW",
+        "K": "BOAT12_PROTECTED"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "A": {
+          "hole": [
+            41,
+            13
+          ],
+          "net": "COIL_LOW"
+        },
+        "K": {
+          "hole": [
+            41,
+            16
+          ],
+          "net": "BOAT12_PROTECTED"
+        }
+      }
+    },
+    {
+      "ref": "D6",
+      "kind": "diode",
+      "value": "1N4148 excitation reverse block",
+      "pins": {
+        "A": "V5",
+        "K": "EXCITE"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "A": {
+          "hole": [
+            15,
+            13
+          ],
+          "net": "V5"
+        },
+        "K": {
+          "hole": [
+            15,
+            16
+          ],
+          "net": "EXCITE"
+        }
+      }
+    },
+    {
+      "ref": "D7",
+      "kind": "diode",
+      "value": "1N4148 pump clamp",
+      "pins": {
+        "A": "GND",
+        "K": "HB_PUMP"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "A": {
+          "hole": [
+            34,
+            12
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            34,
+            15
+          ],
+          "net": "HB_PUMP"
+        }
+      }
+    },
+    {
+      "ref": "D8",
+      "kind": "diode",
+      "value": "1N4148 pump rectifier",
+      "pins": {
+        "A": "HB_PUMP",
+        "K": "WATCH_HOLD"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "A": {
+          "hole": [
+            32,
+            9
+          ],
+          "net": "HB_PUMP"
+        },
+        "K": {
+          "hole": [
+            35,
+            9
+          ],
+          "net": "WATCH_HOLD"
+        }
+      }
+    },
+    {
+      "ref": "D9",
+      "kind": "diode",
+      "value": "1N4148 negative input limiter",
+      "pins": {
+        "A": "GND",
+        "K": "SENSOR_HALF"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "v",
+      "pads": {
+        "A": {
+          "hole": [
+            33,
+            16
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            33,
+            19
+          ],
+          "net": "SENSOR_HALF"
+        }
+      }
+    },
+    {
+      "ref": "D10",
+      "kind": "diode",
+      "value": "1N4148 negative input limiter",
+      "pins": {
+        "A": "GND",
+        "K": "EXCITE_THIRD"
+      },
+      "sku": "Communica:1N4148",
+      "body_size": [
+        3.5,
+        2,
+        2
+      ],
+      "body_z": 1.8,
+      "orientation": "h",
+      "pads": {
+        "A": {
+          "hole": [
+            32,
+            7
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            35,
+            7
+          ],
+          "net": "EXCITE_THIRD"
+        }
+      }
+    }
+  ],
+  "external": [
+    {
+      "id": "J1",
+      "pins": {
+        "1": "SENSOR_RAW",
+        "2": "GND"
+      },
+      "cable": "2x0.5mm2",
+      "purpose": "passiver Geber, vom Yamaha-Signal getrennt"
+    },
+    {
+      "id": "J2",
+      "pins": {
+        "1": "PINK",
+        "2": null,
+        "3": "GND"
+      },
+      "cable": "2x0.5mm2",
+      "purpose": "Yamaha PINK/BLACK; kein Kontakt zu SENSOR_RAW"
+    },
+    {
+      "id": "J3",
+      "pins": {
+        "1": "FUSED12",
+        "2": null,
+        "3": null,
+        "4": "GND"
+      },
+      "cable": "2x0.5mm2",
+      "purpose": "12V ueber vorhandene externe 1A-Sicherung nahe Quelle"
+    }
+  ],
+  "assumptions": [
+    "50C Einbauplatz vom Nutzer bestaetigt; Eigenerwaermung offen",
+    "Gemeinsames GND, keine galvanische Trennung behauptet",
+    "Kabelmodelle nur Platz-/Biegeraeume, keine Einzeladern",
+    "Geber ist ein passives Potentiometer, vom Nutzer bestaetigt",
+    "Steckverbinderplan auf 5.08mm, nicht KF301-5.00mm",
+    "Yamaha 5..500ohm pruefen, nicht als physikalisch garantiert ausgeben",
+    "USB nur mit J3 getrennt und JP1 entfernt; Stecker J2 beim Tischservice abziehen",
+    "FBR211SBD012-M: B-type bottom view mirrored in Y for TOP-view pin placement; confirm marking and continuity before power. Pins1/12 common,8 NO,7 NC,5/6 coil; then+90degree proper rotation in placement.",
+    "No gasket material used; overlapping PETG hood is not certified waterproof.",
+    "Bridge wire uses owned0.60mm enamelled copper, conservative OD0.8mm; varnish and hand forming need physical check. Bare ends3mm.",
+    "12V signal relay ambient rating55C leaves little margin at confirmed50C site; internal air and coil supply require measurement.",
+    "No automatic package veto based on FAIL/OPEN. Runtime fault shutdown remains active."
+  ],
+  "routing_priority": [
+    "SCL",
+    "SDA",
+    "PINK",
+    "PINK_INT",
+    "INHIBIT",
+    "RELAY_BASE",
+    "WATCH_BASE",
+    "WATCH_BUFFER",
+    "WATCH_HOLD",
+    "HB_SOURCE",
+    "HB_PUMP",
+    "COIL_MID",
+    "COIL_LOW",
+    "BASE",
+    "DRIVE",
+    "SENSOR_HALF",
+    "SENSOR_BUFFER",
+    "EXCITE_THIRD",
+    "EXCITE_BUFFER",
+    "BOAT_SIXTH",
+    "BOAT_BUFFER",
+    "SENSOR_ADC",
+    "EXCITE_ADC",
+    "BOAT_ADC",
+    "DAC_THIRD",
+    "PINK_THIRD",
+    "INHIBIT_GPIO",
+    "RELAY_ENABLE",
+    "HEARTBEAT",
+    "BOAT_DIV1",
+    "BOAT_DIV2",
+    "BOAT_DIV3",
+    "BOAT_DIV4",
+    "DAC_OUT",
+    "DIV_D",
+    "DIV_P",
+    "DIV_X",
+    "EXCITE",
+    "FUSED12",
+    "SENSOR_RAW",
+    "V5_BUCK",
+    "BOAT12_PROTECTED",
+    "GND",
+    "V5"
+  ],
+  "harness": {
+    "external_jacket_mm": {
+      "GEBER": 380,
+      "YAMAHA": 320,
+      "POWER": 280
+    },
+    "buck_wire_mm": [
+      180,
+      180,
+      140,
+      140
+    ],
+    "adapter_tails_mm": 50,
+    "note": "Planned only; actual cut and installed state not booked. Routing/envelopes follow R3 placements."
+  },
+  "electrical": {
+    "relay": {
+      "item_id": 31,
+      "coil_ohm": 320,
+      "coil_tolerance": 0.1,
+      "ambient_max_C": 55,
+      "coil_supply": "BOAT12_PROTECTED",
+      "normal_enable": "D4",
+      "heartbeat": "D5",
+      "heartbeat_half_period_ms": 10,
+      "timeout_target_ms": 250,
+      "heartbeat_topology": "AC-coupled diode charge pump + NPN buffer drives lower series coil transistor; upper transistor is independent normal enable",
+      "contact_min_reference": "1mA at5V, clean room; startup/contact ageing and marine humidity require physical check",
+      "welded_contact": "Not detected or forcibly opened by one relay"
+    },
+    "dividers": {
+      "pink": 3,
+      "dac": 3,
+      "sensor": 2,
+      "excitation": 3,
+      "boat": 6
+    },
+    "supply_guard_mV": [
+      4600,
+      5250
+    ],
+    "boat_guard_mV": [
+      10500,
+      15000
+    ],
+    "sensor_pullup_ohm": 1000,
+    "adc_reference": "measured AVCC via calibrated internal bandgap; no saved5V used for active output",
+    "positive_input_isolation": "LM358 input no diode to positive supply; TI SLOA277B2.2, real manufacturer marking remains to verify",
+    "negative_input": "series10k + silicon clamp; negative miswire behavior is fault-only, not precision operation"
+  },
+  "wire": {
+    "sku": "Communica:ECCW0.60-25M",
+    "conductor_diameter_mm": 0.6,
+    "OD_mm": 0.8,
+    "bend_radius_mm": 1.2,
+    "layers_mm": [
+      2.3,
+      3.5,
+      4.7,
+      5.9,
+      7.1,
+      8.3
+    ],
+    "component_side": true,
+    "bare_end_mm": 3,
+    "qualification": "Enamel and formed bend minimum are conservative plan envelopes; actual varnish/diameter, stripping/tinning and bend test OPEN."
+  }
+}

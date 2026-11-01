@@ -1,0 +1,7 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ <application>
+  <profileable android:shell="true"/>
+  <activity android:name="com.no5.helm.benchmark.QuietBenchmarkActivity6" android:exported="true" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen"/>
+  <activity android:name="com.no5.helm.benchmark.QuietBenchmarkActivity5" android:exported="true" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen"/>
+ </application>
+</manifest>

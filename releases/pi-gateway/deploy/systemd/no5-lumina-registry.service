@@ -1,0 +1,27 @@
+[Unit]
+Description=No5 root-owned Lumina public-key registry helper
+After=network.target
+Before=no5-pi-gateway.service
+
+[Service]
+Type=simple
+User=root
+Group=no5gateway
+RuntimeDirectory=no5-lumina-registry
+RuntimeDirectoryMode=0750
+StateDirectory=no5-lumina-registry
+StateDirectoryMode=0750
+EnvironmentFile=/etc/no5-pi-gateway/lumina-registry.env
+ExecStart=/opt/no5-pi-gateway/current/venv/bin/python -m no5_pi_gateway.lumina_registry_admin --socket /run/no5-lumina-registry/registry.sock --registry /var/lib/no5-lumina-registry/registry.json --audience ${NO5_LUMINA_AUDIENCE}
+Restart=on-failure
+RestartSec=2
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/no5-lumina-registry /var/lib/no5-lumina-registry
+RestrictAddressFamilies=AF_UNIX
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Theme.No5.Base" parent="android:style/Theme.Material.NoActionBar">
+    <item name="android:fontFamily">sans</item><item name="android:windowLightStatusBar">false</item>
+    <item name="android:windowActionModeOverlay">true</item><item name="android:colorAccent">#005DAF</item>
+    <item name="android:windowBackground">#000000</item><item name="android:colorBackground">#000000</item>
+    <item name="android:windowFullscreen">true</item>
+</style>
+<style name="Theme.No5" parent="Theme.No5.Base"/>
+</resources>

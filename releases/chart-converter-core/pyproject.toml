@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "no-chart-converter"
+version = "0.2.23"
+description = "Private portable SENC-cache to chart conversion tools"
+requires-python = ">=3.11"
+dependencies = ["shapely>=2.1,<3", "pyshp>=2.3,<3"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+native = ["unicorn>=2.1,<3", "pyelftools>=0.31,<1"]
+bitmap = ["Pillow>=12,<14"]
+terrain = ["contourpy>=1.3.3,<1.4", "netCDF4>=1.7,<2"]
+
+[project.scripts]
+no-chart-converter = "no_chart_converter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+no_chart_converter = ["resources/*.json", "area_static/*", "host_runtime/*"]
+"no_chart_converter.country_runtime" = ["*.json"]
+"no_chart_converter.cache_country" = ["native/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

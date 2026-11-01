@@ -1,0 +1,606 @@
+{
+  "id": "marker-tx",
+  "board": {
+    "nominal_size_mm": [
+      40,
+      60
+    ],
+    "grid_columns_rows": [
+      14,
+      20
+    ],
+    "pitch_mm": 2.54,
+    "hole_origin_mm": [
+      3.4899999999999984,
+      5.870000000000001
+    ],
+    "hole_diameter_mm": 1,
+    "pad_diameter_mm": 2,
+    "thickness_mm": 1.6,
+    "source": "https://www.robotics.org.za/PROTO-46DS-P254?manufacturer_id=20&page=42",
+    "source_status": "manufacturer_nominal; received grid origin/pad/drill not measured",
+    "copper": "double-sided isolated plated eyes; no implicit buses",
+    "received_part_fit_checked": false
+  },
+  "components": [
+    {
+      "ref": "R_M1",
+      "kind": "resistor",
+      "value": "68000 ohm",
+      "pins": {
+        "1": "T1_BLUE",
+        "2": "T1_ATT1"
+      },
+      "ohms": 68000,
+      "power_rating_W": 2,
+      "voltage_and_pulse_rating_qualification_pending": true,
+      "cad_reference": "R6",
+      "pads": {
+        "1": {
+          "hole": [
+            2,
+            4
+          ],
+          "net": "T1_BLUE"
+        },
+        "2": {
+          "hole": [
+            2,
+            13
+          ],
+          "net": "T1_ATT1"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_M2",
+      "kind": "resistor",
+      "value": "68000 ohm",
+      "pins": {
+        "1": "T1_ATT1",
+        "2": "T1_ATT2"
+      },
+      "ohms": 68000,
+      "power_rating_W": 2,
+      "voltage_and_pulse_rating_qualification_pending": true,
+      "cad_reference": "R7",
+      "pads": {
+        "1": {
+          "hole": [
+            5,
+            13
+          ],
+          "net": "T1_ATT1"
+        },
+        "2": {
+          "hole": [
+            5,
+            4
+          ],
+          "net": "T1_ATT2"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_M3",
+      "kind": "resistor",
+      "value": "68000 ohm",
+      "pins": {
+        "1": "T1_ATT2",
+        "2": "MARKER_S"
+      },
+      "ohms": 68000,
+      "power_rating_W": 2,
+      "voltage_and_pulse_rating_qualification_pending": true,
+      "cad_reference": "R8",
+      "pads": {
+        "1": {
+          "hole": [
+            8,
+            4
+          ],
+          "net": "T1_ATT2"
+        },
+        "2": {
+          "hole": [
+            8,
+            13
+          ],
+          "net": "MARKER_S"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_M4",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "pins": {
+        "1": "MARKER_S",
+        "2": "GP16_MARKER"
+      },
+      "ohms": 10000,
+      "cad_reference": "R9",
+      "pads": {
+        "1": {
+          "hole": [
+            8,
+            15
+          ],
+          "net": "MARKER_S"
+        },
+        "2": {
+          "hole": [
+            8,
+            19
+          ],
+          "net": "GP16_MARKER"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_M5",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "pins": {
+        "1": "MARKER_S",
+        "2": "GND"
+      },
+      "ohms": 10000,
+      "population_status": "MUST_CONFIRM_ACTUAL_BREADBOARD_OR_EXPLICITLY_APPROVE_DESIGN_CHANGE",
+      "reason": "Later marker text states10k to GND; earlier marker JSON has only series10k and does not list this shunt. Not assumed physically present.",
+      "cad_reference": "R10",
+      "pads": {
+        "1": {
+          "hole": [
+            5,
+            15
+          ],
+          "net": "MARKER_S"
+        },
+        "2": {
+          "hole": [
+            5,
+            19
+          ],
+          "net": "GND"
+        }
+      },
+      "dnp": true,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "D_M_LO",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "GND",
+        "K": "MARKER_S"
+      },
+      "cathode_mark": "ring",
+      "cad_reference": "D5",
+      "pads": {
+        "A": {
+          "hole": [
+            2,
+            16
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            2,
+            19
+          ],
+          "net": "MARKER_S"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "D_M_HI",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "MARKER_S",
+        "K": "PICO_3V3"
+      },
+      "cathode_mark": "ring",
+      "cad_reference": "D6",
+      "pads": {
+        "A": {
+          "hole": [
+            4,
+            18
+          ],
+          "net": "MARKER_S"
+        },
+        "K": {
+          "hole": [
+            7,
+            18
+          ],
+          "net": "PICO_3V3"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_TX18",
+      "kind": "resistor",
+      "value": "390 ohm",
+      "pins": {
+        "1": "GP18_TX",
+        "2": "TX18_AFTER_R"
+      },
+      "ohms": 390,
+      "cad_reference": "R11",
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            4
+          ],
+          "net": "GP18_TX"
+        },
+        "2": {
+          "hole": [
+            10,
+            8
+          ],
+          "net": "TX18_AFTER_R"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "D_TX18",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "TX18_AFTER_R",
+        "K": "TX_INJECT_Q10_3"
+      },
+      "cathode_mark": "ring",
+      "cad_reference": "D7",
+      "pads": {
+        "A": {
+          "hole": [
+            10,
+            10
+          ],
+          "net": "TX18_AFTER_R"
+        },
+        "K": {
+          "hole": [
+            10,
+            13
+          ],
+          "net": "TX_INJECT_Q10_3"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "R_TX22",
+      "kind": "resistor",
+      "value": "390 ohm",
+      "pins": {
+        "1": "GP22_TX",
+        "2": "TX22_AFTER_R"
+      },
+      "ohms": 390,
+      "cad_reference": "R12",
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            4
+          ],
+          "net": "GP22_TX"
+        },
+        "2": {
+          "hole": [
+            12,
+            8
+          ],
+          "net": "TX22_AFTER_R"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "D_TX22",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "TX22_AFTER_R",
+        "K": "TX_INJECT_Q10_3"
+      },
+      "cathode_mark": "ring",
+      "cad_reference": "D8",
+      "pads": {
+        "A": {
+          "hole": [
+            12,
+            10
+          ],
+          "net": "TX22_AFTER_R"
+        },
+        "K": {
+          "hole": [
+            12,
+            13
+          ],
+          "net": "TX_INJECT_Q10_3"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "D_TX_LO",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "GND",
+        "K": "TX_INJECT_Q10_3"
+      },
+      "cathode_mark": "ring",
+      "cad_reference": "D9",
+      "pads": {
+        "A": {
+          "hole": [
+            10,
+            15
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            13,
+            15
+          ],
+          "net": "TX_INJECT_Q10_3"
+        }
+      },
+      "dnp": false,
+      "module": "marker-tx"
+    },
+    {
+      "ref": "JP_TX18",
+      "cad_reference": "J406",
+      "kind": "connector",
+      "value": "unabhaengige TX-Trennstelle",
+      "orientation": "right",
+      "family": "2.54mm removable shunt",
+      "pins": {
+        "1": "GP18_SOURCE",
+        "2": "GP18_TX"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            2
+          ],
+          "net": "GP18_SOURCE"
+        },
+        "2": {
+          "hole": [
+            10,
+            3
+          ],
+          "net": "GP18_TX"
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false
+    },
+    {
+      "ref": "JP_TX22",
+      "cad_reference": "J407",
+      "kind": "connector",
+      "value": "unabhaengige TX-Trennstelle",
+      "orientation": "right",
+      "family": "2.54mm removable shunt",
+      "pins": {
+        "1": "GP22_SOURCE",
+        "2": "GP22_TX"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            2
+          ],
+          "net": "GP22_SOURCE"
+        },
+        "2": {
+          "hole": [
+            12,
+            3
+          ],
+          "net": "GP22_TX"
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false
+    },
+    {
+      "ref": "J_M_FIELD",
+      "cad_reference": "J1410",
+      "kind": "connector",
+      "value": "YC100-508-4P-MF / matched screw plug and PCB header",
+      "pins": {
+        "1": "T1_BLUE",
+        "2": null,
+        "3": null,
+        "4": null
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            1,
+            1
+          ],
+          "net": "T1_BLUE"
+        },
+        "2": {
+          "hole": [
+            3,
+            1
+          ],
+          "net": null
+        },
+        "3": {
+          "hole": [
+            5,
+            1
+          ],
+          "net": null
+        },
+        "4": {
+          "hole": [
+            7,
+            1
+          ],
+          "net": null
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false,
+      "family": "YC100-5.08",
+      "pitch_mm": 5.08,
+      "termination": "Exact delivered clamp/ferrule/marker pulse suitability remain open; NC contacts empty",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up",
+      "terminal_header": true,
+      "supplier_sku": "YC100-508-4P-MF",
+      "supplier_url": "https://www.robotics.org.za/YC100-508-4P-MF",
+      "mounting": "vertical"
+    },
+    {
+      "ref": "J_TX_FIELD",
+      "cad_reference": "J1411",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "TX_INJECT_Q10_3",
+        "2": "GND"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            13,
+            13
+          ],
+          "net": "TX_INJECT_Q10_3"
+        },
+        "2": {
+          "hole": [
+            13,
+            17
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "J_M_PICO",
+      "cad_reference": "J1412",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "GP16_MARKER",
+        "2": "PICO_3V3",
+        "3": "GND"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            8,
+            20
+          ],
+          "net": "GP16_MARKER"
+        },
+        "2": {
+          "hole": [
+            5,
+            20
+          ],
+          "net": "PICO_3V3"
+        },
+        "3": {
+          "hole": [
+            2,
+            20
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "J_TX_PICO",
+      "cad_reference": "J1413",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "GP18_SOURCE",
+        "2": "GP22_SOURCE"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            1
+          ],
+          "net": "GP18_SOURCE"
+        },
+        "2": {
+          "hole": [
+            12,
+            1
+          ],
+          "net": "GP22_SOURCE"
+        }
+      },
+      "module": "marker-tx",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    }
+  ],
+  "internal_buses": [],
+  "bare_wire": false,
+  "construction": "0.6mm tinned solid bridges, individual insulation; underside routing"
+}

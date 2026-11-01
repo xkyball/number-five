@@ -1,0 +1,30 @@
+{
+  "adaptations": [
+    "Installed module import",
+    "Full input RGBA/XML hashes and per-row counts in receipt",
+    "Incomplete same-name public definitions preserve their rows",
+    "XML entities are refused",
+    "Lazy optional Pillow static8-bit PNG adapter",
+    "Explicit PNG pin enables bootstrap Common69 offset correction only",
+    "Explicit UTF-8 XML guard also precedes the optional bootstrap lookup parser"
+  ],
+  "format": "no5-bitmap-pivot-source-provenance/1",
+  "nativeRenderingOrPhysicalDeviceAcceptanceClaim": false,
+  "noBundledOEMChartOrPublicAtlasData": true,
+  "origin": "Own pure normalization API and synthetic tests, adapted from reviewed pixel-bound proposal",
+  "policy": "EXACT_RGBA8_MATCH_UNIQUE_PUBLIC_BITMAP_PIVOT/1",
+  "proposalSourceSHA256": "42dbca2d8cc78d7063129d5149c63faeb0eb735d75d8121a7dbca515a1a6e4e5",
+  "proposalTestSHA256": "ba0bdbd314729fba6b575d9e889b1d85024e33bba52dcc812e02b872e1a7e4a8",
+  "sourceFiles": [
+    {
+      "bytes": 6301,
+      "path": "src/no_chart_converter/cache_country/bitmap_pivots.py",
+      "sha256": "dc23228693cec410e5fdad725286d612f60612d0b3ebce76873b60b016f8d5d5"
+    },
+    {
+      "bytes": 1741,
+      "path": "src/no_chart_converter/cache_country/bitmap_png.py",
+      "sha256": "81229ce4049bc4c5c5500d4ce78359fde1298292220e36c683466b64a3d58b4b"
+    }
+  ]
+}

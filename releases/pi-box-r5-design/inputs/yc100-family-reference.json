@@ -1,0 +1,40 @@
+{
+  "evidence_id": "pi-box-yc100-series-dimensions-20261023-v1",
+  "observed_at": "2026-10-23",
+  "selected_article": {
+    "supplier": "Micro Robotics",
+    "sku": "YC100-508-4P-MF",
+    "description": "YC100 4 Pin Quick Release Connector - 5.08mm; pair of male and female parts"
+  },
+  "manufacturer_catalog": {
+    "manufacturer": "Kunming",
+    "url": "https://www.kunming.com.tw/customer/kunming/upload/1751966933.pdf",
+    "sha256": "9fe923b386e90e705def15d0c394f8f77e174ae8ede5290edb18603343c359fc",
+    "bytes": 25625037,
+    "pdf_page_index_zero_based": 9,
+    "printed_page": "005",
+    "title": "Terminal Blocks",
+    "family_label": "KMYC100500/508NP"
+  },
+  "family_dimensions_read_from_drawing": {
+    "pitch": "5.00 mm / 5.08 mm family variants",
+    "pole_range": "2 to 24 poles",
+    "rating": "16 A, AC 300 V family rating",
+    "width_formula": "N \u00d7 5.0 mm / N \u00d7 5.08 mm, as labelled in family drawing",
+    "derived_4_pole_width_at_5_08_pitch_mm": 20.32,
+    "body_depth_mm": 15.1,
+    "body_height_mm": 18.1,
+    "other_drawn_features_mm": {
+      "lower_projection_height": 8.3,
+      "side_profile_dimension": 3.75
+    }
+  },
+  "qualification_limits": [
+    "This is a series/family drawing, not an article-specific 4P-MF drawing.",
+    "Micro Robotics product page uses a dimension-image title referring to a 2P article.",
+    "The manufacturer drawing shows both family mating pieces, but this review does not establish exact 4P connector keying, latch geometry, or a verified plug/header envelope for the selected supplier SKU.",
+    "Use the dimensions as a provisional family envelope only; exact print clearance and insertion fit remain OPEN until the physical 4P pair or an exact dimensioned CAD file is checked."
+  ],
+  "source_product_page": "https://www.robotics.org.za/YC100-508-4P-MF",
+  "decision": "Retain YC100-508-4P-MF as directed. Add nominal family dimensions to the planning record, without changing or qualifying the active source during the already-running central build."
+}

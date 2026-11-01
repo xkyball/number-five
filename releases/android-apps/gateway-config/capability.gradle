@@ -1,0 +1,53 @@
+// Shared APK declaration only; does not compile gateway client sources into an app.
+def gatewayDirectory = buildscript.sourceFile.parentFile.canonicalFile
+
+// APK-bound V8 declaration consumed by Center; product roles never depend on app versions.
+abstract class PrepareNo5GatewayCapability extends org.gradle.api.DefaultTask {
+    @org.gradle.api.tasks.InputFile abstract org.gradle.api.file.RegularFileProperty getWirePin()
+    @org.gradle.api.tasks.Input abstract org.gradle.api.provider.Property<String> getApplicationPackage()
+    @org.gradle.api.tasks.OutputDirectory abstract org.gradle.api.file.DirectoryProperty getAssetsDirectory()
+    @org.gradle.api.tasks.TaskAction void prepare() {
+        def roles = ['com.no5.home':'HOME', 'com.no5.helm':'HELM', 'com.no5.map':'MAP']
+        def pkg = applicationPackage.get()
+        def folder = new File(assetsDirectory.get().asFile, 'no5-lumina-v8')
+        if (!roles.containsKey(pkg)) { if(folder.exists()) folder.deleteDir(); return }
+        def pin = new groovy.json.JsonSlurper().parse(wirePin.get().asFile)
+        folder.mkdirs()
+        def record = [schema:8, package:pkg, role:roles[pkg], binderDescriptor:'com.no5.lumina.control.IKnobLeaseV1', binderVersion:1,
+            wireCommit:pin.commit, wireSha256:pin.sha256, emulatorSimulation:false]
+        new File(folder, 'capability.json').text = groovy.json.JsonOutput.prettyPrint(groovy.json.JsonOutput.toJson(record)) + '\n'
+    }
+}
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    def capability = tasks.register('prepareNo5' + variant.name.capitalize() + 'GatewayCapability', PrepareNo5GatewayCapability) {
+        wirePin.set(new File(gatewayDirectory, 'lumina-wire.json'))
+        applicationPackage.set(variant.applicationId)
+        assetsDirectory.set(layout.buildDirectory.dir('generated/no5-gateway-capability/' + variant.name))
+    }
+    variant.sources.assets.addGeneratedSourceDirectory(capability) { task -> task.assetsDirectory }
+    // Check the actual APK so an incorrectly attached generator cannot produce
+    // a release which only appears compatible in Gradle task output.
+    def apkArtifact = variant.class.classLoader.loadClass('com.android.build.api.artifact.SingleArtifact$APK').getField('INSTANCE').get(null)
+    def apkDirectory = variant.artifacts.get(apkArtifact)
+    tasks.matching { it.name == 'assemble' + variant.name.capitalize() }.configureEach {
+        doLast {
+            def pkg = variant.applicationId.get()
+            def role = ['com.no5.home':'HOME', 'com.no5.helm':'HELM', 'com.no5.map':'MAP'][pkg]
+            if (role == null) return
+            def apks = project.fileTree(apkDirectory.get().asFile).matching { include '*.apk' }.files
+            if (apks.isEmpty()) throw new org.gradle.api.GradleException('No APK available for V8 contract validation')
+            def pin = new groovy.json.JsonSlurper().parse(new File(gatewayDirectory, 'lumina-wire.json'))
+            apks.each { apk ->
+                new java.util.zip.ZipFile(apk).withCloseable { zip ->
+                    def entry = zip.getEntry('assets/no5-lumina-v8/capability.json')
+                    if (entry == null) throw new org.gradle.api.GradleException('Packaged APK is missing its V8 contract')
+                    def value = new groovy.json.JsonSlurper().parse(zip.getInputStream(entry))
+                    if (value.schema != 8 || value.package != pkg || value.role != role || value.binderDescriptor != 'com.no5.lumina.control.IKnobLeaseV1'
+                        || value.binderVersion != 1 || value.emulatorSimulation != false || value.wireCommit != pin.commit || value.wireSha256 != pin.sha256)
+                        throw new org.gradle.api.GradleException('Packaged APK V8 contract does not match this application')
+                }
+            }
+            logger.lifecycle('Verified packaged V8 contract for ' + apks.size() + ' APK(s)')
+        }
+    }
+}

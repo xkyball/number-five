@@ -1,0 +1,12 @@
+# Public, non-secret Nginx prefilter for direct Lumina V2 sessions.
+# It admits only a bounded bearer *shape* to the loopback gateway.  The Python
+# gateway must still verify its P-256 signature, audience, token lifetime,
+# registered key, revocation state and route scope before serving any data.
+map $http_authorization $no5_lumina_bearer_candidate {
+    default 0;
+    "~^Bearer N5T2\\.[A-Za-z0-9_-]{16,16384}\\.[A-Za-z0-9_-]{8,256}$" 1;
+}
+map "$no5_gateway_authorized:$no5_lumina_bearer_candidate" $no5_gateway_credential_present {
+    default 0;
+    "~^(1:[01]|0:1)$" 1;
+}

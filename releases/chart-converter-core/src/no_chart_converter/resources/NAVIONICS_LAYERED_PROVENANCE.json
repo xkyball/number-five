@@ -1,0 +1,71 @@
+{
+  "format": "no5-own-layered-depth44-provenance/1",
+  "origin": "Own typed planner, sequential emitter and exact scalar input validation; no original implementation bodies or payloads bundled.",
+  "profile": {
+    "DepthPoint44": {
+      "attributes": "EMPTY_ONLY",
+      "class": 136,
+      "decimalScaleBits": 2,
+      "layer": 140,
+      "layerTagUnitBits": 0,
+      "nativePrivateUnitSourcePrediction": 2,
+      "recordPayload": "classU8,flags0,emptyAttrLenW,depthWordLE16,XI32,YI32",
+      "scaleMeanings": [
+        "divide10",
+        "multiply1",
+        "multiply10",
+        "multiply100"
+      ],
+      "signedMantissaBits": 14,
+      "verticalDatum": "UNIDENTIFIED"
+    },
+    "classes": {
+      "COALNE": 29,
+      "SOUNDG": 136
+    },
+    "typedLayers": {
+      "COALNE_line": 61,
+      "SOUNDG_point": 140
+    }
+  },
+  "qualification": {
+    "authoredLayeredDepth44NativeAccepted": false,
+    "fineGridNegativeYNativeAccepted": false,
+    "geographicDatumIdentified": false,
+    "highLevelCollectionOrRenderingAccepted": false,
+    "newNativeExecution": false,
+    "note": "Source-bound format/scalar facts and own software checks; every emission reports no native execution."
+  },
+  "sourceContracts": {
+    "nativeLayerDepthWordContractSHA256": "98329e119a432e163241667099454aaa31f3422c7ae9123aed41c0863ed3e801",
+    "ownGeographicMathCandidateSHA256": "7a293ac80e4417f61560d316b15d74f50ad16f903229f11002c8e063c9c8e144",
+    "plainCacheContiguousOffsetContractSHA256": "3c063862fa98baeb51653d09dfd708fcc0e145b0e0673945da087b17b4ee49bc",
+    "pointAndVectorWidthContractSHA256": "69f3024be2b0cb3c4f8925700f0a7f585756469c7b7e64113bdfdd9cc432c5f4"
+  },
+  "unchangedLegacyModules": {
+    "batch.py": {
+      "bytes": 16235,
+      "sha256": "c8b7f7e5f8efc6c8fdf0e509fcef9bfaac08057a7d14a01619d19a0144a90d2c"
+    },
+    "line.py": {
+      "bytes": 6062,
+      "sha256": "898adccb02a62cb847eaa3b57ff033cf381d729cb3de3e03c597f26e47e48cd1"
+    },
+    "metadata.py": {
+      "bytes": 4392,
+      "sha256": "cb51327c76ace99a4edbb3432deffdffcda9af7867473923d8af85c9d70df2a4"
+    },
+    "point.py": {
+      "bytes": 6818,
+      "sha256": "ba5136ba6afa755a590b2db5dcb2bdd6ad5e381d55ea951a5b63b4cdfe0592cf"
+    },
+    "raw_grid_bounds.py": {
+      "bytes": 5513,
+      "sha256": "96d814b4c30df5ecc23929fd3259696b42733583ad8ffd3a57f36e55183b5e01"
+    },
+    "writer.py": {
+      "bytes": 8429,
+      "sha256": "c0494419bc669e007205e838b4a984deeea325edb57d8f0b0380478e1d770f18"
+    }
+  }
+}

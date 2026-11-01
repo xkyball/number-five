@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-01",
+  "site": "Number Five",
+  "local": {
+    "typecheck": "PASS",
+    "securityCoreTests": {
+      "passed": 5,
+      "failed": 0
+    },
+    "headlessBrowser": {
+      "status": "PASS",
+      "bilingualRoutes": 34,
+      "desktopViewport": [
+        1440,
+        1050
+      ],
+      "mobileViewport": [
+        390,
+        844
+      ],
+      "checks": [
+        "HTML language",
+        "language switch retains project",
+        "all images loaded",
+        "one h1 per route",
+        "no horizontal overflow on sampled mobile pages",
+        "mobile navigation",
+        "keyboard focus",
+        "anonymous contact persisted",
+        "owner local mock login",
+        "message mark/read/done/delete",
+        "anonymous inbox API forbidden",
+        "cross-origin mutations forbidden",
+        "no uncaught page errors"
+      ],
+      "visualReview": "Homepage desktop/mobile, sonar article desktop and contact mobile inspected internally."
+    }
+  },
+  "scopeLimits": [
+    "Local owner auth uses the documented development mock. Hosted owner login has not yet been manually exercised.",
+    "No new boat/device/electrical tests were performed for the website.",
+    "Historical module evidence has its own scope and failures."
+  ],
+  "hosted": "Pending initial publication; final live smoke report delivered separately.",
+  "downloads": {
+    "archives": 11,
+    "archiveBytes": 56473993,
+    "hashCrcAndPathCheck": "PASS",
+    "largestArchiveHostedOnGitHubRelease": true
+  }
+}

@@ -1,0 +1,168 @@
+[
+  {
+    "id": "android-apps",
+    "title": {
+      "de": "Android: HELM, MAP & Launcher",
+      "en": "Android: HELM, MAP & Launcher"
+    },
+    "summary": {
+      "de": "HELM 206, MAP 110, Launcher 31 und gemeinsame Module samt OpenCPN-Quellen. Ohne Kartendaten, OEM-Bibliotheken und private Signierung. Quellenprüfungen bestanden; kein neuer APK-Build.",
+      "en": "HELM 206, MAP 110, Launcher 31 and shared modules with OpenCPN sources. No chart data, OEM libraries or private signing. Source checks passed; no new APK build."
+    },
+    "filename": "android-apps-source-20261101.zip",
+    "bytes": 46300184,
+    "sha256": "1714011f115e91ba6681c5fb196ba1abe3d9056f5bd1dde209113af94d2c71e9",
+    "licence": "GPLv2 / GPLv3 / MPL / notices",
+    "url": "https://github.com/xkyball/number-five/releases/download/source-2026-11-01/android-apps-source-20261101.zip"
+  },
+  {
+    "id": "pi-gateway",
+    "title": {
+      "de": "Pi-Gateway",
+      "en": "Pi gateway"
+    },
+    "summary": {
+      "de": "Gemeinsamer Datenweg für Instrumente, Audio, Sonar und Routen. Eigene Laufzeitquellen, Beispielkonfiguration und Tests. Die jeweils angebundenen Dienste bleiben eigene Abhängigkeiten.",
+      "en": "Shared interface for instruments, audio, sonar and routes. Original runtime source, sample configuration and tests. Connected services remain separate dependencies."
+    },
+    "filename": "pi-gateway-source-20261101.zip",
+    "bytes": 615689,
+    "sha256": "b837f80c2071859588db7625434be88a772a1333485a7d2637b42746aaa8d49b",
+    "licence": "GPL-3.0-only"
+  },
+  {
+    "id": "gps-live-map",
+    "title": {
+      "de": "GPS-Livekarte",
+      "en": "GPS live map"
+    },
+    "summary": {
+      "de": "Kleine lesende Python-/Leaflet-Anwendung für die GPS-Quellen des Gateways. Mit synthetischen Tests und eigener Installation; ohne echte Positionen und Zugänge.",
+      "en": "Small read-only Python/Leaflet application for gateway GPS sources. Includes synthetic tests and installation, without actual positions or credentials."
+    },
+    "filename": "gps-live-map-source-20261101.zip",
+    "bytes": 97387,
+    "sha256": "3b9b4415e85db8bdf5e3c987c3ba08dbb5cd72671eb4fcf89609a25801083b5b",
+    "licence": "GPL-3.0-only / Leaflet BSD-2"
+  },
+  {
+    "id": "spotify-receiver",
+    "title": {
+      "de": "Spotify-Connect-Empfänger",
+      "en": "Spotify Connect receiver"
+    },
+    "summary": {
+      "de": "Rust-Empfänger mit Zustandsabgleich und eigenen librespot-Anpassungen. Bestehende MIT-Lizenzen bleiben erhalten. Ein Spotify-Konto und die Audiohardware werden separat benötigt.",
+      "en": "Rust receiver with state synchronisation and original librespot adaptations. Existing MIT licences are retained. Spotify access and audio hardware are separate requirements."
+    },
+    "filename": "spotify-receiver-source-20261101.zip",
+    "bytes": 189238,
+    "sha256": "b492a48f998693420992c69337ab719b84d1cc590befc55aeaf3c4c8f31c145c",
+    "licence": "MIT / upstream notices"
+  },
+  {
+    "id": "camilladsp-extensions",
+    "title": {
+      "de": "CamillaDSP-Erweiterungen",
+      "en": "CamillaDSP extensions"
+    },
+    "summary": {
+      "de": "Eigene Klang- und Equalizer-Erweiterungen mit gebundener Upstream-Version. Zehn Kern- und Vergleichstests bestanden; kein neuer vollständiger Pi-/Audiobetriebstest.",
+      "en": "Original sound and equalizer extensions bound to an upstream version. Ten core/parity tests passed; no new complete Pi/audio operating test."
+    },
+    "filename": "camilladsp-extensions-2026-11-01.zip",
+    "bytes": 120837,
+    "sha256": "4228357d126bdcd18a0e382051157e5620b149a83076a7c0bad405a8833db6dc",
+    "licence": "MPL-2.0 / GPL-3.0-only tools"
+  },
+  {
+    "id": "sonar-service",
+    "title": {
+      "de": "Sonard / Echoverarbeitung",
+      "en": "Sonard / echo processing"
+    },
+    "summary": {
+      "de": "Eigene Hostquellen und benötigte ursprüngliche Laufzeitbausteine mit portablem Wheel-Bau. Die aktuelle Pico-Firmware steht im separaten Paket; reale Messprofile sind nicht enthalten.",
+      "en": "Original host sources and required original runtime components with a portable wheel build. Current Pico firmware is a separate package; physical calibration profiles are not included."
+    },
+    "filename": "sonar-service-source-20261101.zip",
+    "bytes": 429122,
+    "sha256": "ab602b72b3f1b2faab0d0168a10e89710bf88c5b6916b74ac6e0baecd24e9ff7",
+    "licence": "GPL-3.0-only"
+  },
+  {
+    "id": "pico-tx-firmware",
+    "title": {
+      "de": "Pico-Erfassung & Sendesteuerung",
+      "en": "Pico acquisition & transmit control"
+    },
+    "summary": {
+      "de": "Eigene C-/PIO-Firmware einschließlich des Clip-Versuchsstands 0.7.13. 25 Offline-Tests bestanden; Flashen, ARM-Neubau und akustische Prüfung wurden für dieses Paket nicht ausgeführt.",
+      "en": "Original C/PIO firmware including clip experiment revision 0.7.13. 25 offline tests passed; flashing, a new ARM build and acoustic testing were not performed for this package."
+    },
+    "filename": "pico-tx-firmware-source-20261101.zip",
+    "bytes": 97485,
+    "sha256": "15d3edeaadbea853322747e032e1f4eaaa475f048b3f0107ab5d0332a28ec95b",
+    "licence": "GPL-3.0-only / Pico SDK separate"
+  },
+  {
+    "id": "chart-converter-core",
+    "title": {
+      "de": "Kartenkonverter · portabler Kern",
+      "en": "Chart converter · portable core"
+    },
+    "summary": {
+      "de": "Eigene Decoder, Zwischenformat, unterstützte RX5-/Navionics-Schreibwege und synthetische Tests. OEM-Probes, Fremdbibliotheken und Kartendaten bleiben getrennt. Kein fertiges Plotterprodukt.",
+      "en": "Original decoders, intermediate representation, supported RX5/Navionics writer paths and synthetic tests. OEM probes, third-party runtimes and charts remain separate. Not a finished plotter product."
+    },
+    "filename": "chart-converter-core-2026-11-01.zip",
+    "bytes": 1054050,
+    "sha256": "d451f287365d35c9bd666b276594159937a5224fbcc1ddf9b61bbc47db6c509f",
+    "licence": "GPL-3.0-only"
+  },
+  {
+    "id": "venterior-v15-design",
+    "title": {
+      "de": "Venterior-Gehäuse V15",
+      "en": "Venterior enclosure V15"
+    },
+    "summary": {
+      "de": "Parametrische Konstruktion, Platzierung und Verdrahtungsquellen. Ein portabler Adapter kann das nominale Modell erzeugen. Reale Passung, Materialien und aktive Elektronik bleiben zu prüfen.",
+      "en": "Parametric design, placement and wiring sources. A portable adapter can generate the nominal model. Physical fit, materials and active electronics still require checks."
+    },
+    "filename": "venterior-v15-design-source-20261101.zip",
+    "bytes": 124917,
+    "sha256": "a794f0db880657da0fec9005d242a96b98c8495888d98ff63673ae55641dad46",
+    "licence": "CERN-OHL-S-2.0 / GPL tools"
+  },
+  {
+    "id": "yamaha-trim-r3-design",
+    "title": {
+      "de": "Yamaha-Trimmsensor R3",
+      "en": "Yamaha trim adapter R3"
+    },
+    "summary": {
+      "de": "Konstruktion, Anschlussvertrag und AVR-Firmware mit eigenen Referenzkörpern. 15 Firmware-Hostfälle bestanden. Analoge Stabilität und echter Yamaha-Betrieb bleiben offen.",
+      "en": "Design, connection contract and AVR firmware with original reference bodies. 15 host firmware cases passed. Analogue stability and actual Yamaha operation remain open."
+    },
+    "filename": "yamaha-trim-r3-design-source-20261101.zip",
+    "bytes": 136449,
+    "sha256": "af849700a46b7a8402d667a0a3e59c36fd27315ec551c601280070e603b357b2",
+    "licence": "CERN-OHL-S-2.0 / GPL tools"
+  },
+  {
+    "id": "pi-box-r5-design",
+    "title": {
+      "de": "Pi-Box R5",
+      "en": "Pi box R5"
+    },
+    "summary": {
+      "de": "Quellen mit den 200 benötigten eigenen Referenzkörpern, STEP- und Anschlussdaten. Zwei einzelne Druckrezepte wurden offline erzeugt; die vollständige Baugruppe nicht neu berechnet. Bekannte Druck- und Funktionsfehler bleiben dokumentiert.",
+      "en": "Sources with 200 required original reference bodies, STEP and connection data. Two individual print recipes were generated offline; the complete assembly was not recomputed. Known print and functional faults remain documented."
+    },
+    "filename": "pi-box-r5-design-source-20261101.zip",
+    "bytes": 7308635,
+    "sha256": "6fb18879e8b0e075aaf361630072e77484ffa1db58a1f73cca8070582b730412",
+    "licence": "CERN-OHL-S-2.0 / GPL tools"
+  }
+]

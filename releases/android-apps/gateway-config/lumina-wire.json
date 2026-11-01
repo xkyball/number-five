@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "repository": "https://github.com/xkyball/no-lumina-control.git",
+  "commit": "b8b954a9b9b90affa4d5e2d55af3aa1688a2db7a",
+  "path": "next/lumina-knob-control-v1/android/src/com/no5/lumina/control/KnobLeaseProtocol.java",
+  "sha256": "8eb0abe92e1bbd940af07d6e9ee0a140ddf76f80051ea4fed17e7b2d37dca046"
+}

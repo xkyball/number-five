@@ -1,0 +1,5 @@
+lxml==6.0.2
+manifold3d==3.5.4
+networkx==3.5
+numpy==2.3.3
+trimesh==4.9.0

@@ -1,0 +1,56 @@
+uniform float2 uResolution;
+uniform float uTimeSeconds;
+uniform float uHeadingRadians;
+uniform float uHorizontalFovRadians;
+uniform float uHorizonY;
+uniform float uWaveHeight;
+uniform float uFoamIntensity;
+uniform float uDetail;
+layout(color) uniform half4 uWaterColor;
+layout(color) uniform half4 uLightColor;
+layout(color) uniform half4 uMountainNearColor;
+layout(color) uniform half4 uMountainFarColor;
+uniform float3 uLightDirection;
+
+// Integer azimuth harmonics define a single fixed, seamless world panorama.
+float ridge(float a) {
+    return .025 + .055 * pow(.5 + .5*sin(a*3.0 + .7), 2.0)
+        + .035 * abs(sin(a*7.0 + 1.2)) + .018 * abs(sin(a*17.0));
+}
+half4 main(float2 p) {
+    float2 uv = p / max(uResolution, float2(1.0));
+    float localYaw = atan((uv.x * 2.0 - 1.0) * tan(uHorizontalFovRadians * .5));
+    float worldYaw = uHeadingRadians + localYaw;
+    half3 color;
+    if (uv.y < uHorizonY) {
+        color = mix(half3(.55,.77,.92),half3(.78,.88,.94),half(uv.y / max(.01,uHorizonY)));
+        float farTop = uHorizonY-ridge(worldYaw);
+        float nearTop = uHorizonY-ridge(worldYaw+.9)*.45;
+        color = mix(color,uMountainFarColor.rgb,half(smoothstep(farTop-.002,farTop+.002,uv.y)));
+        color = mix(color,uMountainNearColor.rgb,half(smoothstep(nearTop-.002,nearTop+.002,uv.y)));
+    } else {
+        float depth = max(.02, (uv.y-uHorizonY)/(1.0-uHorizonY));
+        float z = 1.0/depth;
+        float x = (uv.x-.5)*z*2.0;
+        // Surface plane rotates with heading, fixed decorative world wave directions.
+        float2 w = float2(x*cos(uHeadingRadians)+z*sin(uHeadingRadians), -x*sin(uHeadingRadians)+z*cos(uHeadingRadians));
+        float a = dot(w,float2(1.2,.65)) - uTimeSeconds*.25;
+        float b = dot(w,float2(-.8,1.4)) - uTimeSeconds*.50;
+        float c = dot(w,float2(2.4,1.6)) - uTimeSeconds*.75;
+        float fade = smoothstep(.02,.18,depth);
+        float2 slope = (cos(a)*float2(1.2,.65)*.055 + cos(b)*float2(-.8,1.4)*.025
+            + uDetail*cos(c)*float2(2.4,1.6)*.012)*(.4+uWaveHeight)*fade;
+        float3 normal = normalize(float3(-slope.x,1.0,-slope.y));
+        float3 view = normalize(float3(-w.x,1.5,-w.y));
+        float3 light = normalize(uLightDirection);
+        float spec = pow(max(0.0,dot(reflect(-light,normal),view)),28.0)*.18;
+        float shimmer = (.5+.5*sin(a)*sin(b))*.12*fade;
+        color = uWaterColor.rgb*half(.72+depth*.25+shimmer) + uLightColor.rgb*half(spec);
+        float foam = smoothstep(.94,1.0,sin(a)*sin(b))*uFoamIntensity*.08*fade;
+        color = mix(color,uLightColor.rgb,half(foam));
+        color = mix(half3(.32,.62,.78),color,half(smoothstep(0.0,.12,depth)));
+    }
+    // Same 8% edge transition as photograph; opaque internally, premultiplied at edge.
+    half alpha = half(smoothstep(0.0,.08,uv.x)*(1.0-smoothstep(.92,1.0,uv.x)));
+    return half4(color*alpha,alpha);
+}

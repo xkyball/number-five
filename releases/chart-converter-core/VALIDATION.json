@@ -1,0 +1,42 @@
+{
+  "schema": "number-five.release-validation/1",
+  "validated_on": "2026-11-01",
+  "component": "chart-converter-core",
+  "original_sources_modified": false,
+  "manifest_source_hashes_verified": true,
+  "python_ast_files": 250,
+  "secret_scan": {
+    "patterns": [
+      "private_key",
+      "cloud_key",
+      "personal_path",
+      "private_ip",
+      "sensitive_assignment"
+    ],
+    "findings": [],
+    "scope": "All files enumerated by release manifest; heuristic text scan, not a proof against every possible secret."
+  },
+  "gui_windows_opened": 0,
+  "tests": {
+    "command": "python -B run_release_tests.py",
+    "scope": "Copied own core with invented fixtures; original source venv supplies third-party packages; PYTHONPATH points only to released src.",
+    "passed": 2636,
+    "skipped": 2,
+    "subtests_passed": 163,
+    "seconds": 12.35,
+    "warnings": 120,
+    "skip_reason": "Separately selected actual public S52 engine/assets not present; runner clears external provider environment variables.",
+    "warning_reason": "Shapely ops.transform deprecation in existing cache-fill implementation.",
+    "optional_terrain_bitmap_dependencies": "Present at observed versions recorded in requirements-optional-observed.txt"
+  },
+  "cli_help": "PASS",
+  "omitted_optional_tool_test_files": 16,
+  "limits": [
+    "No new native provider/plotter/Pi/VM run.",
+    "No wheel/reinstallation build tested; build backend remains original setuptools>=68.",
+    "Synthetic success does not imply full chart/plotter capability."
+  ],
+  "device_pi_vm_cad_jobs": 0,
+  "external_native_provider_jobs": 0,
+  "host_cli_compilation": false
+}

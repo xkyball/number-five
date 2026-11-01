@@ -1,0 +1,705 @@
+{
+  "bootstrapRemoved": true,
+  "closureLimitations": [
+    "Fresh export adapter is provided by cache_country. It requires reusable pinned presentation resources and rules or explicit public S52 compilation; unsupported semantics are refused."
+  ],
+  "format": "no5-country-source-provenance/1",
+  "modules": [
+    {
+      "module": "country_runtime/__init__.py",
+      "origin": "new explicit-input portable integration",
+      "packageDependencies": [
+        "composer",
+        "finalizer",
+        "inputs",
+        "native_hooks",
+        "producer_runtime",
+        "robust_v2"
+      ],
+      "portedBytes": 3667,
+      "portedSHA256": "8169c45a546069e4029cebda8506d3e9d32e246acb8f8d0eee59f554942a5791"
+    },
+    {
+      "derivedFrom": [
+        {
+          "sha256": "51d686c65f937d0d0fd4eacb0eae10b11a4de0051dcbd1571d89e0bd5bc9780b",
+          "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/compose_country.py"
+        },
+        {
+          "sha256": "99d218b83d208ef301d2f471a827a49adfa4d3304b12a45bd3161662ff67e61a",
+          "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/compose_details.py"
+        },
+        {
+          "sha256": "6e23bf71a6c8b893bfb05f39491af4294e743c9f366d48429959a2f5cdb53925",
+          "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/compose_zoom.py"
+        }
+      ],
+      "materialization": "Exact V7->V8->V15 source transformation performed once during migration; no runtime source loading or exec.",
+      "module": "country_runtime/composer.py",
+      "origin": "new explicit-input portable integration",
+      "packageDependencies": [
+        "extra_clip",
+        "ground_masks",
+        "inputs",
+        "native_hooks",
+        "point_visibility",
+        "producer_runtime",
+        "productive_scale_quilt",
+        "render_activation",
+        "ring_clip",
+        "scope_interning",
+        "source_clip",
+        "source_winner",
+        "vertex_projection",
+        "wire",
+        "writer_extension"
+      ],
+      "portableAdaptations": [
+        "Explicit input pins replace fixed paths and hardcoded dataset hashes/counts",
+        "Complete cell/input joins remain checked; optional expectedSourceCounts strengthens dataset binding",
+        "Normal relative imports replace dynamic loaders",
+        "Caller-defined fresh output directory, title and edition",
+        "Private diagnostics and prepare results stay in output directory",
+        "Parent full pin plus pre-use stat identity; portable RSS unit reporting",
+        "Select fresh per-owner compiled point visibility separately from legacy Common LUP parsing",
+        "Report declared Kind3 Root-grid policy separately from unchanged Kind2; do not inherit legacy pixel-budget or identity claims",
+        "Propagate explicit final quantized-empty source/loss disposition into outer ground receipts and persisted policy metadata"
+      ],
+      "portedBytes": 41129,
+      "portedSHA256": "a16dc11e5cf4e0e7a020afe836b322fedbe5d9d5caaef94e1c59793c2a811e25"
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/extra_clip.py",
+      "packageDependencies": [
+        "source_clip"
+      ],
+      "portedBytes": 6155,
+      "portedSHA256": "a221e84ba13db9a729107bafad5d95f74cafada6cf6c95c648bbe33f76845cb4",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/source-winner-extra-clip-v1/extra_clip.py",
+      "sourceSHA256": "e0f235e77f427b6eb072933946b06712ad06e4719a3d99c97b00facb0f1dcad7",
+      "unchangedAlgorithmDefinitions": [
+        "clip_extra_owner",
+        "_encode",
+        "decode_extra_owner"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "composition_summary",
+        "readback",
+        "finalize"
+      ],
+      "module": "country_runtime/finalizer.py",
+      "packageDependencies": [
+        "localize_metadata",
+        "rx5.header",
+        "rx5.soundings",
+        "wire"
+      ],
+      "plainHeaderAdaptation": "Use the shared complete 240-byte single-segment plain-vector contract; finalizer refuses zero/mismatched format words before persistence and readback. See resources/PLAIN_HEADER_PROVENANCE.json.",
+      "portedBytes": 12644,
+      "portedSHA256": "7ac8296bb1fe8c929c15ad4ee4a5e27cff5bec41f494b685b0bafa14d98b41a8",
+      "removedSourceBootstrapDefinitions": [
+        "helpers",
+        "load",
+        "main"
+      ],
+      "soundingTwinAdaptation": "Exact original-gated sameUID4/9 adjacent native occurrences. See resources/SOUNDING_TWIN_PROVENANCE.json; no geometry recomputation.",
+      "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/finalize_native.py",
+      "sourceSHA256": "312b83e31361e1d85dde8f3cb55d8686cfc19b63055daee50d0a8fdf12d423a8",
+      "unchangedAlgorithmDefinitions": [
+        "jb",
+        "pin",
+        "stream",
+        "tree",
+        "need",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "GroundOwnerMaskService"
+      ],
+      "coverageAdaptation": "Generic even-odd area masks interpreted separately from the unchanged source walk used by point ownership and SourceInfo; no historical cell or point-count dispatch.",
+      "diagnosticEmptyIntersection": {
+        "maskOrQuantizerChanged": false,
+        "policy": "Exact empty-set intersection area0; otherwise original GEOS operation and propagated errors",
+        "previousPortedSHA256": "33c23b0f36c181f4162f9e0aaf1c1720503e529981cd95bc9e39a0dfea509ea4",
+        "sourceOwnersFiltered": false,
+        "strictSerializedValidationChanged": false
+      },
+      "module": "country_runtime/ground_masks.py",
+      "packageDependencies": [
+        "diagnostic_area",
+        "owner_masks",
+        "scoped_v2",
+        "source_walk"
+      ],
+      "portedBytes": 13861,
+      "portedSHA256": "14b9cd33daa0f2602fb6cf8f2bc9fd3781e4174504f5dca7989031f53dad70ed",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/ground-availability-mask-v2/ground_masks.py",
+      "sourceSHA256": "55f01764c99396b52ddf8556a58185dc08964a3dcdede082bd3e7f0120944dc4",
+      "unchangedAlgorithmDefinitions": [
+        "validate_final_owner",
+        "decode_shapes",
+        "gsha",
+        "need"
+      ]
+    },
+    {
+      "module": "country_runtime/inputs.py",
+      "origin": "new explicit-input portable integration",
+      "packageDependencies": [],
+      "portedBytes": 5719,
+      "portedSHA256": "f084c377603a11daf6772b283ee506b51fef9172109de3e9426764665035270a"
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/localize_metadata.py",
+      "packageDependencies": [],
+      "portedBytes": 4341,
+      "portedSHA256": "b745278d85974a45927921420c9beff70a763fa04daad8b450bad52525177182",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261015/country-v10-native-portrayal-v1/localize_metadata.py",
+      "sourceSHA256": "d47a5481ec95006b1f40f16f7566ec779897a0e0ba9086205efac9dd54a5047d",
+      "unchangedAlgorithmDefinitions": [
+        "index_frame",
+        "Stream",
+        "need",
+        "additional_frame",
+        "render_frame",
+        "localize",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "activate_fresh_cache_points",
+        "activate_points_and_ca",
+        "capturing_quantizer",
+        "filter_scamin_only"
+      ],
+      "freshCacheAdaptation": "Separate digest/query/programme-bound freshly compiled point mode; exact explicit empty contexts accepted only with matching profile, query, owner, SHA and frame entry; missing or altered context refused.",
+      "module": "country_runtime/native_hooks.py",
+      "packageDependencies": [
+        "inputs",
+        "localize_metadata",
+        "point_packets",
+        "source_presentation_resolver"
+      ],
+      "portedBytes": 11664,
+      "portedSHA256": "1767d0dfc7755b0ca9978e42d1390cedcce205cf4c1ad0a33457f8a5862e800f",
+      "removedSourceBootstrapDefinitions": [
+        "load",
+        "read"
+      ],
+      "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/native_hooks.py",
+      "sourceSHA256": "ab2c8c142e061ebc3ba9bb4c22d7d600a557f8d42760a010b1d03daef7497b42",
+      "unchangedAlgorithmDefinitions": [
+        "add_region_targets",
+        "configure",
+        "types_frame",
+        "area_only_frame",
+        "compact_receipts",
+        "need",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "OwnerMaskService"
+      ],
+      "coverageAdaptation": "Generic even-odd area masks interpreted separately from the unchanged source walk used by point ownership and SourceInfo; no historical cell or point-count dispatch.",
+      "diagnosticEmptyIntersection": {
+        "maskOrQuantizerChanged": false,
+        "policy": "Exact empty-set intersection area0; otherwise original GEOS operation and propagated errors",
+        "previousPortedSHA256": "6b3b03244cb544f0e3d721bf72e0bb7f03285e93f587d8b2c3608c78620ce860",
+        "sourceOwnersFiltered": false,
+        "strictSerializedValidationChanged": false
+      },
+      "module": "country_runtime/overlay_masks.py",
+      "orderedUnionMemoization": {
+        "cacheAcrossSourceGenerations": false,
+        "changedMethods": [
+          "OwnerMaskService.__init__",
+          "OwnerMaskService.for_owner"
+        ],
+        "freshOwnerScopeChecksRetained": true,
+        "geometryOrQuantizerPolicyChanged": false,
+        "hardwareTimingClaim": false,
+        "independentReview": {
+          "bytes": 1629,
+          "sha256": "711204a4f0fa4adf815ebc70986b2ccec18859a2d0bfa945e9ee40d5784f1197",
+          "source": "work/AP11/product-completion-20261016/overlay-prefix-review-v27/HANDOFF.json"
+        },
+        "scope": "Per immutable source snapshot; original ordered binary union, complete domain WKB/order/omission prefix keys",
+        "syntheticTest": {
+          "sha256": "8005eb6e7f649b49994c7100a2e5984d93e46c98b320466891a5b322f6932112",
+          "source": "tests/test_overlay_prefix_cache.py"
+        }
+      },
+      "packageDependencies": [
+        "diagnostic_area",
+        "owner_masks",
+        "source_walk"
+      ],
+      "portedBytes": 10467,
+      "portedSHA256": "f9cecba56900d38f83810ebdde885fe6177ad699c084e54ee7d9357e4ea7508f",
+      "removedSourceBootstrapDefinitions": [
+        "load"
+      ],
+      "source": "work/AP08/product-completion-20261015/overlay-coverage-mask-v1/overlay_masks.py",
+      "sourceSHA256": "7fdd584b96f2b8d871e46dfccc5e4bd67e6c64aea0288e9aa1886165be0fc5af",
+      "unchangedAlgorithmDefinitions": [
+        "gsha",
+        "need"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/owner_masks.py",
+      "packageDependencies": [],
+      "portedBytes": 9758,
+      "portedSHA256": "c00109c888498346cf6ab18e261ce75f02c2ed514fced8e672befc7270d0c691",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/owner-mask-service-v1/owner_masks.py",
+      "sourceSHA256": "eacab9b8c61f4ec5f0bac007f84df46b221e577b5872ebf5414d64ee7476c9e1",
+      "unchangedAlgorithmDefinitions": [
+        "OwnerMaskService",
+        "ring_bounds",
+        "bbox_geometry",
+        "disjoint",
+        "need",
+        "InvalidSourceMaskError"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/point_packets.py",
+      "packageDependencies": [
+        "localize_metadata"
+      ],
+      "portedBytes": 4051,
+      "portedSHA256": "874b48e3f7dc2d7d108fecfc8bf77295c6b089de7336baf865f16eb329359de4",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261015/country-v10-native-portrayal-v1/point_packets.py",
+      "sourceSHA256": "685472694885282dc92b7b57d29ecdce7ac0b1ddc918260d1b0e1603a2be533d",
+      "unchangedAlgorithmDefinitions": [
+        "sha",
+        "need",
+        "regular_attrs",
+        "compile_points"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/point_visibility.py",
+      "packageDependencies": [
+        "source_winner"
+      ],
+      "portedBytes": 6399,
+      "portedSHA256": "ca1e77ab6600efb325d069fb23d1e22774e98c60206a9ca91ef890c1ab0f08c6",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/point_visibility.py",
+      "sourceSHA256": "64f18ae63f8591049e50d1c0bf4441b1029f743d453a134cd982a8691d251b9d",
+      "unchangedAlgorithmDefinitions": [
+        "filter_visible_point_owner",
+        "common_point_profiles",
+        "source_scamin_decision",
+        "check_compact_coordinate_starts"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "configure_source_registry"
+      ],
+      "module": "country_runtime/producer_runtime.py",
+      "packageDependencies": [
+        "inputs"
+      ],
+      "portedBytes": 4367,
+      "portedSHA256": "0b74dfee9a2950ceb090427212384a8532aa669a0eafcc0d0d7903daeba1dd15",
+      "removedSourceBootstrapDefinitions": [
+        "prepare_report"
+      ],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/producer_runtime.py",
+      "sourceSHA256": "90d952416abc42a600b67f7ec592e79f8d69100131084f8d5428f5ba0038fd4b",
+      "unchangedAlgorithmDefinitions": [
+        "add_detail_targets",
+        "visibility",
+        "visibility_epochs",
+        "region_index"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "QuiltService"
+      ],
+      "module": "country_runtime/productive_scale_quilt.py",
+      "packageDependencies": [
+        "ground_masks",
+        "overlay_masks",
+        "source_winner"
+      ],
+      "portedBytes": 7807,
+      "portedSHA256": "102647c9d970b02d42b9dc79ec2a151b46ce1d716983e8261e140de2cc33f5b7",
+      "removedSourceBootstrapDefinitions": [
+        "_load"
+      ],
+      "source": "work/AP11/product-completion-20261016/native-zoom-selection-v15/productive_scale_quilt.py",
+      "sourceSHA256": "bb4bf0f36f2408b6fce52e9876a3ee60f88fca9136f9a326c732ddcc786a1daa",
+      "unchangedAlgorithmDefinitions": [
+        "PointWinner",
+        "need"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/render_activation.py",
+      "packageDependencies": [],
+      "portedBytes": 5903,
+      "portedSHA256": "2635e0c8ad489eae55448156f1382f7b341de6aff84322c20ee0a034a003bc00",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/render_activation.py",
+      "sourceSHA256": "57b0b1f0366269eb0fcf835fefbf353d0dd78666d0eb415dc9d9f3ffb8a4ed98",
+      "unchangedAlgorithmDefinitions": [
+        "encode_frame",
+        "Frame",
+        "activate_features",
+        "require",
+        "decode_frames"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/ring_clip.py",
+      "packageDependencies": [
+        "source_clip"
+      ],
+      "portedBytes": 9031,
+      "portedSHA256": "48e2155ab5f02642b9e3491ec380179629c9e5aa31c0cea9f259ff6121b2bf67",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/source-winner-ring-clip-v1/ring_clip.py",
+      "sourceSHA256": "039b8bc2a98438d02f3865fc270b24f130030038e585acd7c9286f4fe6c8d9db",
+      "unchangedAlgorithmDefinitions": [
+        "whole_ring_geometry",
+        "ring_bbox",
+        "decode_ring_owner",
+        "owner_scoped_winner",
+        "clip_ring_owner"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/robust_v2.py",
+      "packageDependencies": [],
+      "portedBytes": 24233,
+      "portedSHA256": "3ac7260d0b4eb98fbfef2270ca3ceee81321fc7a1fe99f496f7003ed01dd4c41",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/integer-clip-robust-v2/robust_clip.py",
+      "sourceSHA256": "018cc432a39dd6b92bb6d8ac51b33b15e488130d8783668468281eb243f7d856",
+      "unchangedAlgorithmDefinitions": [
+        "exact_lattice",
+        "validate_final_owner",
+        "projected_model_equal",
+        "parts",
+        "decode",
+        "clip_owner",
+        "need",
+        "wrap_clipper",
+        "RobustClipper",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/robust_v3.py",
+      "packageDependencies": [
+        "robust_v2"
+      ],
+      "portedBytes": 5591,
+      "portedSHA256": "687dcdd2703654b1a0eea64eac9455063e7a24e276ceb39c19a74d824e8a8f6e",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/integer-clip-robust-v3/robust_clip.py",
+      "sourceSHA256": "0f9bc810f7378a5926bdb9b6260db8f3482b05482beeb53c6c274ea6b4dda35c",
+      "unchangedAlgorithmDefinitions": [
+        "RobustClipper",
+        "clip_owner",
+        "wrap_clipper"
+      ]
+    },
+    {
+      "module": "country_runtime/root_grid.py",
+      "newDefinitions": [
+        "parts",
+        "sha",
+        "unit_grid",
+        "quantize_fill"
+      ],
+      "origin": "new own declared Root-U32 GEOS valid_output fill quantizer; no device-specific policy",
+      "packageDependencies": [],
+      "portedBytes": 5017,
+      "portedSHA256": "4dac6b27c00e52f17b562b389ed7903492deb34efc6477b71a036a6de5f12df2",
+      "quantizedEmptyPolicy": "A genuine GEOS valid_output empty clipped fill is retained as an explicit empty/loss/source-identity receipt; original source feature is not deleted or prefiltered."
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/scope_interning.py",
+      "packageDependencies": [],
+      "portedBytes": 4472,
+      "portedSHA256": "068b8c00a929ad994d346bc06a6a6f13732dfef1053ee8cc7998d962731708c1",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP02/product-completion-20261014/scope-receipt-interning-v1/scope_interning.py",
+      "sourceSHA256": "530c68070de112fc1aa4618049e4a0c88000aa8550349238b922cf8ad54073aa",
+      "unchangedAlgorithmDefinitions": [
+        "_entries",
+        "canonical_json",
+        "_digest",
+        "pool_sha",
+        "expand_scope",
+        "new_pool",
+        "intern_scope",
+        "_json_copy",
+        "canonical_sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/scoped_v1.py",
+      "packageDependencies": [
+        "owner_masks"
+      ],
+      "portedBytes": 4439,
+      "portedSHA256": "20cdb97c6bd2d6e9b788161b987d167937b38f4d71fad53e2b33f91e7101b72d",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/owner-mask-construction-continuation-v1/scoped_construction.py",
+      "sourceSHA256": "1989e2efad9e92a1b3e8512bd8a5e3a42d87abb2f1a3a6eaf407c2177a615c8e",
+      "unchangedAlgorithmDefinitions": [
+        "construction_core",
+        "OwnerMaskService",
+        "ScopeConstructionError"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/scoped_v2.py",
+      "packageDependencies": [
+        "scoped_v1"
+      ],
+      "portedBytes": 9471,
+      "portedSHA256": "fd7d653f96be5cf9d3c134f470b5bf237d4c8d0a86d4a2c0db7b77816f52b1a7",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP11/product-completion-20261014/owner-mask-construction-continuation-v2/scoped_construction.py",
+      "sourceSHA256": "93ca063a296285d2d27ec3ef8cf927424850a3b7a7aa6abdb388acd11acbcfd7",
+      "unchangedAlgorithmDefinitions": [
+        "OwnerMaskService",
+        "validate_final_owner",
+        "construction_core",
+        "need",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/source_clip.py",
+      "packageDependencies": [],
+      "portedBytes": 15440,
+      "portedSHA256": "2bb28721bbc2a189f27d7c1cdc755f07f461debb6dc38c9b20a9407684d4eefc",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_clip.py",
+      "sourceSHA256": "81c76339ae60b5fa56487d45b97fbf29a99ba9ac89a4c77ad3c609e425aa05df",
+      "unchangedAlgorithmDefinitions": [
+        "clip_native_owner",
+        "parts",
+        "decode_owner",
+        "signed2",
+        "need",
+        "sha",
+        "GeometryWinner"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/source_presentation_resolver.py",
+      "packageDependencies": [],
+      "portedBytes": 12445,
+      "portedSHA256": "fb3e6dab55514a745ec05c3d24abb01a2c73261746fd2affd9d12c23591e961d",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP02/product-completion-20261014/common41-source-presentation-resolver-v1/source_presentation_resolver.py",
+      "sourceSHA256": "1dde1ef747cc5073a52e613cfe2deb3ab75acbf69ca8ced29ed1b7d1eb680752",
+      "unchangedAlgorithmDefinitions": [
+        "parse_effective_tables",
+        "digits",
+        "attribute_rows_sha256",
+        "canonical_json",
+        "nxstyle",
+        "inspect_instruction",
+        "selected",
+        "resolve_actual_source_style",
+        "Refusal",
+        "need",
+        "render_packets",
+        "resolve_saved_source_style",
+        "sha"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "coverageAdaptation": "Generic declared closed Root-U32 coverage walk decoder supplies area-only faces; source boundary including zero-area retracing remains unchanged. Historical specimen decoder retained audit-only, never used by active masks.",
+      "module": "country_runtime/source_walk.py",
+      "newDefinitions": [
+        "UnresolvedCoverageArea",
+        "decode_coverage_ring"
+      ],
+      "packageDependencies": [],
+      "portedBytes": 10260,
+      "portedSHA256": "2858665d5cc4e4d6c63f4d044d422fc556708e323218b9f6164c40ccd447fda5",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP02/product-completion-20261014/source-selftouch-coverage-semantics-v1/source_walk.py",
+      "sourceSHA256": "63949e55c08579f42f23d536aaefe6bc19075db0bf8288ecf4ea6e635247a3f0",
+      "unchangedAlgorithmDefinitions": [
+        "on_boundary",
+        "decode_040003_excluded0",
+        "fraction_samples",
+        "on_segment",
+        "odd_even",
+        "need",
+        "twice_area",
+        "segment_contact",
+        "cross"
+      ]
+    },
+    {
+      "adaptedDefinitions": [],
+      "module": "country_runtime/source_winner.py",
+      "packageDependencies": [],
+      "portedBytes": 8934,
+      "portedSHA256": "42f38e823d4b5a575cfdebcd27360f2010e47822e1e4822ad47a20aa248dd238",
+      "removedSourceBootstrapDefinitions": [],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_winner.py",
+      "sourceSHA256": "6d873b15ef2d8253daf6650be196206f6173d6988eb52b56f6fca7caad7f7f00",
+      "unchangedAlgorithmDefinitions": [
+        "own_display_denominator",
+        "ring_location",
+        "CoverageSource",
+        "_bounds",
+        "need",
+        "_box_contains",
+        "SourceWinner",
+        "filter_point_owner"
+      ]
+    },
+    {
+      "module": "country_runtime/synthetic.py",
+      "origin": "new explicit-input portable integration",
+      "packageDependencies": [
+        "inputs",
+        "render_activation",
+        "rx5.header",
+        "wire"
+      ],
+      "plainHeaderAdaptation": "Use the shared complete 240-byte single-segment plain-vector contract; finalizer refuses zero/mismatched format words before persistence and readback. See resources/PLAIN_HEADER_PROVENANCE.json.",
+      "portedBytes": 9200,
+      "portedSHA256": "bc66c2669e98e679b61e8125e425686ada4371a0d24800fce97d9fb008b897b1"
+    },
+    {
+      "adaptedDefinitions": [
+        "RobustClipper"
+      ],
+      "module": "country_runtime/vertex_projection.py",
+      "newDefinitions": [
+        "validate_final_owner"
+      ],
+      "packageDependencies": [
+        "robust_v3",
+        "root_grid"
+      ],
+      "portedBytes": 8487,
+      "portedSHA256": "496992f4491c03cab6a6507e426abd1ba106e84769cbc6438c36956f0532fc2a",
+      "quantizedEmptyPolicy": "Strict empty-native serialization validation with explicit original source identity and reference/loss disposition; no arbitrary skip.",
+      "removedSourceBootstrapDefinitions": [],
+      "runtimeFillPolicy": "own-root-u32-grid1-valid-output-fill/1; actual floating clip union snap-rounded with GEOS valid_output; area/topology diagnostics and exact serialized-role inverse; no authoring pixel budget/whole-pixel identity/zero-leak claim; Kind2 path unchanged",
+      "source": "work/AP08/product-completion-20261015/vertex-projection-clip-v1/robust_clip.py",
+      "sourceSHA256": "99a59e683c9588e7b0890a7531fa94059b8f51bfdd941add32b8a52b77297500",
+      "unchangedAlgorithmDefinitions": [
+        "clip_owner",
+        "wrap_clipper",
+        "collinear",
+        "vertex_candidate"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "rebase_features"
+      ],
+      "module": "country_runtime/wire.py",
+      "packageDependencies": [
+        "rx5.soundings"
+      ],
+      "portedBytes": 8296,
+      "portedSHA256": "dc6e92552200348539ccaf2a68bc2ad183c16113deaa2a346d2d4eaa709fa868",
+      "removedSourceBootstrapDefinitions": [],
+      "soundingTwinAdaptation": "Exact original-gated sameUID4/9 adjacent native occurrences. See resources/SOUNDING_TWIN_PROVENANCE.json; no geometry recomputation.",
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/wire.py",
+      "sourceSHA256": "182d9059b340f20f309b56ce49f4c8cfc4082cd3f6d737df65f95bb2067deb96",
+      "unchangedAlgorithmDefinitions": [
+        "Block",
+        "dictionary",
+        "rebase_render",
+        "assemble",
+        "blocks",
+        "rewrite_additional",
+        "need",
+        "rebase_render_map",
+        "rebase_indices",
+        "encode_dictionary",
+        "AuthoredBlock",
+        "chain"
+      ]
+    },
+    {
+      "adaptedDefinitions": [
+        "append_source_details",
+        "compile_overlay_profile"
+      ],
+      "freshCacheAdaptation": "Accept the explicitly fresh presentation status only with exact IR-feature/profile binding; do not relabel it as saved original-owner presentation.",
+      "module": "country_runtime/writer_extension.py",
+      "newDefinitions": [
+        "clip_disposition"
+      ],
+      "packageDependencies": [
+        "inputs"
+      ],
+      "portedBytes": 10187,
+      "portedSHA256": "b34e53809feaf229170dd2f4829171b7153dc3a1d3f7b8973166b6cd90a1638f",
+      "receiptAdaptation": "Preserve final quantized-empty disposition into outer detail receipts; do not mislabel it as source-winner exclusion.",
+      "removedSourceBootstrapDefinitions": [
+        "read"
+      ],
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/writer_extension.py",
+      "sourceSHA256": "df891de309d3042a4f10529402492814208063aa93daa5524c2b9ea4290d314a",
+      "unchangedAlgorithmDefinitions": [
+        "compact_owner",
+        "merge_draw_order",
+        "emit_detail_tile",
+        "bbox_intersects",
+        "need",
+        "sha",
+        "owner_elements"
+      ]
+    },
+    {
+      "module": "country_runtime/diagnostic_area.py",
+      "origin": "New own exact empty-set diagnostic area helper",
+      "packageDependencies": [],
+      "portedBytes": 522,
+      "portedSHA256": "da47427d3e7e488779c7c26c44e568bcfa991c873f4baffce9d27a640789c1a1"
+    }
+  ],
+  "policy": "V15 stable source compilation scale quilt; source-only normal package imports; no OEM library",
+  "privateInputPolicy": "All source, fill, style, presentation and pixel-model authorization data are explicit pinned runtime configuration. No private data file or native shared library is shipped.",
+  "sourceRoot": "raymarine-export-plan (relative source paths only)"
+}

@@ -1,0 +1,4 @@
+[console_scripts]
+no5-gateway-header-hash-sync = no5_pi_gateway.gateway_header_hash:main
+no5-pi-gateway = no5_pi_gateway.__main__:main
+no5-raspotify-event-bridge = no5_pi_gateway.audio:raspotify_event_main

@@ -1,0 +1,33 @@
+[
+  {
+    "id": "PI_U1",
+    "kind": "component",
+    "source_geometry_sha256": "d51a91d5edf3168163c225c2f1cff8dd441f93f3cdf63d534bd5b27b6db2ce16",
+    "intrinsic_geometry_sha256": "85b8128787011d7c75e69ae5c58ab66a00c7aa6397cd707db7ce9ed7de62817d",
+    "placement": {
+      "xyz": [
+        "(pi_u1_x)+(0.0)*cos(pi_u1_angle)-(0.0)*sin(pi_u1_angle)",
+        "(pi_u1_y)+(0.0)*sin(pi_u1_angle)+(0.0)*cos(pi_u1_angle)",
+        "(pi_u1_z)+(0.0)"
+      ],
+      "angle": "pi_u1_angle"
+    },
+    "evidence": {
+      "receipt": {
+        "original": {
+          "path": "/Users/chris/Library/Caches/IoT-Fusion-Enclosures/parts/830fd5a399e208a8e28d28ae1a1328071983b9efeee4a83e6c83d2951c980a81/qualification.json",
+          "sha256": "98c35ca155356b1d03da79ae7e2a2459429714b7d2ab53cf762c0bd93162d554"
+        },
+        "path": "retained-parts/PI_U1.json"
+      },
+      "step": {
+        "original": {
+          "path": "/Users/chris/Library/Caches/IoT-Fusion-Enclosures/parts/830fd5a399e208a8e28d28ae1a1328071983b9efeee4a83e6c83d2951c980a81/model.step",
+          "sha256": "f685a0a043ce454e0c9e3dcd8bd581f15555f6de4fa579c1c88182fc41f4bb7e"
+        },
+        "path": "retained-parts/PI_U1.step"
+      }
+    },
+    "qualification_scope": "geometric standard cache, not physical article fit"
+  }
+]

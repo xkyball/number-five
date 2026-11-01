@@ -1,0 +1,6 @@
+# Installed as /etc/nginx/conf.d/no5-gateway-websocket.conf.  Kept separate
+# from the secret-bearing auth map so the configuration remains reviewable.
+map $http_upgrade $connection_upgrade {
+    default upgrade;
+    '' close;
+}

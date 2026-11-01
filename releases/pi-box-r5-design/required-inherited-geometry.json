@@ -1,0 +1,1605 @@
+{
+  "scope": "200 exact inherited own reference bodies included;source hashes checked during packaging;no CAD recomputation",
+  "members": [
+    {
+      "id": "FRAME_12_12",
+      "path": "reference-geometry/FRAME_12_12.brep",
+      "sha256": "e7248e91949a93567d958b91f310fb4027ab881fc40c61e898f11fb0f4fd9c9a",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_12_12_NUT",
+      "path": "reference-geometry/FRAME_12_12_NUT.brep",
+      "sha256": "8f309cd0192aef56d419cf827619f24cbff974c52a4631944b9cd65fde788019",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_204_12",
+      "path": "reference-geometry/FRAME_204_12.brep",
+      "sha256": "f8a32ac0016ae816fd3684c4284989c69ef6891ea4805245fad6fc22c79ca0e9",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_204_12_NUT",
+      "path": "reference-geometry/FRAME_204_12_NUT.brep",
+      "sha256": "3b9d73c9c691359d150e499749085f8476958d66356f8f4dffeac75448c7009c",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_12_182",
+      "path": "reference-geometry/FRAME_12_182.brep",
+      "sha256": "83e7b7eb578c4a854ef99a4a796d03831927e5850f4b4418e40cf07313b5ad76",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_12_182_NUT",
+      "path": "reference-geometry/FRAME_12_182_NUT.brep",
+      "sha256": "8f1146496c6fc5f71890f22840a9fb71d5e5df22a0b7aa542591696a878d1e85",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_204_182",
+      "path": "reference-geometry/FRAME_204_182.brep",
+      "sha256": "cbe08b8d9f32ac54769bc7d8b6cd50d432fc01c2124de88525912707548a0665",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "FRAME_204_182_NUT",
+      "path": "reference-geometry/FRAME_204_182_NUT.brep",
+      "sha256": "229aa76a681a5e69afae5c95c2516e131111e9dde915893113de2c105429d458",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U1",
+      "path": "reference-geometry/PI_U1.brep",
+      "sha256": "e78e25c2b616e602bed76d868e159c8634c262cc731b532bbfb12e4054ca8124",
+      "bytes": 25763,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U1_BOLT1",
+      "path": "reference-geometry/PI_U1_BOLT1.brep",
+      "sha256": "ab173dfa6c20ff8f7406aff6652095476ad6887b9b9e3ca0cdd8b5b7ef5a06a4",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U1_BOLT2",
+      "path": "reference-geometry/PI_U1_BOLT2.brep",
+      "sha256": "f8cb24e92d534e969864c43092ca3afc07a19d526c61a55db9d73653727286bf",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R1",
+      "path": "reference-geometry/PI_R1.brep",
+      "sha256": "9340367e0db52158c6513fdec2934a000d71b7548b40845399aa0cae779561d9",
+      "bytes": 12990,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R1_BOLT1",
+      "path": "reference-geometry/PI_R1_BOLT1.brep",
+      "sha256": "2ec5fef5f9850d1a6fa6a5960986b71ac1f9c1e852e6794d25f2a4bb9676a257",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R1_BOLT2",
+      "path": "reference-geometry/PI_R1_BOLT2.brep",
+      "sha256": "4fae9aedfa344c43786ffe6211c5118747e09f404c149aa43f305e72ea2f1978",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F1",
+      "path": "reference-geometry/PI_F1.brep",
+      "sha256": "5309397949f5b8cae115c3e368ca0be37aa345ae52aa095d0a8a827253754a3b",
+      "bytes": 5498,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F1_TIE",
+      "path": "reference-geometry/PI_F1_TIE.brep",
+      "sha256": "d9b1ab6d5d192f201d564975d2a843c371b622095e912ddea9fe96ea676bd5f2",
+      "bytes": 14533,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U2",
+      "path": "reference-geometry/PI_U2.brep",
+      "sha256": "d40c4a9a76d7f3816f45c4c09a6c7b03b5c783e7cd4f92ff9e6acc60ee22958e",
+      "bytes": 26207,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U2_BOLT1",
+      "path": "reference-geometry/PI_U2_BOLT1.brep",
+      "sha256": "e34cc3781d7b82c7ac1a8b67229cdf162896084cbcca0c2e67d755e62fea7ed4",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U2_BOLT2",
+      "path": "reference-geometry/PI_U2_BOLT2.brep",
+      "sha256": "b7b138b9c03cf3fd321d98208ff714d3e55a194b63285ed173f375508506db2d",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R2",
+      "path": "reference-geometry/PI_R2.brep",
+      "sha256": "d212c2a10a2cafe0576c8fd133b9381fb40b4eb84667d32ec14e6179a8806625",
+      "bytes": 12990,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R2_BOLT1",
+      "path": "reference-geometry/PI_R2_BOLT1.brep",
+      "sha256": "8466047632d1588279dda8610dcbcd40f077c213ca84a83da094345e532b2fc3",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R2_BOLT2",
+      "path": "reference-geometry/PI_R2_BOLT2.brep",
+      "sha256": "035eb083b0f92d5fc8dcba5e714ae5f886ea5c4e58de11b83cbd453e4ef4b8d7",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F2",
+      "path": "reference-geometry/PI_F2.brep",
+      "sha256": "d2dabecba93e3c054ba411534070786b66e8e0bce64233a986fe332ddd10fe25",
+      "bytes": 5498,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F2_TIE",
+      "path": "reference-geometry/PI_F2_TIE.brep",
+      "sha256": "d31c12df51a90ad57158004c83ccf568d3ac6065564576b38275c506bdea61c9",
+      "bytes": 14533,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U3",
+      "path": "reference-geometry/PI_U3.brep",
+      "sha256": "ccc9b5e1d18d5f3134525d9902e490f0c9fdba9ff545e49073faca2e450a9e7f",
+      "bytes": 26651,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U3_BOLT1",
+      "path": "reference-geometry/PI_U3_BOLT1.brep",
+      "sha256": "295b0ee662fd439b786d906120ccff2c7b9852a1ce5f894dd53d14a621b94e4c",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_U3_BOLT2",
+      "path": "reference-geometry/PI_U3_BOLT2.brep",
+      "sha256": "6f678383fd046333ce9570d74a46686f2b35e4e645be362cc8b01038b23772ee",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R3",
+      "path": "reference-geometry/PI_R3.brep",
+      "sha256": "313906c7cb31b2bd906c6848a9ea93f05b9d20ca386413f6d7bfaa1ee9ef4bed",
+      "bytes": 12990,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R3_BOLT1",
+      "path": "reference-geometry/PI_R3_BOLT1.brep",
+      "sha256": "95d3d5a4cfb39520c65dedc51a17c4dbeb54f87abb4196865bb88b083f0a3462",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_R3_BOLT2",
+      "path": "reference-geometry/PI_R3_BOLT2.brep",
+      "sha256": "ec1dff16911a809e80fcd6de49136cec4060c0653d45bef5c7e1b9390fa73366",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F3",
+      "path": "reference-geometry/PI_F3.brep",
+      "sha256": "00ec2bc6e9f5ff653780926c853c4b7b2d3ddf586cf87ee9111f761d05e378b7",
+      "bytes": 5498,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_F3_TIE",
+      "path": "reference-geometry/PI_F3_TIE.brep",
+      "sha256": "51186ab2856f5acb44d8f600545095f75571cf1db409be4ad4f651380fd67383",
+      "bytes": 14933,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U1",
+      "path": "reference-geometry/HUB_U1.brep",
+      "sha256": "3c6c1cf9d3b01e95e0b9740e5d02b45fee55d95af587796dbc0d572eacdae18d",
+      "bytes": 27095,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U1_BOLT1",
+      "path": "reference-geometry/HUB_U1_BOLT1.brep",
+      "sha256": "58b584aa78647b9e6bb4e97c6ad208f353e1221920a81707de3e0c8765c93151",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U1_BOLT2",
+      "path": "reference-geometry/HUB_U1_BOLT2.brep",
+      "sha256": "b233d3619da7d4f6b7c99c430318ad40742e281738083acf4400b3cbe5071632",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R1",
+      "path": "reference-geometry/HUB_R1.brep",
+      "sha256": "be7b7281ff6fedde7d4c22f710a3231fb74202ba7bd940f24071c91453ba077a",
+      "bytes": 12990,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R1_BOLT1",
+      "path": "reference-geometry/HUB_R1_BOLT1.brep",
+      "sha256": "33d4be4e4b7b799e4777920fd2fbe1185af2036b5750df8474cc19013e5b3c48",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R1_BOLT2",
+      "path": "reference-geometry/HUB_R1_BOLT2.brep",
+      "sha256": "1f5c7f7f714aa33ee6b17108f3f0ec1626da7e860e1898d21fa789f3b9ae3683",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U2",
+      "path": "reference-geometry/HUB_U2.brep",
+      "sha256": "9a12272ceebc03f6984a8abec5ec8e55e0eae0558a4323053b428bf3b98fbfb7",
+      "bytes": 27539,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U2_BOLT1",
+      "path": "reference-geometry/HUB_U2_BOLT1.brep",
+      "sha256": "ceba0afca764183ba6f2c20f9c78d5ba92736fe47bce5425e7d711610fa3eb19",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_U2_BOLT2",
+      "path": "reference-geometry/HUB_U2_BOLT2.brep",
+      "sha256": "0ab831ec967630b16ca153a875579778ff32e97917e4f710bc4846855bd3fd75",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R2",
+      "path": "reference-geometry/HUB_R2.brep",
+      "sha256": "68a1c6003e64ef99f3622b96d27bca09325ce173f88da6d4816d0f6c176104a0",
+      "bytes": 12990,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R2_BOLT1",
+      "path": "reference-geometry/HUB_R2_BOLT1.brep",
+      "sha256": "a4f1e6eab4c5638db43b560d87f68ba259526dc9cf2d3953611409ea2699506a",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_R2_BOLT2",
+      "path": "reference-geometry/HUB_R2_BOLT2.brep",
+      "sha256": "a0df8d6baf392c52a0a31ef184ad0cbe61bded811d2317da44606c4bda28a86e",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A",
+      "path": "reference-geometry/PI_A.brep",
+      "sha256": "9c9ba62482daf75088bea91cd857276e2d02855caf92d13a7b245bcb0db63fcf",
+      "bytes": 574846,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "PI_A_WASHER1",
+      "path": "reference-geometry/PI_A_WASHER1.brep",
+      "sha256": "bb6fa8fadf5fc1241eda4b594c3abbc17b65e9b27c15a06cb67c8cd98e878a9a",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_BOLT1",
+      "path": "reference-geometry/PI_A_BOLT1.brep",
+      "sha256": "2f9ba0a8a104ee06da0457ce56fe90dc8c6f79931ad86b24fa9a461d0358d29f",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_WASHER2",
+      "path": "reference-geometry/PI_A_WASHER2.brep",
+      "sha256": "5feb8051830edb4aa1e6498c37732063919f9f508e3887682a2ad3bf4379be6f",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_BOLT2",
+      "path": "reference-geometry/PI_A_BOLT2.brep",
+      "sha256": "7d03fb96dbbfbdf1cdadeb7b6e7453c594c3628b4023be202a860ae5d9982546",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_WASHER3",
+      "path": "reference-geometry/PI_A_WASHER3.brep",
+      "sha256": "ea8efb8e4d9082e346740dbd8344bd9f854bc41cfe5d8c0a10cb8b2f4cbbf8c9",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_BOLT3",
+      "path": "reference-geometry/PI_A_BOLT3.brep",
+      "sha256": "23a2825d360f1694e78e434f704c8cb5711dc1232e6ae2a04a9bc8134b1a5308",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_WASHER4",
+      "path": "reference-geometry/PI_A_WASHER4.brep",
+      "sha256": "d56885410991675957935d4b7964f4af587cc32fd796ed81f04c1f2ae6735a1a",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_A_BOLT4",
+      "path": "reference-geometry/PI_A_BOLT4.brep",
+      "sha256": "1852220ebcc17f5fb4d7094c564c3c1cb7d34d11cf62df90744381a1affb3dc4",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_BANK_HEADER",
+      "path": "reference-geometry/PI_BANK_HEADER.brep",
+      "sha256": "b036029175d39b82d3b2c672fd73432af9f745032331da925260856338c26a18",
+      "bytes": 8825,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_BANK_PLUG",
+      "path": "reference-geometry/PI_BANK_PLUG.brep",
+      "sha256": "6b468729aa7697af91258283d5a58625add223bccbe4a58d33a38594e87e6ee7",
+      "bytes": 7591,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_D1",
+      "path": "reference-geometry/PI_D1.brep",
+      "sha256": "ed11aa0f33ad9a69c6643854354d9dea57a87f317fa2050d98960c1a1d9f51ab",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "PI_D2",
+      "path": "reference-geometry/PI_D2.brep",
+      "sha256": "c203e9286ec94050ac3fa799b82756d2ac2cc518051297b819910106eb450563",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "PI_D3",
+      "path": "reference-geometry/PI_D3.brep",
+      "sha256": "30cc1c897be8e6e832886c84bcefee4a6ea8776a8c9333bdafa24240af47012a",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "PI_C1",
+      "path": "reference-geometry/PI_C1.brep",
+      "sha256": "f99ac0a79d5834d1ef2efbbd49dce69f93df6c5144f8a19de6e97fda2aeea9a1",
+      "bytes": 1934,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_A",
+      "path": "reference-geometry/HUB_A.brep",
+      "sha256": "8b21f53d1e5e1ee75b0e00f5f1a85027a9480f9212127883f2837ba3a038ef58",
+      "bytes": 474234,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_A_WASHER1",
+      "path": "reference-geometry/HUB_A_WASHER1.brep",
+      "sha256": "90a50a4c70c3c06891f0f13ffa2752c921aa08b58a3e577965a807bc95eeae8f",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_BOLT1",
+      "path": "reference-geometry/HUB_A_BOLT1.brep",
+      "sha256": "a358187a8ba316496879d03f6dbb147ea01a664339fef9252d861c7b6a2a7360",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_WASHER2",
+      "path": "reference-geometry/HUB_A_WASHER2.brep",
+      "sha256": "e3d49fdd2112a4db634dc0b29d9ba47d72d69956c1e02b71c723ba37b0c73f12",
+      "bytes": 2015,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_BOLT2",
+      "path": "reference-geometry/HUB_A_BOLT2.brep",
+      "sha256": "7510f4afd83226eb801e0cca6d6209a4ca80121313d1e8b58ee27e52f1f08287",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_WASHER3",
+      "path": "reference-geometry/HUB_A_WASHER3.brep",
+      "sha256": "0fabc08a903be9e708a875570ead3d9f694c5cdfe926361c023a748e29a85e89",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_BOLT3",
+      "path": "reference-geometry/HUB_A_BOLT3.brep",
+      "sha256": "3c9d38e73dd0a0226eed7f38dd302ed6eeac3a51f8918c727eb2f6ec1635a6ab",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_WASHER4",
+      "path": "reference-geometry/HUB_A_WASHER4.brep",
+      "sha256": "11f6fc05d8361fd357989b0966e83a65500baef852e273037d5d84605eed2450",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_A_BOLT4",
+      "path": "reference-geometry/HUB_A_BOLT4.brep",
+      "sha256": "1791a69a2c3add3bfbaeb9349b44e60d2e06299fbd9472faffceb156f2c41469",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BANK_HEADER",
+      "path": "reference-geometry/HUB_BANK_HEADER.brep",
+      "sha256": "a8a040928695aa174dbaab43a692ef9223324cc441b6340be4729a1492285b54",
+      "bytes": 8825,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BANK_PLUG",
+      "path": "reference-geometry/HUB_BANK_PLUG.brep",
+      "sha256": "c084437dd31d5d7c8955b94be9254c44b3264ea329a6e5e3d54709452f14ce8a",
+      "bytes": 7591,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_D1",
+      "path": "reference-geometry/HUB_D1.brep",
+      "sha256": "ec4ec2d2afebbbc7bd1e3f29e80a5795f9bf331aa7ef655f06d02d81362bf66e",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_D2",
+      "path": "reference-geometry/HUB_D2.brep",
+      "sha256": "74572a98cfce2ded273ec9aef77b162b705d2c3790d3c6112e016fb1a01978ed",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_C1",
+      "path": "reference-geometry/HUB_C1.brep",
+      "sha256": "2bd064b0fb5aab73cec0f4403effbe24f9c70b29e91f7827d6ac36a94f63bf25",
+      "bytes": 1934,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "INPUT_A",
+      "path": "reference-geometry/INPUT_A.brep",
+      "sha256": "aa4aaf42ee6470fd6013cc3545703ee9d11cf8cd0748bf526ba13914060fe008",
+      "bytes": 228540,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "INPUT_A_WASHER1",
+      "path": "reference-geometry/INPUT_A_WASHER1.brep",
+      "sha256": "5072022ad1d86fdfe9d498ed3d42fa595223224ddaf79779ff4a67aefb4c7ce0",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_BOLT1",
+      "path": "reference-geometry/INPUT_A_BOLT1.brep",
+      "sha256": "429a65aeb69ceb7ae873fb0dc52ca7b4944b77d3c9c66a391d865522e4529131",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_WASHER2",
+      "path": "reference-geometry/INPUT_A_WASHER2.brep",
+      "sha256": "7e04ef088e7610beb0e2b4555c19a1cf8144bbdf1e523789c7786610b85557c5",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_BOLT2",
+      "path": "reference-geometry/INPUT_A_BOLT2.brep",
+      "sha256": "0093512412b85b74e5c42082c51c6722f38d5b56d33bd6b4c45544efe4c76aba",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_WASHER3",
+      "path": "reference-geometry/INPUT_A_WASHER3.brep",
+      "sha256": "e3096503860d95c2b2a3cc3ee6f804bb593c861136d4580e1ef1ddcde2eb53b1",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_BOLT3",
+      "path": "reference-geometry/INPUT_A_BOLT3.brep",
+      "sha256": "af8c422c9e1e0c90a27db5288ea0737e18b1005324789c8184debfe9d2e0f089",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_WASHER4",
+      "path": "reference-geometry/INPUT_A_WASHER4.brep",
+      "sha256": "e8832018171777aa34c084d7a23f57e4bd4329eabb34e36ae542ea4869e720b4",
+      "bytes": 2029,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "INPUT_A_BOLT4",
+      "path": "reference-geometry/INPUT_A_BOLT4.brep",
+      "sha256": "b7acda9ec501d9e8b5b8997cf758bec70ddc7d30a3b0b1f630138692d083a964",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "IN_D0",
+      "path": "reference-geometry/IN_D0.brep",
+      "sha256": "009d8924a124111063d0f03d2f428df3600d789cf383815667ab68f1d08b53ef",
+      "bytes": 2093,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "IN_TVS",
+      "path": "reference-geometry/IN_TVS.brep",
+      "sha256": "08700f8fea29d17d132f4a19492a05249101597849cf8941639a1ee0a5c9bcc8",
+      "bytes": 2034,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "IN_C0",
+      "path": "reference-geometry/IN_C0.brep",
+      "sha256": "9a8e6a7e7112a2943032feca1526005f0b5f4edaa034e8c84365ea88430817e1",
+      "bytes": 1934,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HF1_A",
+      "path": "reference-geometry/HF1_A.brep",
+      "sha256": "c239b2c38320351faf266a2a69f12c32c6827db9cf77659a751b3d36dd715f58",
+      "bytes": 64521,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_F1",
+      "path": "reference-geometry/HUB_F1.brep",
+      "sha256": "8a945323ec97ca059ee94189187db468b144e23dbea380e715266f68dfcc2a6b",
+      "bytes": 5217,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_CARRIER_1",
+      "path": "reference-geometry/HUB_FUSE_CARRIER_1.brep",
+      "sha256": "7bdbffbb7a2293084380de50e352db4f81b221806c086f0c039627d8ec22ba12",
+      "bytes": 13418,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_1_1",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_1_1.brep",
+      "sha256": "cb856392994393183ea7c90246b721f9e6f427204394131c0bf932644e27b104",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_1_1_NUT",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_1_1_NUT.brep",
+      "sha256": "296d688cf8a91be31d4bd348eadcc52d104767367564a1704e946fd35c8de591",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_1_2",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_1_2.brep",
+      "sha256": "db7bab855d5dd54750512709c89acab184bb3699a8e4521344a053670fc38102",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_1_2_NUT",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_1_2_NUT.brep",
+      "sha256": "d91844fdc9379b59b2dec16006be617e19373f8b9d2834627c55bcaf09afea5d",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HF1_M2_1",
+      "path": "reference-geometry/HF1_M2_1.brep",
+      "sha256": "3a563bdcae9e876c3d65971e80a2572c45142888c3efc162678f6cd340feaccc",
+      "bytes": 10102,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HF1_M2_2",
+      "path": "reference-geometry/HF1_M2_2.brep",
+      "sha256": "5a8548cb06b0664f5ff3bc8ea26ce12a741310018eca87499d8e1ae8c4aad958",
+      "bytes": 10102,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HF2_A",
+      "path": "reference-geometry/HF2_A.brep",
+      "sha256": "824f4b3710a6c77ec7a24b80a0488eafd961fb470d05f2c89420e6fc3dbf5788",
+      "bytes": 64521,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "HUB_F2",
+      "path": "reference-geometry/HUB_F2.brep",
+      "sha256": "115a973a0932e95d8fb9d7965619674982351adc0462a7270d4d0aee3304c2e0",
+      "bytes": 5217,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_CARRIER_2",
+      "path": "reference-geometry/HUB_FUSE_CARRIER_2.brep",
+      "sha256": "117dd772bd29346accab292fd02dc0a78fb865d0abb53fa1eb0633a580b9b360",
+      "bytes": 17718,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_2_1",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_2_1.brep",
+      "sha256": "120a9c0236eb9bbc596f1d9e3c19fdbb3aeb7992568304e1d91cac79a429770f",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_2_1_NUT",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_2_1_NUT.brep",
+      "sha256": "aa56497789352dc90da9e75df480e6c9905ef592d212875c349b4c486b27ee4b",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_2_2",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_2_2.brep",
+      "sha256": "5aaedcbf958e3e64eb62c783f51f526a183bb89fc419c229367fbc4b529e9ca0",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_FUSE_SUPPORT_2_2_NUT",
+      "path": "reference-geometry/HUB_FUSE_SUPPORT_2_2_NUT.brep",
+      "sha256": "20100430fa8274521d51f52612f966e46954909f6d959400b5ff8a42cf9ae4aa",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HF2_M2_1",
+      "path": "reference-geometry/HF2_M2_1.brep",
+      "sha256": "f0d159b8f6afea09a06bbfe471aed619bdd9a4612d1fb289ca1491ddac5a5ba9",
+      "bytes": 10102,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HF2_M2_2",
+      "path": "reference-geometry/HF2_M2_2.brep",
+      "sha256": "5960f3c65428fde874c0d2a46c56df6c9b9bfa215c8c2d728bfbe6c7782ea4d0",
+      "bytes": 10102,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_FOUT",
+      "path": "reference-geometry/PI_FOUT.brep",
+      "sha256": "5efe7a4019d0cd55d3e989d383b2ce229d8126c50414a62b6971ec07aee594c1",
+      "bytes": 2801,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_FOUT_TIE",
+      "path": "reference-geometry/PI_FOUT_TIE.brep",
+      "sha256": "8bc1157dc09706f680bd970bd62399bfb12fa8979bcc90f7d8c4ae25e4c63616",
+      "bytes": 14954,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE",
+      "path": "reference-geometry/PI_CASE.brep",
+      "sha256": "53f918a7892dc559da70f2e849e906714d5b179e04d18cf07c1c57957c8d57de",
+      "bytes": 20148,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_TOP",
+      "path": "reference-geometry/PI_CASE_TOP.brep",
+      "sha256": "1f0803cd9fea1756e48058133abc5556c012985333dfe07d4e0af0fc956700cc",
+      "bytes": 23218,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_FAN",
+      "path": "reference-geometry/PI_FAN.brep",
+      "sha256": "6f43c4bcbec3426f2f22163b186c413e75c9bf5f8fe8297e7df614397ff699bb",
+      "bytes": 28533,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_HEATSINK",
+      "path": "reference-geometry/PI_HEATSINK.brep",
+      "sha256": "4b6e76c9f4bc8a8dc933bb6910052c486a992f3df14c69cbdc75b625163cb274",
+      "bytes": 15813,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI5_BOARD",
+      "path": "reference-geometry/PI5_BOARD.brep",
+      "sha256": "c1279543f2cca21bf0c87eadc25cee70f9bac29bb35bc88cd0093090355326c0",
+      "bytes": 59422284,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT1",
+      "path": "reference-geometry/PI_CASE_MOUNT1.brep",
+      "sha256": "d23d890ce3431ab3a450d13b7d6cbbcc0844278f476e0f9449604b4c357dabe4",
+      "bytes": 9852,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT1_NUT",
+      "path": "reference-geometry/PI_CASE_MOUNT1_NUT.brep",
+      "sha256": "22bedee8cc491f088a7a6e7bf64a6d1843414b92c8d7926d5f42540915498927",
+      "bytes": 5408,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT2",
+      "path": "reference-geometry/PI_CASE_MOUNT2.brep",
+      "sha256": "0d6583a1e916947fd34266cc2bf6cc4c9765df329c6a27e25b65c9622d78e29d",
+      "bytes": 9852,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT2_NUT",
+      "path": "reference-geometry/PI_CASE_MOUNT2_NUT.brep",
+      "sha256": "3062f5b392b8c518880851f1beae8b3d01e215c216814b1946d8dea747fd03eb",
+      "bytes": 5408,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT3",
+      "path": "reference-geometry/PI_CASE_MOUNT3.brep",
+      "sha256": "882416869e06fd651948b4908e3d6fb360f95b1b8360ca48ead2246fb8cb9b31",
+      "bytes": 9852,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT3_NUT",
+      "path": "reference-geometry/PI_CASE_MOUNT3_NUT.brep",
+      "sha256": "8f4e99aef3b9cd4d3085d71dc4f7a3fda3edbea8267984d3843f0954c7336a4b",
+      "bytes": 5408,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT4",
+      "path": "reference-geometry/PI_CASE_MOUNT4.brep",
+      "sha256": "09ef6ceff9c830668ff4df0e293389dfeaa06fef6c82812eb89bcb0ec59e9a65",
+      "bytes": 9852,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PI_CASE_MOUNT4_NUT",
+      "path": "reference-geometry/PI_CASE_MOUNT4_NUT.brep",
+      "sha256": "557758f569b431071f9ba1ff563353c1319c90fbaf8d59fc714278ea1d7ce017",
+      "bytes": 5408,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB",
+      "path": "reference-geometry/HUB.brep",
+      "sha256": "ae1985a2fb290e2fcb89f8111d31916c0deac0773f82d5e381beff30f2b0f555",
+      "bytes": 25535,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE1",
+      "path": "reference-geometry/HUB_BRIDGE1.brep",
+      "sha256": "ff4aec5e51fc6847fe100dd48121255895a4f37bde70e79b3e231cfc08f45333",
+      "bytes": 6851,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE1_BOLT1",
+      "path": "reference-geometry/HUB_BRIDGE1_BOLT1.brep",
+      "sha256": "1a266cf9fc47116ad3fa0e0cc3c33dee92b8eb9428faa7154e7f006492981a94",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE1_BOLT1_NUT",
+      "path": "reference-geometry/HUB_BRIDGE1_BOLT1_NUT.brep",
+      "sha256": "54ff7ef60efdf23e95e1a79f31fce0767886e4458a2efa1eaa1b20c4deeecd3b",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE2",
+      "path": "reference-geometry/HUB_BRIDGE2.brep",
+      "sha256": "f8691abf1d63b8a90b0941697d4b8f552badc68e6892ecb9fbb441843ee30999",
+      "bytes": 6924,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE2_BOLT1",
+      "path": "reference-geometry/HUB_BRIDGE2_BOLT1.brep",
+      "sha256": "29c2307ac9e9681a6ee3ae5596dfdb04d23aeedf7c9a4bb0522fbc184087c675",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_BRIDGE2_BOLT1_NUT",
+      "path": "reference-geometry/HUB_BRIDGE2_BOLT1_NUT.brep",
+      "sha256": "20e8c2fe49e02bfc2072725c258bbec15818ef0d303084cd688ab2f47a557fc4",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PCB",
+      "path": "reference-geometry/CAN_PCB.brep",
+      "sha256": "a6642a6142b66482a20fed36cde5d6f89b86c015f430bff255c9ffe5d0af8897",
+      "bytes": 7141,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_USB",
+      "path": "reference-geometry/CAN_USB.brep",
+      "sha256": "488cc8d14a72f88031f39ca74553b3dc50912354a752b8094fbc4b3d09552225",
+      "bytes": 6634,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_TERMINAL",
+      "path": "reference-geometry/CAN_TERMINAL.brep",
+      "sha256": "59497a3846d0b922616f82c965220c4662d2fa901cce3d3869e1f1abe533781a",
+      "bytes": 2956,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_BOLT1",
+      "path": "reference-geometry/CAN_BOLT1.brep",
+      "sha256": "01068845dab34af8d6112108ef51429cc4e29f74b630995ea39b7773842a0f22",
+      "bytes": 10092,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_BOLT2",
+      "path": "reference-geometry/CAN_BOLT2.brep",
+      "sha256": "deb61425e0301a2af753bf40721e55ef1dd69b707d3c33ef4403cd195af0d2f2",
+      "bytes": 10092,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A",
+      "path": "reference-geometry/GPIO_A.brep",
+      "sha256": "7f74b45e157664625ccf760e089405b86d4370bc97597d1916dfa6468ff90e98",
+      "bytes": 116283,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "GPIO_A_WASHER1",
+      "path": "reference-geometry/GPIO_A_WASHER1.brep",
+      "sha256": "72d8b6001627a351457a2c4ad60785bd707b75e14b8572dc3cf386626164642e",
+      "bytes": 2068,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_BOLT1",
+      "path": "reference-geometry/GPIO_A_BOLT1.brep",
+      "sha256": "300b84ff1779c822e2ae763ba4a560020a63f17fd90ebcc09a4e37ca68de1b37",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_WASHER2",
+      "path": "reference-geometry/GPIO_A_WASHER2.brep",
+      "sha256": "83251e5b5851e69a48b995f6c6f0dd9cb4e69f12cddd6a8a1567fe2a346c6620",
+      "bytes": 2068,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_BOLT2",
+      "path": "reference-geometry/GPIO_A_BOLT2.brep",
+      "sha256": "b7582aec4f2bdcda1ef9d153f88a52cd9ed30e9f451b782c8f4bb0dea15545e2",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_WASHER3",
+      "path": "reference-geometry/GPIO_A_WASHER3.brep",
+      "sha256": "068b4819952169e332a74cb5bf948b5b2a0fdd3522f4633d171a342caecdd664",
+      "bytes": 2068,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_BOLT3",
+      "path": "reference-geometry/GPIO_A_BOLT3.brep",
+      "sha256": "f0af3caa0457eac7d0e1513cefa5869c7b2e9b9a2552420adadd77ffa5aa3020",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_WASHER4",
+      "path": "reference-geometry/GPIO_A_WASHER4.brep",
+      "sha256": "5044534ffdd38eb7a48eb308af70521d04b41842b364e3672a7e54dce5cba469",
+      "bytes": 2068,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_A_BOLT4",
+      "path": "reference-geometry/GPIO_A_BOLT4.brep",
+      "sha256": "7afcc053426551314a7802e54e7f67e5cdfdb83f2770dbcfac450b084aac0018",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "GPIO_SOCKET",
+      "path": "reference-geometry/GPIO_SOCKET.brep",
+      "sha256": "d533cbee91e44aeca620dcbd22b3e75408c6a4d10e738cc14a7668ce98832329",
+      "bytes": 3346,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LEVEL_POWER_HEADER",
+      "path": "reference-geometry/LEVEL_POWER_HEADER.brep",
+      "sha256": "cf7a850cca6db6aa4cca51c805409ad3844764b6d6f2b49c5f62f3ba299b6e58",
+      "bytes": 8825,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LEVEL_POWER_PLUG",
+      "path": "reference-geometry/LEVEL_POWER_PLUG.brep",
+      "sha256": "a053ab4c8f78e1565060b2d4e62dfef747ac270a09790ed4f83d36c26f26cb91",
+      "bytes": 7591,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_KEY_SHROUD",
+      "path": "reference-geometry/POWER_KEY_SHROUD.brep",
+      "sha256": "521f66b3e5398cf6b814b35c62b65d1157f9d924527aaa5732a00e809f2dcf4a",
+      "bytes": 16050,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_GUARD_3",
+      "path": "reference-geometry/POWER_GUARD_3.brep",
+      "sha256": "d6936b8e97e9758636b9103f2f2e55de2948f632e3c8ae951ac7cde7c347930a",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_GUARD_3_NUT",
+      "path": "reference-geometry/POWER_GUARD_3_NUT.brep",
+      "sha256": "34d58b7f42c5caae1a891995af0674e7579c6cb92c7b51413b7eac5362d2f1e8",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_GUARD_19",
+      "path": "reference-geometry/POWER_GUARD_19.brep",
+      "sha256": "63bcedf484ee51c673c1a80e05f993111a9373182dc0324b475822646b8b7e12",
+      "bytes": 10171,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_GUARD_19_NUT",
+      "path": "reference-geometry/POWER_GUARD_19_NUT.brep",
+      "sha256": "3be6c6e7d55ad2d7a4a0e5a5c144e6352f26b3a124d4a08dc6912b1285831296",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HOST_ADAPTER",
+      "path": "reference-geometry/HOST_ADAPTER.brep",
+      "sha256": "e75f80129a64404cac86543f003aa059adae2003143879e63c6bb67474dba46e",
+      "bytes": 3186,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HOST_USB_PLUG",
+      "path": "reference-geometry/HOST_USB_PLUG.brep",
+      "sha256": "430a98a1b274e8cc69bf4377efb8f82e6ea2674730b9f085c97e80c6aabc739e",
+      "bytes": 3186,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PI_USB_PLUG",
+      "path": "reference-geometry/CAN_PI_USB_PLUG.brep",
+      "sha256": "5dfe1d45fb9f7929306138bd0a4efbbe16533b3d180539fbbdcb571537c55dc5",
+      "bytes": 6031,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "HUB_POWER_PLUG",
+      "path": "reference-geometry/HUB_POWER_PLUG.brep",
+      "sha256": "1166054d5a29bcb7861c26bee1c9cb1d6e5be6f871a27729807a87885667a49a",
+      "bytes": 2678,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_USB_PLUG",
+      "path": "reference-geometry/CAN_USB_PLUG.brep",
+      "sha256": "56ded3723793a7202ba93ddfcf087b470f629aa0b4d61cbe60f1ca19c842fdbc",
+      "bytes": 6339,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "EXTERNAL_USB_GPS",
+      "path": "reference-geometry/EXTERNAL_USB_GPS.brep",
+      "sha256": "7db35d4684095fc851bfc7ecc9dd85ffff504365f3215305905b683cf7485742",
+      "bytes": 10948,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "EXTERNAL_USB_SONAR",
+      "path": "reference-geometry/EXTERNAL_USB_SONAR.brep",
+      "sha256": "f1d26d017ab1cd7fe896ff79a8ad8a3d3d4a765944d5e8642847149ed75d866e",
+      "bytes": 10913,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "EXTERNAL_USB_SOUND",
+      "path": "reference-geometry/EXTERNAL_USB_SOUND.brep",
+      "sha256": "8940536624b4b4998e53b48ec6e33237c77b7081d627ba892471aa11037398e2",
+      "bytes": 10860,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_PANEL_SCREW133",
+      "path": "reference-geometry/POWER_PANEL_SCREW133.brep",
+      "sha256": "16e9b13d0ae84a6986eff7c801553175da51530b6833fb5999c8a3c9a073d1aa",
+      "bytes": 10189,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_PANEL_SCREW157",
+      "path": "reference-geometry/POWER_PANEL_SCREW157.brep",
+      "sha256": "a47fa8f41436b726a388f2c6788fe3cbbdf79b71e74dec2bc66e753c2bffca3a",
+      "bytes": 10189,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_PANEL",
+      "path": "reference-geometry/POWER_PANEL.brep",
+      "sha256": "9ee97981ecd8ea212e15b025d63565f95493303b6c734d11a053c15d311ce77f",
+      "bytes": 5044,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PANEL_SCREW175",
+      "path": "reference-geometry/CAN_PANEL_SCREW175.brep",
+      "sha256": "b9f33a7b3cfa4d24216ceb5b1e31a7a84cda1c7da8fb7cf4248644865210681e",
+      "bytes": 10189,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PANEL_SCREW199",
+      "path": "reference-geometry/CAN_PANEL_SCREW199.brep",
+      "sha256": "b127243d2ded2151c1e339a890b2ba914e1251bbc49c673675bde2a924e01140",
+      "bytes": 10189,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PANEL",
+      "path": "reference-geometry/CAN_PANEL.brep",
+      "sha256": "66a3333c18db33201bffa09c653d05943f6e9d04375f6507a0b731be98facc61",
+      "bytes": 6994,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PG7_GLAND",
+      "path": "reference-geometry/PG7_GLAND.brep",
+      "sha256": "6e955649df9375c1acec94233760296e8f3398c602ea6573abe589b2a18206a4",
+      "bytes": 3642,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PG7_LOCKNUT",
+      "path": "reference-geometry/PG7_LOCKNUT.brep",
+      "sha256": "061aeab229cd8ba5da2a6a156e275473349236ed27eba7bbf54c75d06a9624d8",
+      "bytes": 5900,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_WALL_HEADER",
+      "path": "reference-geometry/CAN_WALL_HEADER.brep",
+      "sha256": "05983f2d316f18816dcf1cbfd59ef69e623a364e0385b5e9b8f707dd53ae3c7f",
+      "bytes": 8835,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_WALL_PLUG",
+      "path": "reference-geometry/CAN_WALL_PLUG.brep",
+      "sha256": "ffd874de5c102209df86fe248425b312537c326bf17feaefdd601cfef704143c",
+      "bytes": 7601,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_GUARD_169",
+      "path": "reference-geometry/CAN_GUARD_169.brep",
+      "sha256": "614bce3933aa7360f9210485025a8b52ca8ee57ca30afbe39b100675d4b20920",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_GUARD_169_NUT",
+      "path": "reference-geometry/CAN_GUARD_169_NUT.brep",
+      "sha256": "4c377129cb53e23661e5fba78ff5932267f0e01f39d6499e2e822d235fb2c7ed",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_GUARD_207",
+      "path": "reference-geometry/CAN_GUARD_207.brep",
+      "sha256": "4b03228561c37199fe282046277bfa0019f5c2f79b68ef00f786a17e8c7cc1d0",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_GUARD_207_NUT",
+      "path": "reference-geometry/CAN_GUARD_207_NUT.brep",
+      "sha256": "df82b460ce96b9e95586576fa11e210c56851ba2255c19dd7885a6bbe3f6b8a1",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_KEY_SHROUD",
+      "path": "reference-geometry/CAN_KEY_SHROUD.brep",
+      "sha256": "4de19753ebc9ce5e32ffb2e98b781ba016ce12c2529e048954671fc51395ca60",
+      "bytes": 19430,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "POWER_PLUG_COLLAR",
+      "path": "reference-geometry/POWER_PLUG_COLLAR.brep",
+      "sha256": "da60a1bc127cf5d0ca08c3862d8622155b65fbb1e83df689ba241e60a8a4c06e",
+      "bytes": 12832,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CAN_PLUG_COLLAR",
+      "path": "reference-geometry/CAN_PLUG_COLLAR.brep",
+      "sha256": "812ea4c1467865c952baaec2e87bdc82fa37f39b57af8f280aaca3eb7642dbc4",
+      "bytes": 12878,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "SUPPLY_TRAY",
+      "path": "reference-geometry/SUPPLY_TRAY.brep",
+      "sha256": "32c92d6ee0213377afda14077e15e43f5bb2b12ae8c515166855a9b6de4b67d8",
+      "bytes": 362792,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "DEVICE_TRAY",
+      "path": "reference-geometry/DEVICE_TRAY.brep",
+      "sha256": "e391aae70b9f2a4f1680b529d466d1605cf6c3772aee9e8b6b0a1c0305e5cb4b",
+      "bytes": 237909,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_42_12",
+      "path": "reference-geometry/CASE_FIX_42_12.brep",
+      "sha256": "9b83016415dc25aca87bc2ab635cf27c2d1fd0bb28933b2453c89c0a2f1a9f14",
+      "bytes": 10182,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_42_12_NUT",
+      "path": "reference-geometry/CASE_FIX_42_12_NUT.brep",
+      "sha256": "a6586db7b4d0406e0dbcb358aa19a62ce4c96f211ef189c6e6eba952858e5b81",
+      "bytes": 5605,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_136_12",
+      "path": "reference-geometry/CASE_FIX_136_12.brep",
+      "sha256": "be9d386c0837c35d44c24aea3b1cd2ecccc8050e54b20b566292d35d821184e5",
+      "bytes": 10182,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_136_12_NUT",
+      "path": "reference-geometry/CASE_FIX_136_12_NUT.brep",
+      "sha256": "c4b267a93cbe4df5dc0543ec5b8dab549abd6204ae801d3616b4f09ae340670c",
+      "bytes": 5605,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_42_185",
+      "path": "reference-geometry/CASE_FIX_42_185.brep",
+      "sha256": "10507f7f6638fcb7d6223e2084fc30d380b840e0e215ba6b82875a72bccc2b05",
+      "bytes": 10182,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_42_185_NUT",
+      "path": "reference-geometry/CASE_FIX_42_185_NUT.brep",
+      "sha256": "6567ab6324c6c44986435ba32fac8bd4b6f85a61407b2fde9eaccc5e3b08dc30",
+      "bytes": 5605,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_115_185",
+      "path": "reference-geometry/CASE_FIX_115_185.brep",
+      "sha256": "8d201d0e16d4932cceffdea15b200874be1874d7bf0f974dc85a4d865294b046",
+      "bytes": 10182,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_FIX_115_185_NUT",
+      "path": "reference-geometry/CASE_FIX_115_185_NUT.brep",
+      "sha256": "42d1cbad867c8d7d612481ab2b291278aebba175f9d47fecbce8c57b42df71bd",
+      "bytes": 5605,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT60_1",
+      "path": "reference-geometry/LID_BOLT60_1.brep",
+      "sha256": "20249b22c026427b303c9c6dfae445311f53d9ffaf68ce1baf987f9647a96071",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT60_1_NUT",
+      "path": "reference-geometry/LID_BOLT60_1_NUT.brep",
+      "sha256": "ce453598ed83874fecfa48044b9c2ae36003e086c90ee8dcc4a9c0cc1c9b7a7b",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT110_1",
+      "path": "reference-geometry/LID_BOLT110_1.brep",
+      "sha256": "19f141a86611049e453f690b8ae2bf6c7fb4df790a2888e2212eb2ce73b1c769",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT110_1_NUT",
+      "path": "reference-geometry/LID_BOLT110_1_NUT.brep",
+      "sha256": "4293ece77b933d1f32ac94535c914e2788368e72d6014a99e8ca4f06b9c0eb2d",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT60_193",
+      "path": "reference-geometry/LID_BOLT60_193.brep",
+      "sha256": "714966fbcc76579e9209f2714152a9c5606771257189c797690a9b7c3735221f",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT60_193_NUT",
+      "path": "reference-geometry/LID_BOLT60_193_NUT.brep",
+      "sha256": "3ed2b1ec87ffa75e0f86866fc3fdde1da644a4558fd2cd73e9714ac7757c7c80",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT110_193",
+      "path": "reference-geometry/LID_BOLT110_193.brep",
+      "sha256": "9f2adb5f12243f815909b6dd2e38849248b118942d8e0e3b17d972c8722410b5",
+      "bytes": 10179,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "LID_BOLT110_193_NUT",
+      "path": "reference-geometry/LID_BOLT110_193_NUT.brep",
+      "sha256": "9d5e77bb2b5e643c848864919fba0c005085eddb768d736426eb65384667d9b7",
+      "bytes": 5594,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_BASE",
+      "path": "reference-geometry/CASE_BASE.brep",
+      "sha256": "d8ab18d8d4c1fd77add7f811d9ad108803973e89296832990ef01ae32e762add",
+      "bytes": 274128,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "CASE_LID",
+      "path": "reference-geometry/CASE_LID.brep",
+      "sha256": "6c2706141183cfd0f7fb8a413bf9ff44d640ef3824a8b3c3fc94d09cb3d9b264",
+      "bytes": 131633,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "PETG_M3_COUPON",
+      "path": "reference-geometry/PETG_M3_COUPON.brep",
+      "sha256": "2703d92292b74177daa7c7064c13b79b8e58ff7c2b1c87d7be4b603350d7eefd",
+      "bytes": 12357,
+      "source_revision": "PI-2L-2",
+      "included": true
+    },
+    {
+      "id": "X_PI_RAW",
+      "path": "reference-geometry/X_PI_RAW.brep",
+      "sha256": "015b1d8f9d751034d388681bf205b9a5b61d0fd5dc16688480b0690016deb0ea",
+      "bytes": 3759,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_PI_DR",
+      "path": "reference-geometry/X_PI_DR.brep",
+      "sha256": "a4df92e7628aa5dafb8f247220286c57154c1db23915e1b6318caf1ab4950af2",
+      "bytes": 3759,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_HUB_D",
+      "path": "reference-geometry/X_HUB_D.brep",
+      "sha256": "2a28923a0e1579ad27fec28fdc9b26dd2428877362e24776b4316e2aeb975dea",
+      "bytes": 3759,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_INPUT",
+      "path": "reference-geometry/X_INPUT.brep",
+      "sha256": "f341cf18409ef50a50b5347a46fb59d6086a6e681c61141c0c13823f114ecf63",
+      "bytes": 3759,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_GPIO",
+      "path": "reference-geometry/X_GPIO.brep",
+      "sha256": "80394561ca24fc4251b6b8af086f9b7d6f728cbb608a2f637da440489fd81859",
+      "bytes": 3759,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_HF1",
+      "path": "reference-geometry/X_HF1.brep",
+      "sha256": "10dd8be6484195dfbddd9f0431b1df8dfb85c70e4e15204a9f6828c4c6f26948",
+      "bytes": 4181,
+      "source_revision": null,
+      "included": true
+    },
+    {
+      "id": "X_HF2",
+      "path": "reference-geometry/X_HF2.brep",
+      "sha256": "809d8a12556620af8bf01a5f529c6a59593d4d6468a9894b0f8a4cbf784181ba",
+      "bytes": 4181,
+      "source_revision": null,
+      "included": true
+    }
+  ]
+}

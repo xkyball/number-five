@@ -1,0 +1,218 @@
+{
+  "accessed": "2026-10-03",
+  "publisher": "NOAA Office of Coast Survey",
+  "catalog": "https://charts.noaa.gov/ENCs/ENCProdCat.xml",
+  "dataset_doi": "https://doi.org/10.25923/jyyk-j845",
+  "charts": [
+    {
+      "cell": "US5BOSCC",
+      "title": "Boston Inner Harbor - Charles River and Neponset River Entrance to Old Harbor",
+      "scale": 12000,
+      "edition": 5,
+      "update": 4,
+      "source": "https://www.charts.noaa.gov/ENCs/US5BOSCC.zip",
+      "zip_sha256": "0c6beb7f903410bcf25f8b282bc0d9a5de6cac6a6453242e7745ff8c1373b6c5",
+      "zip_bytes": 271563,
+      "files": [
+        {
+          "name": "US5BOSCC.000",
+          "bytes": 1113399,
+          "sha256": "c84c54a6f12fa4800b04f64b379c604bb56f3a75cac2c891d2130d9bf80ce6e7"
+        },
+        {
+          "name": "US5BOSCC.001",
+          "bytes": 3306,
+          "sha256": "6e05fd4f2d8984a6c88b83cfb248b561a3f67ae499f3945569b6b6eb8da6b5a1"
+        },
+        {
+          "name": "US5BOSCC.002",
+          "bytes": 3289,
+          "sha256": "66f4f1f0412c8d589090983c994277c6bafc001320c6caf6d285c3bd63512723"
+        },
+        {
+          "name": "US5BOSCC.003",
+          "bytes": 2108,
+          "sha256": "8b430aabdf6fcbd7e9e2dadc173d4084051578a0b2db7106ffc12ad21399dc07"
+        },
+        {
+          "name": "US5BOSCC.004",
+          "bytes": 5172,
+          "sha256": "d6b16a4d28c47f98065f710fb6076fb330ffebf4df432ff26e42d8fa402c5d9b"
+        }
+      ]
+    },
+    {
+      "cell": "US5BOSCD",
+      "title": "President Roads to Boston Inner Harbor",
+      "scale": 12000,
+      "edition": 4,
+      "update": 6,
+      "source": "https://www.charts.noaa.gov/ENCs/US5BOSCD.zip",
+      "zip_sha256": "3b18bdf153672846f0b88e6178e9968ffc841b8c9b6e2bb21b86cb96937fd6c0",
+      "zip_bytes": 342436,
+      "files": [
+        {
+          "name": "US5BOSCD.000",
+          "bytes": 1054018,
+          "sha256": "26ae64ff20e3a6ccfb3c9cc9cb9ee738773b83a2c574c0fd7704bc49987b81ee"
+        },
+        {
+          "name": "US5BOSCD.001",
+          "bytes": 2172,
+          "sha256": "676c1fd4bef1a1245e513a523c3f9891c7bf64bef31818720786246747d59ae6"
+        },
+        {
+          "name": "US5BOSCD.002",
+          "bytes": 7682,
+          "sha256": "f2bedabf6b4bad2d65d3e3f193f36acc0a42f56fe34b5294bd664e8db20f156f"
+        },
+        {
+          "name": "US5BOSCD.003",
+          "bytes": 2378,
+          "sha256": "4b004218efcced903af413fa24b7d8007e652c18f333a3d964e498c511a13a73"
+        },
+        {
+          "name": "US5BOSCD.004",
+          "bytes": 5110,
+          "sha256": "a19e271abdd2d6052838eea85c76204920e400c021f9543e2fca4bcdfaa742d4"
+        },
+        {
+          "name": "US5BOSCD.005",
+          "bytes": 2181,
+          "sha256": "98434e125ae0d5769a6bbd41d6d8fc0c817b55e9c826ba9215deb8c431af4b8d"
+        },
+        {
+          "name": "US5BOSCD.006",
+          "bytes": 4733,
+          "sha256": "0b18a08c1c62d7757e95e084e6508ec86f0ffb616fffae68c8e0234820d1b0cf"
+        }
+      ]
+    },
+    {
+      "cell": "US5BOSDC",
+      "title": "Boston Inner Harbor to Mystic River and Chelsea River",
+      "scale": 12000,
+      "edition": 5,
+      "update": 0,
+      "source": "https://www.charts.noaa.gov/ENCs/US5BOSDC.zip",
+      "zip_sha256": "bedeb40e21d585a6b100fb69c3191340dfdd50f31970d13a3ba86ab3ce5aa357",
+      "zip_bytes": 185496,
+      "files": [
+        {
+          "name": "US5BOSDC.000",
+          "bytes": 750747,
+          "sha256": "3699c7afbc0eede19f6adb0b1f220065e420ccce175969b338e168c54fda137a"
+        }
+      ]
+    },
+    {
+      "cell": "US5BOSDD",
+      "title": "Chelsea River and Winthrop Beach to Lynn Harbor-Saugus River",
+      "scale": 12000,
+      "edition": 5,
+      "update": 4,
+      "source": "https://www.charts.noaa.gov/ENCs/US5BOSDD.zip",
+      "zip_sha256": "959567499cea99a95976a565e86e7aa8f698e2056a4836109f2de499aa31104b",
+      "zip_bytes": 226829,
+      "files": [
+        {
+          "name": "US5BOSDD.000",
+          "bytes": 714271,
+          "sha256": "d1b72f2a6111c8687760fceec48514e8c0df916beef2e4cbaf87659d600b88b8"
+        },
+        {
+          "name": "US5BOSDD.001",
+          "bytes": 2170,
+          "sha256": "011c54cee811199e4106a31ad0f74f35ba14e18e40ed15e0955ecc269bae9faf"
+        },
+        {
+          "name": "US5BOSDD.002",
+          "bytes": 2470,
+          "sha256": "57918078a03987138c2657f7f8deb2b982457c2c27dd030390d0a620cf18c78f"
+        },
+        {
+          "name": "US5BOSDD.003",
+          "bytes": 3116,
+          "sha256": "417f821875c5d2bd8cb7fb9ed8fd9650f17ce38fd19ede7652bd1105f6676bfe"
+        },
+        {
+          "name": "US5BOSDD.004",
+          "bytes": 2533,
+          "sha256": "d30aca21e6ecc96f41172ff3a376055e1e628f4d8b5f96b323cfe3712df6893c"
+        }
+      ]
+    }
+  ],
+  "ancillary_files": [
+    {
+      "name": "README.TXT",
+      "bytes": 2771,
+      "sha256": "48cef252706738d0c708114c1133b466fe940c9cc4d9d48c4f74199ea1a6ada8"
+    },
+    {
+      "name": "US237CCA.TXT",
+      "bytes": 6206,
+      "sha256": "29091b0ed64ddac2bfc0fca00ec997a2e6df941cf3aeb25b325dc840a86bd760"
+    },
+    {
+      "name": "US237CCB.TXT",
+      "bytes": 716,
+      "sha256": "fbb135bbd8e372580cf9a5444433b3d86e750ca8cae444bcf773cff04cab3ec7"
+    },
+    {
+      "name": "US237CCC.TXT",
+      "bytes": 202,
+      "sha256": "2d15b1066c87cce19804c2c0f39cde3d00452b459b8ce3193b1513a4ea15ce8c"
+    },
+    {
+      "name": "US237CDA.TXT",
+      "bytes": 6463,
+      "sha256": "4882053ef75b7827fd55664e2d3f28ccc0f94c183d9c182f68fb5c56573b0bba"
+    },
+    {
+      "name": "US237CDB.TXT",
+      "bytes": 716,
+      "sha256": "fbb135bbd8e372580cf9a5444433b3d86e750ca8cae444bcf773cff04cab3ec7"
+    },
+    {
+      "name": "US237DCA.TXT",
+      "bytes": 5834,
+      "sha256": "4e3bb4a0b330f6177e888f7b77b3a1bd107858e8154c5ffa3919ddd6d59926c9"
+    },
+    {
+      "name": "US237DCB.TXT",
+      "bytes": 160,
+      "sha256": "c1484df0756cd52b5bdebbe4a3ddb2a7fe8440bd16f64beb967532e2fb57c599"
+    },
+    {
+      "name": "US237DCC.TXT",
+      "bytes": 202,
+      "sha256": "2d15b1066c87cce19804c2c0f39cde3d00452b459b8ce3193b1513a4ea15ce8c"
+    },
+    {
+      "name": "US237DCD.TXT",
+      "bytes": 716,
+      "sha256": "fbb135bbd8e372580cf9a5444433b3d86e750ca8cae444bcf773cff04cab3ec7"
+    },
+    {
+      "name": "US237DDA.TXT",
+      "bytes": 6506,
+      "sha256": "82d7801413ef69db427e08bd96647a6daf8c7a9fab8d72a55972f758c3dd005d"
+    },
+    {
+      "name": "US237DDB.TXT",
+      "bytes": 714,
+      "sha256": "6ff3b79d52426a2bebdfc95128367222424dbb39d0d1b72bd79eb825c3327856"
+    },
+    {
+      "name": "US237DDC.TXT",
+      "bytes": 203,
+      "sha256": "1654a65039caef4e39daa144d374084c20d4c8c6716694aa325055a72804534b"
+    },
+    {
+      "name": "USERAGREEMENT.TXT",
+      "bytes": 5176,
+      "sha256": "2ad2620c209a7876b0978f0b8b9ab247c3977dc671f9be37a5febb33fcd06671"
+    }
+  ]
+}

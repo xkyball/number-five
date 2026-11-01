@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CamillaDSP · No5</title>
+  <link rel="stylesheet" href="/camilladsp/login.css">
+</head>
+<body>
+  <main>
+    <h1>CamillaDSP</h1>
+    <p>Mit dem vorhandenen No5-Gateway-Schlüssel anmelden. Die Sitzung endet nach 15 Minuten.</p>
+    <form id="login" novalidate>
+      <label for="gateway-key">Gateway-Schlüssel</label>
+      <input id="gateway-key" name="gateway-key" type="password" autocomplete="current-password" required maxlength="512" autofocus>
+      <button type="submit">Anmelden</button>
+    </form>
+    <p id="status" role="status" aria-live="polite"></p>
+  </main>
+  <script src="/camilladsp/login.js" defer></script>
+</body>
+</html>

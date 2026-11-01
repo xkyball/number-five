@@ -1,0 +1,5 @@
+# Optional /etc/no5-spotify-connect/environment, root-owned mode 0644.
+# Use a distinct, non-empty device name for each receiver in the same network.
+# This file is only public instance configuration; account caches stay separate.
+# With this file absent, or this setting omitted, the systemd default is No5.
+NO5_SPOTIFY_DEVICE_NAME="No5"

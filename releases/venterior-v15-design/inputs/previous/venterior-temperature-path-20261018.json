@@ -1,0 +1,204 @@
+{
+  "schema": "no5.venterior-temperature-path/1",
+  "date": "2026-10-18",
+  "operator_observation": {
+    "water_temperature_display_present": true,
+    "lcd_report": "17 degrees",
+    "unit_assumed_from_german_context": "Celsius; not separately confirmed",
+    "sensitivity_change": {
+      "from": 3,
+      "to": 5
+    }
+  },
+  "reference_model": {
+    "candidate": "VT-FF003",
+    "exact_actual_model_confirmed": false,
+    "reason": "Original VT-FF003 manufacturer manual explicitly includes water temperature plus five-level sensitivity; earlier VT-FF001 reference omits water temperature",
+    "manufacturer_manual_republished_url": "https://manualzz.com/doc/html/81084908/venterior-vt-ff003-portable-fish-finder-user-manual"
+  },
+  "measured_existing_path": {
+    "connector": "original three-wire transducer connector; not Q10",
+    "pin1": "blue: sonar branch; no new connection",
+    "pin2": "black: confirmed common ground",
+    "pin3": "yellow: original connection preserved; no adapter tap",
+    "pin2_to_pin3_ohm": 12800,
+    "conditions": "historical disconnected transducer-side resistance stable both polarities; water temperature at that historical measurement not recorded"
+  },
+  "hypothesis": {
+    "candidate": "temperature-dependent resistor on yellow/black",
+    "thermistor_confirmed": false,
+    "R25_ohm": null,
+    "beta_K": null,
+    "no_assumed_10k_3950_curve": true
+  },
+  "next_discriminating_measurements": [
+    {
+      "order": 1,
+      "kind": "voltage, original assembled device operating",
+      "meter": "V DC / AUTO; never resistance while powered",
+      "points": "yellow transducer contact3 relative to black contact2/common ground",
+      "record": [
+        "voltage",
+        "concurrent LCD temperature",
+        "stable or pulsed behaviour"
+      ],
+      "purpose": "qualify existing bias and input protection; not a GPIO connection instruction",
+      "status": "DONE_OPERATOR_REPORTED",
+      "result": "1.912V at17degrees"
+    },
+    {
+      "order": 2,
+      "kind": "temperature response",
+      "prerequisite": "qualified accessible voltage tap and first voltage within expected instrument range",
+      "method": "Use naturally changed water temperature on2026-10-19; same yellow-to-GND voltage measurement and concurrent LCD temperature. No active heating requested.",
+      "purpose": "show whether yellow voltage follows actual temperature; if ambiguous, disconnected unpowered R(T) measurement with independent temperature reference",
+      "status": "DONE_OPERATOR_REPORTED_NATURAL_CHANGE",
+      "result": "1.968V and1.969V at explicitly confirmed16degrees;6.011V supply at both bracketing readings"
+    }
+  ],
+  "proposed_readout": {
+    "sensor": "existing transducer sensor if qualified",
+    "original_sensor_connection": "preserved, parallel high-impedance observation",
+    "input": "existing suitable protection/buffer parts, after measured voltage and loading qualification",
+    "pico_channel_candidate": "GP27/ADC1 physical32, only after actual pin-use and ADC scheduling review; not connected or assigned",
+    "sampling": "slow telemetry between completed sonar captures; ADC0/DMA capture geometry and marker timing preserved",
+    "calibration": "empirical voltage-temperature pairs initially labelled operator-reference; neither hardware truth nor laboratory calibration claimed"
+  },
+  "software_state": {
+    "live_water_temperature_acquisition": false,
+    "existing_water_temperature_context_field": "manually supplied metadata only; not a live sensor value",
+    "pico_temperature_mc": "Pico status field is not water temperature",
+    "future_live_contract": [
+      "temperature_c or null",
+      "source",
+      "measurement_time",
+      "age",
+      "validity",
+      "calibration_revision"
+    ],
+    "manual_17_not_injected_as_live": true
+  },
+  "physical_wiring_changed": false,
+  "firmware_changed": false,
+  "sonard_configuration_changed": false,
+  "raw_samples_modified": false,
+  "thermistor_reference": "https://www.ti.com/tool/CIRCUIT060002",
+  "measurement_card": "venterior-temperature-measurement-20261018.png",
+  "measurement_card_source": "venterior-temperature-measurement-20261018.svg",
+  "first_probe_ground": "Top right J3 GND hole as previously confirmed, rather than probing next to blue at T1",
+  "first_probe_voltage_point": "Exposed solder at yellow wire T1 joint, original photo coordinate667,406 in1368x1824 orientation",
+  "voltage_temperature_observations": [
+    {
+      "point": "A",
+      "reported_voltage_v": 1.912,
+      "reported_temperature_degrees": 17,
+      "assumed_unit": "Celsius based on context",
+      "source": "direct operator reply, MT873 V DC AUTO at yellow T1 relative confirmed J3 GND",
+      "recorded_utc": "2026-10-18T14:10:42Z",
+      "independent_temperature_calibration": false,
+      "instantaneous_signal_or_pulse_range_measured": false
+    },
+    {
+      "point": "M02",
+      "date": "2026-10-19",
+      "reported_voltage_v": 1.968,
+      "reported_temperature_c": 16,
+      "concurrent_LCD_temperature_explicitly_confirmed": true,
+      "source": "Direct operator, live series20261019",
+      "supply_reference_before_v": 6.011,
+      "supply_reference_after_v": 6.011,
+      "independent_temperature_calibration": false,
+      "instantaneous_signal_or_pulse_range_measured": false
+    },
+    {
+      "point": "M07",
+      "date": "2026-10-19",
+      "reported_voltage_v": 1.969,
+      "reported_temperature_c": 16,
+      "concurrent_LCD_temperature_explicitly_confirmed": true,
+      "source": "Direct operator, live series20261019",
+      "supply_reference_before_v": 6.011,
+      "supply_reference_after_v": 6.011,
+      "independent_temperature_calibration": false,
+      "instantaneous_signal_or_pulse_range_measured": false
+    }
+  ],
+  "interpretation": "Three reported voltage observations at two original-LCD temperatures:1.912V at17degrees and1.968/1.969V at16degrees. Compatible with a biased resistive temperature path and a preliminary local voltage mapping. Full voltage range, loading, excitation stability and independent accuracy remain unqualified; no ADC connection or live telemetry installed.",
+  "own_tx_for_following_hand_measurements": {
+    "mode": "off",
+    "recovery_state": "IDLE",
+    "desired_restart_intent": null,
+    "stop_confirmed_via_api": true,
+    "reason": "forthcoming unpowered K1 measurements; finite temperature-bias readings can continue with original Venterior powered"
+  },
+  "operator_followup": {
+    "date": "2026-10-19",
+    "timezone": "Africa/Johannesburg",
+    "request": "Heating is inconvenient; check tomorrow whether it changed",
+    "baseline_voltage_v": 1.912,
+    "baseline_temperature_degrees": 17,
+    "automatic_measurement_not_possible": true
+  },
+  "operator_followup_20261019": {
+    "reported_LCD_temperature_degrees": 16,
+    "new_temperature_voltage_v": [
+      1.968,
+      1.969
+    ],
+    "status": "COMPLETE_OPERATOR_REPORTED",
+    "plan": "venterior-live-measurement-series-20261019.json",
+    "keep_Venterior_on": true,
+    "parallel_fixes_in_progress": true,
+    "no_new_measurements_fabricated": true,
+    "LCD_temperature_confirmed_for_both_readings": true
+  },
+  "empirical_two_point_candidate": {
+    "status": "PRELIMINARY_VOLTAGE_TO_ORIGINAL_LCD_MAPPING_NOT_INSTALLED",
+    "reference_17_degrees_v": 1.912,
+    "reference_16_degrees_mean_v": 1.9685,
+    "observed_slope_v_per_LCD_degree": -0.0565,
+    "formula": "T_LCD_estimate_c =17 -(V_yellow_to_G -1.912)/0.0565",
+    "observed_temperature_span_c": [
+      16,
+      17
+    ],
+    "extrapolation_qualified": false,
+    "interpretation": "Colder reported temperature accompanies higher yellow voltage, consistent with the existing temperature-dependent-resistor hypothesis; the sensor R(T), excitation/reference stability between days and complete input range remain unqualified.",
+    "important_limitations": [
+      "Only two integer LCD temperatures spanning1degree",
+      "No independent calibrated thermometer",
+      "Today supply matches at two bracketing readings only; yesterday supply/excitation not measured in the same series",
+      "K1 upper contact voltage changed from3.99V yesterday to4.2V today; it is not established as the temperature excitation rail, and the change must not be attributed to temperature",
+      "A1mV difference between two readings is not an accuracy/noise specification"
+    ],
+    "direct_ADC_connection_released": false,
+    "original_yellow_connection_preserved": true,
+    "manual_reference_not_injected_as_live": true
+  },
+  "visual_preview_20261019": {
+    "image": "venterior-power-temperature-preview-20261019.png",
+    "status": "PLANNING_ONLY",
+    "original_yellow_connection_preserved": true,
+    "ADC_candidate": "GP27/ADC1/physical32, not connected or assigned",
+    "buffer_component_values_and_supply": "NOT_YET_QUALIFIED; deliberately shown as an unfinished functional block",
+    "direct_yellow_to_ADC_connection_released": false,
+    "firmware_changed": false
+  },
+  "fritzing_extension_plan_20261019": {
+    "status": "DRAWN_AND_OFFLINE_VALIDATED_NOT_INSTALLED",
+    "folder": "fritzing-power-temperature-20261019",
+    "channel": "GP27 / ADC1 / physical32",
+    "buffer": "second existing TS272CN channelA powered by Pico3V3",
+    "input_divider_ohm": [
+      1000000,
+      330000
+    ],
+    "input_capacitance_nf": 10,
+    "adc_series_ohm": 1000,
+    "adc_capacitance_nf": 100,
+    "negative_sense_clamp": "one remaining BAT85",
+    "original_yellow_connection_preserved": true,
+    "firmware_installed": false,
+    "physical_load_and_USB_off_test_pending": true
+  }
+}

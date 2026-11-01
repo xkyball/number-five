@@ -1,0 +1,23 @@
+[Unit]
+Description=Reconcile No5 Pi browser listeners with the selected LAN interfaces
+Wants=network-online.target
+After=NetworkManager.service network-online.target
+Before=nginx.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/libexec/no5-refresh-browser-network.py
+TimeoutStartSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectHome=true
+ProtectSystem=strict
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ReadWritePaths=/etc/no5-gateway-proxy /var/log/nginx /var/lib/nginx /run
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+
+[Install]
+WantedBy=multi-user.target

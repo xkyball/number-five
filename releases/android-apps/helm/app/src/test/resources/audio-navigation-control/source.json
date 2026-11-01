@@ -1,0 +1,11 @@
+{
+  "commit": "796e15bc6618e07dc7bf776bcdecbe73e4d9ba5a",
+  "path": "helm/app/src/main/java/com/no5/helm/AudioNativeScene.kt",
+  "sha256": "5dbeee23a0329c28f3e76b2c40d102fb3fe97db87ed1dc83fdb3a55f28c0dec0",
+  "runtime": "Robolectric 4.15.1 / native Skia / API35",
+  "data": "simulator/tests/fixtures/audio-v1.json; trackId fixed to public test URI",
+  "images": {
+    "day.png": "f8faaa02cb0a444e3b7d4830f0464fabddbc277d22d32cc22c6a934413475e7a",
+    "night.png": "fdf0d3785e32009814255fff300eaccbca4ca84f92b247a2be28150e6ee4c85f"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "ABI": {
+    "classAlignment": 4,
+    "classBytes": 8,
+    "endianness": "little-endian, header rejects other targets",
+    "methods": "C1/C2 D0/D1/D2 Lock Unlock TryLock(unsigned32), real compiler-generated RTTI/vtable",
+    "opaqueOSSStorageBytes": 44,
+    "sourceTypes": "Own machine-compatible declarations, not recovered authoritative vendor headers",
+    "storageAlignment": 4,
+    "virtualSlots": "Complete/deleting destructor only"
+  },
+  "boundaries": [
+    "No original code, RTTI/vtable/pthread byte patterns or vendor implementation bundled",
+    "No success stubs, original identity/auth providers or dummy globals",
+    "Other host callbacks remain unimplemented and unsupported",
+    "No automatic build/load/import action; target lifecycle/runtime tests separate",
+    "Original Nav/OSS runtime unmodified and external",
+    "Zero OSS create status alone does not prove native pthread initialization succeeded",
+    "Genuine OSS disable-flag branches may return0 before pthread; no flag changes or pthread-entry inference from status0"
+  ],
+  "contractOwner": "navionics_layout",
+  "format": "no5-own-cray-mutex-provenance/1",
+  "genuineProviderImports": [
+    "OSS_LinuxMutexCreate",
+    "OSS_MutexDestroy",
+    "OSS_MutexLock",
+    "OSS_MutexUnlock",
+    "OSS_MutexTryLock",
+    "OSS_MutexTimedLock"
+  ],
+  "interfaceContractSHA256": "7c34f260f36f479af538c4325ae980377d8cb6d6caa27cc4edc7daf75dcc019d",
+  "origin": "Independently authored C++ interface/source and invented compile-only layout control",
+  "ownFailurePolicies": [
+    "Create nonzero throws own status error after allocation cleanup",
+    "Destroy nonzero records status then aborts without freeing potentially registered storage",
+    "Lock/Unlock preserve facade word0; observer retains genuine underlying status",
+    "No original exception/failure-parity claim",
+    "Unexpected C++ unwind from genuine Create aborts without freeing unproven registry state"
+  ],
+  "scope": "OwnHostABI finite ARMHF CRayMutex compatibility; genuine OSS functions and normal task callback remain external",
+  "sourceFiles": [
+    {
+      "bytes": 2119,
+      "path": "src/no_chart_converter/host_runtime/cray_mutex.h",
+      "sha256": "6a0850f8066e1d951e3357d3c1a4f625a939b96fb161e03e1da6e9785e2b7a38"
+    },
+    {
+      "bytes": 3324,
+      "path": "src/no_chart_converter/host_runtime/cray_mutex.cpp",
+      "sha256": "367599809e66125bb3a6d83aca87b08a9063d7e7589f3eecf383dd4ee94045e7"
+    },
+    {
+      "bytes": 1291,
+      "path": "tests/native/cray_mutex_layout.cpp",
+      "sha256": "db4bb70f5484a363a0b26197ae65bc7dc9b4d29fc72e59814f8f93b61bf1a24e"
+    }
+  ]
+}

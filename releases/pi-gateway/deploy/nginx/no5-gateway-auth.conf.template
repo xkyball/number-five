@@ -1,0 +1,9 @@
+# Template only: the generated production file belongs at
+# /etc/nginx/conf.d/no5-gateway-auth.conf and must remain root-owned.
+#
+# Replace the placeholder with an Nginx-quoted header key generated locally on
+# the Pi. Do not copy a production map or its key into this repository.
+map $http_x_no5_gateway_key $no5_gateway_authorized {
+    default 0;
+    "__NO5_GATEWAY_HEADER_KEY__" 1;
+}

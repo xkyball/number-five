@@ -1,0 +1,5523 @@
+{
+  "commit": "452a60d963b876bddd2f8e5eefe1c814d6e4e39c",
+  "adapter": "chart-engine/no5/port/no5_platform.hpp",
+  "full_original_CPU_s52plib": true,
+  "original_S52_GLES_branch": true,
+  "patch_notes": [
+    "Use No5-owned in-memory wx value/DC call slots with no wxWidgets runtime or application/window lifecycle.",
+    "Thread-local portrayal pointer, mariner parameters and callback data; non-UI default configuration supplied explicitly.",
+    "Initialize missing DEPARE DRVAL2; tessellate HPGL GLES polygons with retained libtess2 instead of desktop GLU.",
+    "Enable retained GLES2 S52 branches and shaders; check shader compilation/linking; release context-bound programs/textures.",
+    "Apply viewport rotation once: directly for CPU points and in original shader transforms for GLES points; preserve upright text and display-coordinate label bounds.",
+    "Correct typed Striper deallocation and initialize maximum strip vertex count, detected by AddressSanitizer.",
+    "Replace signed-negative fixed-point shifts with equivalent multiplication; copy packed WKB/SENC/S57 scalars into aligned local values, detected by UBSan.",
+    "Rotate direct CPU chart coordinates for the No5 viewport; OpenCPN CPU ChartCanvas ordinarily performed the final chart rotation.",
+    "Retain OSENC 201 writer/ingest and original line assembly/priority/selection. Exclude desktop SENC progress/dialog/temporary update orchestration and drive data operations from No5.",
+    "Friend facade/cache for native lifetime and rendering access; no OpenCPN types cross the Kotlin API.",
+    "Batch visible solid-area triangles/strips/fans within one rule using bounded ushort indices over unchanged float client vertices; preserve visibility, winding and draw order, retaining the original path for unsupported representations.",
+    "Sample nested S52 rule/text/symbol/line/area and deferred-tessellation wall time without changing drawing; expose coarse frame-stage wall and thread CPU time separately from selected GL API wall time.",
+    "Restore an area-pattern matrix using the active area-pattern program location, avoiding a driver-dependent cross-program uniform location from the legacy colour shader (PowerVR startup GL_INVALID_OPERATION).",
+    "Independent full-render probe only: count existing original/reduced position-BBox decisions and sample query time; original decisions retained, no new culling policy.",
+    "Audit repair: context-owned S52/C/font shader caches with thread-local active views; chart selection subtracts retained NOCOVR polygons.",
+    "Preserve OSENC integer/real attribute lists as the comma-list representation consumed by S52; validate packed lengths and copy aligned scalars, retaining all values for object details.",
+    "Retain derived area GPU buffers without changing semantic CPU tessellation, original primitive order, clipping, anchors or query geometry; release with the owning EGL context and resident cell.",
+    "Preserve case-sensitive standard and inland ENC object acronyms during CSV preload, so custom filters use exact dictionary identifiers without conflating ACHARE and achare."
+  ],
+  "files": [
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Source/Adjacency.cpp",
+          "sha256": "a54a1ea8d854a1cbb974ccb1bfada5d07f8c7de3e17fce04ba871f3d10d82450"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Adjacency.cpp",
+      "sha256": "a54a1ea8d854a1cbb974ccb1bfada5d07f8c7de3e17fce04ba871f3d10d82450",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            288
+          ],
+          "generated_lines": [
+            1,
+            288
+          ],
+          "sha256": "a54a1ea8d854a1cbb974ccb1bfada5d07f8c7de3e17fce04ba871f3d10d82450"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Include/Adjacency.h",
+          "sha256": "84c0811592188ab9ff6721589708e32763406c1912d812b64d8941044eeb86ed"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Adjacency.h",
+      "sha256": "84c0811592188ab9ff6721589708e32763406c1912d812b64d8941044eeb86ed",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            81
+          ],
+          "generated_lines": [
+            1,
+            81
+          ],
+          "sha256": "84c0811592188ab9ff6721589708e32763406c1912d812b64d8941044eeb86ed"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/Cs52_shaders.cpp",
+          "sha256": "e693b1dbbc40927c3a69a6cf3c16d295393ba378909d8fbae1216d79ab364a70"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Cs52_shaders.cpp",
+      "sha256": "9c9cc7dce3a6b5c306fb5506f3895eb49811e6db9d2afbb754ba4c4a7c38be0f",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            288
+          ],
+          "generated_lines": [
+            1,
+            288
+          ],
+          "sha256": "642688ccb3c8a3d3c0c2ffa536229737e543b264167e0065b7eb4906e8a493fa"
+        },
+        {
+          "original_lines": [
+            289,
+            305
+          ],
+          "generated_lines": [
+            294,
+            310
+          ],
+          "sha256": "a227264419315d96a8b74b79c49204a3af1672bfe0c78092d0e474d609c453f7"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 195,
+          "end_line_exclusive": 196,
+          "replacement": "thread_local CGLShaderProgram *pCAALine_shader_program[2];\n"
+        },
+        {
+          "start_line": 196,
+          "end_line_exclusive": 197,
+          "replacement": "thread_local CGLShaderProgram *pCcolor_tri_shader_program[2];\n"
+        },
+        {
+          "start_line": 197,
+          "end_line_exclusive": 198,
+          "replacement": "thread_local CGLShaderProgram *pCtexture_2D_shader_program[2];\n"
+        },
+        {
+          "start_line": 198,
+          "end_line_exclusive": 199,
+          "replacement": "thread_local CGLShaderProgram *pCcircle_filled_shader_program[2];\n"
+        },
+        {
+          "start_line": 199,
+          "end_line_exclusive": 200,
+          "replacement": "thread_local CGLShaderProgram *pCtexture_2DA_shader_program[2];\n"
+        },
+        {
+          "start_line": 200,
+          "end_line_exclusive": 201,
+          "replacement": "thread_local CGLShaderProgram *pCtexture_2D_Color_shader_program[2];\n"
+        },
+        {
+          "start_line": 202,
+          "end_line_exclusive": 203,
+          "replacement": "thread_local bool bCShadersLoaded[2];\n"
+        },
+        {
+          "start_line": 288,
+          "end_line_exclusive": 288,
+          "replacement": "  for(int i=0;i<2;i++) {\n    delete pCcolor_tri_shader_program[i]; pCcolor_tri_shader_program[i]=nullptr;\n    delete pCtexture_2D_shader_program[i]; pCtexture_2D_shader_program[i]=nullptr;\n    delete pCtexture_2D_Color_shader_program[i]; pCtexture_2D_Color_shader_program[i]=nullptr;\n  }\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/Cs52_shaders.h",
+          "sha256": "738f294ed682e5bd8a379f125a80bf07c431f8ee780bc2c2024880286f1c34e3"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Cs52_shaders.h",
+      "sha256": "3c609a08a343052badfb068012362b8e0cb723ed671aaafdc379cceafabb1346",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            32
+          ],
+          "generated_lines": [
+            1,
+            32
+          ],
+          "sha256": "47473a40a1fc005d05b664ee37ffcfb6fcfce93b30ed7d4ae87843c892c6c36b"
+        },
+        {
+          "original_lines": [
+            33,
+            59
+          ],
+          "generated_lines": [
+            34,
+            60
+          ],
+          "sha256": "4e03315f2e30bf2d15ee7ba3287f2dbb7ede39a42661256d8a0d57c0d767a062"
+        },
+        {
+          "original_lines": [
+            61,
+            83
+          ],
+          "generated_lines": [
+            62,
+            84
+          ],
+          "sha256": "94be08aa15b2f8901015c83350f33f4e0d50f9fee1595dd9d00746be489bdb62"
+        },
+        {
+          "original_lines": [
+            85,
+            87
+          ],
+          "generated_lines": [
+            87,
+            89
+          ],
+          "sha256": "c2f6d668cb8529be10c232b426ee1ae6d7e35a9c3607b055893c3765117b96c6"
+        },
+        {
+          "original_lines": [
+            88,
+            95
+          ],
+          "generated_lines": [
+            91,
+            98
+          ],
+          "sha256": "36898e7071d57d36cd3c6ad09b6b7145ee2593d1afdb331fa4132b2f68ca4967"
+        },
+        {
+          "original_lines": [
+            97,
+            98
+          ],
+          "generated_lines": [
+            100,
+            101
+          ],
+          "sha256": "44d2ffc76bd1084e3497d16c8ced79766fc82810108e3407867c387cf2d4ffcc"
+        },
+        {
+          "original_lines": [
+            100,
+            101
+          ],
+          "generated_lines": [
+            103,
+            104
+          ],
+          "sha256": "d8f36a3d9e34fe1a807a326115d2909ee0aef03e07eec6d2687cdb996034c530"
+        },
+        {
+          "original_lines": [
+            103,
+            136
+          ],
+          "generated_lines": [
+            106,
+            139
+          ],
+          "sha256": "ee5df88bdc8da795d6198bd1a349c5d8aabaf21ff7008a77b09d2b8c0ccf443a"
+        },
+        {
+          "original_lines": [
+            137,
+            186
+          ],
+          "generated_lines": [
+            142,
+            191
+          ],
+          "sha256": "eed29714d40fea9b7b9babca36aa465cf7113550709c960cd4c7630630e17585"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 32,
+          "end_line_exclusive": 32,
+          "replacement": "#include \"qdebug.h\"\n"
+        },
+        {
+          "start_line": 44,
+          "end_line_exclusive": 45,
+          "replacement": "extern thread_local CGLShaderProgram *pAALine_shader_program[2];\n"
+        },
+        {
+          "start_line": 45,
+          "end_line_exclusive": 46,
+          "replacement": "extern thread_local CGLShaderProgram *pCcolor_tri_shader_program[2];\n"
+        },
+        {
+          "start_line": 46,
+          "end_line_exclusive": 47,
+          "replacement": "extern thread_local CGLShaderProgram *pCtexture_2D_shader_program[2];\n"
+        },
+        {
+          "start_line": 47,
+          "end_line_exclusive": 48,
+          "replacement": "extern thread_local CGLShaderProgram *pcircle_filled_shader_program[2];\n"
+        },
+        {
+          "start_line": 48,
+          "end_line_exclusive": 49,
+          "replacement": "extern thread_local CGLShaderProgram *ptexture_2DA_shader_program[2];\n"
+        },
+        {
+          "start_line": 49,
+          "end_line_exclusive": 50,
+          "replacement": "extern thread_local CGLShaderProgram *pCtexture_2D_Color_shader_program[2];\n"
+        },
+        {
+          "start_line": 59,
+          "end_line_exclusive": 60,
+          "replacement": "    ~CGLShaderProgram() { if(programId_) glDeleteProgram(programId_); }\n"
+        },
+        {
+          "start_line": 83,
+          "end_line_exclusive": 84,
+          "replacement": "        glDeleteShader(shaderId);\n        throw std::runtime_error(\"OpenCPN GLES shader compilation failed\");\n"
+        },
+        {
+          "start_line": 87,
+          "end_line_exclusive": 87,
+          "replacement": "      glDeleteShader(shaderId);\n"
+        },
+        {
+          "start_line": 95,
+          "end_line_exclusive": 96,
+          "replacement": "        glGetProgramiv(programId_, GL_INFO_LOG_LENGTH, &logLength);\n"
+        },
+        {
+          "start_line": 98,
+          "end_line_exclusive": 99,
+          "replacement": "          glGetProgramInfoLog(programId_, logLength, &logLength, log.get());\n"
+        },
+        {
+          "start_line": 101,
+          "end_line_exclusive": 102,
+          "replacement": "        throw std::runtime_error(\"OpenCPN GLES shader link failed\");\n"
+        },
+        {
+          "start_line": 136,
+          "end_line_exclusive": 136,
+          "replacement": "      glBindBuffer(GL_ARRAY_BUFFER, 0);\n      glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);\n"
+        },
+        {
+          "start_line": 156,
+          "end_line_exclusive": 157,
+          "replacement": "    // Context destruction owns GL resources when it cannot be made current.\n    void abandonContext() { programId_ = 0; linked_ = false; }\n    GLuint programId() const { return programId_; }\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Source/CustomArray.cpp",
+          "sha256": "6d8b97d5927e6bee3809c66746b4a2ea3e0b3296d4360bef6e037b968081b582"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/CustomArray.cpp",
+      "sha256": "21458b67af65cd3c701c0bd9dddaaa03c104b40726b8f1122227d1284dc8f822",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            111
+          ],
+          "generated_lines": [
+            1,
+            111
+          ],
+          "sha256": "3a79040d1967c68364cf18c7db7da3bb735ec8e2f946db0419d26342d098f90a"
+        },
+        {
+          "original_lines": [
+            113,
+            1305
+          ],
+          "generated_lines": [
+            113,
+            1305
+          ],
+          "sha256": "20b10dad1ce1e8f98727497361384e5ed40a96bd62e7eb85edb0cca8f7b6572a"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 111,
+          "end_line_exclusive": 112,
+          "replacement": "\tCell->Item.Addy = new ubyte[Cell->Item.Max];\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Include/CustomArray.h",
+          "sha256": "20a903650c28038a34f4aaff5b2530a7ad17fee2f886032a850b4a37d2b245c0"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/CustomArray.h",
+      "sha256": "46e4c11327aa9cef052db20d2153f8d5987473282fa5e8a2838cc398d468b7f4",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            189
+          ],
+          "generated_lines": [
+            1,
+            189
+          ],
+          "sha256": "652e02e7e57cd9c2e081ec2776b2183f16d7ec1484027b7409f166342ede6992"
+        },
+        {
+          "original_lines": [
+            191,
+            205
+          ],
+          "generated_lines": [
+            191,
+            205
+          ],
+          "sha256": "f4755c89bb131e77cb5f6401e060826649d2803437e304df10bddc3896cec45a"
+        },
+        {
+          "original_lines": [
+            207,
+            291
+          ],
+          "generated_lines": [
+            207,
+            291
+          ],
+          "sha256": "be07f318d73579b6758f40e9c74b03e74dce61c85111e5b2b6cd92d0cc86eb2b"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 189,
+          "end_line_exclusive": 190,
+          "replacement": "\t\tubyte*\t\t\t\tAddy;\t\t\t\t\t\t// Stored data\n"
+        },
+        {
+          "start_line": 205,
+          "end_line_exclusive": 206,
+          "replacement": "\tubyte*\t\t\t\t\tmCollapsed;\t\t\t\t\t// Possible collapsed buffer\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/DepthFont.cpp",
+          "sha256": "d5428f5265d1a82999b50ea6a05a054bf69230ddd2048bb2d9e0cee3a666da43"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/DepthFont.cpp",
+      "sha256": "d5428f5265d1a82999b50ea6a05a054bf69230ddd2048bb2d9e0cee3a666da43",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            179
+          ],
+          "generated_lines": [
+            1,
+            179
+          ],
+          "sha256": "d5428f5265d1a82999b50ea6a05a054bf69230ddd2048bb2d9e0cee3a666da43"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/DepthFont.h",
+          "sha256": "c3fd65c8d5013d359230bde03173d0711e1652a079e3e5a4af0232a9bb949324"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/DepthFont.h",
+      "sha256": "c3fd65c8d5013d359230bde03173d0711e1652a079e3e5a4af0232a9bb949324",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            72
+          ],
+          "generated_lines": [
+            1,
+            72
+          ],
+          "sha256": "c3fd65c8d5013d359230bde03173d0711e1652a079e3e5a4af0232a9bb949324"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Source/RevisitedRadix.cpp",
+          "sha256": "b916c897527f6b7de044f9075ebc99f938d0ed802928a6afc2b06dbe1dd41c96"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/RevisitedRadix.cpp",
+      "sha256": "b916c897527f6b7de044f9075ebc99f938d0ed802928a6afc2b06dbe1dd41c96",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            425
+          ],
+          "generated_lines": [
+            1,
+            425
+          ],
+          "sha256": "b916c897527f6b7de044f9075ebc99f938d0ed802928a6afc2b06dbe1dd41c96"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Include/RevisitedRadix.h",
+          "sha256": "5d72b67f8013167134e492c8b31531e3dbb9953d9ac8fff97fbd50d57d346357"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/RevisitedRadix.h",
+      "sha256": "5d72b67f8013167134e492c8b31531e3dbb9953d9ac8fff97fbd50d57d346357",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            57
+          ],
+          "generated_lines": [
+            1,
+            57
+          ],
+          "sha256": "5d72b67f8013167134e492c8b31531e3dbb9953d9ac8fff97fbd50d57d346357"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Include/StripStdafx.h",
+          "sha256": "d09a91ac4cb7a1c1eb43153c696690dfb69aaca1b8c13efde35a196b5093db79"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/StripStdafx.h",
+      "sha256": "dbc0c18b52b9401ffb2af3e85b891c9b9ae7e08d2b140d1a1967a527312d245c",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            29
+          ],
+          "generated_lines": [
+            1,
+            29
+          ],
+          "sha256": "0a149812c6b13b42b15aad1a3a7d21ccb2016d3c6a0659f5dadebc4854275d9f"
+        },
+        {
+          "original_lines": [
+            32,
+            42
+          ],
+          "generated_lines": [
+            32,
+            42
+          ],
+          "sha256": "172f78c8e0f194681a353967a8634c958be3e33fe82e0a2544a37c8806f61897"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 29,
+          "end_line_exclusive": 31,
+          "replacement": "\t#define RELEASE(x)\t{ if (x != null) delete x; x = null; }\n\t#define RELEASEARRAY(x)\t{ if (x != null) delete [] x; x = null; }\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Source/Striper.cpp",
+          "sha256": "34bf49e7eb53d9e173f711905b71a35f5b83e8d52dbf778bc006e80c91bfe976"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Striper.cpp",
+      "sha256": "34bf49e7eb53d9e173f711905b71a35f5b83e8d52dbf778bc006e80c91bfe976",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            441
+          ],
+          "generated_lines": [
+            1,
+            441
+          ],
+          "sha256": "34bf49e7eb53d9e173f711905b71a35f5b83e8d52dbf778bc006e80c91bfe976"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/libtess2/Include/Striper.h",
+          "sha256": "64a22f15094be82071e53ffe24918c3c00737658aab7bb5d86b4ac753ea8ba77"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/Striper.h",
+      "sha256": "64a22f15094be82071e53ffe24918c3c00737658aab7bb5d86b4ac753ea8ba77",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            91
+          ],
+          "generated_lines": [
+            1,
+            91
+          ],
+          "sha256": "64a22f15094be82071e53ffe24918c3c00737658aab7bb5d86b4ac753ea8ba77"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/TexFont.cpp",
+          "sha256": "9e8ec4c5b43b0499b5388e155f7de45f61a4f82edda156957552d7e488939ee5"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/TexFont.cpp",
+      "sha256": "6f097c0b862e4baff4987672d6824e94eb7bef592fc8e71048e42b55fdc738ed",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            228
+          ],
+          "generated_lines": [
+            1,
+            228
+          ],
+          "sha256": "b7ab2de19bb2ff899a3a1643268288116498012f03f72b01fa037ac2629e37f9"
+        },
+        {
+          "original_lines": [
+            229,
+            321
+          ],
+          "generated_lines": [
+            230,
+            322
+          ],
+          "sha256": "2c5e8086ac7c63c41664c89bfaca035953ed60a21e8516f8b16f2c4ca43cb100"
+        },
+        {
+          "original_lines": [
+            323,
+            369
+          ],
+          "generated_lines": [
+            324,
+            370
+          ],
+          "sha256": "f63f2ff0e01f3e68868b1f0b1873f4e1d8d6ea251612f0ff32d1bc9b28aa09c6"
+        },
+        {
+          "original_lines": [
+            372,
+            542
+          ],
+          "generated_lines": [
+            373,
+            543
+          ],
+          "sha256": "78a38a9cdb7110e3a9b443ca616194c12b06f7cfd8b0e8504d8524379ed92593"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 66,
+          "end_line_exclusive": 67,
+          "replacement": "thread_local CGLShaderProgram *m_TexFontShader;\n"
+        },
+        {
+          "start_line": 228,
+          "end_line_exclusive": 228,
+          "replacement": "  m_shadersLoaded = false;\n"
+        },
+        {
+          "start_line": 321,
+          "end_line_exclusive": 322,
+          "replacement": "  mat4x4_rotate_Z(Q, I, -m_angle);\n"
+        },
+        {
+          "start_line": 369,
+          "end_line_exclusive": 371,
+          "replacement": "  m_dx += tgic.advance * cos(m_angle);\n  m_dy -= tgic.advance * sin(m_angle);\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/TexFont.h",
+          "sha256": "617f486076ede172c50b129a65df5765d2314594e6355f77920ba55567d338d5"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/TexFont.h",
+      "sha256": "617f486076ede172c50b129a65df5765d2314594e6355f77920ba55567d338d5",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            93
+          ],
+          "generated_lines": [
+            1,
+            93
+          ],
+          "sha256": "617f486076ede172c50b129a65df5765d2314594e6355f77920ba55567d338d5"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "gui/src/chartdb.cpp",
+          "sha256": "7421aeba2fe56d9f7e756477f1e208ec8d43bef0503dcec00b187dc227944859"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/chart_database.cpp",
+      "sha256": "4dd7d3a28c2030eb8b2faf9ab9ebcf59bc032197e2fded90d4b43d90885295c5",
+      "retained_regions": [
+        {
+          "original_lines": [
+            34,
+            35
+          ],
+          "generated_lines": [
+            6,
+            7
+          ],
+          "sha256": "8b63d4e2e6cce4baf5403993210754bed64f3d3fa8e57007f2c3eeff4491a972"
+        },
+        {
+          "original_lines": [
+            41,
+            41
+          ],
+          "generated_lines": [
+            11,
+            11
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            44,
+            44
+          ],
+          "generated_lines": [
+            16,
+            16
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            57,
+            57
+          ],
+          "generated_lines": [
+            18,
+            18
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            61,
+            61
+          ],
+          "generated_lines": [
+            24,
+            24
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            65,
+            65
+          ],
+          "generated_lines": [
+            29,
+            29
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            67,
+            67
+          ],
+          "generated_lines": [
+            31,
+            31
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            70,
+            70
+          ],
+          "generated_lines": [
+            37,
+            37
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            72,
+            72
+          ],
+          "generated_lines": [
+            40,
+            40
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            74,
+            74
+          ],
+          "generated_lines": [
+            43,
+            43
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            76,
+            76
+          ],
+          "generated_lines": [
+            51,
+            51
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            79,
+            79
+          ],
+          "generated_lines": [
+            54,
+            54
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            85,
+            85
+          ],
+          "generated_lines": [
+            62,
+            62
+          ],
+          "sha256": "4893f40e3781eb896c82d046a08067a11e35cdf2f1dfaf26fea90b8db6676413"
+        },
+        {
+          "original_lines": [
+            87,
+            88
+          ],
+          "generated_lines": [
+            66,
+            67
+          ],
+          "sha256": "c5daec437e7595a04069399279371e2c5da87ea065b0d24f1240e1fd3ff5a2fa"
+        },
+        {
+          "original_lines": [
+            92,
+            202
+          ],
+          "generated_lines": [
+            68,
+            178
+          ],
+          "sha256": "364933e754cf926330f20e71307af7a08a490206a717eb212723b6aa73c5b998"
+        },
+        {
+          "original_lines": [
+            473,
+            637
+          ],
+          "generated_lines": [
+            179,
+            343
+          ],
+          "sha256": "24094503512d1ce2bd18c8e3d6110cd8b3eab901c173cf358886cc6fb15fd4d9"
+        },
+        {
+          "original_lines": [
+            722,
+            751
+          ],
+          "generated_lines": [
+            344,
+            373
+          ],
+          "sha256": "6272d2171d3b766c7e6416b074c292cbff163d5c6cf0e59a74d88daf2bf982fa"
+        },
+        {
+          "original_lines": [
+            755,
+            765
+          ],
+          "generated_lines": [
+            374,
+            384
+          ],
+          "sha256": "fab671768927dc97b8e20cae8dc62f90abf28d861bcf43561c5a742cc2ec0692"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 33,
+          "replacement": "#include \"chart_database.hpp\"\n#include <unistd.h>\nthread_local ChartDB* ChartData=nullptr;\n#ifdef __ANDROID__\nbool androidIsDirWritable(wxString path){return access(path.c_str(),W_OK)==0;}\n"
+        },
+        {
+          "start_line": 35,
+          "end_line_exclusive": 40,
+          "replacement": "inline int CCW(MyFlPoint p0, MyFlPoint p1, MyFlPoint p2) {\n  float dx1, dx2;\n  float dy1, dy2;\n"
+        },
+        {
+          "start_line": 41,
+          "end_line_exclusive": 43,
+          "replacement": "  dx1 = p1.x - p0.x;\n  dx2 = p2.x - p0.x;\n  dy1 = p1.y - p0.y;\n  dy2 = p2.y - p0.y;\n"
+        },
+        {
+          "start_line": 44,
+          "end_line_exclusive": 56,
+          "replacement": "  /* This is basically a slope comparison: we don't do divisions because\n"
+        },
+        {
+          "start_line": 57,
+          "end_line_exclusive": 60,
+          "replacement": "   * of divide by zero possibilities with pure horizontal and pure\n   * vertical lines.\n   */\n  return ((dx1 * dy2 > dy1 * dx2) ? 1 : -1);\n}\n"
+        },
+        {
+          "start_line": 61,
+          "end_line_exclusive": 64,
+          "replacement": "inline bool Intersect(MyFlPoint p1, MyFlPoint p2, MyFlPoint p3, MyFlPoint p4) {\n  return (((CCW(p1, p2, p3) * CCW(p1, p2, p4)) <= 0) &&\n          ((CCW(p3, p4, p1) * CCW(p3, p4, p2) <= 0)));\n}\n"
+        },
+        {
+          "start_line": 65,
+          "end_line_exclusive": 66,
+          "replacement": "bool G_FloatPtInPolygon(MyFlPoint *rgpts, int wnumpts, float x, float y)\n"
+        },
+        {
+          "start_line": 67,
+          "end_line_exclusive": 69,
+          "replacement": "{\n  MyFlPoint *ppt, *ppt1;\n  int i;\n  MyFlPoint pt1, pt2, pt0;\n  int wnumintsct = 0;\n"
+        },
+        {
+          "start_line": 70,
+          "end_line_exclusive": 71,
+          "replacement": "  pt0.x = x;\n  pt0.y = y;\n"
+        },
+        {
+          "start_line": 72,
+          "end_line_exclusive": 73,
+          "replacement": "  pt1 = pt2 = pt0;\n  pt2.x = 1.e6;\n"
+        },
+        {
+          "start_line": 74,
+          "end_line_exclusive": 75,
+          "replacement": "  // Now go through each of the lines in the polygon and see if it\n  // intersects\n  for (i = 0, ppt = rgpts; i < wnumpts - 1; i++, ppt++) {\n    ppt1 = ppt;\n    ppt1++;\n    if (Intersect(pt0, pt2, *ppt, *(ppt1))) wnumintsct++;\n  }\n"
+        },
+        {
+          "start_line": 76,
+          "end_line_exclusive": 78,
+          "replacement": "  // And the last line\n  if (Intersect(pt0, pt2, *ppt, *rgpts)) wnumintsct++;\n"
+        },
+        {
+          "start_line": 79,
+          "end_line_exclusive": 84,
+          "replacement": "  //   return(wnumintsct&1);\n\n  //       If result is false, check the degenerate case where test point lies\n  //       on a polygon endpoint\n  if (!(wnumintsct & 1)) {\n    for (i = 0, ppt = rgpts; i < wnumpts; i++, ppt++) {\n      if (((*ppt).x == x) && ((*ppt).y == y)) return true;\n"
+        },
+        {
+          "start_line": 85,
+          "end_line_exclusive": 86,
+          "replacement": "  } else\n    return true;\n\n"
+        },
+        {
+          "start_line": 88,
+          "end_line_exclusive": 91,
+          "replacement": ""
+        },
+        {
+          "start_line": 202,
+          "end_line_exclusive": 472,
+          "replacement": ""
+        },
+        {
+          "start_line": 637,
+          "end_line_exclusive": 721,
+          "replacement": ""
+        },
+        {
+          "start_line": 728,
+          "end_line_exclusive": 729,
+          "replacement": "    for (const auto& polygon : pt->exclusions) {\n      if (G_FloatPtInPolygon((MyFlPoint*)polygon.data(), polygon.size()/2, lon, lat))\n        return false;\n    }\n    //    Double check on Primary Ply points polygon\n"
+        },
+        {
+          "start_line": 751,
+          "end_line_exclusive": 754,
+          "replacement": ""
+        },
+        {
+          "start_line": 765,
+          "end_line_exclusive": 1983,
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "gui/src/s57chart.cpp",
+          "sha256": "7e7dbced11ac8d83ecff5456f5620b2c5f21ca366cab3da6c7f7a110bd4d0800"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/chart_selection.cpp",
+      "sha256": "1f7cef158dff99e1bf2540281b257127c40ca7c01cb76d79c81e04df8d88c8df",
+      "retained_regions": [
+        {
+          "original_lines": [
+            17,
+            17
+          ],
+          "generated_lines": [
+            4,
+            4
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            23,
+            23
+          ],
+          "generated_lines": [
+            8,
+            8
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            28,
+            28
+          ],
+          "generated_lines": [
+            10,
+            10
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            32,
+            32
+          ],
+          "generated_lines": [
+            15,
+            15
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            36,
+            36
+          ],
+          "generated_lines": [
+            27,
+            27
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            39,
+            39
+          ],
+          "generated_lines": [
+            40,
+            40
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            43,
+            43
+          ],
+          "generated_lines": [
+            44,
+            44
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            48,
+            48
+          ],
+          "generated_lines": [
+            56,
+            56
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            50,
+            50
+          ],
+          "generated_lines": [
+            61,
+            61
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            370,
+            372
+          ],
+          "generated_lines": [
+            62,
+            64
+          ],
+          "sha256": "d1a95104765b7d8ff951fb0ce983afede7ab0925e134bc6d3a86df2297277da0"
+        },
+        {
+          "original_lines": [
+            374,
+            376
+          ],
+          "generated_lines": [
+            65,
+            67
+          ],
+          "sha256": "c66e2855717a125c5f4b07bcb88e614619243567a62385544b980f9c2fc9ef90"
+        },
+        {
+          "original_lines": [
+            389,
+            390
+          ],
+          "generated_lines": [
+            69,
+            70
+          ],
+          "sha256": "938de74be97bf3aba7872a61ba0e42084008c81e8a202a612134c755aaf7fa06"
+        },
+        {
+          "original_lines": [
+            393,
+            393
+          ],
+          "generated_lines": [
+            74,
+            74
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            404,
+            404
+          ],
+          "generated_lines": [
+            77,
+            77
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            411,
+            411
+          ],
+          "generated_lines": [
+            79,
+            79
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            420,
+            421
+          ],
+          "generated_lines": [
+            280,
+            281
+          ],
+          "sha256": "1ae5e5d72b8380985f14c55b550afd278a699040be1dc86831880ba26d132634"
+        },
+        {
+          "original_lines": [
+            423,
+            424
+          ],
+          "generated_lines": [
+            303,
+            304
+          ],
+          "sha256": "0d8b0c7826779bc2ad7fd31ec5e990e6cc9961a8d1e3e2933d32f90ed69e00df"
+        },
+        {
+          "original_lines": [
+            427,
+            427
+          ],
+          "generated_lines": [
+            312,
+            312
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            435,
+            435
+          ],
+          "generated_lines": [
+            316,
+            316
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            447,
+            447
+          ],
+          "generated_lines": [
+            320,
+            320
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            454,
+            454
+          ],
+          "generated_lines": [
+            325,
+            325
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            463,
+            463
+          ],
+          "generated_lines": [
+            328,
+            328
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            468,
+            468
+          ],
+          "generated_lines": [
+            333,
+            333
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            470,
+            470
+          ],
+          "generated_lines": [
+            337,
+            337
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            474,
+            475
+          ],
+          "generated_lines": [
+            396,
+            397
+          ],
+          "sha256": "6de3b25c884be4dc3916558d3affaf3f908a24e776f271df786f3d087d7e030d"
+        },
+        {
+          "original_lines": [
+            477,
+            477
+          ],
+          "generated_lines": [
+            399,
+            399
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            482,
+            482
+          ],
+          "generated_lines": [
+            401,
+            401
+          ],
+          "sha256": "4893f40e3781eb896c82d046a08067a11e35cdf2f1dfaf26fea90b8db6676413"
+        },
+        {
+          "original_lines": [
+            485,
+            485
+          ],
+          "generated_lines": [
+            402,
+            402
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            497,
+            497
+          ],
+          "generated_lines": [
+            405,
+            405
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            625,
+            628
+          ],
+          "generated_lines": [
+            407,
+            410
+          ],
+          "sha256": "1dffa0b241f720ec965d26197d97813794c96a8e2548349996f426df4a29887e"
+        },
+        {
+          "original_lines": [
+            731,
+            803
+          ],
+          "generated_lines": [
+            411,
+            483
+          ],
+          "sha256": "38346b8daa311474428ec599728551909082c35ac0f8bc49dcf8377144eb3b91"
+        },
+        {
+          "original_lines": [
+            963,
+            1082
+          ],
+          "generated_lines": [
+            484,
+            603
+          ],
+          "sha256": "233e7aae09c07b8dd449e4156006cfcdfece1e70605fb4041e6e294e085f9d60"
+        },
+        {
+          "original_lines": [
+            1084,
+            1153
+          ],
+          "generated_lines": [
+            605,
+            674
+          ],
+          "sha256": "bbd194408dd700fe6615ce8d151d2191fdc9e4d7b1b143313a7ca39844205dc6"
+        },
+        {
+          "original_lines": [
+            1155,
+            1199
+          ],
+          "generated_lines": [
+            676,
+            720
+          ],
+          "sha256": "8dbea14766da6ea1038e90e88f322dde2967bb8dbfd7424455d108b0f993b762"
+        },
+        {
+          "original_lines": [
+            1201,
+            1374
+          ],
+          "generated_lines": [
+            722,
+            895
+          ],
+          "sha256": "159f89e1a37bc0beecfd17465c3e5853f4172698d2d514657f71feeb7d43c6ae"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 16,
+          "replacement": "#include \"chart_model.hpp\"\n#include \"poly_math.h\"\n#include \"vector2D.h\"\n"
+        },
+        {
+          "start_line": 17,
+          "end_line_exclusive": 22,
+          "replacement": "std::list<S57Obj *> *s57chart::GetAssociatedObjects(S57Obj *obj) {\n  int disPrioIdx;\n  bool gotit;\n"
+        },
+        {
+          "start_line": 23,
+          "end_line_exclusive": 27,
+          "replacement": "  std::list<S57Obj *> *pobj_list = new std::list<S57Obj *>();\n"
+        },
+        {
+          "start_line": 28,
+          "end_line_exclusive": 31,
+          "replacement": "  double lat, lon;\n  fromSM_plib((obj->x * obj->x_rate) + obj->x_origin,\n         (obj->y * obj->y_rate) + obj->y_origin, ref_lat, ref_lon, &lat, &lon);\n  //    What is the entry object geometry type?\n"
+        },
+        {
+          "start_line": 32,
+          "end_line_exclusive": 35,
+          "replacement": "  switch (obj->Primitive_type) {\n    case GEO_POINT:\n      //  n.b.  This logic not perfectly right for LINE and AREA features\n      //  It uses the object reference point for testing, instead of the\n      //  decomposed line or boundary geometry.  Thus, it may fail on some\n      //  intersecting relationships. Judged acceptable, in favor of performance\n      //  implications. DSR\n    case GEO_LINE:\n    case GEO_AREA:\n      ObjRazRules *top;\n      disPrioIdx = 1;  // PRIO_GROUP1:S57 group 1 filled areas\n"
+        },
+        {
+          "start_line": 36,
+          "end_line_exclusive": 38,
+          "replacement": "      gotit = false;\n      top = razRules[disPrioIdx][3];  // PLAIN_BOUNDARIES\n      while (top != NULL) {\n        if (top->obj->bIsAssociable) {\n          if (top->obj->BBObj.Contains(lat, lon)) {\n            if (IsPointInObjArea(lat, lon, 0.0, top->obj)) {\n              pobj_list->push_back(top->obj);\n              gotit = true;\n              break;\n            }\n          }\n        }\n"
+        },
+        {
+          "start_line": 39,
+          "end_line_exclusive": 42,
+          "replacement": "        ObjRazRules *nxx = top->next;\n        top = nxx;\n      }\n"
+        },
+        {
+          "start_line": 43,
+          "end_line_exclusive": 47,
+          "replacement": "      if (!gotit) {\n        top = razRules[disPrioIdx][4];  // SYMBOLIZED_BOUNDARIES\n        while (top != NULL) {\n          if (top->obj->bIsAssociable) {\n            if (top->obj->BBObj.Contains(lat, lon)) {\n              if (IsPointInObjArea(lat, lon, 0.0, top->obj)) {\n                pobj_list->push_back(top->obj);\n                break;\n              }\n            }\n          }\n"
+        },
+        {
+          "start_line": 48,
+          "end_line_exclusive": 49,
+          "replacement": "          ObjRazRules *nxx = top->next;\n          top = nxx;\n        }\n      }\n"
+        },
+        {
+          "start_line": 50,
+          "end_line_exclusive": 369,
+          "replacement": ""
+        },
+        {
+          "start_line": 372,
+          "end_line_exclusive": 373,
+          "replacement": ""
+        },
+        {
+          "start_line": 376,
+          "end_line_exclusive": 388,
+          "replacement": "  return pobj_list;\n"
+        },
+        {
+          "start_line": 390,
+          "end_line_exclusive": 392,
+          "replacement": "bool s57chart::IsPointInObjArea(float lat, float lon, float select_radius,\n                                S57Obj *obj) {\n  bool ret = false;\n"
+        },
+        {
+          "start_line": 393,
+          "end_line_exclusive": 403,
+          "replacement": "  if (obj->pPolyTessGeo) {\n    if (!obj->pPolyTessGeo->IsOk()) obj->pPolyTessGeo->BuildDeferredTess();\n"
+        },
+        {
+          "start_line": 404,
+          "end_line_exclusive": 410,
+          "replacement": "    PolyTriGroup *ppg = obj->pPolyTessGeo->Get_PolyTriGroup_head();\n"
+        },
+        {
+          "start_line": 411,
+          "end_line_exclusive": 419,
+          "replacement": "    TriPrim *pTP = ppg->tri_prim_head;\n\n    MyPoint pvert_list[3];\n\n    //  Polygon geometry is carried in SM coordinates, so...\n    //  make the hit test thus.\n    double easting, northing;\n    toSM_plib(lat, lon, ref_lat, ref_lon, &easting, &northing);\n\n    //  On some chart types (e.g. cm93), the tesseleated coordinates are stored\n    //  differently. Adjust the pick point (easting/northing) to correspond.\n    if (!ppg->m_bSMSENC) {\n      double y_rate = obj->y_rate;\n      double y_origin = obj->y_origin;\n      double x_rate = obj->x_rate;\n      double x_origin = obj->x_origin;\n\n      double northing_scaled = (northing - y_origin) / y_rate;\n      double easting_scaled = (easting - x_origin) / x_rate;\n      northing = northing_scaled;\n      easting = easting_scaled;\n    }\n\n    while (pTP) {\n      //  Coarse test\n      if (pTP->tri_box.Contains(lat, lon)) {\n        if (ppg->data_type == DATA_TYPE_DOUBLE) {\n          double *p_vertex = pTP->p_vertex;\n\n          switch (pTP->type) {\n            case PTG_TRIANGLE_FAN: {\n              for (int it = 0; it < pTP->nVert - 2; it++) {\n                pvert_list[0].x = p_vertex[0];\n                pvert_list[0].y = p_vertex[1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n            case PTG_TRIANGLE_STRIP: {\n              for (int it = 0; it < pTP->nVert - 2; it++) {\n                pvert_list[0].x = p_vertex[(it * 2)];\n                pvert_list[0].y = p_vertex[(it * 2) + 1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n            case PTG_TRIANGLES: {\n              for (int it = 0; it < pTP->nVert; it += 3) {\n                pvert_list[0].x = p_vertex[(it * 2)];\n                pvert_list[0].y = p_vertex[(it * 2) + 1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n          }\n        } else if (ppg->data_type == DATA_TYPE_FLOAT) {\n          float *p_vertex = (float *)pTP->p_vertex;\n\n          switch (pTP->type) {\n            case PTG_TRIANGLE_FAN: {\n              for (int it = 0; it < pTP->nVert - 2; it++) {\n                pvert_list[0].x = p_vertex[0];\n                pvert_list[0].y = p_vertex[1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n            case PTG_TRIANGLE_STRIP: {\n              for (int it = 0; it < pTP->nVert - 2; it++) {\n                pvert_list[0].x = p_vertex[(it * 2)];\n                pvert_list[0].y = p_vertex[(it * 2) + 1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n            case PTG_TRIANGLES: {\n              for (int it = 0; it < pTP->nVert; it += 3) {\n                pvert_list[0].x = p_vertex[(it * 2)];\n                pvert_list[0].y = p_vertex[(it * 2) + 1];\n\n                pvert_list[1].x = p_vertex[(it * 2) + 2];\n                pvert_list[1].y = p_vertex[(it * 2) + 3];\n\n                pvert_list[2].x = p_vertex[(it * 2) + 4];\n                pvert_list[2].y = p_vertex[(it * 2) + 5];\n\n                if (G_PtInPolygon((MyPoint *)pvert_list, 3, easting,\n                                  northing)) {\n                  ret = true;\n                  break;\n                }\n              }\n              break;\n            }\n          }\n        } else {\n          ret = true;  // Unknown data type, accept the entire TriPrim via\n                       // coarse test.\n          break;\n        }\n      }\n      pTP = pTP->p_next;\n    }\n\n  }  // if pPolyTessGeo\n\n  return ret;\n}\n\nbool s57chart::DoesLatLonSelectObject(float lat, float lon, float select_radius,\n                                      S57Obj *obj) {\n  switch (obj->Primitive_type) {\n    //  For single Point objects, the integral object bounding box contains the\n    //  lat/lon of the object, possibly expanded by text or symbol rendering\n    case GEO_POINT: {\n      if (!obj->BBObj.GetValid()) return false;\n\n      if (1 == obj->npt) {\n        //  Special case for LIGHTS\n        //  Sector lights have had their BBObj expanded to include the entire\n        //  drawn sector This is too big for pick area, can be confusing.... So\n        //  make a temporary box at the light's lat/lon, with select_radius size\n        if (!strncmp(obj->FeatureName, \"LIGHTS\", 6)) {\n          double sectrTest;\n          bool hasSectors = GetDoubleAttr(obj, \"SECTR1\", sectrTest);\n          if (hasSectors) {\n            double olon, olat;\n            fromSM_plib((obj->x * obj->x_rate) + obj->x_origin,\n                   (obj->y * obj->y_rate) + obj->y_origin, ref_lat, ref_lon,\n                   &olat, &olon);\n\n            // Double the select radius to adjust for the fact that LIGHTS has\n            // a 0x0 BBox to start with, which makes it smaller than all other\n            // rendered objects.\n            LLBBox sbox;\n            sbox.Set(olat, olon, olat, olon);\n\n            if (sbox.ContainsMarge(lat, lon, select_radius)) return true;\n          } else if (obj->BBObj.ContainsMarge(lat, lon, select_radius))\n            return true;\n\n        }\n\n        else if (obj->BBObj.ContainsMarge(lat, lon, select_radius))\n          return true;\n"
+        },
+        {
+          "start_line": 421,
+          "end_line_exclusive": 422,
+          "replacement": "      //  For MultiPoint objects, make a bounding box from each point's lat/lon\n      //  and check it\n      else {\n        if (!obj->BBObj.GetValid()) return false;\n\n        //  Coarse test first\n        if (!obj->BBObj.ContainsMarge(lat, lon, select_radius)) return false;\n        //  Now decomposed soundings, one by one\n        double *pdl = obj->geoPtMulti;\n        for (int ip = 0; ip < obj->npt; ip++) {\n          double lon_point = *pdl++;\n          double lat_point = *pdl++;\n          LLBBox BB_point;\n          BB_point.Set(lat_point, lon_point, lat_point, lon_point);\n          if (BB_point.ContainsMarge(lat, lon, select_radius)) {\n            //                                  index = ip;\n            return true;\n          }\n        }\n      }\n\n"
+        },
+        {
+          "start_line": 424,
+          "end_line_exclusive": 426,
+          "replacement": "    case GEO_AREA: {\n      //  Coarse test first\n      if (!obj->BBObj.ContainsMarge(lat, lon, select_radius))\n        return false;\n      else\n        return IsPointInObjArea(lat, lon, select_radius, obj);\n    }\n"
+        },
+        {
+          "start_line": 427,
+          "end_line_exclusive": 434,
+          "replacement": "    case GEO_LINE: {\n      //  Coarse test first\n      if (!obj->BBObj.ContainsMarge(lat, lon, select_radius)) return false;\n"
+        },
+        {
+          "start_line": 435,
+          "end_line_exclusive": 446,
+          "replacement": "      float sel_rad_meters = select_radius * 1852 * 60;  // approximately\n      double easting, northing;\n      toSM_plib(lat, lon, ref_lat, ref_lon, &easting, &northing);\n"
+        },
+        {
+          "start_line": 447,
+          "end_line_exclusive": 453,
+          "replacement": "      if (obj->geoPt) {\n        //  Line geometry is carried in SM or CM93 coordinates, so...\n        //  make the hit test using SM coordinates, converting from object\n        //  points to SM using per-object conversion factors.\n"
+        },
+        {
+          "start_line": 454,
+          "end_line_exclusive": 462,
+          "replacement": "        pt *ppt = obj->geoPt;\n        int npt = obj->npt;\n"
+        },
+        {
+          "start_line": 463,
+          "end_line_exclusive": 467,
+          "replacement": "        double xr = obj->x_rate;\n        double xo = obj->x_origin;\n        double yr = obj->y_rate;\n        double yo = obj->y_origin;\n"
+        },
+        {
+          "start_line": 468,
+          "end_line_exclusive": 469,
+          "replacement": "        double north0 = (ppt->y * yr) + yo;\n        double east0 = (ppt->x * xr) + xo;\n        ppt++;\n"
+        },
+        {
+          "start_line": 470,
+          "end_line_exclusive": 473,
+          "replacement": "        for (int ip = 1; ip < npt; ip++) {\n          double north = (ppt->y * yr) + yo;\n          double east = (ppt->x * xr) + xo;\n\n          //    A slightly less coarse segment bounding box check\n          if (northing >= (fmin(north, north0) - sel_rad_meters))\n            if (northing <= (fmax(north, north0) + sel_rad_meters))\n              if (easting >= (fmin(east, east0) - sel_rad_meters))\n                if (easting <= (fmax(east, east0) + sel_rad_meters)) {\n                  return true;\n                }\n\n          north0 = north;\n          east0 = east;\n          ppt++;\n        }\n      } else {  // in oSENC V2, Array of points is stored in prearranged VBO\n                // array.\n        if (obj->m_ls_list) {\n          float *ppt;\n          unsigned char *vbo_point =\n              (unsigned char *)obj->m_chart_context\n                  ->vertex_buffer;  // chart->GetLineVertexBuffer();\n          line_segment_element *ls = obj->m_ls_list;\n\n          while (ls && vbo_point) {\n            int nPoints;\n            if ((ls->ls_type == TYPE_EE) || (ls->ls_type == TYPE_EE_REV)) {\n              ppt = (float *)(vbo_point + ls->pedge->vbo_offset);\n              nPoints = ls->pedge->nCount;\n            } else {\n              ppt = (float *)(vbo_point + ls->pcs->vbo_offset);\n              nPoints = 2;\n            }\n\n            float north0 = ppt[1];\n            float east0 = ppt[0];\n\n            ppt += 2;\n\n            for (int ip = 0; ip < nPoints - 1; ip++) {\n              float north = ppt[1];\n              float east = ppt[0];\n\n              if (northing >= (fmin(north, north0) - sel_rad_meters))\n                if (northing <= (fmax(north, north0) + sel_rad_meters))\n                  if (easting >= (fmin(east, east0) - sel_rad_meters))\n                    if (easting <= (fmax(east, east0) + sel_rad_meters)) {\n                      return true;\n                    }\n\n              north0 = north;\n              east0 = east;\n\n              ppt += 2;\n            }\n\n            ls = ls->next;\n"
+        },
+        {
+          "start_line": 475,
+          "end_line_exclusive": 476,
+          "replacement": "      }\n"
+        },
+        {
+          "start_line": 477,
+          "end_line_exclusive": 481,
+          "replacement": "      break;\n"
+        },
+        {
+          "start_line": 482,
+          "end_line_exclusive": 484,
+          "replacement": ""
+        },
+        {
+          "start_line": 485,
+          "end_line_exclusive": 496,
+          "replacement": "    case GEO_META:\n    case GEO_PRIM:\n"
+        },
+        {
+          "start_line": 497,
+          "end_line_exclusive": 624,
+          "replacement": "      break;\n"
+        },
+        {
+          "start_line": 628,
+          "end_line_exclusive": 730,
+          "replacement": ""
+        },
+        {
+          "start_line": 803,
+          "end_line_exclusive": 962,
+          "replacement": ""
+        },
+        {
+          "start_line": 1082,
+          "end_line_exclusive": 1083,
+          "replacement": "                  fromSM_plib((pair.e0 + pair.e1) / 2,\n"
+        },
+        {
+          "start_line": 1153,
+          "end_line_exclusive": 1154,
+          "replacement": "                    fromSM_plib((pair.e0 + pair.e1) / 2,\n"
+        },
+        {
+          "start_line": 1199,
+          "end_line_exclusive": 1200,
+          "replacement": "                    fromSM_plib((pair.e0 + pair.e1) / 2,\n"
+        },
+        {
+          "start_line": 1374,
+          "end_line_exclusive": 6991,
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/chartsymbols.cpp",
+          "sha256": "561d9fc303bca922a5b285184ba9e3b82f0ebac72e6c9f4bed99a6b7c51607fa"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/chartsymbols.cpp",
+      "sha256": "6acbaf3c4a5f03461bfc7bbe5ce2dae1112e7f929f3c2424c89fb148a24830bd",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            737
+          ],
+          "generated_lines": [
+            1,
+            737
+          ],
+          "sha256": "bc12ade0206e827936885b3a1b3108eceed770702eb1fe36ebedc2b1c9248518"
+        },
+        {
+          "original_lines": [
+            739,
+            885
+          ],
+          "generated_lines": [
+            739,
+            885
+          ],
+          "sha256": "7afd2fb2392eaa8669dd7485ee645ff5d457e0eafbf44f94b6dfaa34dfdab174"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 737,
+          "end_line_exclusive": 738,
+          "replacement": "    if (!ctx.m_use_opengl && rasterSymbols.IsOk()) return true;\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/chartsymbols.h",
+          "sha256": "75b1eb93beb0aaff3a2693c12dde6c597fa5cac5b04c1e2c06896fbb5fb8283e"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/chartsymbols.h",
+      "sha256": "47c4ca0be0bd9a03b1dfdb8e1b648952cc19745b9e33c1ee7f64e095ed902453",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            130
+          ],
+          "generated_lines": [
+            1,
+            130
+          ],
+          "sha256": "6a24692a5cb51c261778dfbce4f4578ed3f90918a64215d05c128d45668ca5bc"
+        },
+        {
+          "original_lines": [
+            131,
+            204
+          ],
+          "generated_lines": [
+            132,
+            205
+          ],
+          "sha256": "93a2efb4aa57cfc6767580979ef01b5ed9777b0922155693f611eb202cb8d014"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 130,
+          "end_line_exclusive": 130,
+          "replacement": "  explicit ChartCtx(bool use_opengl) : ChartCtx(use_opengl, GL_TEXTURE_2D) {}\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/color_types.h",
+          "sha256": "bd43f32a3b498327f0c7c56dba3a9f7547451b9f3bb08693cc1ba966378e689c"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/color_types.h",
+      "sha256": "bd43f32a3b498327f0c7c56dba3a9f7547451b9f3bb08693cc1ba966378e689c",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            60
+          ],
+          "generated_lines": [
+            1,
+            60
+          ],
+          "sha256": "bd43f32a3b498327f0c7c56dba3a9f7547451b9f3bb08693cc1ba966378e689c"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "model/src/navutil_base.cpp",
+          "sha256": "d3f70c4e896eafca1a63393f945c2be08b89d1e69bf043dfa40584145f162e40"
+        },
+        {
+          "path": "gui/src/s57chart.cpp",
+          "sha256": "7e7dbced11ac8d83ecff5456f5620b2c5f21ca366cab3da6c7f7a110bd4d0800"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/geometry_helpers.cpp",
+      "sha256": "650dcdec78201460b2a919923cbcecddbf90eeec8cf3df1cbb88d3e67ac5c476",
+      "retained_regions": [
+        {
+          "original_lines": [
+            34,
+            34
+          ],
+          "generated_lines": [
+            2,
+            2
+          ],
+          "sha256": "7c74393c53d79c3b1a03be6d9202bade6e898862b9af9842a8b746e999feb196"
+        },
+        {
+          "original_lines": [
+            531,
+            552
+          ],
+          "generated_lines": [
+            3,
+            24
+          ],
+          "sha256": "9f5b137647a617bdabeac3ba6a42fe4aecc548863d26e9fde19af7838434543f"
+        },
+        {
+          "original_lines": [
+            554,
+            561
+          ],
+          "generated_lines": [
+            25,
+            32
+          ],
+          "sha256": "99fa8b45520f9878b87d0aa1b80de7a4f3fce70cd8e775d03e182d324881b94b"
+        },
+        {
+          "original_lines": [
+            562,
+            562
+          ],
+          "generated_lines": [
+            35,
+            35
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            563,
+            571
+          ],
+          "generated_lines": [
+            42,
+            50
+          ],
+          "sha256": "9445a7b57ac18e0aa238a18320bbeb22407dd7dac0a2d99fe84ed39550a339f3"
+        },
+        {
+          "original_lines": [
+            573,
+            581
+          ],
+          "generated_lines": [
+            51,
+            59
+          ],
+          "sha256": "2cb637280c1a8091df2e2b9e0aef0a35e02cd066379ffe2bf3a1c6495292b6e0"
+        },
+        {
+          "original_lines": [
+            592,
+            601
+          ],
+          "generated_lines": [
+            62,
+            71
+          ],
+          "sha256": "d8e35ef8d7dc7d9029fd561863e60e98d496f64c4f21f6f9c34bdf07245ff6d6"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 33,
+          "replacement": "#include \"s52plib.h\"\n"
+        },
+        {
+          "start_line": 34,
+          "end_line_exclusive": 530,
+          "replacement": ""
+        },
+        {
+          "start_line": 552,
+          "end_line_exclusive": 553,
+          "replacement": ""
+        },
+        {
+          "start_line": 561,
+          "end_line_exclusive": 561,
+          "replacement": "double vVectorSquared(pVector2D v0) {\n  double dS;\n"
+        },
+        {
+          "start_line": 562,
+          "end_line_exclusive": 562,
+          "replacement": "  if (v0 == NULL)\n    dS = 0.0;\n  else\n    dS = ((v0->x * v0->x) + (v0->y * v0->y));\n  return (dS);\n}\n"
+        },
+        {
+          "start_line": 571,
+          "end_line_exclusive": 572,
+          "replacement": ""
+        },
+        {
+          "start_line": 581,
+          "end_line_exclusive": 591,
+          "replacement": "render_canvas_parms::render_canvas_parms() { pix_buff = NULL; }\nrender_canvas_parms::~render_canvas_parms() {}\n"
+        },
+        {
+          "start_line": 601,
+          "end_line_exclusive": 7824,
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/mygeom.cpp",
+          "sha256": "1594f55ee1c88752be8004ca0b43a254312cc1dda96d98e7ee74db8fdf4a7093"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/mygeom.cpp",
+      "sha256": "f367f18d9f308233d4f308305750d847f374945587885da476a312e50bf9a9fa",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            289
+          ],
+          "generated_lines": [
+            1,
+            289
+          ],
+          "sha256": "b42b255e9af91ee975ec772d79f5710d21d4e533d84b291e8db90aecd92eb312"
+        },
+        {
+          "original_lines": [
+            291,
+            358
+          ],
+          "generated_lines": [
+            291,
+            358
+          ],
+          "sha256": "8142899f5ace754f6ff12753bae9bb43637f797d49c63796abaa6a9ae4997775"
+        },
+        {
+          "original_lines": [
+            360,
+            374
+          ],
+          "generated_lines": [
+            360,
+            374
+          ],
+          "sha256": "dda86a5b36e27cfe694326387b7deff0ee2e7d7256b79cfe8bef134bd2cdf63a"
+        },
+        {
+          "original_lines": [
+            756,
+            756
+          ],
+          "generated_lines": [
+            375,
+            375
+          ],
+          "sha256": "8a5f88bc2f88a2558931a011e8644cb651fbc81fea13cdff0ab9ffdb65efa8f4"
+        },
+        {
+          "original_lines": [
+            757,
+            1050
+          ],
+          "generated_lines": [
+            377,
+            670
+          ],
+          "sha256": "b7219435c3f5a0368fb82b265ed078e181e24b8e79861a24e72fac7d1d972dba"
+        },
+        {
+          "original_lines": [
+            1051,
+            1293
+          ],
+          "generated_lines": [
+            672,
+            914
+          ],
+          "sha256": "ca6c2c70ead9abd377fa5878be4db3ce5ef55d93b9d0f42e58fcdf8540190e68"
+        },
+        {
+          "original_lines": [
+            1465,
+            1514
+          ],
+          "generated_lines": [
+            915,
+            964
+          ],
+          "sha256": "4061eebc54e9a7f92babe89366dca46b056c127a45b2c399640759a273005e79"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 289,
+          "end_line_exclusive": 290,
+          "replacement": "  BuildTess();\n"
+        },
+        {
+          "start_line": 358,
+          "end_line_exclusive": 359,
+          "replacement": "    int rv = BuildTess();\n"
+        },
+        {
+          "start_line": 374,
+          "end_line_exclusive": 755,
+          "replacement": ""
+        },
+        {
+          "start_line": 756,
+          "end_line_exclusive": 756,
+          "replacement": "  m_nvertex_max = 0;\n"
+        },
+        {
+          "start_line": 1050,
+          "end_line_exclusive": 1050,
+          "replacement": "        m_nvertex_max = wxMax(m_nvertex_max, int(NbRefs));\n"
+        },
+        {
+          "start_line": 1293,
+          "end_line_exclusive": 1464,
+          "replacement": ""
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/mygeom.h",
+          "sha256": "cc713bce1cceb54f44e95007c173b49f48336e8771072429950991cdcc1fac6b"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/mygeom.h",
+      "sha256": "cc713bce1cceb54f44e95007c173b49f48336e8771072429950991cdcc1fac6b",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            304
+          ],
+          "generated_lines": [
+            1,
+            304
+          ],
+          "sha256": "cc713bce1cceb54f44e95007c173b49f48336e8771072429950991cdcc1fac6b"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "gui/src/o_senc.cpp",
+          "sha256": "f00a29939fa39f9e09dfaa05111db00488a112a1ee192bd33f283d53a72bb045"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/o_senc.cpp",
+      "sha256": "1a36d34dc924153181b8dcf0677086d20d579e97286007cf921287ed334220b3",
+      "retained_regions": [
+        {
+          "original_lines": [
+            17,
+            17
+          ],
+          "generated_lines": [
+            13,
+            13
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            110,
+            141
+          ],
+          "generated_lines": [
+            14,
+            45
+          ],
+          "sha256": "06c6e283004e3fd137f240afca9d3da3f479d2123d0683d77857228065f911d8"
+        },
+        {
+          "original_lines": [
+            146,
+            177
+          ],
+          "generated_lines": [
+            46,
+            77
+          ],
+          "sha256": "b4d57c334284273d7b3d6bf4dc4b1660bcb3805d43396dc74918379fa9a2bdcd"
+        },
+        {
+          "original_lines": [
+            182,
+            215
+          ],
+          "generated_lines": [
+            78,
+            111
+          ],
+          "sha256": "a65f37dae92b94ada3b393f20ef4651e147c482b323e9e9ed1cbf88131e858ae"
+        },
+        {
+          "original_lines": [
+            217,
+            251
+          ],
+          "generated_lines": [
+            113,
+            147
+          ],
+          "sha256": "7c49e4c3c813ae6ee8d8d97eb4269158e1d4f38f704cacdbff7b7fa6a1a48d78"
+        },
+        {
+          "original_lines": [
+            253,
+            254
+          ],
+          "generated_lines": [
+            149,
+            150
+          ],
+          "sha256": "eaab63694003e04560c4a76bd940cccbcc13acbd80a5f3500fac0a5913fb43bb"
+        },
+        {
+          "original_lines": [
+            503,
+            757
+          ],
+          "generated_lines": [
+            151,
+            405
+          ],
+          "sha256": "6629256d199a296259696cc85edfb1ae92f4fc376f1e0526dc8034b4c554c3ee"
+        },
+        {
+          "original_lines": [
+            758,
+            787
+          ],
+          "generated_lines": [
+            408,
+            437
+          ],
+          "sha256": "3022eb595c44b2025d13842538f914ab4790535df23972dde7d5547ced9d5066"
+        },
+        {
+          "original_lines": [
+            796,
+            802
+          ],
+          "generated_lines": [
+            453,
+            459
+          ],
+          "sha256": "9c72d5f50ed2fa1f87c4cf61e18f5e406956ae0146c529aaa779d930932d9f8c"
+        },
+        {
+          "original_lines": [
+            809,
+            1037
+          ],
+          "generated_lines": [
+            476,
+            704
+          ],
+          "sha256": "8a92f0cde4bc9dc89b753a60af7a76d2d932f32fca493cee1d7ee1b88ecf3351"
+        },
+        {
+          "original_lines": [
+            1917,
+            1949
+          ],
+          "generated_lines": [
+            705,
+            737
+          ],
+          "sha256": "0f4b707738d0bac66392bd6c72bcdd03b6aebe7a1db1244cf39a6592d8af18a4"
+        },
+        {
+          "original_lines": [
+            1951,
+            1986
+          ],
+          "generated_lines": [
+            739,
+            774
+          ],
+          "sha256": "02d82ba25c53aacecb88bdf6481054aa3a93b35aee47ce24441548e56c780773"
+        },
+        {
+          "original_lines": [
+            1988,
+            2064
+          ],
+          "generated_lines": [
+            776,
+            852
+          ],
+          "sha256": "32e30f980bb5bac7a8a14b20ae194a4f4544925467f41b554e05ae5eb51b1189"
+        },
+        {
+          "original_lines": [
+            2066,
+            2068
+          ],
+          "generated_lines": [
+            854,
+            856
+          ],
+          "sha256": "1ac15c431b3d38e232678ef8c8f7eb1ed026346223d5728732124283d9aebc1d"
+        },
+        {
+          "original_lines": [
+            2071,
+            2081
+          ],
+          "generated_lines": [
+            859,
+            869
+          ],
+          "sha256": "01ad3cd2dee6ef1332adf333bba2bd8f5d7d9dd926441f1d3a8791b57f92b3df"
+        },
+        {
+          "original_lines": [
+            2112,
+            2627
+          ],
+          "generated_lines": [
+            878,
+            1393
+          ],
+          "sha256": "d4b3903e7cece915b16444833793dc70fd706ffe9188e2b7370cb0395b86600c"
+        },
+        {
+          "original_lines": [
+            2629,
+            2764
+          ],
+          "generated_lines": [
+            1395,
+            1530
+          ],
+          "sha256": "e88f49a3fa539c5222b80a7c8b3c92c8e9e06d1028a148345ccf149adc0429b8"
+        },
+        {
+          "original_lines": [
+            2766,
+            3168
+          ],
+          "generated_lines": [
+            1532,
+            1934
+          ],
+          "sha256": "c3248df79b15fd00270a54b490b4948ba44b03c8a31b5f2713a30a30f2f92f45"
+        },
+        {
+          "original_lines": [
+            3170,
+            3171
+          ],
+          "generated_lines": [
+            1936,
+            1937
+          ],
+          "sha256": "44239e0dfbbd3162b2ceb05f4a3c001959c797d611efdaf58bffd9e2fac05000"
+        },
+        {
+          "original_lines": [
+            3185,
+            3227
+          ],
+          "generated_lines": [
+            1940,
+            1982
+          ],
+          "sha256": "5186bc2dedfd1251f46d141bf111463738251c1583b682fd18bfd57f0090ff3b"
+        },
+        {
+          "original_lines": [
+            3231,
+            3281
+          ],
+          "generated_lines": [
+            1983,
+            2033
+          ],
+          "sha256": "874ccbce0faeb8601b046a715368099a557bd7b8b76ad95c39414d1d81da0db7"
+        },
+        {
+          "original_lines": [
+            3283,
+            3300
+          ],
+          "generated_lines": [
+            2035,
+            2052
+          ],
+          "sha256": "e7539b715fa0334844b56c63b26be117a294cd5c5e20aca71a2276495229e318"
+        },
+        {
+          "original_lines": [
+            3316,
+            3337
+          ],
+          "generated_lines": [
+            2056,
+            2077
+          ],
+          "sha256": "f7ddbdc1b13639a9adf14ea52914059ffeb24c248089b6687df960d5e76fad70"
+        },
+        {
+          "original_lines": [
+            3339,
+            3355
+          ],
+          "generated_lines": [
+            2079,
+            2095
+          ],
+          "sha256": "902e08476b20e19b6a37a5ab8be5676e4c1d9967179e6e6c1be02672a3955f98"
+        },
+        {
+          "original_lines": [
+            3698,
+            3710
+          ],
+          "generated_lines": [
+            2096,
+            2108
+          ],
+          "sha256": "4539651717c499b536a9910f5bb4bc629ca7cac3ab4ec92013d791ae30abcb67"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 16,
+          "replacement": "#include \"o_senc.h\"\n#include \"s57registrar_mgr.h\"\n#include \"s52plib.h\"\n#include \"LOD_reduce.h\"\n#include \"gdal/cpl_string.h\"\n#include \"gdal/cpl_error.h\"\n#define MAX_VECTOR_POINTS 1000\nstatic std::mutex m;\nstatic bool g_OsencVerbose;\nthread_local s57RegistrarMgr* m_pRegistrarMan=nullptr;\n#include <sstream>\n#include <limits>\n"
+        },
+        {
+          "start_line": 17,
+          "end_line_exclusive": 109,
+          "replacement": ""
+        },
+        {
+          "start_line": 141,
+          "end_line_exclusive": 145,
+          "replacement": ""
+        },
+        {
+          "start_line": 177,
+          "end_line_exclusive": 181,
+          "replacement": ""
+        },
+        {
+          "start_line": 215,
+          "end_line_exclusive": 216,
+          "replacement": "  \n"
+        },
+        {
+          "start_line": 251,
+          "end_line_exclusive": 252,
+          "replacement": "  \n"
+        },
+        {
+          "start_line": 254,
+          "end_line_exclusive": 502,
+          "replacement": ""
+        },
+        {
+          "start_line": 757,
+          "end_line_exclusive": 757,
+          "replacement": "        if (record.record_length < sizeof(OSENC_Record_Base) + 3) throw std::runtime_error(\"Truncated OSENC attribute record\");\n\n"
+        },
+        {
+          "start_line": 787,
+          "end_line_exclusive": 795,
+          "replacement": "            case 1:  // Preserve packed list values as S52's comma-list representation.\n            {\n              const size_t bytes = record.record_length - sizeof(OSENC_Record_Base) - 3;\n              if (!bytes || bytes % 4 || bytes / 4 > 65536) throw std::runtime_error(\"Invalid OSENC attribute list\");\n              const auto* values = reinterpret_cast<const unsigned char*>(pPayload) + 3;\n              std::ostringstream text;\n              text.precision(std::numeric_limits<double>::max_digits10);\n              for (size_t i = 0; i < bytes / 4; ++i) {\n                int32_t value; memcpy(&value, values + i * 4, 4);\n                if (i) text << ',';\n                text << value;\n              }\n              if (obj) { auto value = text.str(); obj->AddStringAttribute(acronym.c_str(), value.data()); }\n              break;\n            }\n"
+        },
+        {
+          "start_line": 802,
+          "end_line_exclusive": 808,
+          "replacement": "            case 3:  // Preserve packed list values as S52's comma-list representation.\n            {\n              const size_t bytes = record.record_length - sizeof(OSENC_Record_Base) - 3;\n              if (!bytes || bytes % 8 || bytes / 8 > 65536) throw std::runtime_error(\"Invalid OSENC attribute list\");\n              const auto* values = reinterpret_cast<const unsigned char*>(pPayload) + 3;\n              std::ostringstream text;\n              text.precision(std::numeric_limits<double>::max_digits10);\n              for (size_t i = 0; i < bytes / 8; ++i) {\n                double value; memcpy(&value, values + i * 8, 8);\n                if (!std::isfinite(value)) throw std::runtime_error(\"Non-finite OSENC attribute list\");\n                if (i) text << ',';\n                text << value;\n              }\n              if (obj) { auto value = text.str(); obj->AddStringAttribute(acronym.c_str(), value.data()); }\n              break;\n            }\n"
+        },
+        {
+          "start_line": 1037,
+          "end_line_exclusive": 1916,
+          "replacement": ""
+        },
+        {
+          "start_line": 1949,
+          "end_line_exclusive": 1950,
+          "replacement": "  int nPoints; memcpy(&nPoints, ps, sizeof(nPoints));  // packed WKB point count\n"
+        },
+        {
+          "start_line": 1986,
+          "end_line_exclusive": 1987,
+          "replacement": "    toSM_plib(lat, lon, m_ref_lat, m_ref_lon, &easting, &northing);\n"
+        },
+        {
+          "start_line": 2064,
+          "end_line_exclusive": 2065,
+          "replacement": "  int ip; memcpy(&ip, ps + 5, sizeof(ip));  // packed WKB point count\n"
+        },
+        {
+          "start_line": 2068,
+          "end_line_exclusive": 2069,
+          "replacement": "  unsigned char *psd = ps;\n"
+        },
+        {
+          "start_line": 2069,
+          "end_line_exclusive": 2070,
+          "replacement": "  unsigned char *pdf = pd;\n"
+        },
+        {
+          "start_line": 2081,
+          "end_line_exclusive": 2111,
+          "replacement": "    double lon_d, lat_d;\n    memcpy(&lon_d, psd, sizeof(double)); psd+=sizeof(double);\n    memcpy(&lat_d, psd, sizeof(double)); psd+=sizeof(double);\n    lon = lon_d; lat = lat_d;\n    toSM_plib(lat, lon, m_ref_lat, m_ref_lon, &easting, &northing);\n    float east_f=easting, north_f=northing;\n    memcpy(pdf, &east_f, sizeof(float)); pdf+=sizeof(float);\n    memcpy(pdf, &north_f, sizeof(float)); pdf+=sizeof(float);\n"
+        },
+        {
+          "start_line": 2627,
+          "end_line_exclusive": 2628,
+          "replacement": "          toSM_plib(p.getY(), p.getX(), m_ref_lat, m_ref_lon, &easting, &northing);\n"
+        },
+        {
+          "start_line": 2764,
+          "end_line_exclusive": 2765,
+          "replacement": "        toSM_plib(pP->getY(), pP->getX(), m_ref_lat, m_ref_lon, &easting, &northing);\n"
+        },
+        {
+          "start_line": 3168,
+          "end_line_exclusive": 3169,
+          "replacement": "        unsigned char *psd = ps;\n"
+        },
+        {
+          "start_line": 3171,
+          "end_line_exclusive": 3184,
+          "replacement": "        memcpy(&lon, psd, sizeof(double));\n        memcpy(&lat, reinterpret_cast<const unsigned char*>(psd)+sizeof(double), sizeof(double));\n"
+        },
+        {
+          "start_line": 3227,
+          "end_line_exclusive": 3230,
+          "replacement": ""
+        },
+        {
+          "start_line": 3281,
+          "end_line_exclusive": 3282,
+          "replacement": "    memcpy(&nvert, pPayloadRun, sizeof(uint32_t));\n"
+        },
+        {
+          "start_line": 3300,
+          "end_line_exclusive": 3315,
+          "replacement": "    double abox[4];\n    memcpy(abox, pPayloadRun, sizeof(abox));\n    minxt=abox[0];maxxt=abox[1];minyt=abox[2];maxyt=abox[3];\n"
+        },
+        {
+          "start_line": 3337,
+          "end_line_exclusive": 3338,
+          "replacement": "    memcpy(p_run, reinterpret_cast<const unsigned char*>(p_tp->p_vertex), p_tp->nVert * 2 * sizeof(float)); // packed float payload\n"
+        },
+        {
+          "start_line": 3355,
+          "end_line_exclusive": 3697,
+          "replacement": ""
+        },
+        {
+          "start_line": 3710,
+          "end_line_exclusive": 3710,
+          "replacement": "\nbool Osenc::WriteHeaderRecord200(Osenc_outstream *stream, int recordType,\n                                 std::string payload) {\n  int payloadLength = payload.length() + 1;\n  int recordLength = payloadLength + sizeof(OSENC_Record_Base);\n\n  //  Get a reference to the class persistent buffer\n  unsigned char *pBuffer = getBuffer(recordLength);\n\n  OSENC_Record *pRecord = (OSENC_Record *)pBuffer;\n  memset(pRecord, 0, recordLength);\n  pRecord->record_type = recordType;\n  pRecord->record_length = recordLength;\n  memcpy(&pRecord->payload, payload.c_str(), payloadLength);\n\n  size_t targetCount = recordLength;\n  if (!stream->Write(pBuffer, targetCount).IsOk())\n    return false;\n  else\n    return true;\n}\n\nbool Osenc::WriteHeaderRecord200(Osenc_outstream *stream, int recordType,\n                                 uint16_t val) {\n  int payloadLength = sizeof(uint16_t);\n  int recordLength = payloadLength + sizeof(OSENC_Record_Base);\n\n  //  Get a reference to the class persistent buffer\n  unsigned char *pBuffer = getBuffer(recordLength);\n\n  OSENC_Record *pRecord = (OSENC_Record *)pBuffer;\n  memset(pRecord, 0, recordLength);\n  pRecord->record_type = recordType;\n  pRecord->record_length = recordLength;\n  memcpy(&pRecord->payload, &val, payloadLength);\n\n  size_t targetCount = recordLength;\n  if (!stream->Write(pBuffer, targetCount).IsOk())\n    return false;\n  else\n    return true;\n}\n\nbool Osenc::WriteHeaderRecord200(Osenc_outstream *stream, int recordType,\n                                 uint32_t val) {\n  int payloadLength = sizeof(uint32_t);\n  int recordLength = payloadLength + sizeof(OSENC_Record_Base);\n\n  //  Get a reference to the class persistent buffer\n  unsigned char *pBuffer = getBuffer(recordLength);\n\n  OSENC_Record *pRecord = (OSENC_Record *)pBuffer;\n  memset(pRecord, 0, recordLength);\n  pRecord->record_type = recordType;\n  pRecord->record_length = recordLength;\n  memcpy(&pRecord->payload, &val, payloadLength);\n\n  size_t targetCount = recordLength;\n  if (!stream->Write(pBuffer, targetCount).IsOk())\n    return false;\n  else\n    return true;\n}\n\nbool Osenc::CreateCovrRecords(Osenc_outstream *stream) {\n  // First, create the Extent record\n  _OSENC_EXTENT_Record record;\n  record.record_type = CELL_EXTENT_RECORD;\n  record.record_length = sizeof(_OSENC_EXTENT_Record);\n  record.extent_sw_lat = m_extent.SLAT;\n  record.extent_sw_lon = m_extent.WLON;\n  record.extent_nw_lat = m_extent.NLAT;\n  record.extent_nw_lon = m_extent.WLON;\n  record.extent_ne_lat = m_extent.NLAT;\n  record.extent_ne_lon = m_extent.ELON;\n  record.extent_se_lat = m_extent.SLAT;\n  record.extent_se_lon = m_extent.ELON;\n\n  size_t targetCount = sizeof(record);\n  if (!stream->Write(&record, targetCount).IsOk()) return false;\n\n  for (int i = 0; i < m_nCOVREntries; i++) {\n    int nPoints = m_pCOVRTablePoints[i];\n\n    float *fpbuf = m_pCOVRTable[i];\n\n    //  Ready to write the record\n    _OSENC_COVR_Record_Base record;\n    record.record_type = CELL_COVR_RECORD;\n    record.record_length = sizeof(_OSENC_COVR_Record_Base) + sizeof(uint32_t) +\n                           (nPoints * 2 * sizeof(float));\n\n    //  Write the base record\n    size_t targetCount = sizeof(record);\n    if (!stream->Write(&record, targetCount).IsOk()) return false;\n\n    // Write the point count\n    targetCount = sizeof(uint32_t);\n    if (!stream->Write(&nPoints, targetCount).IsOk()) return false;\n\n    //  Write the point array\n    targetCount = nPoints * 2 * sizeof(float);\n    if (!stream->Write(fpbuf, targetCount).IsOk()) return false;\n  }\n\n  for (int i = 0; i < m_nNoCOVREntries; i++) {\n    int nPoints = m_pNoCOVRTablePoints[i];\n\n    float *fpbuf = m_pNoCOVRTable[i];\n\n    //  Ready to write the record\n    _OSENC_NOCOVR_Record_Base record;\n    record.record_type = CELL_NOCOVR_RECORD;\n    record.record_length = sizeof(_OSENC_NOCOVR_Record_Base) +\n                           sizeof(uint32_t) + (nPoints * 2 * sizeof(float));\n\n    //  Write the base record\n    size_t targetCount = sizeof(record);\n    if (!stream->Write(&record, targetCount).IsOk()) return false;\n\n    // Write the point count\n    targetCount = sizeof(uint32_t);\n    if (!stream->Write(&nPoints, targetCount).IsOk()) return false;\n\n    //  Write the point array\n    targetCount = nPoints * 2 * sizeof(float);\n    if (!stream->Write(fpbuf, targetCount).IsOk()) return false;\n  }\n\n  return true;\n}\n\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "gui/include/gui/o_senc.h",
+          "sha256": "dbe50bb4a8531510ffba9f4fd03ca66c60ae4563e8b0683132821836ffd5fa45"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/o_senc.h",
+      "sha256": "ec9440e82197ad7288da62b7f31e55945cddd3ce3c861a0d00ddd1d21b6bccff",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            40
+          ],
+          "generated_lines": [
+            1,
+            40
+          ],
+          "sha256": "258ce42af53b7febc5ef056b23f1d67fb9c766416bc7c3b72fd3c78bd874ccf0"
+        },
+        {
+          "original_lines": [
+            42,
+            46
+          ],
+          "generated_lines": [
+            42,
+            46
+          ],
+          "sha256": "b6c9ce88f5aaa4bdd06b3b3491d710fa9a58a64863788ec0c2c667ad1277683f"
+        },
+        {
+          "original_lines": [
+            48,
+            305
+          ],
+          "generated_lines": [
+            51,
+            308
+          ],
+          "sha256": "9e0bad1be32500effddef944e1e63cca9a1fa9fec92f06fb43108106d62f28be"
+        },
+        {
+          "original_lines": [
+            307,
+            395
+          ],
+          "generated_lines": [
+            310,
+            398
+          ],
+          "sha256": "a625e2ec09abec37cbabe6074a5b75134bbe4ae27d10b2f6cdb6bca2a512fe63"
+        },
+        {
+          "original_lines": [
+            396,
+            580
+          ],
+          "generated_lines": [
+            400,
+            584
+          ],
+          "sha256": "70850408f0089bb478758c4896641a8465795004b5c131e4ca966e3233253dcc"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 40,
+          "end_line_exclusive": 41,
+          "replacement": "\n"
+        },
+        {
+          "start_line": 46,
+          "end_line_exclusive": 47,
+          "replacement": "#include \"s57class_registrar.h\"\nstruct Extent{float SLAT,WLON,NLAT,ELON;};\nnamespace no5{class SencCache;}\n#include \"bbox.h\"\n"
+        },
+        {
+          "start_line": 305,
+          "end_line_exclusive": 306,
+          "replacement": "extern thread_local s57RegistrarMgr *m_pRegistrarMan; /**< Global instance */\n"
+        },
+        {
+          "start_line": 395,
+          "end_line_exclusive": 395,
+          "replacement": "  friend class no5::SencCache;\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52_plib_utils.cpp",
+          "sha256": "baee3344a78848fc589828ac0c8bab6c147937a60d18d3864ce72265b2fe2238"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52_plib_utils.cpp",
+      "sha256": "baee3344a78848fc589828ac0c8bab6c147937a60d18d3864ce72265b2fe2238",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            20
+          ],
+          "generated_lines": [
+            1,
+            20
+          ],
+          "sha256": "baee3344a78848fc589828ac0c8bab6c147937a60d18d3864ce72265b2fe2238"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52_plib_utils.h",
+          "sha256": "87f531bb7acc8d8a487f5237a85cebb663d86578e320f3ec566b1b42f18d55b4"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52_plib_utils.h",
+      "sha256": "87f531bb7acc8d8a487f5237a85cebb663d86578e320f3ec566b1b42f18d55b4",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            20
+          ],
+          "generated_lines": [
+            1,
+            20
+          ],
+          "sha256": "87f531bb7acc8d8a487f5237a85cebb663d86578e320f3ec566b1b42f18d55b4"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52cnsy.cpp",
+          "sha256": "d094d9345fa76acf601ca2c1a48da7d65f06f3086b8f810e6d1ab9f8a5014ea4"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52cnsy.cpp",
+      "sha256": "fc1c1b0e6200a2f380bf067a256dd83c76d778e2b965e8776bf6066dfb184496",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            58
+          ],
+          "generated_lines": [
+            2,
+            59
+          ],
+          "sha256": "d01d8582cb98152da2f53500431a0fd25887db22b363c14c52352e8255d41b80"
+        },
+        {
+          "original_lines": [
+            60,
+            629
+          ],
+          "generated_lines": [
+            61,
+            630
+          ],
+          "sha256": "df24ee998dbcc4190323df8ec78c6f61f709b91cdc51ee5294f5080abaf7d1da"
+        },
+        {
+          "original_lines": [
+            631,
+            2137
+          ],
+          "generated_lines": [
+            632,
+            2138
+          ],
+          "sha256": "79cc407d355b5f277ce6e29a91d9aebb8131b63599b77db66dff2f4f64ec97c6"
+        },
+        {
+          "original_lines": [
+            2139,
+            2139
+          ],
+          "generated_lines": [
+            2140,
+            2140
+          ],
+          "sha256": "722fe247f7c07b9c3425ccb6c27a771d36571e0bfc638dac871c69c827839f2e"
+        },
+        {
+          "original_lines": [
+            2141,
+            2141
+          ],
+          "generated_lines": [
+            2142,
+            2142
+          ],
+          "sha256": "cfae0f963794501e6f3739329718bce1073215bb7976d96453233d28ddf9d3b0"
+        },
+        {
+          "original_lines": [
+            2143,
+            6261
+          ],
+          "generated_lines": [
+            2144,
+            6262
+          ],
+          "sha256": "6464652d4b5f2b0246d8174c06cf2955fbd3a1f4d4e411b6ad8ac59af78e1bb2"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 0,
+          "replacement": "#include \"presentation.hpp\"\n"
+        },
+        {
+          "start_line": 58,
+          "end_line_exclusive": 59,
+          "replacement": "extern thread_local s52plib *ps52plib;\n"
+        },
+        {
+          "start_line": 629,
+          "end_line_exclusive": 630,
+          "replacement": "  drval2 = drval1 + 0.01;\n"
+        },
+        {
+          "start_line": 2137,
+          "end_line_exclusive": 2138,
+          "replacement": "          line = no5::presentationCoastWidth == 3 ? \"LS(SOLD,5,CHMGF);LS(SOLD,3,CSTLN)\" : \"LS(SOLD,3,CHMGF);LS(SOLD,1,CSTLN)\";\n"
+        },
+        {
+          "start_line": 2139,
+          "end_line_exclusive": 2140,
+          "replacement": "          line = no5::presentationCoastWidth == 3 ? \"LS(SOLD,3,CSTLN)\" : \"LS(SOLD,1,CSTLN)\";\n"
+        },
+        {
+          "start_line": 2141,
+          "end_line_exclusive": 2142,
+          "replacement": "        line = no5::presentationCoastWidth == 3 ? \"LS(SOLD,3,CSTLN)\" : \"LS(SOLD,1,CSTLN)\";\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52plib.cpp",
+          "sha256": "b376900cc16a5d2358feda178b9aa82c0853aa84fa61106b1590c49136f98970"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52plib.cpp",
+      "sha256": "97b55236cf151adb003552e7496a21ee3d09338175a17407cccbe0bed6f64b85",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            75
+          ],
+          "generated_lines": [
+            3,
+            77
+          ],
+          "sha256": "a38dd48b5f6cb25b3772cf8704462af5e039b3f0d7bebe60d984cdf6f2b65c15"
+        },
+        {
+          "original_lines": [
+            76,
+            90
+          ],
+          "generated_lines": [
+            79,
+            93
+          ],
+          "sha256": "b73ceb91378e65762ca2d4acba03e6431b7b5466b32375fb826591c1bd3ee34d"
+        },
+        {
+          "original_lines": [
+            92,
+            129
+          ],
+          "generated_lines": [
+            95,
+            132
+          ],
+          "sha256": "9df5ed962b442f2c1cd09081554ab739cda6fb90aea51ab6a180170499f4692b"
+        },
+        {
+          "original_lines": [
+            137,
+            1224
+          ],
+          "generated_lines": [
+            140,
+            1227
+          ],
+          "sha256": "ed0aae4dd1fd2f9a0bbb70482eab7ca4bed97c0d79351fc392043c6d8d76d671"
+        },
+        {
+          "original_lines": [
+            1226,
+            1788
+          ],
+          "generated_lines": [
+            1228,
+            1790
+          ],
+          "sha256": "b90fb9e2607a1e553d03de120ad2c6c1f4713f5f9d8d48f7775c0e568d663f9c"
+        },
+        {
+          "original_lines": [
+            1790,
+            1793
+          ],
+          "generated_lines": [
+            1792,
+            1795
+          ],
+          "sha256": "830dc72796a87ea0a76553ff140a687e2318e12774599b3b5be67e8c93d022a7"
+        },
+        {
+          "original_lines": [
+            1796,
+            1848
+          ],
+          "generated_lines": [
+            1798,
+            1850
+          ],
+          "sha256": "da9e3c3d2eb0b914a4614f5ff4f0045719fe99115059ba44c7d127a8d3b3caf0"
+        },
+        {
+          "original_lines": [
+            1849,
+            1925
+          ],
+          "generated_lines": [
+            1852,
+            1928
+          ],
+          "sha256": "ed65da8e13ff3614e3ec242752b36b504fd46daa9b1cf59298edaf7c601301fe"
+        },
+        {
+          "original_lines": [
+            1926,
+            1946
+          ],
+          "generated_lines": [
+            1931,
+            1951
+          ],
+          "sha256": "6146afe4a143c04d45dd956e8cf4e2165fa84a6ab3622bf9abe53860ee0e9ec0"
+        },
+        {
+          "original_lines": [
+            1947,
+            1952
+          ],
+          "generated_lines": [
+            1953,
+            1958
+          ],
+          "sha256": "b3c47b8b1acef278de07c21bda9e7e0ca136468a252739c75f78a73b1b6876c0"
+        },
+        {
+          "original_lines": [
+            1953,
+            2013
+          ],
+          "generated_lines": [
+            1960,
+            2020
+          ],
+          "sha256": "e4991195c8308df79fd33f476dce3e28465ae9601a068721943116462c9292ea"
+        },
+        {
+          "original_lines": [
+            2014,
+            2017
+          ],
+          "generated_lines": [
+            2022,
+            2025
+          ],
+          "sha256": "bf65c6d7787915f90df14d01ef9cd4741feead6e4b72fb19468906139d983883"
+        },
+        {
+          "original_lines": [
+            2018,
+            2021
+          ],
+          "generated_lines": [
+            2027,
+            2030
+          ],
+          "sha256": "280468fe8d4827ca09529cd5ac3e4e58533fb7f4248353ebbdd598a241471ae8"
+        },
+        {
+          "original_lines": [
+            2022,
+            2215
+          ],
+          "generated_lines": [
+            2032,
+            2225
+          ],
+          "sha256": "1e5de96d0bc64774bf7c7e3f12d1af5244d03d4788af4d85341c3fe9654818f9"
+        },
+        {
+          "original_lines": [
+            2216,
+            2216
+          ],
+          "generated_lines": [
+            2228,
+            2228
+          ],
+          "sha256": "f51eb5687df69ec65cefeda5e95ec4ec681b43b66da3db8664db56744f5a3ce8"
+        },
+        {
+          "original_lines": [
+            2220,
+            2234
+          ],
+          "generated_lines": [
+            2229,
+            2243
+          ],
+          "sha256": "e53891ec4cbeeb7b2da3a14e479266a0d44dcc5ea4bdf063692aaa4f1bc8d677"
+        },
+        {
+          "original_lines": [
+            2236,
+            2309
+          ],
+          "generated_lines": [
+            2245,
+            2318
+          ],
+          "sha256": "72f8a4c5a209365c98fc5b0e4c6a00d5e19ee371389591d6e2995ca3822e8297"
+        },
+        {
+          "original_lines": [
+            2320,
+            2418
+          ],
+          "generated_lines": [
+            2321,
+            2419
+          ],
+          "sha256": "f0e240ff7d9fcaa7f7dbe0e593c0bcbf79d5985a9d139bee74d00c689c7520e9"
+        },
+        {
+          "original_lines": [
+            2420,
+            2422
+          ],
+          "generated_lines": [
+            2422,
+            2424
+          ],
+          "sha256": "2861c984930fd58caf59eb8e8dc5af32d9d29746820e5d103c5ae6b3b2bdeae4"
+        },
+        {
+          "original_lines": [
+            2423,
+            2440
+          ],
+          "generated_lines": [
+            2426,
+            2443
+          ],
+          "sha256": "7be1edc3a39eeed679df8506c7f95f9d835e035d05418f9b0471288100d6c31e"
+        },
+        {
+          "original_lines": [
+            2443,
+            2447
+          ],
+          "generated_lines": [
+            2447,
+            2451
+          ],
+          "sha256": "2fcd30d6cee754b9a1a71797971c8f0d2e7c1e6c435a4027e7ad310b86b9e8f4"
+        },
+        {
+          "original_lines": [
+            2454,
+            2458
+          ],
+          "generated_lines": [
+            2488,
+            2492
+          ],
+          "sha256": "b6577b297f327537f912c1b524244e8293775d60386ea4cf2df323a2b78e9359"
+        },
+        {
+          "original_lines": [
+            2459,
+            2555
+          ],
+          "generated_lines": [
+            2494,
+            2590
+          ],
+          "sha256": "b82cca95b11036d82871b39386ac3fd2098b7ec8a07b5fd066a0e0150cdfb6bd"
+        },
+        {
+          "original_lines": [
+            2556,
+            2556
+          ],
+          "generated_lines": [
+            2593,
+            2593
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            2562,
+            2562
+          ],
+          "generated_lines": [
+            2597,
+            2597
+          ],
+          "sha256": "75d227a7674534adfac493b7b3307d185b534e248b4c051c47f67d91e4793c6d"
+        },
+        {
+          "original_lines": [
+            2565,
+            2622
+          ],
+          "generated_lines": [
+            2600,
+            2657
+          ],
+          "sha256": "86586b6278427eec00fd7b1bc6b1db067bd30b43a1cdc7f689ecd48c5c3fbadb"
+        },
+        {
+          "original_lines": [
+            2623,
+            2627
+          ],
+          "generated_lines": [
+            2660,
+            2664
+          ],
+          "sha256": "14bdeaadecb8dff473148a0b2fa31d9e772965d7308cf3bffdcee3df495c091f"
+        },
+        {
+          "original_lines": [
+            2628,
+            3588
+          ],
+          "generated_lines": [
+            2667,
+            3627
+          ],
+          "sha256": "1dcd25dd6150f373e5a13dbd3d6ac36163cb897de58c49d99f6a74b51389b3b1"
+        },
+        {
+          "original_lines": [
+            3589,
+            4303
+          ],
+          "generated_lines": [
+            3630,
+            4344
+          ],
+          "sha256": "2b51062a4ed7863f60ac650ba1d5cda1ce73c182cc0bee7c42cdde48581385e4"
+        },
+        {
+          "original_lines": [
+            4304,
+            4463
+          ],
+          "generated_lines": [
+            4347,
+            4506
+          ],
+          "sha256": "dbfc93060689cbad61a6ab20987f73d31c6b87bf9e3e1228a3fa4c3efbac5b70"
+        },
+        {
+          "original_lines": [
+            4464,
+            4496
+          ],
+          "generated_lines": [
+            4515,
+            4547
+          ],
+          "sha256": "e3da4dafaa772273bbcbaba0de93585fd149d8777e424b3815c7186ff4469262"
+        },
+        {
+          "original_lines": [
+            4499,
+            4502
+          ],
+          "generated_lines": [
+            4554,
+            4557
+          ],
+          "sha256": "7b065e1b6a2213785f9d0f49235229ac16e75f06626b5a3857cd5baeb108209e"
+        },
+        {
+          "original_lines": [
+            4503,
+            5087
+          ],
+          "generated_lines": [
+            4560,
+            5144
+          ],
+          "sha256": "5af40d05c8f4a271b5b33fddbbc16c0dd1cd27eb268be1729d205110e64abe65"
+        },
+        {
+          "original_lines": [
+            5088,
+            5173
+          ],
+          "generated_lines": [
+            5147,
+            5232
+          ],
+          "sha256": "cb88857b40fb5ff292ff204926a12659fff3bfb04cb663e509e209cfc9dd54de"
+        },
+        {
+          "original_lines": [
+            5175,
+            5216
+          ],
+          "generated_lines": [
+            5235,
+            5276
+          ],
+          "sha256": "203a1b20e3c38fc4d643d96fb572e3a60d6806b48c9b00e11a0d30308f1ca833"
+        },
+        {
+          "original_lines": [
+            5217,
+            5217
+          ],
+          "generated_lines": [
+            5291,
+            5291
+          ],
+          "sha256": "2b0e6daadde10834b8e9bb26e07ba24812e989157857ec65a832e8ccee5521d6"
+        },
+        {
+          "original_lines": [
+            5218,
+            5269
+          ],
+          "generated_lines": [
+            5293,
+            5344
+          ],
+          "sha256": "1e91bd7f1fb8a830c38e5700317e780efe25a64f82dcb652a8138ee835879aba"
+        },
+        {
+          "original_lines": [
+            5290,
+            5302
+          ],
+          "generated_lines": [
+            5348,
+            5360
+          ],
+          "sha256": "9e9e8f84ec50edb8715440e5fc5af426d34d4107b5f5a18872a87a7e0bfd3419"
+        },
+        {
+          "original_lines": [
+            5303,
+            5304
+          ],
+          "generated_lines": [
+            5362,
+            5363
+          ],
+          "sha256": "1dc75afa717cc40307c051996d26931751e31e8501472008e761e5e4567670a1"
+        },
+        {
+          "original_lines": [
+            5305,
+            5526
+          ],
+          "generated_lines": [
+            5365,
+            5586
+          ],
+          "sha256": "36aafb744f355970d03a752fb00cdc0b664f72b9cd054551859d4c505ad275d2"
+        },
+        {
+          "original_lines": [
+            5527,
+            6063
+          ],
+          "generated_lines": [
+            5589,
+            6125
+          ],
+          "sha256": "6458e2890500c4355e104a7193577718e6055700cca34b476ae910df97904913"
+        },
+        {
+          "original_lines": [
+            6065,
+            6930
+          ],
+          "generated_lines": [
+            6127,
+            6992
+          ],
+          "sha256": "7b99179576b2395baade637787beebd36d78be7783e1486e91bba7d67a7eafb0"
+        },
+        {
+          "original_lines": [
+            6932,
+            6933
+          ],
+          "generated_lines": [
+            6997,
+            6998
+          ],
+          "sha256": "6ff991c30b100bd7f2344238af3f2db885ae4d61b999aba7cbde9bd524fbc0fa"
+        },
+        {
+          "original_lines": [
+            6935,
+            6935
+          ],
+          "generated_lines": [
+            7000,
+            7000
+          ],
+          "sha256": "27e5788d5d9d73d24a81dbc0a5a74bfa82c9c3b3af99e52af796e90b468a8a3d"
+        },
+        {
+          "original_lines": [
+            6936,
+            6974
+          ],
+          "generated_lines": [
+            7002,
+            7040
+          ],
+          "sha256": "ca39f247e041d50a3cd066e3eff94aa28f381def02a18375f4ef96d83af06743"
+        },
+        {
+          "original_lines": [
+            6975,
+            7026
+          ],
+          "generated_lines": [
+            7042,
+            7093
+          ],
+          "sha256": "eb1e2af1f109b6906010c99724fe8d0581cc00b7471f0e6678869a9e2d1d3d62"
+        },
+        {
+          "original_lines": [
+            7027,
+            7045
+          ],
+          "generated_lines": [
+            7095,
+            7113
+          ],
+          "sha256": "24f5bfcaf09181ec0104c38c467de4697fe29abfa30fb11940e06b6a4a109a92"
+        },
+        {
+          "original_lines": [
+            7046,
+            7083
+          ],
+          "generated_lines": [
+            7115,
+            7152
+          ],
+          "sha256": "25a52f847e3871af97af0805fefc5b65e6773bda5dc23491e0576bd1a06c33f7"
+        },
+        {
+          "original_lines": [
+            7084,
+            7104
+          ],
+          "generated_lines": [
+            7154,
+            7174
+          ],
+          "sha256": "48df4bff96db6b0998802be41b5f97bf3557664545b40da76991e59750097b10"
+        },
+        {
+          "original_lines": [
+            7105,
+            8457
+          ],
+          "generated_lines": [
+            7176,
+            8528
+          ],
+          "sha256": "86719d4e43ba83dffb45281e316be50bdfe65cbc55f5728bc0de0018d5f36784"
+        },
+        {
+          "original_lines": [
+            8459,
+            8460
+          ],
+          "generated_lines": [
+            8530,
+            8531
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8462,
+            8470
+          ],
+          "generated_lines": [
+            8533,
+            8541
+          ],
+          "sha256": "3c2d535045603ed2ef3648ab7ee5f00dd65c261f79fd62e8b7594bb0cbacd7b5"
+        },
+        {
+          "original_lines": [
+            8472,
+            8473
+          ],
+          "generated_lines": [
+            8543,
+            8544
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8475,
+            8483
+          ],
+          "generated_lines": [
+            8546,
+            8554
+          ],
+          "sha256": "4862ab811690d57667f21a59c9e9b446f2ef109fcb4e8356d5ae6220a14e6483"
+        },
+        {
+          "original_lines": [
+            8485,
+            8486
+          ],
+          "generated_lines": [
+            8556,
+            8557
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8488,
+            8504
+          ],
+          "generated_lines": [
+            8559,
+            8575
+          ],
+          "sha256": "52c742fb1bfc201c8a18000302f6b4cde61dc4618b0a649af67b9f505fdab9da"
+        },
+        {
+          "original_lines": [
+            8506,
+            8507
+          ],
+          "generated_lines": [
+            8577,
+            8578
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8509,
+            8517
+          ],
+          "generated_lines": [
+            8580,
+            8588
+          ],
+          "sha256": "2cbe2452d8e0b9a5a28155487772196918dac267298f855dcaca230d825fecd3"
+        },
+        {
+          "original_lines": [
+            8519,
+            8520
+          ],
+          "generated_lines": [
+            8590,
+            8591
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8522,
+            8530
+          ],
+          "generated_lines": [
+            8593,
+            8601
+          ],
+          "sha256": "8c05fc83740da114e03014f50f8bc660faea87bf41ed2551029f1d5f0892c9fd"
+        },
+        {
+          "original_lines": [
+            8532,
+            8533
+          ],
+          "generated_lines": [
+            8603,
+            8604
+          ],
+          "sha256": "9b13e74e172bdd162f382f97d732f9ea2a21da95b707d3c0fd1e68d9d024c1c9"
+        },
+        {
+          "original_lines": [
+            8535,
+            8904
+          ],
+          "generated_lines": [
+            8606,
+            8975
+          ],
+          "sha256": "866b580841bc61e1403e361dfa987a5b22f2551fd9bfbd588adf9045b80dd961"
+        },
+        {
+          "original_lines": [
+            8906,
+            8907
+          ],
+          "generated_lines": [
+            8977,
+            8978
+          ],
+          "sha256": "6cce92d7df4e1f0ac57ab63e9c4bde3d0c8b4634ff283e8396474949be36d1a1"
+        },
+        {
+          "original_lines": [
+            8909,
+            8970
+          ],
+          "generated_lines": [
+            8980,
+            9041
+          ],
+          "sha256": "1a9333b35a8e2214ca157dc335fc310f779a16e17803474c478b1fa72e12cb44"
+        },
+        {
+          "original_lines": [
+            8972,
+            8973
+          ],
+          "generated_lines": [
+            9043,
+            9044
+          ],
+          "sha256": "6cce92d7df4e1f0ac57ab63e9c4bde3d0c8b4634ff283e8396474949be36d1a1"
+        },
+        {
+          "original_lines": [
+            8975,
+            9267
+          ],
+          "generated_lines": [
+            9046,
+            9338
+          ],
+          "sha256": "eafcf74e172fcc56144bba531639785e09f2eb79c9df52b7c6ed7d7bde04e0d0"
+        },
+        {
+          "original_lines": [
+            9269,
+            9384
+          ],
+          "generated_lines": [
+            9340,
+            9455
+          ],
+          "sha256": "92dd4bdebfd003274a1278ca7b6b04addd4088cfe4b7652c61691de4a2453235"
+        },
+        {
+          "original_lines": [
+            9385,
+            9385
+          ],
+          "generated_lines": [
+            9458,
+            9458
+          ],
+          "sha256": "bbdd44db984c57e51efee0fb70236e4f30a0edbb201ef1da2afbc8e2f7f93df9"
+        },
+        {
+          "original_lines": [
+            9386,
+            9419
+          ],
+          "generated_lines": [
+            9460,
+            9493
+          ],
+          "sha256": "6425784f76944eb626fbd9c4924c09f9c0259672ccba883dd206dc352abaa4f8"
+        },
+        {
+          "original_lines": [
+            9421,
+            9607
+          ],
+          "generated_lines": [
+            9495,
+            9681
+          ],
+          "sha256": "5e7222ca9ffd657fe467089e02c94aa05bdac35f1df047d5d8f28c7ad84a4f04"
+        },
+        {
+          "original_lines": [
+            9609,
+            9698
+          ],
+          "generated_lines": [
+            9683,
+            9772
+          ],
+          "sha256": "0b7d700836e127383dbdcfe006e26a9f82cf032d1a3c6e6edeceb7867df31c75"
+        },
+        {
+          "original_lines": [
+            9699,
+            9708
+          ],
+          "generated_lines": [
+            9786,
+            9795
+          ],
+          "sha256": "cc5cf7594513f5383bae56748f1a596d1ddab09c1ba20486e8e06bcf3ffcaba2"
+        },
+        {
+          "original_lines": [
+            9710,
+            9722
+          ],
+          "generated_lines": [
+            9804,
+            9816
+          ],
+          "sha256": "b4059a9db8ea46ab2f77e3038b330a4553b78fbf8a02f026b9feb42d34cbf2da"
+        },
+        {
+          "original_lines": [
+            9723,
+            9745
+          ],
+          "generated_lines": [
+            9818,
+            9840
+          ],
+          "sha256": "52b19d5fd0e6944e6481b0f199673579a898c9521a489a0728b8fdb861d30443"
+        },
+        {
+          "original_lines": [
+            9747,
+            9772
+          ],
+          "generated_lines": [
+            9842,
+            9867
+          ],
+          "sha256": "cbc46ec8c0225b1d84a2ccfdfd5fd19182e64301b20ae947d00c189abf9a314a"
+        },
+        {
+          "original_lines": [
+            9773,
+            9848
+          ],
+          "generated_lines": [
+            9869,
+            9944
+          ],
+          "sha256": "c77fc540932fcd6dfc8e4ecae10c4b7958e4ad4953f52f9f545fcc57727918ec"
+        },
+        {
+          "original_lines": [
+            9850,
+            9940
+          ],
+          "generated_lines": [
+            9946,
+            10036
+          ],
+          "sha256": "8b7a3f3d3d7bc210b5237bf544774ae41aabc6c37e57085f13551c9637afefbc"
+        },
+        {
+          "original_lines": [
+            9942,
+            10067
+          ],
+          "generated_lines": [
+            10038,
+            10163
+          ],
+          "sha256": "e63fde9a0c17d29fcef25e79ad1a8a148123037c64719a35aae3cd413359be3c"
+        },
+        {
+          "original_lines": [
+            10069,
+            10083
+          ],
+          "generated_lines": [
+            10165,
+            10179
+          ],
+          "sha256": "e47c3d0a7e8be4bb1ee4acc2555c2fcb3d6a403a41dbe6c80ba413917e977b50"
+        },
+        {
+          "original_lines": [
+            10084,
+            10628
+          ],
+          "generated_lines": [
+            10181,
+            10725
+          ],
+          "sha256": "12faec53581de0a7fac4f658e97f4380cb2641f0409460f5c05d73d701dbd3b8"
+        },
+        {
+          "original_lines": [
+            10629,
+            10688
+          ],
+          "generated_lines": [
+            10728,
+            10787
+          ],
+          "sha256": "37e690df192db05c34f517decb254d4021c52c187281c066f497ebdbac782ac8"
+        },
+        {
+          "original_lines": [
+            10689,
+            10712
+          ],
+          "generated_lines": [
+            10789,
+            10812
+          ],
+          "sha256": "d1bb2419c5befeb3f45b5cfde19405cdf2e3801399b278e085156ed6b731a6f8"
+        },
+        {
+          "original_lines": [
+            10714,
+            10719
+          ],
+          "generated_lines": [
+            10818,
+            10823
+          ],
+          "sha256": "b93cdf754bf67148e56a381c667acc1c3668c902548aa7419794c678696f8aa2"
+        },
+        {
+          "original_lines": [
+            10721,
+            10721
+          ],
+          "generated_lines": [
+            10826,
+            10826
+          ],
+          "sha256": "389624fb06128adb703349a5c356dae99f6fe1218da0008b84e5838b5203ff96"
+        },
+        {
+          "original_lines": [
+            10722,
+            10723
+          ],
+          "generated_lines": [
+            10828,
+            10829
+          ],
+          "sha256": "54f52c25127c31153dc1cb9aa62068c123d6531a4b5b585eed16cf10ef6f3852"
+        },
+        {
+          "original_lines": [
+            10725,
+            10725
+          ],
+          "generated_lines": [
+            10832,
+            10832
+          ],
+          "sha256": "dfac4e43630abf68c3a4a7573fd4c43008ba798dd76c3759eeef53e6cff8d2e5"
+        },
+        {
+          "original_lines": [
+            10726,
+            10727
+          ],
+          "generated_lines": [
+            10834,
+            10835
+          ],
+          "sha256": "ecefc0f4ef17495319dec01c8b2acfdc2f4391dbfcf5c62ccbcc2cd1ba0ebd43"
+        },
+        {
+          "original_lines": [
+            10729,
+            10729
+          ],
+          "generated_lines": [
+            10838,
+            10838
+          ],
+          "sha256": "dfac4e43630abf68c3a4a7573fd4c43008ba798dd76c3759eeef53e6cff8d2e5"
+        },
+        {
+          "original_lines": [
+            10730,
+            10731
+          ],
+          "generated_lines": [
+            10840,
+            10841
+          ],
+          "sha256": "31ddd836384c030348be4cefea3afb1187147bf850815f33ffb53549649a3981"
+        },
+        {
+          "original_lines": [
+            10733,
+            10733
+          ],
+          "generated_lines": [
+            10844,
+            10844
+          ],
+          "sha256": "dfac4e43630abf68c3a4a7573fd4c43008ba798dd76c3759eeef53e6cff8d2e5"
+        },
+        {
+          "original_lines": [
+            10734,
+            10734
+          ],
+          "generated_lines": [
+            10846,
+            10846
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            10735,
+            10735
+          ],
+          "generated_lines": [
+            10848,
+            10848
+          ],
+          "sha256": "db9d698d89e22b7884992713dd8ea8a58d367c5e342e57c3d6be3a190895ff4e"
+        },
+        {
+          "original_lines": [
+            10736,
+            10738
+          ],
+          "generated_lines": [
+            10852,
+            10854
+          ],
+          "sha256": "f4f3082be8aefa7b390dd5e28c5a4f20e1ac8e9d6ed640958615e858395bb530"
+        },
+        {
+          "original_lines": [
+            10739,
+            10761
+          ],
+          "generated_lines": [
+            10859,
+            10881
+          ],
+          "sha256": "ed088ca4be3ff4806fc28a1a1137ef8eb91857350f86f3163146eba9bd0d3c60"
+        },
+        {
+          "original_lines": [
+            10762,
+            10765
+          ],
+          "generated_lines": [
+            10885,
+            10888
+          ],
+          "sha256": "44261845382e3135a49fb5230223007a6f88e6e19c63082f00daec45f0b1e58c"
+        },
+        {
+          "original_lines": [
+            10766,
+            10770
+          ],
+          "generated_lines": [
+            10890,
+            10894
+          ],
+          "sha256": "0a8c416ba961015bb3a47a0c314a8d80117cd36685613cfc690098b2799fd6f6"
+        },
+        {
+          "original_lines": [
+            10771,
+            10780
+          ],
+          "generated_lines": [
+            10896,
+            10905
+          ],
+          "sha256": "f3871293dca8535eb003adca90036051038ea618ed405a2acfeefb0f4d2cdca2"
+        },
+        {
+          "original_lines": [
+            10782,
+            10782
+          ],
+          "generated_lines": [
+            10908,
+            10908
+          ],
+          "sha256": "06ab271afa0a0542f05554e606760fe5c9d3ec7e195d9f8821c78e377e53bc02"
+        },
+        {
+          "original_lines": [
+            10785,
+            10785
+          ],
+          "generated_lines": [
+            10912,
+            10912
+          ],
+          "sha256": "5339925b2f2a9b4890052cffacea47da85f5057b4dc4b23f370bcb28b4c12739"
+        },
+        {
+          "original_lines": [
+            10786,
+            10791
+          ],
+          "generated_lines": [
+            10914,
+            10919
+          ],
+          "sha256": "e0485bf5e48ffb8561472de608e3d83313c43d9c633857f5c401e5037950a894"
+        },
+        {
+          "original_lines": [
+            10793,
+            10798
+          ],
+          "generated_lines": [
+            10921,
+            10926
+          ],
+          "sha256": "74157c5c0093820b4eb713947feae5b197f84e128c5d96683fb2ed065487eba2"
+        },
+        {
+          "original_lines": [
+            10800,
+            10848
+          ],
+          "generated_lines": [
+            10928,
+            10976
+          ],
+          "sha256": "392b63e6700088ffe021c252840fb8abe32d618a32d7d461b6b57bcf15c4a19c"
+        },
+        {
+          "original_lines": [
+            10850,
+            10850
+          ],
+          "generated_lines": [
+            10979,
+            10979
+          ],
+          "sha256": "d2d4551b47f6d2f100c5b5441f9ddb1eb26b51e93409288de6b6d9fd779925e4"
+        },
+        {
+          "original_lines": [
+            10852,
+            10862
+          ],
+          "generated_lines": [
+            10981,
+            10991
+          ],
+          "sha256": "e6101727e8d20558be4d61fd8eb8a67b187cc1e91304124f3cb84bf536d61b33"
+        },
+        {
+          "original_lines": [
+            10864,
+            10864
+          ],
+          "generated_lines": [
+            10994,
+            10994
+          ],
+          "sha256": "4b4ea33621f5064f1f884922f8f1f4e67d0b7be94faa579ef36f38f5af6d8c58"
+        },
+        {
+          "original_lines": [
+            10866,
+            10877
+          ],
+          "generated_lines": [
+            10997,
+            11008
+          ],
+          "sha256": "ecc697ff6892313b8b32824c3a265988683cd8796dcaf293cdbf447794b5dec3"
+        },
+        {
+          "original_lines": [
+            10879,
+            10931
+          ],
+          "generated_lines": [
+            11011,
+            11063
+          ],
+          "sha256": "37b5d3e811736497b4710a39bebf50cec123ec8b06fc77d5b8fdcd3fa664051c"
+        },
+        {
+          "original_lines": [
+            10933,
+            11010
+          ],
+          "generated_lines": [
+            11065,
+            11142
+          ],
+          "sha256": "269ca280904a17c34cde438295d0ac1c8a6876b52aae78b580228b6a60ddc1d2"
+        },
+        {
+          "original_lines": [
+            11012,
+            11012
+          ],
+          "generated_lines": [
+            11145,
+            11145
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            11014,
+            11020
+          ],
+          "generated_lines": [
+            11147,
+            11153
+          ],
+          "sha256": "b7e3df9aa4b799d7495d20071d238ec39a258a325cd2ecff4c7c43a6f25e885c"
+        },
+        {
+          "original_lines": [
+            11022,
+            11022
+          ],
+          "generated_lines": [
+            11155,
+            11155
+          ],
+          "sha256": "56b409c1a16af7d545d337fc2d2d7fafe8eef41b33205ee55d8ee8694b8f6985"
+        },
+        {
+          "original_lines": [
+            11024,
+            11025
+          ],
+          "generated_lines": [
+            11157,
+            11158
+          ],
+          "sha256": "0d26ed57aff0ce983d269d52cd731b6c8c5f23301e4e2d29bde483e783e7fb5f"
+        },
+        {
+          "original_lines": [
+            11027,
+            11029
+          ],
+          "generated_lines": [
+            11160,
+            11162
+          ],
+          "sha256": "bfa60a754615eb78d967e6c0ed2b57195d9e66dcecaed75aaa72ae153df5f0ae"
+        },
+        {
+          "original_lines": [
+            11031,
+            11034
+          ],
+          "generated_lines": [
+            11167,
+            11170
+          ],
+          "sha256": "0fa5460b0d7fefa69cfef22210f17c3cb45adf8a60f608fdbb99e0b8ba2e18b3"
+        },
+        {
+          "original_lines": [
+            11036,
+            11037
+          ],
+          "generated_lines": [
+            11172,
+            11173
+          ],
+          "sha256": "20a40f539ff5681bd486bbd62b0c504e3451690aa0084c1cd5daceef1696f640"
+        },
+        {
+          "original_lines": [
+            11039,
+            11042
+          ],
+          "generated_lines": [
+            11175,
+            11178
+          ],
+          "sha256": "62a93e86bcfe59b26da3456e36b86fcbbfeefed2f8b8ba260a1ac810317b957d"
+        },
+        {
+          "original_lines": [
+            11044,
+            11056
+          ],
+          "generated_lines": [
+            11180,
+            11192
+          ],
+          "sha256": "c9bf39361d1286d02603df5df9263b28a4df5f9c0a9db9570ee78dc99de52c75"
+        },
+        {
+          "original_lines": [
+            11058,
+            11058
+          ],
+          "generated_lines": [
+            11194,
+            11194
+          ],
+          "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+        },
+        {
+          "original_lines": [
+            11060,
+            11489
+          ],
+          "generated_lines": [
+            11199,
+            11628
+          ],
+          "sha256": "3fdb4d3a7c352471f9268dabfe154ff1795ea26eeb85be6aab82eb632c21861d"
+        },
+        {
+          "original_lines": [
+            11490,
+            11522
+          ],
+          "generated_lines": [
+            11633,
+            11665
+          ],
+          "sha256": "3695bab57bd6728121b3c18f1e88ec487fbde754b92d1da66378a4de5f41571f"
+        },
+        {
+          "original_lines": [
+            11523,
+            11763
+          ],
+          "generated_lines": [
+            11670,
+            11910
+          ],
+          "sha256": "3f470e34ac1c15f8aa4184b384b6c03db13a15e2681d28664e10a76af7505fef"
+        },
+        {
+          "original_lines": [
+            11765,
+            12533
+          ],
+          "generated_lines": [
+            11912,
+            12680
+          ],
+          "sha256": "fd1906cb2a9ab0445fe7a4310ebe266d07443471f24dddfd7c00a0e83e4f3896"
+        },
+        {
+          "original_lines": [
+            12612,
+            12765
+          ],
+          "generated_lines": [
+            12699,
+            12852
+          ],
+          "sha256": "05ee84ebfc6c4ac65b5e8d0a65b67d1e4aa4a83e300f100015d3c1739a8f6ccd"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 0,
+          "replacement": "#include \"presentation.hpp\"\n#include \"no5_dash_batch.hpp\"\n"
+        },
+        {
+          "start_line": 75,
+          "end_line_exclusive": 75,
+          "replacement": "#include \"tesselator.h\"\n"
+        },
+        {
+          "start_line": 90,
+          "end_line_exclusive": 91,
+          "replacement": "thread_local s52plib *ps52plib;  ///< Global instance\n"
+        },
+        {
+          "start_line": 129,
+          "end_line_exclusive": 136,
+          "replacement": "thread_local GLint S52color_tri_shader_program;\nthread_local GLint S52texture_2D_shader_program;\nthread_local GLint S52texture_2D_ColorMod_shader_program;\nthread_local GLint S52circle_filled_shader_program;\nthread_local GLint S52ring_shader_program;\nthread_local GLint S52Dash_shader_program;\nthread_local GLint S52AP_shader_program;\n"
+        },
+        {
+          "start_line": 1224,
+          "end_line_exclusive": 1225,
+          "replacement": ""
+        },
+        {
+          "start_line": 1788,
+          "end_line_exclusive": 1789,
+          "replacement": "static void rotate(wxRect2D *r, VPointCompat const *vp) {\n"
+        },
+        {
+          "start_line": 1793,
+          "end_line_exclusive": 1795,
+          "replacement": "  double x = r->x - cx;\n  double y = r->y - cy;\n"
+        },
+        {
+          "start_line": 1806,
+          "end_line_exclusive": 1806,
+          "replacement": "  if (no5::measuringPortrayalBounds) bCheckOverlap = false;\n"
+        },
+        {
+          "start_line": 1848,
+          "end_line_exclusive": 1848,
+          "replacement": "        no5::DetailScope profileTextTexture(no5::RenderDetail::TextTexture);\n"
+        },
+        {
+          "start_line": 1925,
+          "end_line_exclusive": 1925,
+          "replacement": "          no5::presentationTextHalo(pRGBA, ws, hs, ccolor);\n\n"
+        },
+        {
+          "start_line": 1946,
+          "end_line_exclusive": 1946,
+          "replacement": "          if (no5::profileActive) ++no5::currentProfile.textTexturesCreated;\n"
+        },
+        {
+          "start_line": 1952,
+          "end_line_exclusive": 1952,
+          "replacement": "        no5::DetailScope profileTextLayout(no5::RenderDetail::TextLayout);\n"
+        },
+        {
+          "start_line": 2013,
+          "end_line_exclusive": 2013,
+          "replacement": "        if (fabs(vp_plib.rotation) > .01) rotate(pRectDrawn, &vp_plib);\n"
+        },
+        {
+          "start_line": 2017,
+          "end_line_exclusive": 2017,
+          "replacement": "        profileTextLayout.finish();\n"
+        },
+        {
+          "start_line": 2021,
+          "end_line_exclusive": 2021,
+          "replacement": "          no5::DetailScope profileTextSubmit(no5::RenderDetail::TextSubmit);\n"
+        },
+        {
+          "start_line": 2215,
+          "end_line_exclusive": 2215,
+          "replacement": "      // Store bounds in final display coordinates even when decluttering is off.\n      if (fabs(vp_plib.rotation) > .01) rotate(pRectDrawn, &vp_plib);\n"
+        },
+        {
+          "start_line": 2216,
+          "end_line_exclusive": 2219,
+          "replacement": ""
+        },
+        {
+          "start_line": 2234,
+          "end_line_exclusive": 2235,
+          "replacement": "        f_cache->RenderString(ptext->frmtd, xp, yp, vp_plib.rotation);\n"
+        },
+        {
+          "start_line": 2309,
+          "end_line_exclusive": 2319,
+          "replacement": "    // The No5 CPU projection already rotates the anchor. Applying the desktop\n    // ChartCanvas rotation here again would move text away from its feature.\n"
+        },
+        {
+          "start_line": 2383,
+          "end_line_exclusive": 2384,
+          "replacement": "  if (!no5::measuringPortrayalBounds && (rzRules->obj->bIsAton) &&\n"
+        },
+        {
+          "start_line": 2418,
+          "end_line_exclusive": 2419,
+          "replacement": "  NO5_DETAIL_EVENT(TextRequested, rzRules);\n  if (!TextRenderCheck(rzRules)) { NO5_DETAIL_EVENT(TextCheckRejected, rzRules); return 0; }\n"
+        },
+        {
+          "start_line": 2422,
+          "end_line_exclusive": 2422,
+          "replacement": "  bool b_secondary_text = false;\n"
+        },
+        {
+          "start_line": 2440,
+          "end_line_exclusive": 2442,
+          "replacement": "  //    Additional GLES text rules are retained by the first text. Their\n  //    layout is still evaluated every frame; they never enter the declutter\n  //    list independently, preserving the original union-rectangle behavior.\n"
+        },
+        {
+          "start_line": 2447,
+          "end_line_exclusive": 2453,
+          "replacement": "      b_secondary_text = true;\n      bool cache_text = false;\n#ifdef ocpnUSE_GL\n      cache_text = !m_pdc && !rzRules->obj->bIsClone;\n#ifndef __ANDROID__\n      const char *cache_switch = std::getenv(\"NO5_SECONDARY_TEXT_CACHE\");\n      if (cache_switch && cache_switch[0] == '0') cache_text = false;\n#endif\n#endif\n      std::unique_ptr<S52_TextC> *slot = nullptr;\n      std::string instruction;\n      if (cache_text) {\n        instruction.assign(rules->INSTstr,\n                           strcspn(rules->INSTstr, \";\\037\"));\n        for (auto &cached : rzRules->obj->FText->secondaryTexts) {\n          if (cached->rul_seq_creator == rules->n_sequence &&\n              cached->cacheIsTX == bTX) {\n            slot = &cached;\n            if (cached->cacheInstruction == instruction) text = cached.get();\n            break;\n          }\n        }\n      }\n      if (!text) {\n        text = bTX ? S52_PL_parseTX(rzRules, rules, NULL)\n                   : S52_PL_parseTE(rzRules, rules, NULL);\n        if (text && cache_text) {\n          if (no5::profileActive) ++no5::currentProfile.secondaryTextCacheMisses;\n          text->rul_seq_creator = rules->n_sequence;\n          text->cacheIsTX = bTX;\n          text->cacheInstruction = instruction;\n          if (slot) slot->reset(text);\n          else rzRules->obj->FText->secondaryTexts.emplace_back(text);\n        } else b_free_text = true;\n      } else if (cache_text && no5::profileActive)\n        ++no5::currentProfile.secondaryTextCacheHits;\n"
+        },
+        {
+          "start_line": 2458,
+          "end_line_exclusive": 2458,
+          "replacement": "      NO5_DETAIL_EVENT(ImportantTextRejected, rzRules);\n"
+        },
+        {
+          "start_line": 2555,
+          "end_line_exclusive": 2555,
+          "replacement": "    if (bwas_drawn) NO5_DETAIL_EVENT(TextDrawn, rzRules);\n    else NO5_DETAIL_EVENT(TextNotDrawn, rzRules);\n"
+        },
+        {
+          "start_line": 2556,
+          "end_line_exclusive": 2561,
+          "replacement": "    //  Keep additional text bounds in the first text's union rectangle,\n    //  whether their textures are retained or temporary. The overlap test and\n    //  hit-test bounding box must behave exactly as before caching.\n"
+        },
+        {
+          "start_line": 2562,
+          "end_line_exclusive": 2564,
+          "replacement": "    if (b_secondary_text) {\n      if (b_free_text) delete text;\n"
+        },
+        {
+          "start_line": 2622,
+          "end_line_exclusive": 2622,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Text);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Text))return 0;\n"
+        },
+        {
+          "start_line": 2627,
+          "end_line_exclusive": 2627,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Text);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Text))return 0;\n"
+        },
+        {
+          "start_line": 3588,
+          "end_line_exclusive": 3588,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Symbols);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Symbols))return 0;\n"
+        },
+        {
+          "start_line": 4303,
+          "end_line_exclusive": 4303,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::SimpleLines);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Lines))return 0;\n"
+        },
+        {
+          "start_line": 4463,
+          "end_line_exclusive": 4463,
+          "replacement": "  // Same original client vertices and primitive order; no new visibility filter.\n  // Legacy/VBO and ushort-incompatible strips keep their existing draw calls.\n  const bool batchLines = !b_useVBO && no5::batchSolidLines();\n  auto submitLines = [&](const std::uint16_t* indices, std::size_t count) {\n    glDrawElements(GL_LINES, count, GL_UNSIGNED_SHORT, indices);\n  };\n  no5::LineIndexBatch<decltype(submitLines)> lineBatch(submitLines);\n\n"
+        },
+        {
+          "start_line": 4496,
+          "end_line_exclusive": 4498,
+          "replacement": "        const auto first = seg_vbo_offset / (2 * sizeof(float));\n        if (!batchLines || first > 65534 || point_count > 65535 ||\n            !lineBatch.appendStrip(static_cast<int>(first), static_cast<int>(point_count))) {\n          lineBatch.flush();\n          glDrawArrays(GL_LINE_STRIP, first, point_count);\n        }\n"
+        },
+        {
+          "start_line": 4502,
+          "end_line_exclusive": 4502,
+          "replacement": "\n  lineBatch.flush();\n"
+        },
+        {
+          "start_line": 5087,
+          "end_line_exclusive": 5087,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::DashedLines);\n  no5::DetailScope profileSetup(no5::RenderDetail::DashSetup);\n"
+        },
+        {
+          "start_line": 5173,
+          "end_line_exclusive": 5174,
+          "replacement": "  GLint startPos = glGetAttribLocation(S52Dash_shader_program, \"segmentStart\");\n  glEnableVertexAttribArray(startPos);\n"
+        },
+        {
+          "start_line": 5216,
+          "end_line_exclusive": 5216,
+          "replacement": "  profileSetup.finish();\n  auto submitDashes = [&](const no5::DashVertex* vertices, std::size_t count) {\n    no5::DetailScope profileSubmit(no5::RenderDetail::DashSubmit);\n    if (no5::profileActive) {\n      no5::currentProfile.dashSegmentsSubmitted += count / 2;\n      ++no5::currentProfile.dashBatchesSubmitted;\n    }\n    glVertexAttribPointer(mPosAttrib, 2, GL_FLOAT, GL_FALSE,\n                          sizeof(no5::DashVertex), &vertices[0].x);\n    glVertexAttribPointer(startPos, 2, GL_FLOAT, GL_FALSE,\n                          sizeof(no5::DashVertex), &vertices[0].startX);\n    glDrawArrays(GL_LINES, 0, static_cast<GLsizei>(count));\n  };\n  no5::DashBatch<decltype(submitDashes)> dashBatch(submitDashes);\n"
+        },
+        {
+          "start_line": 5217,
+          "end_line_exclusive": 5217,
+          "replacement": "    no5::DetailScope profileSegments(no5::RenderDetail::DashSegments);\n"
+        },
+        {
+          "start_line": 5269,
+          "end_line_exclusive": 5289,
+          "replacement": "                // Projection, clipping and traversal order stay unchanged.\n                // Compute phase before float conversion, as with the old uniform.\n                dashBatch.append(x0, y0, x1, y1, x0, vp_plib.pix_height - y0);\n"
+        },
+        {
+          "start_line": 5302,
+          "end_line_exclusive": 5302,
+          "replacement": "  dashBatch.flush();\n"
+        },
+        {
+          "start_line": 5304,
+          "end_line_exclusive": 5304,
+          "replacement": "  glDisableVertexAttribArray(startPos);\n"
+        },
+        {
+          "start_line": 5526,
+          "end_line_exclusive": 5526,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::ComplexLines);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Lines))return 0;\n"
+        },
+        {
+          "start_line": 6063,
+          "end_line_exclusive": 6064,
+          "replacement": "      {no5::DetailScope tessellation(no5::RenderDetail::Tessellation);rzRules->obj->pPolyTessGeo->BuildDeferredTess();}\n"
+        },
+        {
+          "start_line": 6589,
+          "end_line_exclusive": 6590,
+          "replacement": "      // Round the double angle once: some atan2f implementations round pi down, moving integer HPGL vertices.\n      theta = static_cast<float>(std::atan2(static_cast<double>(dy), static_cast<double>(dx)));\n"
+        },
+        {
+          "start_line": 6759,
+          "end_line_exclusive": 6760,
+          "replacement": "            theta = static_cast<float>(std::atan2(static_cast<double>(dy), static_cast<double>(dx)));\n"
+        },
+        {
+          "start_line": 6893,
+          "end_line_exclusive": 6894,
+          "replacement": "    theta = static_cast<float>(std::atan2(static_cast<double>(dy), static_cast<double>(dx))) * 180 / PI;\n"
+        },
+        {
+          "start_line": 6928,
+          "end_line_exclusive": 6928,
+          "replacement": "// One native font measurement for both per-point clipping and parent bounds.\nwxRect s52plib::SoundingSymbolBox() {\n  SetupSoundingFont();\n  int charWidth, charHeight;\n  wxScreenDC sdc;\n  sdc.GetTextExtent(\"0\", &charWidth, &charHeight, NULL, NULL, m_soundFont);\n  return wxRect(0, 0, charWidth * 4, charHeight * 3 / 2);\n}\n\n"
+        },
+        {
+          "start_line": 6930,
+          "end_line_exclusive": 6931,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Soundings);\n  NO5_DETAIL_EVENT(SoundingsEntered, rzRules);\n  if(no5::suppressPortrayal(no5::PortrayalAblation::Soundings))return 0;\n  if (!m_bShowSoundg) { NO5_DETAIL_EVENT(SoundingsHidden, rzRules); return 0; }\n"
+        },
+        {
+          "start_line": 6933,
+          "end_line_exclusive": 6934,
+          "replacement": "    if (vp_plib.chart_scale > rzRules->obj->Scamin) { NO5_DETAIL_EVENT(SoundingsScaminRejected, rzRules); return 0; }\n"
+        },
+        {
+          "start_line": 6935,
+          "end_line_exclusive": 6935,
+          "replacement": "  NO5_DETAIL_EVENT(SoundingsScaminAllowed, rzRules);\n"
+        },
+        {
+          "start_line": 6974,
+          "end_line_exclusive": 6974,
+          "replacement": "      NO5_DETAIL_POINT(SoundingRulesBuilt, rzRules, lat, lon);\n"
+        },
+        {
+          "start_line": 6999,
+          "end_line_exclusive": 7005,
+          "replacement": "  const wxRect soundBox = SoundingSymbolBox();\n"
+        },
+        {
+          "start_line": 7026,
+          "end_line_exclusive": 7026,
+          "replacement": "    NO5_DETAIL_POINT(SoundingPointVisited, rzRules, lat, lon);\n"
+        },
+        {
+          "start_line": 7045,
+          "end_line_exclusive": 7045,
+          "replacement": "    NO5_DETAIL_POINT(SoundingPointAccepted, rzRules, lat, lon);\n"
+        },
+        {
+          "start_line": 7083,
+          "end_line_exclusive": 7083,
+          "replacement": "          NO5_DETAIL_POINT(SoundingGlyphQueued, rzRules, lat, lon);\n"
+        },
+        {
+          "start_line": 7104,
+          "end_line_exclusive": 7104,
+          "replacement": "  if(no5::suppressPortrayal(no5::PortrayalAblation::Symbols))return 0;\n"
+        },
+        {
+          "start_line": 8005,
+          "end_line_exclusive": 8007,
+          "replacement": "      // Filter exact duplicate acronyms; preserve distinct inland variants.\n"
+        },
+        {
+          "start_line": 8010,
+          "end_line_exclusive": 8011,
+          "replacement": "        // ENC and inland ENC class identifiers are case-sensitive.\n        if (token == wxString(pOLEt->OBJLName, wxConvUTF8)) {\n"
+        },
+        {
+          "start_line": 8457,
+          "end_line_exclusive": 8458,
+          "replacement": "      m = (xmax - xmin) * 256;\n"
+        },
+        {
+          "start_line": 8460,
+          "end_line_exclusive": 8461,
+          "replacement": "      x = xmin * 256;\n"
+        },
+        {
+          "start_line": 8470,
+          "end_line_exclusive": 8471,
+          "replacement": "      m = (xmid - xmin) * 256;\n"
+        },
+        {
+          "start_line": 8473,
+          "end_line_exclusive": 8474,
+          "replacement": "      x = xmin * 256;\n"
+        },
+        {
+          "start_line": 8483,
+          "end_line_exclusive": 8484,
+          "replacement": "      m = (xmax - xmid) * 256;\n"
+        },
+        {
+          "start_line": 8486,
+          "end_line_exclusive": 8487,
+          "replacement": "      x = xmid * 256;\n"
+        },
+        {
+          "start_line": 8504,
+          "end_line_exclusive": 8505,
+          "replacement": "      m = (xmax - xmin) * 65536;\n"
+        },
+        {
+          "start_line": 8507,
+          "end_line_exclusive": 8508,
+          "replacement": "      x = xmin * 65536;\n"
+        },
+        {
+          "start_line": 8517,
+          "end_line_exclusive": 8518,
+          "replacement": "      m = (xmid - xmin) * 65536;\n"
+        },
+        {
+          "start_line": 8520,
+          "end_line_exclusive": 8521,
+          "replacement": "      x = xmin * 65536;\n"
+        },
+        {
+          "start_line": 8530,
+          "end_line_exclusive": 8531,
+          "replacement": "      m = (xmax - xmid) * 65536;\n"
+        },
+        {
+          "start_line": 8533,
+          "end_line_exclusive": 8534,
+          "replacement": "      x = xmid * 65536;\n"
+        },
+        {
+          "start_line": 8904,
+          "end_line_exclusive": 8905,
+          "replacement": "    m = (xmax - xmin) * 65536;\n"
+        },
+        {
+          "start_line": 8907,
+          "end_line_exclusive": 8908,
+          "replacement": "    x = xmin * 65536;\n"
+        },
+        {
+          "start_line": 8970,
+          "end_line_exclusive": 8971,
+          "replacement": "    m = (xmax - xmin) * 65536;\n"
+        },
+        {
+          "start_line": 8973,
+          "end_line_exclusive": 8974,
+          "replacement": "    x = xmin * 65536;\n"
+        },
+        {
+          "start_line": 9267,
+          "end_line_exclusive": 9268,
+          "replacement": "      {no5::DetailScope tessellation(no5::RenderDetail::Tessellation);rzRules->obj->pPolyTessGeo->BuildDeferredTess();}\n"
+        },
+        {
+          "start_line": 9384,
+          "end_line_exclusive": 9384,
+          "replacement": "#include \"no5_triangle_batch.hpp\"\n#include \"no5_area_gpu.hpp\"\n\n"
+        },
+        {
+          "start_line": 9385,
+          "end_line_exclusive": 9385,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::SolidAreas);\n"
+        },
+        {
+          "start_line": 9419,
+          "end_line_exclusive": 9420,
+          "replacement": "      {no5::DetailScope tessellation(no5::RenderDetail::Tessellation);rzRules->obj->pPolyTessGeo->BuildDeferredTess();}\n"
+        },
+        {
+          "start_line": 9474,
+          "end_line_exclusive": 9474,
+          "replacement": "\n    // ANGLE/NVIDIA can request the legacy per-object VBO independently of\n    // g_b_EnableVBO. Prefer the owned retained mesh for eligible native areas\n    // before that legacy upload, rather than making the new path unreachable.\n    const bool retainAreaGpu = no5::areaGpuEnabled() &&\n        no5::currentGlLocationCache() && !rzRules->obj->bIsClone &&\n        !rzRules->obj->auxParm1 && rzRules->obj->auxParm0 >= 0 &&\n        rzRules->obj->m_chart_context->chart &&\n        ppg_vbo->bsingle_alloc && ppg_vbo->data_type == DATA_TYPE_FLOAT &&\n        ppg_vbo->single_buffer &&\n        ppg_vbo->single_buffer_size >=\n            no5::area_gpu_detail::MinimumVertices * 2 * sizeof(float) &&\n        ppg_vbo->single_buffer_size % (2 * sizeof(float)) == 0 &&\n        ppg_vbo->single_buffer_size / (2 * sizeof(float)) <= 65535;\n    if (retainAreaGpu) b_useVBO = false;\n"
+        },
+        {
+          "start_line": 9607,
+          "end_line_exclusive": 9608,
+          "replacement": "      throw std::runtime_error(\"Unconverted double vertices for GLES\");\n"
+        },
+        {
+          "start_line": 9691,
+          "end_line_exclusive": 9691,
+          "replacement": "    // Retain immutable object-space vertices and ordered triangle indices for\n    // larger native AC areas. The original CPU tessellation remains available\n    // to IsPointInObjArea/associations; viewport admission is recomputed below.\n    // Small/plugin/legacy buffers continue through the existing client path.\n    bool retainedAreaDrawn = false;\n    if (retainAreaGpu) {\n      std::vector<no5::AreaGpuPrimitive> primitives;\n      std::vector<unsigned char> selected;\n      const auto vertices = ppg->single_buffer_size / (2 * sizeof(float));\n      std::size_t offset = 0;\n      bool valid = true;\n      for (auto* primitive = ppg->tri_prim_head; primitive;\n           primitive = primitive->p_next) {\n        if (primitive->nVert < 0 || offset > vertices ||\n            static_cast<std::size_t>(primitive->nVert) > vertices - offset ||\n            reinterpret_cast<const unsigned char*>(primitive->p_vertex) !=\n                ppg->single_buffer + offset * 2 * sizeof(float)) {\n          valid = false;\n          break;\n        }\n        primitives.push_back({static_cast<unsigned>(primitive->type),\n                              static_cast<int>(offset), primitive->nVert});\n        selected.push_back(!BBView.IntersectOut(primitive->tri_box));\n        offset += primitive->nVert;\n      }\n      std::size_t usedVertexBytes = 0;\n      if (valid && no5::areaGpuUsedVertexBytes(\n                       offset, ppg->single_buffer_size, usedVertexBytes))\n        retainedAreaDrawn = no5::submitAreaGpu(\n            rzRules->obj, ppg, ppg->single_buffer, usedVertexBytes,\n            primitives, selected, pos);\n    }\n\n    if (!retainedAreaDrawn) {\n"
+        },
+        {
+          "start_line": 9698,
+          "end_line_exclusive": 9698,
+          "replacement": "    // Batch only the existing native float client-array representation. The\n    // element buffer was unbound above; indices therefore address client data.\n    // Keep per-primitive clipping and exact triangle order within this rule.\n    const bool batchAreas = !b_useVBO && rzRules->obj->m_chart_context->chart &&\n        ppg->bsingle_alloc && ppg->data_type == DATA_TYPE_FLOAT &&\n        ppg->single_buffer && ppg->single_buffer_size > 0 &&\n        ppg->single_buffer_size % (2 * sizeof(float)) == 0 &&\n        ppg->single_buffer_size / (2 * sizeof(float)) <= 65535;\n    const auto batchVertices = ppg->single_buffer_size / (2 * sizeof(float));\n    auto submitTriangles = [](const std::uint16_t* indices, std::size_t count) {\n      glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(count), GL_UNSIGNED_SHORT, indices);\n    };\n    no5::TriangleBatch<decltype(submitTriangles)> areaBatch(submitTriangles);\n"
+        },
+        {
+          "start_line": 9708,
+          "end_line_exclusive": 9709,
+          "replacement": "        const bool inBuffer = VBO_offset_index >= 0 && p_tp->nVert >= 0 &&\n            static_cast<std::size_t>(VBO_offset_index) <= batchVertices &&\n            static_cast<std::size_t>(p_tp->nVert) <= batchVertices - VBO_offset_index;\n        if (!batchAreas || !inBuffer ||\n            !areaBatch.append(p_tp->type, VBO_offset_index, p_tp->nVert)) {\n          areaBatch.flush();\n          glDrawArrays(p_tp->type, VBO_offset_index, p_tp->nVert);\n        }\n"
+        },
+        {
+          "start_line": 9722,
+          "end_line_exclusive": 9722,
+          "replacement": "    areaBatch.flush();\n"
+        },
+        {
+          "start_line": 9723,
+          "end_line_exclusive": 9723,
+          "replacement": "    }\n"
+        },
+        {
+          "start_line": 9745,
+          "end_line_exclusive": 9746,
+          "replacement": "#if defined(ocpnUSE_GL) && !defined(USE_ANDROID_GLES2) && !defined(ocpnUSE_GLSL)\n"
+        },
+        {
+          "start_line": 9772,
+          "end_line_exclusive": 9772,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::PatternAreas);\n"
+        },
+        {
+          "start_line": 9848,
+          "end_line_exclusive": 9849,
+          "replacement": "      {no5::DetailScope tessellation(no5::RenderDetail::Tessellation);rzRules->obj->pPolyTessGeo->BuildDeferredTess();}\n"
+        },
+        {
+          "start_line": 9940,
+          "end_line_exclusive": 9941,
+          "replacement": "      throw std::runtime_error(\"Unconverted double vertices for GLES\");\n"
+        },
+        {
+          "start_line": 10067,
+          "end_line_exclusive": 10068,
+          "replacement": "        glGetUniformLocation(program, \"TransformMatrix\");\n"
+        },
+        {
+          "start_line": 10083,
+          "end_line_exclusive": 10083,
+          "replacement": "  if(no5::suppressPortrayal(no5::PortrayalAblation::Areas))return 0;\n"
+        },
+        {
+          "start_line": 10628,
+          "end_line_exclusive": 10628,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Conditional);\n  NO5_DETAIL_EVENT(ConditionalBefore, rzRules);\n"
+        },
+        {
+          "start_line": 10688,
+          "end_line_exclusive": 10688,
+          "replacement": "  NO5_DETAIL_EVENT(ConditionalAfter, rzRules);\n"
+        },
+        {
+          "start_line": 10712,
+          "end_line_exclusive": 10713,
+          "replacement": "#ifdef NO5_LINE_BATCH_PROBE\n  no5::ProbeBBoxScope query(false);\n  const bool retained=[&](){\n#endif\n  if (rzRules->obj == NULL) { NO5_DETAIL_EVENT(PositionRejected, rzRules); return false; }\n  if (no5::measuringPortrayalBounds) return true;\n"
+        },
+        {
+          "start_line": 10719,
+          "end_line_exclusive": 10720,
+          "replacement": "      vpBox.GetMinLat() > testBox.GetMaxLat()) {\n    NO5_DETAIL_EVENT(PositionRejected, rzRules);\n"
+        },
+        {
+          "start_line": 10721,
+          "end_line_exclusive": 10721,
+          "replacement": "  }\n"
+        },
+        {
+          "start_line": 10723,
+          "end_line_exclusive": 10724,
+          "replacement": "      vpBox.GetMinLon() <= testBox.GetMaxLon()) {\n    NO5_DETAIL_EVENT(PositionAccepted, rzRules);\n"
+        },
+        {
+          "start_line": 10725,
+          "end_line_exclusive": 10725,
+          "replacement": "  }\n"
+        },
+        {
+          "start_line": 10727,
+          "end_line_exclusive": 10728,
+          "replacement": "      vpBox.GetMinLon() <= testBox.GetMaxLon() + 360) {\n    NO5_DETAIL_EVENT(PositionAccepted, rzRules);\n"
+        },
+        {
+          "start_line": 10729,
+          "end_line_exclusive": 10729,
+          "replacement": "  }\n"
+        },
+        {
+          "start_line": 10731,
+          "end_line_exclusive": 10732,
+          "replacement": "      vpBox.GetMinLon() <= testBox.GetMaxLon() - 360) {\n    NO5_DETAIL_EVENT(PositionAccepted, rzRules);\n"
+        },
+        {
+          "start_line": 10733,
+          "end_line_exclusive": 10733,
+          "replacement": "  }\n"
+        },
+        {
+          "start_line": 10734,
+          "end_line_exclusive": 10734,
+          "replacement": "  NO5_DETAIL_EVENT(PositionRejected, rzRules);\n"
+        },
+        {
+          "start_line": 10735,
+          "end_line_exclusive": 10735,
+          "replacement": "#ifdef NO5_LINE_BATCH_PROBE\n  }();query.complete(retained);return retained;\n#endif\n"
+        },
+        {
+          "start_line": 10738,
+          "end_line_exclusive": 10738,
+          "replacement": "#ifdef NO5_LINE_BATCH_PROBE\n  no5::ProbeBBoxScope query(true);\n  const bool retained=[&](){\n#endif\n"
+        },
+        {
+          "start_line": 10739,
+          "end_line_exclusive": 10739,
+          "replacement": "  if (no5::measuringPortrayalBounds) return true;\n"
+        },
+        {
+          "start_line": 10761,
+          "end_line_exclusive": 10761,
+          "replacement": "#ifdef NO5_LINE_BATCH_PROBE\n  }();query.complete(retained);return retained;\n#endif\n"
+        },
+        {
+          "start_line": 10765,
+          "end_line_exclusive": 10765,
+          "replacement": "  NO5_DETAIL_EVENT(CategoryEntered, rzRules);\n"
+        },
+        {
+          "start_line": 10770,
+          "end_line_exclusive": 10770,
+          "replacement": "  NO5_DETAIL_CATEGORY_RESULT(rzRules, b_visible);\n"
+        },
+        {
+          "start_line": 10780,
+          "end_line_exclusive": 10781,
+          "replacement": "        if (!m_bShowMeta) {\n          NO5_DETAIL_EVENT(MetaRejected, rzRules);\n"
+        },
+        {
+          "start_line": 10782,
+          "end_line_exclusive": 10784,
+          "replacement": "        } else {\n          if (!strncmp(rzRules->LUP->OBCL, \"M_QUAL\", 6) && !m_qualityOfDataOn) {\n            NO5_DETAIL_EVENT(MetaRejected, rzRules);\n"
+        },
+        {
+          "start_line": 10785,
+          "end_line_exclusive": 10785,
+          "replacement": "          }\n"
+        },
+        {
+          "start_line": 10791,
+          "end_line_exclusive": 10792,
+          "replacement": "      if (!m_bShowMeta) { NO5_DETAIL_EVENT(MetaRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 10798,
+          "end_line_exclusive": 10799,
+          "replacement": "    if (!m_bShowMeta) { NO5_DETAIL_EVENT(MetaRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 10848,
+          "end_line_exclusive": 10849,
+          "replacement": "          (PRIO_GROUP1 == rzRules->LUP->DPRI)) {\n        NO5_DETAIL_EVENT(ScaminExempt, rzRules);\n"
+        },
+        {
+          "start_line": 10850,
+          "end_line_exclusive": 10851,
+          "replacement": "      } else {\n"
+        },
+        {
+          "start_line": 10862,
+          "end_line_exclusive": 10863,
+          "replacement": "          if (vp_plib.chart_scale > rzRules->obj->Scamin * mod) {\n            NO5_DETAIL_EVENT(ScaminRejected, rzRules);\n"
+        },
+        {
+          "start_line": 10864,
+          "end_line_exclusive": 10865,
+          "replacement": "          } else {\n            NO5_DETAIL_EVENT(ScaminAllowed, rzRules);\n"
+        },
+        {
+          "start_line": 10877,
+          "end_line_exclusive": 10878,
+          "replacement": "          if (vp_plib.chart_scale > rzRules->obj->Scamin) { NO5_DETAIL_EVENT(ScaminRejected, rzRules); b_visible = false; }\n          else NO5_DETAIL_EVENT(ScaminAllowed, rzRules);\n"
+        },
+        {
+          "start_line": 10931,
+          "end_line_exclusive": 10932,
+          "replacement": "    } else NO5_DETAIL_EVENT(ScaminDisabled, rzRules);\n"
+        },
+        {
+          "start_line": 11009,
+          "end_line_exclusive": 11009,
+          "replacement": "// Resolve the original conditional procedures before visibility is consumed.\n// SOUNDG retains its original dedicated MP preparation/retention lifecycle.\nvoid s52plib::PrepareObjectRules(ObjRazRules *rzRules) {\n  if (!rzRules || !rzRules->obj || !rzRules->LUP || rzRules->obj->bCS_Added ||\n      !strncmp(rzRules->obj->FeatureName, \"SOUNDG\", 6)) return;\n  for (Rules *rule = rzRules->LUP->ruleList; rule; rule = rule->next) {\n    if (rule->ruleType != RUL_CND_SY) continue;\n    rzRules->obj->CSrules = NULL;\n    GetAndAddCSRules(rzRules, rule);\n    rzRules->obj->bCS_Added = 1;\n    break;\n  }\n}\n\n"
+        },
+        {
+          "start_line": 11010,
+          "end_line_exclusive": 11011,
+          "replacement": "  no5::DetailScope profileScope(no5::RenderDetail::Visibility);\n  if (!rzRules->obj->bOK_to_Render) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11012,
+          "end_line_exclusive": 11013,
+          "replacement": "  if (!ObjectRenderCheckPos(rzRules)) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11020,
+          "end_line_exclusive": 11021,
+          "replacement": "      if (check_noshow && IsObjNoshow(rzRules->LUP->OBCL)) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return 0; }\n"
+        },
+        {
+          "start_line": 11022,
+          "end_line_exclusive": 11023,
+          "replacement": "      if (!m_qualityOfDataOn) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return 0; }\n"
+        },
+        {
+          "start_line": 11025,
+          "end_line_exclusive": 11026,
+          "replacement": "    if (check_noshow && IsObjNoshow(rzRules->LUP->OBCL)) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11029,
+          "end_line_exclusive": 11030,
+          "replacement": "    const bool dated = ObjectRenderCheckDates(rzRules);\n    if (dated) NO5_DETAIL_EVENT(DatesAccepted, rzRules); else NO5_DETAIL_EVENT(DatesRejected, rzRules);\n    if (dated) NO5_DETAIL_EVENT(RulesAccepted, rzRules); else NO5_DETAIL_EVENT(RulesRejected, rzRules);\n    return dated;\n"
+        },
+        {
+          "start_line": 11034,
+          "end_line_exclusive": 11035,
+          "replacement": "  if (!rzRules->obj->m_bcategory_mutable) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11037,
+          "end_line_exclusive": 11038,
+          "replacement": "  if (rzRules->obj->bCS_Added) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11042,
+          "end_line_exclusive": 11043,
+          "replacement": "  if (!ObjectRenderCheckCS(rzRules)) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11056,
+          "end_line_exclusive": 11057,
+          "replacement": "  if (!ObjectRenderCheckCat(rzRules)) { NO5_DETAIL_EVENT(RulesRejected, rzRules); return false; }\n"
+        },
+        {
+          "start_line": 11058,
+          "end_line_exclusive": 11059,
+          "replacement": "  const bool dated = ObjectRenderCheckDates(rzRules);\n  if (dated) NO5_DETAIL_EVENT(DatesAccepted, rzRules); else NO5_DETAIL_EVENT(DatesRejected, rzRules);\n  if (dated) NO5_DETAIL_EVENT(RulesAccepted, rzRules); else NO5_DETAIL_EVENT(RulesRejected, rzRules);\n  return dated;\n"
+        },
+        {
+          "start_line": 11489,
+          "end_line_exclusive": 11489,
+          "replacement": "  double xx=r->x-vp_plib.pix_width/2.0, yy=r->y-vp_plib.pix_height/2.0;\n  double angle=m_pdc ? vp_plib.rotation : 0;\n  double c=cos(angle),s=sin(angle);\n  r->x=wxRound(std::clamp(xx*c-yy*s+vp_plib.pix_width/2.0,-30000.0,30000.0)); r->y=wxRound(std::clamp(xx*s+yy*c+vp_plib.pix_height/2.0,-30000.0,30000.0));\n"
+        },
+        {
+          "start_line": 11522,
+          "end_line_exclusive": 11522,
+          "replacement": "  double xx=r->m_x-vp_plib.pix_width/2.0, yy=r->m_y-vp_plib.pix_height/2.0;\n  double angle=m_pdc ? vp_plib.rotation : 0;\n  double c=cos(angle),s=sin(angle);\n  r->m_x=(std::clamp(xx*c-yy*s+vp_plib.pix_width/2.0,-30000.0,30000.0)); r->m_y=(std::clamp(xx*s+yy*c+vp_plib.pix_height/2.0,-30000.0,30000.0));\n"
+        },
+        {
+          "start_line": 11763,
+          "end_line_exclusive": 11764,
+          "replacement": "  double angle = m_pdc ? vp_plib.rotation : 0;\n"
+        },
+        {
+          "start_line": 12533,
+          "end_line_exclusive": 12611,
+          "replacement": "void RenderFromHPGL::DrawPolygonTessellated(int n, wxPoint points[], wxCoord xoffset, wxCoord yoffset) {\n#ifdef ocpnUSE_GL\n  if (n < 3) return;\n  TESStesselator* tess = tessNewTess(nullptr);\n  if (!tess) throw std::runtime_error(\"HPGL tessellator allocation failed\");\n  std::vector<TESSreal> contour;\n  for (int i=0;i<n;i++){contour.push_back(points[i].x+xoffset);contour.push_back(points[i].y+yoffset);}\n  tessAddContour(tess,2,contour.data(),2*sizeof(TESSreal),n);\n  if (!tessTesselate(tess,TESS_WINDING_NONZERO,TESS_POLYGONS,3,2,nullptr)) {tessDeleteTess(tess);throw std::runtime_error(\"HPGL tessellation failed\");}\n  const auto* vertices=tessGetVertices(tess);const auto* elements=tessGetElements(tess);\n  std::vector<float> triangles;\n  for(int i=0;i<tessGetElementCount(tess);i++)for(int j=0;j<3;j++){auto index=elements[i*3+j];if(index==TESS_UNDEF)continue;triangles.push_back(vertices[index*2]);triangles.push_back(vertices[index*2+1]);}\n  tessDeleteTess(tess);\n  auto* shader=pCcolor_tri_shader_program[0];shader->Bind();\n  glBindBuffer(GL_ARRAY_BUFFER,0);glBindBuffer(GL_ELEMENT_ARRAY_BUFFER,0);\n  auto position=shader->getAttributeLocation(\"position\");glVertexAttribPointer(position,2,GL_FLOAT,GL_FALSE,0,triangles.data());glEnableVertexAttribArray(position);\n  auto colour=brush->GetColour();float rgba[]={colour.Red()/255.f,colour.Green()/255.f,colour.Blue()/255.f,colour.Alpha()/255.f};shader->SetUniform4fv(\"color\",rgba);\n  glDrawArrays(GL_TRIANGLES,0,triangles.size()/2);shader->UnBind();\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52plib.h",
+          "sha256": "2a8fe104e646f52459d98c9aa1a0a014dde79421de6df96987650d7577436a40"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52plib.h",
+      "sha256": "fe4e6590c571a7ac9b5ca0f572156d8c52aba1717c4a1cebdd6c1bc9a61cb133",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            152
+          ],
+          "generated_lines": [
+            1,
+            152
+          ],
+          "sha256": "8dcc65edd8f0492af9978154812c48f6383eb035857b0d4e4f3a9c26de73b59f"
+        },
+        {
+          "original_lines": [
+            154,
+            197
+          ],
+          "generated_lines": [
+            154,
+            197
+          ],
+          "sha256": "ee27018b43c0474740f22e38e136a80605f663bdb9aa2d8dae780340b581b242"
+        },
+        {
+          "original_lines": [
+            198,
+            198
+          ],
+          "generated_lines": [
+            199,
+            199
+          ],
+          "sha256": "6d30ed78295d6ce70c8ed8cc44e078a090da44d0c323d9e7a7c5a2e972cc7d20"
+        },
+        {
+          "original_lines": [
+            199,
+            737
+          ],
+          "generated_lines": [
+            201,
+            739
+          ],
+          "sha256": "cf9f8928c6955078e3f22e651877c2c976b8c7be6ff9af15f1235f13a374aa1d"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 152,
+          "end_line_exclusive": 153,
+          "replacement": "extern thread_local s52plib *ps52plib;  ///< Global instance\n"
+        },
+        {
+          "start_line": 197,
+          "end_line_exclusive": 197,
+          "replacement": "namespace no5 {class No5ChartRenderer;}\n"
+        },
+        {
+          "start_line": 198,
+          "end_line_exclusive": 198,
+          "replacement": "  friend class no5::No5ChartRenderer;\n"
+        },
+        {
+          "start_line": 243,
+          "end_line_exclusive": 243,
+          "replacement": "  void PrepareObjectRules(ObjRazRules *rzRules);\n  wxRect SoundingSymbolBox();\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52plibGL.h",
+          "sha256": "8f08fc6af340e1965b268f8f26c7ed7e7052e488a7cb5150016ebed99c74e98b"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52plibGL.h",
+      "sha256": "8f08fc6af340e1965b268f8f26c7ed7e7052e488a7cb5150016ebed99c74e98b",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            56
+          ],
+          "generated_lines": [
+            1,
+            56
+          ],
+          "sha256": "8f08fc6af340e1965b268f8f26c7ed7e7052e488a7cb5150016ebed99c74e98b"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52s57.h",
+          "sha256": "96d561915b867f5764c7d26b9577a52d121591665a1209a9feca106502cfccfc"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52s57.h",
+      "sha256": "4488a876a1ac0d039bdf06962b2875ca3d198e38f1589319e8d919a20c106696",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            36
+          ],
+          "generated_lines": [
+            1,
+            36
+          ],
+          "sha256": "f64ce9113015a654b1ac49e5622d23cad1528484e2e3b4ef00f13eec6d6c2cdc"
+        },
+        {
+          "original_lines": [
+            37,
+            293
+          ],
+          "generated_lines": [
+            39,
+            295
+          ],
+          "sha256": "1370f8a46844c66ef9746b613b995ab5af5dce325b660c58d743181a419d6e23"
+        },
+        {
+          "original_lines": [
+            294,
+            646
+          ],
+          "generated_lines": [
+            301,
+            653
+          ],
+          "sha256": "370e2ca13ef976bb4253979d5bb2270a9f220eb55e4e44c3e9f27fe1fba04ef7"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 36,
+          "end_line_exclusive": 36,
+          "replacement": "#include <memory>\n#include <string>\n"
+        },
+        {
+          "start_line": 293,
+          "end_line_exclusive": 293,
+          "replacement": "  // No5: the first text owns additional rule texts, so the existing object,\n  // portrayal-setting and GL-context invalidation also releases their textures.\n  std::vector<std::unique_ptr<S52_TextC>> secondaryTexts;\n  std::string cacheInstruction;\n  bool cacheIsTX = false;\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52shaders.cpp",
+          "sha256": "5fea9dbbcd3ea21318792114ea436336f52dc19947acd2bac2af1d626816bbaf"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52shaders.cpp",
+      "sha256": "e9a1384b01db1183968e81bc7effd588a5035aff85e4b59762aa169bb46f7c17",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            364
+          ],
+          "generated_lines": [
+            1,
+            364
+          ],
+          "sha256": "71967c316af8705c576a85f6261ff92616c8e94505fab45d1bb25308f391f214"
+        },
+        {
+          "original_lines": [
+            365,
+            756
+          ],
+          "generated_lines": [
+            375,
+            766
+          ],
+          "sha256": "739c6cb70227378730cf4f79a11dfe4441181cf7b11fc8a7b00e2d6f86e0951b"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 253,
+          "end_line_exclusive": 276,
+          "replacement": "// Dash/Dot line shader\nstatic const GLchar *S52Dash_vertex_shader_source =\n    \"attribute vec2 position;\\n\"\n    \"attribute highp vec2 segmentStart;\\n\"\n    \"varying highp vec2 startPos;\\n\"\n    \"uniform mat4 MVMatrix;\\n\"\n    \"uniform mat4 TransformMatrix;\\n\"\n    \"void main() {\\n\"\n    \"   startPos = segmentStart;\\n\"\n    \"   gl_Position = MVMatrix * TransformMatrix * vec4(position, 0.0, 1.0);\\n\"\n    \"}\\n\";\n\nstatic const GLchar *S52Dash_fragment_shader_source =\n    \"precision highp float;\\n\"\n    \"uniform sampler2D uTex;\\n\"\n    \"varying highp vec2 startPos;\\n\"\n    \"uniform float texWidth;\\n\"\n    \"uniform float dashFactor;\\n\"\n    \"uniform vec4 color;\\n\"\n    \"void main() {\\n\"\n    \"   float d = distance(gl_FragCoord.xy, startPos);\\n\"\n    \"   float x = mod(d,texWidth) / texWidth;\\n\"\n    \"   if(x < dashFactor) gl_FragColor = color;\\n\"\n    \"   else gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);\\n\"\n    \"}\\n\";\n\n"
+        },
+        {
+          "start_line": 352,
+          "end_line_exclusive": 353,
+          "replacement": "extern thread_local GLint S52color_tri_shader_program;\n"
+        },
+        {
+          "start_line": 353,
+          "end_line_exclusive": 354,
+          "replacement": "extern thread_local GLint S52texture_2D_shader_program;\n"
+        },
+        {
+          "start_line": 354,
+          "end_line_exclusive": 355,
+          "replacement": "extern thread_local GLint S52texture_2D_ColorMod_shader_program;\n"
+        },
+        {
+          "start_line": 355,
+          "end_line_exclusive": 356,
+          "replacement": "extern thread_local GLint S52circle_filled_shader_program;\n"
+        },
+        {
+          "start_line": 356,
+          "end_line_exclusive": 357,
+          "replacement": "extern thread_local GLint S52ring_shader_program;\n"
+        },
+        {
+          "start_line": 357,
+          "end_line_exclusive": 358,
+          "replacement": "extern thread_local GLint S52Dash_shader_program;\n"
+        },
+        {
+          "start_line": 358,
+          "end_line_exclusive": 359,
+          "replacement": "extern thread_local GLint S52AP_shader_program;\n"
+        },
+        {
+          "start_line": 363,
+          "end_line_exclusive": 364,
+          "replacement": "thread_local bool shadersLoaded = false;\n"
+        },
+        {
+          "start_line": 364,
+          "end_line_exclusive": 364,
+          "replacement": "\nvoid unloadS52Shaders() {\n  for(GLint* program : {&S52color_tri_shader_program,&S52texture_2D_shader_program,\n      &S52texture_2D_ColorMod_shader_program,&S52circle_filled_shader_program,\n      &S52ring_shader_program,&S52Dash_shader_program,&S52AP_shader_program}) {\n    if(*program) glDeleteProgram(*program);\n    *program=0;\n  }\n  shadersLoaded=false;\n}\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52shaders.h",
+          "sha256": "72b23f6ad581612b4a7881c83747170f039405bec2766bf465ca89af37575f0b"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52shaders.h",
+      "sha256": "947ccc1659dc35297e5fc4723411c85e67e99537791f9cfa2146aae78ddb212e",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            32
+          ],
+          "generated_lines": [
+            1,
+            32
+          ],
+          "sha256": "e5044340b36742acf481849dedd548b7637c41225e4fa189d96b078d0a3e64e1"
+        },
+        {
+          "original_lines": [
+            33,
+            36
+          ],
+          "generated_lines": [
+            34,
+            37
+          ],
+          "sha256": "7d73e951e2be1b69d98a076875543c3ea0efd619c347845236c490af7f8e9355"
+        },
+        {
+          "original_lines": [
+            37,
+            64
+          ],
+          "generated_lines": [
+            39,
+            66
+          ],
+          "sha256": "790e2857a9f54f068155cb366f509b5d26121ff0a39da774514724c3279fdf4e"
+        },
+        {
+          "original_lines": [
+            66,
+            68
+          ],
+          "generated_lines": [
+            69,
+            71
+          ],
+          "sha256": "9a1eb6ec82e493ad6ee5682497ff75d079f99bcb49e6392072449fd798f3cfc5"
+        },
+        {
+          "original_lines": [
+            69,
+            84
+          ],
+          "generated_lines": [
+            73,
+            88
+          ],
+          "sha256": "c49b4a31c47f98769c2a7aad8ab9e9b30c1b0a5532da8dfa2d0b203a75830097"
+        },
+        {
+          "original_lines": [
+            85,
+            139
+          ],
+          "generated_lines": [
+            90,
+            144
+          ],
+          "sha256": "f606a4706e630be78dbb6a712ce68648790a7ea46d09af875d3b9670058d0484"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 32,
+          "end_line_exclusive": 32,
+          "replacement": "#include <stdexcept>\n"
+        },
+        {
+          "start_line": 36,
+          "end_line_exclusive": 36,
+          "replacement": "void unloadS52Shaders();\n"
+        },
+        {
+          "start_line": 64,
+          "end_line_exclusive": 65,
+          "replacement": "              glDeleteShader(shaderId);\n              throw std::runtime_error(std::string(\"OpenCPN S52 shader compilation: \")+infoLog);\n"
+        },
+        {
+          "start_line": 68,
+          "end_line_exclusive": 68,
+          "replacement": "            glDeleteShader(shaderId);\n"
+        },
+        {
+          "start_line": 84,
+          "end_line_exclusive": 84,
+          "replacement": "              throw std::runtime_error(std::string(\"OpenCPN S52 shader link: \")+infoLog);\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52utils.cpp",
+          "sha256": "cee04cc331ff70d94a88ec3061e6714f7ec7b8226727bd14d87be3c2c3c30ba6"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52utils.cpp",
+      "sha256": "a6fd17de5960979540104ffc3a4d8a205a53875176ad063ae3a3f15eccee3bde",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            133
+          ],
+          "generated_lines": [
+            1,
+            133
+          ],
+          "sha256": "294319c0f9ffcbae6bfdf39f6e727fdb81522963ac62c0ed77e9e9f4676753e7"
+        },
+        {
+          "original_lines": [
+            135,
+            189
+          ],
+          "generated_lines": [
+            135,
+            189
+          ],
+          "sha256": "86fffc7424528d0943e105e4ea2a488dcc6db1949f4888c375be7234d9a95875"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 133,
+          "end_line_exclusive": 134,
+          "replacement": "static thread_local double _MARparamVal[] = {\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s52plib/src/s52utils.h",
+          "sha256": "4feeefb368bf1aafd1620c15fe54662b8d2f9651cecc4123648b18aecfd1f74d"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s52utils.h",
+      "sha256": "4feeefb368bf1aafd1620c15fe54662b8d2f9651cecc4123648b18aecfd1f74d",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            91
+          ],
+          "generated_lines": [
+            1,
+            91
+          ],
+          "sha256": "4feeefb368bf1aafd1620c15fe54662b8d2f9651cecc4123648b18aecfd1f74d"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s57-charts/include/s57class_registrar.h",
+          "sha256": "4db09b4fe4f3b0a7891b2c3b18536bb3dee1ecbdf2683b450367f90db3edc4c2"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s57class_registrar.h",
+      "sha256": "4db09b4fe4f3b0a7891b2c3b18536bb3dee1ecbdf2683b450367f90db3edc4c2",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            108
+          ],
+          "generated_lines": [
+            1,
+            108
+          ],
+          "sha256": "4db09b4fe4f3b0a7891b2c3b18536bb3dee1ecbdf2683b450367f90db3edc4c2"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "gui/src/s57obj.cpp",
+          "sha256": "88931f15db4fc879c9ee2b6afb5b15d2fcf5f21a01e659ae6dfbb809faf4157e"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s57obj.cpp",
+      "sha256": "9e0fa28addda1ab955a73debd067e556d73fd4a353d18694a17c7a6790cd85b5",
+      "retained_regions": [
+        {
+          "original_lines": [
+            36,
+            36
+          ],
+          "generated_lines": [
+            1,
+            1
+          ],
+          "sha256": "a873339ea1357ea7cc210da62a909787fcce65a83da919543cb60371ac49f7f6"
+        },
+        {
+          "original_lines": [
+            40,
+            40
+          ],
+          "generated_lines": [
+            2,
+            2
+          ],
+          "sha256": "5537c04fa59276c93b755043ddca72f32575460e2193ee3ea97df1cd53da2319"
+        },
+        {
+          "original_lines": [
+            116,
+            304
+          ],
+          "generated_lines": [
+            3,
+            191
+          ],
+          "sha256": "2a635242f578801d1a85540c311a1ddb3816201d61f5d11385d695eac22d298b"
+        },
+        {
+          "original_lines": [
+            306,
+            325
+          ],
+          "generated_lines": [
+            193,
+            212
+          ],
+          "sha256": "1a9092734269d935a3c63619de439df6982a86ff7787218e1a45b672bf3a286e"
+        },
+        {
+          "original_lines": [
+            328,
+            333
+          ],
+          "generated_lines": [
+            215,
+            220
+          ],
+          "sha256": "97b962e457830dfae22c6919c506f993c3da2f5513c6a9d9f60c329bfb8a0bea"
+        },
+        {
+          "original_lines": [
+            335,
+            357
+          ],
+          "generated_lines": [
+            222,
+            244
+          ],
+          "sha256": "ac1e9f287c37c867c65164b891d7bf9f4e908aec07f4e78f48c1ce4b2c419688"
+        },
+        {
+          "original_lines": [
+            360,
+            365
+          ],
+          "generated_lines": [
+            247,
+            252
+          ],
+          "sha256": "97b962e457830dfae22c6919c506f993c3da2f5513c6a9d9f60c329bfb8a0bea"
+        },
+        {
+          "original_lines": [
+            367,
+            397
+          ],
+          "generated_lines": [
+            254,
+            284
+          ],
+          "sha256": "1831ed90c833f85927895a339117408808038b5a27c2c29c0d2b16cdc35bae27"
+        },
+        {
+          "original_lines": [
+            399,
+            460
+          ],
+          "generated_lines": [
+            286,
+            347
+          ],
+          "sha256": "25eabe121ea988d593d80d42cebea5ee8ff59b42cb55bde848e10e36844c4665"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 0,
+          "end_line_exclusive": 35,
+          "replacement": ""
+        },
+        {
+          "start_line": 36,
+          "end_line_exclusive": 39,
+          "replacement": ""
+        },
+        {
+          "start_line": 40,
+          "end_line_exclusive": 115,
+          "replacement": ""
+        },
+        {
+          "start_line": 304,
+          "end_line_exclusive": 305,
+          "replacement": "  toSM_plib(lat, lon, ref_lat, ref_lon, &easting, &northing);\n"
+        },
+        {
+          "start_line": 325,
+          "end_line_exclusive": 327,
+          "replacement": "  toSM_plib(pGeo->extent_n_lat, pGeo->extent_e_lon, ref_lat, ref_lon, &e1, &n1);\n  toSM_plib(pGeo->extent_s_lat, pGeo->extent_w_lon, ref_lat, ref_lon, &e2, &n2);\n"
+        },
+        {
+          "start_line": 333,
+          "end_line_exclusive": 334,
+          "replacement": "  fromSM_plib(x, y, ref_lat, ref_lon, &yll, &xll);\n"
+        },
+        {
+          "start_line": 357,
+          "end_line_exclusive": 359,
+          "replacement": "  toSM_plib(ppg->Get_ymax(), ppg->Get_xmax(), ref_lat, ref_lon, &e1, &n1);\n  toSM_plib(ppg->Get_ymin(), ppg->Get_xmin(), ref_lat, ref_lon, &e2, &n2);\n"
+        },
+        {
+          "start_line": 365,
+          "end_line_exclusive": 366,
+          "replacement": "  fromSM_plib(x, y, ref_lat, ref_lon, &yll, &xll);\n"
+        },
+        {
+          "start_line": 397,
+          "end_line_exclusive": 398,
+          "replacement": "    fromSM_plib(easting, northing, ref_lat, ref_lon, &yll, &xll);\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s57-charts/src/s57reader.cpp",
+          "sha256": "74e5a7c188847ae3c96764c950c0de9eadc97d1326185c322254970405996236"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s57reader.cpp",
+      "sha256": "b43a412be96885aaa7a7b77a3a27b5a3fd11be9fec4a81ac7755b2e78a0d359d",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            1892
+          ],
+          "generated_lines": [
+            1,
+            1892
+          ],
+          "sha256": "60bb51ff35b19107c56c12ac41ee365b5870cbaa6a7d9c6633a26f8d204b62d7"
+        },
+        {
+          "original_lines": [
+            1894,
+            1904
+          ],
+          "generated_lines": [
+            1893,
+            1903
+          ],
+          "sha256": "a48b6a5872e8edf0e8a95e3705cdf4208eed789ce4d016185141a0f2e68f1afd"
+        },
+        {
+          "original_lines": [
+            1908,
+            1953
+          ],
+          "generated_lines": [
+            1909,
+            1954
+          ],
+          "sha256": "5d272e048de848b0ebf92b2c40f0b7d12dac4af542427cdbcf3a3571e915ee59"
+        },
+        {
+          "original_lines": [
+            1955,
+            2013
+          ],
+          "generated_lines": [
+            1956,
+            2014
+          ],
+          "sha256": "168716161492d79dbd8dd997d6851ea9808d7dcbcb712e14c2fcab16c64f9955"
+        },
+        {
+          "original_lines": [
+            2015,
+            2070
+          ],
+          "generated_lines": [
+            2016,
+            2071
+          ],
+          "sha256": "ca2a4ee0b5f9edea7d9c5949f250015b3f65b4139e9e8bd2d961cb0897022a35"
+        },
+        {
+          "original_lines": [
+            2072,
+            2102
+          ],
+          "generated_lines": [
+            2073,
+            2103
+          ],
+          "sha256": "173d57375e74c3525b4c2aa18af7f1c0e6ec6380db05f77172356a56f4730ac6"
+        },
+        {
+          "original_lines": [
+            2104,
+            2498
+          ],
+          "generated_lines": [
+            2105,
+            2499
+          ],
+          "sha256": "fbf097fa1cc7ac0fee79a9993177d868072892d76d4cc283fdf7a9a8b8ad33c9"
+        },
+        {
+          "original_lines": [
+            2501,
+            2521
+          ],
+          "generated_lines": [
+            2504,
+            2524
+          ],
+          "sha256": "5fffc851d699cd8b65d8a121f9992e5fd575d64024d49c26dd841df98e1d758f"
+        },
+        {
+          "original_lines": [
+            2524,
+            2559
+          ],
+          "generated_lines": [
+            2529,
+            2564
+          ],
+          "sha256": "0dff3014c49eef8ee6d189db44d6627ac40b78db8e9f01a8c786e08ac84cf170"
+        }
+      ],
+      "edits": [
+        {
+          "start_line": 1892,
+          "end_line_exclusive": 1893,
+          "replacement": ""
+        },
+        {
+          "start_line": 1904,
+          "end_line_exclusive": 1907,
+          "replacement": "  // RVER is an ISO8211 binary subfield, not an aligned host unsigned int.\n  // Use its field definition to preserve byte width and byte order on updates.\n  if (!poTarget->SetIntSubfield(pszKey, 0, \"RVER\", 0,\n                               poUpdate->GetIntSubfield(pszKey, 0, \"RVER\", 0)))\n    return FALSE;\n"
+        },
+        {
+          "start_line": 1953,
+          "end_line_exclusive": 1954,
+          "replacement": "        poTarget->SetFieldRaw(poDstFSPT, i + nFSIX - 1, \"\", 0);\n"
+        },
+        {
+          "start_line": 2013,
+          "end_line_exclusive": 2014,
+          "replacement": "        poTarget->SetFieldRaw(poDstVRPT, i + nVPIX - 1, \"\", 0);\n"
+        },
+        {
+          "start_line": 2070,
+          "end_line_exclusive": 2071,
+          "replacement": "      poTarget->SetFieldRaw(poDstSG2D, 0, \"\", 0);\n"
+        },
+        {
+          "start_line": 2102,
+          "end_line_exclusive": 2103,
+          "replacement": "        poTarget->SetFieldRaw(poDstSG2D, i + nCCIX - 1, \"\", 0);\n"
+        },
+        {
+          "start_line": 2498,
+          "end_line_exclusive": 2500,
+          "replacement": "          memcpy(&nX, reinterpret_cast<const unsigned char*>(panData) + (i * 3 + 1) * sizeof(GInt32), sizeof(GInt32));\n          nX = CPL_LSBWORD32(nX);\n          memcpy(&nY, reinterpret_cast<const unsigned char*>(panData) + (i * 3 + 0) * sizeof(GInt32), sizeof(GInt32));\n          nY = CPL_LSBWORD32(nY);\n"
+        },
+        {
+          "start_line": 2521,
+          "end_line_exclusive": 2523,
+          "replacement": "          memcpy(&nX, reinterpret_cast<const unsigned char*>(panData) + (i * 2 + 1) * sizeof(GInt32), sizeof(GInt32));\n          nX = CPL_LSBWORD32(nX);\n          memcpy(&nY, reinterpret_cast<const unsigned char*>(panData) + (i * 2 + 0) * sizeof(GInt32), sizeof(GInt32));\n          nY = CPL_LSBWORD32(nY);\n"
+        }
+      ]
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s57-charts/src/s57registrar_mgr.cpp",
+          "sha256": "cb3ac545c0fed3ec4ee34629ff58ead022c60a01d695c5d592a9a4c4548f3950"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s57registrar_mgr.cpp",
+      "sha256": "cb3ac545c0fed3ec4ee34629ff58ead022c60a01d695c5d592a9a4c4548f3950",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            181
+          ],
+          "generated_lines": [
+            1,
+            181
+          ],
+          "sha256": "cb3ac545c0fed3ec4ee34629ff58ead022c60a01d695c5d592a9a4c4548f3950"
+        }
+      ],
+      "edits": []
+    },
+    {
+      "sources": [
+        {
+          "path": "libs/s57-charts/include/s57registrar_mgr.h",
+          "sha256": "519cb77c0749462d2849ca102d02bbd6a09893dec4e0504e84db5dc890ba1e25"
+        }
+      ],
+      "output": "chart-engine/no5/port/generated/s57registrar_mgr.h",
+      "sha256": "519cb77c0749462d2849ca102d02bbd6a09893dec4e0504e84db5dc890ba1e25",
+      "retained_regions": [
+        {
+          "original_lines": [
+            1,
+            59
+          ],
+          "generated_lines": [
+            1,
+            59
+          ],
+          "sha256": "519cb77c0749462d2849ca102d02bbd6a09893dec4e0504e84db5dc890ba1e25"
+        }
+      ],
+      "edits": []
+    }
+  ]
+}

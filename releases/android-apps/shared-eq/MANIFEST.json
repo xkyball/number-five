@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "owner": "no-pi/projects/no5-camilladsp/eq-core",
+  "sourceSha256": {
+    "Cargo.toml": "96df87b57bc7019df153f4c78baa88aa6266c23faba926e9cb984fcd2dcb2678",
+    "Cargo.lock": "af4b2ad09136385edc0a07ddc9b9efaf346baa7c5fe4486bc071d5ce36461234",
+    "src/lib.rs": "3251bddf6371b9b190d40717a5f77f49928435e99686978110d8fd209b156429",
+    "src/kernel.sha256": "2da4b38360f0272308cd37396372f88cbca9431da8c7818545b4131a4befe88a"
+  },
+  "baselineCommit": "1565f66",
+  "rustc": "rustc 1.97.0 (2d8144b78 2026-07-07)",
+  "ndk": "29.0.14206865",
+  "target": "aarch64-linux-android",
+  "minSdk": 29,
+  "jniSha256": "d3752c9a9210940cb4636db9fae1ac658bead299a534e7a1282807f34f52c377",
+  "builderSha256": "caecf60d6d0b80f1be03ce6a9cef44d8fc559822f0d0424405bba92553e4214d"
+}

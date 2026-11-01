@@ -1,0 +1,3101 @@
+{
+  "schema": 1,
+  "packageName": "com.no5.helm",
+  "label": "No5 HELM",
+  "releases": [
+    {
+      "id": "com.no5.helm:r1",
+      "sequence": 1,
+      "versionName": "0.7.25-knob-gated",
+      "versionCode": 35,
+      "sourceCommit": "7c38d656a9f067ce741cd8f76642d0160f00ce68",
+      "evidence": [
+        "git:7c38d656a9f067ce741cd8f76642d0160f00ce68:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r2",
+      "sequence": 2,
+      "versionName": "0.7.26-approved-023",
+      "versionCode": 36,
+      "sourceCommit": "fa20745720f7a8f51e2c6da508fb4cb78b01cef0",
+      "evidence": [
+        "git:fa20745720f7a8f51e2c6da508fb4cb78b01cef0:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r3",
+      "sequence": 3,
+      "versionName": "0.7.27-approved-023",
+      "versionCode": 37,
+      "sourceCommit": "3d4b7bf5797f99a97b3432eccee9891bb56d0dda",
+      "evidence": [
+        "git:3d4b7bf5797f99a97b3432eccee9891bb56d0dda:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r4",
+      "sequence": 4,
+      "versionName": "0.7.28-approved-023-ime",
+      "versionCode": 38,
+      "sourceCommit": "67bdaa3c771956b1961a0de6aa6c04a6602312b3",
+      "evidence": [
+        "git:67bdaa3c771956b1961a0de6aa6c04a6602312b3:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r5",
+      "sequence": 5,
+      "versionName": "0.7.29-settings-scroll",
+      "versionCode": 39,
+      "sourceCommit": "b81aea5077d4d16b5b1d254e278ba4083a9aabdf",
+      "evidence": [
+        "git:b81aea5077d4d16b5b1d254e278ba4083a9aabdf:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r6",
+      "sequence": 6,
+      "versionName": "0.7.30-gateway-ca-import",
+      "versionCode": 40,
+      "sourceCommit": "f0dfe86e79e68311f6dd05b55a61656283fc6057",
+      "evidence": [
+        "git:f0dfe86e79e68311f6dd05b55a61656283fc6057:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r7",
+      "sequence": 7,
+      "versionName": "0.7.31-gateway-connection-diagnostics",
+      "versionCode": 41,
+      "sourceCommit": "4288ff62052974d24faaa94d1aa8ae48b2244649",
+      "evidence": [
+        "git:4288ff62052974d24faaa94d1aa8ae48b2244649:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r8",
+      "sequence": 8,
+      "versionName": "0.7.32-mdns-origin-resolution",
+      "versionCode": 42,
+      "sourceCommit": "570c7577a333c4b728b7e6b615384310a25e551f",
+      "evidence": [
+        "git:570c7577a333c4b728b7e6b615384310a25e551f:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r9",
+      "sequence": 9,
+      "versionName": "0.7.33-mdns-qualified-service-name",
+      "versionCode": 43,
+      "sourceCommit": "138db6bf6049b7e282d4f5662586b3d3e0216444",
+      "evidence": [
+        "git:138db6bf6049b7e282d4f5662586b3d3e0216444:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r10",
+      "sequence": 10,
+      "versionName": "0.7.34-mdns-android10-resolved-type",
+      "versionCode": 44,
+      "sourceCommit": "cf259394ae8453bf9abaf792f1cef0c4fa982fdf",
+      "evidence": [
+        "git:cf259394ae8453bf9abaf792f1cef0c4fa982fdf:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r11",
+      "sequence": 11,
+      "versionName": "0.7.35-mdns-android10-numeric-host",
+      "versionCode": 45,
+      "sourceCommit": "681c20285514dca33071c1592cf08303fe7bb32e",
+      "evidence": [
+        "git:681c20285514dca33071c1592cf08303fe7bb32e:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r12",
+      "sequence": 12,
+      "versionName": "0.7.37-mdns-http-origin",
+      "versionCode": 47,
+      "sourceCommit": "cd14c3cadcb9da7a21c0ad5dfe9d1cdd215a0cd5",
+      "evidence": [
+        "git:cd14c3cadcb9da7a21c0ad5dfe9d1cdd215a0cd5:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.helm:r13",
+      "sequence": 13,
+      "versionName": "0.7.38-audio-catalog",
+      "versionCode": 48,
+      "sourceCommit": "a6f2a4b4cb83b6bb754a050208436b3e4dde91c2",
+      "evidence": [
+        "git:a6f2a4b4cb83b6bb754a050208436b3e4dde91c2:helm/app/build.gradle.kts",
+        "helm/verification/STATUS.md"
+      ],
+      "changes": [
+        {
+          "id": "helm-audio-catalog",
+          "text": "AUDIO zeigt die vom Gateway bereitgestellten Wiedergabe-Kataloge dynamisch."
+        }
+      ],
+      "historyCoverage": "Belegte Kurznotizen; ältere vollständige Release-Historie nicht nachträglich behauptet."
+    },
+    {
+      "id": "com.no5.helm:r14",
+      "sequence": 14,
+      "versionName": "0.7.40-audio-command-settings",
+      "versionCode": 50,
+      "sourceCommit": "70e8313721155842dd7990ebbd6f3ae4054977c7",
+      "evidence": [
+        "git:70e8313721155842dd7990ebbd6f3ae4054977c7:helm/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version und Owner-Quellstand belegt; Änderungen werden nur mit zusätzlichem Beleg ergänzt."
+    },
+    {
+      "id": "com.no5.helm:r15",
+      "sequence": 15,
+      "versionName": "0.7.41-audio-command-preflight",
+      "versionCode": 51,
+      "sourceCommit": "f8a5fe1fa6769137681767e4815af2e8a0a54f8b",
+      "evidence": [
+        "git:f8a5fe1fa6769137681767e4815af2e8a0a54f8b:helm/app/build.gradle.kts",
+        "git:f8a5fe1fa6769137681767e4815af2e8a0a54f8b:helm/verification/STATUS.md"
+      ],
+      "changes": [
+        {
+          "id": "helm-audio-preset-preflight",
+          "text": "AUDIO öffnet Gateway-Presets in einer eigenen Auswahlliste und zeigt den aktuellen Befehls-Preflight."
+        }
+      ],
+      "apkSha256": [
+        "7e36adc6dc5f0868b38282d23810fbbe75631eb480de555899bdea2a05565848"
+      ],
+      "historyCoverage": "Version, lokale APK und Kurznotiz belegt; kein Installationsnachweis oder exakter APK-Source-Commit behauptet."
+    },
+    {
+      "id": "com.no5.helm:r16",
+      "sequence": 16,
+      "versionName": "0.7.42-home-gateway",
+      "versionCode": 52,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "gateway-config/README.md"
+      ],
+      "changes": [
+        {
+          "id": "home-gateway",
+          "text": "HELM übernimmt den Gateway-Zugang und die origin-gebundene Sicherheit aus Home."
+        }
+      ],
+      "historyCoverage": "Neue Änderung; Laufzeitabnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.helm:r17",
+      "sequence": 17,
+      "versionName": "0.7.43-gateway-design",
+      "versionCode": 53,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ],
+      "changes": [
+        {
+          "id": "gateway-design",
+          "text": "Gateway-Konfiguration im SOUND-SETUP-Design mit Dienstresultaten, HTTP-Status, Laufzeit und Diagnoseverlauf."
+        }
+      ],
+      "historyCoverage": "Lokaler Build und Hostprüfung; Geräteabnahme separat."
+    },
+    {
+      "id": "com.no5.helm:r18",
+      "sequence": 18,
+      "versionCode": 54,
+      "versionName": "0.7.44-audio-readback",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-readback-deadline",
+          "text": "AUDIO wartet auf verifizierten Spotify-Player-Readback innerhalb eines begrenzten 4,5-s-HTTP-Deadlines; kein Command-Replay."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/PiHttpTransportTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r19",
+      "sequence": 19,
+      "versionCode": 55,
+      "versionName": "0.7.45-audio-layout",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-stable-drawing-spacing",
+          "text": "AUDIO hält unveränderte Regler beim Bestätigen optisch stabil und schafft mehr Abstand zu Rahmen und Bedienflächen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/audio-layout-20261008/README.md",
+        "helm/app/src/test/java/com/no5/helm/AudioConsoleV2Test.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r20",
+      "sequence": 20,
+      "versionCode": 56,
+      "versionName": "0.7.46-audio-stream",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-fader-wss",
+          "text": "AUDIO-Fader senden während des Ziehens über den gesicherten Stream; Endwerte werden mit Camilla bestätigt."
+        },
+        {
+          "id": "audio-shared-main",
+          "text": "Main nutzt die gemeinsame Camilla-Lautstärke mit Spotify-Synchronisation im entsprechend konfigurierten Gateway."
+        }
+      ],
+      "evidence": [
+        "helm/docs/AUDIO_FADER_STREAM.md",
+        "helm/verification/audio-stream-20261008/README.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r21",
+      "sequence": 21,
+      "versionCode": 57,
+      "versionName": "0.7.47-audio-stream-gesture",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-stream-gesture-admission",
+          "text": "Der AUDIO-Fader bleibt während seines laufenden gesicherten Streams bedienbar; zusätzliche Einzelbefehle bleiben bis zur Bestätigung gesperrt."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioFaderStreamTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/LabAudioStreamAcceptanceTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r22",
+      "sequence": 22,
+      "versionCode": 58,
+      "versionName": "0.7.48-spotify-media",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "spotify-readonly-media",
+          "text": "AUDIO zeigt sitzungsgebundene Originalcover und eine beobachtete Warteschlange; natives Browsing liest Playlists, Lieblingssongs und Suchkontexte ohne Wiedergabebefehl."
+        }
+      ],
+      "evidence": [
+        "helm/verification/spotify-media-20261009/README.md",
+        "helm/app/src/test/java/com/no5/helm/network/AudioMediaTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r23",
+      "sequence": 23,
+      "versionCode": 59,
+      "versionName": "0.7.49-spotify-navigation",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-native-navigation",
+          "text": "Zwei neue AUDIO-Einstiege, Player-Queue mit 10-s-Inaktivität und separate native Musikseite im bestehenden No5-Design."
+        },
+        {
+          "id": "audio-confirmed-song-selection",
+          "text": "Echte Titel/Interpreten und sitzungs-/listenbezogene Songauswahl mit tatsächlichem Readback; unklarer Ausgang ohne Replay."
+        },
+        {
+          "id": "audio-branding-user-scope",
+          "text": "Spotify-Logo und OPEN entfernt. Player, Mixer und bestehende Hit-Flächen erhalten; keine Pegelregelung auf Musik."
+        }
+      ],
+      "evidence": [
+        "helm/verification/spotify-navigation-20261009/README.md",
+        "helm/verification/spotify-navigation-20261009/validation.json",
+        "helm/design/spotify-navigation-20261009/DESIGN.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r24",
+      "sequence": 24,
+      "versionCode": 60,
+      "versionName": "0.7.50-spotify-browse",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "music-https-browse-origin",
+          "text": "Musiklisten-URLs mit Browse-Parametern bleiben an denselben HTTPS-Host/Port und den gespeicherten Gateway-Schlüssel gebunden."
+        },
+        {
+          "id": "music-list-error-feedback",
+          "text": "Fehlgeschlagene Musiklisten-Abfragen werden als Ladefehler angezeigt, nicht als leere Sammlung; bestehender AUDIO-Player und Mixer unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/music-lists-20261009/README.md",
+        "helm/verification/music-lists-20261009/installed-app59.json",
+        "helm/verification/music-lists-20261009/validation.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r25",
+      "sequence": 25,
+      "versionCode": 61,
+      "versionName": "0.7.51-music-clearance",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "music-knob-clearance",
+          "text": "Untere Titelzeile und Auswahlstatus bleiben außerhalb der bestehenden Knopfbereiche; Tag/Nacht behalten dieselbe Geometrie."
+        },
+        {
+          "id": "remove-legacy-browse",
+          "text": "Der alte BROWSE-Einstieg entfällt. Die freigegebenen zwei Player-Buttons Als Nächstes und Musik bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/music-followup-20261009/README.md",
+        "helm/app/src/test/java/com/no5/helm/AudioMediaPanelTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r26",
+      "sequence": 26,
+      "versionCode": 62,
+      "versionName": "0.7.52-playlist-details",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "playlist-details-covers",
+          "text": "Playlists als ruhige Zeilen mit echten Covern und verfügbaren Titelzahlen/Beschreibungen im bestehenden No5-Design."
+        },
+        {
+          "id": "playlist-complete-local-filter",
+          "text": "Gespeicherte Playlists seitenweise nachladen und geladene Titel, Besitzer und Beschreibungen lokal filtern."
+        },
+        {
+          "id": "playlist-explicit-start",
+          "text": "Playlist normal oder mit Shuffle starten; sitzungs-/listenbezogene Bestätigung ohne Befehlswiederholung."
+        }
+      ],
+      "evidence": [
+        "helm/verification/playlist-details-20261010/README.md",
+        "helm/app/src/test/java/com/no5/helm/AudioMediaPanelTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/AudioMediaTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r27",
+      "sequence": 27,
+      "versionCode": 63,
+      "versionName": "0.7.53-gateway-access",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-integrated-gateway-access-20261010",
+          "text": "Gemeinsamer Home-Zugang mit lokal abgeleitetem Passwort oder Key und geprüfter CA-Wiederherstellung; bestehende Spotify-Bedienung erhalten."
+        }
+      ],
+      "evidence": [
+        "gateway-config/INTEGRATION_CHECKPOINT_20261010.md",
+        "verification/master-integration/gateway-auth-20261010/RELEASE_RESOLUTION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r28",
+      "sequence": 28,
+      "versionCode": 64,
+      "versionName": "0.7.54-lumina-control",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-lumina-control-integration-20261010",
+          "text": "Ein Source-Owner für Bildschirm, Knopfconsumer und nativen Header; Spotify und gemeinsamer Home-Zugang erhalten."
+        }
+      ],
+      "evidence": [
+        "git:8afa14fc45f33bc43635edd0f777294fe95f8801:deliveries/lumina-control-checkpoint-20261010/README.txt",
+        "verification/master-integration/lumina-control-20261010/README.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r29",
+      "sequence": 29,
+      "versionCode": 65,
+      "versionName": "0.7.55-system-header",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-system-header-successor-20261011",
+          "text": "Gemeinsamer endlicher Root-/Headeranschluss mit frischen Verbindungsgenerationen und Audioaktionen über die vorhandene HELM-Quelle; überholte ungesendete Knopfaktionen verfallen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r30",
+      "sequence": 30,
+      "versionCode": 66,
+      "versionName": "0.7.56-home-reader-retry",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "home-reader-explicit-retry-20261011",
+          "text": "Bewusstes Verbindung testen aktualisiert den gespeicherten Home-Lesestand auch bei unveränderter Kennung; vorhandene asynchrone Dienstediagnose und Sicherheitsprüfungen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md",
+        "helm/app/src/test/java/com/no5/helm/HomeGatewayStatusReaderTest.kt",
+        "helm/app/src/test/java/com/no5/helm/MainActivityLifecycleTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r31",
+      "sequence": 31,
+      "versionCode": 67,
+      "versionName": "0.7.57-source-reconnect",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "source-automatic-reconnect-20261012",
+          "text": "Home-Zugang asynchron bis 5 s lesen; nach Fehlern automatisch nach 2/5/10/30 s erneut versuchen. Gesunde Quellen behalten, alte Antworten und gesperrte Einstellungen ablehnen. Sichere Diagnose zeigt Fehlerstufe und Laufzeit."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md",
+        "helm/app/src/test/java/com/no5/helm/HomeGatewayStatusReaderTest.kt",
+        "helm/app/src/test/java/com/no5/helm/control/HelmSourceOwnerTest.kt",
+        "helm/app/src/test/java/com/no5/helm/control/HelmSourceReconnectCoordinatorTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/SourceReachabilityAcceptanceTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r32",
+      "sequence": 32,
+      "versionCode": 68,
+      "versionName": "0.7.58-media-artwork-controls",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "media-artwork-recovery-20261012",
+          "text": "Coverabrufe nach Fehlern beim selben Titel mit begrenztem Backoff wiederholen; Bilder bei Titel-/Sitzungswechsel oder Schließen verwerfen. Playlist-Coverpfad erlauben; feste Fehlerstufen. Mediathek nur mit Pi-/Lab-Dienst; keine künstliche Freigabe."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md",
+        "helm/app/src/test/java/com/no5/helm/network/AudioMediaTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/PiHttpTransportTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r33",
+      "sequence": 33,
+      "versionCode": 69,
+      "versionName": "0.7.59-lumina-durable-v7",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-lumina-v7-durable-overlay-router-20261013",
+          "text": "Dauerhafter HELM-Overlay-Header mit einzelner QF-Registrierung, signierten Teil-Leases und HELM-Audio als Standardempfänger; Boot-/Reconnect- und Rückstellpfade sind integriert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ],
+      "apkSha256": [
+        "d43795eb8a74504514d4109484f07bc69ca055e83a883f026735c6b44896147f"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r34",
+      "sequence": 34,
+      "versionCode": 70,
+      "versionName": "0.7.60-lumina-durable-v7-overlay-identity",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-lumina-v7-overlay-caller-identity-20261013",
+          "text": "Der per ADB aufgerufene Operator-Provider prüft die Overlay-Berechtigung und öffnet Android-Einstellungen unter HELMs eigener Binder-Identität."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md",
+        "helm/app/src/main/java/com/no5/helm/control/LuminaControlProvider.kt"
+      ],
+      "apkSha256": [
+        "95e7a88d176a6df68251bd80188e38d5d3d5f5fb8ccac6e63dd4ac4cfd78e49d"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r35",
+      "sequence": 35,
+      "versionCode": 71,
+      "versionName": "0.7.61-lumina-durable-v7-headless-router",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-lumina-v7-headless-router-20261013",
+          "text": "Der dauerhafte QF-Router und HELM-Audio bleiben aktiv, wenn der Lumina-Header gezielt verborgen ist; nur Disable beendet Listener und Routing."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md",
+        "helm/app/src/main/java/com/no5/helm/control/LuminaDurableController.kt",
+        "helm/app/src/main/java/com/no5/helm/control/LuminaControlProvider.kt"
+      ],
+      "apkSha256": [
+        "b3b2e92d47d12b1cacd5cc4dfe58965464f8cb18ddc02921514bcd90aa473f64"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r36",
+      "sequence": 36,
+      "versionCode": 72,
+      "versionName": "0.8.0-direct-gateway-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-direct-gateway-v8-20261013",
+          "text": "Direkter Gateway-Zugang mit fester App-Rolle über Lumina Control, atomarer Token-Erneuerung und dauerhafter Anzeige der installierten Version."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md"
+      ],
+      "historyCoverage": "Quellstand; ausgeführte Prüfungen werden getrennt dokumentiert."
+    },
+    {
+      "id": "com.no5.helm:r37",
+      "sequence": 37,
+      "versionCode": 73,
+      "versionName": "0.8.1-direct-gateway-v8-sonard035",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-sonard035-presentation-20261013",
+          "text": "Sonard-0.3.5-Auswahl wird ihrer tatsächlichen Ping-ID zugeordnet; Meterachse und Auto-Range nutzen die resampelte Geometrie, bestätigte Tracks behalten ihre heuristische Confidence."
+        },
+        {
+          "id": "helm-source-delivery-main-20261013",
+          "text": "Telemetrie- und Wetter-Callbacks wechseln explizit auf den Android-Hauptthread; Quellenbesitz und verspätete Antworten bleiben auch bei aktiver Lab-Verbindung korrekt begrenzt."
+        }
+      ],
+      "evidence": [
+        "helm/docs/SONARD_035_INTEGRATION.md",
+        "helm/domain/src/test/kotlin/com/no5/domain/SonardPresentationTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/SonarContractFixturesTest.kt",
+        "helm/app/src/test/java/com/no5/helm/MainSourceDeliveryTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r38",
+      "sequence": 38,
+      "versionCode": 74,
+      "versionName": "0.8.2-direct-gateway-v8-local-ip",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-local-ip-v8-20261013",
+          "text": "Lokal eingerichtete Ausweich-IP aus Lumina Control wird bei fehlender mDNS-Auflösung genutzt; HTTPS-Origin, Zertifikatsprüfung und Token-Zuordnung bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md",
+        "helm/app/src/test/java/com/no5/gateway/GatewayIpFallbackTest.kt",
+        "helm/app/src/test/java/com/no5/gateway/LuminaGatewayClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r39",
+      "sequence": 39,
+      "versionCode": 75,
+      "versionName": "0.8.3-knob-recovery-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-knob-recovery-v8-20261013",
+          "text": "Sichtbare Knopf-Leases werden nach einem bestätigten Fokusverlust zeitnah erneut angefordert; Fokus-, Ablauf- und Callback-Grenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/appcontrol/LuminaKnobClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r40",
+      "sequence": 40,
+      "versionCode": 77,
+      "versionName": "0.8.5-lease-deadline-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-command-rings-20261014",
+          "text": "Ringbuffer-Annahme mit Auftrags-ID, getrennten Ergebnissen und Lease-Erneuerung unabhängig vom UI-Thread."
+        }
+      ],
+      "evidence": [
+        "verification/V8_COMMAND_RINGS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r41",
+      "sequence": 41,
+      "versionCode": 78,
+      "versionName": "0.8.6-sonar-adc-scale-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-sonard035-adc-scale-20261014",
+          "text": "Sonard 0.3.5: 12-Bit-ADC-Skalierung für Echogramm, A-Scope und 3D; Rohsamples und eingefrorene Darstellung bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_LIVE_20261014.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r42",
+      "sequence": 42,
+      "versionCode": 79,
+      "versionName": "0.8.7-hardware-marker-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-passive-marker036-20261014",
+          "text": "12-Bit-ADC-Darstellung für den geprüften Sonard0.3.6-Hardwaremarkerstand; vorhandene TX- und Rohdaten-Gates bleiben verbindlich."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_LIVE_20261014.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r43",
+      "sequence": 43,
+      "versionCode": 80,
+      "versionName": "0.8.8-sonar-audio-controls-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-sonar-audio-knobs-20261014",
+          "text": "Native Audio- und Sonar-Knopf-Leases mit begrenzten Auftragsringen, asynchronem Audio-Gatewaypfad, Sonard-Filtermodi und bestätigten Track-Overlays."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HELM80_SONAR_AUDIO_20261014.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r44",
+      "sequence": 44,
+      "versionCode": 81,
+      "versionName": "0.8.9-audio-knob-selection-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-audio-knob-selection-20261014",
+          "text": "Die sichtbare Mixer-Faderauswahl aktualisiert den Knopfauftrag; außerhalb des Mixers gilt Master. Audiohilfe und lokaler Simulator folgen dem asynchronen Vertrag."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HELM80_SONAR_AUDIO_20261014.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r45",
+      "sequence": 45,
+      "versionCode": 82,
+      "versionName": "0.8.10-audio-target-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-audio-retained-target-20261014",
+          "text": "AUDIO behält den gewählten Knopf-Fader nach Schließen und Wiederöffnen des Mixers und benennt das Ziel in der Knopfanzeige; HELM und SONAR-Audio behalten Master."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HELM80_SONAR_AUDIO_20261014.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r46",
+      "sequence": 46,
+      "versionCode": 83,
+      "versionName": "0.8.11-header-clouds-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-shared-cloud-header-20261015",
+          "text": "Gemeinsamer No5-Wolkenheader mit eigenen App-Daten; das No5-Logo öffnet HOME direkt ohne App-Auswahldialog."
+        },
+        {
+          "id": "helm-weather-position-reason-20261015",
+          "text": "Die Wetteranzeige benennt fehlende oder veraltete Bootsposition, fehlende Freigabe und Providerfehler im vorhandenen Statusfeld."
+        }
+      ],
+      "evidence": [
+        "helm/verification/header-unification-20261015.json",
+        "helm/verification/weather-diagnosis-20261015.json",
+        "helm/verification/HEADER_RELEASE_LUMINA_20261015.json"
+      ],
+      "apkSha256": [
+        "22fe97bcd910324e8a4ae370a335c4c5373f1345d2cbffc30924c98f2940ebc7"
+      ],
+      "artifactSourceCommit": "621cc10af713f2b58d9e305821f8ba4ed79d9f05",
+      "artifactSignerSha256": "138eff84e534e5c8ae3cfc18adf57e80b2d7a7725d04acd1449ce3b9c373e6bd"
+    },
+    {
+      "id": "com.no5.helm:r47",
+      "sequence": 47,
+      "versionCode": 84,
+      "versionName": "0.8.12-audio-wss-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-restore-audio-wss-20261015",
+          "text": "AUDIO-Fader verwenden wieder den vorhandenen authentifizierten WSS-Transport; Wolkenheader, Wetterdiagnose und Faderauswahl aus Build83 bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/docs/AUDIO_FADER_STREAM.md",
+        "helm/verification/STATUS.md"
+      ],
+      "apkSha256": [
+        "a5d29848f152a1059650ee0e1b8d21014e6af400201ff8166a033ce1cf7a52ee"
+      ],
+      "artifactSourceCommit": "c9c7fb95ed23b2d099d10d7f753a5acf41358d9d",
+      "artifactSignerSha256": "138eff84e534e5c8ae3cfc18adf57e80b2d7a7725d04acd1449ce3b9c373e6bd"
+    },
+    {
+      "id": "com.no5.helm:r48",
+      "sequence": 48,
+      "versionCode": 85,
+      "versionName": "0.8.13-audio-knob-wss-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-leased-knob-wss-20261015",
+          "text": "Auch physische Knopf-Fader verwenden WSS; ursprüngliche Lease-, Fokus-, Sitzungs- und Revisionsprüfungen bleiben bis unmittelbar vor dem Senden erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/docs/AUDIO_FADER_STREAM.md",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r49",
+      "sequence": 49,
+      "versionCode": 86,
+      "versionName": "0.8.14-shared-controls-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-shared-controls-state-ui",
+          "text": "Gemeinsame Bedienung, gespeicherte Ansichten, Sprachen und Medienheader."
+        }
+      ],
+      "evidence": [
+        "ui-state/verification/APP_COMPLETION_PROGRESS_20261015.json",
+        "ui-state/verification/CONTROL_UI_AUDIO_INTEGRATION_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r50",
+      "sequence": 50,
+      "versionCode": 87,
+      "versionName": "0.8.15-foreground-ui-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-shared-controls-state-ui",
+          "text": "Gemeinsame Bedienung, gespeicherte Ansichten, Sprachen und Medienheader."
+        }
+      ],
+      "evidence": [
+        "helm/verification/FOREGROUND_BOOTSTRAP_20261015.json",
+        "ui-state/verification/APP_COMPLETION_PROGRESS_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r51",
+      "sequence": 51,
+      "versionCode": 88,
+      "versionName": "0.8.16-panel-parity-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-shared-panel-presentation",
+          "text": "Dashboard und Fachpanels verwenden gemeinsame Werte,60-Sekunden-Verlauf und Feldqualität."
+        },
+        {
+          "id": "helm-compact-channel-editor",
+          "text": "Kompakter Kanaleditor ohne Preset-/Diagnoseduplikate; nächsteTitel bleiben oberhalb der Zeitleiste."
+        }
+      ],
+      "evidence": [
+        "helm/verification/PANEL_PARITY_20261015.json",
+        "helm/verification/audio-eq-feasibility-20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r52",
+      "sequence": 52,
+      "versionCode": 89,
+      "versionName": "0.8.17-audio-editor-return-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-editor-accessibility",
+          "text": "Bound footer accessibility to navigation and preserve the selected fader across source renewal before Compose saves."
+        }
+      ],
+      "evidence": [
+        "helm/verification/AUDIO_EDITOR_RETURN_20261015.json",
+        "helm/verification/PANEL_PARITY_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r53",
+      "sequence": 53,
+      "versionCode": 90,
+      "versionName": "0.8.18-compact-audio-return-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-four-row-editor",
+          "text": "Fit four audio channels in the compact editor without redundant row cards and retain knob bindings across app return."
+        }
+      ],
+      "evidence": [
+        "helm/verification/AUDIO_EDITOR_RETURN_20261015.json",
+        "app-control/verification/KNOB_RETURN_20261015.json",
+        "helm/verification/audio-eq-feasibility-20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r54",
+      "sequence": 54,
+      "versionCode": 91,
+      "versionName": "0.8.19-audio-labels-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-column-label-metrics",
+          "text": "Keep compact audio table headings above the first channel row using explicit text line metrics."
+        }
+      ],
+      "evidence": [
+        "helm/verification/AUDIO_EDITOR_RETURN_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r55",
+      "sequence": 55,
+      "versionCode": 92,
+      "versionName": "0.8.20-dashboard-equalizer-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "native-instrument-dashboard",
+          "text": "Replace dashboard cards with shared native instruments, sonar and audio controls."
+        },
+        {
+          "id": "camilla-five-band-equalizer",
+          "text": "Add a five-band Camilla equalizer with neutral reset, asynchronous commands and confirmed active configuration."
+        }
+      ],
+      "evidence": [
+        "helm/verification/DASHBOARD_EQ_20261015.json",
+        "ui-state/verification/APP_COMPLETION_FOLLOWUP_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r56",
+      "sequence": 56,
+      "versionCode": 93,
+      "versionName": "0.8.21-dashboard-contrast-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-instrument-contrast",
+          "text": "Keep dashboard instruments readable over the original photograph without changing shared values or controls."
+        }
+      ],
+      "evidence": [
+        "helm/verification/DASHBOARD_EQ_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r57",
+      "sequence": 57,
+      "versionCode": 94,
+      "versionName": "0.8.22-sonard-clip-adc",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonard-clip-adc-fullscale",
+          "text": "Keep the original sonar contrast for verified Sonard 0.4.5 and 0.4.6 without rescaling raw samples."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_CLIP_ADC_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r58",
+      "sequence": 58,
+      "versionCode": 95,
+      "versionName": "0.8.23-sonard-own-pings",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonard-own-pings-047",
+          "text": "Sonard 0.4.7 retains the original 12-bit amplitude scale while its selected own-ping stream is shown."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_OWN_PINGS_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r59",
+      "sequence": 59,
+      "versionCode": 96,
+      "versionName": "0.8.24-sonard-quiet-window",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonard-quiet-window-048",
+          "text": "Retain the checked 12-bit amplitude scale for the improved Sonard 0.4.8 own-ping stream."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_QUIET_WINDOW_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r60",
+      "sequence": 60,
+      "versionCode": 97,
+      "versionName": "0.8.25-sound-presets",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sound-preset-eq-room",
+          "text": "Edit a 16-point equalizer and two simple room controls together in a native sound preset."
+        },
+        {
+          "id": "sound-separate-five-speaker-alignment",
+          "text": "Keep front, rear and paired subwoofer alignment separate from presets, using measured positions and manual delay and level trims."
+        },
+        {
+          "id": "sound-real-post-eq-spectrum",
+          "text": "Show the real spectrum after EQ and headroom, before room processing, with separate over-range and output-clip indications."
+        },
+        {
+          "id": "sonard-049-0410-raw-adc-scale",
+          "text": "Keep the verified Sonard 0.4.9 and 0.4.10 streams on their unchanged 12-bit scale without altering raw samples."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SOUND_NATIVE_20261016.md",
+        "helm/verification/SOUND_NATIVE_20261016.json",
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarTest.kt",
+        "helm/verification/HELM97_PREPARATION_20261016.json",
+        "helm/verification/HELM97_BUILD_20261016.json",
+        "helm/verification/HELM97_APK_FORWARDING_20261016.json",
+        "helm/verification/HELM97_EMULATOR_RECEIPT_20261016.json",
+        "helm/verification/HELM97_EMULATOR_UI_20261016.json",
+        "helm/verification/SOUND_DESIGN_PARITY_20261016.json"
+      ],
+      "apkSha256": [
+        "72924f2fda8b36a8ecae656b2ddbff47252f174973fcb6755070c84dc595b2bc"
+      ],
+      "artifactSourceCommit": "c87d082dd99055c3e0335794ccf80940f07a924b"
+    },
+    {
+      "id": "com.no5.helm:r61",
+      "sequence": 61,
+      "versionCode": 98,
+      "versionName": "0.8.26-sound-sonar",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sound-measured-boat-layout",
+          "text": "Set up speaker distances with two measurements, then position the listener and subwoofer on the boat."
+        },
+        {
+          "id": "audio-owned-controls-in-all-editors",
+          "text": "Keep the selected audio fader and media controls on the knobs throughout sound editing and Sonar."
+        },
+        {
+          "id": "sonar-truthful-rate-and-image-auto",
+          "text": "Show source-bound ping rates, coordinated image automation and a compact three-section Sonar menu."
+        },
+        {
+          "id": "sonar-epoch-diagnostics-recovery",
+          "text": "Preserve raw frames when optional analysis changes and reconnect with correct source, epoch and diagnostic context."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SOUND_SONAR_COMPLETION_20261016.json",
+        "helm/verification/SOUND_SONAR_REGRESSIONS_20261016.json",
+        "helm/contracts/fixtures/sonard-observation-v1-fixtures.json",
+        "helm/docs/SONAR_0410_DISPLAY.md",
+        "helm/verification/HELM98_HOST_20261016.json"
+      ],
+      "apkSha256": [
+        "f0eea15aecb0addd7ce511f42aa4042b1a24b20e5441966cf716d3360293daaf"
+      ],
+      "artifactSourceCommit": "d312a66a7d6fc46fd6ae2e2183c8f3af2152cde6"
+    },
+    {
+      "id": "com.no5.helm:r62",
+      "sequence": 62,
+      "versionCode": 99,
+      "versionName": "0.8.27-draft-basis",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sound-restored-draft-basis",
+          "text": "Keep restored EQ and speaker drafts bound to their original confirmed revisions before editing or transmitting them."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HELM99_DRAFT_BASIS_20261016.json",
+        "helm/verification/SOUND_SONAR_COMPLETION_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r63",
+      "sequence": 63,
+      "versionCode": 100,
+      "versionName": "0.8.28-sonar-history",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-history-physical-geometry",
+          "text": "Keep Sonar history and bottom positions aligned to each ping’s measured capture range."
+        },
+        {
+          "id": "sonar-direct-knob-mode",
+          "text": "Switch the Sonar knobs directly between Sonar and the selected audio controls; use one menu button."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_RANGE_HISTORY_DIAGNOSIS_20261016.json",
+        "helm/verification/HELM100_HOST_20261016.json",
+        "helm/verification/HELM99_LUMINA_ACCEPTANCE_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r64",
+      "sequence": 64,
+      "versionCode": 101,
+      "versionName": "0.8.29-eq-reserve",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-fixed-configurable-reserve",
+          "text": "Enable or bypass EQ with a saved fixed reserve from 6 to 18 dB, and keep positive bands separate."
+        },
+        {
+          "id": "sonar-time-gap-interpolation",
+          "text": "Interpolate measured Sonar columns across short normal ping gaps without filling source or transport losses."
+        },
+        {
+          "id": "sonar-usable-status-proof",
+          "text": "Show the confirmed five-second usable Sonar rate independently of delayed analysis and raw image age."
+        },
+        {
+          "id": "sonar-coalesced-knob-mode",
+          "text": "Keep the latest Sonar or audio knob assignment even across rapid repeated mode changes."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HELM101_HOST_20261016.json",
+        "helm/verification/SONAR_USABLE_STATUS_PROOF_20261016.json",
+        "helm/verification/HELM99_LUMINA_ACCEPTANCE_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r65",
+      "sequence": 65,
+      "versionCode": 102,
+      "versionName": "0.8.30-sonar-continuity",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-published-source-context",
+          "text": "Keep Sonar source evidence independent of delayed analysis and distinguish original ADC from reduced display contrast."
+        },
+        {
+          "id": "sonar-long-time-image",
+          "text": "Retain the chosen Sonar time window with bounded image history and interpolate compatible image contributions."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_0413_APP_READ_APPROVAL_20261016.json",
+        "helm/verification/SONAR_TIME_IMAGE_HISTORY_20261016.json",
+        "helm/verification/SONAR_AGGREGATE_LINEAR_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r66",
+      "sequence": 66,
+      "versionCode": 103,
+      "versionName": "0.8.31-sonar-epoch",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-explicit-producer-epoch",
+          "text": "Resume real Sonar after an explicit newer producer generation without restarting the app."
+        },
+        {
+          "id": "sonar-exact-transfer-lut",
+          "text": "Prepare Sonar colors efficiently while preserving the exact display transfer and pixels."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_PRODUCER_EPOCH_REGRESSION_20261016.json",
+        "helm/verification/SONAR_RENDER_TRANSFER_COST_FINDING_20261016.json",
+        "helm/verification/SONAR_TRANSFER_LUT_PARITY_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r67",
+      "sequence": 67,
+      "versionCode": 104,
+      "versionName": "0.8.32-sonar-history",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-retained-history-boundaries",
+          "text": "Keep measured Sonar image history after short metadata gaps while preserving real source boundaries."
+        },
+        {
+          "id": "sonar-bounded-bitmap-batches",
+          "text": "Upload Sonar image columns in bounded batches with unchanged pixels and separate rendering cost measurements."
+        },
+        {
+          "id": "sonar-reviewed-0414-window-read",
+          "text": "Read reviewed Sonard 0.4.14 display windows without inventing depth or hidden distant samples."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_RETAINED_IMAGE_HISTORY_20261016.json",
+        "helm/verification/SONAR_BULK_UPLOAD_PARITY_20261016.json",
+        "helm/verification/SONARD_0414_APP_READ_APPROVAL_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r68",
+      "sequence": 68,
+      "versionCode": 105,
+      "versionName": "0.8.33-sonar-contract",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-selected-published-rate",
+          "text": "Show the selected five-second published Sonar rate first and keep usable-depth evidence separate."
+        },
+        {
+          "id": "sonar-reviewed-0415-read",
+          "text": "Read reviewed Sonard 0.4.15 without relaxing source, geometry or amplitude-scale checks."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_SELECTED_RATE_HIERARCHY_20261016.json",
+        "helm/verification/SONARD_0415_EXACT_READ_COMPATIBILITY_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r69",
+      "sequence": 69,
+      "versionCode": 106,
+      "versionName": "0.8.34-sonar-context",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-reviewed-0416-atomic-read",
+          "text": "Read reviewed Sonard 0.4.16 source-bound rates while preserving the existing Android V1 decoder and all source, timing and geometry checks."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_0416_APP_READ_APPROVAL_20261016.json",
+        "helm/verification/SONARD_0416_EXACT_READ_COMPATIBILITY_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r70",
+      "sequence": 70,
+      "versionCode": 107,
+      "versionName": "0.8.35-sonar-image-budget",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-bounded-image-work",
+          "text": "Bound image preparation with the existing labelled 300-ms/256-bin peak view. Keep raw pings, analysis, rates, measured coverage and small views unchanged."
+        },
+        {
+          "id": "sonar-visible-raw-upload",
+          "text": "Upload only visible raw columns and one interpolation boundary; retain exact colors and blend math, and refresh new epoch slots."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_IMAGE_WORK_BUDGET_FINDING_20261016.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r71",
+      "sequence": 71,
+      "versionCode": 108,
+      "versionName": "0.8.36-sonard-0417-read",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-exact-0417-read",
+          "text": "Accept the reviewed Sonard 0.4.17 producer in the existing read-only rate contract. Keep decoder, display, source checks, scopes and command paths unchanged."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONARD_0417_APP_READ_APPROVAL_20261017.json",
+        "helm/verification/SONARD_0417_EXACT_READ_COMPATIBILITY_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r72",
+      "sequence": 72,
+      "versionCode": 109,
+      "versionName": "0.8.37-exact-ping-profiles",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-exact-ping-profiles",
+          "text": "Display each received ping at its recorded time without temporal aggregation, interpolation or holding it across gaps."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/Sonar.kt",
+        "helm/app/src/main/java/com/no5/helm/SonarNativeRenderer.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r73",
+      "sequence": 73,
+      "versionCode": 110,
+      "versionName": "0.8.38-display-smoothing",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm110-display-smoothing-1",
+          "text": "Optionale lineare Sonaranzeige glättet Amplituden über sieben echte Pings beziehungsweise sieben vorhandene Langhistorien-Bildspalten vor der Farbpalette."
+        },
+        {
+          "id": "helm110-display-smoothing-2",
+          "text": "Quellen-, Zeit-, Geometrie- und Gültigkeitsgrenzen erhalten; Exact umgeht die Glättung."
+        },
+        {
+          "id": "helm110-display-smoothing-3",
+          "text": "Rohdaten, Analyse, Tiefe, Messrate und eingefrorener Kontext unverändert erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_DISPLAY_SMOOTHING_IMPLEMENTATION_20261017.json",
+        "git:d8b95339:helm/app/src/main/java/com/no5/helm/SonarDisplaySmoothingCache.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r74",
+      "sequence": 74,
+      "versionCode": 111,
+      "versionName": "0.8.39-sonar-clock-skew",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm111-independent-clocks",
+          "text": "Sonar-Messzeit und Gateway-Veröffentlichung behalten ihre echten Werte bei getrennter Hostuhr. Die bereits bestehende 5-s-Uhrgrenze gilt auch zwischen beiden Zeitbasen; Quellen- und Epochenprüfung sowie monotone Folgen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/docs/SONAR_GATEWAY_V1.md",
+        "helm/app/src/test/java/com/no5/helm/network/NetworkPiSonarSourceTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r75",
+      "sequence": 75,
+      "versionCode": 112,
+      "versionName": "0.8.40-sonar-intensity",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm112-intensity-smoothing",
+          "text": "Lineare Sonarglättung mittelt die Bildintensität nach Gain, Schwelle und Gamma; Einzelimpulse werden nicht erneut verstärkt."
+        }
+      ],
+      "evidence": [
+        "helm/docs/SONAR_GATEWAY_V1.md",
+        "helm/app/src/test/java/com/no5/helm/SonarDisplaySmoothingTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/smoothing/SonarDisplaySmoothingDeviceTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r76",
+      "sequence": 76,
+      "versionCode": 113,
+      "versionName": "0.8.41-sonar-profile-cache",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm113-bounded-profile-copy",
+          "text": "Sonar-Bildglättung verwendet begrenzte Profilkopien und vorberechnete Geometrie; Auto-Gain berechnet dieselben Intensitäten ohne wiederholte Einzelzugriffe."
+        },
+        {
+          "id": "helm113-actual-ping-mean",
+          "text": "Langhistorien glätten tatsächliche Ping-Intensitäten vor der zeitlichen Verdichtung; einzelne Spitzen werden nicht als volle Bildspalten verstärkt."
+        },
+        {
+          "id": "helm113-metric-range",
+          "text": "Neue metrische Bereichswahlen bleiben beim Wechsel des Aufnahmefensters erhalten; fehlende Tiefenabdeckung wird nicht erfunden."
+        }
+      ],
+      "evidence": [
+        "helm/docs/SONAR_GATEWAY_V1.md",
+        "helm/app/src/test/java/com/no5/helm/SonarDisplaySmoothingTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r77",
+      "sequence": 77,
+      "versionCode": 114,
+      "versionName": "0.8.42-sonar-stable-auto",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm114-stable-auto-transfer",
+          "text": "Ruhigere Sonar-Automatik: kleinste Pegelschwankungen lösen keine vollständige Neuberechnung der Historie aus; manuelle Werte bleiben exakt."
+        },
+        {
+          "id": "helm114-sonard0418",
+          "text": "Sonard 0.4.18 wird mit geprüftem, unverändertem Pingvertrag unterstützt; unbekannte Versionen bleiben gesperrt."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/Sonar.kt",
+        "helm/verification/SONARD_0418_APP_READ_APPROVAL_20261017.json",
+        "helm/verification/HELM113_LUMINA_ACCEPTANCE_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r78",
+      "sequence": 78,
+      "versionCode": 115,
+      "versionName": "0.8.43-sonard0419",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm115-sonard0419-read",
+          "text": "Exakte Sonard-0.4.19-Lesekompatibilität für den bestehenden eigenen Sonarstream; Darstellung und Bedienung unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/SonarUsableRate.kt",
+        "helm/verification/SONARD_0419_READ_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r79",
+      "sequence": 79,
+      "versionCode": 116,
+      "versionName": "0.8.44-app-cleanup",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm116-header",
+          "text": "Kompakter gemeinsamer Header mit Build-Info und echtem lokalen WLAN-Empfang."
+        },
+        {
+          "id": "helm116-feedback",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        },
+        {
+          "id": "helm116-memory",
+          "text": "Begrenzter Sonar-Arbeitscache und sparsame Freeze-Speicherung bei unveränderten Messdaten und Glättungswerten."
+        },
+        {
+          "id": "helm116-read20",
+          "text": "Exakte Sonard-0.4.20-Lesekompatibilität; unbekannte Versionen und Amplitudenskalen bleiben unbestätigt."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_BOUNDED_MEMORY_20261017.json",
+        "helm/verification/TOUCH_FEEDBACK_HOST_20261017.json",
+        "helm/verification/SONARD_0420_APP_READ_APPROVAL_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r80",
+      "sequence": 80,
+      "versionCode": 117,
+      "versionName": "0.8.45-header-language",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm117-header-language",
+          "text": "Gemeinsamer Header aktualisiert bestätigte Sprache unmittelbar einschließlich Tag/Nacht und WLAN-Info."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HEADER_ANDROIDVIEW_LOCALE_HOST_20261017.json",
+        "helm/app/src/main/java/com/no5/helm/MainActivity.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r81",
+      "sequence": 81,
+      "versionCode": 118,
+      "versionName": "0.8.46-header-media",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm118-header-media",
+          "text": "Gemeinsame Mediennavigation im Header bleibt auch für Android-Bedienhilfen erreichbar; Ansicht und Touchflächen bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/MainActivity.kt",
+        "helm/verification/HELM_HEADER_INTEROP_ACCESSIBILITY_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r82",
+      "sequence": 82,
+      "versionCode": 119,
+      "versionName": "0.8.47-sonar-continuity",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm119-mailbox",
+          "text": "Begrenzte Zustellung aktueller Telemetrie und Wetterwerte an die Oberfläche; ausstehende Werte beim Sitzungsende freigeben."
+        },
+        {
+          "id": "helm119-deadline",
+          "text": "Abgelaufene HTTPS-Anfragen beenden auch den zugehörigen Netzwerkaufruf."
+        },
+        {
+          "id": "helm119-retirement",
+          "text": "Auch bei einem Fehler im Stream-Abbau werden alte Poller und HTTP-Arbeiter freigegeben."
+        },
+        {
+          "id": "helm119-sonard21",
+          "text": "Exakte Lesekompatibilität mit Sonard 0.4.21; Rohprofile, Burstform und lineare Darstellung bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_CONTINUITY_20261018.json",
+        "helm/app/src/test/java/com/no5/helm/MainSourceDeliveryTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r83",
+      "sequence": 83,
+      "versionCode": 120,
+      "versionName": "0.8.48-sonar-lease-priority",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm120-reader",
+          "text": "Exakte Sonard-0.4.22-Lesekompatibilität für unabhängige Lease-Erneuerung; Darstellung und Rohdaten bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/SONAR_CONTINUITY_20261018.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r84",
+      "sequence": 84,
+      "versionCode": 121,
+      "versionName": "0.8.49-app-cleanup",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm121-dialog-feedback",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        },
+        {
+          "id": "helm121-ime-drafts",
+          "text": "Klang-Setup und Lautsprechermaße behalten Entwürfe und erreichbare Aktionen beim Ein- und Ausblenden der Tastatur."
+        },
+        {
+          "id": "helm121-weather-description",
+          "text": "Wetterbeschreibungen unterscheiden Bordmessung, Vorhersage, Simulation und unbestätigte Quellen."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEditorBodyMatrixTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEditorImeTest.kt",
+        "helm/app/src/test/java/com/no5/helm/HelmReachableDialogBodyMatrixTest.kt",
+        "helm/app/src/test/java/com/no5/helm/HelmSettingsBodyMatrixTest.kt",
+        "helm/app/src/main/java/com/no5/helm/HelmInformationDialogs.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r85",
+      "sequence": 85,
+      "versionCode": 122,
+      "versionName": "0.8.50-sonar-runtime",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm122-sonard0423-read",
+          "text": "Sonar-Diagnose und brauchbare Pingrate erkennen den geprüften Sonard-Dauerbetriebsstand 0.4.23."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/SonarUsableRate.kt",
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r86",
+      "sequence": 86,
+      "versionCode": 123,
+      "versionName": "0.8.51-sonar-archive",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonard-0424-read",
+          "text": "Sonard 0.4.24 für den bestehenden quellen- und zeitgebundenen Usable-Rate-Lesepfad freigegeben."
+        },
+        {
+          "id": "sonard-0424-bounds",
+          "text": "Unbekannte und suffigierte Hostversionen bleiben abgewiesen; Renderer und TX-Bedienung unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/SonarUsableRate.kt",
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r87",
+      "sequence": 87,
+      "versionCode": 124,
+      "versionName": "0.8.52-sonar-auth",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-bearer-continuity",
+          "text": "Sonarhistorie bleibt bei bestaetigter Erneuerung desselben Gateway-Zugangs erhalten; echte Quellen- und Vertrauenswechsel tauschen die Sitzung weiter aus."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/control/HelmCredentialRenewalTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/GatewayCredentialFactoryTest.kt",
+        "helm/app/src/test/java/com/no5/gateway/LuminaGatewaySessionTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r88",
+      "sequence": 88,
+      "versionCode": 125,
+      "versionName": "0.8.53-sonar-journal",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-0425-read",
+          "text": "Exakte Sonard-0.4.25-Lesefreigabe fuer entkoppelte Journalbudget-Reservierung; Credential-Erneuerung und Renderer unveraendert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r89",
+      "sequence": 89,
+      "versionCode": 126,
+      "versionName": "0.8.54-sonar-archive",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-0426-read",
+          "text": "Exakte Sonard-0.4.26-Lesefreigabe fuer getrennte SSD-Vorbereitung und WD-Archivierung; Transport, Credentials und Renderer bleiben unveraendert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r90",
+      "sequence": 90,
+      "versionCode": 127,
+      "versionName": "0.8.55-design-unified",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-design-unified-20261019",
+          "text": "Einheitliche native Einrichtung, kompakte Dialoge und klare Bedienzustände in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_18.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r91",
+      "sequence": 91,
+      "versionCode": 128,
+      "versionName": "0.8.56-sonar-wire",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-0427-read",
+          "text": "Exakte Sonard-0.4.27-Lesefreigabe fuer gebuendelte USB-Wire-Fragmente und sicheren Archivfehlerabschluss; bestehende Oberflaeche und Renderer unveraendert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r92",
+      "sequence": 92,
+      "versionCode": 129,
+      "versionName": "0.8.57-ui-parity",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-approved-native-parity-20261019",
+          "text": "Native Dialoge und Eingaben verwenden die freigegebenen kompakten Formen; Hauptansichten und Bediengrenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_22.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r93",
+      "sequence": 93,
+      "versionCode": 130,
+      "versionName": "0.8.58-sonar-budget",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-0428-read",
+          "text": "Exakte Sonard-0.4.28-Lesefreigabe für voneinander unabhängige Journal-Budgetprüfungen; bestehende Oberfläche und Renderer erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt",
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r94",
+      "sequence": 94,
+      "versionCode": 131,
+      "versionName": "0.8.59-audio-menu",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-one-setup",
+          "text": "Ein AUDIO-Zugang für Klang, Hörplatz und Faderzuordnung; Status wird bereits im Menü geladen."
+        },
+        {
+          "id": "owned-named-presets",
+          "text": "Eigene Klangpresets benennen, kopieren und auswählen, sobald die getrennt freizugebende Gateway-Erweiterung verfügbar ist."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_28.json",
+        "helm/app/src/test/java/com/no5/helm/AudioMenuEntryTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundPresetLibraryTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r95",
+      "sequence": 95,
+      "versionCode": 132,
+      "versionName": "0.8.60-audio-notes",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "audio-release-notes-translated",
+          "text": "Vollständig übersetzte AUDIO-Releasehinweise."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundPresetLibraryTest.kt",
+        "ui-state/src/main/java/com/no5/ui/UiTranslations.java"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r96",
+      "sequence": 96,
+      "versionCode": 133,
+      "versionName": "0.8.61-preset-workflow",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "preset-workflow-direct-safe",
+          "text": "Direktes Bearbeiten, leere neue Presets und sicheres Verwerfen oder Löschen."
+        },
+        {
+          "id": "preset-thumbnails-room-horizontal",
+          "text": "Gespeicherte EQ-Kurven als Miniatur und ein querliegendes Boot in der Raumansicht."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_33.json",
+        "design/app-unification-20261019/preset-workflow-P1-E1/APPROVAL.json",
+        "helm/app/src/test/java/com/no5/helm/AudioPresetWorkflowTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r97",
+      "sequence": 97,
+      "versionCode": 134,
+      "versionName": "0.8.62-preset-readback",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "preset-native-save-readback",
+          "text": "Preset-Speichern mit präzisem DSP-Abgleich und geschützten verdeckten Bedienelementen."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundPresetManagementTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioPresetWorkflowTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioMenuEntryTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r98",
+      "sequence": 98,
+      "versionCode": 135,
+      "versionName": "0.8.63-ui-locale",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "helm-native-menu-language",
+          "text": "Vollständige Menütexte in Deutsch, Englisch und Afrikaans; Wiedergabe und Fader bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "ui-state/exact-source-labels.json",
+        "ui-state/src/test/java/com/no5/ui/WorkspaceLabelCoverageTest.java",
+        "ui-state/tools/audit_ui_text.py"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r99",
+      "sequence": 99,
+      "versionCode": 136,
+      "versionName": "0.8.64-eq-touch",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-touch-target-and-rejection",
+          "text": "EQ-Breitengriffe behalten ihr Touchziel, reagieren präzise und schützen benachbarte Punkte. Überlappungen nennen die betroffenen Punkte; abgelehnte Aktivierung bleibt sichtbar inaktiv."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqTouchTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqControlTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r100",
+      "sequence": 100,
+      "versionCode": 137,
+      "versionName": "0.8.65-eq-draft",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-draft-lifecycle",
+          "text": "Ungespeicherte Klangentwürfe bleiben beim Quellenwechsel und Wiederöffnen erhalten; alte Vorschauen gelten nicht als gespeichert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqControlTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r101",
+      "sequence": 101,
+      "versionCode": 138,
+      "versionName": "0.8.66-sonar-cpu",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-cpu-0430",
+          "text": "Exakte Sonard0.4.29/0.4.30-Lesefreigabe; vorhandene EQ-Draft-Oberfläche von137 erhalten. Keine Rendereränderung."
+        }
+      ],
+      "evidence": [
+        "git:b56736f98ad4d0c58394a352c3cc05aed9d61d5a:helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r102",
+      "sequence": 102,
+      "versionCode": 139,
+      "versionName": "0.8.67-eq-band",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-width-boundary-exact",
+          "text": "Breitenkorrekturen am Bandanschlag erhalten Frequenz und Anhebung exakt unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/AudioSoundTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r103",
+      "sequence": 103,
+      "versionCode": 140,
+      "versionName": "0.8.68-eq-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-native-budget-preview",
+          "text": "EQ-Bewegungen bleiben innerhalb der bestätigten Reserve; Test +3 dB gilt nur vorübergehend und kann nicht gespeichert werden."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundExperimentalTest.kt",
+        "design/app-unification-20261019/eq-experimental-EXP1/MANIFEST.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r104",
+      "sequence": 104,
+      "versionCode": 141,
+      "versionName": "0.8.69-sonar-tracking",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonard-0431-read-contract",
+          "text": "Exakte Lesefreigabe für Sonard 0.4.31 mit bytegleicher Tracking-Verwaltung; bestehende Anzeige und EQ-Funktionen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SonarUsableRateTest.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarUsableRateControllerTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r105",
+      "sequence": 105,
+      "versionCode": 142,
+      "versionName": "0.8.70-eq-activation",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-legacy-activation",
+          "text": "Alte überlappende EQ-Bänder werden beim Einschalten getrennt; Ablehnungen erscheinen ausdrücklich."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundExperimentalTest.kt",
+        "helm/domain/src/test/kotlin/com/no5/domain/AudioSoundTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r106",
+      "sequence": 106,
+      "versionCode": 143,
+      "versionName": "0.8.71-eq-touch",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-continuous-confirmed-drag",
+          "text": "EQ-Ziehen zeigt bestätigte Zwischenstände; Achsen bleiben während der Geste stabil und die Anzeige folgt dem tatsächlichen EQ-Zustand."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundExperimentalTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqTouchTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r107",
+      "sequence": 107,
+      "versionCode": 144,
+      "versionName": "0.8.72-eq-readback",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-verified-readback-renewal",
+          "text": "EQ-Vorschauen übernehmen verifizierte DSP-Antworten direkt; Lease-Erneuerungen haben Vorrang vor regelmäßigen Zustandsabfragen."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r108",
+      "sequence": 108,
+      "versionCode": 145,
+      "versionName": "0.8.73-eq-trace",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-isolated-draw-layers",
+          "text": "EQ-Zeichenebenen werden getrennt aktualisiert; feste Diagnose-Zeitmarken erfassen Bestätigung und Zustandsübernahme."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/EqExperimentalParityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r109",
+      "sequence": 109,
+      "versionCode": 146,
+      "versionName": "0.8.74-eq-events",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-editor-event-isolation",
+          "text": "Der EQ-Editor verarbeitet nur geänderte Anzeigen; verifizierte Vorschauen benötigen weniger Ergebnisabfragen."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r110",
+      "sequence": 110,
+      "versionCode": 147,
+      "versionName": "0.8.75-eq-host",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-host-observation-isolation",
+          "text": "Unveränderte AUDIO-Ansichten werden bei fremden Telemetriepaketen wiederverwendet; bestätigte EQ-Änderungen bleiben unmittelbar sichtbar."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r111",
+      "sequence": 111,
+      "versionCode": 148,
+      "versionName": "0.8.76-eq-surface",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-retained-native-surface",
+          "text": "Die unveränderte EQ-Zeichenfläche wird zwischengespeichert; Kurvenänderungen und Spektrum bleiben aktuell."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/EqExperimentalParityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r112",
+      "sequence": 112,
+      "versionCode": 149,
+      "versionName": "0.8.77-eq-chrome",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-visible-chrome-projections",
+          "text": "Header und Knopfanzeigen aktualisieren sich nur bei sichtbaren Änderungen; schnelle Audio-Messwerte zeichnen sie nicht mehr unnötig neu."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/HeaderChromeProjectionTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r113",
+      "sequence": 113,
+      "versionCode": 150,
+      "versionName": "0.8.78-eq-clock",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-single-telemetry-clock-delivery",
+          "text": "Telemetrie und Anzeigezeit werden gemeinsam übernommen; doppelte Oberflächenaufbauten entfallen bei unveränderten Frischegrenzen."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/HelmRetainedTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r114",
+      "sequence": 114,
+      "versionCode": 151,
+      "versionName": "0.8.79-eq-duplex",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-asynchronous-verified-wss",
+          "text": "EQ-Ziele werden asynchron über WSS angenommen; nur bestätigte DSP-Übernahmen ändern die angezeigte Kurve. Grenzen und Vorschaufrist bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundDuplexTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r115",
+      "sequence": 115,
+      "versionCode": 153,
+      "versionName": "0.8.81-eq-diagnostics",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-credential-channel-continuity",
+          "text": "Bestätigte Zugangserneuerungen wechseln den EQ-Kanal ohne Wiederholung gesendeter Ziele. Feste Statuscodes unterscheiden Transport-, Frische- und Übernahmefehler."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundDuplexTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqCredentialContinuityLiveTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r116",
+      "sequence": 116,
+      "versionCode": 154,
+      "versionName": "0.8.82-eq-chrome",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-static-backdrop-footer-cache",
+          "text": "Hintergrund und Footer werden im Klangeditor wiederverwendet. Header, Kurve, Anzeigen und Touch bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "git:d20e254f:helm/app/src/androidTest/java/com/no5/helm/EqChromeCacheLiveParityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r117",
+      "sequence": 117,
+      "versionCode": 155,
+      "versionName": "0.8.83-eq-paint",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-visible-only-updates",
+          "text": "Nur sichtbare EQ- und Spektrumänderungen lösen Neuzeichnen aus; identische ausstehende Ziele werden zusammengefasst. Frische und DSP-Bestätigung bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundPaintTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqCurvePerformanceLiveTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r118",
+      "sequence": 118,
+      "versionCode": 156,
+      "versionName": "0.8.84-eq-draw",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-granular-draw-and-placement",
+          "text": "Der EQ aktualisiert Kurve und Punktpositionen direkt; unveränderte Bedienelemente werden dabei nicht neu aufgebaut."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqTouchTest.kt",
+        "helm/app/src/test/java/com/no5/helm/EqExperimentalParityTest.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqCurvePerformanceLiveTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r119",
+      "sequence": 119,
+      "versionCode": 157,
+      "versionName": "0.8.85-eq-sky",
+      "sourceCommit": "a70af82e3b1c81309b8d1cbc71d911763bb1d865",
+      "changes": [
+        {
+          "id": "eq-header-sky-retention",
+          "text": "Der EQ-Editor hält nur den unveränderten Wolkenhintergrund vor; Konturen, Texte und Bedienelemente bleiben direkt gezeichnet."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SoundHeaderLayer.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqHeaderSkyLiveParityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r120",
+      "sequence": 120,
+      "versionCode": 158,
+      "versionName": "0.8.86-eq-profile",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-native-baseline-profile",
+          "text": "Ein gerätegeprüftes Kompilierungsprofil bereitet die benutzten EQ-Bedienwege vor; Kurven, DSP-Grenzen und Darstellung bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/baseline-prof.txt",
+        "helm/verification/eq-flow-20261021/baseline-profile158.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r121",
+      "sequence": 121,
+      "versionCode": 159,
+      "versionName": "0.8.87-eq-chrome",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-small-header-footer-cache",
+          "text": "Beim EQ-Bearbeiten werden unveränderte Headertexte und Fußnavigation wiederverwendet; Konturen und Rückmeldungen bleiben direkt."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SoundHeaderLayer.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqHeaderSkyLiveParityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r122",
+      "sequence": 122,
+      "versionCode": 160,
+      "versionName": "0.8.88-eq-direct",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-direct-target-single-latest",
+          "text": "EQ-Fingerziele reagieren lokal; die Klangkurve zeigt ausschließlich bestätigte Werte. Vorschauen verwenden einen laufenden Auftrag und ein ersetzbares Folgeziel. Sichtbare Bandgrenzen gelten auch für neutrale Punkte und Absenkungen."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/test/kotlin/com/no5/domain/SoundEqVisibleBandsTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundDuplexTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundExperimentalTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r123",
+      "sequence": 123,
+      "versionCode": 161,
+      "versionName": "0.8.89-sonar-gpu",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-bounded-native-gpu-watchdog",
+          "text": "SONAR nutzt einen begrenzten gemeinsamen Pingring und native GPU-Darstellung. Der Watchdog prüft Ursprung und Zeit vor gezielter Wiederherstellung; die Zwei-Sekunden-Grenze bleibt bestehen."
+        },
+        {
+          "id": "sonar161-owner-reservation",
+          "text": "Build 161 ist für die getrennte Sonar-Prüfung reserviert; keine Freigabe oder Auslieferung auf Lumina."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm161-sonar-gpu/STATUS.json",
+        "helm/app/src/main/java/com/no5/helm/watchdog/SonarWatchdogBinding.kt",
+        "helm/verification/eq-flow-20261021/SONAR161_RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r124",
+      "sequence": 124,
+      "versionCode": 162,
+      "versionName": "0.8.90-eq-direct",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-direct-geometry-fast-path",
+          "text": "Reine EQ-Pegelbewegungen prüfen keine unveränderte Bandgeometrie mehr. Normale Punkt- und Breitenbewegungen nutzen einen gezielten Prüfpfad; alle Grenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/domain/src/main/kotlin/com/no5/domain/AudioSound.kt",
+        "helm/domain/src/test/kotlin/com/no5/domain/SoundEqVisibleBandsTest.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundExperimentalTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r125",
+      "sequence": 125,
+      "versionCode": 163,
+      "versionName": "0.8.91-eq-shared",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-shared-safety",
+          "text": "Gemeinsame EQ-Sicherheitsprüfung läuft lokal im Hintergrund; nur das neueste gültige Ziel wird übertragen. Die DSP-Prüfung bleibt verbindlich."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SharedEqValidator.kt",
+        "helm/app/src/test/java/com/no5/helm/SharedEqWorkerTest.kt",
+        "shared-eq/MANIFEST.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r126",
+      "sequence": 126,
+      "versionCode": 164,
+      "versionName": "0.8.92-eq-shared",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-completed-proof-reuse",
+          "text": "Die gemeinsame EQ-Prüfung verwendet bereits vollständig geprüfte Ergebnisse erneut; Grenzen, Raster und DSP-Endprüfung bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "shared-eq/core/src/lib.rs",
+        "helm/app/src/test/java/com/no5/helm/SharedEqWorkerTest.kt",
+        "helm/verification/eq-shared-20261021/HELM163_CHECKPOINT.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r127",
+      "sequence": 127,
+      "versionCode": 165,
+      "versionName": "0.8.93-eq-ui",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-local-ui-isolation",
+          "text": "Die lokale EQ-Bedienung aktualisiert nur betroffene Anzeigen; Sicherheitsprüfung und DSP-Grenzen bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/RetainedSonarPresentation.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundPaintTest.kt",
+        "helm/app/src/test/java/com/no5/helm/RetainedSonarPresentationTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r128",
+      "sequence": 128,
+      "versionCode": 166,
+      "versionName": "0.8.94-eq-ui-layer",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-target-draw-isolation",
+          "text": "Die lokale EQ-Bedienung aktualisiert nur betroffene Anzeigen; Sicherheitsprüfung und DSP-Grenzen bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/AudioSoundEditor.kt",
+        "helm/app/src/androidTest/java/com/no5/helm/EqCurvePerformanceLiveTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r129",
+      "sequence": 129,
+      "versionCode": 167,
+      "versionName": "0.8.95-eq-touch",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-visible-touch-targets",
+          "text": "EQ-Punkte und Breitengriffe bleiben während ausstehender Klangbestätigung an ihren sichtbaren Positionen bedienbar."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SoundEqTouch.kt",
+        "helm/app/src/test/java/com/no5/helm/AudioSoundEqTouchTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r130",
+      "sequence": 130,
+      "versionCode": 168,
+      "versionName": "0.8.96-eq-reconcile",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-fresh-reconciliation",
+          "text": "Veraltete EQ-Bestätigungen werden frisch abgeglichen; Sicherheitsgrenzen und Vorschaufristen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/network/NetworkAudioSound.kt",
+        "helm/app/src/test/java/com/no5/helm/network/AudioSoundDuplexTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r131",
+      "sequence": 131,
+      "versionCode": 169,
+      "versionName": "0.8.97-eq-read-lane",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-independent-http-read-lane",
+          "text": "HTTP-Lesezugriffe laufen getrennt vom EQ-Befehlsablauf; Sicherheitsgrenzen und Vorschaufristen bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/eq-visible-touch-20261021/CONNECTION_CAUSE_20261022.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r132",
+      "sequence": 132,
+      "versionCode": 170,
+      "versionName": "0.8.98-eq-exact-projection",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "eq-exact-bridge-progress",
+          "text": "EQ-Zahlen bleiben beim Übertragen unverändert; Neuprüfungen bleiben nicht mehr hängen. Die Grenzsuche spart wirkungslose Filter-Schritte bei unveränderten Sicherheitsgrenzen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/eq-disconnect-20261022/RESULT.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r133",
+      "sequence": 133,
+      "versionCode": 171,
+      "versionName": "0.8.99-sonar-lifecycle",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-temporary-detach-owned-release",
+          "text": "SONAR erhält den GPU-Worker bei vorübergehendem Aushängen. Surface-Ressourcen werden freigegeben und beim Wiederanhängen neu verbunden; die Zwei-Sekunden-Grenze bleibt bestehen."
+        },
+        {
+          "id": "sonar171-owner-reservation",
+          "text": "171 ist für die getrennte Sonar-Lebenszyklusreparatur auf5554 reserviert; noch kein Build oder Rollout. Die harte Zwei-Sekunden-Grenze bleibt bestehen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm171-sonar-lifecycle/STATUS.json",
+        "helm/app/src/main/java/com/no5/helm/gpu/SonarGpuView.kt",
+        "helm/verification/releases/helm171-sonar-lifecycle/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r134",
+      "sequence": 134,
+      "versionCode": 172,
+      "versionName": "0.8.100-sonar-ownership",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-view-owned-by-current-controller",
+          "text": "SONAR und Dashboard binden den GPU-View an den aktuellen Quellen-Controller. Ein Sitzungswechsel gibt den alten View frei und erstellt den passenden neuen; die Zwei-Sekunden-Grenze bleibt bestehen."
+        },
+        {
+          "id": "sonar172-owner-reservation",
+          "text": "172 ist für die Sonar-Controller-/View-Zuordnung auf5554 reserviert; noch kein Build oder Rollout. Die Zwei-Sekunden-Grenze bleibt bestehen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm172-sonar-ownership/STATUS.json",
+        "helm/app/src/main/java/com/no5/helm/gpu/SonarGpuScenePlot.kt",
+        "helm/app/src/main/java/com/no5/helm/gpu/SonarGpuPlot.kt",
+        "helm/verification/releases/helm172-sonar-ownership/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r135",
+      "sequence": 135,
+      "versionCode": 173,
+      "versionName": "0.8.101-sonar-proof-diagnostics",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-origin-proof-rejection-stages",
+          "text": "SONAR protokolliert die Ablehnungsstufe sowie Warte-, Lese- und Übergabezeiten des letzten optionalen Ursprungszeitnachweises. Die Altersprüfung bleibt bei zwei Sekunden; keine automatische Wiederholung."
+        },
+        {
+          "id": "sonar173-owner-reservation",
+          "text": "173 ist für die begrenzte Diagnose des optionalen Sonar-Ursprungszeitnachweises auf5554 reserviert. Keine Fristlockerung, Abnahme oder Qualifikation."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm173-sonar-origin-diagnostics/STATUS.json",
+        "helm/app/src/main/java/com/no5/helm/network/OriginClockProofClient.kt",
+        "helm/verification/releases/helm173-sonar-origin-diagnostics/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r136",
+      "sequence": 136,
+      "versionCode": 174,
+      "versionName": "0.8.102-sonar-proof-ready",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar174-proof-ready",
+          "text": "Fertige Zeitnachweise werden unmittelbar verarbeitet. Kontextprüfung und Zwei-Sekunden-Grenze bleiben erhalten."
+        },
+        {
+          "id": "sonar174-reservation",
+          "text": "174 ist für die ereignisgesteuerte Sonar-Zeitprobenübergabe auf5554 reserviert. Noch kein Build oder Rollout; die Zwei-Sekunden-Grenze bleibt unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm174-sonar-proof-ready/STATUS.json",
+        "helm/verification/releases/helm174-sonar-proof-ready/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r137",
+      "sequence": 137,
+      "versionCode": 175,
+      "versionName": "0.8.103-sonar-proof-worker",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-admitted-IO-read-and-Main-handoff",
+          "text": "Zugelassene Sonar-Zeitproben starten auf demselben IO-Worker ereignisgesteuert. Bereits auf Main gelieferte Proben werden dort direkt geprüft. Ganze Enqueuezeit, Kontext und Zwei-Sekunden-Grenze bleiben unverändert."
+        },
+        {
+          "id": "sonar175-owner-reservation",
+          "text": "175 ist für die gezielte Sonar-Zeitprobe auf dem bestehenden IO-Worker und die direkte Main-Übergabe auf5554 reserviert. Noch kein Build oder Rollout; Zwei-Sekunden-Grenze unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm175-sonar-proof-worker/STATUS.json",
+        "helm/app/src/main/java/com/no5/helm/network/PiPollScheduler.kt",
+        "helm/app/src/main/java/com/no5/helm/watchdog/OriginProofMainHandoff.kt",
+        "helm/verification/releases/helm175-sonar-proof-worker/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r138",
+      "sequence": 138,
+      "versionCode": 176,
+      "versionName": "0.8.104-sonar-gpu-batch",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-gpu-native-batch-176",
+          "text": "Sonar berechnet Glättung und Farben auf der GPU und übernimmt wartende Pings gemeinsam. Start- und Betriebsabnahme noch offen."
+        },
+        {
+          "id": "sonar176-owner-reservation",
+          "text": "176 ist für den getrennten Sonar-GPU-/Batch-Prüfstand auf emulator-5554 reserviert. Kein Build oder Rollout durch diese Reservierung; Startfehler und Qualifikation bleiben offen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm176-sonar-gpu-batch/STATUS.json",
+        "helm/verification/releases/helm176-sonar-gpu-batch/RESERVATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r139",
+      "sequence": 139,
+      "versionCode": 177,
+      "versionName": "0.8.105-sonar-gpu-cache",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-gpu-linear-cache-177",
+          "text": "GPU-Glättung auf kalibrierten linearen Amplituden; Kontrast/Gamma ohne komplette Historienneuberechnung."
+        },
+        {
+          "id": "sonar-gpu-color-raster-177",
+          "text": "Sonarraster mit maximal1000 Pixel Breite und GPU-Skalierung. RAW, Zeit, Tiefe, Source und Frischegrenzen unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r140",
+      "sequence": 140,
+      "versionCode": 178,
+      "versionName": "0.8.106-sonar-gpu-observer",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-gpu-snapshot-delivery-178",
+          "text": "Neue Sonarbatches direkt an die bestehende GPU-Ansicht übergeben, ohne den Compose-Viewaufbau je Ping neu auszuführen. RAW bleiben vollständig im gemeinsamen Ring; Warnungen und Bedienung unabhängig aktuell."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r141",
+      "sequence": 141,
+      "versionCode": 179,
+      "versionName": "0.8.107-sonar-gpu-visible",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-visible-header-179",
+          "text": "Gemeinsamen Kopfbereich nur bei Änderungen seiner sichtbaren Werte neu zeichnen; unsichtbare Kompass-/Trim-/Kartenanimation löst keine zusätzlichen Sonar-Fensterbilder aus. Messwerte und Qualitätswechsel bleiben unmittelbar."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r142",
+      "sequence": 142,
+      "versionCode": 180,
+      "versionName": "0.8.108-sonar-gpu-coalesced",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-visible-ui-coalescing-180",
+          "text": "Statusmeldungen und neue RAW-IDs ohne sichtbare Text-/Bedienänderung zeichnen den alten Puffer nicht erneut. Neue Daten warten auf ihren GPU-Puffer; sichtbare Frischewarnungen und Benutzeraktionen bleiben sofort."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r143",
+      "sequence": 143,
+      "versionCode": 181,
+      "versionName": "0.8.109-sonar-shared-scene",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "shared-gpu-scene",
+          "text": "Retain one GPU surface/history across SONAR and DASHBOARD; local view rectangle only. Candidate; physical validation pending."
+        },
+        {
+          "id": "profile-demand",
+          "text": "Subscribe to image profiles only while resumed SONAR/DASHBOARD is visible; no capture/TX command. Support shared read-only .33 source."
+        }
+      ],
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r144",
+      "sequence": 144,
+      "versionCode": 182,
+      "versionName": "0.8.110-sonar-dashboard-scopes",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-dashboard-owner-scopes",
+          "text": "Separate dashboard telemetry, sonar and audio composition; keep continuous engine motion in draw phase and reuse immutable label styles."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/DashboardScreen.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r145",
+      "sequence": 145,
+      "versionCode": 183,
+      "versionName": "0.8.111-dashboard-native-labels",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-native-label-cache",
+          "text": "Render fixed dashboard labels with cached native text layouts in hardware Canvas, preserving semantics and control geometry; isolate live owner scopes."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/DashboardScreen.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r146",
+      "sequence": 146,
+      "versionCode": 184,
+      "versionName": "0.8.112-dashboard-painted-state",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-painted-projections",
+          "text": "Observe only painted dashboard motion strings and original evidence; slow fields ignore frame interpolation. Keep live watchdog admission across SONAR/DASHBOARD."
+        },
+        {
+          "id": "dashboard-native-label-candidate-rejected",
+          "text": "Restore standard label drawing after the native-label candidate showed no measured whole-app CPU gain; keep its original results."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/DashboardScreen.kt",
+        "helm/app/src/main/java/com/no5/helm/PanelPresentations.kt",
+        "helm/app/src/main/java/com/no5/helm/MainActivity.kt"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r147",
+      "sequence": 147,
+      "versionCode": 185,
+      "versionName": "0.8.113-visible-profile-lifetime",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-visible-profile-lifetime",
+          "text": "Bildprofil-Abo folgt sichtbarer Ansicht; kurze Pause/neuer Intent behält geordneten Empfang. Erst onStop oder Seite ohne Sonarbild bestellt ab."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SonarProfileDemandBinding.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarProfileDemandBindingTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r148",
+      "sequence": 148,
+      "versionCode": 186,
+      "versionName": "0.8.114-dashboard-artwork-worker",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-artwork-worker",
+          "text": "Dashboard-Hintergrund einmalig außerhalb des UI-Threads dekodieren und begrenzt wiederverwenden; Navigation benötigt keine erneute Datei-/PNG-Arbeit."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/DashboardImageStore.kt",
+        "helm/app/src/test/java/com/no5/helm/DashboardImageStoreTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r149",
+      "sequence": 149,
+      "versionCode": 187,
+      "versionName": "0.8.115-dashboard-stable-observers",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-stable-observers",
+          "text": "Dashboard-Beobachter und Navigationscallback über laufende Quelldaten hinweg stabil halten; aktuelle Rohwerte/Originalzeiten bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/PanelPresentations.kt",
+        "helm/app/src/test/java/com/no5/helm/DashboardPanelObservationTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r150",
+      "sequence": 150,
+      "versionCode": 188,
+      "versionName": "0.8.116-dashboard-painted-evidence",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "dashboard-painted-evidence",
+          "text": "Nur sichtbare Dashboardtexte vergleichen, Tiefenkurve unabhängig aktualisieren und Originalzeit-Formatierung begrenzt wiederverwenden. Rohwerte, Originalzeiten und Frischegrenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/DashboardPaintedText.kt",
+        "helm/app/src/test/java/com/no5/helm/DashboardPaintedTextTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r151",
+      "sequence": 151,
+      "versionCode": 189,
+      "versionName": "0.8.117-stable-locale-scope",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "stable-locale-scope",
+          "text": "Neu erzeugte Sprach-Callbacks lösen keine vollständige UI-Neuberechnung bei Telemetrie mehr aus. Aktuelle Aktion, echte Sprachwahl und Verfügbarkeit bleiben erhalten; Regression am Vorgänger reproduziert."
+        }
+      ],
+      "evidence": [
+        "ui-state/compose/src/main/kotlin/com/no5/ui/No5LocaleScope.kt",
+        "helm/app/src/test/java/com/no5/helm/No5LocaleScopeInvalidationTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r152",
+      "sequence": 152,
+      "versionCode": 190,
+      "versionName": "0.8.118-stable-window-theme",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "stable-window-theme",
+          "text": "Gemeinsame Farbpalette nur bei echtem Tag-/Nachtwechsel ersetzen. Telemetrie darf unveränderte Dashboard-Texte nicht durch einen neuen Theme-Wert vollständig neu berechnen. Regression am bisherigen Muster reproduziert; reale CPU-/Hängerprüfung getrennt."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/HelmTheme.kt",
+        "helm/app/src/test/java/com/no5/helm/HelmThemeInvalidationTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r153",
+      "sequence": 153,
+      "versionCode": 191,
+      "versionName": "0.8.119-idempotent-window-claims",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "idempotent-window-claims",
+          "text": "Bereits korrekte Vollbild-/IME-Fensterattribute beim Wiederaufnehmen nicht erneut an WindowManager schreiben; echte Abweichungen weiterhin gezielt wiederherstellen. API29-Regression mit drei unnötigen Schreibaufrufen reproduziert, physische Start-/Bedienprüfung separat."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/ImmersiveWindow.kt",
+        "helm/app/src/test/java/com/no5/helm/ImmersiveWindowTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r154",
+      "sequence": 154,
+      "versionCode": 192,
+      "versionName": "0.8.120-idempotent-page-intents",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "idempotent-page-intents",
+          "text": "Der erneute explizite Auftrag für eine bereits angezeigte Seite schreibt keinen neuen Root-Seitenauftrag. Kalter Start, echte Navigation, jüngere Gegenaufträge und das Schließen offener SONAR-/AUDIO-Untermenüs bleiben erhalten. Regression am bisherigen Routing reproduziert; physische Blockierprüfung separat."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/MainActivity.kt",
+        "helm/app/src/test/java/com/no5/helm/PageIntentInvalidationTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r155",
+      "sequence": 155,
+      "versionCode": 193,
+      "versionName": "0.8.121-prepared-profile-demand",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "prepared-profile-demand",
+          "text": "Neuen sichtbaren Profilstrom erst nach vorbereiteter GPU, konsumiertem Puffer und zugehörigem Window-Commit öffnen. Bereits angenommene Messdaten laufen bei GPU-Reparatur weiter; nur Unsichtbarkeit/Stop beendet den Lesebedarf. Kalte Vorbereitung bleibt als Vorbereitung sichtbar, niemals als frischer Messnachweis. Tiefe/SignalK bleiben unabhängig."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/SonarProfileDemandBinding.kt",
+        "helm/app/src/main/java/com/no5/helm/gpu/SonarGpuView.kt",
+        "helm/app/src/test/java/com/no5/helm/SonarProfileDemandBindingTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r156",
+      "sequence": 156,
+      "versionCode": 194,
+      "versionName": "0.8.122-recovery-ingress-anchor",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "recovery-ingress-anchor",
+          "text": "Reparaturzulassung nutzt den neuesten gültigen eigenen Eingangsping derselben Quelle nach vollständiger geordneter Batchübernahme. Die monotone Anfragezeit beginnt davor; alle Wartezeiten und die harte Zwei-Sekunden-Grenze bleiben unverändert. Der exakte Pingnachweis und die unabhängige Überwachung der Bildlücke bleiben getrennt erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/network/NetworkPiSonarSource.kt",
+        "helm/app/src/test/java/com/no5/helm/network/NetworkPiSonarSourceTest.kt",
+        "helm/app/src/test/java/com/no5/helm/network/OriginClockProofClientTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r157",
+      "sequence": 157,
+      "versionCode": 195,
+      "versionName": "0.8.123-recovery-input-proof",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "recovery-input-proof",
+          "text": "Eigener Frischenachweis für Reparatureingaben: das Gateway bindet den neuesten bestätigten eigenen Ping an den nächsten regulären Nonce-Lesevorgang. Quelle/Epoche/Auswahl und Mindestping bleiben gebunden; die gesamte ursprüngliche monotone Clientwartezeit zählt. Kein zusätzlicher Source-Poll, kein Bildfrischenachweis und keine Änderung an der exakten Ping-API oder Zwei-Sekunden-Grenze."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/main/java/com/no5/helm/network/OriginClockProofClient.kt",
+        "helm/app/src/test/java/com/no5/helm/network/OriginClockProofClientTest.kt"
+      ],
+      "apkSha256": []
+    },
+    {
+      "id": "com.no5.helm:r158",
+      "sequence": 158,
+      "versionCode": 196,
+      "versionName": "0.8.124-quiet-sonar-history",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "quiet-column-tone",
+          "text": "Gespeicherte Spaltenabbildung und langsame quellengebundene Bildautomatik; Auto-Gain mit lokalem Offset."
+        },
+        {
+          "id": "quiet-range-and-tracing",
+          "text": "Ruhiger Tiefenbereich, gemeinsame Regler und begrenzte Vergleichsmessung; keine neue Gesamtstabilitätsfreigabe."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm196-quiet-history/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r159",
+      "sequence": 159,
+      "versionCode": 197,
+      "versionName": "0.8.125-quiet-streaming-history",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-streaming-snapshot-fence",
+          "text": "Volle GPU-Historie unter laufendem Eingang aufbauen; RAW und Spaltenabbildung gemeinsam erfassen, bereits abgelaufene älteste Zeilen begrenzen."
+        },
+        {
+          "id": "sonar-relief-live-window",
+          "text": "Relief blockweise aus derselben RAW-Historie versorgen; nur tatsächlich gezeichnete Buffer als bereit melden."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm197-quiet-streaming-history/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r160",
+      "sequence": 160,
+      "versionCode": 198,
+      "versionName": "0.8.126-range-diagnostics",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-range-decision-dump",
+          "text": "Angeforderten, aktuellen und tatsächlich präsentierten Tiefenausschnitt samt Bodenbindung und Bestätigungszeiten nur bei explizitem DUMP ausgeben."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm198-range-diagnostics/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r161",
+      "sequence": 161,
+      "versionCode": 199,
+      "versionName": "0.8.127-range-confirmed-time",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-range-confirmed-time",
+          "text": "Automatischen Tiefenbereich nach bestätigter Bodenzeit verkleinern; kurze unsichere Messphasen pausieren den Zähler, statt ihn fortlaufend zu löschen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm199-range-confirmed-time/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r162",
+      "sequence": 162,
+      "versionCode": 200,
+      "versionName": "0.8.128-window-commit",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-window-commit",
+          "text": "Bildbestätigung an den tatsächlich gezeichneten Fensterframe binden, damit weitere Zeichenzyklen eine gültige Bestätigung nicht verdrängen."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm200-window-commit/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r163",
+      "sequence": 163,
+      "versionCode": 201,
+      "versionName": "0.8.129-quiet-depth",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-quiet-depth",
+          "text": "Ruhige Tiefe mit einstellbarem Zeitfenster für Tiefenzahl und automatische Tiefenfolge; kurze Messlücken überbrücken, Sonard und Signal K unverändert."
+        },
+        {
+          "id": "sonar-stable-settings",
+          "text": "Sonar-Dialoge behalten Bedienelemente, Einstellungen und Werteplätze bei fehlenden Daten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm201-quiet-depth/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r164",
+      "sequence": 164,
+      "versionCode": 202,
+      "versionName": "0.8.130-stable-depth-display",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-depth-fixed-readout",
+          "text": "Tiefenzahl und Status haben getrennte feste Plätze in Sonar und Dashboard. Kurze Messlücken verschieben oder verkleinern die beruhigte Zahl nicht mehr."
+        },
+        {
+          "id": "sonar-depth-rate-label",
+          "text": "Das Hz-Feld heißt Tiefenrate. Rohdaten, Signal K und das Tiefenfenster bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm202-stable-depth-display/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r165",
+      "sequence": 165,
+      "versionCode": 203,
+      "versionName": "0.8.131-quiet-sonar-status",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-quiet-status-symbol",
+          "text": "Sonarhinweise hinter einem festen Statussymbol außerhalb des Echobilds. Echte Warnungen sofort, Rückkehr zum neutralen Symbol nach fünf störungsfreien Sekunden."
+        },
+        {
+          "id": "sonar-clear-measured-plot",
+          "text": "Keine schwarzen Statusbalken, orange Warnflächen oder laufenden Track-Zähler über den Pings. Cursorwerte stehen fest unter dem Bild; gemeinsame Details im Dashboard und Sonar."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm203-quiet-sonar-status/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r166",
+      "sequence": 166,
+      "versionCode": 204,
+      "versionName": "0.8.132-quiet-status-intent",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-profile-intent-status",
+          "text": "Absichtliches Pausieren oder Vorbereiten der Bildabnahme ist ein Hinweis, kein Quellenfehler. Echte Fehler, Messdaten und Fristen bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm204-quiet-status-intent/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r167",
+      "sequence": 167,
+      "versionCode": 205,
+      "versionName": "0.8.133-sonar-start-depth",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-fixed-start-depth",
+          "text": "Feste Anfangstiefe für Sonar und Dashboard; automatische Tiefenfolge bleibt aktiv."
+        },
+        {
+          "id": "sonar-start-depth-persistence",
+          "text": "Gespeicherte Anfangstiefe in Metern, korrekte Ausschnitte bei Freeze, Zoom und wechselnden Messbereichen."
+        },
+        {
+          "id": "sonar-start-depth-evidence",
+          "text": "Nicht erfasste Tiefen bleiben leer; Messwerte und Signal K unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm205-start-depth/changes.json"
+      ]
+    },
+    {
+      "id": "com.no5.helm:r168",
+      "sequence": 168,
+      "versionCode": 206,
+      "versionName": "0.8.134-sonar-start-depth-controls",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "sonar-fixed-start-depth",
+          "text": "Feste Anfangstiefe für Sonar und Dashboard; automatische Tiefenfolge bleibt aktiv."
+        },
+        {
+          "id": "sonar-start-depth-persistence",
+          "text": "Gespeicherte Anfangstiefe in Metern, korrekte Ausschnitte bei Freeze, Zoom und wechselnden Messbereichen."
+        },
+        {
+          "id": "sonar-start-depth-evidence",
+          "text": "Nicht erfasste Tiefen bleiben leer; Messwerte und Signal K unverändert."
+        }
+      ],
+      "evidence": [
+        "helm/verification/releases/helm205-start-depth/changes.json"
+      ]
+    }
+  ]
+}

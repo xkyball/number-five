@@ -1,0 +1,153 @@
+{
+  "schema": "number-five.publication-evidence/1",
+  "reviewed_on": "2026-11-01",
+  "scope": "Read-only source and saved acceptance review. No new builds, device actions, services, tests or broker operations. Findings are scoped saved observations, not current runtime guarantees.",
+  "sources": [
+    {
+      "path": "no-android/projects/chart-converter/README.md",
+      "sha256": "9ae0999096b595eb64c27df62ca6766a3ee9fff3ea211785accd324e4b748105"
+    },
+    {
+      "path": "no-android/projects/lumina-control/README.md",
+      "sha256": "17a0858994e6e1fe4c84d594ca00e55e62682c5f7aa4268524fd2dad416bbac4"
+    },
+    {
+      "path": "no-apps/helm/README.md",
+      "sha256": "501b759c0229082a8efd910b0ef10d84cce8838008a67d97d6cfff052969708e"
+    },
+    {
+      "path": "no-apps/helm/THIRD_PARTY_NOTICES.md",
+      "sha256": "e75f290d600e12dfc6f153c9b31e70d6c58da95ceb387dd0c41f3a508578e23b"
+    },
+    {
+      "path": "no-apps/helm/app/build.gradle.kts",
+      "sha256": "cb0ef415a9a6bb346c62cc0ecaa2d5cd16bf726a3012520b0b46682695dcb057"
+    },
+    {
+      "path": "no-apps/helm/licenses/ASSET_RIGHTS.md",
+      "sha256": "38cdc33bd83b8105bd7bfd720f2f96b33bf5c98b67cb4b33871896cd07213b13"
+    },
+    {
+      "path": "no-apps/helm/releases.json",
+      "sha256": "d18abaabbc2d610bce6644805a60d4028db651a4d67b89e4b5b2e4444d2c5119"
+    },
+    {
+      "path": "no-apps/map/LICENSE",
+      "sha256": "ead06c5e9b243275923928f60659a759507ab7ce56abebdefbcf6fcd22dba96c"
+    },
+    {
+      "path": "no-apps/map/docs/SOURCE_PROVENANCE.json",
+      "sha256": "3b89239f59dc0029f554f33f8608c327f1036e449d42abd43dfb0c892429d633"
+    },
+    {
+      "path": "no-apps/map/verification/releases/map106-route-feedback-20261025/RESULT.json",
+      "sha256": "3177b02f27e77af84c57988672877e5ef2c15c9753c127df3b7c677e2aa4d4ac"
+    },
+    {
+      "path": "no-apps/map/verification/releases/map110-memory-budget-20261026/CANDIDATE.json",
+      "sha256": "cc7d66eabb600b79c0b6cad60dd42580072ab14fb3bab6fbdec6d49b2af69a74"
+    },
+    {
+      "path": "no-pi/projects/no5-active-noise-control/README.md",
+      "sha256": "aa85d9d8b3ea319da6f8e189015cc1e7ef480b674899d27673c979a774a8bbc8"
+    },
+    {
+      "path": "no-pi/projects/no5-active-noise-control/SOURCING_SOUTH_AFRICA_20261019.md",
+      "sha256": "9354aa71ce49dea45d40233e4a6f20516176181c97b7d685f8754b8502996533"
+    },
+    {
+      "path": "no-pi/projects/no5-camilladsp/README.md",
+      "sha256": "68efb4ab5217c38bd953db77226f6092d441f7134ffae6a0b3bb7c1aac45d93e"
+    },
+    {
+      "path": "no-pi/projects/no5-camilladsp/upstream.json",
+      "sha256": "bede7c95003414b54cd7a07cd71397d3a53c3dd8f1c31dece37147c66cc4691a"
+    },
+    {
+      "path": "no-pi/projects/no5-camilladsp/verification/cpu-eq-optimized-pi-20261021.json",
+      "sha256": "7ecf0dded4a3074039dd6cb7a7c3d3f57608cfc92094bd86e17376f0720fc365"
+    },
+    {
+      "path": "no-pi/projects/no5-marineos-lab/README.md",
+      "sha256": "c0063b6394131c14cfa940568b31c13221c70cb253aa5aac9655e58aefeeaac3"
+    },
+    {
+      "path": "no-pi/projects/no5-pi-gateway/README.md",
+      "sha256": "7f13f58bbebf8a80aaa69f2af8f28f2fbbbca23abbf1aa87d130f2b94c4a1166"
+    },
+    {
+      "path": "no-pi/projects/no5-pi-gateway/src/no5_pi_gateway/map_routes.py",
+      "sha256": "01192e37bb7c033dce7e0f12870336e8fa6129722c18b54acbd310fcf00a7b45"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/gps-live-map-first-install-20261023.json",
+      "sha256": "4e1802bdc41008ea84c8a3140b58911bf92f7583dc78a94d31adda3b233c2233"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/lumina-gps-latency-20261018.json",
+      "sha256": "d3d0e8043f4e0f79fca57018c4af4e411945d8b443826311e66da603b9a159f7"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/lumina-network-recovery-20261027.json",
+      "sha256": "28bf1bc3cffcbb883b0e46abecc50953cd8a7a52fc099e6081a20478f200fc24"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/lumina-wlan-after-reconfiguration-20261030.json",
+      "sha256": "a90f3d6153633d4cc9d8faa57a610583a9188f4b89eb4ed598d7fce227eda255"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/sonard-continuity-0422-20261018.json",
+      "sha256": "9d205635a63eef133308abe361ffe16a8f4c33d43627ba90c32e886dc670793b"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/sound-final-capture-pi-actual-20261016.json",
+      "sha256": "4e914202783fd2dca91aaff2d70a3a8f08b300ed6d341350eacabf885edea929"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/evidence/sound-preset-library-pi-20261020.json",
+      "sha256": "25dcb2fa6d4bff90774b186c12ae44e716501c9918e63e90e99c7a41cc3f5a5b"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/tools/fusion-enclosures/evidence/project-progress-current.json",
+      "sha256": "be92dec56130f8723c03e10ef7668e66d907fb3bbddee2debf93b7e1e88e029f"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/tools/gps-live-map/README.md",
+      "sha256": "bbe88f384ec7c544270d6cdb09f41cfbe5d6bccf83b62723bee1bd1e436bb2a5"
+    },
+    {
+      "path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/vendor/LICENSE",
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb"
+    },
+    {
+      "path": "no-pi/projects/no5-sonard-openecho/README.md",
+      "sha256": "6be0aa053c0c4e5e2914ebfd3090443b0828828abf36f10c79e3743809291adf"
+    },
+    {
+      "path": "no-pi/projects/no5-spotify-connect/Cargo.toml",
+      "sha256": "6ee9e74415c2ac3ddb84d831df6e0716c839a25f1cd2f9f1b17fe9302f6b3b40"
+    },
+    {
+      "path": "no-pi/projects/no5-spotify-connect/README.md",
+      "sha256": "866fe8b7057ca287b2bd18f51779284f6d6bc3c42a985e6dd3b64b4b443a8388"
+    },
+    {
+      "path": "no-pi/projects/no5-spotify-connect/evidence/music-selection-20261009/manual-acceptance.json",
+      "sha256": "a6f8b3be49901a94b724b0717792f19b91a896bcdd9c20ac33c64210e064c4b0"
+    }
+  ],
+  "additional": [
+    {
+      "path": "no-pi/projects/no5-rebuild/PICO_DEPTH_RATE_20261016.md",
+      "sha256": "86e7b9b9dc94ed17dbf398da9212d72f1831c8299ed920f304a52cce85cc167b"
+    },
+    {
+      "path": "no-apps/map/verification/releases/map110-memory-budget-20261026/DEVICE_ACCEPTANCE.json",
+      "sha256": "2950979f9314bda84cf94cf798fbcd41a4bfd5a7cfe573bc55c297d7a23c0cc7"
+    },
+    {
+      "path": "no-apps/helm/verification/releases/helm206-start-depth-controls/physical.json",
+      "sha256": "5d274de33ca6804177fc8feae6da7a8c7f0f0797d1572a3706c333210585fdbe"
+    }
+  ]
+}

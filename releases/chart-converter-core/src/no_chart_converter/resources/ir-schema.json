@@ -1,0 +1,1611 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no5.local/schemas/ir-schema.json",
+  "title": "ir-schema.json",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/manifest"
+    },
+    {
+      "$ref": "#/$defs/cell"
+    }
+  ],
+  "$defs": {
+    "evidence": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "source_record",
+            "source_provenance",
+            "source_code",
+            "test",
+            "documentation"
+          ]
+        },
+        "reference": {
+          "type": "string"
+        },
+        "sha256": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "detail": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "kind",
+        "reference",
+        "sha256",
+        "detail"
+      ],
+      "additionalProperties": false
+    },
+    "declaration": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "enum": [
+            "verified",
+            "inferred",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "value": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "raw": {
+          "type": [
+            "string",
+            "number",
+            "null"
+          ]
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "state",
+        "value",
+        "raw",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "sourceRecord": {
+      "type": "object",
+      "properties": {
+        "member": {
+          "type": "string"
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "length": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "recordType": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "member",
+        "offset",
+        "length",
+        "recordType"
+      ],
+      "additionalProperties": false
+    },
+    "loss": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "stage": {
+          "enum": [
+            "source_before_ir",
+            "decode",
+            "writer",
+            "package"
+          ]
+        },
+        "classification": {
+          "enum": [
+            "preserved",
+            "representation_change",
+            "reconstructed",
+            "unavailable_in_source",
+            "rejected"
+          ]
+        },
+        "scope": {
+          "type": "string"
+        },
+        "detail": {
+          "type": "string"
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "id",
+        "stage",
+        "classification",
+        "scope",
+        "detail",
+        "sourceIds",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "bbox": {
+      "type": "object",
+      "properties": {
+        "west": {
+          "type": "number"
+        },
+        "south": {
+          "type": "number"
+        },
+        "east": {
+          "type": "number"
+        },
+        "north": {
+          "type": "number"
+        },
+        "crossesAntimeridian": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "west",
+        "south",
+        "east",
+        "north",
+        "crossesAntimeridian"
+      ],
+      "additionalProperties": false
+    },
+    "ref": {
+      "type": "object",
+      "properties": {
+        "startNodeId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "signedEdgeId": {
+          "type": "integer"
+        },
+        "endNodeId": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 1
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sourceOrdinal": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "startNodeId",
+        "signedEdgeId",
+        "endNodeId",
+        "sourceOrdinal"
+      ],
+      "additionalProperties": false
+    },
+    "attribute": {
+      "oneOf": [
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 65535
+            },
+            "acronym": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wireType": {
+              "const": 0
+            },
+            "type": {
+              "const": "uint32"
+            },
+            "value": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "sourceRecord": {
+              "$ref": "#/$defs/sourceRecord"
+            }
+          },
+          "required": [
+            "code",
+            "acronym",
+            "wireType",
+            "type",
+            "value",
+            "sourceRecord"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 65535
+            },
+            "acronym": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wireType": {
+              "const": 2
+            },
+            "type": {
+              "const": "float64"
+            },
+            "value": {
+              "type": "number"
+            },
+            "sourceRecord": {
+              "$ref": "#/$defs/sourceRecord"
+            }
+          },
+          "required": [
+            "code",
+            "acronym",
+            "wireType",
+            "type",
+            "value",
+            "sourceRecord"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 65535
+            },
+            "acronym": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "wireType": {
+              "const": 4
+            },
+            "type": {
+              "const": "utf8"
+            },
+            "value": {
+              "type": "string"
+            },
+            "sourceRecord": {
+              "$ref": "#/$defs/sourceRecord"
+            }
+          },
+          "required": [
+            "code",
+            "acronym",
+            "wireType",
+            "type",
+            "value",
+            "sourceRecord"
+          ],
+          "additionalProperties": false
+        }
+      ]
+    },
+    "ring": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "role": {
+          "enum": [
+            "exterior",
+            "interior",
+            "unclassified"
+          ]
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 4
+        },
+        "coordinatesSm": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 4
+        },
+        "edgeRefOrdinals": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 0
+        },
+        "derivation": {
+          "enum": [
+            "topology",
+            "triangle_boundary"
+          ]
+        },
+        "closure": {
+          "enum": [
+            "source_closed",
+            "explicit_closure_added"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "role",
+        "coordinates",
+        "coordinatesSm",
+        "edgeRefOrdinals",
+        "derivation",
+        "closure"
+      ],
+      "additionalProperties": false
+    },
+    "reconstruction": {
+      "type": "object",
+      "properties": {
+        "status": {
+          "enum": [
+            "exact_topology",
+            "reconstructed",
+            "unresolved"
+          ]
+        },
+        "algorithm": {
+          "type": "string"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "status",
+        "algorithm",
+        "issues",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "triangles": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "enum": [
+            4,
+            5,
+            6
+          ]
+        },
+        "coordinatesSm": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 3
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 3
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        }
+      },
+      "required": [
+        "mode",
+        "coordinatesSm",
+        "coordinates",
+        "bbox"
+      ],
+      "additionalProperties": false
+    },
+    "pointGeometry": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "point"
+        },
+        "position": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "kind",
+        "position",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "depth": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "meaning": {
+          "const": "depth"
+        },
+        "unit": {
+          "$ref": "#/$defs/declaration"
+        },
+        "datum": {
+          "$ref": "#/$defs/declaration"
+        },
+        "wireStorage": {
+          "const": "float32"
+        }
+      },
+      "required": [
+        "value",
+        "meaning",
+        "unit",
+        "datum",
+        "wireStorage"
+      ],
+      "additionalProperties": false
+    },
+    "soundingPoint": {
+      "type": "object",
+      "properties": {
+        "ordinal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "position": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "positionSm": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "depth": {
+          "$ref": "#/$defs/depth"
+        }
+      },
+      "required": [
+        "ordinal",
+        "position",
+        "positionSm",
+        "depth"
+      ],
+      "additionalProperties": false
+    },
+    "multipointGeometry": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "multipoint"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/soundingPoint"
+          },
+          "minItems": 0
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "kind",
+        "bbox",
+        "points",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "linePart": {
+      "type": "object",
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2
+        },
+        "coordinatesSm": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 2
+        },
+        "edgeRefOrdinals": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "coordinates",
+        "coordinatesSm",
+        "edgeRefOrdinals"
+      ],
+      "additionalProperties": false
+    },
+    "lineGeometry": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "line"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "edgeRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "parts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/linePart"
+          },
+          "minItems": 0
+        },
+        "reconstruction": {
+          "$ref": "#/$defs/reconstruction"
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "kind",
+        "bbox",
+        "edgeRefs",
+        "parts",
+        "reconstruction",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "polygon": {
+      "type": "object",
+      "properties": {
+        "exteriorRingId": {
+          "type": "string"
+        },
+        "interiorRingIds": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "exteriorRingId",
+        "interiorRingIds"
+      ],
+      "additionalProperties": false
+    },
+    "areaGeometry": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "const": "area"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "edgeRefs": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ref"
+          },
+          "minItems": 0
+        },
+        "contourPointCounts": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "minItems": 0
+        },
+        "rings": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/ring"
+          },
+          "minItems": 0
+        },
+        "polygons": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/polygon"
+          },
+          "minItems": 0
+        },
+        "trianglePrimitives": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/triangles"
+          },
+          "minItems": 0
+        },
+        "reconstruction": {
+          "$ref": "#/$defs/reconstruction"
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "kind",
+        "bbox",
+        "edgeRefs",
+        "contourPointCounts",
+        "rings",
+        "polygons",
+        "trianglePrimitives",
+        "reconstruction",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "geometry": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/pointGeometry"
+        },
+        {
+          "$ref": "#/$defs/multipointGeometry"
+        },
+        {
+          "$ref": "#/$defs/lineGeometry"
+        },
+        {
+          "$ref": "#/$defs/areaGeometry"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "feature": {
+      "type": "object",
+      "properties": {
+        "sourceId": {
+          "type": "string"
+        },
+        "sourceFeatureId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "classCode": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 65535
+        },
+        "classAcronym": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sourcePrimitive": {
+          "enum": [
+            0,
+            1,
+            2,
+            3,
+            255
+          ]
+        },
+        "attributes": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attribute"
+          },
+          "minItems": 0
+        },
+        "displayScale": {
+          "type": "object",
+          "properties": {
+            "minimumDenominator": {
+              "$ref": "#/$defs/declaration"
+            },
+            "maximumDenominator": {
+              "$ref": "#/$defs/declaration"
+            }
+          },
+          "required": [
+            "minimumDenominator",
+            "maximumDenominator"
+          ],
+          "additionalProperties": false
+        },
+        "geometry": {
+          "$ref": "#/$defs/geometry"
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "sourceId",
+        "sourceFeatureId",
+        "classCode",
+        "classAcronym",
+        "sourcePrimitive",
+        "attributes",
+        "displayScale",
+        "geometry",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "coverageRing": {
+      "type": "object",
+      "properties": {
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 4
+        },
+        "sourcePointCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "closure": {
+          "enum": [
+            "source_closed",
+            "explicit_closure_added"
+          ]
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "coordinates",
+        "sourcePointCount",
+        "closure",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "edge": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "coordinatesSm": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "number"
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 0
+        },
+        "coordinates": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {
+                "type": "number",
+                "minimum": -180,
+                "maximum": 180
+              },
+              {
+                "type": "number",
+                "minimum": -90,
+                "maximum": 90
+              }
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          },
+          "minItems": 0
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "id",
+        "coordinatesSm",
+        "coordinates",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "node": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "positionSm": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "number"
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "position": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "sourceRecord": {
+          "$ref": "#/$defs/sourceRecord"
+        }
+      },
+      "required": [
+        "id",
+        "positionSm",
+        "position",
+        "sourceRecord"
+      ],
+      "additionalProperties": false
+    },
+    "textDocument": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        },
+        "sourceReference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "content",
+        "sourceReference"
+      ],
+      "additionalProperties": false
+    },
+    "summary": {
+      "type": "object",
+      "properties": {
+        "cells": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "features": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attributes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "soundings": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edgeRefs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "edges": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nodes": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "cells",
+        "features",
+        "attributes",
+        "soundings",
+        "edgeRefs",
+        "edges",
+        "nodes"
+      ],
+      "additionalProperties": false
+    },
+    "transform": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "opencpn-fromSM_plib"
+        },
+        "semimajorAxisMeters": {
+          "const": 6378137.0
+        },
+        "mercatorScale": {
+          "const": 0.9996
+        },
+        "axisOrder": {
+          "const": "longitude_latitude"
+        },
+        "numeric": {
+          "const": "float64"
+        },
+        "longitudeWrap": {
+          "const": "normalize_preserve_crossing"
+        },
+        "sourcePrecision": {
+          "const": "float32_local_float64_geographic"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidence"
+          },
+          "minItems": 1
+        }
+      },
+      "required": [
+        "name",
+        "semimajorAxisMeters",
+        "mercatorScale",
+        "axisOrder",
+        "numeric",
+        "longitudeWrap",
+        "sourcePrecision",
+        "evidence"
+      ],
+      "additionalProperties": false
+    },
+    "sourceCell": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "enum": [
+            "no5-pi-map-cache-v1",
+            "no5-synthetic-fixture-v1"
+          ]
+        },
+        "dialect": {
+          "enum": [
+            "map-osenc-201-three-index",
+            "synthetic-no5-chart-ir"
+          ]
+        },
+        "member": {
+          "type": "string"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "provenanceMember": {
+          "type": "string"
+        },
+        "provenanceSha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "edition": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "update": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "publishDate": {
+          "type": "string"
+        },
+        "updateDate": {
+          "type": "string"
+        },
+        "originalHeader": {
+          "type": "object"
+        },
+        "authorizationSnapshot": {
+          "type": "object"
+        },
+        "authorizationMeaning": {
+          "enum": [
+            "historical_original_helper_export_check_only",
+            "synthetic_fixture_no_license_claim"
+          ]
+        }
+      },
+      "required": [
+        "format",
+        "dialect",
+        "member",
+        "sha256",
+        "provenanceMember",
+        "provenanceSha256",
+        "edition",
+        "update",
+        "publishDate",
+        "updateDate",
+        "originalHeader",
+        "authorizationSnapshot",
+        "authorizationMeaning"
+      ],
+      "additionalProperties": false
+    },
+    "cell": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "no5-chart-ir/1"
+        },
+        "kind": {
+          "const": "cell"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "source": {
+          "$ref": "#/$defs/sourceCell"
+        },
+        "bbox": {
+          "$ref": "#/$defs/bbox"
+        },
+        "referencePosition": {
+          "type": "array",
+          "prefixItems": [
+            {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            },
+            {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "nativeScale": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "datums": {
+          "type": "object",
+          "properties": {
+            "horizontal": {
+              "$ref": "#/$defs/declaration"
+            },
+            "sounding": {
+              "$ref": "#/$defs/declaration"
+            },
+            "vertical": {
+              "$ref": "#/$defs/declaration"
+            }
+          },
+          "required": [
+            "horizontal",
+            "sounding",
+            "vertical"
+          ],
+          "additionalProperties": false
+        },
+        "units": {
+          "type": "object",
+          "properties": {
+            "localHorizontal": {
+              "$ref": "#/$defs/declaration"
+            },
+            "soundingDepth": {
+              "$ref": "#/$defs/declaration"
+            },
+            "height": {
+              "$ref": "#/$defs/declaration"
+            }
+          },
+          "required": [
+            "localHorizontal",
+            "soundingDepth",
+            "height"
+          ],
+          "additionalProperties": false
+        },
+        "coverage": {
+          "type": "object",
+          "properties": {
+            "covered": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/coverageRing"
+              },
+              "minItems": 0
+            },
+            "excluded": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/coverageRing"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "covered",
+            "excluded"
+          ],
+          "additionalProperties": false
+        },
+        "topology": {
+          "type": "object",
+          "properties": {
+            "edges": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/edge"
+              },
+              "minItems": 0
+            },
+            "nodes": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/node"
+              },
+              "minItems": 0
+            }
+          },
+          "required": [
+            "edges",
+            "nodes"
+          ],
+          "additionalProperties": false
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/feature"
+          },
+          "minItems": 0
+        },
+        "textDocuments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/textDocument"
+          },
+          "minItems": 0
+        },
+        "summary": {
+          "$ref": "#/$defs/summary"
+        },
+        "losses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/loss"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "format",
+        "kind",
+        "id",
+        "name",
+        "source",
+        "bbox",
+        "referencePosition",
+        "nativeScale",
+        "datums",
+        "units",
+        "coverage",
+        "topology",
+        "features",
+        "textDocuments",
+        "summary",
+        "losses"
+      ],
+      "additionalProperties": false
+    },
+    "cellDescriptor": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)\\.\\.(?:/|$))[^\\\\]+$"
+        },
+        "bytes": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "featureCount": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "attributeCount": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "id",
+        "path",
+        "bytes",
+        "sha256",
+        "featureCount",
+        "attributeCount"
+      ],
+      "additionalProperties": false
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "format": {
+          "const": "no5-chart-ir/1"
+        },
+        "kind": {
+          "const": "package"
+        },
+        "source": {
+          "type": "object",
+          "properties": {
+            "format": {
+              "enum": [
+                "no5-pi-map-cache-v1",
+                "no5-synthetic-fixture-v1"
+              ]
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "bytes": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "product": {
+              "type": "string"
+            },
+            "declaredCellCount": {
+              "type": "integer",
+              "minimum": 0
+            }
+          },
+          "required": [
+            "format",
+            "sha256",
+            "bytes",
+            "product",
+            "declaredCellCount"
+          ],
+          "additionalProperties": false
+        },
+        "converter": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "sourceSha256": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            }
+          },
+          "required": [
+            "name",
+            "version",
+            "sourceSha256"
+          ],
+          "additionalProperties": false
+        },
+        "coordinatePolicy": {
+          "$ref": "#/$defs/transform"
+        },
+        "cells": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/cellDescriptor"
+          },
+          "minItems": 1
+        },
+        "summary": {
+          "$ref": "#/$defs/summary"
+        },
+        "losses": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/loss"
+          },
+          "minItems": 0
+        }
+      },
+      "required": [
+        "format",
+        "kind",
+        "source",
+        "converter",
+        "coordinatePolicy",
+        "cells",
+        "summary",
+        "losses"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

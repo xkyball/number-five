@@ -1,0 +1,25 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="com.no5.helm.permission.SYSTEM_CONTROL" />
+
+    <permission android:name="com.no5.permission.SPECIAL_KEYBOARD_GEOMETRY" android:protectionLevel="signature" />
+    <uses-permission android:name="com.no5.permission.SPECIAL_KEYBOARD_GEOMETRY" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <queries>
+        <package android:name="com.no5.home" />
+        <package android:name="com.no5.helm" />
+    </queries>
+    <uses-permission android:name="com.no5.lumina.control.permission.KNOB_LEASE" />
+    <queries><package android:name="com.no5.lumina.control" /></queries>
+    <application android:label="No5 MAP" android:theme="@android:style/Theme.Material.NoActionBar" android:allowBackup="false" android:usesCleartextTraffic="true" android:hardwareAccelerated="true">
+        <activity android:name="com.no5.helm.MainActivity" android:screenOrientation="landscape" android:launchMode="singleTask" android:exported="true">
+            <intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter>
+        </activity>
+        <activity android:name="com.no5.releaseinfo.AboutActivity" android:exported="false" android:theme="@android:style/Theme.Material.NoActionBar" />
+        <receiver android:name="com.no5.releaseinfo.PackageReplacedReceiver" android:exported="false">
+            <intent-filter><action android:name="android.intent.action.MY_PACKAGE_REPLACED" /></intent-filter>
+        </receiver>
+        <!-- Shell already holds DUMP; the provider additionally checks the exact caller UID. -->
+        <provider android:name="com.no5.releaseinfo.ReleaseProvider" android:authorities="${applicationId}.releaseinfo" android:exported="true" android:permission="android.permission.DUMP" />
+    </application>
+</manifest>

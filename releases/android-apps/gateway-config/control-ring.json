@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "commit": "d98fee962f2429b31a2d55a9dd27d4a890b7ba3f",
+  "path": "next/lumina-knob-control-v1/src/org/lumina/control/commands/v1/CommandRing.java",
+  "sha256": "4fa5aa7dafc48827406af36fb6a950226c46df5e25f8e363275eeb6528a14123",
+  "destination": "org/lumina/control/commands/v1/CommandRing.java"
+}

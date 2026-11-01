@@ -1,0 +1,50 @@
+{
+  "schema": "number-five.release-validation/1",
+  "validated_on": "2026-11-01",
+  "component": "camilladsp-extensions",
+  "original_sources_modified": false,
+  "manifest_source_hashes_verified": true,
+  "python_ast_files": 4,
+  "secret_scan": {
+    "patterns": [
+      "private_key",
+      "cloud_key",
+      "personal_path",
+      "private_ip",
+      "sensitive_assignment"
+    ],
+    "findings": [],
+    "scope": "All files enumerated by release manifest; heuristic text scan, not a proof against every possible secret."
+  },
+  "gui_windows_opened": 0,
+  "tests": {
+    "command": "CARGO_NET_OFFLINE=true cargo test --locked --manifest-path eq-core/Cargo.toml -- --test-threads=1",
+    "scope": "Standalone released eq-core including preserved Rust parity baseline; dependencies read from local Cargo cache; target files outside release package.",
+    "unit_passed": 3,
+    "parity_passed": 7,
+    "failed": 0,
+    "warnings": 1,
+    "warning_reason": "Existing editedPointId Rust field uses the JSON wire spelling rather than snake_case."
+  },
+  "upstream_preparation": {
+    "status": "PASS",
+    "archive_sha256": "a2a37a31788e58eda41c681ea67df2b0e34d00abc3e6ba6986e10f9e1176a6e7",
+    "download_performed": false,
+    "source": "Existing local pinned upstream archive, copied only into release validation workspace.",
+    "prepared_own_hashes_match": [
+      "src/no5_sound.rs",
+      "eq-core/src/lib.rs",
+      "eq-core/src/kernel.sha256",
+      "Cargo.lock"
+    ],
+    "materialized_upstream_excluded_from_archive": true
+  },
+  "limits": [
+    "Full Camilla sound-module build/tests were not rerun.",
+    "PCM probes were not rerun; no audio process or production service was started.",
+    "No acoustic, Pi-load or live ALSA acceptance is claimed."
+  ],
+  "device_pi_vm_cad_jobs": 0,
+  "external_native_provider_jobs": 0,
+  "host_cli_compilation": true
+}

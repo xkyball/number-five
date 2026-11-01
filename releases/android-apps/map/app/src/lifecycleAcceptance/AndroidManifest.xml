@@ -1,0 +1,21 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="com.no5.helm.permission.SYSTEM_CONTROL" tools:node="remove" />
+    <uses-permission android:name="com.no5.home.permission.GATEWAY_CONFIGURATION" tools:node="remove" />
+    <permission android:name="com.no5.permission.SPECIAL_KEYBOARD_GEOMETRY" tools:node="remove" />
+    <uses-permission android:name="com.no5.permission.SPECIAL_KEYBOARD_GEOMETRY" tools:node="remove" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <queries tools:node="removeAll" />
+    <application android:label="No5 MAP · LIFECYCLE TEST" tools:replace="android:label">
+        <activity android:name="com.no5.helm.MainActivity" tools:node="remove" />
+        <activity android:name="com.no5.releaseinfo.AboutActivity" tools:node="remove" />
+        <receiver android:name="com.no5.releaseinfo.PackageReplacedReceiver" tools:node="remove" />
+        <provider android:name="com.no5.releaseinfo.ReleaseProvider" tools:node="remove" />
+        <activity android:name="com.no5.helm.acceptance.LifecycleAcceptanceActivity" android:screenOrientation="landscape" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <provider android:name="com.no5.helm.acceptance.LifecycleFixtureProvider" android:authorities="${applicationId}.lifecyclefixtures" android:exported="false" android:grantUriPermissions="false" />
+    </application>
+</manifest>

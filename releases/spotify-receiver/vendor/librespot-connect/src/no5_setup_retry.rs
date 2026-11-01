@@ -1,0 +1,435 @@
+// Shared by the Connect setup and the hash-pinned core Dealer patch.
+// The including module imports Error, ErrorKind, HttpClientError and WsError.
+// Never format errors: a WebSocket URL may contain the access token.
+#[derive(Debug, PartialEq, Eq)]
+pub(super) struct SetupFailure {
+    pub(super) http_status: Option<u16>,
+    pub(super) io_kind: Option<std::io::ErrorKind>,
+    pub(super) os_error: Option<i32>,
+    pub(super) timeout: bool,
+    pub(super) cause_depth: usize,
+    pub(super) depth_limited: bool,
+    retry_denied: bool,
+}
+
+impl SetupFailure {
+    pub(super) fn class(&self) -> &'static str {
+        if self.http_status.is_some() {
+            "HTTP_STATUS"
+        } else if self.io_kind.is_some() {
+            "IO"
+        } else {
+            "UNCLASSIFIED"
+        }
+    }
+}
+
+pub(super) struct SafeIoKind(pub(super) Option<std::io::ErrorKind>);
+impl std::fmt::Display for SafeIoKind {
+    fn fmt(&self, output: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self.0 {
+            Some(kind) => write!(output, "{kind:?}"), // std enum only, never an I/O error message.
+            None => output.write_str("NONE"),
+        }
+    }
+}
+
+pub(super) fn setup_failure(error: &Error) -> SetupFailure {
+    let mut result = SetupFailure {
+        http_status: None,
+        io_kind: None,
+        os_error: None,
+        timeout: error.kind == ErrorKind::DeadlineExceeded,
+        cause_depth: 0,
+        depth_limited: false,
+        retry_denied: matches!(
+            error.kind,
+            ErrorKind::Unauthenticated | ErrorKind::PermissionDenied | ErrorKind::Cancelled
+        ),
+    };
+    // Core Error::source() skips its immediate boxed error, so start with that
+    // public field. Do the same for nested Core Errors without losing their typed cause.
+    let mut cause: Option<&(dyn std::error::Error + 'static)> = Some(error.error.as_ref());
+    for _ in 0..8 {
+        let Some(current) = cause else { break };
+        result.cause_depth += 1;
+        if let Some(HttpClientError::StatusCode(status)) = current.downcast_ref::<HttpClientError>()
+        {
+            if result.http_status.is_none() {
+                result.http_status = Some(status.as_u16());
+            }
+        }
+        if let Some(WsError::Http(response)) = current.downcast_ref::<WsError>() {
+            if result.http_status.is_none() {
+                result.http_status = Some(response.status().as_u16());
+            }
+        }
+        cause = if let Some(core) = current.downcast_ref::<Error>() {
+            result.timeout |= core.kind == ErrorKind::DeadlineExceeded;
+            result.retry_denied |= matches!(
+                core.kind,
+                ErrorKind::Unauthenticated | ErrorKind::PermissionDenied | ErrorKind::Cancelled
+            );
+            Some(core.error.as_ref())
+        } else if let Some(io) = current.downcast_ref::<std::io::Error>() {
+            // Keep kind and errno from the SAME, deepest typed I/O cause.
+            result.io_kind = Some(io.kind());
+            result.os_error = io.raw_os_error();
+            result.timeout |= io.kind() == std::io::ErrorKind::TimedOut;
+            match io.get_ref() {
+                Some(inner) => Some(inner),
+                None => current.source(),
+            }
+        } else {
+            current.source()
+        };
+    }
+    result.depth_limited = cause.is_some();
+    result
+}
+
+const SETUP_ATTEMPTS: usize = 5;
+const RETRY_DELAYS_SECONDS: [u64; SETUP_ATTEMPTS - 1] = [1, 2, 4, 8];
+
+#[derive(Clone, Copy)]
+#[allow(dead_code)] // One shared definition; Connect and Dealer use different stages.
+pub(super) enum RetryStage {
+    ClientToken,
+    Login5,
+    DealerConnect,
+}
+
+impl RetryStage {
+    fn name(self) -> &'static str {
+        match self {
+            Self::ClientToken => "CLIENT_TOKEN",
+            Self::Login5 => "LOGIN5",
+            Self::DealerConnect => "DEALER_CONNECT",
+        }
+    }
+}
+
+fn retryable(error: &Error, failure: &SetupFailure) -> bool {
+    // A typed denial always wins over an underlying transient-looking cause.
+    if failure.retry_denied || failure.depth_limited {
+        return false;
+    }
+    if let Some(status) = failure.http_status {
+        // Core already honours HTTP 429 Retry-After. Do not restart that wait,
+        // retry legal/authentication failures, or retry unknown HTTP statuses.
+        return matches!(status, 408 | 421 | 425 | 500 | 502 | 503 | 504);
+    }
+    if let Some(kind) = failure.io_kind {
+        use std::io::ErrorKind as Io;
+        return matches!(
+            kind,
+            Io::TimedOut
+                | Io::ConnectionRefused
+                | Io::ConnectionReset
+                | Io::ConnectionAborted
+                | Io::NotConnected
+                | Io::BrokenPipe
+                | Io::UnexpectedEof
+                | Io::WouldBlock
+                | Io::Interrupted
+                | Io::NetworkDown
+                | Io::NetworkUnreachable
+                | Io::HostUnreachable
+        );
+    }
+    // Unavailable alone is deliberately insufficient: core also uses it for
+    // invalid credentials/configuration and HTTP 451. No message-string guesses.
+    failure.timeout && error.kind != ErrorKind::InvalidArgument
+}
+
+/// Only token acquisition and initial Dealer establishment use this helper.
+/// It must never wrap playback, mixer, navigation or Connect command handling.
+/// The five attempts are a count bound, not a hard wall-clock budget: existing
+/// HTTP Retry-After, challenge handling and blocking DNS retain their semantics.
+pub(super) async fn retry_setup<T, F, Fut>(
+    stage: RetryStage,
+    mut operation: F,
+    cancelled: impl std::future::Future<Output = ()>,
+) -> Result<T, Error>
+where
+    F: FnMut() -> Fut,
+    Fut: std::future::Future<Output = Result<T, Error>>,
+{
+    tokio::pin!(cancelled);
+    let started = tokio::time::Instant::now();
+    for attempt in 1..=SETUP_ATTEMPTS {
+        let outcome = tokio::select! {
+            biased;
+            () = &mut cancelled => return Err(Error::cancelled("setup invalidated")),
+            result = operation() => result,
+        };
+        match outcome {
+            Ok(value) => {
+                eprintln!(
+                    "NO5_SPOTIFY_RETRY stage={} result=READY attempt={} elapsedMs={}",
+                    stage.name(),
+                    attempt,
+                    started.elapsed().as_millis()
+                );
+                return Ok(value);
+            }
+            Err(error) => {
+                let failure = setup_failure(&error);
+                let retry = attempt < SETUP_ATTEMPTS && retryable(&error, &failure);
+                let delay = if retry {
+                    RETRY_DELAYS_SECONDS[attempt - 1]
+                } else {
+                    0
+                };
+                eprintln!(
+                    "NO5_SPOTIFY_RETRY stage={} result={} attempt={} elapsedMs={} nextDelayMs={} errorKind={:?} cause={} httpStatus={} ioKind={} osError={} timeout={}",
+                    stage.name(),
+                    if retry { "RETRY" } else { "FAILED" },
+                    attempt,
+                    started.elapsed().as_millis(),
+                    delay * 1000,
+                    error.kind,
+                    failure.class(),
+                    failure.http_status.unwrap_or(0),
+                    SafeIoKind(failure.io_kind),
+                    failure.os_error.unwrap_or(0),
+                    failure.timeout
+                );
+                if !retry {
+                    return Err(error);
+                }
+                tokio::select! {
+                    biased;
+                    () = &mut cancelled => return Err(Error::cancelled("setup invalidated")),
+                    () = tokio::time::sleep(std::time::Duration::from_secs(delay)) => (),
+                }
+            }
+        }
+    }
+    unreachable!("last attempt always returns its original error")
+}
+
+#[cfg(test)]
+mod no5_setup_retry_tests {
+    use super::*;
+    use std::{cell::Cell, future::pending, io, rc::Rc, time::Duration};
+
+    fn http(status: u16) -> Error {
+        HttpClientError::StatusCode(status.to_string().parse().unwrap()).into()
+    }
+
+    #[test]
+    fn retry_policy_uses_typed_transients_and_stops_on_denials_and_unknowns() {
+        for (status, expected) in [
+            (401, false),
+            (403, false),
+            (408, true),
+            (421, true),
+            (425, true),
+            (429, false),
+            (451, false),
+            (500, true),
+            (501, false),
+            (502, true),
+            (503, true),
+            (504, true),
+        ] {
+            for error in [
+                http(status),
+                Error::failed_precondition(WsError::Http(Box::new(tungstenite_response(status)))),
+            ] {
+                assert_eq!(
+                    retryable(&error, &setup_failure(&error)),
+                    expected,
+                    "{status}"
+                );
+            }
+        }
+        for (kind, expected) in [
+            (io::ErrorKind::ConnectionRefused, true),
+            (io::ErrorKind::TimedOut, true),
+            (io::ErrorKind::PermissionDenied, false),
+            (io::ErrorKind::InvalidData, false),
+            (io::ErrorKind::Other, false),
+        ] {
+            let error = Error::from(io::Error::new(kind, "test"));
+            assert_eq!(retryable(&error, &setup_failure(&error)), expected);
+        }
+        let unknown = Error::unavailable("no typed cause");
+        assert!(!retryable(&unknown, &setup_failure(&unknown)));
+        let denied = Error::permission_denied(io::Error::from(io::ErrorKind::TimedOut));
+        assert!(!retryable(&denied, &setup_failure(&denied)));
+        let wrapped_denial = Error::failed_precondition(denied);
+        assert!(!retryable(&wrapped_denial, &setup_failure(&wrapped_denial)));
+    }
+
+    // The parent module supplies the exact pinned tungstenite alias too.
+    fn tungstenite_response(status: u16) -> tungstenite::http::Response<Option<Vec<u8>>> {
+        tungstenite::http::Response::builder()
+            .status(status)
+            .header("authorization", "sensitive-test-value")
+            .body(Some(b"sensitive body".to_vec()))
+            .unwrap()
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn transient_failures_succeed_without_replaying_success() {
+        let calls = Cell::new(0);
+        let started = tokio::time::Instant::now();
+        let result = retry_setup(
+            RetryStage::ClientToken,
+            || {
+                calls.set(calls.get() + 1);
+                let call = calls.get();
+                async move { if call < 4 { Err(http(503)) } else { Ok(17) } }
+            },
+            pending(),
+        )
+        .await;
+        assert_eq!(result.ok(), Some(17));
+        assert_eq!(calls.get(), 4);
+        assert_eq!(started.elapsed(), Duration::from_secs(7));
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn five_attempt_limit_preserves_last_error_and_exact_backoff() {
+        let calls = Cell::new(0);
+        let started = tokio::time::Instant::now();
+        let error = retry_setup(
+            RetryStage::DealerConnect,
+            || {
+                calls.set(calls.get() + 1);
+                let attempt = calls.get();
+                async move {
+                    Err::<(), _>(
+                        io::Error::new(io::ErrorKind::ConnectionReset, attempt.to_string()).into(),
+                    )
+                }
+            },
+            pending(),
+        )
+        .await
+        .err()
+        .unwrap();
+        assert_eq!(calls.get(), 5);
+        assert_eq!(started.elapsed(), Duration::from_secs(15));
+        assert_eq!(
+            error.error.downcast_ref::<io::Error>().unwrap().to_string(),
+            "5"
+        );
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn terminal_rejections_are_not_retried_or_delayed() {
+        for status in [401, 403, 429, 451] {
+            let calls = Cell::new(0);
+            let started = tokio::time::Instant::now();
+            let error = retry_setup(
+                RetryStage::Login5,
+                || {
+                    calls.set(calls.get() + 1);
+                    async move { Err::<(), _>(http(status)) }
+                },
+                pending(),
+            )
+            .await
+            .err()
+            .unwrap();
+            assert_eq!(calls.get(), 1);
+            assert_eq!(started.elapsed(), Duration::ZERO);
+            assert_eq!(setup_failure(&error).http_status, Some(status));
+        }
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn cancellation_during_backoff_prevents_the_next_attempt() {
+        let calls = Cell::new(0);
+        let started = tokio::time::Instant::now();
+        let error = retry_setup(
+            RetryStage::DealerConnect,
+            || {
+                calls.set(calls.get() + 1);
+                async { Err::<(), _>(http(503)) }
+            },
+            tokio::time::sleep(Duration::from_millis(500)),
+        )
+        .await
+        .err()
+        .unwrap();
+        assert_eq!(error.kind, ErrorKind::Cancelled);
+        assert_eq!(calls.get(), 1);
+        assert_eq!(started.elapsed(), Duration::from_millis(500));
+    }
+
+    struct PendingAttempt(Rc<Cell<usize>>);
+    impl Drop for PendingAttempt {
+        fn drop(&mut self) {
+            self.0.set(self.0.get() + 1);
+        }
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn cancellation_drops_the_inflight_attempt_once_without_retrying() {
+        let drops = Rc::new(Cell::new(0));
+        let error = retry_setup(
+            RetryStage::DealerConnect,
+            || {
+                let lifetime = PendingAttempt(drops.clone());
+                async move {
+                    let _lifetime = lifetime;
+                    pending::<Result<(), Error>>().await
+                }
+            },
+            tokio::time::sleep(Duration::from_millis(20)),
+        )
+        .await
+        .err()
+        .unwrap();
+        assert_eq!(error.kind, ErrorKind::Cancelled);
+        assert_eq!(drops.get(), 1);
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn preexisting_cancellation_does_not_poll_the_operation() {
+        let calls = Cell::new(0);
+        let error = retry_setup(
+            RetryStage::DealerConnect,
+            || async {
+                calls.set(calls.get() + 1);
+                Ok(())
+            },
+            async {},
+        )
+        .await
+        .err()
+        .unwrap();
+        assert_eq!(error.kind, ErrorKind::Cancelled);
+        assert_eq!(calls.get(), 0);
+    }
+
+    #[tokio::test(start_paused = true)]
+    async fn unknown_sensitive_error_is_returned_without_formatting_or_retrying() {
+        #[derive(Debug)]
+        struct Sensitive;
+        impl std::fmt::Display for Sensitive {
+            fn fmt(&self, _: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+                panic!("never format token/account/URL errors")
+            }
+        }
+        impl std::error::Error for Sensitive {}
+        let calls = Cell::new(0);
+        let error = retry_setup(
+            RetryStage::Login5,
+            || {
+                calls.set(calls.get() + 1);
+                async { Err::<(), _>(Error::unavailable(Sensitive)) }
+            },
+            pending(),
+        )
+        .await
+        .err()
+        .unwrap();
+        assert!(error.error.is::<Sensitive>());
+        assert_eq!(calls.get(), 1);
+    }
+}

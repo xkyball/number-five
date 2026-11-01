@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>No5 · Gebietskarten</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/style.css"></head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="No5 Gebietskarten"><svg viewBox="0 0 36 28" aria-hidden="true"><path d="M3 20c5-7 9 7 15 0s10 7 15 0M8 13 18 3l10 10M18 4v15"/></svg><span>No<span class="brand-five">5</span></span></a>
+    <div class="header-rule"></div><span class="tool-title">Gebietskarten</span><span class="local-tag" id="profile-tag">LOKAL · RX5</span>
+    <div class="storage" id="storage-status"><span class="status-dot"></span><span>Exportablage wird geprüft</span></div>
+  </header>
+  <main class="workspace">
+    <aside class="workbench" aria-label="Gebiet und Export">
+      <div class="section-heading"><span class="eyebrow">DEIN KARTENAUSSCHNITT</span><h1>Ein Revier. <br>Eine Karte.</h1><p>Ecken ziehen, Gebiet benennen und eine eigene RX5-Datei erstellen.</p><p id="source-parent">Ausgangskarte wird geprüft</p></div>
+      <form id="search-form" class="search-box"><label class="sr-only" for="search">Ort oder Koordinaten</label><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="search" placeholder="Ort oder Breite, Länge" autocomplete="off"><button type="submit" aria-label="Suchen">↵</button></form>
+      <div class="presets" id="presets" aria-label="Gespeicherte Gebiete"></div>
+      <p class="field-note" id="search-note">Lokale Orte oder z. B. −33.9033, 18.4178</p>
+      <div class="divider"></div>
+      <section aria-labelledby="selection-title">
+        <div class="section-line"><h2 id="selection-title">Auswahl</h2><button class="text-button" id="fit-selection">Auf Karte zeigen ↗</button></div>
+        <label class="field-label" for="area-name">Gebietsname</label><input class="text-input" id="area-name" value="Granger Bay" maxlength="80">
+        <div class="coordinates" id="coordinates"><div><span>Nordwest</span><output id="northwest">—</output></div><div><span>Südost</span><output id="southeast">—</output></div></div>
+        <details class="coordinate-edit"><summary>Koordinaten bearbeiten</summary><div class="coordinate-fields"><label>West<input id="west" type="number" step="0.00001" min="-180" max="180"></label><label>Nord<input id="north" type="number" step="0.00001" min="-85" max="85"></label><label>Ost<input id="east" type="number" step="0.00001" min="-180" max="180"></label><label>Süd<input id="south" type="number" step="0.00001" min="-85" max="85"></label></div><button class="secondary-button compact" id="apply-coordinates">Rechteck übernehmen</button></details>
+        <div class="margin-row"><div><label class="field-label" for="margin">Randüberlappung</label><span class="field-note">Für benachbarte Gebietskarten</span></div><div class="unit-input"><input id="margin" type="number" min="0" max="20" step="0.1" value="0.5"><span>sm</span></div></div>
+      </section>
+      <section class="estimate-section" aria-labelledby="estimate-title">
+        <div class="section-line"><h2 id="estimate-title">Exportumfang</h2><span class="estimate-state" id="estimate-state">wird ermittelt</span></div>
+        <div class="estimate-main"><output id="estimate-size">—</output><span id="estimate-caption">Größe aus tatsächlichen Kartendaten</span></div>
+        <dl class="estimate-facts"><div><dt>Gebiet</dt><dd id="area-size">—</dd></div><div><dt>Kartenknoten</dt><dd id="node-count">—</dd></div><div><dt>Zoomprofile</dt><dd id="level-count">alle vorhandenen</dd></div></dl>
+        <p id="estimate-note" class="estimate-note">Die Schätzung wird für das ausgewählte Rechteck berechnet.</p>
+        <button id="prepare-button" class="secondary-button" hidden>Exportindex vorbereiten</button>
+        <button id="export-button" class="primary-button" disabled><span>RX5-Karte erstellen</span><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 14v3h12v-3"/></svg></button>
+        <p class="destination-note">Neue Dateien auf Samsung · bestehende Karten bleiben erhalten.</p>
+      </section>
+      <section id="job-section" class="job-section" hidden aria-live="polite"><div class="section-line"><h2 id="job-title">Export läuft</h2><span id="job-time"></span></div><div class="progress-track"><div id="progress-fill"></div></div><p id="job-message"></p><ol id="job-events"></ol></section>
+      <section id="result-section" class="result-section" hidden aria-live="polite"><span class="eyebrow">EXPORT ABGESCHLOSSEN</span><h2 id="result-title"></h2><p id="result-size"></p><a id="download-link" class="primary-button" download>RX5 herunterladen ↓</a><a id="package-link" class="secondary-button" hidden download>Lumina-Paket herunterladen ↓</a><p id="package-note" class="field-note" hidden></p><details class="result-details"><summary>Dateipfad &amp; Prüfsumme</summary><p id="result-path"></p><code id="result-sha"></code><a id="manifest-link" download>Exportmanifest herunterladen</a></details></section>
+      <div id="error-box" class="error-box" role="alert" hidden></div>
+      <footer class="bench-footer"><span class="tiny-anchor">✧</span><span>Lokales Werkzeug · keine SD-Schreibzugriffe</span></footer>
+    </aside>
+    <section class="map-panel" aria-label="Karte zur Gebietsauswahl">
+      <div id="map" class="map" tabindex="0" aria-label="Karte. Ziehen zum Verschieben, Plus und Minus zum Zoomen.">
+        <div id="tiles" class="tiles" aria-hidden="true"></div><canvas id="coverage-canvas" aria-hidden="true"></canvas>
+        <svg id="selection-svg" aria-hidden="true"><defs><pattern id="margin-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" stroke="#2c74d1" stroke-opacity=".13" stroke-width="2"/></pattern></defs><path id="selection-dim" fill="#132d40" fill-opacity=".08" fill-rule="evenodd"/><path id="margin-box" fill="url(#margin-hatch)" fill-rule="evenodd" stroke="#367ad1" stroke-opacity=".55" stroke-dasharray="5 4"/><rect id="selection-box" fill="#3385e5" fill-opacity=".07" stroke="#2878df" stroke-width="2"/></svg>
+        <div id="selection-drag" aria-label="Auswahl verschieben" role="button" tabindex="0"></div>
+        <button class="corner nw" id="corner-nw" aria-label="Nordwestecke verschieben"></button><button class="corner ne" id="corner-ne" aria-label="Nordostecke verschieben"></button><button class="corner sw" id="corner-sw" aria-label="Südwestecke verschieben"></button><button class="corner se" id="corner-se" aria-label="Südostecke verschieben"></button>
+        <div class="selection-label" id="selection-label">Granger Bay<span>Gebietsauswahl</span></div>
+        <div class="map-controls"><button id="zoom-in" aria-label="Vergrößern">+</button><button id="zoom-out" aria-label="Verkleinern">−</button><span></span><button id="fit-coverage" aria-label="Gesamte Kartenabdeckung zeigen"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M7 3H3v4m10-4h4v4M3 13v4h4m10-4v4h-4M7 10h6m-3-3v6"/></svg></button></div>
+        <div class="map-heading"><span class="eyebrow">SÜDAFRIKA</span><strong>Gebiet auswählen</strong><span>Vier blaue Ecken begrenzen die Karte.</span></div>
+        <div class="north-mark" aria-hidden="true"><span>N</span><svg viewBox="0 0 20 28"><path d="m10 2 6 20-6-4-6 4z" fill="#173c4f"/><path d="M10 2v16l6 4z" fill="#f7fafb"/></svg></div>
+        <div id="map-notice" class="map-notice" hidden></div>
+        <div class="map-legend"><span class="legend-coverage"></span><span>Vorhandene Kartenabdeckung</span><span class="legend-selection"></span><span>Dein Gebiet</span></div>
+        <div class="map-bottom"><div><span class="scale-line" id="scale-line"></span><span id="scale-label"></span></div><output id="cursor-coords">—</output><a id="attribution" class="attribution" href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap contributors</a></div>
+      </div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body></html>

@@ -1,0 +1,11 @@
+{
+  "schema": "no5.quiet-history-benchmark-baseline/1",
+  "version_code": 195,
+  "source_sha256": {
+    "app/src/main/java/com/no5/helm/gpu/SonarGpuView.kt": "af95458b882229c43e2d647683b0a1bd5fb4d8e825dc5b0d25e3f0fcb89b1570",
+    "app/src/main/java/com/no5/helm/gpu/SonarGpuNative.kt": "caa7d1f51e75f964cc45160ae877a1817583f2e7ba6cf224dbbcf0f04ff01281",
+    "app/src/main/cpp/sonar/sonar_gpu_stream.cpp": "b2bbce0a86683743291aa804073c2e72aea88fc793fc12aad3540e707dd5ffca",
+    "domain/src/main/kotlin/com/no5/domain/SonarImageAuto.kt": "b78ef143c3634b8f415e9376d4d4d5caa820528cb7d24f8ed5b12e1c501c77be"
+  },
+  "changes": "Only class/JNI/library namespace; source and algorithms frozen. Not included in production."
+}

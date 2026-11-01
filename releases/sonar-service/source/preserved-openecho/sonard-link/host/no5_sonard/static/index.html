@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>No 5 Sonar — M1</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <div>
+        <div class="eyebrow">OPENECHO / NO 5</div>
+        <h1>Live Echogram <span class="badge">M1 PICO USB</span></h1>
+      </div>
+      <div class="status-grid">
+        <div><span>Depth</span><strong id="depth">—</strong></div>
+        <div><span>Confidence</span><strong id="confidence">—</strong></div>
+        <div><span>Ping</span><strong id="ping">—</strong></div>
+        <div><span>Rate</span><strong id="rate">—</strong></div>
+      </div>
+    </header>
+
+    <section class="panel controls">
+      <label>Palette
+        <select id="palette">
+          <option value="classic">Classic</option>
+          <option value="amber">Amber</option>
+          <option value="gray">Gray</option>
+        </select>
+      </label>
+      <label>Gain <input id="gain" type="range" min="0.3" max="4" value="0.8" step="0.05"></label>
+      <label>Gamma <input id="gamma" type="range" min="0.35" max="2.5" value="0.72" step="0.05"></label>
+      <button id="pause">Pause display</button>
+      <span id="connection" class="connection offline">offline</span>
+    </section>
+
+    <section class="panel echogram-wrap">
+      <div id="signal-axis" class="depth-axis" title="Position im aufgenommenen Signalfenster">
+        <span>0 %</span><span>17 %</span><span>33 %</span><span>50 %</span><span>67 %</span><span>83 %</span><span>100 %</span>
+      </div>
+      <canvas id="echogram"></canvas>
+    </section>
+
+    <footer>
+      Jede Spalte zeigt ein Signalfenster. Ohne bestätigten Sendezeitpunkt
+      bezeichnet die Prozentachse die Position im Fenster; eine Tiefe wird noch nicht berechnet.
+    </footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

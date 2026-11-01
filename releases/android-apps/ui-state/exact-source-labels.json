@@ -1,0 +1,626 @@
+{
+  "schema": 1,
+  "policy": "Exact app-owned source keys only; no English or uppercase aliases. Existing aliases require an exact declared predecessor. Imported from the deployed lookup without changing prior output.",
+  "entries": {
+    "Audio einrichten": {
+      "values": [
+        "Audio einrichten",
+        "Audio setup",
+        "Oudio-opstelling"
+      ],
+      "replaces": [
+        "Audio einrichten",
+        "Audio setup",
+        "Oudio opstel"
+      ]
+    },
+    "Preset erstellen": {
+      "values": [
+        "Preset erstellen",
+        "Create preset",
+        "Skep klankopset"
+      ],
+      "replaces": null
+    },
+    "Aktuellen Klang unter neuem Namen speichern": {
+      "values": [
+        "Aktuellen Klang unter neuem Namen speichern",
+        "Save the current sound with a new name",
+        "Stoor die huidige klank met ’n nuwe naam"
+      ],
+      "replaces": null
+    },
+    "Eigene Presets benötigen die Gateway-Erweiterung": {
+      "values": [
+        "Eigene Presets benötigen die Gateway-Erweiterung",
+        "Custom presets require the gateway extension",
+        "Eie klankopsette vereis die gateway-uitbreiding"
+      ],
+      "replaces": null
+    },
+    "Eigenes Klangpreset": {
+      "values": [
+        "Eigenes Klangpreset",
+        "Custom sound preset",
+        "Eie klankopset"
+      ],
+      "replaces": null
+    },
+    "Anderes Grundrouting erforderlich": {
+      "values": [
+        "Anderes Grundrouting erforderlich",
+        "Requires a different routing profile",
+        "Vereis ’n ander roeteprofiel"
+      ],
+      "replaces": null
+    },
+    "EQ und Raumwirkung werden kopiert. Der Lautsprecherabgleich bleibt separat.": {
+      "values": [
+        "EQ und Raumwirkung werden kopiert. Der Lautsprecherabgleich bleibt separat.",
+        "EQ and room effect are copied. Speaker alignment stays separate.",
+        "EQ en ruimte-effek word gekopieer. Luidsprekerbelyning bly apart."
+      ],
+      "replaces": null
+    },
+    "Verbindungsstatus beim Öffnen prüfen": {
+      "values": [
+        "Verbindungsstatus beim Öffnen prüfen",
+        "Open to check connection status",
+        "Maak oop om verbindingstatus na te gaan"
+      ],
+      "replaces": null
+    },
+    "Grundprofil · Kanalverteilung": {
+      "values": [
+        "Grundprofil · Kanalverteilung",
+        "Routing profile · channels",
+        "Grondprofiel · kanale"
+      ],
+      "replaces": null
+    },
+    "Eigene Klangpresets und freigegebene Grundprofile": {
+      "values": [
+        "Eigene Klangpresets und freigegebene Grundprofile",
+        "Custom sound presets and approved routing profiles",
+        "Eie klankopsette en goedgekeurde grondprofiele"
+      ],
+      "replaces": null
+    },
+    "Geladen": {
+      "values": [
+        "Geladen",
+        "Loaded",
+        "Gelaai"
+      ],
+      "replaces": null
+    },
+    "Ein AUDIO-Zugang für Klang, Hörplatz und Faderzuordnung; Status wird bereits im Menü geladen.": {
+      "values": [
+        "Ein AUDIO-Zugang für Klang, Hörplatz und Faderzuordnung; Status wird bereits im Menü geladen.",
+        "One AUDIO setup entry for sound, listening position and fader assignment; status loads in the menu.",
+        "Een OUDIO-opstelling vir klank, luisterposisie en skuifknoptoewysing; status laai reeds in die kieslys."
+      ],
+      "replaces": null
+    },
+    "Eigene Klangpresets benennen, kopieren und auswählen, sobald die getrennt freizugebende Gateway-Erweiterung verfügbar ist.": {
+      "values": [
+        "Eigene Klangpresets benennen, kopieren und auswählen, sobald die getrennt freizugebende Gateway-Erweiterung verfügbar ist.",
+        "Name, copy and select custom sound presets once the separately approved gateway extension is available.",
+        "Benoem, kopieer en kies eie klankopsette sodra die afsonderlik goedgekeurde gateway-uitbreiding beskikbaar is."
+      ],
+      "replaces": null
+    },
+    "Exakte Sonard-0.4.28-Lesefreigabe für voneinander unabhängige Journal-Budgetprüfungen; bestehende Oberfläche und Renderer erhalten.": {
+      "values": [
+        "Exakte Sonard-0.4.28-Lesefreigabe für voneinander unabhängige Journal-Budgetprüfungen; bestehende Oberfläche und Renderer erhalten.",
+        "Explicit Sonard 0.4.28 read support for independent journal budget checks; existing interface and renderer retained.",
+        "Presiese Sonard 0.4.28-leessteun vir onafhanklike joernaalbegrotingkontroles; bestaande koppelvlak en weergewer bly behoue."
+      ],
+      "replaces": null
+    },
+    "Vollständig übersetzte AUDIO-Releasehinweise.": {
+      "values": [
+        "Vollständig übersetzte AUDIO-Releasehinweise.",
+        "Fully translated AUDIO release notes.",
+        "Volledig vertaalde OUDIO-vrystellingsnotas."
+      ],
+      "replaces": null
+    },
+    "EQ-Kurve und Ausgang · gespeicherte Einstellungen": {
+      "values": [
+        "EQ-Kurve und Ausgang · gespeicherte Einstellungen",
+        "EQ curve and output · saved settings",
+        "EQ-kurwe en uitset · gestoorde instellings"
+      ],
+      "replaces": null
+    },
+    "Neu": {
+      "values": [
+        "Neu",
+        "New",
+        "Nuut"
+      ],
+      "replaces": null
+    },
+    "Laden": {
+      "values": [
+        "Laden",
+        "Load",
+        "Laai"
+      ],
+      "replaces": null
+    },
+    "Kanalverteilung  ›": {
+      "values": [
+        "Kanalverteilung  ›",
+        "Channel routing  ›",
+        "Kanaalroetering  ›"
+      ],
+      "replaces": null
+    },
+    "Kanalverteilung": {
+      "values": [
+        "Kanalverteilung",
+        "Channel routing",
+        "Kanaalroetering"
+      ],
+      "replaces": null
+    },
+    "Grundprofile · gespeicherte Klangpresets bleiben erhalten": {
+      "values": [
+        "Grundprofile · gespeicherte Klangpresets bleiben erhalten",
+        "Base profiles · saved sound presets are preserved",
+        "Basisprofiele · gestoorde klankvoorinstellings bly behoue"
+      ],
+      "replaces": null
+    },
+    "Grundprofile separat · kein zweiter Eintrag für denselben Klang": {
+      "values": [
+        "Grundprofile separat · kein zweiter Eintrag für denselben Klang",
+        "Base profiles kept separately · one entry for each sound",
+        "Basisprofiele apart · een inskrywing per klank"
+      ],
+      "replaces": null
+    },
+    "Noch keine Presets. Mit Neu beginnen.": {
+      "values": [
+        "Noch keine Presets. Mit Neu beginnen.",
+        "No presets yet. Start with New.",
+        "Nog geen voorinstellings nie. Begin met Nuut."
+      ],
+      "replaces": null
+    },
+    "Preset löschen?": {
+      "values": [
+        "Preset löschen?",
+        "Delete preset?",
+        "Skrap voorinstelling?"
+      ],
+      "replaces": null
+    },
+    "„%s“ wird aus der Liste entfernt.": {
+      "values": [
+        "„%s“ wird aus der Liste entfernt.",
+        "“%s” will be removed from the list.",
+        "“%s” word uit die lys verwyder."
+      ],
+      "replaces": null
+    },
+    "Aktiver Klang danach: %s": {
+      "values": [
+        "Aktiver Klang danach: %s",
+        "Active sound afterwards: %s",
+        "Aktiewe klank daarna: %s"
+      ],
+      "replaces": null
+    },
+    "Neutraler Klang.": {
+      "values": [
+        "Neutraler Klang.",
+        "Neutral sound.",
+        "Neutrale klank."
+      ],
+      "replaces": null
+    },
+    "NEUES PRESET": {
+      "values": [
+        "NEUES PRESET",
+        "NEW PRESET",
+        "NUWE VOORINSTELLING"
+      ],
+      "replaces": null
+    },
+    "Neu · ungespeichert · Verwerfen aktiviert den vorherigen Klang": {
+      "values": [
+        "Neu · ungespeichert · Verwerfen aktiviert den vorherigen Klang",
+        "New · unsaved · discard restores the previous sound",
+        "Nuut · ongestoor · weggooi herstel die vorige klank"
+      ],
+      "replaces": null
+    },
+    "Wird erst jetzt dauerhaft angelegt.": {
+      "values": [
+        "Wird erst jetzt dauerhaft angelegt.",
+        "Created permanently only when saved.",
+        "Word eers met stoor permanent geskep."
+      ],
+      "replaces": null
+    },
+    "Neues Preset verwerfen?": {
+      "values": [
+        "Neues Preset verwerfen?",
+        "Discard new preset?",
+        "Gooi nuwe voorinstelling weg?"
+      ],
+      "replaces": null
+    },
+    "Der leere Entwurf wird entfernt.": {
+      "values": [
+        "Der leere Entwurf wird entfernt.",
+        "The empty draft will be removed.",
+        "Die leë konsep word verwyder."
+      ],
+      "replaces": null
+    },
+    "Danach ist der vorherige Preset wieder aktiv.": {
+      "values": [
+        "Danach ist der vorherige Preset wieder aktiv.",
+        "The previous preset becomes active again.",
+        "Die vorige voorinstelling word weer aktief."
+      ],
+      "replaces": null
+    },
+    "Virtuelle Reflexionen · schematisch": {
+      "values": [
+        "Virtuelle Reflexionen · schematisch",
+        "Virtual reflections · schematic",
+        "Virtuele weerkaatsings · skematies"
+      ],
+      "replaces": null
+    },
+    "Direktsignal": {
+      "values": [
+        "Direktsignal",
+        "Direct signal",
+        "Direkte sein"
+      ],
+      "replaces": null
+    },
+    "Reflexionen": {
+      "values": [
+        "Reflexionen",
+        "Reflections",
+        "Weerkaatsings"
+      ],
+      "replaces": null
+    },
+    "Heck": {
+      "values": [
+        "Heck",
+        "Stern",
+        "Agterstewe"
+      ],
+      "replaces": null
+    },
+    "Bug": {
+      "values": [
+        "Bug",
+        "Bow",
+        "Boeg"
+      ],
+      "replaces": null
+    },
+    "Hörplatz und Sub bleiben separat abgeglichen.": {
+      "values": [
+        "Hörplatz und Sub bleiben separat abgeglichen.",
+        "Listening position and sub stay separately aligned.",
+        "Luisterplek en sub bly afsonderlik ingestel."
+      ],
+      "replaces": null
+    },
+    "Ausgeführt · bestätigten Stand abgleichen": {
+      "values": [
+        "Ausgeführt · bestätigten Stand abgleichen",
+        "Executed · checking confirmed state",
+        "Uitgevoer · bevestigde toestand word nagegaan"
+      ],
+      "replaces": null
+    },
+    "Kanalverteilung wird aktiviert": {
+      "values": [
+        "Kanalverteilung wird aktiviert",
+        "Activating channel routing",
+        "Kanaalroetering word geaktiveer"
+      ],
+      "replaces": null
+    },
+    "preset.listener": {
+      "values": [
+        "Hörplatz einrichten",
+        "Set listening position",
+        "Stel luisterplek op"
+      ],
+      "replaces": null
+    },
+    "preset.discard": {
+      "values": [
+        "Verwerfen",
+        "Discard",
+        "Gooi weg"
+      ],
+      "replaces": null
+    },
+    "Aktiver Klang danach: „%s“.": {
+      "values": [
+        "Aktiver Klang danach: „%s“.",
+        "Active sound afterwards: “%s”.",
+        "Aktiewe klank daarna: “%s”."
+      ],
+      "replaces": null
+    },
+    "Preset „%s“ aktivieren": {
+      "values": [
+        "Preset „%s“ aktivieren",
+        "Activate preset “%s”",
+        "Aktiveer voorinstelling “%s”"
+      ],
+      "replaces": null
+    },
+    "Preset „%s“ bearbeiten": {
+      "values": [
+        "Preset „%s“ bearbeiten",
+        "Edit preset “%s”",
+        "Wysig voorinstelling “%s”"
+      ],
+      "replaces": null
+    },
+    "Preset „%s“ löschen": {
+      "values": [
+        "Preset „%s“ löschen",
+        "Delete preset “%s”",
+        "Skrap voorinstelling “%s”"
+      ],
+      "replaces": null
+    },
+    "Stand geändert · Löschbestätigung erneut öffnen": {
+      "values": [
+        "Stand geändert · Löschbestätigung erneut öffnen",
+        "State changed · reopen the deletion confirmation",
+        "Toestand verander · heropen die skrapbevestiging"
+      ],
+      "replaces": null
+    },
+    "Stand geändert · Verwerfen entfernt nur den lokalen Entwurf.": {
+      "values": [
+        "Stand geändert · Verwerfen entfernt nur den lokalen Entwurf.",
+        "State changed · discard removes only the local draft.",
+        "Toestand verander · weggooi verwyder slegs die plaaslike konsep."
+      ],
+      "replaces": null
+    },
+    "Entwurf fortsetzen": {
+      "values": [
+        "Entwurf fortsetzen",
+        "Resume draft",
+        "Hervat konsep"
+      ],
+      "replaces": null
+    },
+    "KEIN PUNKT AUSGEWÄHLT": {
+      "values": [
+        "KEIN PUNKT AUSGEWÄHLT",
+        "NO POINT SELECTED",
+        "GEEN PUNT GEKIES NIE"
+      ],
+      "replaces": null
+    },
+    "Mit + Punkt eine EQ-Stelle anlegen.": {
+      "values": [
+        "Mit + Punkt eine EQ-Stelle anlegen.",
+        "Use + Point to add an EQ point.",
+        "Gebruik + Punt om 'n EQ-punt by te voeg."
+      ],
+      "replaces": null
+    },
+    "Vorherigen Klang abgleichen": {
+      "values": [
+        "Vorherigen Klang abgleichen",
+        "Checking the previous sound",
+        "Vorige klank word nagegaan"
+      ],
+      "replaces": null
+    },
+    "preset.delete": {
+      "values": [
+        "Löschen",
+        "Delete",
+        "Skrap"
+      ],
+      "replaces": null
+    },
+    "preset.save-title": {
+      "values": [
+        "Preset speichern",
+        "Save preset",
+        "Stoor voorinstelling"
+      ],
+      "replaces": null
+    },
+    "Neu und Löschen benötigen die Gateway-Erweiterung.": {
+      "values": [
+        "Neu und Löschen benötigen die Gateway-Erweiterung.",
+        "New and Delete require the gateway extension.",
+        "Nuut en Skrap vereis die gateway-uitbreiding."
+      ],
+      "replaces": null
+    },
+    "Presetliste noch nicht verfügbar.": {
+      "values": [
+        "Presetliste noch nicht verfügbar.",
+        "Preset list not available yet.",
+        "Voorinstellingslys is nog nie beskikbaar nie."
+      ],
+      "replaces": null
+    },
+    "Gateway unterstützt keine Presetbibliothek.": {
+      "values": [
+        "Gateway unterstützt keine Presetbibliothek.",
+        "The gateway does not support a preset library.",
+        "Die gateway ondersteun nie 'n voorinstellingsbiblioteek nie."
+      ],
+      "replaces": null
+    },
+    "Letzten Stand geprüft · Entwurf erhalten": {
+      "values": [
+        "Letzten Stand geprüft · Entwurf erhalten",
+        "Latest state checked · draft retained",
+        "Jongste toestand nagegaan · konsep behou"
+      ],
+      "replaces": null
+    },
+    "Name ist zu lang.": {
+      "values": [
+        "Name ist zu lang.",
+        "The name is too long.",
+        "Die naam is te lank."
+      ],
+      "replaces": null
+    },
+    "Letzten Stand geprüft": {
+      "values": [
+        "Letzten Stand geprüft",
+        "Latest state checked",
+        "Jongste toestand nagegaan"
+      ],
+      "replaces": null
+    },
+    "Technisches Grundprofil": {
+      "values": [
+        "Technisches Grundprofil",
+        "Technical routing profile",
+        "Tegniese basisprofiel"
+      ],
+      "replaces": null
+    },
+    "Wird aktiviert": {
+      "values": [
+        "Wird aktiviert",
+        "Activating",
+        "Word geaktiveer"
+      ],
+      "replaces": null
+    },
+    "Kanalverteilung aktiviert": {
+      "values": [
+        "Kanalverteilung aktiviert",
+        "Channel routing activated",
+        "Kanaalroetering geaktiveer"
+      ],
+      "replaces": null
+    },
+    "Preset-Speichern mit präzisem DSP-Abgleich und geschützten verdeckten Bedienelementen.": {
+      "values": [
+        "Preset-Speichern mit präzisem DSP-Abgleich und geschützten verdeckten Bedienelementen.",
+        "Preset saving with precise DSP readback and protected covered controls.",
+        "Stoor voorinstellings met presiese DSP-teruglees en beskermde versteekte kontroles."
+      ],
+      "replaces": null
+    },
+    "Direktes Bearbeiten, leere neue Presets und sicheres Verwerfen oder Löschen.": {
+      "values": [
+        "Direktes Bearbeiten, leere neue Presets und sicheres Verwerfen oder Löschen.",
+        "Direct editing, blank new presets and safe discard or deletion.",
+        "Direkte wysiging, leë nuwe voorinstellings en veilige weggooi of skrap."
+      ],
+      "replaces": null
+    },
+    "Gespeicherte EQ-Kurven als Miniatur und ein querliegendes Boot in der Raumansicht.": {
+      "values": [
+        "Gespeicherte EQ-Kurven als Miniatur und ein querliegendes Boot in der Raumansicht.",
+        "Saved EQ curves as thumbnails and a horizontal boat in the room view.",
+        "Gestoorde EQ-kurwes as kleinkiekies en ’n horisontale boot in die ruimte-aansig."
+      ],
+      "replaces": null
+    },
+    "Klang, Hörplatz und Bedienung.": {
+      "values": [
+        "Klang, Hörplatz und Bedienung.",
+        "Sound, listening position and controls.",
+        "Klank, luisterposisie en bediening."
+      ],
+      "replaces": null
+    },
+    "Entfernung": {
+      "values": [
+        "Entfernung",
+        "Distance",
+        "Afstand"
+      ],
+      "replaces": null
+    },
+    "Anzeige": {
+      "values": [
+        "Anzeige",
+        "Display",
+        "Vertoning"
+      ],
+      "replaces": null
+    },
+    "Kartenbibliothek": {
+      "values": [
+        "Kartenbibliothek",
+        "Chart library",
+        "Kaartbiblioteek"
+      ],
+      "replaces": null
+    },
+    "Video": {
+      "values": [
+        "Video",
+        "Video",
+        "Video"
+      ],
+      "replaces": null
+    },
+    "+": {
+      "values": [
+        "+",
+        "+",
+        "+"
+      ],
+      "replaces": null
+    },
+    "−": {
+      "values": [
+        "−",
+        "−",
+        "−"
+      ],
+      "replaces": null
+    },
+    "Vollständige Menütexte in Deutsch, Englisch und Afrikaans; Wiedergabe und Fader bleiben erhalten.": {
+      "values": [
+        "Vollständige Menütexte in Deutsch, Englisch und Afrikaans; Wiedergabe und Fader bleiben erhalten.",
+        "Complete menu labels in German, English and Afrikaans; player and faders preserved.",
+        "Volledige kieslystekste in Duits, Engels en Afrikaans; speler en skuifknoppe behou."
+      ],
+      "replaces": null
+    },
+    "Vollständig übersetzte Kartenbibliothek; Renderer unverändert.": {
+      "values": [
+        "Vollständig übersetzte Kartenbibliothek; Renderer unverändert.",
+        "Fully translated chart library; renderer preserved.",
+        "Volledig vertaalde kaartbiblioteek; weergewer behou."
+      ],
+      "replaces": null
+    },
+    "Karten bleiben nach Verschieben, Zoomen und Objektabfragen gleich dargestellt.": {
+      "values": [
+        "Karten bleiben nach Verschieben, Zoomen und Objektabfragen gleich dargestellt.",
+        "Charts remain consistent after panning, zooming and object queries.",
+        "Kaarte bly konsekwent na skuif, zoem en objeknavrae."
+      ],
+      "replaces": null
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "kind": "sonar.state",
+  "source": "no5-sonard",
+  "sourceKind": "REAL",
+  "simulated": false,
+  "serverSessionId": "fixture",
+  "generation": 1,
+  "revision": 0,
+  "publishedAtEpochMs": 1700000000000,
+  "running": true,
+  "status": "LIVE",
+  "capabilities": {
+    "canStart": false,
+    "canStop": false,
+    "bottomDetection": true,
+    "filterControl": true,
+    "confirmedTracks": true,
+    "sourceSelection": true,
+    "diagnostics": true
+  },
+  "format": {
+    "bins": 1024,
+    "sampleType": "UINT16",
+    "byteOrder": "LITTLE_ENDIAN"
+  },
+  "calibration": {
+    "revision": 0,
+    "valid": false,
+    "samplePeriodUs": null,
+    "soundSpeedMps": 1500.0,
+    "depthReference": "TRANSDUCER",
+    "transducerOffsetM": null,
+    "keelOffsetM": null
+  },
+  "cadenceHz": 20.0,
+  "observedAtEpochMs": 1700000000000,
+  "lastPingId": 7,
+  "displaySelection": {
+    "version": 1,
+    "source": "own",
+    "generation": 1,
+    "publishedHz": 18.12,
+    "lastPublishedPingId": 7,
+    "observedAtEpochMs": 1700000000000,
+    "rawArchiveSource": "all",
+    "automaticNativeFallback": false
+  },
+  "amplitude": {
+    "version": 1,
+    "encoding": "UINT16_LE",
+    "unit": "ADC_CODE",
+    "significantBits": 12,
+    "fullScaleCode": 4095,
+    "normalizationSource": "HELLO_12bit_checked_host_contract",
+    "rawSamplesModified": false
+  },
+  "hostPackageVersion": "0.4.11",
+  "observationReason": {
+    "version": 1,
+    "code": "ORIGINAL_REFERENCE_LOST",
+    "detail": "native_reference_deadline_expired",
+    "observedAtEpochMs": null,
+    "statusObservedAtEpochMs": 1700000000000,
+    "latched": true,
+    "statusFresh": true,
+    "firmwareDetail": 4,
+    "observedDeviceUs": 1700000,
+    "observationKind": "timeout_check",
+    "utcBasis": null
+  }
+}

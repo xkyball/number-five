@@ -1,0 +1,33 @@
+{
+  "OriginalConsumerBasis": {
+    "GetFeatureCountInLayerRVA": "0x3158e0",
+    "isLayerPresentRVA": "0x315870",
+    "observedStaticSemantics": "first matching physical layer entry; no accumulation"
+  },
+  "OriginalExecuted": false,
+  "OriginalLibrariesCopied": false,
+  "format": "no5-class-mask-batch-own-source-contract/1",
+  "nativeAcceptance": "PENDING_GENUINE_ONE_PHYSICAL_LAYER_MULTIPLE_CLASS_MASK_ROWS",
+  "newOwnLogic": [
+    "explicit physical layer per ID and exact per-class presence",
+    "complete directory and feature-offset recalculation",
+    "stable inverse typed layer-origin ledger"
+  ],
+  "parentPublicSourceSHA256": {
+    "batch.py": "5487aa030415a640022ea6238f563a633b3da1a9644eb3a22d08b9be3542896e",
+    "generic_attribute_wire.py": "48e0f3d85395f3202b548f1181fd1f852000c299c65d6f7e7d6f7cdfb25b2c39",
+    "generic_batch.py": "91dd04a528e482045de51660aba6f6da4acf9d7004d68cc1fa2b1b9bc0bb7ac4",
+    "generic_registry.py": "3f7d9ca939c1ea4df9e958014df725e17adf576563822bcb23a29e0887014bb0",
+    "metadata.py": "cb51327c76ace99a4edbb3432deffdffcda9af7867473923d8af85c9d70df2a4",
+    "raw_grid_bounds.py": "96d814b4c30df5ecc23929fd3259696b42733583ad8ffd3a57f36e55183b5e01",
+    "road_authoring_registry.py": "003ac1330978cd21ad0c685b0be1cb543ee5bba6fcd308099f0671e06b6f5bf8",
+    "writer.py": "c0494419bc669e007205e838b4a984deeea325edb57d8f0b0380478e1d770f18"
+  },
+  "policy": "EXPLICIT_SINGLE_PHYSICAL_LAYER_PER_ID_CLASS_MASKS_V1",
+  "privateSourceDataIncluded": false,
+  "reuse": {
+    "completeGenericFeatureHeaderGeometryTextValidation": true,
+    "normalChunksSerializer": true,
+    "oldPresenceLayerTypeUnchanged": true
+  }
+}

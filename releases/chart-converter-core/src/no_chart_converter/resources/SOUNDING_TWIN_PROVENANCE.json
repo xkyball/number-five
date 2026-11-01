@@ -1,0 +1,64 @@
+{
+  "OEMLibraryOrChartBytesImported": false,
+  "format": "no5-generic-original-gated-sounding-twin-provenance/1",
+  "geometryOrDepthRecomputed": false,
+  "hostConsumers": "Explicit nativeOccurrenceKinds/maskLevelsByKind/recordsByKind in persisted inventory; primary source role stays separately named. Only exact adjacent4/9 duplicates pass the existing wire UID guard; all other collisions still refused. Region4/9 retains shared IO so onlyByte28 remains different.",
+  "nativeAdmissionScope": "Pinned original version8 TileServer output gate; Kind9 when source==destination, Kind4 otherwise. No full renderer/physical plotter/all query deduplication guarantee.",
+  "newCodeFiles": {
+    "cli.py": {
+      "bytes": 17032,
+      "sha256": "e4aa1ca052a798f19790c0cea54fc455eae2bd65c8bf60fa683e1a514e360e7d"
+    },
+    "country_runtime/finalizer.py": {
+      "bytes": 12644,
+      "sha256": "7ac8296bb1fe8c929c15ad4ee4a5e27cff5bec41f494b685b0bafa14d98b41a8"
+    },
+    "country_runtime/wire.py": {
+      "bytes": 8296,
+      "sha256": "dc6e92552200348539ccaf2a68bc2ad183c16113deaa2a346d2d4eaa709fa868"
+    },
+    "rx5/region.py": {
+      "bytes": 28494,
+      "sha256": "8171e07825862276d09575c608fdceca58eb42a5a080a8e1807f04854fb1b03c"
+    },
+    "rx5/soundings.py": {
+      "bytes": 7528,
+      "sha256": "631d5a08a4809b582b3c767da9ae5dbdb6dd550e592aaa55d45090650b0bb78c"
+    },
+    "rx5/wire.py": {
+      "bytes": 8285,
+      "sha256": "425488fa68a32f172b44344f3b70f77ea98d82bac5369b15a324b8e0e153214a"
+    }
+  },
+  "originalOwnWriterAndNativeEvidence": [
+    {
+      "bytes": 13128,
+      "path": "work/AP04/product-completion-20261016/native-spatial-v19c/build_c.py",
+      "sha256": "f172f875210d6664840ad0a5af3de97fc09c366811ed140a5455282ab57a67c6"
+    },
+    {
+      "bytes": 7893,
+      "path": "work/AP04/product-completion-20261016/native-spatial-v19c/readback_c.py",
+      "sha256": "0fd2d5080f57ac53b980a000f06cd1012c2810b33b240e5b3e6a4a8e9c148070"
+    },
+    {
+      "bytes": 12473,
+      "path": "work/AP07/product-completion-20261016/native-spatial-semantics-v19/ACTUAL_SOUNDING_ADMISSION.json",
+      "sha256": "a6ee9344d4afdd1d4984bd298fedcf2f983d566f371dfdf6649bc6d534ebc709"
+    },
+    {
+      "bytes": 47978,
+      "path": "work/AP07/product-completion-20261016/native-spatial-semantics-v19c/ORIGINAL_COMPANION_CONTRACT.json",
+      "sha256": "a8b048d38f2ed78a3f3e62f0072bc93206fd6c98cad82b6081c3fc6003a77e9a"
+    },
+    {
+      "bytes": 13672,
+      "path": "work/AP04/product-completion-20261016/native-part-preparation-v21/build_parts.py",
+      "sha256": "a78ee2e34c3e1fb5c4bb78ac9e1f200703aa119d7abee119a4becaf011a6bc0f"
+    }
+  ],
+  "portedMechanism": "V19C exact adjacent originalRecord[:28]+kind9+originalRecord[29:], sameUID and every other field byte; generic all active profiles as existing CapeV21 consumer scope requires.",
+  "preserved": "Every original feature occurrence, native XYZ12/index/high8/depth bytes, RO/AO/query/dictionary/source/resource payload; chartUUID and tree topology. Absolute block references are symbolically rebound by existing writer.",
+  "sourcePrimaryFeaturesAdded": 0,
+  "sourceRoot": "raymarine-export-plan"
+}

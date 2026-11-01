@@ -1,0 +1,9 @@
+{
+  "schema": "no5.camilladsp-source/1",
+  "version": "4.1.3",
+  "commit": "05e9cfcdf43c0dfe078ed3feb8af4c8bd701fd74",
+  "url": "https://codeload.github.com/HEnquist/camilladsp/tar.gz/05e9cfcdf43c0dfe078ed3feb8af4c8bd701fd74",
+  "sha256": "a2a37a31788e58eda41c681ea67df2b0e34d00abc3e6ba6986e10f9e1176a6e7",
+  "license": "GPL-3.0-only OR MPL-2.0",
+  "extension": "no5-sound/2"
+}

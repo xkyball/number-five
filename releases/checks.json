@@ -1,0 +1,141 @@
+{
+  "schema": "number-five.source-release-checks/1",
+  "checked_on": "2026-11-01",
+  "zip_readback": [
+    {
+      "component": "android-apps",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 1926,
+      "archive_bytes": 46300184
+    },
+    {
+      "component": "gps-live-map",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 22,
+      "archive_bytes": 97387
+    },
+    {
+      "component": "pi-box-r5-design",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 255,
+      "archive_bytes": 7308635
+    },
+    {
+      "component": "pi-gateway",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 194,
+      "archive_bytes": 615689
+    },
+    {
+      "component": "pico-tx-firmware",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 52,
+      "archive_bytes": 97485
+    },
+    {
+      "component": "sonar-service",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 166,
+      "archive_bytes": 429122
+    },
+    {
+      "component": "spotify-receiver",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 47,
+      "archive_bytes": 189238
+    },
+    {
+      "component": "venterior-v15-design",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 39,
+      "archive_bytes": 124917
+    },
+    {
+      "component": "yamaha-trim-r3-design",
+      "archive_hash": "PASS",
+      "member_hashes": "PASS",
+      "source_members": 48,
+      "archive_bytes": 136449
+    }
+  ],
+  "tests": {
+    "gps_live_map": {
+      "python_unittest": {
+        "run": 5,
+        "passed": 5
+      },
+      "javascript_model": {
+        "run": 5,
+        "passed": 5
+      }
+    },
+    "gateway": {
+      "unittest_run": 509,
+      "skipped": 4,
+      "result": "PASS",
+      "peer_path_case_excluded": 1,
+      "separate_forwarding_pytest": {
+        "run": 6,
+        "passed": 6
+      }
+    },
+    "sonar_service": {
+      "wheel_build": "PASS",
+      "version": "0.4.31",
+      "members": 54,
+      "wheel_sha256": "3cde9469fc4a1e0dfb0e0d13860b55c7316b3082d377821401e3f84602cc8624",
+      "scope": "source-only portable build;no runtime acquisition"
+    },
+    "spotify_receiver": {
+      "cargo_metadata_locked_offline": "PASS",
+      "compile_and_playback": "NOT RUN"
+    },
+    "yamaha_firmware": {
+      "host_cases": 15,
+      "result": "PASS",
+      "physical_or_AVR_build": "NOT RUN"
+    },
+    "pi_box": {
+      "two_original_source_recipes_exported_offline": "PASS",
+      "full_reference_source_hashes": 200,
+      "full_CAD_rebuild_after_reference_inclusion": "NOT RUN"
+    },
+    "android": {
+      "source_bundle_verifier": "PASS",
+      "files": 1926,
+      "OpenCPN_source_pins": 160,
+      "third_party_pins": 14,
+      "Lumina_wire_pin": "PASS",
+      "shared_EQ_source_helper_pins": "PASS",
+      "android_or_device_build": "NOT RUN"
+    },
+    "pico_firmware": {
+      "offline_C_PIO_pytest": {
+        "run": 25,
+        "passed": 25
+      },
+      "source_profile": "0.7.0default;0.7.13clip",
+      "native_ARM_build_or_flash": "NOT RUN"
+    }
+  },
+  "secret_review": {
+    "high_confidence": 0,
+    "unresolved": 0,
+    "manually_reviewed_false_positives": 31,
+    "source_or_input_publication_transformations": 13,
+    "report": "secret-review.json"
+  },
+  "limits": [
+    "No real hardware or device changes.",
+    "Software packaging checks do not resolve known on-boat/CAD/analog acceptance gaps.",
+    "Only listed source components are shared;not an assertion that the entire boat project or all central tooling is included."
+  ]
+}

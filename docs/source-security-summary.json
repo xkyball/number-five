@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-01",
+  "providerPatterns": {
+    "providerCredentialPatternFindings": [],
+    "scope": "Common provider-token patterns only; source package reviews supplement this check."
+  },
+  "packageReviews": {
+    "main9": {
+      "unresolved": 0,
+      "reviewedFalsePositives": 31
+    },
+    "extra2": {
+      "unresolved": 0
+    }
+  },
+  "runtimeConfigAndSecrets": "Excluded from Git via ignored local .dev.vars and server-side Sites secret storage.",
+  "scope": "Static publication review; no universal guarantee of absence of all secrets or all vulnerabilities."
+}

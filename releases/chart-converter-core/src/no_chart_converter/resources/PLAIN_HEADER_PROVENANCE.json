@@ -1,0 +1,97 @@
+{
+  "OEMLibrariesImported": false,
+  "chartOrRuntimeDataImported": false,
+  "constructorCompatibility": "Physical240-byte header is read into internally256-byte zero buffer. A false hasSegmentSizeInfo at240 does not prevent the separately witnessed actual root/seek path.",
+  "explicitPolicy": "Own single-file plain-vector output; refuse an extent exceeding the emitted single segment. No physical device/card capacity bound inferred.",
+  "format": "no5-own-plain-rx5-header-provenance/1",
+  "headerContractIntroducedInCommit": "e2202a856a22e8c98681f9d8aafc1110ddcf38bb",
+  "implementation": "New own explicit unsigned-header initializer, validator and bounded omitted-word repair; no original instructions copied.",
+  "layout": {
+    "blockHeaderSize": 16,
+    "fileSegmentCount": 1,
+    "fileSegmentSize": 1073741824,
+    "headerSize": 240,
+    "minimumVersion": 5,
+    "quadTreeHeaderSize": 32,
+    "tileSize": 256,
+    "vectorFlags": 4,
+    "vectorHeaderSize": 32,
+    "version": 8
+  },
+  "module": "no_chart_converter.rx5.header",
+  "originalProviderBytesImported": false,
+  "packageFiles": [
+    {
+      "bytes": 3883,
+      "path": "src/no_chart_converter/rx5/header.py",
+      "sha256": "6c159bd69e4ea2fbca50ce2cf9d4917bb67125b66732f6fd3dac43288246bfa1"
+    },
+    {
+      "bytes": 21985,
+      "path": "src/no_chart_converter/cache_country/metadata.py",
+      "sha256": "02a053b28eb55d2ada2a432a729899a4ae838f57133e2be6834d664147176872"
+    },
+    {
+      "bytes": 9200,
+      "path": "src/no_chart_converter/country_runtime/synthetic.py",
+      "sha256": "bc66c2669e98e679b61e8125e425686ada4371a0d24800fce97d9fb008b897b1"
+    },
+    {
+      "bytes": 12644,
+      "path": "src/no_chart_converter/country_runtime/finalizer.py",
+      "sha256": "7ac8296bb1fe8c929c15ad4ee4a5e27cff5bec41f494b685b0bafa14d98b41a8"
+    },
+    {
+      "bytes": 4211,
+      "path": "tests/test_rx5_header.py",
+      "sha256": "9a49d218f0d82643f155025c77834f26655c3c7f337cd4864dd5d92fb1bac29f"
+    },
+    {
+      "bytes": 9647,
+      "path": "tests/test_cache_country_metadata.py",
+      "sha256": "eadd43b408a4f59d9abe73542c7437e61d100ab62f28ae1e865595bfc4764f49"
+    },
+    {
+      "bytes": 5488,
+      "path": "tests/test_country_runtime.py",
+      "sha256": "51beb9759d288dd75f3268ed345402567c8c32a7abee324ff16b13a156b302f9"
+    }
+  ],
+  "physicalPlotterAcceptanceClaim": false,
+  "primaryEvidence": [
+    {
+      "bytes": 11841,
+      "path": "work/AP05/BINARY_FINDINGS.json",
+      "sha256": "1144cac797322222656a160ab635627ed1fa81a69cd52bdb103d5b57cdcf5c44"
+    },
+    {
+      "bytes": 12734,
+      "path": "work/AP05/vector-contract-v2/rx5_tree_probe.py",
+      "sha256": "c64283444f69ec8415401bea7ac683f451cfbed484ef72ba24182363151cee09"
+    },
+    {
+      "bytes": 15278,
+      "path": "work/AP07/product-completion-20261016/native-loading-v25/ACTUAL_SEGMENT_DIVISOR_CONTRACT.json",
+      "sha256": "4af4c3e905d367bf03d8b1fa79406c09140d1473ed31fee8b43c5be0e6f09488"
+    },
+    {
+      "bytes": 77087,
+      "path": "work/AP07/product-completion-20261016/native-loading-v25/ACTUAL_HEADER_LAYOUT_AND_NATIVE_SETUP_AB.json",
+      "sha256": "bc43ccaa08453eab5171c3e7235343eaec815a06c82a151c6571ec2ba7cf6106"
+    },
+    {
+      "bytes": 2996,
+      "path": "work/AP11/product-completion-20261016/final-country-header-review-v25/SOURCE_FIX_APPROVAL.json",
+      "sha256": "3c1cc012c6db3bd601938d3a1795b9e269f1ebe40d6c1ba5cfb99fdd36fe80ec"
+    }
+  ],
+  "retainedOriginalReader": {
+    "bytes": 512112,
+    "fileConstructorAddress": "0x2d834",
+    "isVectorChartAddress": "0x358cc",
+    "seekgAddress": "0x31a6c",
+    "sha256": "511604a2b02b3513258a409e4881a715414a6b802aed6829e035b66510f3e1d8",
+    "storedHeaderOperatorAddress": "0x2da18"
+  },
+  "sourceRoot": "raymarine-export-plan"
+}

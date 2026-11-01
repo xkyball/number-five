@@ -1,0 +1,1356 @@
+{
+  "schema": 1,
+  "packageName": "com.no5.map",
+  "label": "No5 MAP",
+  "releases": [
+    {
+      "id": "com.no5.map:r1",
+      "sequence": 1,
+      "versionName": "0.4.29-overlay-coalesce",
+      "versionCode": 34,
+      "sourceCommit": "7c38d656a9f067ce741cd8f76642d0160f00ce68",
+      "evidence": [
+        "git:7c38d656a9f067ce741cd8f76642d0160f00ce68:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r2",
+      "sequence": 2,
+      "versionName": "0.4.30-import-benchmark",
+      "versionCode": 35,
+      "sourceCommit": "e9456762aa025e6503f695936a70ae2909bc5748",
+      "evidence": [
+        "git:e9456762aa025e6503f695936a70ae2909bc5748:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r3",
+      "sequence": 3,
+      "versionName": "0.4.31-approved-023",
+      "versionCode": 36,
+      "sourceCommit": "3834bfd68c3ec8fa11b676e43089f02b1dec82e5",
+      "evidence": [
+        "git:3834bfd68c3ec8fa11b676e43089f02b1dec82e5:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r4",
+      "sequence": 4,
+      "versionName": "0.4.32-approved-023",
+      "versionCode": 37,
+      "sourceCommit": "3d4b7bf5797f99a97b3432eccee9891bb56d0dda",
+      "evidence": [
+        "git:3d4b7bf5797f99a97b3432eccee9891bb56d0dda:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r5",
+      "sequence": 5,
+      "versionName": "0.4.33-approved-023-ime",
+      "versionCode": 38,
+      "sourceCommit": "cd14c3cadcb9da7a21c0ad5dfe9d1cdd215a0cd5",
+      "evidence": [
+        "git:cd14c3cadcb9da7a21c0ad5dfe9d1cdd215a0cd5:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r6",
+      "sequence": 6,
+      "versionName": "0.4.33-touch-preview",
+      "versionCode": 38,
+      "sourceCommit": "d98af42634128b648049dae9ac0fc6b0b3241d6f",
+      "evidence": [
+        "git:d98af42634128b648049dae9ac0fc6b0b3241d6f:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r7",
+      "sequence": 7,
+      "versionName": "0.4.33-touch-standard",
+      "versionCode": 38,
+      "sourceCommit": "0342b8e4b52b98a47d64dc36de169dc68ec6f676",
+      "evidence": [
+        "git:0342b8e4b52b98a47d64dc36de169dc68ec6f676:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r8",
+      "sequence": 8,
+      "versionName": "0.4.34-touch-standard",
+      "versionCode": 39,
+      "sourceCommit": "ab48a3d37f035ccb2f534758d4508da978db05a4",
+      "evidence": [
+        "git:ab48a3d37f035ccb2f534758d4508da978db05a4:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r9",
+      "sequence": 9,
+      "versionName": "0.4.35-fullrender-standard",
+      "versionCode": 40,
+      "sourceCommit": "9753ab1bc6d90d1f40fe185c0c30867a4bf2c7e3",
+      "evidence": [
+        "git:9753ab1bc6d90d1f40fe185c0c30867a4bf2c7e3:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r10",
+      "sequence": 10,
+      "versionName": "0.4.36-s01-diagnostics",
+      "versionCode": 41,
+      "sourceCommit": "03ab2b8215df1510f64c20ff68aa871f29c0a3d0",
+      "evidence": [
+        "git:03ab2b8215df1510f64c20ff68aa871f29c0a3d0:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r11",
+      "sequence": 11,
+      "versionName": "0.4.37-fullrender-ime-standard",
+      "versionCode": 42,
+      "sourceCommit": "182dcfeb5a6d7467d85c03171d28790cf35cf1f1",
+      "evidence": [
+        "git:182dcfeb5a6d7467d85c03171d28790cf35cf1f1:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r12",
+      "sequence": 12,
+      "versionName": "0.4.38-fullrender-ime-diagnostics",
+      "versionCode": 43,
+      "sourceCommit": "4ebac8ae1c836d863c4a3b5ad1a48ec58ae84df7",
+      "evidence": [
+        "git:4ebac8ae1c836d863c4a3b5ad1a48ec58ae84df7:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r13",
+      "sequence": 13,
+      "versionName": "0.4.39-touch-outlines-ime",
+      "versionCode": 44,
+      "sourceCommit": "cf23590357971851ece7011d6c149fa6c26618fe",
+      "evidence": [
+        "git:cf23590357971851ece7011d6c149fa6c26618fe:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r14",
+      "sequence": 14,
+      "versionName": "0.4.40-coast-outlines-ime",
+      "versionCode": 45,
+      "sourceCommit": "6c07ca7512eb7451800c68358db36927e03a6c37",
+      "evidence": [
+        "git:6c07ca7512eb7451800c68358db36927e03a6c37:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r15",
+      "sequence": 15,
+      "versionName": "0.4.41-outline-handoff-ime",
+      "versionCode": 46,
+      "sourceCommit": "88fe408b08f446e592e260ba571f083dc898333b",
+      "evidence": [
+        "git:88fe408b08f446e592e260ba571f083dc898333b:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r16",
+      "sequence": 16,
+      "versionName": "0.4.42-touch-outline-switch-ime",
+      "versionCode": 47,
+      "sourceCommit": "3b948c0a4b8e381fde89032e0a8f18111bcfdad5",
+      "evidence": [
+        "git:3b948c0a4b8e381fde89032e0a8f18111bcfdad5:map/app/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.map:r17",
+      "sequence": 17,
+      "versionCode": 48,
+      "versionName": "0.4.43-dock-client-arrays-ime",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-bottom-edge-dock",
+          "text": "Das Menü öffnet sich vom unteren Kartenrand; eine beanspruchte Dock-Geste bricht die Kamerabewegung ab."
+        },
+        {
+          "id": "map-gles-client-array-guard",
+          "text": "Vor GLES-Zeichenaufrufen werden aktivierte, vom aktuellen Shader unbenutzte Vertexattribute deaktiviert."
+        }
+      ],
+      "evidence": [
+        "git:83e495883b773d49822afde0c01fc0d609794242:map/docs/MAP_DOCK_TOUCH_UI.md",
+        "git:3208fcee2ea88e4d1871353ce51c69245729e922:map/docs/GLES_CLIENT_ARRAY_GUARD.md",
+        "map/docs/PREVIEW_HARNESS_CONTRACT.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r18",
+      "sequence": 18,
+      "versionName": "0.4.44-home-gateway",
+      "versionCode": 49,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "gateway-config/README.md"
+      ],
+      "changes": [
+        {
+          "id": "home-gateway",
+          "text": "MAP übernimmt Home-Zugang und liest den kanonischen No5-Gateway HELM-Vertrag."
+        }
+      ],
+      "historyCoverage": "Neue Änderung; Laufzeitabnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.map:r19",
+      "sequence": 19,
+      "versionName": "0.4.45-app-name",
+      "versionCode": 50,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "helm/verification/STATUS.md"
+      ],
+      "changes": [
+        {
+          "id": "app-name",
+          "text": "Android-App und Releaseanzeige heißen No5 MAP."
+        }
+      ],
+      "historyCoverage": "Lokaler Build und Hostprüfung; Geräteabnahme separat."
+    },
+    {
+      "id": "com.no5.map:r20",
+      "sequence": 20,
+      "versionName": "0.4.46-renderer-audit",
+      "versionCode": 51,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "git:d2d368fd1b21188514f805770d043eceaae76500:map/docs/AUDIT_REPAIR_RESULTS.md",
+        "git:d2d368fd1b21188514f805770d043eceaae76500:map/docs/PREPARED_CACHE_RESULTS.md",
+        "map/docs/MAP51_INTEGRATION.md"
+      ],
+      "changes": [
+        {
+          "id": "renderer-context-resource-ownership",
+          "text": "Shaderressourcen bleiben ihrem GL-Kontext zugeordnet; unabhängige Kontexte behalten ihre Ressourcen beim Wechsel und Schließen."
+        },
+        {
+          "id": "chart-nocovr-selection",
+          "text": "Nicht abgedeckte Kartenbereiche werden bei der Zellenauswahl berücksichtigt."
+        },
+        {
+          "id": "chart-updated-date",
+          "text": "Das Aktualisierungsdatum folgt dem letzten angewandten S57-Update; das Veröffentlichungsdatum bleibt bei der Basiszelle."
+        },
+        {
+          "id": "renderer-native-presentation-sampling",
+          "text": "Die Präsentation in nativer Auflösung übernimmt die gerenderten Pixel exakt."
+        },
+        {
+          "id": "chart-prepared-public-geometry",
+          "text": "Öffentliche S57-Karten verwenden einen begrenzten, integritätsgeprüften Cache vorbereiteter Geometrie."
+        }
+      ],
+      "historyCoverage": "Integration der geprüften Rendererreparaturen mit dem zentralen Home-Gateway-Stand; Geräteabnahme erfolgt getrennt."
+    },
+    {
+      "id": "com.no5.map:r21",
+      "sequence": 21,
+      "versionCode": 52,
+      "versionName": "0.4.47-home-gateway-optional",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-optional-home-gateway-observer",
+          "text": "MAP startet auch mit älterem oder fehlendem Home-Gateway; beim Zurückkehren wird die optionale Beobachtung erneut eingerichtet."
+        }
+      ],
+      "evidence": [
+        "map/docs/MAP52_STARTUP_REPAIR.md",
+        "map/verification/audit-integration-20261008/MAP51_STARTUP_CRASH.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r22",
+      "sequence": 22,
+      "versionCode": 53,
+      "versionName": "0.4.48-dock-button-touch-hidden",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-dock-opener-hidden-during-touch",
+          "text": "Kartenmenü wieder per Button öffnen; während Kartentouch bleibt der Öffner bis zum letzten Finger-UP oder Abbruch ausgeblendet."
+        }
+      ],
+      "evidence": [
+        "map/docs/DOCK_BUTTON_TOUCH.md",
+        "map/preparation/native-five-screens/ui/src/test/kotlin/com/no5/preparation/ui/ApprovedMapShellTest.kt",
+        "map/ui-shell/src/test/java/com/no5/helm/ui/NativeHelmScreenTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r23",
+      "sequence": 23,
+      "versionCode": 54,
+      "versionName": "0.4.49-renderer-reuse",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "chart-stable-render-preparation",
+          "text": "Unveränderte Sicherheitskonturen und Zeichenreihenfolgen werden wiederverwendet."
+        },
+        {
+          "id": "s01-identical-neighbor-sampling",
+          "text": "S01 klassifiziert identische Nachbarpixel einmal statt doppelt, bei unveränderten Farben und Suchradien."
+        },
+        {
+          "id": "chart-gpu-frame-reuse-before-overlays",
+          "text": "Die unveränderte Karte bleibt in einer GPU-Textur; bewegliche Overlays werden aktuell gezeichnet und Kartenänderungen verwerfen die Wiederverwendung."
+        }
+      ],
+      "evidence": [
+        "deliveries/product-render-optimizations-20261009/README.md",
+        "deliveries/product-render-optimizations-20261009/handoff.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r24",
+      "sequence": 24,
+      "versionCode": 55,
+      "versionName": "0.4.50-ca-recovery",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "automatic-ca-recovery",
+          "text": "Home lädt eine fehlende oder beschädigte lokale Gateway-CA automatisch neu; Ersatz erst nach Prüfung der bekannten CA-Kennung, Zertifikatskette und des Hostnamens."
+        }
+      ],
+      "evidence": [
+        "gateway-config/PASSWORD_ACCESS.md"
+      ],
+      "historyCoverage": "Hostprüfung und Geräteabnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.map:r25",
+      "sequence": 25,
+      "versionCode": 56,
+      "versionName": "0.4.51-gateway-access",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-integrated-gateway-access-20261010",
+          "text": "Gemeinsamer Home-Zugang mit lokal abgeleitetem Passwort oder Key; bestehender geprüfter Renderer erhalten."
+        }
+      ],
+      "evidence": [
+        "gateway-config/INTEGRATION_CHECKPOINT_20261010.md",
+        "verification/master-integration/gateway-auth-20261010/RELEASE_RESOLUTION.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r26",
+      "sequence": 26,
+      "versionCode": 57,
+      "versionName": "0.4.52-lumina-control",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-lumina-control-integration-20261010",
+          "text": "Gemeinsamer Knopfclient und Header-Lifecycle; neuer RESERVE-Renderer und gemeinsamer Home-Zugang erhalten."
+        }
+      ],
+      "evidence": [
+        "git:8afa14fc45f33bc43635edd0f777294fe95f8801:deliveries/lumina-control-checkpoint-20261010/README.txt",
+        "verification/master-integration/lumina-control-20261010/README.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r27",
+      "sequence": 27,
+      "versionCode": 58,
+      "versionName": "0.4.53-panel-controls",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-knob-safe-panels-20261010",
+          "text": "Stilpanel hält physische Knopf-Sperrflächen frei; Zell-/Zonenpicker bündelt Status und Aktionen dauerhaft außerhalb des scrollenden Zellrasters."
+        },
+        {
+          "id": "map-reserve-ack-full-20261010",
+          "text": "Nach bestätigtem Flächen-Zwischenbild wird das geschuldete FULL auch im PADDED_CONTROL- und RESERVE-Modus ohne neues Touchereignis angefordert."
+        }
+      ],
+      "evidence": [
+        "verification/master-integration/map-panel-ui-20261010/OWNER_CHECKPOINT.json",
+        "verification/master-integration/map-panel-ui-20261010/ACK_CHECKPOINT.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r28",
+      "sequence": 28,
+      "versionCode": 59,
+      "versionName": "0.4.54-p6-admission-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "p6-resident-admission-test",
+          "text": "Experimenteller P6-Test: räumlicher Index und Beitragsauswahl steuern das Nachladen des aktivierten Kartenbestands."
+        },
+        {
+          "id": "p6-test-open-gates",
+          "text": "Strikte S01R04/S01R04Cold-Bildgates bleiben FAIL. Lumina-Kapazität und eine daraus abgeleitete Zoomgrenze sind noch nicht abgenommen."
+        }
+      ],
+      "evidence": [
+        "git:b94aeb3417d1f2c65c183f63f418fa3b4e85319a:map/docs/COVERAGE_ADMISSION.md",
+        "git:b94aeb3417d1f2c65c183f63f418fa3b4e85319a:map/docs/CATALOG_RESIDENCY.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r29",
+      "sequence": 29,
+      "versionCode": 60,
+      "versionName": "0.4.55-lifecycle-wsv-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-lifecycle-safe-management",
+          "text": "Kartenpakete deaktivieren, löschen und als geprüften Gesamtstand aktualisieren; feste Aktionen und Status, bestätigte Abkündigungen mit Herkunftsbeleg."
+        },
+        {
+          "id": "map-resident-camera-budget",
+          "text": "Kamera vor Bildtransform gegen das konfigurierte residente Zellbudget prüfen. Mehr als 100 Zellen aktivierbar; die vorläufige Zoomgrenze ist noch kein gemessenes Lumina-Profil."
+        },
+        {
+          "id": "map-scale-work-overlay",
+          "text": "Maßstabsbalken mit Teilstrichen und bestehenden Seemeilen-/Kilometereinstellungen; zuschaltbarer kompakter Arbeitsstatus zeigt beobachtetes Nachladen und Budget."
+        },
+        {
+          "id": "map-wsv-original-profile",
+          "text": "Amtliche WSV-Inland-S57-Basiszellen mit geprüftem DSID-Profil getrennt von NOAA importieren; vollständige Inland-Symbolabnahme bleibt offen."
+        },
+        {
+          "id": "map60-test-open-gates",
+          "text": "Experimenteller manueller Teststand. Strikte S01R04/S01R04Cold-Bildgates bleiben FAIL; Gerätekapazität, Detailpolicy und nautische Gesamtabnahme bleiben offen."
+        }
+      ],
+      "evidence": [
+        "git:658912eaddb7fdc936f346d17cd591ce87d5e5f0:map/docs/LIFECYCLE_AND_CAPACITY.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r30",
+      "sequence": 30,
+      "versionCode": 61,
+      "versionName": "0.4.56-camera-detail-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-start-camera-proof",
+          "text": "Start- und Wechselkamera vor Nachladen/Render gegen den vollständigen Katalog und die tatsächliche Bildfläche inklusive Reserve zulassen; veraltete Autorität sperren."
+        },
+        {
+          "id": "map-same-pose-admission",
+          "text": "Neue Kamerazulassung löst alte Ladeblockaden auch bei gleicher Position. Exakte wiederhergestellte Ansichten bleiben erhalten; explizite Einwärtsbewegung kann oberhalb des Budgets fortschreiten."
+        },
+        {
+          "id": "map-truthful-start-overlay",
+          "text": "Arbeitsstatus unterscheidet fehlende Anzeige, unbewiesenen Startausschnitt und beobachtetes Nachladen. SCAMIN bleibt unverändert; kein neuer Detailfilter."
+        },
+        {
+          "id": "map-capacity-recipe",
+          "text": "Feste Kamerarezeptur und getrennte Software-Arbeitsereignisse für spätere Budgetvergleiche; kein gemessenes Lumina-Kapazitätsprofil oder sichtbare FPS."
+        },
+        {
+          "id": "map61-open-gates",
+          "text": "Experimenteller Teststand. Strikte S01R04/S01R04Cold-Bildgates und Geräte-, Lifecycle- und nautische Abnahme bleiben getrennt offen."
+        }
+      ],
+      "evidence": [
+        "map/docs/CAMERA_DETAIL_TEST.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r31",
+      "sequence": 31,
+      "versionCode": 62,
+      "versionName": "0.4.57-system-header-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-system-header-successor-20261011",
+          "text": "MAP-61-Nachfolger für den gemeinsamen Knopf-/Headerkandidaten. Aktuelle Kamera-, Detail- und D1-Quellen bleiben enthalten; offene strikte Bildgates und nautische Abnahme bleiben offen."
+        }
+      ],
+      "evidence": [
+        "git:93db11f34bac44e90d888206d6f9b349bf18fc76:deliveries/lumina-app-successors-20261011/README.md",
+        "map/docs/CAMERA_DETAIL_TEST.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r32",
+      "sequence": 32,
+      "versionCode": 63,
+      "versionName": "0.4.58-current-entry-capacity-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-current-entry-outer-state-20261011",
+          "text": "Interner Messanschluss erhält den aktuellen Kartenbestand, die Kamera und den gefüllten Renderbuffer vor kontrollierten Kapazitätstests. Physische Geräteabnahme bleibt offen."
+        },
+        {
+          "id": "map-bounded-snapshot-export-20261011",
+          "text": "Große Mess-Snapshots werden begrenzt in privaten Debugdateien bereitgestellt. Kartenbibliothek und Quelldateien bleiben dabei erhalten."
+        },
+        {
+          "id": "map-experimental-scale-source-shadow-20261011",
+          "text": "Experimenteller maßstabsabhängiger Auswahlarm mit geprüfter Ersatzabdeckung. Die normale Kartenanzeige verwendet weiterhin die bestehende Auswahl."
+        }
+      ],
+      "evidence": [
+        "git:ab6d2c82c96ee4b6d20fd58276513b70d2175e3d:map/chart-engine/src/main/java/com/no5/helm/engine/NativeChartEngine.kt",
+        "git:ab6d2c82c96ee4b6d20fd58276513b70d2175e3d:map/chart-library/src/main/java/com/no5/helm/library/ExperimentalCoveragePacketSelector.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r33",
+      "sequence": 33,
+      "versionCode": 64,
+      "versionName": "0.4.59-renderer-pi-cache-host-test",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-renderer-pi-cache-host-integration-20261012",
+          "text": "Aktueller Renderer mit begrenztem Zellbestand, Kamerazulassung und Wiederherstellung erhält den Pi-Cacheimport. Herkunft und Dateiprüfsummen bleiben auch beim Nachladen und Wiederherstellen gebunden. Geräteabnahme und strikte Bildgates bleiben offen."
+        }
+      ],
+      "evidence": [
+        "map/docs/RESIDENT_LIFECYCLE.md",
+        "map/chart-library/src/main/java/com/no5/helm/library/PiCachePackage.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r34",
+      "sequence": 34,
+      "versionCode": 65,
+      "versionName": "0.4.60-pi-cache-android-import-fix",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-pi-cache-android-validation-20261012",
+          "text": "Android prüft manifestgebundene Pi-SENC-Dateien direkt mit dem nativen SENC-Leser. Der Import verwendet keine ISO-8211-Erkennung für diesen Cache; Metadaten, Herkunft und Dateiprüfsummen bleiben geprüft."
+        }
+      ],
+      "evidence": [
+        "map/app/src/test/java/com/no5/helm/PersistentChartControllerTest.kt",
+        "map/chart-engine/src/main/java/com/no5/helm/engine/NativeChartEngine.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r35",
+      "sequence": 35,
+      "versionCode": 66,
+      "versionName": "0.4.61-signal-k-routes-overlays",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-signal-k-routes-overlays-filters-20261013",
+          "text": "Routenbearbeitung und bestätigte Signal-K-Speicherung über den vorhandenen Home-/Gateway-Zugang; lokale Offline-Entwürfe, dauerhafte Overlays und S52-Objektfilter. Cacheimport und Bildreferenzen bleiben erhalten; ANGLE bleibt zurückgestellt."
+        }
+      ],
+      "evidence": [
+        "map/verification/ROUTES_OVERLAYS_FILTERS.md",
+        "git:fcfc4cc1b999cc751d893c04df31fe0ebf4ba14d:map/ui-shell/src/main/java/com/no5/helm/ui/NativeHelmScreen.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r36",
+      "sequence": 36,
+      "versionCode": 67,
+      "versionName": "0.4.62-visible-route-overlays",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-overlay-width-gles-20261013",
+          "text": "Routen, Wegpunktnummern und Overlaymarkierungen behalten ihre sichtbare Strichbreite auch auf GLES-Treibern mit Ein-Pixel-Linienlimit. Breite Overlaystriche werden als Dreiecke gezeichnet; S52-Kartenlinien und leere Overlays bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "map/verification/ROUTES_OVERLAYS_FILTERS.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r37",
+      "sequence": 37,
+      "versionCode": 68,
+      "versionName": "0.5.0-direct-gateway-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-direct-gateway-v8-20261013",
+          "text": "Direkter Gateway-Zugang mit fester App-Rolle über Lumina Control, atomarer Token-Erneuerung und dauerhafter Anzeige der installierten Version."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md"
+      ],
+      "historyCoverage": "Quellstand; ausgeführte Prüfungen werden getrennt dokumentiert."
+    },
+    {
+      "id": "com.no5.map:r38",
+      "sequence": 38,
+      "versionCode": 69,
+      "versionName": "0.5.1-direct-gateway-v8-local-ip",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-local-ip-v8-20261013",
+          "text": "Lokal eingerichtete Ausweich-IP aus Lumina Control wird bei fehlender mDNS-Auflösung genutzt; HTTPS-Origin, Zertifikatsprüfung und Token-Zuordnung bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md",
+        "helm/app/src/test/java/com/no5/gateway/GatewayIpFallbackTest.kt",
+        "helm/app/src/test/java/com/no5/gateway/LuminaGatewayClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r39",
+      "sequence": 39,
+      "versionCode": 70,
+      "versionName": "0.5.2-knob-recovery-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-knob-recovery-v8-20261013",
+          "text": "Sichtbare Knopf-Leases werden nach einem bestätigten Fokusverlust zeitnah erneut angefordert; Fokus-, Ablauf- und Callback-Grenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/appcontrol/LuminaKnobClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r40",
+      "sequence": 40,
+      "versionCode": 73,
+      "versionName": "0.5.5-lease-deadline-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-command-rings-20261014",
+          "text": "Ringbuffer-Annahme mit Auftrags-ID, getrennten Ergebnissen und Lease-Erneuerung unabhängig vom UI-Thread."
+        }
+      ],
+      "evidence": [
+        "verification/V8_COMMAND_RINGS.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r41",
+      "sequence": 41,
+      "versionCode": 74,
+      "versionName": "0.5.6-header-clouds-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-shared-cloud-header-20261015",
+          "text": "Gemeinsamer No5-Wolkenheader mit eigenen App-Daten; das No5-Logo öffnet HOME direkt ohne App-Auswahldialog."
+        }
+      ],
+      "evidence": [
+        "helm/verification/header-unification-20261015.json",
+        "helm/verification/HEADER_RELEASE_LUMINA_20261015.json"
+      ],
+      "apkSha256": [
+        "2a032c78c568c1c7c11b9350a1f93a436a9dd99bdd6e7f35127e560fb8a44b84"
+      ],
+      "artifactSourceCommit": "621cc10af713f2b58d9e305821f8ba4ed79d9f05",
+      "artifactSignerSha256": "138eff84e534e5c8ae3cfc18adf57e80b2d7a7725d04acd1449ce3b9c373e6bd"
+    },
+    {
+      "id": "com.no5.map:r42",
+      "sequence": 42,
+      "versionCode": 75,
+      "versionName": "0.5.7-ui-state-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-shared-controls-state-ui",
+          "text": "Gemeinsame Bedienung, gespeicherte Ansichten, Sprachen und Medienheader."
+        }
+      ],
+      "evidence": [
+        "ui-state/verification/APP_COMPLETION_PROGRESS_20261015.json",
+        "ui-state/verification/CONTROL_UI_AUDIO_INTEGRATION_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r43",
+      "sequence": 43,
+      "versionCode": 76,
+      "versionName": "0.5.8-camera-receipts-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-shared-controls-state-ui",
+          "text": "Gemeinsame Bedienung, gespeicherte Ansichten, Sprachen und Medienheader."
+        }
+      ],
+      "evidence": [
+        "ui-state/verification/MAP75_PHYSICAL_KNOBS_20261015.json",
+        "map/verification/CAMERA_COMPLETION_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r44",
+      "sequence": 44,
+      "versionCode": 77,
+      "versionName": "0.5.9-surface-return-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-surface-loan-ownership",
+          "text": "Verspätete View-Callbacks geben nur ihren eigenen Surface-Besitz frei; neue Bindungen und weiterverwendete Texturen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "map/verification/SURFACE_RETURN_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r45",
+      "sequence": 45,
+      "versionCode": 78,
+      "versionName": "0.5.10-surface-buffer-return-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "retained-raster-return",
+          "text": "Restore exact reserve buffers when a retained TextureView returns and retain buffered knob bindings after pause."
+        }
+      ],
+      "evidence": [
+        "map/verification/SURFACE_RETURN_20261015.json",
+        "app-control/verification/KNOB_RETURN_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r46",
+      "sequence": 46,
+      "versionCode": 79,
+      "versionName": "0.5.11-window-frame-return-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "visible-window-frame-refresh",
+          "text": "Wake the existing renderer once after a guarded visible window traversal and correlate producer/consumer frame evidence."
+        }
+      ],
+      "evidence": [
+        "map/verification/SURFACE_RETURN_20261015.json",
+        "map/verification/HOST_EGL_SLOT_LIMIT_20261015.json",
+        "app-control/verification/KNOB_RETURN_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r47",
+      "sequence": 47,
+      "versionCode": 80,
+      "versionName": "0.5.12-position-follow-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map80-position-follow-1",
+          "text": "Signal-K-Primärposition und optionale getrennte GPS-Quellen über die bestehende Source-Session anzeigen."
+        },
+        {
+          "id": "map80-position-follow-2",
+          "text": "Einmaliges Zentrieren, ausdrücklich aktiviertes Follow und Abbruch durch Kartengeste über denselben Kamera-Owner."
+        },
+        {
+          "id": "map80-position-follow-3",
+          "text": "Quellen-/Follow-Absicht ohne Koordinaten oder offene Aufträge erhalten; ungültige oder alte Fixes nicht nachführen."
+        }
+      ],
+      "evidence": [
+        "map/verification/MAP_POSITION_FOLLOW_OFFLINE_20261017.json",
+        "git:d8b95339:map/helm-model/src/main/java/com/no5/helm/model/MapPositionController.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r48",
+      "sequence": 48,
+      "versionCode": 81,
+      "versionName": "0.5.13-gps-combination-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map81-gps-combination",
+          "text": "Gemeinsame GPS-Position aus dem Gateway, Einzelquellenbetrieb und sichtbare Konflikte; Folgen verwendet ausschließlich frische Ergebnisse."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map81-gps-combination-notes.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r49",
+      "sequence": 49,
+      "versionCode": 82,
+      "versionName": "0.5.14-position-cycle-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map82-header",
+          "text": "Kompakter gemeinsamer Header mit Build-Info und echtem lokalen WLAN-Empfang."
+        },
+        {
+          "id": "map82-cycle",
+          "text": "Ein Positionsknopf für Zentrieren und Folgen; Verschieben beendet Folgen, Zoom und Drehung erhalten es."
+        },
+        {
+          "id": "map82-dialogs",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        },
+        {
+          "id": "map82-render-diagnostics",
+          "text": "Begrenzter Renderer-Vergleich am aktuellen Kartenbestand; zusätzliche Reuse-Experimente bleiben ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/helm-model/src/main/java/com/no5/helm/model/MapPositionController.kt",
+        "map/docs/VIEWPORT_REUSE_DIAGNOSTICS.md",
+        "map/verification/DIALOG_TEXT_FIT_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r50",
+      "sequence": 50,
+      "versionCode": 83,
+      "versionName": "0.5.15-header-accessibility-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map83-header-links",
+          "text": "HOME- und Mediennavigation im gemeinsamen Header sind auch für Bedienhilfen wieder erreichbar."
+        }
+      ],
+      "evidence": [
+        "map/preparation/native-five-screens/ui/src/test/kotlin/com/no5/preparation/ui/HeaderInteropAccessibilityTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r51",
+      "sequence": 51,
+      "versionCode": 85,
+      "versionName": "0.5.17-header-language-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map85-header-language",
+          "text": "Bestätigte Sprache aktualisiert den nativen Header; kein zusätzlicher Versionsstreifen während der Kartenvorbereitung."
+        },
+        {
+          "id": "map85-diagnostic-rebind",
+          "text": "Renderer-Vergleiche bestätigen nach Wiederaufnahme die unveränderte aktuelle Kamera erneut; Schutzprüfungen und ausgeschaltete Reuse-Vorgabe bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/verification/HEADER_ANDROIDVIEW_LOCALE_HOST_20261017.json",
+        "map/app/src/main/java/com/no5/helm/MainActivity.kt",
+        "map/verification/CURRENT_VIEW_REBIND_TARGETED_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r52",
+      "sequence": 52,
+      "versionCode": 86,
+      "versionName": "0.5.18-renderer-receipt-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map86-atomic-renderer-receipt",
+          "text": "Renderer-Vergleiche lesen Kamerabestätigung und Kartenansicht gemeinsam; exakte Schutzprüfungen und ausgeschaltete Reuse-Vorgabe bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "map/verification/ATOMIC_RECIPE_RECEIPT_HOST_20261018.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r53",
+      "sequence": 53,
+      "versionCode": 87,
+      "versionName": "0.5.19-scale-visual-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map87-observed-front-scale",
+          "text": "Maßstabsanzeigen bleiben bei GPS-Aktualisierungen an das sichtbare Kartenbild gebunden."
+        },
+        {
+          "id": "map87-dialog-bodies",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "map/verification/SCALE_VISUAL_FRONT_HOST_20261018.json",
+        "map/verification/MAP_UI_COMPLETION_20261018.json",
+        "map/verification/DIALOG_BODIES_LAYOUT_20261018.json",
+        "map/verification/NORMAL_RENDER_ABORT_HOST_20261018.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r54",
+      "sequence": 54,
+      "versionCode": 88,
+      "versionName": "0.5.20-gps-n-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map88-generic-gps-consensus",
+          "text": "GPS kombiniert übernimmt die Gateway-Position auch aus mehr als zwei Quellen; Originalzeiten und eindeutige Beitragsquellen bleiben geprüft."
+        }
+      ],
+      "evidence": [
+        "map/helm-client/src/main/java/com/no5/helm/client/PositionSourcesProjection.kt",
+        "map/helm-client/src/test/java/com/no5/helm/client/PositionSourcesProjectionTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r55",
+      "sequence": 55,
+      "versionCode": 89,
+      "versionName": "0.5.21-follow-scale-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map89-follow-visible-front",
+          "text": "Maßstäbe bleiben auch beim Übergang zu einem neuen Follow-Bild an das tatsächlich sichtbare Kartenbild gebunden."
+        },
+        {
+          "id": "map89-gps-consensus",
+          "text": "Die geprüfte GPS-Kombination aus mehreren Quellen bleibt integriert; Zoomen erhält Folgen, Verschieben beendet es."
+        },
+        {
+          "id": "map89-current-renderer-diagnostics",
+          "text": "Gezielte Rendererdiagnosen können den aktuellen Kartenbestand prüfen. Versuchsoptimierungen bleiben zunächst ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/verification/SCALE_HELD_FRONT_EPOCH_HOST_20261018.json",
+        "map/verification/CURRENT_RESIDENT_LIVE_INPUT_KOTLIN_20261018.json",
+        "map/verification/SCALE_VISUAL_FRONT_HOST_20261018.json",
+        "map/helm-client/src/test/java/com/no5/helm/client/PositionSourcesProjectionTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.map:r56",
+      "sequence": 56,
+      "versionCode": 90,
+      "versionName": "0.5.22-renderer-proof-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map90-camera-input-origin",
+          "text": "Kameradiagnosen ordnen Eingaben durchgehend ihrer tatsächlich übernommenen Ansicht zu. Versuchsoptimierungen bleiben ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/verification/CURRENT_RESIDENT_CAUSAL_ORIGIN_KOTLIN_20261018.json",
+        "map/verification/CAMERA_INPUT_ORIGIN_REVIEW_20261018.json",
+        "map/verification/RENDERER_RELEASE_READINESS_20261018.json",
+        "map/verification/MAP89_RENDERER_INSTRUMENTATION_OUTCOME_20261018.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r57",
+      "sequence": 57,
+      "versionCode": 91,
+      "versionName": "0.5.23-renderer-ready-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map91-owner-snapshot-preflight",
+          "text": "Renderer-Diagnose prüft unveränderte Kartendateien vor dem aktuellen Kamera-Snapshot; Zustandskonflikte bleiben strikt gesperrt und werden genauer benannt."
+        },
+        {
+          "id": "map91-joint-test-readiness",
+          "text": "Gezielte Prüfungen warten gemeinsam auf echten Kartenstatus, sichtbare Oberfläche und Positionsbedienung. Versuchsoptimierungen bleiben ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/verification/RENDERER_READY_HOST_VERIFICATION_20261018.json",
+        "map/verification/releases/map90-renderer-proof-20261018/RUNTIME_FINDINGS.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r58",
+      "sequence": 58,
+      "versionCode": 92,
+      "versionName": "0.5.24-release-texts-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map92-release-note-languages",
+          "text": "Die Versionshinweise werden in Deutsch, Englisch und Afrikaans angezeigt."
+        },
+        {
+          "id": "map92-canonical-fbo",
+          "text": "Die Rendererprüfung unterscheidet gepolsterte Ausgabepuffer von vollständigen nativen Kartenbildern."
+        },
+        {
+          "id": "map92-prepared-comparison",
+          "text": "Renderervergleiche bereiten die feste Bewegungsfolge einmal vollständig vor."
+        },
+        {
+          "id": "map92-retained-position",
+          "text": "MAP behält Zentrieren und Folgen beim Wiederaufbau der Oberfläche bei."
+        }
+      ],
+      "evidence": [
+        "map/verification/PADDED_CANONICAL_FBO_PARITY_GLES_HOST_20261018.json",
+        "map/verification/releases/map91-renderer-ready-20261018/RUNTIME_FINDINGS.json",
+        "map/verification/MAP92_FOCUSED_SOURCE_VERIFICATION_20261018.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r59",
+      "sequence": 59,
+      "versionCode": 93,
+      "versionName": "0.5.25-source-status-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map93-selected-position-header",
+          "text": "Der Header unterscheidet die gewählte GPS-Position von der allgemeinen HELM-Telemetrie."
+        },
+        {
+          "id": "map93-runtime-api-title",
+          "text": "Die Renderer-Diagnose zeigt die tatsächlich verwendete Android-API an."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map93-source-status-20261018/SOURCE_VERIFICATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r60",
+      "sequence": 60,
+      "versionCode": 94,
+      "versionName": "0.5.26-centered-abort-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map94-centered-normal-abort",
+          "text": "Rendererprüfungen können überholte Kartenbilder auch im gepolsterten Ausgabepuffer sicher verwerfen. Versuchsoptimierungen bleiben ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map94-centered-abort-20261018/SOURCE_VERIFICATION.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r61",
+      "sequence": 61,
+      "versionCode": 95,
+      "versionName": "0.5.27-design-unified-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-design-unified-20261019",
+          "text": "Einheitliche native Einrichtung, kompakte Dialoge und klare Bedienzustände in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_18.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r62",
+      "sequence": 62,
+      "versionCode": 96,
+      "versionName": "0.5.28-ui-parity-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-approved-native-parity-20261019",
+          "text": "Native Dialoge und Eingaben verwenden die freigegebenen kompakten Formen; Hauptansichten und Bediengrenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_22.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r63",
+      "sequence": 63,
+      "versionCode": 97,
+      "versionName": "0.5.29-r1-footer-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-approved-r1-native-footer-20261019",
+          "text": "Native Dialoge und Eingaben verwenden die freigegebenen kompakten Formen; Hauptansichten und Bediengrenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/native-assembly-review-R1/APPROVAL.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r64",
+      "sequence": 64,
+      "versionCode": 98,
+      "versionName": "0.5.30-ui-locale-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-native-menu-language",
+          "text": "Vollständig übersetzte Kartenbibliothek; Renderer unverändert."
+        }
+      ],
+      "evidence": [
+        "ui-state/exact-source-labels.json",
+        "ui-state/src/test/java/com/no5/ui/WorkspaceLabelCoverageTest.java",
+        "ui-state/tools/audit_ui_text.py"
+      ]
+    },
+    {
+      "id": "com.no5.map:r65",
+      "sequence": 65,
+      "versionCode": 99,
+      "versionName": "0.5.31-frame-portrayal-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map-frame-local-portrayal",
+          "text": "Karten bleiben nach Verschieben, Zoomen und Objektabfragen gleich dargestellt."
+        }
+      ],
+      "evidence": [
+        "map/verification/ocharts-reuse-20261020/STRICT_REFERENCE.json",
+        "map/tests/native/portrayal_history_tests.cpp",
+        "map/docs/S01_REFERENCE_RECOVERY_20261020.md"
+      ]
+    },
+    {
+      "id": "com.no5.map:r66",
+      "sequence": 66,
+      "versionCode": 100,
+      "versionName": "0.5.32-m1-k1-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map100-m1-k1-workspaces",
+          "text": "Neue Karten-, Routen-, Stil- und Klassenarbeitsseiten oberhalb des unveränderten Docks; Eingaben passen sich an die Tastatur an."
+        }
+      ],
+      "evidence": [
+        "map/verification/m1-20261024/STATUS.json",
+        "design/app-unification-20261019/map-menu-M1/APPROVAL.json",
+        "design/app-unification-20261019/map-menu-M1-K1/APPROVAL.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r67",
+      "sequence": 67,
+      "versionCode": 101,
+      "versionName": "0.5.33-objectinfo-parity-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map101-objectinfo-parity",
+          "text": "Objektinfo lässt die Karte zum Antippen frei; Treffer können erneut gewählt werden. Bisherige MAP-Einstellungen werden gezielt auf beiden Luminas geprüft."
+        },
+        {
+          "id": "map101-route-default-language",
+          "text": "Neue Routen erhalten ihren Vorgabenamen in der gewählten Sprache; vorhandene Namen und Entwürfe bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "map/verification/object-info-20261025/STATUS.json",
+        "map/verification/releases/map101-objectinfo-parity-20261025/MAP100_NATIVE_ORIGIN.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r68",
+      "sequence": 68,
+      "versionCode": 102,
+      "versionName": "0.5.34-style-confirmation-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map102-confirmed-style",
+          "text": "Stiländerungen werden auch im schnellen Kartenmodus erst nach bestätigtem neuem Kartenbild gespeichert; Fehler erhalten den Entwurf."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map102-style-confirmation-20261025/HOST_RESULTS.json",
+        "map/verification/releases/map101-objectinfo-parity-20261025/DEVICE_PROGRESS.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r69",
+      "sequence": 69,
+      "versionCode": 103,
+      "versionName": "0.5.35-route-order-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map103-route-order",
+          "text": "Routenpunkte lassen sich in einem Schritt an jede gültige Listenposition verschieben und vollständig rückgängig machen. Die englische Koordinatenbeschriftung ist berichtigt."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map103-route-order-20261025/HOST_RESULTS.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r70",
+      "sequence": 70,
+      "versionCode": 104,
+      "versionName": "0.5.36-filled-cache-v2",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map104-free-background-cells",
+          "text": "Zusätzliche freie Vektorzellen schließen Lücken im Offline-Kartenbestand; vorhandene nautische Zellen behalten Vorrang und ihre ursprünglichen Daten."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map104-filled-cache-20261025/RESULT.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r71",
+      "sequence": 71,
+      "versionCode": 105,
+      "versionName": "0.5.37-map-retention-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map105-retention-fixes",
+          "text": "Stilwechsel im schnellen Kartenmodus werden vollständig dargestellt; Ebenenwechsel bleiben trotz Positionsupdates bestätigt. Standard- und Binnenobjektklassen lassen sich getrennt filtern."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map105-retention-20261025/RESULT.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r72",
+      "sequence": 72,
+      "versionCode": 106,
+      "versionName": "0.5.38-route-feedback-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map106-route-feedback",
+          "text": "Routenfehler werden auch mit HTTP-Status durchgehend in der gewählten Sprache angezeigt; Entwürfe und bestätigte Karteneinstellungen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map106-route-feedback-20261025/RESULT.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r73",
+      "sequence": 73,
+      "versionCode": 107,
+      "versionName": "0.5.39-navigation-bounds-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map107-navigation-bounds",
+          "text": "Zoom, Verschieben und Drehen beachten den gesamten aktiven Kartenbestand. Folgen pausiert außerhalb des Kartenbereichs; Positionsdaten und gespeicherte Routen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map107-navigation-bounds-20261026/HOST_TESTS.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r74",
+      "sequence": 74,
+      "versionCode": 108,
+      "versionName": "0.5.40-world-candidate-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map108-world-candidate",
+          "text": "Eine sparsame Weltunterlage ist als Prüfkandidat vorbereitet und bleibt ausgeschaltet, bis Bildqualität und Mehraufwand auf beiden Luminas geprüft sind."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map108-world-candidate-20261026/CANDIDATE.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r75",
+      "sequence": 75,
+      "versionCode": 109,
+      "versionName": "0.5.41-bounded-loading-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map109-bounded-loading",
+          "text": "Der Kartenlader verwendet die geprüfte Speicherobergrenze jeder SENC-Zelle statt einer pauschalen Maximalreserve. Gesamtlimit, Prüfungen und Karteninhalt bleiben erhalten; die Weltunterlage bleibt vorerst aus."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map109-bounded-loading-20261026/REGRESSION.json"
+      ]
+    },
+    {
+      "id": "com.no5.map:r76",
+      "sequence": 76,
+      "versionCode": 110,
+      "versionName": "0.5.42-memory-budget-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "map110-memory-budget",
+          "text": "Die vorläufige Geometriequote steigt von 256 auf 512 MiB. Zellgrenze, maximale Ladereserve und Integritätsprüfungen bleiben erhalten. Die Weltunterlage bleibt ausgeschaltet."
+        }
+      ],
+      "evidence": [
+        "map/verification/releases/map110-memory-budget-20261026/CANDIDATE.json"
+      ]
+    }
+  ]
+}

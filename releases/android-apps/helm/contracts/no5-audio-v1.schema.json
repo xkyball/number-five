@@ -1,0 +1,1551 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://no5.invalid/contracts/no5-audio-v1.schema.json",
+  "title": "No5 Gateway Audio V1",
+  "description": "One API for REAL and SIMULATED providers. Additional cross-field ordering, IDs, meter indices and freshness checks are mandatory in receivers. Unknown values use null. No media URL transport.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/state"
+    },
+    {
+      "$ref": "#/$defs/command"
+    },
+    {
+      "$ref": "#/$defs/ack"
+    }
+  ],
+  "$defs": {
+    "state": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "audio"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "sourceKind": {
+          "enum": [
+            "REAL",
+            "SIMULATED"
+          ]
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "timestampEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "units": {
+          "type": "object",
+          "properties": {
+            "faders": {
+              "const": "dB"
+            },
+            "meters": {
+              "const": "dBFS"
+            },
+            "position": {
+              "const": "ms"
+            }
+          },
+          "required": [
+            "faders",
+            "meters",
+            "position"
+          ],
+          "additionalProperties": false
+        },
+        "audioSource": {
+          "type": "object",
+          "properties": {
+            "connected": {
+              "type": "boolean"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "name": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "quality": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "LIVE",
+                    "STALE",
+                    "LOST",
+                    "INVALID",
+                    "UNAVAILABLE"
+                  ]
+                },
+                "timestampEpochMs": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                "simulated": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status",
+                "timestampEpochMs",
+                "source",
+                "simulated"
+              ],
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "status": {
+                        "const": "LIVE"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 9007199254740991
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          "required": [
+            "connected",
+            "active",
+            "name",
+            "quality"
+          ],
+          "additionalProperties": false
+        },
+        "media": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "STOPPED",
+                "PAUSED",
+                "PLAYING"
+              ]
+            },
+            "title": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "artists": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 200,
+                "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+              },
+              "maxItems": 10
+            },
+            "album": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "trackId": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "artworkId": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "durationMs": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 86400000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "positionMs": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 86400000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "shuffle": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "repeat": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "title",
+            "artists",
+            "album",
+            "trackId",
+            "artworkId",
+            "durationMs",
+            "positionMs",
+            "shuffle",
+            "repeat"
+          ],
+          "additionalProperties": false
+        },
+        "dsp": {
+          "type": "object",
+          "properties": {
+            "state": {
+              "enum": [
+                "STOPPED",
+                "RUNNING",
+                "APPLYING_PRESET",
+                "ERROR"
+              ]
+            },
+            "preset": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "faderControls": {
+              "$ref": "#/$defs/camillaFaderControls"
+            },
+            "presets": {
+              "$ref": "#/$defs/camillaPresets"
+            },
+            "faders": {
+              "type": "object",
+              "properties": {
+                "MASTER": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted"
+                  ],
+                  "additionalProperties": false
+                },
+                "SUB": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted"
+                  ],
+                  "additionalProperties": false
+                },
+                "REAR": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted"
+                  ],
+                  "additionalProperties": false
+                },
+                "AUX3": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted"
+                  ],
+                  "additionalProperties": false
+                },
+                "AUX4": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "MASTER",
+                "SUB",
+                "REAR",
+                "AUX3",
+                "AUX4"
+              ],
+              "additionalProperties": false
+            },
+            "quality": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "enum": [
+                    "LIVE",
+                    "STALE",
+                    "LOST",
+                    "INVALID",
+                    "UNAVAILABLE"
+                  ]
+                },
+                "timestampEpochMs": {
+                  "anyOf": [
+                    {
+                      "type": "integer",
+                      "minimum": 1,
+                      "maximum": 9007199254740991
+                    },
+                    {
+                      "type": "null"
+                    }
+                  ]
+                },
+                "source": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 200,
+                  "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                },
+                "simulated": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "status",
+                "timestampEpochMs",
+                "source",
+                "simulated"
+              ],
+              "additionalProperties": false,
+              "allOf": [
+                {
+                  "if": {
+                    "properties": {
+                      "status": {
+                        "const": "LIVE"
+                      }
+                    }
+                  },
+                  "then": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1,
+                        "maximum": 9007199254740991
+                      }
+                    }
+                  }
+                }
+              ]
+            },
+            "hardwareAvailable": {
+              "anyOf": [
+                {
+                  "type": "boolean"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "clippedSamples": {
+              "anyOf": [
+                {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "meters": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "channels": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "index": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4
+                          },
+                          "peakDb": {
+                            "type": "number",
+                            "minimum": -160,
+                            "maximum": 0
+                          },
+                          "rmsDb": {
+                            "type": "number",
+                            "minimum": -160,
+                            "maximum": 0
+                          },
+                          "peakHoldDb": {
+                            "type": "number",
+                            "minimum": -160,
+                            "maximum": 0
+                          },
+                          "clip": {
+                            "type": "boolean"
+                          },
+                          "label": {
+                            "anyOf": [
+                              {
+                                "type": "string",
+                                "minLength": 1,
+                                "maxLength": 200,
+                                "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                              },
+                              {
+                                "type": "null"
+                              }
+                            ]
+                          }
+                        },
+                        "required": [
+                          "index",
+                          "peakDb",
+                          "rmsDb",
+                          "peakHoldDb",
+                          "clip"
+                        ],
+                        "additionalProperties": false
+                      },
+                      "minItems": 5,
+                      "maxItems": 5
+                    },
+                    "quality": {
+                      "type": "object",
+                      "properties": {
+                        "status": {
+                          "enum": [
+                            "LIVE",
+                            "STALE",
+                            "LOST",
+                            "INVALID",
+                            "UNAVAILABLE"
+                          ]
+                        },
+                        "timestampEpochMs": {
+                          "anyOf": [
+                            {
+                              "type": "integer",
+                              "minimum": 1,
+                              "maximum": 9007199254740991
+                            },
+                            {
+                              "type": "null"
+                            }
+                          ]
+                        },
+                        "source": {
+                          "type": "string",
+                          "minLength": 1,
+                          "maxLength": 200,
+                          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+                        },
+                        "simulated": {
+                          "type": "boolean"
+                        }
+                      },
+                      "required": [
+                        "status",
+                        "timestampEpochMs",
+                        "source",
+                        "simulated"
+                      ],
+                      "additionalProperties": false,
+                      "allOf": [
+                        {
+                          "if": {
+                            "properties": {
+                              "status": {
+                                "const": "LIVE"
+                              }
+                            }
+                          },
+                          "then": {
+                            "properties": {
+                              "timestampEpochMs": {
+                                "type": "integer",
+                                "minimum": 1,
+                                "maximum": 9007199254740991
+                              }
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "routingVerified": {
+                      "type": "boolean"
+                    },
+                    "groups": {
+                      "type": "object",
+                      "properties": {
+                        "MASTER": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4
+                          },
+                          "minItems": 1,
+                          "maxItems": 5,
+                          "uniqueItems": true
+                        },
+                        "FRONT": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4
+                          },
+                          "minItems": 1,
+                          "maxItems": 5,
+                          "uniqueItems": true
+                        },
+                        "REAR": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4
+                          },
+                          "minItems": 1,
+                          "maxItems": 5,
+                          "uniqueItems": true
+                        },
+                        "SUB": {
+                          "type": "array",
+                          "items": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 4
+                          },
+                          "minItems": 1,
+                          "maxItems": 5,
+                          "uniqueItems": true
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "channels",
+                    "quality",
+                    "routingVerified"
+                  ],
+                  "additionalProperties": false
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "zoneControls": {
+              "type": "object",
+              "properties": {
+                "FRONT": {
+                  "type": "object",
+                  "properties": {
+                    "db": {
+                      "anyOf": [
+                        {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        {
+                          "type": "null"
+                        }
+                      ]
+                    },
+                    "muted": {
+                      "type": "boolean"
+                    },
+                    "limit": {
+                      "type": "object",
+                      "properties": {
+                        "minDb": {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        "maxDb": {
+                          "type": "number",
+                          "minimum": -160,
+                          "maximum": 24
+                        },
+                        "stepDb": {
+                          "type": "number",
+                          "minimum": 0.01,
+                          "maximum": 24
+                        }
+                      },
+                      "required": [
+                        "minDb",
+                        "maxDb",
+                        "stepDb"
+                      ],
+                      "additionalProperties": false
+                    }
+                  },
+                  "required": [
+                    "db",
+                    "muted",
+                    "limit"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "required": [
+                "FRONT"
+              ],
+              "additionalProperties": false
+            },
+            "equalizer": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/equalizer"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          },
+          "required": [
+            "state",
+            "preset",
+            "faders",
+            "quality",
+            "hardwareAvailable",
+            "clippedSamples",
+            "meters"
+          ],
+          "additionalProperties": false
+        },
+        "capabilities": {
+          "type": "object",
+          "properties": {
+            "playPause": {
+              "type": "boolean"
+            },
+            "nextPrevious": {
+              "type": "boolean"
+            },
+            "seek": {
+              "type": "boolean"
+            },
+            "shuffleRepeat": {
+              "type": "boolean"
+            },
+            "faderWrite": {
+              "type": "boolean"
+            },
+            "mute": {
+              "type": "boolean"
+            },
+            "presetWrite": {
+              "type": "boolean"
+            },
+            "equalizer": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "playPause",
+            "nextPrevious",
+            "seek",
+            "shuffleRepeat",
+            "faderWrite",
+            "mute",
+            "presetWrite"
+          ],
+          "additionalProperties": false
+        },
+        "authority": {
+          "enum": [
+            "NONE",
+            "CAMILLA_DSP_MASTER"
+          ]
+        },
+        "limits": {
+          "anyOf": [
+            {
+              "type": "object",
+              "minProperties": 1,
+              "properties": {
+                "MASTER": {
+                  "type": "object",
+                  "properties": {
+                    "minDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "maxDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "stepDb": {
+                      "type": "number",
+                      "minimum": 0.01,
+                      "maximum": 24
+                    }
+                  },
+                  "required": [
+                    "minDb",
+                    "maxDb",
+                    "stepDb"
+                  ],
+                  "additionalProperties": false
+                },
+                "SUB": {
+                  "type": "object",
+                  "properties": {
+                    "minDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "maxDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "stepDb": {
+                      "type": "number",
+                      "minimum": 0.01,
+                      "maximum": 24
+                    }
+                  },
+                  "required": [
+                    "minDb",
+                    "maxDb",
+                    "stepDb"
+                  ],
+                  "additionalProperties": false
+                },
+                "REAR": {
+                  "type": "object",
+                  "properties": {
+                    "minDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "maxDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "stepDb": {
+                      "type": "number",
+                      "minimum": 0.01,
+                      "maximum": 24
+                    }
+                  },
+                  "required": [
+                    "minDb",
+                    "maxDb",
+                    "stepDb"
+                  ],
+                  "additionalProperties": false
+                },
+                "AUX3": {
+                  "type": "object",
+                  "properties": {
+                    "minDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "maxDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "stepDb": {
+                      "type": "number",
+                      "minimum": 0.01,
+                      "maximum": 24
+                    }
+                  },
+                  "required": [
+                    "minDb",
+                    "maxDb",
+                    "stepDb"
+                  ],
+                  "additionalProperties": false
+                },
+                "AUX4": {
+                  "type": "object",
+                  "properties": {
+                    "minDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "maxDb": {
+                      "type": "number",
+                      "minimum": -160,
+                      "maximum": 24
+                    },
+                    "stepDb": {
+                      "type": "number",
+                      "minimum": 0.01,
+                      "maximum": 24
+                    }
+                  },
+                  "required": [
+                    "minDb",
+                    "maxDb",
+                    "stepDb"
+                  ],
+                  "additionalProperties": false
+                }
+              },
+              "additionalProperties": false
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "notice": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "source",
+        "sourceKind",
+        "simulated",
+        "serverSessionId",
+        "timestampEpochMs",
+        "revision",
+        "units",
+        "audioSource",
+        "media",
+        "dsp",
+        "capabilities",
+        "authority",
+        "limits"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "REAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": false
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "command": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "audio-command"
+        },
+        "sessionId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}:[1-9][0-9]{0,15}$"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "command": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "fader"
+                },
+                "channel": {
+                  "enum": [
+                    "MASTER",
+                    "SUB",
+                    "REAR",
+                    "AUX3",
+                    "AUX4",
+                    "FRONT"
+                  ]
+                },
+                "valueDb": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "type",
+                "channel",
+                "valueDb"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "mute"
+                },
+                "channel": {
+                  "enum": [
+                    "MASTER",
+                    "SUB",
+                    "REAR",
+                    "AUX3",
+                    "AUX4",
+                    "FRONT"
+                  ]
+                },
+                "muted": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "type",
+                "channel",
+                "muted"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "preset"
+                },
+                "id": {
+                  "type": "string",
+                  "pattern": "^[A-Za-z0-9_-]{1,100}$"
+                }
+              },
+              "required": [
+                "type",
+                "id"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "transport"
+                },
+                "action": {
+                  "enum": [
+                    "PLAY",
+                    "PAUSE",
+                    "NEXT",
+                    "PREVIOUS",
+                    "SHUFFLE",
+                    "REPEAT"
+                  ]
+                }
+              },
+              "required": [
+                "type",
+                "action"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "transport"
+                },
+                "action": {
+                  "const": "SEEK"
+                },
+                "positionMs": {
+                  "type": "integer",
+                  "minimum": -9007199254740992,
+                  "maximum": 9007199254740992
+                }
+              },
+              "required": [
+                "type",
+                "action",
+                "positionMs"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "const": "equalizer"
+                },
+                "bankId": {
+                  "const": "master"
+                },
+                "configGeneration": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{64}$"
+                },
+                "gainsDb": {
+                  "type": "array",
+                  "minItems": 5,
+                  "maxItems": 5,
+                  "items": {
+                    "type": "number",
+                    "minimum": -6,
+                    "maximum": 6,
+                    "multipleOf": 1
+                  }
+                }
+              },
+              "required": [
+                "type",
+                "bankId",
+                "configGeneration",
+                "gainsDb"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "sessionId",
+        "requestId",
+        "serverSessionId",
+        "expectedRevision",
+        "command"
+      ],
+      "additionalProperties": false
+    },
+    "camillaFaderControls": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "enum": [
+              "MASTER",
+              "SUB",
+              "REAR",
+              "AUX3",
+              "AUX4"
+            ]
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+          },
+          "index": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1024
+          },
+          "db": {
+            "anyOf": [
+              {
+                "type": "number",
+                "minimum": -150,
+                "maximum": 24
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "muted": {
+            "type": "boolean"
+          },
+          "limit": {
+            "anyOf": [
+              {
+                "type": "object",
+                "properties": {
+                  "minDb": {
+                    "type": "number",
+                    "minimum": -150,
+                    "maximum": 24
+                  },
+                  "maxDb": {
+                    "type": "number",
+                    "minimum": -150,
+                    "maximum": 24
+                  },
+                  "stepDb": {
+                    "type": "number",
+                    "minimum": 0.01,
+                    "maximum": 24
+                  }
+                },
+                "required": [
+                  "minDb",
+                  "maxDb",
+                  "stepDb"
+                ],
+                "additionalProperties": false
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "label",
+          "index",
+          "db",
+          "muted",
+          "limit"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "camillaPresets": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[A-Za-z0-9_-]{1,100}$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200,
+            "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+          },
+          "active": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "active"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "ack": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "const": "audio-ack"
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "sourceKind": {
+          "enum": [
+            "REAL",
+            "SIMULATED"
+          ]
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "sessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "requestId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "status": {
+          "enum": [
+            "VERIFIED",
+            "REJECTED"
+          ]
+        },
+        "message": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f]+$"
+        },
+        "state": {
+          "$ref": "#/$defs/state"
+        },
+        "verification": {
+          "const": "ACTIVE_CONFIG_READBACK"
+        }
+      },
+      "required": [
+        "version",
+        "kind",
+        "source",
+        "sourceKind",
+        "simulated",
+        "sessionId",
+        "requestId",
+        "serverSessionId",
+        "revision",
+        "status",
+        "message",
+        "state"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "REAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": false
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "equalizer": {
+      "description": "Optional master EQ. configGeneration binds the profile/filter structure, excluding owned gains and headroom. Confirmation is active configuration readback, not a sample-accurate DSP acknowledgement.",
+      "type": "object",
+      "properties": {
+        "bankId": {
+          "const": "master"
+        },
+        "configGeneration": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "frequenciesHz": {
+          "const": [
+            63,
+            250,
+            1000,
+            4000,
+            12000
+          ]
+        },
+        "gainsDb": {
+          "type": "array",
+          "minItems": 5,
+          "maxItems": 5,
+          "items": {
+            "type": "number",
+            "minimum": -6,
+            "maximum": 6,
+            "multipleOf": 1
+          }
+        },
+        "minDb": {
+          "const": -6
+        },
+        "maxDb": {
+          "const": 6
+        },
+        "stepDb": {
+          "const": 1
+        },
+        "headroomDb": {
+          "type": "number",
+          "minimum": 0
+        },
+        "writable": {
+          "type": "boolean"
+        },
+        "observedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9007199254740991
+        },
+        "verification": {
+          "const": "ACTIVE_CONFIG_READBACK"
+        }
+      },
+      "required": [
+        "bankId",
+        "configGeneration",
+        "frequenciesHz",
+        "gainsDb",
+        "minDb",
+        "maxDb",
+        "stepDb",
+        "headroomDb",
+        "writable",
+        "observedAtEpochMs",
+        "verification"
+      ],
+      "additionalProperties": false
+    }
+  }
+}

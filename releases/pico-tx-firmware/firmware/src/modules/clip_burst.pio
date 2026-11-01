@@ -1,0 +1,19 @@
+.program clip_finite_burst
+pull block
+mov y, osr
+pull block
+mov isr, osr
+pull block
+again:
+set pins, 17
+mov x, isr
+high:
+jmp x-- high
+set pins, 0
+mov x, osr
+low:
+jmp x-- low
+jmp y-- again
+irq 0
+park:
+jmp park

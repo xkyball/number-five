@@ -1,0 +1,423 @@
+{
+  "version": 1,
+  "kind": "sonar-diagnostics",
+  "serverSessionId": "fixture",
+  "generation": 1,
+  "pingId": 7,
+  "observedAtEpochMs": 1700000000000,
+  "source": "own",
+  "fields": [
+    {
+      "group": "status",
+      "name": "state",
+      "value": "RUNNING"
+    },
+    {
+      "group": "host_package",
+      "name": "version",
+      "value": "0.4.11"
+    },
+    {
+      "group": "host_package",
+      "name": "name",
+      "value": "no5-sonard-openecho"
+    },
+    {
+      "group": "session",
+      "name": "id",
+      "value": "01234567-89ab-4cde-8f01-23456789abcd"
+    },
+    {
+      "group": "display_selection",
+      "name": "source",
+      "value": "own"
+    },
+    {
+      "group": "display_selection",
+      "name": "generation",
+      "value": "1"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.window_s",
+      "value": "5",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.observed_s",
+      "value": "5.0",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.complete",
+      "value": "true"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.time_basis",
+      "value": "device_marker_us_host_extrapolated_now"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.start_device_us",
+      "value": "1000000",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.end_device_us",
+      "value": "6000000",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.usable.count",
+      "value": "85"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.usable.hz",
+      "value": "17.0",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.schema",
+      "value": "no5.depth-rate-control/1"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.planned_hz",
+      "value": "25.0",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.limiting_reason",
+      "value": "future_additive_reason"
+    },
+    {
+      "group": "acquisition",
+      "name": "amplitude.significant_bits",
+      "value": "12"
+    },
+    {
+      "group": "acquisition",
+      "name": "amplitude.fullscale_code",
+      "value": "4095"
+    },
+    {
+      "group": "acquisition",
+      "name": "amplitude.normalization_source",
+      "value": "HELLO_12bit_checked_host_contract"
+    },
+    {
+      "group": "gateway",
+      "name": "unconfirmed_source_frames",
+      "value": "0"
+    },
+    {
+      "group": "gateway",
+      "name": "old_selection_frames_dropped",
+      "value": "0"
+    },
+    {
+      "group": "ping",
+      "name": "valid_tx",
+      "value": "true"
+    },
+    {
+      "group": "ping",
+      "name": "time_utc_ns",
+      "value": "1700000000000000000"
+    },
+    {
+      "group": "ping",
+      "name": "sample_period_ns",
+      "value": "4000",
+      "unit": "ns"
+    },
+    {
+      "group": "ping",
+      "name": "tx_zero_sample_index",
+      "value": "1000"
+    },
+    {
+      "group": "ping",
+      "name": "acquisition_source",
+      "value": "own"
+    },
+    {
+      "group": "presentation",
+      "name": "quality",
+      "value": "LOCKED"
+    },
+    {
+      "group": "presentation",
+      "name": "reason",
+      "value": "confirmed source selection"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.schema",
+      "value": "no5.original-reference-observation/1"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.arrival_age_s",
+      "value": "0.01",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.observation_fresh",
+      "value": "true"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.firmware_event",
+      "value": "8"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.firmware_detail",
+      "value": "11"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.observation_reason",
+      "value": "qualified_native_marker"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.observed_device_us",
+      "value": "1700000",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.observed_utc_ns",
+      "value": "1700000001000000000",
+      "unit": "ns"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.utc_basis",
+      "value": "accepted_usb_time_sync"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.observation_kind",
+      "value": "marker_edge"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.native_last_device_us",
+      "value": "1259200",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.native_period_us",
+      "value": "386400",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.native_stable",
+      "value": "3"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.slot",
+      "value": "0"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.meaning",
+      "value": "qualified"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latest.received_host_utc_ns",
+      "value": "1700000000500000000",
+      "unit": "ns"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.firmware_event",
+      "value": "8"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.firmware_detail",
+      "value": "4"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.observation_reason",
+      "value": "native_reference_deadline_expired"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.observed_device_us",
+      "value": "1700000",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.observation_kind",
+      "value": "timeout_check"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.native_last_device_us",
+      "value": "1259200",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.native_period_us",
+      "value": "386400",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.native_stable",
+      "value": "3"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.slot",
+      "value": "0"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.meaning",
+      "value": "fault"
+    },
+    {
+      "group": "transmit",
+      "name": "original_reference.latched_fault.received_host_utc_ns",
+      "value": "1700000000500000000",
+      "unit": "ns"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.rate_policy",
+      "value": "depth_auto"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.sample_count",
+      "value": "8192"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.applied_window.revision",
+      "value": "12"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.applied_window.sample_count",
+      "value": "8192"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.applied_window.next_min_spacing_us",
+      "value": "27000",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "rate_control.applied_window.device_us",
+      "value": "1234567",
+      "unit": "µs"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.own.count",
+      "value": "90"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.own.hz",
+      "value": "18.0",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.own.max_gap_s",
+      "value": "0.1",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.physical.count",
+      "value": "89"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.physical.hz",
+      "value": "17.8",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.physical.max_gap_s",
+      "value": "0.1",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.raw.count",
+      "value": "88"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.raw.hz",
+      "value": "17.6",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.raw.max_gap_s",
+      "value": "0.1",
+      "unit": "s"
+    },
+    {
+      "group": "transmit",
+      "name": "ping_rates.rates.usable.max_gap_s",
+      "value": "0.1",
+      "unit": "s"
+    },
+    {
+      "group": "rates",
+      "name": "ping_hz",
+      "value": "20.7",
+      "unit": "Hz"
+    },
+    {
+      "group": "display_selection",
+      "name": "published_hz",
+      "value": "18.12",
+      "unit": "Hz"
+    },
+    {
+      "group": "transmit",
+      "name": "reason",
+      "value": "native_reference_lost"
+    }
+  ],
+  "trackTotal": 0,
+  "trackOmitted": 0,
+  "blockTotal": 0,
+  "blockOmitted": 0,
+  "available": true,
+  "stale": false,
+  "statusObservedAtEpochMs": 1700000000000,
+  "statusStale": false,
+  "statusTimeBasis": "GATEWAY_STATUS_REQUEST_STARTED_AT_UTC"
+}

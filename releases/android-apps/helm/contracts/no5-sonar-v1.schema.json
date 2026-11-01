@@ -1,0 +1,974 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:no5:sonar:v1",
+  "title": "No5 canonical SONAR state and binary-header metadata V1",
+  "$defs": {
+    "state": {
+      "type": "object",
+      "required": [
+        "version",
+        "source",
+        "sourceKind",
+        "simulated",
+        "serverSessionId",
+        "generation",
+        "publishedAtEpochMs",
+        "format",
+        "calibration",
+        "kind",
+        "revision",
+        "running",
+        "status",
+        "capabilities",
+        "cadenceHz"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sourceKind": {
+          "enum": [
+            "REAL",
+            "SIMULATED"
+          ]
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "publishedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "format": {
+          "type": "object",
+          "required": [
+            "bins",
+            "sampleType",
+            "byteOrder"
+          ],
+          "properties": {
+            "bins": {
+              "const": 1024
+            },
+            "sampleType": {
+              "const": "UINT16"
+            },
+            "byteOrder": {
+              "const": "LITTLE_ENDIAN"
+            }
+          }
+        },
+        "calibration": {
+          "type": "object",
+          "required": [
+            "revision",
+            "valid",
+            "samplePeriodUs",
+            "soundSpeedMps",
+            "depthReference",
+            "transducerOffsetM",
+            "keelOffsetM"
+          ],
+          "properties": {
+            "revision": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            },
+            "valid": {
+              "type": "boolean"
+            },
+            "samplePeriodUs": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 1000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "soundSpeedMps": {
+              "type": "number",
+              "minimum": 1300,
+              "maximum": 1800
+            },
+            "depthReference": {
+              "enum": [
+                "TRANSDUCER",
+                "SURFACE",
+                "KEEL"
+              ]
+            },
+            "transducerOffsetM": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -50,
+                  "maximum": 50
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "keelOffsetM": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -50,
+                  "maximum": 50
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "kind": {
+          "const": "sonar.state"
+        },
+        "revision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "running": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "LIVE",
+            "IDLE",
+            "STALE",
+            "UNAVAILABLE"
+          ]
+        },
+        "capabilities": {
+          "type": "object",
+          "required": [
+            "canStart",
+            "canStop",
+            "bottomDetection"
+          ],
+          "properties": {
+            "canStart": {
+              "type": "boolean"
+            },
+            "canStop": {
+              "type": "boolean"
+            },
+            "bottomDetection": {
+              "type": "boolean"
+            },
+            "filterControl": {
+              "type": "boolean"
+            },
+            "confirmedTracks": {
+              "type": "boolean"
+            },
+            "sourceSelection": {
+              "type": "boolean"
+            },
+            "diagnostics": {
+              "type": "boolean"
+            }
+          }
+        },
+        "cadenceHz": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 20
+        },
+        "displaySelection": {
+          "$ref": "#/$defs/displaySelection"
+        },
+        "amplitude": {
+          "$ref": "#/$defs/amplitude"
+        },
+        "observationReason": {
+          "$ref": "#/$defs/observationReason"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "REAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": false
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "ping": {
+      "type": "object",
+      "required": [
+        "version",
+        "source",
+        "sourceKind",
+        "simulated",
+        "serverSessionId",
+        "generation",
+        "publishedAtEpochMs",
+        "format",
+        "calibration",
+        "kind",
+        "pingId",
+        "observedAtEpochMs",
+        "bottom"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "sourceKind": {
+          "enum": [
+            "REAL",
+            "SIMULATED"
+          ]
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "publishedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "format": {
+          "type": "object",
+          "required": [
+            "bins",
+            "sampleType",
+            "byteOrder"
+          ],
+          "properties": {
+            "bins": {
+              "const": 1024
+            },
+            "sampleType": {
+              "const": "UINT16"
+            },
+            "byteOrder": {
+              "const": "LITTLE_ENDIAN"
+            }
+          }
+        },
+        "calibration": {
+          "type": "object",
+          "required": [
+            "revision",
+            "valid",
+            "samplePeriodUs",
+            "soundSpeedMps",
+            "depthReference",
+            "transducerOffsetM",
+            "keelOffsetM"
+          ],
+          "properties": {
+            "revision": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 9223372036854775807
+            },
+            "valid": {
+              "type": "boolean"
+            },
+            "samplePeriodUs": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "exclusiveMinimum": 0,
+                  "maximum": 1000
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "soundSpeedMps": {
+              "type": "number",
+              "minimum": 1300,
+              "maximum": 1800
+            },
+            "depthReference": {
+              "enum": [
+                "TRANSDUCER",
+                "SURFACE",
+                "KEEL"
+              ]
+            },
+            "transducerOffsetM": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -50,
+                  "maximum": 50
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "keelOffsetM": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": -50,
+                  "maximum": 50
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            }
+          }
+        },
+        "kind": {
+          "const": "sonar.ping"
+        },
+        "pingId": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "observedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "bottom": {
+          "type": "object",
+          "required": [
+            "bin",
+            "confidence",
+            "strength"
+          ],
+          "properties": {
+            "bin": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1023
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "confidence": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "strength": {
+              "anyOf": [
+                {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "source": {
+              "enum": [
+                "m1_raw",
+                "cfar_track_rules_v1",
+                "direct_envelope_track_rules_v1"
+              ]
+            },
+            "trackId": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 1
+            },
+            "classification": {
+              "enum": [
+                "bottom_like",
+                "fish_like",
+                "weed_like",
+                "bubble_like",
+                "multipath_like",
+                "unknown"
+              ]
+            }
+          }
+        },
+        "geometry": {
+          "type": "object",
+          "required": [
+            "displayedMaxDepthM",
+            "txReference",
+            "flags",
+            "adcSamplePeriodUs"
+          ],
+          "properties": {
+            "displayedMaxDepthM": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "exclusiveMinimum": 0,
+              "maximum": 1000000
+            },
+            "txReference": {
+              "enum": [
+                "UNVERIFIED",
+                "HOST_VERIFIED",
+                "EMPIRICAL_FALLBACK"
+              ]
+            },
+            "flags": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 4294967295
+            },
+            "adcSamplePeriodUs": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "exclusiveMinimum": 0,
+              "maximum": 1000
+            }
+          }
+        },
+        "hostPackageVersion": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "presentation": {
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "pingId",
+            "quality",
+            "reason",
+            "filter",
+            "recommendations"
+          ],
+          "properties": {
+            "pingId": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "quality": {
+              "enum": [
+                "WAITING",
+                "SEARCHING",
+                "LOCKED",
+                "UNSTABLE",
+                "UNVERIFIED_TX"
+              ]
+            },
+            "reason": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "maxLength": 200
+            },
+            "filter": {
+              "type": "object",
+              "required": [
+                "requestedMode",
+                "effectiveMode",
+                "active"
+              ],
+              "properties": {
+                "requestedMode": {
+                  "enum": [
+                    "off",
+                    "auto",
+                    "on"
+                  ]
+                },
+                "effectiveMode": {
+                  "enum": [
+                    "off",
+                    "on",
+                    "auto_raw",
+                    "auto_filter"
+                  ]
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": [
+                    "string",
+                    "null"
+                  ],
+                  "maxLength": 200
+                }
+              }
+            },
+            "recommendations": {
+              "type": "object",
+              "required": [
+                "range",
+                "rangeEndBin",
+                "freeze"
+              ],
+              "properties": {
+                "range": {
+                  "enum": [
+                    "FOLLOW_BOTTOM",
+                    "HOLD"
+                  ]
+                },
+                "rangeEndBin": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 32,
+                  "maximum": 1023
+                },
+                "freeze": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "legacyBottom": {
+          "$ref": "#/$defs/ping/properties/bottom"
+        },
+        "displaySelection": {
+          "$ref": "#/$defs/displaySelection"
+        },
+        "amplitude": {
+          "$ref": "#/$defs/amplitude"
+        },
+        "pingSource": {
+          "description": "Actual acoustic producer, optional and never inferred from displaySelection.",
+          "enum": [
+            "own",
+            "native",
+            null
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "REAL"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": false
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          }
+        }
+      ]
+    },
+    "displaySelection": {
+      "description": "Optional selected publication; source of one acoustic ping remains pingSource. No native fallback or raw archive selection is implied.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "version",
+        "source",
+        "generation"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "source": {
+          "enum": [
+            "own",
+            "native",
+            "all"
+          ]
+        },
+        "generation": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "publishedHz": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "lastPublishedPingId": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "observedAtEpochMs": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "rawArchiveSource": {
+          "const": "all"
+        },
+        "automaticNativeFallback": {
+          "const": false
+        },
+        "selectionGeneration": {
+          "description": "Optional .13 source-selection generation; generation remains the display epoch.",
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        }
+      }
+    },
+    "amplitude": {
+      "description": "Optional explicit display-code scale. ADC_CODE may represent derived background-reduced contrast, not raw acoustic power. UNCONFIRMED remains unknown.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "version",
+        "encoding",
+        "unit",
+        "significantBits",
+        "fullScaleCode",
+        "normalizationSource",
+        "rawSamplesModified"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "encoding": {
+          "const": "UINT16_LE"
+        },
+        "unit": {
+          "const": "ADC_CODE"
+        },
+        "significantBits": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 16
+        },
+        "fullScaleCode": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 65535
+        },
+        "normalizationSource": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "rawSamplesModified": {
+          "enum": [
+            false,
+            null
+          ]
+        },
+        "displayTransform": {
+          "enum": [
+            "max_pool_or_interpolate_without_amplitude_scaling",
+            "background_reduction_then_max_pool_or_interpolate"
+          ]
+        },
+        "noiseRevision": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "noiseActive": {
+          "type": "boolean"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "normalizationSource": {
+                "const": "HELLO_12bit_checked_host_contract"
+              }
+            },
+            "required": [
+              "normalizationSource"
+            ]
+          },
+          "then": {
+            "properties": {
+              "significantBits": {
+                "const": 12
+              },
+              "fullScaleCode": {
+                "const": 4095
+              },
+              "rawSamplesModified": {
+                "const": false
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "properties": {
+              "normalizationSource": {
+                "const": "UNCONFIRMED"
+              }
+            },
+            "required": [
+              "normalizationSource"
+            ]
+          },
+          "then": {
+            "properties": {
+              "significantBits": {
+                "type": "null"
+              },
+              "fullScaleCode": {
+                "type": "null"
+              },
+              "rawSamplesModified": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "type": "object",
+            "anyOf": [
+              {
+                "required": [
+                  "displayTransform"
+                ]
+              },
+              {
+                "required": [
+                  "noiseRevision"
+                ]
+              },
+              {
+                "required": [
+                  "noiseActive"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "required": [
+              "displayTransform",
+              "noiseRevision",
+              "noiseActive"
+            ],
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "noiseActive": {
+                      "const": true
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "displayTransform": {
+                      "const": "background_reduction_then_max_pool_or_interpolate"
+                    }
+                  }
+                },
+                "else": {
+                  "properties": {
+                    "displayTransform": {
+                      "const": "max_pool_or_interpolate_without_amplitude_scaling"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "observationReason": {
+      "description": "Optional reported fault evidence. Event time may be unknown; status receipt is a separate observation and never substitutes for the physical fault time. Unknown optional codes may be ignored by compatible readers.",
+      "type": [
+        "object",
+        "null"
+      ],
+      "required": [
+        "version",
+        "code",
+        "detail",
+        "observedAtEpochMs",
+        "statusObservedAtEpochMs",
+        "latched",
+        "statusFresh"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "code": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "detail": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "maxLength": 200
+        },
+        "observedAtEpochMs": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "statusObservedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 9223372036854775807
+        },
+        "latched": {
+          "type": "boolean"
+        },
+        "statusFresh": {
+          "type": "boolean"
+        },
+        "firmwareDetail": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "observedDeviceUs": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9223372036854775807
+        },
+        "observationKind": {
+          "enum": [
+            "marker_edge",
+            "timeout_check"
+          ]
+        },
+        "utcBasis": {
+          "enum": [
+            "accepted_usb_time_sync",
+            null
+          ]
+        }
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "$ref": "#/$defs/state"
+    },
+    {
+      "$ref": "#/$defs/ping"
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:no5:simulator:control:v1",
+  "title": "No5 external development simulator control command",
+  "description": "Development simulation state only. Not a production Pi or hardware write API.",
+  "allOf": [
+    {
+      "$ref": "#/$defs/command"
+    }
+  ],
+  "$defs": {
+    "settings": {
+      "type": "object",
+      "required": [
+        "mode",
+        "scenario",
+        "timeScale",
+        "standingSeconds",
+        "launchSeconds",
+        "cruiseSeconds",
+        "decelerateSeconds",
+        "routeScale",
+        "launchSpeedKn",
+        "cruiseSpeedKn",
+        "accelerationMps2",
+        "decelerationMps2",
+        "portTrimPercent",
+        "starboardTrimPercent",
+        "portInitialFuelLiters",
+        "starboardInitialFuelLiters",
+        "manualSpeedKn",
+        "manualHeadingDegrees",
+        "clockStartEpochMs",
+        "helmFault",
+        "weatherFault",
+        "weatherEnabled",
+        "environmentMode",
+        "sceneEpochMs",
+        "sceneWindKn",
+        "sceneWindFromDegrees",
+        "sceneCloudPercent",
+        "sceneVisibilityMeters"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "scenario",
+            "manual"
+          ]
+        },
+        "scenario": {
+          "enum": [
+            "figure8",
+            "idle"
+          ]
+        },
+        "timeScale": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 50
+        },
+        "standingSeconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 120
+        },
+        "launchSeconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 180
+        },
+        "cruiseSeconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 600
+        },
+        "decelerateSeconds": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 120
+        },
+        "routeScale": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 4
+        },
+        "launchSpeedKn": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 45
+        },
+        "cruiseSpeedKn": {
+          "type": "number",
+          "minimum": 1,
+          "maximum": 35
+        },
+        "accelerationMps2": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 2
+        },
+        "decelerationMps2": {
+          "type": "number",
+          "minimum": 0.1,
+          "maximum": 3
+        },
+        "portTrimPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "starboardTrimPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "portInitialFuelLiters": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 250
+        },
+        "starboardInitialFuelLiters": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 250
+        },
+        "manualSpeedKn": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 45
+        },
+        "manualHeadingDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359.999
+        },
+        "clockStartEpochMs": {
+          "type": "integer",
+          "minimum": 946684800000,
+          "maximum": 4102444800000
+        },
+        "helmFault": {
+          "enum": [
+            "none",
+            "stale",
+            "failed"
+          ]
+        },
+        "weatherFault": {
+          "enum": [
+            "none",
+            "stale",
+            "failed"
+          ]
+        },
+        "weatherEnabled": {
+          "type": "boolean"
+        },
+        "environmentMode": {
+          "enum": [
+            "live",
+            "simulated"
+          ]
+        },
+        "sceneEpochMs": {
+          "type": "integer",
+          "minimum": 946684800000,
+          "maximum": 4102444800000
+        },
+        "sceneWindKn": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sceneWindFromDegrees": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 359.999
+        },
+        "sceneCloudPercent": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "sceneVisibilityMeters": {
+          "type": "number",
+          "minimum": 50,
+          "maximum": 100000
+        }
+      },
+      "additionalProperties": false
+    },
+    "command": {
+      "type": "object",
+      "required": [
+        "version",
+        "serverInstanceId",
+        "expectedRevision",
+        "requestId",
+        "action"
+      ],
+      "properties": {
+        "version": {
+          "const": 1,
+          "type": "integer"
+        },
+        "serverInstanceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expectedRevision": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "requestId": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_.-]{8,100}$"
+        },
+        "action": {
+          "enum": [
+            "apply",
+            "start",
+            "pause",
+            "resume",
+            "stop",
+            "reset"
+          ]
+        },
+        "settings": {
+          "$ref": "#/$defs/settings"
+        }
+      },
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "action": {
+                "const": "apply"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "settings"
+            ]
+          },
+          "else": {
+            "not": {
+              "required": [
+                "settings"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}

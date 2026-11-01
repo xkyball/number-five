@@ -1,0 +1,503 @@
+{
+  "schema": 1,
+  "packageName": "com.no5.home",
+  "label": "Launcher",
+  "releases": [
+    {
+      "id": "com.no5.home:r1",
+      "sequence": 1,
+      "versionName": "0.1.0",
+      "versionCode": 1,
+      "sourceCommit": "8db1c4c15584b863c7ee85e1b930c63c27c27bd3",
+      "evidence": [
+        "git:8db1c4c15584b863c7ee85e1b930c63c27c27bd3:launcher/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.home:r2",
+      "sequence": 2,
+      "versionName": "0.2.0-preview1",
+      "versionCode": 2,
+      "sourceCommit": "adc2b4bfb6ca9380a13d59e47a953c8b89e65f83",
+      "evidence": [
+        "git:adc2b4bfb6ca9380a13d59e47a953c8b89e65f83:launcher/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.home:r3",
+      "sequence": 3,
+      "versionName": "0.2.0",
+      "versionCode": 3,
+      "sourceCommit": "0f3fa272e58b2b91028e656fc0a98495257c8d40",
+      "evidence": [
+        "git:0f3fa272e58b2b91028e656fc0a98495257c8d40:launcher/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.home:r4",
+      "sequence": 4,
+      "versionName": "0.3.1-clearance",
+      "versionCode": 5,
+      "sourceCommit": "b43f14f2fa6ddacf7baf01c36cc80e1326ef5d41",
+      "evidence": [
+        "git:b43f14f2fa6ddacf7baf01c36cc80e1326ef5d41:launcher/build.gradle.kts",
+        "launcher/verification/clearance-release.json"
+      ],
+      "changes": [
+        {
+          "id": "launcher-clearance",
+          "text": "Das geprüfte Clearance-Layout wurde übernommen."
+        }
+      ],
+      "historyCoverage": "Belegte Kurznotizen; ältere vollständige Release-Historie nicht nachträglich behauptet.",
+      "apkSha256": [
+        "14872639980e1bf21fef4ff409bdb1ebec20cfc7889ce40a15dc6b72bc36d939"
+      ]
+    },
+    {
+      "id": "com.no5.home:r5",
+      "sequence": 5,
+      "versionName": "0.3.2-app-grid",
+      "versionCode": 6,
+      "sourceCommit": "85e0f6b46ce638b96b103f73991f04738221d4ab",
+      "evidence": [
+        "git:85e0f6b46ce638b96b103f73991f04738221d4ab:launcher/build.gradle.kts",
+        "launcher/verification/app-grid-release.json"
+      ],
+      "changes": [
+        {
+          "id": "launcher-app-grid",
+          "text": "Alle Apps werden als Icon-Kacheln angezeigt."
+        }
+      ],
+      "historyCoverage": "Belegte Kurznotizen; ältere vollständige Release-Historie nicht nachträglich behauptet.",
+      "apkSha256": [
+        "be3ec32ab783f3c19bb62c7e0d04736ab3eedd441ddb9cad517a676a95998da9"
+      ]
+    },
+    {
+      "id": "com.no5.home:r6",
+      "sequence": 6,
+      "versionName": "0.3.3-release-info",
+      "versionCode": 7,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "release-info/README.md",
+        "release-info/src/main/java/com/no5/releaseinfo/ReleaseInfo.java"
+      ],
+      "changes": [
+        {
+          "id": "installed-release-info",
+          "text": "Version, Build und belegte Änderungen seit der vorherigen Installation sind über „Was ist neu“ abrufbar."
+        }
+      ]
+    },
+    {
+      "id": "com.no5.home:r7",
+      "sequence": 7,
+      "versionName": "0.4.0-gateway-resolution",
+      "versionCode": 8,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "gateway-config/README.md"
+      ],
+      "changes": [
+        {
+          "id": "home-gateway",
+          "text": "Gateway-Zugang einmal in Home: automatische mDNS-Suche, manuelle Auflösung und wiederholte Erreichbarkeitsprüfung."
+        }
+      ],
+      "historyCoverage": "Neue Änderung; Laufzeitabnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r8",
+      "sequence": 8,
+      "versionName": "0.4.1-gateway-check-diagnostics",
+      "versionCode": 9,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "verification/home-gateway/runtime-20261008/README.md"
+      ],
+      "changes": [
+        {
+          "id": "gateway-check-diagnostics",
+          "text": "Gateway-Prüfung unterscheidet Netzwerkzugriff, Verbindung, Zertifikat, Zugang und HELM-Antwort ohne vertrauliche Inhalte auszugeben."
+        }
+      ],
+      "historyCoverage": "Laufzeitbefund und Abnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r9",
+      "sequence": 9,
+      "versionName": "0.4.2-gateway-status-check",
+      "versionCode": 10,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "verification/home-gateway/runtime-20261008/README.md"
+      ],
+      "changes": [
+        {
+          "id": "gateway-status-check",
+          "text": "Home bestätigt den Gateway über seinen Statusvertrag; fehlende HELM-Sensordaten verhindern die gemeinsame Konfiguration nicht mehr."
+        }
+      ],
+      "historyCoverage": "Gateway-Verbindung und Telemetrieabnahme bleiben getrennt."
+    },
+    {
+      "id": "com.no5.home:r10",
+      "sequence": 10,
+      "versionCode": 11,
+      "versionName": "0.4.3-hidden-gateway-config",
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "launcher/verification/gateway-entry-20261008/README.md"
+      ],
+      "changes": [
+        {
+          "id": "hidden-gateway-config",
+          "text": "Home verbirgt den Gateway-Zugang bei gültiger Konfiguration hinter Wartung und zeigt ihn nur bei Handlungsbedarf."
+        }
+      ],
+      "historyCoverage": "Neue lokale UI-Änderung; Geräteabnahme separat."
+    },
+    {
+      "id": "com.no5.home:r11",
+      "sequence": 11,
+      "versionCode": 12,
+      "versionName": "0.4.4-network-diagnostics",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "gateway-public-errno-diagnostics",
+          "text": "Home protokolliert bei tatsächlichen Netzwerkfehlern begrenzte Diagnosecodes ohne Adressen, Schlüssel oder Fehlermeldungsinhalte."
+        }
+      ],
+      "evidence": [
+        "launcher/verification/network-diagnostics-20261009/README.md",
+        "launcher/src/test/java/com/no5/home/GatewayCheckDiagnosticTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.home:r12",
+      "sequence": 12,
+      "versionCode": 13,
+      "versionName": "0.4.5-ca-recovery",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "automatic-ca-recovery",
+          "text": "Home lädt eine fehlende oder beschädigte lokale Gateway-CA automatisch neu; Ersatz erst nach Prüfung der bekannten CA-Kennung, Zertifikatskette und des Hostnamens."
+        }
+      ],
+      "evidence": [
+        "gateway-config/PASSWORD_ACCESS.md"
+      ],
+      "historyCoverage": "Hostprüfung und Geräteabnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r13",
+      "sequence": 13,
+      "versionCode": 14,
+      "versionName": "0.4.6-gateway-panel",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "gateway-ca-status-clearance",
+          "text": "Gateway zeigt den getrennten CA-Status, hält manuellen CA-Import unter Erweitert und berücksichtigt die gemeinsame Knob-Sicherheitsfläche auch beim Scrollen."
+        }
+      ],
+      "evidence": [
+        "launcher/docs/GATEWAY_PANEL.md"
+      ],
+      "historyCoverage": "Host- und Lumina-Abnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r14",
+      "sequence": 14,
+      "versionCode": 15,
+      "versionName": "0.4.7-gateway-map-style",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "gateway-map-settings-style",
+          "text": "Gateway-Konfiguration übernimmt Barlow-Typografie, Einstellungszeilen, kompakte umrandete Schaltflächen und Auswahlmarkierung des No5-MAP-Settings-Menüs; CA-Status und Knob-Abstand bleiben sichtbar."
+        }
+      ],
+      "evidence": [
+        "launcher/docs/GATEWAY_PANEL.md"
+      ],
+      "historyCoverage": "Host- und Lumina-Abnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r15",
+      "sequence": 15,
+      "versionCode": 16,
+      "versionName": "0.4.8-gateway-map-style",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "gateway-access-touch",
+          "text": "Das gemeinsame Key-/Passwortfeld erhält auch im nativen Zugangsdialog die Mindesthöhe der Gateway-Bedienelemente."
+        }
+      ],
+      "evidence": [
+        "launcher/docs/GATEWAY_PANEL.md"
+      ],
+      "historyCoverage": "Native Lumina-Abnahme separat dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r16",
+      "sequence": 16,
+      "versionCode": 17,
+      "versionName": "0.4.9-gateway-access",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-integrated-gateway-access-20261010",
+          "text": "Ein gemeinsamer Key-/Passwortdialog, geprüfter öffentlicher CA-Download und Wiederherstellung; Gateway-Panel im No5-Settings-Design."
+        }
+      ],
+      "evidence": [
+        "gateway-config/INTEGRATION_CHECKPOINT_20261010.md",
+        "verification/master-integration/gateway-auth-20261010/RELEASE_RESOLUTION.json"
+      ]
+    },
+    {
+      "id": "com.no5.home:r17",
+      "sequence": 17,
+      "versionCode": 18,
+      "versionName": "0.4.10-lumina-control",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-lumina-control-integration-20261010",
+          "text": "Gemeinsamer Knopfclient und Headerpublisher zusätzlich zum bestehenden Key-/Passwortdialog und Gateway-Panel."
+        }
+      ],
+      "evidence": [
+        "git:3009583d3aeae57cb57e08ded5b55f4a1e50f251:deliveries/lumina-control-checkpoint-20261010/README.txt",
+        "verification/master-integration/lumina-control-20261010/README.md"
+      ]
+    },
+    {
+      "id": "com.no5.home:r18",
+      "sequence": 18,
+      "versionCode": 19,
+      "versionName": "0.5.0-direct-gateway-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-direct-gateway-v8-20261013",
+          "text": "Direkter Gateway-Zugang mit fester App-Rolle über Lumina Control, atomarer Token-Erneuerung und dauerhafter Anzeige der installierten Version."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md"
+      ],
+      "historyCoverage": "Quellstand; ausgeführte Prüfungen werden getrennt dokumentiert."
+    },
+    {
+      "id": "com.no5.home:r19",
+      "sequence": 19,
+      "versionCode": 20,
+      "versionName": "0.5.1-direct-gateway-v8-local-ip",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-local-ip-v8-20261013",
+          "text": "Lokal eingerichtete Ausweich-IP aus Lumina Control wird bei fehlender mDNS-Auflösung genutzt; HTTPS-Origin, Zertifikatsprüfung und Token-Zuordnung bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "gateway-config/docs/LUMINA_V8.md",
+        "helm/app/src/test/java/com/no5/gateway/GatewayIpFallbackTest.kt",
+        "helm/app/src/test/java/com/no5/gateway/LuminaGatewayClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.home:r20",
+      "sequence": 20,
+      "versionCode": 21,
+      "versionName": "0.5.2-knob-recovery-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-knob-recovery-v8-20261013",
+          "text": "Sichtbare Knopf-Leases werden nach einem bestätigten Fokusverlust zeitnah erneut angefordert; Fokus-, Ablauf- und Callback-Grenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "helm/app/src/test/java/com/no5/appcontrol/LuminaKnobClientTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.home:r21",
+      "sequence": 21,
+      "versionCode": 23,
+      "versionName": "0.5.4-lease-deadline-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-command-rings-20261014",
+          "text": "Begrenzter OEM-SystemUI-Slottest mit Geometriemarkierungen, Android-System-HOME-Ziel und Tag/Rotnacht. Provider bleibt ohne gezielte Geräteaktivierung deaktiviert; lokale App-Header bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "verification/V8_COMMAND_RINGS.md"
+      ]
+    },
+    {
+      "id": "com.no5.home:r22",
+      "sequence": 22,
+      "versionCode": 24,
+      "versionName": "0.5.5-oem-header-probe-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "oem-widget-provider-registration",
+          "text": "OEM-SystemUI-Testprovider ist im Manifest registriert; markierter Slot-Testinhalt und lokale App-Header bleiben erhalten. Kein automatischer Geräteprofil- oder SystemUI-Eingriff."
+        }
+      ],
+      "evidence": [
+        "git:9da7afe5aa0023ae7e1692180116f2e14e62487f:launcher/verification/oem-header-slot/RESULT_20261014.md"
+      ],
+      "historyCoverage": "Begrenzter technischer Kandidat; Geräteprüfung separat."
+    },
+    {
+      "id": "com.no5.home:r23",
+      "sequence": 23,
+      "versionCode": 25,
+      "versionName": "0.5.6-header-clouds-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-shared-cloud-header-20261015",
+          "text": "Gemeinsamer No5-Wolkenheader mit eigenen App-Daten; das No5-Logo öffnet HOME direkt ohne App-Auswahldialog."
+        }
+      ],
+      "evidence": [
+        "helm/verification/header-unification-20261015.json",
+        "helm/verification/HEADER_RELEASE_LUMINA_20261015.json"
+      ],
+      "apkSha256": [
+        "2ad23a9d11a0cc5ec9166ce948c8c39c4cad419881d0906f8cb8ee67328bf1a4"
+      ],
+      "artifactSourceCommit": "621cc10af713f2b58d9e305821f8ba4ed79d9f05",
+      "artifactSignerSha256": "138eff84e534e5c8ae3cfc18adf57e80b2d7a7725d04acd1449ce3b9c373e6bd"
+    },
+    {
+      "id": "com.no5.home:r24",
+      "sequence": 24,
+      "versionCode": 26,
+      "versionName": "0.5.7-ui-state-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-shared-controls-state-ui",
+          "text": "Gemeinsame Bedienung, gespeicherte Ansichten, Sprachen und Medienheader."
+        }
+      ],
+      "evidence": [
+        "ui-state/verification/APP_COMPLETION_PROGRESS_20261015.json",
+        "ui-state/verification/CONTROL_UI_AUDIO_INTEGRATION_20261015.json"
+      ]
+    },
+    {
+      "id": "com.no5.home:r25",
+      "sequence": 25,
+      "versionCode": 27,
+      "versionName": "0.5.8-compact-header-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "home27-header",
+          "text": "Kompakter gemeinsamer Header mit Build-Info und echtem lokalen WLAN-Empfang."
+        },
+        {
+          "id": "home27-feedback",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "header-artwork/src/main/kotlin/com/no5/header/artwork/No5HeaderControlsView.kt",
+        "launcher/src/test/java/com/no5/home/SharedHeaderControlsTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.home:r26",
+      "sequence": 26,
+      "versionCode": 28,
+      "versionName": "0.5.9-header-accessibility-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "home28-brand-bounds",
+          "text": "Die HOME-Logofläche besitzt auch für Bedienhilfen genau ihre vorhandenen Bildschirmgrenzen; Mediennavigation und Gestaltung bleiben unverändert."
+        }
+      ],
+      "evidence": [
+        "launcher/verification/HOME_HEADER_BRAND_ACCESSIBILITY_20261017.json"
+      ]
+    },
+    {
+      "id": "com.no5.home:r27",
+      "sequence": 27,
+      "versionCode": 29,
+      "versionName": "0.5.10-app-cleanup-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "home29-header",
+          "text": "Kompakter gemeinsamer Header mit Build-Info und echtem lokalen WLAN-Empfang."
+        },
+        {
+          "id": "home29-dialog-feedback",
+          "text": "Klare Druck- und Fokuszustände sowie feste Dialogaktionen in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "launcher/src/test/java/com/no5/home/HomeUiCleanupMatrixTest.kt",
+        "launcher/src/test/java/com/no5/home/WifiObserverPlatformContractTest.kt",
+        "launcher/src/test/java/com/no5/home/SharedHeaderControlsTest.kt"
+      ]
+    },
+    {
+      "id": "com.no5.home:r28",
+      "sequence": 28,
+      "versionCode": 30,
+      "versionName": "0.5.11-design-unified-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-design-unified-20261019",
+          "text": "Einheitliche native Einrichtung, kompakte Dialoge und klare Bedienzustände in Deutsch, Englisch und Afrikaans."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_18.json"
+      ]
+    },
+    {
+      "id": "com.no5.home:r29",
+      "sequence": 29,
+      "versionCode": 31,
+      "versionName": "0.5.12-ui-parity-v8",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "launcher-approved-native-parity-20261019",
+          "text": "Native Dialoge und Eingaben verwenden die freigegebenen kompakten Formen; Hauptansichten und Bediengrenzen bleiben erhalten."
+        }
+      ],
+      "evidence": [
+        "design/app-unification-20261019/implementation/CHECKPOINT_22.json"
+      ]
+    }
+  ]
+}

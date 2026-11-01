@@ -1,0 +1,34 @@
+[Unit]
+Description=No5 GPS live source comparison (read only)
+Wants=network-online.target
+After=network-online.target no5-pi-gateway.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+DynamicUser=yes
+Environment=PYTHONDONTWRITEBYTECODE=1
+EnvironmentFile=/etc/no5-gps-map/settings
+LoadCredential=gateway-key:/etc/no5-gps-map/gateway-key
+ExecStart=/usr/bin/python3 /opt/no5-gps-map/current/server.py --interface ${GPS_MAP_INTERFACE} --port 8798
+Restart=on-failure
+RestartSec=10
+TimeoutStopSec=8
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+PrivateDevices=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+RestrictAddressFamilies=AF_INET AF_UNIX AF_NETLINK
+CapabilityBoundingSet=
+UMask=0077
+TasksMax=16
+MemoryMax=96M
+CPUQuota=20%
+
+[Install]
+WantedBy=multi-user.target

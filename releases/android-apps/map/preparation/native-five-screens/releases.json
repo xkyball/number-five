@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "packageName": "com.no5.preparation.harness",
+  "label": "UI simulation harness",
+  "releases": [
+    {
+      "id": "com.no5.preparation.harness:r1",
+      "sequence": 1,
+      "versionName": "0.1-isolated-simulation",
+      "versionCode": 1,
+      "sourceCommit": "f49eed2c076fc30735f582b3380a175c1fd3992e",
+      "evidence": [
+        "git:f49eed2c076fc30735f582b3380a175c1fd3992e:map/preparation/native-five-screens/harness/build.gradle.kts"
+      ],
+      "changes": [],
+      "historyCoverage": "Version/Quellstand belegt; keine rückwirkend erfundenen Release-Notizen."
+    },
+    {
+      "id": "com.no5.preparation.harness:r2",
+      "sequence": 2,
+      "versionName": "0.2-release-info",
+      "versionCode": 2,
+      "sourceCommit": "build-metadata",
+      "evidence": [
+        "release-info/README.md",
+        "release-info/src/main/java/com/no5/releaseinfo/ReleaseInfo.java"
+      ],
+      "changes": [
+        {
+          "id": "installed-release-info",
+          "text": "Version, Build und belegte Änderungen seit der vorherigen Installation sind über „Was ist neu“ abrufbar."
+        }
+      ]
+    },
+    {
+      "id": "com.no5.preparation.harness:r3",
+      "sequence": 3,
+      "versionCode": 3,
+      "versionName": "0.3-dock-gesture-contract",
+      "sourceCommit": "build-metadata",
+      "changes": [
+        {
+          "id": "preview-approved-dock-gesture-contract",
+          "text": "Die Vorschau öffnet das freigegebene Dock mit echter Eingabe und erhält Kamera, Entwürfe und Renderer beim Menüwechsel."
+        }
+      ],
+      "evidence": [
+        "git:83e495883b773d49822afde0c01fc0d609794242:map/docs/PREVIEW_HARNESS_CONTRACT.md"
+      ]
+    }
+  ]
+}

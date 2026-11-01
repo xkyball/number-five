@@ -1,0 +1,976 @@
+{
+  "OpenCPN": {
+    "repository": "https://github.com/OpenCPN/OpenCPN",
+    "commit": "452a60d963b876bddd2f8e5eefe1c814d6e4e39c",
+    "files": [
+      {
+        "upstream_path": "COPYING.gplv2",
+        "local_path": "chart-engine/opencpn/COPYING.gplv2",
+        "sha256": "ead06c5e9b243275923928f60659a759507ab7ce56abebdefbcf6fcd22dba96c",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "COPYING.gplv3",
+        "local_path": "chart-engine/opencpn/COPYING.gplv3",
+        "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "COPYING.lgplv2",
+        "local_path": "chart-engine/opencpn/COPYING.lgplv2",
+        "sha256": "aa88ce596d9abdc70b01e005933da10fcf0e9fc7bd8241c87d2f13389a9127bc",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "COPYING.lgplv3",
+        "local_path": "chart-engine/opencpn/COPYING.lgplv3",
+        "sha256": "e3a994d82e644b03a792a930f574002658412f62407f5fee083f2555c5f23118",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "LICENSING",
+        "local_path": "chart-engine/opencpn/LICENSING",
+        "sha256": "68116f1d7f2fe885bbdc82ea6e6d672f5588b9c6be0f1e3289878b5e54c2e578",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/copyright",
+        "local_path": "chart-engine/opencpn/data/copyright",
+        "sha256": "4932fe46e2686db8e8d36aa777828fb209ef6ee35b5ac28a2370849b8f41b1d9",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/Helvetica.txf",
+        "local_path": "chart-engine/opencpn/data/s57data/Helvetica.txf",
+        "sha256": "1c22a8277dd2ef1c0524978f4a3610fd56015107aa90cedd8990129625dde852",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/S52RAZDS.RLE",
+        "local_path": "chart-engine/opencpn/data/s57data/S52RAZDS.RLE",
+        "sha256": "79c122508612a00c4d8d133a415660ed896f86234175387967618351bed7086b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/attdecode.csv",
+        "local_path": "chart-engine/opencpn/data/s57data/attdecode.csv",
+        "sha256": "141f04b1a0a5c6f7ff4dde9e486a866d240c758c13ac05a8799bd481ebfa4252",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/chartsymbols.xml",
+        "local_path": "chart-engine/opencpn/data/s57data/chartsymbols.xml",
+        "sha256": "66d2dffad07499811fdbe10ae992c01a220fed7d0163654dd02f14d3f74007b7",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/rastersymbols-dark.png",
+        "local_path": "chart-engine/opencpn/data/s57data/rastersymbols-dark.png",
+        "sha256": "179cb516fd1a7795e8ab9ecbb8d4d5d88bf15cf42e5528c2f4e3ea2340320c33",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/rastersymbols-day.png",
+        "local_path": "chart-engine/opencpn/data/s57data/rastersymbols-day.png",
+        "sha256": "ee1020a8b94b312faba8c146974e49147d280e5ef3cc13f3cd688bbfd54dde0c",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/rastersymbols-dusk.png",
+        "local_path": "chart-engine/opencpn/data/s57data/rastersymbols-dusk.png",
+        "sha256": "56d6191b954978d0a85484b490228aab467610bfbf646c814af003428a766c2d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/s57attributes.csv",
+        "local_path": "chart-engine/opencpn/data/s57data/s57attributes.csv",
+        "sha256": "61c3fc9db5cfbc0aaefdcfb17474d64b56db7e7be6238974f6f1a11680a6b2c7",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/s57expectedinput.csv",
+        "local_path": "chart-engine/opencpn/data/s57data/s57expectedinput.csv",
+        "sha256": "deebeea969817da8aa9b3d57801ac530e28e3ed10692f407b8ed80f680fee409",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "data/s57data/s57objectclasses.csv",
+        "local_path": "chart-engine/opencpn/data/s57data/s57objectclasses.csv",
+        "sha256": "5e823ae9b78fa8f976b16231b96548215fb020fb3f83751748c7e767b9ea232a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/include/gui/o_senc.h",
+        "local_path": "chart-engine/opencpn/gui/include/gui/o_senc.h",
+        "sha256": "dbe50bb4a8531510ffba9f4fd03ca66c60ae4563e8b0683132821836ffd5fa45",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/include/gui/s57chart.h",
+        "local_path": "chart-engine/opencpn/gui/include/gui/s57chart.h",
+        "sha256": "53001754c143edcbf7934e633f58f6e0b505242bdbf2d24bbfd78c37e0f0cd9a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/src/chartdb.cpp",
+        "local_path": "chart-engine/opencpn/gui/src/chartdb.cpp",
+        "sha256": "7421aeba2fe56d9f7e756477f1e208ec8d43bef0503dcec00b187dc227944859",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/src/o_senc.cpp",
+        "local_path": "chart-engine/opencpn/gui/src/o_senc.cpp",
+        "sha256": "f00a29939fa39f9e09dfaa05111db00488a112a1ee192bd33f283d53a72bb045",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/src/s57chart.cpp",
+        "local_path": "chart-engine/opencpn/gui/src/s57chart.cpp",
+        "sha256": "7e7dbced11ac8d83ecff5456f5620b2c5f21ca366cab3da6c7f7a110bd4d0800",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "gui/src/s57obj.cpp",
+        "local_path": "chart-engine/opencpn/gui/src/s57obj.cpp",
+        "sha256": "88931f15db4fc879c9ee2b6afb5b15d2fcf5f21a01e659ae6dfbb809faf4157e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/gdal/CMakeLists.txt",
+        "sha256": "ca9b88bb8b1997f01490156d12a1e1119e8cdf927adde4d6d60a34ee8893d408",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_config.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_config.h",
+        "sha256": "204421964d06cedafc9be2d127515cb4ef0438d9cf8c6a4727ae79245a6ddcd2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_conv.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_conv.h",
+        "sha256": "1feb63199a2687d02716152700aaa55fd907bab01b6a9c288e630637359ccc61",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_csv.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_csv.h",
+        "sha256": "af91654db4f948cc5f239da6c7629e64941be84d9fb217bbec9cb734b29378a7",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_error.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_error.h",
+        "sha256": "f909fdffa83b9e5cb50eb33af59f9420fe7c747645269ba3679f9435cb51fc48",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_list.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_list.h",
+        "sha256": "3fbb274d3febe85b27d756786fa33c0d478541f15fb9d8868dee60998a6083b6",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_minixml.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_minixml.h",
+        "sha256": "3cf875987eca8e916754e84401c6a130247d734baab2c2aecdcf1c809900811a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_multiproc.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_multiproc.h",
+        "sha256": "018c369dbc49c6be8654a2dc7d7dad16c10b83397602be34bfd1ccd788f21d7e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_odbc.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_odbc.h",
+        "sha256": "cb1d23160ab8e9953a3ffacca353fccdd5340ab5accc203ca8ab76d4d2810cb2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_port.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_port.h",
+        "sha256": "d9a1190aac4cf07f06f928bb073ce6e7ed91c9e4921e87389d209d3673e3b606",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_string.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_string.h",
+        "sha256": "114d33eea7cdafc52cd3211c1cc0e60402902e396dcee700f4019ee633ec2c1f",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/cpl_vsi.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/cpl_vsi.h",
+        "sha256": "a62ef8e893d5ba24b676f29e1a1aaff9ad46f1cb9d9af261a228bdedf447a7f2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/gdal.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/gdal.h",
+        "sha256": "8cc7c6cdfcdb93e508033e214d5e9aa28daf08ff435cef1712782b501bdfa6e8",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/gdal_frmts.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/gdal_frmts.h",
+        "sha256": "7c4095714f4490c58811d77890cfa55c55682b2c04cb8f0bb6aea1956b9d9e13",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/gdal_priv.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/gdal_priv.h",
+        "sha256": "0b147b32546085086f83bf8d1eee6bf89532cec03409de27c622143257f0cdb4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_api.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_api.h",
+        "sha256": "f93618fbc1b97043d37850e2b9928ee3acc60ffd14e70a95aae643f039ff8944",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_attrind.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_attrind.h",
+        "sha256": "9fd51f551dc28a742b12a2a5385a6132b394d9e8d385dec015ab79600a1c4fbe",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_core.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_core.h",
+        "sha256": "0eaca9c29b5b57978a056d86b243fc85dc43463c97c38a8ea66bc206735d2206",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_feature.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_feature.h",
+        "sha256": "6c982b2ffeb9684ffc96226427e46c56b7145c0ea6df20902bb088f5d20baf5a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_geometry.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_geometry.h",
+        "sha256": "48244c799d59a52fe2399adcc023f1ada3519dbeaebb0974b76e9b7cb1f54537",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_p.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_p.h",
+        "sha256": "4745f4e9062e19096f35daa907006ba9298368a3fb04b66e5d7a033747718984",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogr_spatialref.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogr_spatialref.h",
+        "sha256": "e3f657705f2a1e6af879940e6d7c7bef45b451428ce45139a0c38ef2f3973972",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/include/gdal/ogrsf_frmts.h",
+        "local_path": "chart-engine/opencpn/libs/gdal/include/gdal/ogrsf_frmts.h",
+        "sha256": "156b56a9a442e8a06da85f04ad9af00097c0c49ba4da3f502a20526ec2219c9f",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_conv.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_conv.cpp",
+        "sha256": "ac818811da3a46fed4dc5b989484e8a6c6919afe58e4aa50058cbd9b607894df",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_csv.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_csv.cpp",
+        "sha256": "594fd3c2f2224132563273c1a8210bcfa989f3ab8c0d4dd0b23285b5b2d4bbcd",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_error.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_error.cpp",
+        "sha256": "91a9f75f561deef0faef7795d50b599de995337c2ef69f13f22ac29563d873cb",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_findfile.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_findfile.cpp",
+        "sha256": "b974d9e244c6f44feadf83f4a20c37b4c25764c1235bf21862ee91bd98e1cbe6",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_minixml.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_minixml.cpp",
+        "sha256": "2a5da84fdc8f7126e5e96a7aa8b4509d151ee673a202dd83a9400368c0a7cdd9",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_path.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_path.cpp",
+        "sha256": "e7554274927b8ed337650056247a9ab72640ace79cdedb5951c9d0ca5aa1ad77",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_string.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_string.cpp",
+        "sha256": "88ff271855e6b10919095e7faff6de792b3a8554e4a88dfb06baea66a508f28a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cpl_vsisimple.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cpl_vsisimple.cpp",
+        "sha256": "e1b9e1233774b18a554b6e10765c758f835ff61740e69c7fbe7e2d54f82af86e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/cplgetsymbol.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/cplgetsymbol.cpp",
+        "sha256": "baecb64a9fbda1e506bcc864dd58ad8ba7ddd8de782dab9246da3d3ea68b649a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/gdal_misc.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/gdal_misc.cpp",
+        "sha256": "c83313f867c2afebfd23aae097e94b5c5f5881165ca763ceeaae7c55fb2efab1",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ograssemblepolygon.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ograssemblepolygon.cpp",
+        "sha256": "36609954c13659d7c2b979db6ddf932ede60ade12e349852a8d34a3e8484882b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrcurve.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrcurve.cpp",
+        "sha256": "f11d7a561483a1862b21679044f97b6145928f20ecc139cce06864aa04b4a033",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrfeature.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrfeature.cpp",
+        "sha256": "ac47b35bdb435eac9a7d59da98d18ace286db093ca0214aee73f84bc0230628c",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrfeaturedefn.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrfeaturedefn.cpp",
+        "sha256": "343856afd71f122d3fed0134854bea7188a5647515ce01a19a89c24ce0ec1135",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrfielddefn.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrfielddefn.cpp",
+        "sha256": "239b9140116f268590bf13e7ab54e686c676e9dfcd3caae022b718719cfb6e1f",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrgeometry.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrgeometry.cpp",
+        "sha256": "5142e7da95d44c6b04650aafe980bfa7917163af2e628dc208c291e51c61dc0d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrgeometrycollection.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrgeometrycollection.cpp",
+        "sha256": "bb990b2c41ad9f6c13237f7bbbe763ba06849626daebb283275bd650ce50705d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrgeometryfactory.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrgeometryfactory.cpp",
+        "sha256": "e586c33ed724ff4f87b5f5081d6d49872d5c9bb63c476e1e186525f05322fa5d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrlayer.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrlayer.cpp",
+        "sha256": "16c983d9fd4e8d4b824e6f97f61a2f1039ecc281b68be20a680ea74426978d8e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrlinearring.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrlinearring.cpp",
+        "sha256": "9e9154009423916ec2d0c2d8b163ca233f7045a0cbf689322224088b656eeee4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrlinestring.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrlinestring.cpp",
+        "sha256": "85976da1e08b39c2b7032c7e22673ce30c482a9b6f86d76f59ecc18268ebd9bc",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrmultilinestring.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrmultilinestring.cpp",
+        "sha256": "adbaf383843440857ef6f0082fbda6847629ae3e6a3e4d93ce3c60642c211ca4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrmultipoint.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrmultipoint.cpp",
+        "sha256": "fe2f1de97476da5bb2c8fe53a4fe2cc77ffe9b17ee7515b2b16bd64e0ca05de5",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrmultipolygon.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrmultipolygon.cpp",
+        "sha256": "d86cb77413fa30177e8d98057cd209cd65527813ee7ec9d7477b70f02dd8ea66",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrpoint.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrpoint.cpp",
+        "sha256": "876e19fe6f1edef5899e95c223c667ffc2f4c087f8ff0db316e85792d02bf2c0",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrpolygon.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrpolygon.cpp",
+        "sha256": "84076fd87f1aa896086d996c59198ceb231280296a02838c8af0b4eff649a94b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/gdal/src/ogrutils.cpp",
+        "local_path": "chart-engine/opencpn/libs/gdal/src/ogrutils.cpp",
+        "sha256": "a09a50b05c85951871556174de5654e594d7869bc7bbe5ababe9910960aaccb8",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/geoprim/CMakeLists.txt",
+        "sha256": "385f5b4295d6dcb23609292275acff8e46baa3d13f2b86d97f8f013e8356b952",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/LLRegion.cpp",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/LLRegion.cpp",
+        "sha256": "cc1ba203309185e810a4dfd904f4a09f6e7d8cf02f605b54b2f41be75ff5cfab",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/LLRegion.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/LLRegion.h",
+        "sha256": "ed87eb737b9812e5bd64994ffb989e8e266f429a40d3c837daa6fc065c982dab",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/LOD_reduce.cpp",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/LOD_reduce.cpp",
+        "sha256": "1509d483ca75aea8443821ea8b218abd4cfd17d2f8fd3ef7337ca167662178c2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/LOD_reduce.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/LOD_reduce.h",
+        "sha256": "c7597603428fb703a0f7f7304e5769faf4e6667c9e50187a21c2de65612d5796",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/bbox.cpp",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/bbox.cpp",
+        "sha256": "dc77f03240026203f0b4d3fba606a8fb6171c37ba0943ad45a453cfd2f6f488e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/bbox.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/bbox.h",
+        "sha256": "0684431124aaec409e2fb6a89eb354daf544c535d7b65e2b20a38b20cfc774a0",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/line_clip.cpp",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/line_clip.cpp",
+        "sha256": "b33931dbe662ea01b4234217989aa2f5fd7dbeb4bc35da1a58cc84fc011336fd",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/line_clip.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/line_clip.h",
+        "sha256": "c5e1ba332652a5b4fc61e22766e0cd6e954f4d475b2460479ab0462d9a934fa1",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/linmath.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/linmath.h",
+        "sha256": "5dacc3f5e696a265f1761b490ae41e244b35f6ca626474766c3548aea7e8c533",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/poly_math.cpp",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/poly_math.cpp",
+        "sha256": "2a5c28557b0ef1a478c3212b015d4dc3d0e21ed5a5245b5c91a874b1ca2a99b5",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/poly_math.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/poly_math.h",
+        "sha256": "647b5418db7b9e4687198b7c86b651352a2e08d2a8d9e8a811bbc4e85538e90c",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/geoprim/src/vector2D.h",
+        "local_path": "chart-engine/opencpn/libs/geoprim/src/vector2D.h",
+        "sha256": "cabb99e3917b11df37ab6f89e65bb71de4f694d4895eaddd5bb948cbe146ee59",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/iso8211/CMakeLists.txt",
+        "sha256": "12d45514d00905a1d43a162a85b7b7436a7506ca18fbb282c1deff323825a597",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/include/iso8211.h",
+        "local_path": "chart-engine/opencpn/libs/iso8211/include/iso8211.h",
+        "sha256": "e2f9ca2890df8df7c3c82e8c4486015e6128ac6f81bf402e0197db7035abccb9",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/include/s57.h",
+        "local_path": "chart-engine/opencpn/libs/iso8211/include/s57.h",
+        "sha256": "67654cac7a96cf22d2ee524f2a3a99997491fabdcf4559a1e8a2511ff073d745",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddffield.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddffield.cpp",
+        "sha256": "fac76292efafcc6dc238cfe9b4e377a5462d0e8862753c5290f1a03b823c34c3",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddffielddefn.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddffielddefn.cpp",
+        "sha256": "31df512f0c1789ded483c42471e8d73c77c63b15c6328e57a92858f4f160625f",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddfmodule.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddfmodule.cpp",
+        "sha256": "31b01ee93e590c8561b6a0ba9b7adc558bf544820fd6677fea6141f835a9c1ba",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddfrecord.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddfrecord.cpp",
+        "sha256": "07025fb3a3d870e93908493080b2e411dca2d926ff5ded0260d7f4b1789cc3cc",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddfrecordindex.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddfrecordindex.cpp",
+        "sha256": "fdb1292de42d12a75591a311b001175c513f82b9634de40a6aef9ee97f91253d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddfsubfielddefn.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddfsubfielddefn.cpp",
+        "sha256": "519ffe9dbd52e2fcff73f58e002ce244accce841ca6c18bd248ab5f637bd6587",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/iso8211/src/ddfutils.cpp",
+        "local_path": "chart-engine/opencpn/libs/iso8211/src/ddfutils.cpp",
+        "sha256": "bc2ad298a393a536a7ead6162882265fe058e82ea151bc363d7b9d4088897ca6",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/libtess2/CMakeLists.txt",
+        "sha256": "448d5057bdc9dfa47b82dd20a69bcb77764c9fb214a24037b7fc81bebb940685",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/Adjacency.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/Adjacency.h",
+        "sha256": "84c0811592188ab9ff6721589708e32763406c1912d812b64d8941044eeb86ed",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/CustomArray.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/CustomArray.h",
+        "sha256": "20a903650c28038a34f4aaff5b2530a7ad17fee2f886032a850b4a37d2b245c0",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/RevisitedRadix.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/RevisitedRadix.h",
+        "sha256": "5d72b67f8013167134e492c8b31531e3dbb9953d9ac8fff97fbd50d57d346357",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/StripStdafx.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/StripStdafx.h",
+        "sha256": "d09a91ac4cb7a1c1eb43153c696690dfb69aaca1b8c13efde35a196b5093db79",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/Striper.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/Striper.h",
+        "sha256": "64a22f15094be82071e53ffe24918c3c00737658aab7bb5d86b4ac753ea8ba77",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Include/tesselator.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Include/tesselator.h",
+        "sha256": "d3633d1da8eebf719ae5fffe9c09b6a15074defd0017fe7a81f886e495b3d178",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/LICENSE.txt",
+        "local_path": "chart-engine/opencpn/libs/libtess2/LICENSE.txt",
+        "sha256": "a098305be22eed9e5cbe4de058160700f943214b9b844c6d1dbc8fd5bcbc4231",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/Adjacency.cpp",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/Adjacency.cpp",
+        "sha256": "a54a1ea8d854a1cbb974ccb1bfada5d07f8c7de3e17fce04ba871f3d10d82450",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/CustomArray.cpp",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/CustomArray.cpp",
+        "sha256": "6d8b97d5927e6bee3809c66746b4a2ea3e0b3296d4360bef6e037b968081b582",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/RevisitedRadix.cpp",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/RevisitedRadix.cpp",
+        "sha256": "b916c897527f6b7de044f9075ebc99f938d0ed802928a6afc2b06dbe1dd41c96",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/Striper.cpp",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/Striper.cpp",
+        "sha256": "34bf49e7eb53d9e173f711905b71a35f5b83e8d52dbf778bc006e80c91bfe976",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/bucketalloc.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/bucketalloc.c",
+        "sha256": "e8c92af4bff4abff537b8e46bf52be28bd79e08a58d734ccec86ff29c3ae5e92",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/bucketalloc.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/bucketalloc.h",
+        "sha256": "0bec3a945129a1372004cd98c17fe6523f8729f8289af0a58903f328b49f49f2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/dict.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/dict.c",
+        "sha256": "6db2b72e3071045c4c6cef284d9954b37593904ca2348f59ff5902f99d973568",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/dict.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/dict.h",
+        "sha256": "7167ec4557d6310599d72afdfd45ed5133d9e0ce9e8823ecd284d17668b03f85",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/geom.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/geom.c",
+        "sha256": "b916f09302f62b798b3e77eee1a00602c2ad44074298747faff3525ac86e0cbb",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/geom.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/geom.h",
+        "sha256": "4e48be80a29fd504d8516a0288b4430326b584d0bc0794512db35fd00a2aa0ac",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/mesh.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/mesh.c",
+        "sha256": "106f671a43a592b73062281fc4c17b310b793a808fbdcfbe5bdd10d888b0a3ac",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/mesh.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/mesh.h",
+        "sha256": "3bda4d3bf1453370c9807ea4424c4e5bf7447818bd6a4b79fbaeaaae0ead07dd",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/priorityq.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/priorityq.c",
+        "sha256": "182f53215b6e4156121757078a73ce0f4115b63ee4338e61bd03c93ccd34cbd8",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/priorityq.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/priorityq.h",
+        "sha256": "8af761de2b6a6805fe52aa46f9fba7036af79bd17aa0e23155f79c427803988e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/sweep.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/sweep.c",
+        "sha256": "5360d8298410417f551823c2e5aa89be2679b2b83b863971157147e2cd8b1b09",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/sweep.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/sweep.h",
+        "sha256": "85d4bda1f87b4ced1387863737f09b1c90c8b4bde866870a96e63b7eea9214bf",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/tess.c",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/tess.c",
+        "sha256": "a16a29b6d66e42af607d9a2519a888716a73e66ae468ac88b5cdba5559c6b238",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/libtess2/Source/tess.h",
+        "local_path": "chart-engine/opencpn/libs/libtess2/Source/tess.h",
+        "sha256": "464bc5342185203b4927dd5c43ba68a189026b59af8a4ee4f94e5b4e75d00943",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/pugixml/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/pugixml/CMakeLists.txt",
+        "sha256": "186169f15e5836bba2ccabb1923bd339e91b1a27c883d7b5fcbdae43a43c8deb",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/pugixml/pugiconfig.hpp",
+        "local_path": "chart-engine/opencpn/libs/pugixml/pugiconfig.hpp",
+        "sha256": "797e895912fdc50e8265a99000aeebf20dd6901afdb9be8d0d9497ae14333e24",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/pugixml/pugixml.cpp",
+        "local_path": "chart-engine/opencpn/libs/pugixml/pugixml.cpp",
+        "sha256": "9a9e1cf3afee5d70da7d9aa9eb1bfaba9752467f0f5e2dd8fca18cc80aeb57f9",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/pugixml/pugixml.hpp",
+        "local_path": "chart-engine/opencpn/libs/pugixml/pugixml.hpp",
+        "sha256": "68ca7eac371875363257c85eea74e8e3d0a2d16e478d6685e140a9217bee36b4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/s52plib/CMakeLists.txt",
+        "sha256": "220353ec5e6e0ac8c86fb4d7e793cddecc07d6cf1ca26d8c5c76e545a8892a19",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/Cs52_shaders.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/Cs52_shaders.cpp",
+        "sha256": "e693b1dbbc40927c3a69a6cf3c16d295393ba378909d8fbae1216d79ab364a70",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/Cs52_shaders.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/Cs52_shaders.h",
+        "sha256": "738f294ed682e5bd8a379f125a80bf07c431f8ee780bc2c2024880286f1c34e3",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/DepthFont.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/DepthFont.cpp",
+        "sha256": "d5428f5265d1a82999b50ea6a05a054bf69230ddd2048bb2d9e0cee3a666da43",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/DepthFont.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/DepthFont.h",
+        "sha256": "c3fd65c8d5013d359230bde03173d0711e1652a079e3e5a4af0232a9bb949324",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/TexFont.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/TexFont.cpp",
+        "sha256": "9e8ec4c5b43b0499b5388e155f7de45f61a4f82edda156957552d7e488939ee5",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/TexFont.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/TexFont.h",
+        "sha256": "617f486076ede172c50b129a65df5765d2314594e6355f77920ba55567d338d5",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/chartsymbols.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/chartsymbols.cpp",
+        "sha256": "561d9fc303bca922a5b285184ba9e3b82f0ebac72e6c9f4bed99a6b7c51607fa",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/chartsymbols.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/chartsymbols.h",
+        "sha256": "75b1eb93beb0aaff3a2693c12dde6c597fa5cac5b04c1e2c06896fbb5fb8283e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/color_types.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/color_types.h",
+        "sha256": "bd43f32a3b498327f0c7c56dba3a9f7547451b9f3bb08693cc1ba966378e689c",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/mygeom.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/mygeom.cpp",
+        "sha256": "1594f55ee1c88752be8004ca0b43a254312cc1dda96d98e7ee74db8fdf4a7093",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/mygeom.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/mygeom.h",
+        "sha256": "cc713bce1cceb54f44e95007c173b49f48336e8771072429950991cdcc1fac6b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52_plib_utils.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52_plib_utils.cpp",
+        "sha256": "baee3344a78848fc589828ac0c8bab6c147937a60d18d3864ce72265b2fe2238",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52_plib_utils.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52_plib_utils.h",
+        "sha256": "87f531bb7acc8d8a487f5237a85cebb663d86578e320f3ec566b1b42f18d55b4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52cnsy.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52cnsy.cpp",
+        "sha256": "d094d9345fa76acf601ca2c1a48da7d65f06f3086b8f810e6d1ab9f8a5014ea4",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52plib.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52plib.cpp",
+        "sha256": "b376900cc16a5d2358feda178b9aa82c0853aa84fa61106b1590c49136f98970",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52plib.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52plib.h",
+        "sha256": "2a8fe104e646f52459d98c9aa1a0a014dde79421de6df96987650d7577436a40",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52plibGL.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52plibGL.h",
+        "sha256": "8f08fc6af340e1965b268f8f26c7ed7e7052e488a7cb5150016ebed99c74e98b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52s57.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52s57.h",
+        "sha256": "96d561915b867f5764c7d26b9577a52d121591665a1209a9feca106502cfccfc",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52shaders.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52shaders.cpp",
+        "sha256": "5fea9dbbcd3ea21318792114ea436336f52dc19947acd2bac2af1d626816bbaf",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52shaders.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52shaders.h",
+        "sha256": "72b23f6ad581612b4a7881c83747170f039405bec2766bf465ca89af37575f0b",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52utils.cpp",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52utils.cpp",
+        "sha256": "cee04cc331ff70d94a88ec3061e6714f7ec7b8226727bd14d87be3c2c3c30ba6",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s52plib/src/s52utils.h",
+        "local_path": "chart-engine/opencpn/libs/s52plib/src/s52utils.h",
+        "sha256": "4feeefb368bf1aafd1620c15fe54662b8d2f9651cecc4123648b18aecfd1f74d",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/CMakeLists.txt",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/CMakeLists.txt",
+        "sha256": "e788e20afff8b7420771cdc1df83e5c31e97dc005a026b59bc456c73bd88295a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/include/ogr_s57.h",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/include/ogr_s57.h",
+        "sha256": "dadea2dda33cb8fcb679780ae91a2bead8c9babb29000a910de7a74963732157",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/include/s57.h",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/include/s57.h",
+        "sha256": "08ebd831bfb2ad7d30671b146cb869d5fb190c4ba63791a35ef7281a1116ddbf",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/include/s57class_registrar.h",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/include/s57class_registrar.h",
+        "sha256": "4db09b4fe4f3b0a7891b2c3b18536bb3dee1ecbdf2683b450367f90db3edc4c2",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/include/s57registrar_mgr.h",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/include/s57registrar_mgr.h",
+        "sha256": "519cb77c0749462d2849ca102d02bbd6a09893dec4e0504e84db5dc890ba1e25",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/ogrs57datasource.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/ogrs57datasource.cpp",
+        "sha256": "0ee882c62022357fd071f648f048ff6290809bb3764eff6878ee8f5b1bf500ab",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/ogrs57layer.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/ogrs57layer.cpp",
+        "sha256": "2549401b31aa735e1991ee0972f2782cd3ba367af42d2a767428cfc944796e7a",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/s57classregistrar.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/s57classregistrar.cpp",
+        "sha256": "179e8f112285818632da17e6cc45e5bd2e77437323cf1f79517db84e7bfafe20",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/s57featuredefns.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/s57featuredefns.cpp",
+        "sha256": "bb886e6bcb9824f1f6c39a99bd4ab08649a343fd22290e36da7fda0012dec83e",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/s57reader.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/s57reader.cpp",
+        "sha256": "74e5a7c188847ae3c96764c950c0de9eadc97d1326185c322254970405996236",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "libs/s57-charts/src/s57registrar_mgr.cpp",
+        "local_path": "chart-engine/opencpn/libs/s57-charts/src/s57registrar_mgr.cpp",
+        "sha256": "cb3ac545c0fed3ec4ee34629ff58ead022c60a01d695c5d592a9a4c4548f3950",
+        "mode": "verbatim"
+      },
+      {
+        "upstream_path": "model/src/navutil_base.cpp",
+        "local_path": "chart-engine/opencpn/model/src/navutil_base.cpp",
+        "sha256": "d3f70c4e896eafca1a63393f945c2be08b89d1e69bf043dfa40584145f162e40",
+        "mode": "verbatim"
+      }
+    ],
+    "compiled_port_manifest": "chart-engine/no5/port/generated/PORT_MANIFEST.json",
+    "full_CPU_s52plib_source": true,
+    "original_S52_GLES_branch": true
+  },
+  "next_chunk_pins": {
+    "o-charts_pi": "6119b1af8aad1e0ab42188859a3f155d1dc41b4a",
+    "signalk-server": "f5e91aa74817ca14bbff6b4ae47f8c83f3fe0b36"
+  },
+  "production_ochartsng_dependency": false
+}

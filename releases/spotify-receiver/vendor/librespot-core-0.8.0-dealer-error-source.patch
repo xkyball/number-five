@@ -1,0 +1,11 @@
+--- a/src/dealer/manager.rs
++++ b/src/dealer/manager.rs
+@@ -27,7 +27,7 @@
+     #[error("Builder wasn't available")]
+     BuilderNotAvailable,
+     #[error("Websocket couldn't be started because: {0}")]
+-    LaunchFailure(Error),
++    LaunchFailure(#[source] Error),
+     #[error("Failed to set dealer")]
+     CouldNotSetDealer,
+ }

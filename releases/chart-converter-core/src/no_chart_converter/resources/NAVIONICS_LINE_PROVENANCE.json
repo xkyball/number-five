@@ -1,0 +1,44 @@
+{
+  "OEMRuntimeOrPurchasedPayloadsBundled": false,
+  "bankPrologWorldScaleRequirementClaim": false,
+  "currentLineSource": {
+    "bytes": 6062,
+    "sha256": "898adccb02a62cb847eaa3b57ff033cf381d729cb3de3e03c597f26e47e48cd1"
+  },
+  "format": "no5-own-line-writer-provenance/1",
+  "geographicCRSOrDatumClaim": false,
+  "multiFeatureCollectionOrStreamingSupportClaim": false,
+  "originalNativeExecutedByWriter": false,
+  "rendererOrFullNavionicsProductClaim": false,
+  "scope": "ONE_FIXED_LINE32_CLASS29_RAW_U16_NO_SCALE_NO_ATTRIBUTES",
+  "sourceOrigins": {
+    "independentActualQA": {
+      "bytes": 10314,
+      "sha256": "189da40dce4efc2a3ea5e9b91521126164d7c22a064449e47647587e2a813a7e"
+    },
+    "independentActualReadback": {
+      "bytes": 2736,
+      "sha256": "ece1c16e04fce1732fc4f3fee59fa583dfaade7012c6e46e8901c36ce0ca40d6"
+    },
+    "lineActual": {
+      "bytes": 81641,
+      "sha256": "1dfe67afbcd55aeb4c8566cbf29b015659b968ab5973173b8f1bce9df5b614b3"
+    },
+    "lineWireContract": {
+      "bytes": 67797,
+      "sha256": "48bcb3263b29bfc91aa5e213edfb279805dfd12c0ed65e5f1e53205960f27740"
+    },
+    "nativeActualAddendum": {
+      "bytes": 3532,
+      "sha256": "075ec6f2234fec8452b5ab91f451136b6c9ebe48d7c53ea9fdd99fe7a7957b76"
+    },
+    "ownLineAcceptedInput": {
+      "bytes": 197,
+      "sha256": "2c87a6a11d703bc0a5b5f83aae010acfd04e4e21fe243c7ebf6e37e4208916fb"
+    },
+    "ownLineSource": {
+      "bytes": 4292,
+      "sha256": "c04d3d305c4c586abcce5db26969a42792fd5ff4fc9989385d629e01187f1f42"
+    }
+  }
+}

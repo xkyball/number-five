@@ -1,0 +1,16 @@
+{
+  "org.hdrhistogram:HdrHistogram:2.2.2": {
+    "HdrHistogram-2.2.2.jar": "22d1d4316c4ec13a68b559e98c8256d69071593731da96136640f864fa14fad8",
+    "HdrHistogram-2.2.2.pom": "2623346537f706f22059b9117209cb0681b0241145b35c75d2c5e3ec41826766"
+  },
+  "androidx.benchmark:benchmark-macro:1.3.4": {
+    "benchmark-macro-1.3.4.aar": "cdf4522a14709431800958113522412fc350681349c07106c3e86f0fe0085db1",
+    "benchmark-macro-1.3.4.pom": "184c341914666ccfc0e7c65d8ec16d62c87e431c9e70634a576a60caef7235d3",
+    "benchmark-macro-1.3.4.module": "4772ffe23134c28560e19e4786c009cb3eec73434ba2e0a8aa15f1a3898acbb5"
+  },
+  "androidx.benchmark:benchmark-macro-junit4:1.3.4": {
+    "benchmark-macro-junit4-1.3.4.module": "5583a599aaf8dfced2320a0992f826fd7be93b58d96a1ef595fdf526a30cfad3",
+    "benchmark-macro-junit4-1.3.4.aar": "3546da1ee8d48e6d5dfd58202ac7f8b11ac68656b3c610cd5c616331dca684e2",
+    "benchmark-macro-junit4-1.3.4.pom": "2da4e1e61a6975315ce5a97c048ae7d13b718ce56a0121c2f4afbfcb8d3f5130"
+  }
+}

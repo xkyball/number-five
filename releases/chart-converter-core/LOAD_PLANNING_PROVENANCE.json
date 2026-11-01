@@ -1,0 +1,40 @@
+{
+  "contract": {
+    "budget": "Header-inclusive fresh geometry package bytes; report overrun, never drop requests",
+    "metadataIndex": "Public RX5 Reader block headers only; no feature/coordinate payload decoding",
+    "metrics": "Separate repeated request cost, distinct source packages and exact shared physical range union",
+    "noClaims": [
+      "Actual native IO or cache hits",
+      "Hardware timing",
+      "Complete cold-frame IO including metadata/resources",
+      "Native source coverage or scale derived from node address"
+    ],
+    "selection": "Supplied sources/None/empty replacements remain authoritative; no source selector",
+    "sourceAuthentication": "Explicit whole-file SHA256 on held reader FD with size/UUID/stat4/ctimeNs"
+  },
+  "files": [
+    {
+      "bytes": 11813,
+      "path": "src/no_chart_converter/rx5/load_planning.py",
+      "sha256": "bf9cf5fbdd4b038b4824ef0c28e351574838f87b726be7245ded174991254dfb",
+      "source": "work/AP12/product-completion-20261016/load-planning-portable-v25/patch/src/no_chart_converter/rx5/load_planning.py"
+    },
+    {
+      "bytes": 11096,
+      "path": "tests/test_load_planning.py",
+      "sha256": "09591001c5e2a26c5b62016fcd04ab6618a6f0150cbab42f5e8667275218f457",
+      "source": "work/AP12/product-completion-20261016/load-planning-portable-v25/patch/tests/test_load_planning.py"
+    }
+  ],
+  "format": "no5-load-planning-source-provenance/1",
+  "frozenCountry025BuildSource": "59f4a18b1c23af80224472a836b03bfbdf17d031",
+  "frozenCountryRuntimeModified": false,
+  "independentApproval": {
+    "bytes": 5544,
+    "sha256": "272defb4072ab89edec8c00d86c9104870de761c2b34586fcc273da3aaa1faff",
+    "source": "work/AP11/product-completion-20261016/load-planning-portable-review-v25/SOURCE_TEST_APPROVAL.json",
+    "status": "PASS_SCOPED_SOURCE_AND_SYNTHETIC_TEST_INTEGRATION"
+  },
+  "origin": "OWN_READ_ONLY_PORTABLE_RX5_METADATA_LOAD_ACCOUNTING",
+  "privateChartFixturesIncluded": false
+}

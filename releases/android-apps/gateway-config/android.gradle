@@ -1,0 +1,45 @@
+// Independent builds consume the same small source contract; no root build or dependency.
+def contractDirectory = new File(buildscript.sourceFile.parentFile, 'src/main/kotlin').canonicalFile
+android.sourceSets.getByName('main').java.srcDir(contractDirectory)
+
+// One immutable controller wire definition, resolved into ignored build output only.
+abstract class PrepareNo5LuminaWire extends org.gradle.api.DefaultTask {
+    @org.gradle.api.tasks.InputFile abstract org.gradle.api.file.RegularFileProperty getPinFile()
+    @org.gradle.api.tasks.Optional @org.gradle.api.tasks.InputFile abstract org.gradle.api.file.RegularFileProperty getVerifiedSourceFile()
+    @org.gradle.api.tasks.Internal abstract org.gradle.api.file.DirectoryProperty getControllerRepository()
+    @org.gradle.api.tasks.OutputDirectory abstract org.gradle.api.file.DirectoryProperty getOutputDirectory()
+    @org.gradle.api.tasks.TaskAction void prepare() {
+        def pin = new groovy.json.JsonSlurper().parse(pinFile.get().asFile)
+        byte[] bytes
+        if (verifiedSourceFile.isPresent()) {
+            def source = verifiedSourceFile.get().asFile
+            if (source.length() > 65536) throw new org.gradle.api.GradleException('Pinned Lumina wire source exceeds its size limit')
+            bytes = source.bytes
+        } else {
+            def process = new ProcessBuilder('git', '-C', controllerRepository.get().asFile.absolutePath, 'show', "${pin.commit}:${pin.path}").start()
+            bytes = process.inputStream.readAllBytes()
+            if (process.waitFor() != 0) throw new org.gradle.api.GradleException('Pinned Lumina wire source is unavailable in the existing checkout; an existing hash-matching file may be supplied with -Pno5LuminaWireInput')
+        }
+        def digest = java.security.MessageDigest.getInstance('SHA-256').digest(bytes).encodeHex().toString()
+        if (digest != pin.sha256) throw new org.gradle.api.GradleException('Lumina wire source hash mismatch')
+        def destination = pin.destination ?: 'com/no5/lumina/control/KnobLeaseProtocol.java'
+        def file = new File(outputDirectory.get().asFile, destination)
+        file.parentFile.mkdirs(); file.bytes = bytes
+    }
+}
+def gatewayDirectory = buildscript.sourceFile.parentFile.canonicalFile
+def prepareLuminaWire = tasks.register('prepareLuminaWire', PrepareNo5LuminaWire) {
+    pinFile.set(new File(gatewayDirectory, 'lumina-wire.json'))
+    def wireInput = providers.gradleProperty('no5LuminaWireInput')
+    if (wireInput.isPresent()) verifiedSourceFile.set(new File(wireInput.get()))
+    controllerRepository.set(new File(gatewayDirectory.parentFile.parentFile, 'no-android/projects/lumina-control'))
+    outputDirectory.set(layout.buildDirectory.dir('generated/no5-lumina-wire'))
+}
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    variant.sources.java.addGeneratedSourceDirectory(prepareLuminaWire) { task -> task.outputDirectory }
+}
+
+// Application contracts are generated separately from shared client sources.
+if (plugins.hasPlugin('com.android.application')) {
+    apply from: new File(gatewayDirectory, 'capability.gradle')
+}

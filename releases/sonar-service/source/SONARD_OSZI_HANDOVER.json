@@ -1,0 +1,28 @@
+{
+  "six_modified_files": [
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/__main__.py",
+      "current_sha256": "69a9df96b7f427f49e84f9c1598b66fea5a64c50561b3570e1d8f96a3e080370"
+    },
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/config.py",
+      "current_sha256": "281f1e311aa1785e7eb59d902ea435fe6bea2b2db1afd38b43426d5d096ccdae"
+    },
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/service.py",
+      "current_sha256": "f7625b2f1a467ddff5b07e8db9ab295c18c58844e0c8e59c41c7a4cca342bcd5"
+    },
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/static/app.js",
+      "current_sha256": "2174baac0debb805660e5991a7e3a323ab95aeef062128ee73518d81dfce06d8"
+    },
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/static/index.html",
+      "current_sha256": "69eca7f63bf943042edc498a02e0178e3b866a2ac95c35835a274d2018d4a898"
+    },
+    {
+      "original_git_path": "projects/no5-sonard/m1/src/no5_sonard/transport/serial_posix.py",
+      "current_sha256": "aaa93773fc466ad597cdbd4ce87c8d25140d202528fa0bd951df83acdad56eee"
+    }
+  ]
+}

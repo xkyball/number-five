@@ -1,0 +1,37 @@
+[Unit]
+Description=No5 controlled Spotify Connect receiver routed through CamillaDSP
+Documentation=https://github.com/librespot-org/librespot
+Requires=camilladsp.service
+After=network-online.target camilladsp.service
+Wants=network-online.target
+# Never advertise two No5 Spotify Connect devices with the same identity.
+Conflicts=no5-raspotify.service raspotify.service librespot.service
+
+[Service]
+Type=simple
+User=user
+# The gateway process runs as no5gateway and is the only group permitted to
+# use the Unix control socket. Audio and the established media state directory
+# remain available through supplementary groups.
+Group=no5gateway
+SupplementaryGroups=audio no5media
+# Keep the historical identity when no optional instance configuration exists.
+Environment=NO5_SPOTIFY_DEVICE_NAME=No5
+EnvironmentFile=-/etc/no5-spotify-connect/environment
+# Braced expansion preserves names containing spaces as exactly one argument.
+ExecStart=/opt/no5-spotify-connect/current/no5-spotify-connect --name "${NO5_SPOTIFY_DEVICE_NAME}" --alsa-device camilladsp --cache-dir /var/lib/no5-spotify-connect/cache --state-file /var/lib/no5-media/spotify-connect-state.json --control-socket /run/no5-spotify-connect/control.sock
+Restart=on-failure
+RestartSec=5
+UMask=0007
+RuntimeDirectory=no5-spotify-connect
+RuntimeDirectoryMode=0750
+StateDirectory=no5-spotify-connect
+StateDirectoryMode=0750
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/no5-media
+
+[Install]
+WantedBy=multi-user.target

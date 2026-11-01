@@ -1,0 +1,225 @@
+{
+  "date_text_1": "20261017",
+  "date_text_2": "20261017",
+  "format": "no5-own-plain-typed-attribute-batch/1",
+  "header": {
+    "flags": 4660,
+    "raw_bounds": [
+      0,
+      0,
+      100,
+      100
+    ],
+    "raw_grid": [
+      4,
+      4
+    ],
+    "raw_levels": [
+      8,
+      20
+    ],
+    "trailing_value": 0
+  },
+  "layers": [
+    {
+      "features": [
+        {
+          "attributes": [
+            {
+              "enum_u8": 2,
+              "native_code_u16": 151,
+              "storage": "E"
+            }
+          ],
+          "class_code": 131,
+          "kind": 32,
+          "parts": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          ],
+          "source_id": "own:slcons-w2"
+        }
+      ],
+      "layer_id": 137,
+      "layer_range": [
+        0,
+        100000
+      ]
+    },
+    {
+      "features": [
+        {
+          "attributes": [
+            {
+              "enum_u8": 6,
+              "native_code_u16": 62,
+              "storage": "E"
+            },
+            {
+              "enum_u8": 4,
+              "native_code_u16": 151,
+              "storage": "E"
+            }
+          ],
+          "class_code": 131,
+          "kind": 32,
+          "parts": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          ],
+          "source_id": "own:slcons-c6-w4"
+        }
+      ],
+      "layer_id": 137,
+      "layer_range": [
+        0,
+        100000
+      ]
+    },
+    {
+      "features": [
+        {
+          "attributes": [
+            {
+              "enum_u8": 3,
+              "native_code_u16": 151,
+              "storage": "E"
+            }
+          ],
+          "class_code": 131,
+          "kind": 32,
+          "parts": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          ],
+          "source_id": "own:slcons-w3"
+        }
+      ],
+      "layer_id": 137,
+      "layer_range": [
+        0,
+        100000
+      ]
+    },
+    {
+      "features": [
+        {
+          "attributes": [
+            {
+              "declared_native_units": 2,
+              "native_code_u16": 138,
+              "storage": "M",
+              "value_decimal": "5"
+            }
+          ],
+          "class_code": 42,
+          "kind": 32,
+          "parts": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          ],
+          "source_id": "own:depcnt-5"
+        }
+      ],
+      "layer_id": 37,
+      "layer_range": [
+        0,
+        100000
+      ]
+    },
+    {
+      "features": [
+        {
+          "attributes": [
+            {
+              "enum_u8": 4,
+              "native_code_u16": 62,
+              "storage": "E"
+            },
+            {
+              "enum_u8": 2,
+              "native_code_u16": 151,
+              "storage": "E"
+            }
+          ],
+          "class_code": 131,
+          "kind": 24,
+          "parts": [
+            [
+              [
+                0,
+                0
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          ],
+          "source_id": "own:slcons-area-c4-w2"
+        }
+      ],
+      "layer_id": 138,
+      "layer_range": [
+        0,
+        100000
+      ]
+    }
+  ]
+}

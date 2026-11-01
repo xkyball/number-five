@@ -1,0 +1,3411 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:no5:gateway:v1:telemetry",
+  "title": "No5 Gateway V1 HELM / weather / status contract",
+  "description": "Canonical contract for simulator and future Pi. REAL examples are conformance fixtures, not hardware observations. AUDIO has its companion schema.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/helm"
+    },
+    {
+      "$ref": "#/$defs/weather"
+    },
+    {
+      "$ref": "#/$defs/status"
+    }
+  ],
+  "$defs": {
+    "envelope": {
+      "type": "object",
+      "required": [
+        "version",
+        "kind",
+        "source",
+        "serverSessionId",
+        "sourceKind",
+        "simulated",
+        "timestampEpochMs"
+      ],
+      "properties": {
+        "version": {
+          "const": 1
+        },
+        "kind": {
+          "enum": [
+            "helm",
+            "weather",
+            "status"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+        },
+        "serverSessionId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+        },
+        "sourceKind": {
+          "enum": [
+            "REAL",
+            "SIMULATED"
+          ]
+        },
+        "simulated": {
+          "type": "boolean"
+        },
+        "timestampEpochMs": {
+          "type": "integer",
+          "minimum": 1
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "sourceKind": {
+                "const": "SIMULATED"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulated": {
+                "const": false
+              }
+            }
+          }
+        }
+      ]
+    },
+    "simulation": {
+      "type": "object",
+      "required": [
+        "elapsedSeconds",
+        "observedAtEpochMs",
+        "running",
+        "timeScale",
+        "phase",
+        "scenario"
+      ],
+      "properties": {
+        "elapsedSeconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 31536000000
+        },
+        "observedAtEpochMs": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "running": {
+          "type": "boolean"
+        },
+        "timeScale": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "phase": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+        },
+        "scenario": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+        },
+        "runId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+        }
+      },
+      "additionalProperties": true
+    },
+    "statusCode": {
+      "enum": [
+        "LIVE",
+        "STALE",
+        "LOST",
+        "INVALID",
+        "UNAVAILABLE"
+      ]
+    },
+    "helm": {
+      "type": "object",
+      "required": [
+        "kind",
+        "status",
+        "publishedAtEpochMs",
+        "running",
+        "vesselTime",
+        "units",
+        "capabilities",
+        "values",
+        "extras",
+        "fieldQuality"
+      ],
+      "properties": {
+        "kind": {
+          "const": "helm"
+        },
+        "status": {
+          "$ref": "#/$defs/statusCode"
+        },
+        "publishedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "running": {
+          "type": "boolean"
+        },
+        "vesselTime": {
+          "type": "string",
+          "pattern": "^(?:[01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$"
+        },
+        "units": {
+          "type": "object",
+          "required": [
+            "speed",
+            "heading",
+            "courseOverGroundDegrees",
+            "depth",
+            "waterTemp",
+            "rpm",
+            "trim",
+            "voltage",
+            "fuel",
+            "coolant",
+            "oil",
+            "fuelFlow",
+            "position",
+            "fuelRemainingLiters"
+          ],
+          "properties": {
+            "speed": {
+              "const": "kn"
+            },
+            "heading": {
+              "const": "deg_true"
+            },
+            "courseOverGroundDegrees": {
+              "const": "deg_true"
+            },
+            "depth": {
+              "const": "m"
+            },
+            "waterTemp": {
+              "const": "degC"
+            },
+            "rpm": {
+              "const": "rpm"
+            },
+            "trim": {
+              "const": "percent"
+            },
+            "voltage": {
+              "const": "V"
+            },
+            "fuel": {
+              "const": "percent"
+            },
+            "coolant": {
+              "const": "degC"
+            },
+            "oil": {
+              "const": "bar"
+            },
+            "fuelFlow": {
+              "const": "L/h"
+            },
+            "position": {
+              "const": "deg"
+            },
+            "fuelRemainingLiters": {
+              "const": "L"
+            }
+          },
+          "additionalProperties": false
+        },
+        "capabilities": {
+          "type": "object",
+          "required": [
+            "telemetry",
+            "position",
+            "depth",
+            "waterTemperature",
+            "commands"
+          ],
+          "properties": {
+            "telemetry": {
+              "const": true
+            },
+            "position": {
+              "type": "boolean"
+            },
+            "depth": {
+              "type": "boolean"
+            },
+            "waterTemperature": {
+              "type": "boolean"
+            },
+            "commands": {
+              "const": false
+            }
+          },
+          "additionalProperties": true
+        },
+        "values": {
+          "type": "object",
+          "required": [
+            "portRpm",
+            "starboardRpm",
+            "portTrim",
+            "starboardTrim",
+            "portFuel",
+            "starboardFuel",
+            "heading",
+            "speed",
+            "depth",
+            "waterTemp",
+            "portVoltage",
+            "starboardVoltage",
+            "houseVoltage",
+            "portCoolantC",
+            "starboardCoolantC",
+            "portOilBar",
+            "starboardOilBar",
+            "portFuelFlowLph",
+            "starboardFuelFlowLph",
+            "totalFuelFlowLph",
+            "portGear",
+            "starboardGear",
+            "latitudeDegrees",
+            "longitudeDegrees",
+            "fuelRemainingLiters",
+            "courseOverGroundDegrees"
+          ],
+          "properties": {
+            "portRpm": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100000
+            },
+            "starboardRpm": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100000
+            },
+            "portTrim": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "starboardTrim": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "portFuel": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "starboardFuel": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "heading": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 359.999999999
+            },
+            "speed": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 200
+            },
+            "depth": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 12000
+            },
+            "waterTemp": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -5,
+              "maximum": 60
+            },
+            "portVoltage": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 60
+            },
+            "starboardVoltage": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 60
+            },
+            "houseVoltage": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 60
+            },
+            "portCoolantC": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -50,
+              "maximum": 200
+            },
+            "starboardCoolantC": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -50,
+              "maximum": 200
+            },
+            "portOilBar": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "starboardOilBar": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "portFuelFlowLph": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "starboardFuelFlowLph": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 10000
+            },
+            "totalFuelFlowLph": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 20000
+            },
+            "portGear": {
+              "enum": [
+                "F",
+                "N",
+                "R",
+                null
+              ]
+            },
+            "starboardGear": {
+              "enum": [
+                "F",
+                "N",
+                "R",
+                null
+              ]
+            },
+            "latitudeDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitudeDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -180,
+              "maximum": 180
+            },
+            "fuelRemainingLiters": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "courseOverGroundDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 359.999999999
+            }
+          },
+          "additionalProperties": true,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "extras": {
+          "type": "object",
+          "required": [
+            "tripDistanceNm",
+            "tripDurationSeconds",
+            "fuelUsedLiters",
+            "efficiencyNmPerLiter"
+          ],
+          "properties": {
+            "tripDistanceNm": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "tripDurationSeconds": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 31536000000
+            },
+            "fuelUsedLiters": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1000000
+            },
+            "efficiencyNmPerLiter": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1000000
+            }
+          },
+          "additionalProperties": true
+        },
+        "fieldQuality": {
+          "type": "object",
+          "required": [
+            "portRpm",
+            "starboardRpm",
+            "portTrim",
+            "starboardTrim",
+            "portFuel",
+            "starboardFuel",
+            "heading",
+            "speed",
+            "depth",
+            "waterTemp",
+            "portVoltage",
+            "starboardVoltage",
+            "houseVoltage",
+            "portCoolantC",
+            "starboardCoolantC",
+            "portOilBar",
+            "starboardOilBar",
+            "portFuelFlowLph",
+            "starboardFuelFlowLph",
+            "totalFuelFlowLph",
+            "latitudeDegrees",
+            "longitudeDegrees",
+            "fuelRemainingLiters",
+            "courseOverGroundDegrees",
+            "tripDistanceNm",
+            "tripDurationSeconds",
+            "fuelUsedLiters",
+            "efficiencyNmPerLiter"
+          ],
+          "properties": {
+            "portRpm": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardRpm": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portTrim": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardTrim": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portFuel": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardFuel": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "heading": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "speed": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "depth": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "waterTemp": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portVoltage": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardVoltage": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "houseVoltage": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portCoolantC": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardCoolantC": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portOilBar": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardOilBar": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "portFuelFlowLph": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "starboardFuelFlowLph": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "totalFuelFlowLph": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "latitudeDegrees": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "longitudeDegrees": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "fuelRemainingLiters": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "courseOverGroundDegrees": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "tripDistanceNm": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "tripDurationSeconds": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "fuelUsedLiters": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            },
+            "efficiencyNmPerLiter": {
+              "type": "object",
+              "required": [
+                "status",
+                "timestampEpochMs"
+              ],
+              "properties": {
+                "status": {
+                  "$ref": "#/$defs/statusCode"
+                },
+                "timestampEpochMs": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "minimum": 1
+                }
+              },
+              "additionalProperties": true
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "$ref": "#/$defs/envelope"
+        },
+        {
+          "if": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "simulation"
+            ],
+            "properties": {
+              "simulation": {
+                "$ref": "#/$defs/simulation"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulation": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portRpm": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portRpm": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portRpm": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portRpm": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardRpm": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardRpm": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardRpm": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardRpm": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portTrim": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portTrim": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portTrim": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portTrim": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardTrim": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardTrim": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardTrim": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardTrim": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portFuel": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portFuel": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portFuel": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portFuel": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardFuel": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardFuel": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardFuel": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardFuel": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "heading": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "heading": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "heading": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "heading": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "speed": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "speed": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "speed": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "speed": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "depth": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "depth": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "depth": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "depth": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "waterTemp": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "waterTemp": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "waterTemp": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "waterTemp": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portVoltage": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portVoltage": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portVoltage": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portVoltage": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardVoltage": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardVoltage": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardVoltage": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardVoltage": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "houseVoltage": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "houseVoltage": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "houseVoltage": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "houseVoltage": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portCoolantC": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portCoolantC": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portCoolantC": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portCoolantC": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardCoolantC": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardCoolantC": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardCoolantC": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardCoolantC": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portOilBar": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portOilBar": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portOilBar": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portOilBar": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardOilBar": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardOilBar": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardOilBar": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardOilBar": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "portFuelFlowLph": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portFuelFlowLph": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "portFuelFlowLph": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "portFuelFlowLph": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "starboardFuelFlowLph": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardFuelFlowLph": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "starboardFuelFlowLph": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "starboardFuelFlowLph": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "totalFuelFlowLph": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "totalFuelFlowLph": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "totalFuelFlowLph": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "totalFuelFlowLph": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "fuelRemainingLiters": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "fuelRemainingLiters": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "fuelRemainingLiters": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "fuelRemainingLiters": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "courseOverGroundDegrees": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "courseOverGroundDegrees": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "courseOverGroundDegrees": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "courseOverGroundDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "tripDistanceNm": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "tripDistanceNm": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "tripDistanceNm": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "tripDistanceNm": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "tripDurationSeconds": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "tripDurationSeconds": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "tripDurationSeconds": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "tripDurationSeconds": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "fuelUsedLiters": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "fuelUsedLiters": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "fuelUsedLiters": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "fuelUsedLiters": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "fieldQuality": {
+                "properties": {
+                  "efficiencyNmPerLiter": {
+                    "properties": {
+                      "status": {
+                        "enum": [
+                          "LIVE",
+                          "STALE"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "efficiencyNmPerLiter": {
+                    "type": "number"
+                  }
+                }
+              },
+              "fieldQuality": {
+                "properties": {
+                  "efficiencyNmPerLiter": {
+                    "properties": {
+                      "timestampEpochMs": {
+                        "type": "integer",
+                        "minimum": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "extras": {
+                "properties": {
+                  "efficiencyNmPerLiter": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "position": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "null"
+                  },
+                  "longitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "depth": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "depth": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "waterTemperature": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "waterTemp": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "weather": {
+      "type": "object",
+      "required": [
+        "kind",
+        "status",
+        "units",
+        "provider",
+        "delivery",
+        "capabilities",
+        "observedAtEpochMs",
+        "values"
+      ],
+      "properties": {
+        "kind": {
+          "const": "weather"
+        },
+        "status": {
+          "$ref": "#/$defs/statusCode"
+        },
+        "units": {
+          "type": "object",
+          "required": [
+            "airTemperatureC",
+            "windSpeedKn",
+            "windDirectionDegrees",
+            "relativeHumidityPercent",
+            "pressureHpa",
+            "latitudeDegrees",
+            "longitudeDegrees"
+          ],
+          "properties": {
+            "airTemperatureC": {
+              "const": "degC"
+            },
+            "windSpeedKn": {
+              "const": "kn"
+            },
+            "windDirectionDegrees": {
+              "const": "deg_true_from"
+            },
+            "relativeHumidityPercent": {
+              "const": "percent"
+            },
+            "pressureHpa": {
+              "const": "hPa"
+            },
+            "latitudeDegrees": {
+              "const": "deg"
+            },
+            "longitudeDegrees": {
+              "const": "deg"
+            },
+            "cloudCoverPercent": {
+              "const": "percent"
+            },
+            "visibilityMeters": {
+              "const": "m"
+            }
+          },
+          "additionalProperties": false
+        },
+        "provider": {
+          "type": "object",
+          "required": [
+            "id",
+            "label",
+            "kind"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+            },
+            "kind": {
+              "enum": [
+                "SIMULATED",
+                "FORECAST",
+                "ONBOARD",
+                "EXTERNAL"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "delivery": {
+          "type": "object",
+          "required": [
+            "gatewayId",
+            "transport"
+          ],
+          "properties": {
+            "gatewayId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200,
+              "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f]*\\S[^\\u0000-\\u001f\\u007f-\\u009f]*$"
+            },
+            "transport": {
+              "enum": [
+                "HTTP",
+                "HTTPS"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "capabilities": {
+          "type": "object",
+          "required": [
+            "airTemperature",
+            "wind",
+            "humidity",
+            "pressure",
+            "observedLocation"
+          ],
+          "properties": {
+            "airTemperature": {
+              "type": "boolean"
+            },
+            "wind": {
+              "type": "boolean"
+            },
+            "humidity": {
+              "type": "boolean"
+            },
+            "pressure": {
+              "type": "boolean"
+            },
+            "observedLocation": {
+              "type": "boolean"
+            },
+            "cloudCover": {
+              "type": "boolean"
+            },
+            "visibility": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": true
+        },
+        "observedAtEpochMs": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "values": {
+          "type": "object",
+          "required": [
+            "airTemperatureC",
+            "windSpeedKn",
+            "windDirectionDegrees",
+            "relativeHumidityPercent",
+            "pressureHpa",
+            "latitudeDegrees",
+            "longitudeDegrees"
+          ],
+          "properties": {
+            "airTemperatureC": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -80,
+              "maximum": 80
+            },
+            "windSpeedKn": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 250
+            },
+            "windDirectionDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 359.999999999
+            },
+            "relativeHumidityPercent": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "pressureHpa": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 800,
+              "maximum": 1200
+            },
+            "latitudeDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitudeDegrees": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": -180,
+              "maximum": 180
+            },
+            "cloudCoverPercent": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 100
+            },
+            "visibilityMeters": {
+              "type": [
+                "number",
+                "null"
+              ],
+              "minimum": 0,
+              "maximum": 1000000
+            }
+          },
+          "additionalProperties": true,
+          "allOf": [
+            {
+              "if": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              },
+              "then": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              },
+              "else": {
+                "properties": {
+                  "longitudeDegrees": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "scene": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "version",
+            "mode",
+            "utcEpochMs",
+            "revision",
+            "clockMode",
+            "latitudeDegrees",
+            "longitudeDegrees"
+          ],
+          "properties": {
+            "version": {
+              "const": 1
+            },
+            "mode": {
+              "const": "SIMULATED"
+            },
+            "clockMode": {
+              "const": "FIXED"
+            },
+            "utcEpochMs": {
+              "type": "integer",
+              "minimum": 946684800000,
+              "maximum": 4102444800000
+            },
+            "revision": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "latitudeDegrees": {
+              "type": "number",
+              "minimum": -90,
+              "maximum": 90
+            },
+            "longitudeDegrees": {
+              "type": "number",
+              "minimum": -180,
+              "maximum": 180
+            }
+          }
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "$ref": "#/$defs/envelope"
+        },
+        {
+          "if": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "simulation"
+            ],
+            "properties": {
+              "simulation": {
+                "$ref": "#/$defs/simulation"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulation": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "provider": {
+                "properties": {
+                  "kind": {
+                    "const": "SIMULATED"
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "provider": {
+                "properties": {
+                  "kind": {
+                    "enum": [
+                      "FORECAST",
+                      "ONBOARD",
+                      "EXTERNAL"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "airTemperature": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "airTemperatureC": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "wind": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "windSpeedKn": {
+                    "type": "null"
+                  },
+                  "windDirectionDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "humidity": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "relativeHumidityPercent": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "pressure": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "pressureHpa": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "capabilities": {
+                "properties": {
+                  "observedLocation": {
+                    "const": false
+                  }
+                }
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "values": {
+                "properties": {
+                  "latitudeDegrees": {
+                    "type": "null"
+                  },
+                  "longitudeDegrees": {
+                    "type": "null"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "scene"
+            ]
+          },
+          "then": {
+            "properties": {
+              "simulated": {
+                "const": true
+              },
+              "sourceKind": {
+                "const": "SIMULATED"
+              },
+              "provider": {
+                "properties": {
+                  "kind": {
+                    "const": "SIMULATED"
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "status": {
+      "type": "object",
+      "required": [
+        "kind",
+        "availableEndpoints",
+        "capabilities"
+      ],
+      "properties": {
+        "kind": {
+          "const": "status"
+        },
+        "availableEndpoints": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^/v1/[A-Za-z0-9/_-]+$"
+          }
+        },
+        "capabilities": {
+          "type": "object",
+          "required": [
+            "helm",
+            "weather",
+            "audio",
+            "sonar",
+            "hardwareWrites"
+          ],
+          "properties": {
+            "helm": {
+              "type": "boolean"
+            },
+            "weather": {
+              "type": "boolean"
+            },
+            "audio": {
+              "type": "boolean"
+            },
+            "sonar": {
+              "type": "boolean"
+            },
+            "hardwareWrites": {
+              "type": "boolean"
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true,
+      "allOf": [
+        {
+          "$ref": "#/$defs/envelope"
+        },
+        {
+          "if": {
+            "properties": {
+              "simulated": {
+                "const": true
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "simulation"
+            ],
+            "properties": {
+              "simulation": {
+                "$ref": "#/$defs/simulation"
+              }
+            }
+          },
+          "else": {
+            "properties": {
+              "simulation": {
+                "type": "null"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

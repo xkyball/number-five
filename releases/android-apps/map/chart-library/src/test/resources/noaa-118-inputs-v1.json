@@ -1,0 +1,2963 @@
+{
+  "accessUtc": "2026-10-10T20:08:15.109073+00:00",
+  "catalog": "../NOAA_CATALOG_RECEIPT.json",
+  "selectionBounds": [
+    41.8,
+    43.0,
+    -71.9,
+    -69.8
+  ],
+  "expectedCells": 120,
+  "actualCells": 118,
+  "errors": [
+    {
+      "cell": "US4MA1ID",
+      "error": "Live archive differs from pinned catalog size"
+    },
+    {
+      "cell": "US5MA1TK",
+      "error": "Live archive differs from pinned catalog size"
+    }
+  ],
+  "cells": [
+    {
+      "name": "US2ATLPD",
+      "catalogScale": 700000,
+      "url": "https://www.charts.noaa.gov/ENCs/US2ATLPD.zip",
+      "catalogDate": "2026-10-09T04:53:57Z",
+      "edition": 1,
+      "update": 5,
+      "archiveBytes": 640742,
+      "archiveSha256": "5cf95beb90856e945bfba44b99513db1bfc20d553a0f80a88f2987d96c794d87",
+      "sourceKey": "80af4260c1af02fe7461d91481e6000935e350258204938c66cfe644ae299f36",
+      "files": [
+        {
+          "name": "US2ATLPD.000",
+          "bytes": 1260552,
+          "sha256": "fa0c38459a287fc900e365f256c2345cc31fe77d64de78716e60f638fc74bb40"
+        },
+        {
+          "name": "US2ATLPD.001",
+          "bytes": 3960,
+          "sha256": "c3a399799f43792af72cd648b7f21a4b26a855e3960e56a7b3481d8129a73933"
+        },
+        {
+          "name": "US2ATLPD.002",
+          "bytes": 2288,
+          "sha256": "4e9cb48fe4032b7f24754c3919ad896ba2811f0a0d44f2c1637d1fad5598c024"
+        },
+        {
+          "name": "US2ATLPD.003",
+          "bytes": 2267,
+          "sha256": "09b3a6f4f90ebdd8bc5e337fe766d6d6b1b3817b7a8e87a159a3ce992890acaa"
+        },
+        {
+          "name": "US2ATLPD.004",
+          "bytes": 2548,
+          "sha256": "537b3c4f251d1a3b315af0fcc53ec3115c18b3de299f0830dfa4716aa70ab58c"
+        },
+        {
+          "name": "US2ATLPD.005",
+          "bytes": 2668,
+          "sha256": "150f56a256fc41279ce238519e1096c9cebe6fb7125cc130153d14d65d9ae676"
+        }
+      ]
+    },
+    {
+      "name": "US3MA1BC",
+      "catalogScale": 350000,
+      "url": "https://www.charts.noaa.gov/ENCs/US3MA1BC.zip",
+      "catalogDate": "2026-10-09T04:52:51Z",
+      "edition": 1,
+      "update": 2,
+      "archiveBytes": 228328,
+      "archiveSha256": "07ca763fc975beb0a7e9e39d2b8f632db2290bc735a269ac13740dca67a99d5c",
+      "sourceKey": "9fb06be402779aefa1d135b092d1dd092f19554fb43eb0932754b85f60bd4672",
+      "files": [
+        {
+          "name": "US3MA1BC.000",
+          "bytes": 461948,
+          "sha256": "0ee0a503adb634e86338d287d48eea172de7f781646ec623952fea54a19cb057"
+        },
+        {
+          "name": "US3MA1BC.001",
+          "bytes": 4477,
+          "sha256": "19b187592196b56c6e7cc59029bb8ac60e3c505f77aa6dac042ac8e028f5f762"
+        },
+        {
+          "name": "US3MA1BC.002",
+          "bytes": 7764,
+          "sha256": "f9f29478142010c8df7f7dcc86040363432407c4911667dc178b06aada021691"
+        }
+      ]
+    },
+    {
+      "name": "US3MA1CB",
+      "catalogScale": 350000,
+      "url": "https://www.charts.noaa.gov/ENCs/US3MA1CB.zip",
+      "catalogDate": "2026-10-09T04:52:50Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 85290,
+      "archiveSha256": "37adae1a8a71b5baf128a210178ffb6558ab3214cdbb1c5e7e8e15fa4ac309eb",
+      "sourceKey": "f2c82953b8c44c841884a538caf482ffcaee1f50b20970d360af4aed33e96a1b",
+      "files": [
+        {
+          "name": "US3MA1CB.000",
+          "bytes": 193726,
+          "sha256": "145c6ae60e99908dc63542d7cf90a46baf0993975f7f4f5970c63cc40965520f"
+        }
+      ]
+    },
+    {
+      "name": "US3MA1CC",
+      "catalogScale": 350000,
+      "url": "https://www.charts.noaa.gov/ENCs/US3MA1CC.zip",
+      "catalogDate": "2026-10-09T04:52:50Z",
+      "edition": 2,
+      "update": 1,
+      "archiveBytes": 298218,
+      "archiveSha256": "1e1e8f28d37a2a40ebdc224d446cf73cd37def5f4464e263b4189f1845d0d9b1",
+      "sourceKey": "3b27bd1bcd89f4a272cfabaf0a7333c991faf7da99e5d5c00b48de9376feb415",
+      "files": [
+        {
+          "name": "US3MA1CC.000",
+          "bytes": 645998,
+          "sha256": "73c272677712b7894c1711d6257dd037a66b8539b3bfdd17e2abd93022442d6d"
+        },
+        {
+          "name": "US3MA1CC.001",
+          "bytes": 4169,
+          "sha256": "731a3e7ad52a150906cce800a54a3f95d748fdb1393122a5ca7ae13c675a1f14"
+        }
+      ]
+    },
+    {
+      "name": "US3RI1AA",
+      "catalogScale": 350000,
+      "url": "https://www.charts.noaa.gov/ENCs/US3RI1AA.zip",
+      "catalogDate": "2026-10-09T04:52:40Z",
+      "edition": 1,
+      "update": 4,
+      "archiveBytes": 231777,
+      "archiveSha256": "b2298f4ae85caa14ac8e2785467813f60387f2d376d73d2da7f879387103be8a",
+      "sourceKey": "8206726d1bc17508d7f8e9bc878c3097fe4b466c32a4f319e8b4644e61e158bc",
+      "files": [
+        {
+          "name": "US3RI1AA.000",
+          "bytes": 510005,
+          "sha256": "674fac670943945597bd6488a1c5bc53eccef2446e0c136a476ad816c16017fd"
+        },
+        {
+          "name": "US3RI1AA.001",
+          "bytes": 14775,
+          "sha256": "2d797f7755f843b2955d7cde1e16f86385514485db57d5cbc4c7e53afa1c2454"
+        },
+        {
+          "name": "US3RI1AA.002",
+          "bytes": 4692,
+          "sha256": "ace2534ea16ed028245da18a6cc918c6891d30db0270fedb8e359a1906cd908a"
+        },
+        {
+          "name": "US3RI1AA.003",
+          "bytes": 2389,
+          "sha256": "34069daff590bc9d8b9a76545706f031e95c68a4279e72d7e860d709684c09fe"
+        },
+        {
+          "name": "US3RI1AA.004",
+          "bytes": 2426,
+          "sha256": "ffc865c1887896cbcbfc1ca772c478650eb52c44174a8a740ee0d1f69baf820b"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1FC",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1FC.zip",
+      "catalogDate": "2026-10-09T04:48:29Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 41944,
+      "archiveSha256": "dabfcf4e39a9c733f418085cfea45330f8f160f7c9494470abba3d90c3a8034c",
+      "sourceKey": "3610e7b1d27690724ba7ebe10f8aa1423c2b2c9152fa9d2b10d8ca30518be4ab",
+      "files": [
+        {
+          "name": "US4MA1FC.000",
+          "bytes": 89478,
+          "sha256": "81704e2fb0bdfbc6cdecdbd5ada9f487b8586ccf84b95cb3fff79f16c6f14e8d"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1FD",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1FD.zip",
+      "catalogDate": "2026-10-09T04:48:28Z",
+      "edition": 1,
+      "update": 3,
+      "archiveBytes": 178568,
+      "archiveSha256": "ce4797095107fca992d5d4e33578e7672db4b4d26ad25f91f02b3ab1d7cdc597",
+      "sourceKey": "90b3bbde02c9711457ce23802c3c3f2d8cbcf1b052bfbbadf90faf5233d92b5b",
+      "files": [
+        {
+          "name": "US4MA1FD.000",
+          "bytes": 454429,
+          "sha256": "6d0c24094439315694957cca4d44aa2dfc6000e30e97122c67a215b6b5d15e45"
+        },
+        {
+          "name": "US4MA1FD.001",
+          "bytes": 4834,
+          "sha256": "102720cf336d3ecec2336ac8dacbbcc5b3417aa68987b3f795eab44c3a56ae01"
+        },
+        {
+          "name": "US4MA1FD.002",
+          "bytes": 3833,
+          "sha256": "7fad86501a6376b66e1d5b7c1b5740af1238147c1f1d2da5d895645c9795f175"
+        },
+        {
+          "name": "US4MA1FD.003",
+          "bytes": 2473,
+          "sha256": "f9ba17809b9f06a03ce12c655836081b59c1e833bff5ba36232c7f0cd374f2aa"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1FE",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1FE.zip",
+      "catalogDate": "2026-10-09T04:48:28Z",
+      "edition": 1,
+      "update": 6,
+      "archiveBytes": 190885,
+      "archiveSha256": "58880b36ace7b3c47647d849fb7e9b0208d183af249027a03e81bde76e7f5289",
+      "sourceKey": "2a439bf479a131121b279643651c58d8af8a6ccb19f7da124cb669b7c8f0e72e",
+      "files": [
+        {
+          "name": "US4MA1FE.000",
+          "bytes": 354347,
+          "sha256": "f0bc6c83805e24e1fca967ad0169e65f17610a5eb172e0db335b94d8431342b4"
+        },
+        {
+          "name": "US4MA1FE.001",
+          "bytes": 3297,
+          "sha256": "95ba210056088b8db5508551b4215b530b15e8f901a7536331ab1188ceb81227"
+        },
+        {
+          "name": "US4MA1FE.002",
+          "bytes": 2957,
+          "sha256": "8f6df6eac939e2ac466d0f5991bf9812faffe19d0d01a3062899fac4aa38b34d"
+        },
+        {
+          "name": "US4MA1FE.003",
+          "bytes": 2389,
+          "sha256": "b9aac2831a0d9ed2d46108cadfbf56ea61b23eeb7c940bdd166cb444fe9a66aa"
+        },
+        {
+          "name": "US4MA1FE.004",
+          "bytes": 2233,
+          "sha256": "7445c667550abfedc36d401197d2271a7d934efac54d782db4571bd119004527"
+        },
+        {
+          "name": "US4MA1FE.005",
+          "bytes": 2470,
+          "sha256": "9544e92f3c9966a5028c77e7237451e50611bf40bf64bb895e4c463bae1d0a7f"
+        },
+        {
+          "name": "US4MA1FE.006",
+          "bytes": 2470,
+          "sha256": "559f95eae7f22490c688a4fb3234e616043295a1891b43ba121409ae7dd49069"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1FF",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1FF.zip",
+      "catalogDate": "2026-10-09T04:48:28Z",
+      "edition": 1,
+      "update": 4,
+      "archiveBytes": 200886,
+      "archiveSha256": "928b171442b12ef47de4e6ae3071ce427889e62fb248ee255a439fcd60a78e26",
+      "sourceKey": "cad8e1639477f2980387e3ca6b2bc17969fed3c602bc40673a0ffb81796719da",
+      "files": [
+        {
+          "name": "US4MA1FF.000",
+          "bytes": 484326,
+          "sha256": "0ff7d591e592c120ff51b7643bc021a9cdaedd4b2cd78b84b04ca4402c96bfd7"
+        },
+        {
+          "name": "US4MA1FF.001",
+          "bytes": 3408,
+          "sha256": "4c46f2d5043d337a3a1da2ebe370c4ac6ba755980965b1992e13f30f126a7f00"
+        },
+        {
+          "name": "US4MA1FF.002",
+          "bytes": 2228,
+          "sha256": "8285d6ab229c1035c1c9f438fce356ee415e3d45233c136186aaaad04020630d"
+        },
+        {
+          "name": "US4MA1FF.003",
+          "bytes": 2405,
+          "sha256": "13470721007a41b8a14bb13adcb925f7b6129043565249eb0cc40b6184f3e601"
+        },
+        {
+          "name": "US4MA1FF.004",
+          "bytes": 2505,
+          "sha256": "1d72a2100fcf0c75800635d2de2aae3c9cf903957608d53dd0043417fdc25f71"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1FG",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1FG.zip",
+      "catalogDate": "2026-10-09T04:48:28Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 31446,
+      "archiveSha256": "36e3f30ea3d7144d8b9ccf9be0aadb62648eefa538c9c5f0689ab578e813a6b8",
+      "sourceKey": "ba30edb52bd5780484f05462dc72e2e39c5e3d609dd836fbd047c1d0cbba2cab",
+      "files": [
+        {
+          "name": "US4MA1FG.000",
+          "bytes": 56502,
+          "sha256": "96d878d9f99a4946799ff4841e66588fb316c7a0f89449b8340757295d2aceef"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1GC",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1GC.zip",
+      "catalogDate": "2026-10-09T04:48:28Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 74521,
+      "archiveSha256": "1e411164cbd3d085e5141115831a09d946e7bee56e848b6c290b96eeae6ecffc",
+      "sourceKey": "e280a7d1cfe997da382e1d04b8573cdff68e23be44bc2bb8e0144ae75a36c895",
+      "files": [
+        {
+          "name": "US4MA1GC.000",
+          "bytes": 271074,
+          "sha256": "6aff24356676df00cebb153e4edaf20455833a1f9080fab94c3b8b7e5702d566"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1GD",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1GD.zip",
+      "catalogDate": "2026-10-09T04:48:27Z",
+      "edition": 1,
+      "update": 1,
+      "archiveBytes": 312188,
+      "archiveSha256": "7477072738b82e262a236a68beeda65ba006f74d7accd8c6cb6e29c61631c44b",
+      "sourceKey": "6cf4684a13734a47ff5ebe97cefa48fea4f4f4aa5b95c103ebcb83cd33ec9c7b",
+      "files": [
+        {
+          "name": "US4MA1GD.000",
+          "bytes": 732692,
+          "sha256": "2407342cbf46551f23613cad5695673bd7ec8fbb27aa14f38de41b7caad3d9f6"
+        },
+        {
+          "name": "US4MA1GD.001",
+          "bytes": 4899,
+          "sha256": "ae67e13686fb5cab754919b7b822de0c8b41739f917f5bc8727e0fe25fc633c9"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1GE",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1GE.zip",
+      "catalogDate": "2026-10-09T04:48:27Z",
+      "edition": 1,
+      "update": 1,
+      "archiveBytes": 48791,
+      "archiveSha256": "50d7bd513f1ac3b80109b37d9575b7b7ebc04c5e86dae20fa30820bcafe237f6",
+      "sourceKey": "331cd28ce2f556d8358e2046be8bcd41eaedf3329a9dcdc87d0e901611584236",
+      "files": [
+        {
+          "name": "US4MA1GE.000",
+          "bytes": 95414,
+          "sha256": "7b49ac8cbd1303297153f13c999753addc9fd70a6b046e087c48ae8fa4c149c9"
+        },
+        {
+          "name": "US4MA1GE.001",
+          "bytes": 5996,
+          "sha256": "c1cbd31d5ad8596531fe2ee5dc5930c25f262d3b02414143cfe992ccdcb45078"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1GF",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1GF.zip",
+      "catalogDate": "2026-10-09T04:48:27Z",
+      "edition": 1,
+      "update": 2,
+      "archiveBytes": 86834,
+      "archiveSha256": "7f1797212cdee8169385c65d36735185dd2ac7c13b0e0cdf4d65a1820a9d5f54",
+      "sourceKey": "f9f0840fe32f942f2805485209d082d21f9b738e951d7a342bd967b3b9076cf1",
+      "files": [
+        {
+          "name": "US4MA1GF.000",
+          "bytes": 199907,
+          "sha256": "1472896afc6c56929d6b806d6aaa2fd5746f99cab48060c3a4e5b9dd6e8f1a28"
+        },
+        {
+          "name": "US4MA1GF.001",
+          "bytes": 2585,
+          "sha256": "0691d86a499c2816eb48e1bef43d2e9ab33f5de1c1e4e6a607f4f3577e006cfc"
+        },
+        {
+          "name": "US4MA1GF.002",
+          "bytes": 6421,
+          "sha256": "d206a5d65e2100bf988f1576b906e4e90d2c04c85eadba6127cfaf50618e7150"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1GG",
+      "catalogScale": 90000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1GG.zip",
+      "catalogDate": "2026-10-09T04:48:27Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 28437,
+      "archiveSha256": "df07669ab839c2119d9e4568dab053e70fe701b6600783603adf4e837494a9fe",
+      "sourceKey": "c17ffe2c815dad2677ff81d95f40094e6a6f2fa116fc62b8a8739822bb4ba1f9",
+      "files": [
+        {
+          "name": "US4MA1GG.000",
+          "bytes": 54120,
+          "sha256": "88af0a7c83ec088d6466c55e3744ad8be89d05a6bfd299dde654a209e79be381"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1HC",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1HC.zip",
+      "catalogDate": "2026-10-09T04:48:27Z",
+      "edition": 1,
+      "update": 5,
+      "archiveBytes": 311358,
+      "archiveSha256": "c8857f07dcee32cb4d1a02f5ee5a00f6be1b0adea62c8c7b459357558c97f022",
+      "sourceKey": "9bffc0f5e9ec802ea9d00ecfa5d0090f6b2d1c012bc3fd0032008fbf113564d5",
+      "files": [
+        {
+          "name": "US4MA1HC.000",
+          "bytes": 1044936,
+          "sha256": "ed97480004be95d34d367a73452777a398db726b31bbff4d15ad5b8102bb5adb"
+        },
+        {
+          "name": "US4MA1HC.001",
+          "bytes": 3405,
+          "sha256": "891c37155cb07cfbe2c9af6bd73695f345e089ec77150ab9e92a1e461417c8b2"
+        },
+        {
+          "name": "US4MA1HC.002",
+          "bytes": 8095,
+          "sha256": "28c0c0a863fd081c21119518add9f9d0381d26d5845d7fc81c0bcf8fadacaea4"
+        },
+        {
+          "name": "US4MA1HC.003",
+          "bytes": 5621,
+          "sha256": "f1b16247b431660a41983376a1aafb698c147a3e8d87f3f136678fd164523942"
+        },
+        {
+          "name": "US4MA1HC.004",
+          "bytes": 3748,
+          "sha256": "cb8a321531b710bd44aa2656bece653758e4d15a3b6bd970645bd557ae4c02c8"
+        },
+        {
+          "name": "US4MA1HC.005",
+          "bytes": 2472,
+          "sha256": "24abfb9587207afb80407594a5502f010a18aaef22a6178a3a886258e9af9ab7"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1HD",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1HD.zip",
+      "catalogDate": "2026-10-09T04:48:26Z",
+      "edition": 1,
+      "update": 10,
+      "archiveBytes": 177273,
+      "archiveSha256": "d3ee4e28b9bd9b67a9e249ec3b42686130939584c016b36e78e006b00c089ad3",
+      "sourceKey": "e8a87ddcd7a61171e32c3c510b5915e3c47e50c25bdbb8ef01cf744ca39feca5",
+      "files": [
+        {
+          "name": "US4MA1HD.000",
+          "bytes": 450373,
+          "sha256": "984b6207c2b9ecc5e44f1e323075ed787cdd04274facdbc56517ace93405c737"
+        },
+        {
+          "name": "US4MA1HD.001",
+          "bytes": 10262,
+          "sha256": "6b768a5a70d86ebfa74cb4cfb3a1333f419c7827e0cc38bb10688c486118ee35"
+        },
+        {
+          "name": "US4MA1HD.002",
+          "bytes": 8633,
+          "sha256": "c84191d69461c7a7c4fa97034174344cb9786e07f03226d5cc55aaa013f2bbdd"
+        },
+        {
+          "name": "US4MA1HD.003",
+          "bytes": 2389,
+          "sha256": "780f588904bfee9b4d7e0b325c96bae06b8ae723f70f8c70427a309a4ad1843b"
+        },
+        {
+          "name": "US4MA1HD.004",
+          "bytes": 2184,
+          "sha256": "b405378d72c6d2d1399c51b36c92afe33e7602e1cc37085e32d9406041a745b7"
+        },
+        {
+          "name": "US4MA1HD.005",
+          "bytes": 3030,
+          "sha256": "0896d9109eb4347d93bfedab591d2c265ab2247aa1465d6080488f05d5be73d3"
+        },
+        {
+          "name": "US4MA1HD.006",
+          "bytes": 2684,
+          "sha256": "349ac41a3ae9c84aa6a8778a0651e0a9145e8806fa3305fc99bd0fd398168044"
+        },
+        {
+          "name": "US4MA1HD.007",
+          "bytes": 2733,
+          "sha256": "4a98637bcd93725606bbe2476a40c7eb741d4e1790ab929167ac600229db0bda"
+        },
+        {
+          "name": "US4MA1HD.008",
+          "bytes": 2505,
+          "sha256": "63dd1075926dba1be552f430b26a7372b790f5c55ddb0e0af001ab431f3deb44"
+        },
+        {
+          "name": "US4MA1HD.009",
+          "bytes": 2179,
+          "sha256": "409d4ebf90e42a8f8991fc0f53f38502436bae9007b8f97fb7ab97f839264ea2"
+        },
+        {
+          "name": "US4MA1HD.010",
+          "bytes": 2109,
+          "sha256": "154cc30559c665a2fe1d018b92c09dfcfce17833479e6a8c98cc364592ce0d28"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1HE",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1HE.zip",
+      "catalogDate": "2026-10-09T04:48:26Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 33638,
+      "archiveSha256": "87d34363d8c94868ffd2a03fad4f7c1d44b156f61557ba0a6515ea8008a9a305",
+      "sourceKey": "52a097feb9441d0491b529cf37d9e726444183e43a643b68c4426630eea6935b",
+      "files": [
+        {
+          "name": "US4MA1HE.000",
+          "bytes": 62149,
+          "sha256": "ef2dd4af46b104ebd13f554e1a936963e78596236cfa838977b2e94971eddd2e"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1HF",
+      "catalogScale": 90000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1HF.zip",
+      "catalogDate": "2026-10-09T04:48:26Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 34951,
+      "archiveSha256": "fd8fc875f9fba2ecf9a9658360be66032b80ffd60d0d9c7ac6045b56f1854543",
+      "sourceKey": "2bb8a468a93829a4f8e47cce29ac9488e1ed012eea670b8852cae6c4aa2f2f64",
+      "files": [
+        {
+          "name": "US4MA1HF.000",
+          "bytes": 71481,
+          "sha256": "e8ec44312138b5f0cf89642d2b1b7bdb60231b88f0addcf485b515cbd2012769"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1IC",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1IC.zip",
+      "catalogDate": "2026-10-09T04:48:26Z",
+      "edition": 1,
+      "update": 6,
+      "archiveBytes": 132267,
+      "archiveSha256": "d9d6d4171c01dda5ef403ce27e4cbe4d28971e0f940a4464d99b640d1da76db2",
+      "sourceKey": "b00e4faab22defd4c26ed403b67dde1febea1003bd097ed0a17baad99f3da788",
+      "files": [
+        {
+          "name": "US4MA1IC.000",
+          "bytes": 357944,
+          "sha256": "2d605c501946a5d70e36f802fe2d36d186016a1569284dd62b69f3392835ed9e"
+        },
+        {
+          "name": "US4MA1IC.001",
+          "bytes": 2272,
+          "sha256": "13b68d762e335833c1e977d505dcd7b765e234d5a04d413c6a28094386c736b9"
+        },
+        {
+          "name": "US4MA1IC.002",
+          "bytes": 3764,
+          "sha256": "621db539964e4162f24fee9aea2f46aa571511b60438673670a3abf536cf6abc"
+        },
+        {
+          "name": "US4MA1IC.003",
+          "bytes": 2285,
+          "sha256": "815d3a45b77fa93ee4abc0dfb2f74e1d1749ef697ebcd81ac7bf024a7f008107"
+        },
+        {
+          "name": "US4MA1IC.004",
+          "bytes": 2279,
+          "sha256": "c606ff90eb384685e13e6ab333bd91c32d014cf6da3ffd0b0e84a10cad5f5c3a"
+        },
+        {
+          "name": "US4MA1IC.005",
+          "bytes": 2207,
+          "sha256": "6f43b08ed5cb2f6582fce55e691238aec81c30d56cd97dd4a0c3be0c26b4a8ff"
+        },
+        {
+          "name": "US4MA1IC.006",
+          "bytes": 2272,
+          "sha256": "acad3938ab58d53f2b4af99e7c4e4cfd539bbfa90f06bd90197af994d8e50434"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1IE",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1IE.zip",
+      "catalogDate": "2026-10-09T04:48:25Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 87664,
+      "archiveSha256": "89d4ad8ccfcf2a1ad85a40cff90e3e2d27e487888d510f0677e80b57fea8834c",
+      "sourceKey": "5c93a32b3eb922566655da65210ca056016f84b52c74fc7e595b9922ee73c71d",
+      "files": [
+        {
+          "name": "US4MA1IE.000",
+          "bytes": 151648,
+          "sha256": "460a9340735775200b0e82f2677c65e040190103162c28f95fe95e7fb7765273"
+        }
+      ]
+    },
+    {
+      "name": "US4MA1IF",
+      "catalogScale": 90000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4MA1IF.zip",
+      "catalogDate": "2026-10-09T04:48:25Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 42848,
+      "archiveSha256": "8b12ff1fbff586cd99766f48e58215b2d0d5a3853684ef300a3ed658c6beb498",
+      "sourceKey": "da7c994b7f98b70ce1778441b2d05fe6be4ef56643af116400e663079846ed9e",
+      "files": [
+        {
+          "name": "US4MA1IF.000",
+          "bytes": 80854,
+          "sha256": "2c796da08e7c727126563b127f857372b29880cc2ffefe004de96dbd5e29c198"
+        }
+      ]
+    },
+    {
+      "name": "US4NH1BC",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4NH1BC.zip",
+      "catalogDate": "2026-10-09T04:47:18Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 45271,
+      "archiveSha256": "b15b078401b5d7c687309b726358f7effb1b9127d9c6ef899a41059230c512ef",
+      "sourceKey": "1394897d0f53cdaa159ee7b3617c43833a09983b514a66a7951c7f9ca5566b9d",
+      "files": [
+        {
+          "name": "US4NH1BC.000",
+          "bytes": 109250,
+          "sha256": "89aef23e448527a17bbdd91055912c0adde35fc50d7ca3e0e3c5aaba9eab9f81"
+        }
+      ]
+    },
+    {
+      "name": "US4NH1BD",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4NH1BD.zip",
+      "catalogDate": "2026-10-09T04:47:18Z",
+      "edition": 1,
+      "update": 9,
+      "archiveBytes": 335668,
+      "archiveSha256": "ce57cb54bc1e04ff4034e27579d4897bb08a6f4781ba3b004ad813f7a69f0f9c",
+      "sourceKey": "71535bce21a71ade2dd282f5efa7d92b0326d28d45ad92b3460b3cfbb5e6ec2d",
+      "files": [
+        {
+          "name": "US4NH1BD.000",
+          "bytes": 800392,
+          "sha256": "41075807615d4cef8917a868e4cc023b38f6dba7396cac9e99f6e36d2654fde9"
+        },
+        {
+          "name": "US4NH1BD.001",
+          "bytes": 2910,
+          "sha256": "4090e186c2ff5993398544de9b5964a168d4c0305098c3736064d030c96da60c"
+        },
+        {
+          "name": "US4NH1BD.002",
+          "bytes": 2478,
+          "sha256": "4952fd8d3a08c216eb1d3e7416cf0c5157ffa36c03d22a53f40345c8377b4b88"
+        },
+        {
+          "name": "US4NH1BD.003",
+          "bytes": 2389,
+          "sha256": "caf1e956c9d425ba8dc9dd4ada4fbfcb06ac498f89bdcdf29c4f2e236ecb5073"
+        },
+        {
+          "name": "US4NH1BD.004",
+          "bytes": 2398,
+          "sha256": "dbe9df356113b3ac66ef4fb63faf035f7ac9178f14bddd267d469bdafeef69a3"
+        },
+        {
+          "name": "US4NH1BD.005",
+          "bytes": 5265,
+          "sha256": "8760d3c75e1ca128420bd667bac6a78c290cccd9c83b46f21d4ecf9330896357"
+        },
+        {
+          "name": "US4NH1BD.006",
+          "bytes": 2905,
+          "sha256": "cd3e6dadc2ace9e45fabaa4cde8f1bcc60e488c912b5d6917676a3362125f2f7"
+        },
+        {
+          "name": "US4NH1BD.007",
+          "bytes": 2079,
+          "sha256": "4c12adf126f7f737ec366b8e06a3b0498a9a860721e7157c6c17f3e33520e89c"
+        },
+        {
+          "name": "US4NH1BD.008",
+          "bytes": 3702,
+          "sha256": "506dcf12463e958d509ad2497943fc98d94f646c9b24ab2d1ec8361b77f9636b"
+        },
+        {
+          "name": "US4NH1BD.009",
+          "bytes": 2389,
+          "sha256": "e0064901aa24df386ec16dca0774e63a0ea668382816f172aff985ee8ff3de48"
+        }
+      ]
+    },
+    {
+      "name": "US4NH1BE",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4NH1BE.zip",
+      "catalogDate": "2026-10-09T04:47:18Z",
+      "edition": 1,
+      "update": 2,
+      "archiveBytes": 119602,
+      "archiveSha256": "88da12d8411815d259fe7d8f6dae476671857637827dadd158913089bf1e72cb",
+      "sourceKey": "5c17cf249af6f380a0673e4291544c292e75ea2970144dff010e410d00231c4e",
+      "files": [
+        {
+          "name": "US4NH1BE.000",
+          "bytes": 220560,
+          "sha256": "02219c3bdf8f33cc14ac02f101c39ace6722559c82240549b48d4e1625aae345"
+        },
+        {
+          "name": "US4NH1BE.001",
+          "bytes": 2545,
+          "sha256": "155189c16bf42b0d439ba8c4b1ce77b95ba713932443ee669b2fbce1216f66c3"
+        },
+        {
+          "name": "US4NH1BE.002",
+          "bytes": 5945,
+          "sha256": "32bbbb4385bfbd4b69cde796a4cc9b81531c598aa37a21b1aa022ae2c70ad7c2"
+        }
+      ]
+    },
+    {
+      "name": "US4NH1BF",
+      "catalogScale": 90000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4NH1BF.zip",
+      "catalogDate": "2026-10-09T04:47:18Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 66958,
+      "archiveSha256": "138d918c1e85379b039332e2bd18772b86abb5b53f917386c240f389aa482845",
+      "sourceKey": "3f380550c5715b04256af768ba9f005402bbd1f84b49ed0d7a510343474449d7",
+      "files": [
+        {
+          "name": "US4NH1BF.000",
+          "bytes": 111633,
+          "sha256": "e59ebcb5c1d4c923ebec3e0dcfe9e7307f3ce86e5b9681c4990b6b7c0e9a9779"
+        }
+      ]
+    },
+    {
+      "name": "US4NH1BG",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4NH1BG.zip",
+      "catalogDate": "2026-10-09T04:47:18Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 24058,
+      "archiveSha256": "56d040bc6a40bdd26d361aab19eff4f19fd123afb0db68e30e4134d2ddfaeb43",
+      "sourceKey": "b50d3da22a0ddfefe87263d19a9785301f24286fc4480a076b9216ae45e65d2e",
+      "files": [
+        {
+          "name": "US4NH1BG.000",
+          "bytes": 43463,
+          "sha256": "b9d68a6a70ff5ad61ee5b05940d7d0b839ba8d4f394cb67fe5f5f7b25acdc2bc"
+        }
+      ]
+    },
+    {
+      "name": "US4RI1FA",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4RI1FA.zip",
+      "catalogDate": "2026-10-09T04:46:38Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 45082,
+      "archiveSha256": "b60907d31f2a4e8c4e0f211d09d5ead476dd53a3a2b407b9ae4187887b55b109",
+      "sourceKey": "792e03ba042843060476a24c0c9ed2a80bd37e9299a6256ec0aa08f1de863265",
+      "files": [
+        {
+          "name": "US4RI1FA.000",
+          "bytes": 118935,
+          "sha256": "b627728fb1205f7629e4c221d779ea3735bb00fcb6ebe947463569598eafddfe"
+        }
+      ]
+    },
+    {
+      "name": "US4RI1FB",
+      "catalogScale": 45000,
+      "url": "https://www.charts.noaa.gov/ENCs/US4RI1FB.zip",
+      "catalogDate": "2026-10-09T04:46:38Z",
+      "edition": 1,
+      "update": 0,
+      "archiveBytes": 312920,
+      "archiveSha256": "09d4569b5627b4167f46c73eff3ef1e8a5f6fb6cecf15bbfbfbea41096807b9d",
+      "sourceKey": "471494be4b8728ee77fb2d8ac931b024c2bf3bfe7951a93a0fb885f7b3eaa37b",
+      "files": [
+        {
+          "name": "US4RI1FB.000",
+          "bytes": 944943,
+          "sha256": "1e1c0c21b3f85762571d059531c2f61f8f9dbce775d8d247517bb6f61435a5af"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSBE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSBE.zip",
+      "catalogDate": "2026-10-09T04:44:25Z",
+      "edition": 4,
+      "update": 1,
+      "archiveBytes": 209593,
+      "archiveSha256": "f8d225b7a7d98116ec062cd20a35a6bd4ee904c53a3cee21c3998009bb0cdb92",
+      "sourceKey": "1538af74ac37051f67322e4909bdec649a254615c8a1df14a5e27b21b19d128c",
+      "files": [
+        {
+          "name": "US5BOSBE.000",
+          "bytes": 690774,
+          "sha256": "00271358e99c84e07f61161ea425dc9e612c617f430a357ce1209dce31c336e9"
+        },
+        {
+          "name": "US5BOSBE.001",
+          "bytes": 2560,
+          "sha256": "b230eca317f1a4e2e65f5ea97c929b5945629fbcf0b1978f5f1f485967036a2e"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSBF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSBF.zip",
+      "catalogDate": "2026-10-09T04:44:24Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 131535,
+      "archiveSha256": "16e059f16b5a10c7551e0a4300f0367def97216da0ac43bb414c5a8c0ad623f6",
+      "sourceKey": "6455741d56fa4447418257c544255eb38abfc6a1ee15e5793339b7190a32b7e2",
+      "files": [
+        {
+          "name": "US5BOSBF.000",
+          "bytes": 337484,
+          "sha256": "e8795c9f6fa167969d45be8b75031f5f168f4941fa0e3faca09917585e5df5d0"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSBG",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSBG.zip",
+      "catalogDate": "2026-10-09T04:44:24Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 342657,
+      "archiveSha256": "fe6ce637ae33aebc185b42389d457d32047664aa251e0f06f34ba3fed79ef72a",
+      "sourceKey": "bf5cedd1126abac477d24b9487d0fbb1c5972bd7d153fd512ae1c24cdd113997",
+      "files": [
+        {
+          "name": "US5BOSBG.000",
+          "bytes": 859005,
+          "sha256": "d037da254fd0a5508e4c48b2edeab67bac12004dc8e14ba0acd5b0ddfaf67474"
+        },
+        {
+          "name": "US5BOSBG.001",
+          "bytes": 10767,
+          "sha256": "43de7f454e0bd4c28212edb3d1c2137604e5e6b6f35f8992182d791b41601e7e"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSCC",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSCC.zip",
+      "catalogDate": "2026-10-09T04:44:24Z",
+      "edition": 5,
+      "update": 4,
+      "archiveBytes": 271563,
+      "archiveSha256": "0c6beb7f903410bcf25f8b282bc0d9a5de6cac6a6453242e7745ff8c1373b6c5",
+      "sourceKey": "cfe6d9e9f30b744b57f5a03aa1cd4b3ed9b6d06a9277b1e12b2d31a352ffcd60",
+      "files": [
+        {
+          "name": "US5BOSCC.000",
+          "bytes": 1113399,
+          "sha256": "c84c54a6f12fa4800b04f64b379c604bb56f3a75cac2c891d2130d9bf80ce6e7"
+        },
+        {
+          "name": "US5BOSCC.001",
+          "bytes": 3306,
+          "sha256": "6e05fd4f2d8984a6c88b83cfb248b561a3f67ae499f3945569b6b6eb8da6b5a1"
+        },
+        {
+          "name": "US5BOSCC.002",
+          "bytes": 3289,
+          "sha256": "66f4f1f0412c8d589090983c994277c6bafc001320c6caf6d285c3bd63512723"
+        },
+        {
+          "name": "US5BOSCC.003",
+          "bytes": 2108,
+          "sha256": "8b430aabdf6fcbd7e9e2dadc173d4084051578a0b2db7106ffc12ad21399dc07"
+        },
+        {
+          "name": "US5BOSCC.004",
+          "bytes": 5172,
+          "sha256": "d6b16a4d28c47f98065f710fb6076fb330ffebf4df432ff26e42d8fa402c5d9b"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSCD",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSCD.zip",
+      "catalogDate": "2026-10-09T04:44:24Z",
+      "edition": 4,
+      "update": 6,
+      "archiveBytes": 342436,
+      "archiveSha256": "3b18bdf153672846f0b88e6178e9968ffc841b8c9b6e2bb21b86cb96937fd6c0",
+      "sourceKey": "cb0657f4980139e21534d703ba4964f0fde2f6fbd167669ae05ab81de7dce06d",
+      "files": [
+        {
+          "name": "US5BOSCD.000",
+          "bytes": 1054018,
+          "sha256": "26ae64ff20e3a6ccfb3c9cc9cb9ee738773b83a2c574c0fd7704bc49987b81ee"
+        },
+        {
+          "name": "US5BOSCD.001",
+          "bytes": 2172,
+          "sha256": "676c1fd4bef1a1245e513a523c3f9891c7bf64bef31818720786246747d59ae6"
+        },
+        {
+          "name": "US5BOSCD.002",
+          "bytes": 7682,
+          "sha256": "f2bedabf6b4bad2d65d3e3f193f36acc0a42f56fe34b5294bd664e8db20f156f"
+        },
+        {
+          "name": "US5BOSCD.003",
+          "bytes": 2378,
+          "sha256": "4b004218efcced903af413fa24b7d8007e652c18f333a3d964e498c511a13a73"
+        },
+        {
+          "name": "US5BOSCD.004",
+          "bytes": 5110,
+          "sha256": "a19e271abdd2d6052838eea85c76204920e400c021f9543e2fca4bcdfaa742d4"
+        },
+        {
+          "name": "US5BOSCD.005",
+          "bytes": 2181,
+          "sha256": "98434e125ae0d5769a6bbd41d6d8fc0c817b55e9c826ba9215deb8c431af4b8d"
+        },
+        {
+          "name": "US5BOSCD.006",
+          "bytes": 4733,
+          "sha256": "0b18a08c1c62d7757e95e084e6508ec86f0ffb616fffae68c8e0234820d1b0cf"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSCE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSCE.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 4,
+      "update": 3,
+      "archiveBytes": 247280,
+      "archiveSha256": "d48e63d6a24e01b38e8b7084de85c2b84aba92e0f291dd245a0ce9d9af0d1767",
+      "sourceKey": "2556f9333890ba6d29d795911dacdc1517d8c8406e8b6bb8847dc14e5411b41e",
+      "files": [
+        {
+          "name": "US5BOSCE.000",
+          "bytes": 687049,
+          "sha256": "3cae08bd93ee61bc93daf0aa7fe6c4eb99e0e32213716b44327cb761d073aa71"
+        },
+        {
+          "name": "US5BOSCE.001",
+          "bytes": 5726,
+          "sha256": "e69e7115f9d6ca3834c337fecf86d3e11a0cf712ef701e9e0977d6b0bc19e8db"
+        },
+        {
+          "name": "US5BOSCE.002",
+          "bytes": 11121,
+          "sha256": "18e944d07652a9a425196864495bca0a77c9d1eb4e98c1640c8c79705620396c"
+        },
+        {
+          "name": "US5BOSCE.003",
+          "bytes": 10822,
+          "sha256": "72a7d7624d53528a62221970ed230b5dac7de32baffa0d98837ad87955bd9dce"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSCF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSCF.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 69026,
+      "archiveSha256": "9e90aeb3a9ad25efa45aff3e00ac605bc23ffa2edd30b8f0434b4ae0c49622c0",
+      "sourceKey": "a7392816a65e750be42d8d12705d0c485d66dee7728368c81bb54bbad7663ead",
+      "files": [
+        {
+          "name": "US5BOSCF.000",
+          "bytes": 147373,
+          "sha256": "d49ae5a6cfa91c89a8a5df1a2070edc6e2eb374aac70caa9335dc67d0814a6e0"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSCG",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSCG.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 25426,
+      "archiveSha256": "08d1a1f5cbc5ca179325e768b287dc721b3d08f2c21b5800da7dda4aaf352a89",
+      "sourceKey": "37b52135459830fcf90e8187d116184dc2ec43a8a0e07e3ebf0fd2e449361427",
+      "files": [
+        {
+          "name": "US5BOSCG.000",
+          "bytes": 40693,
+          "sha256": "ea22e379358520cf2b1444e2d7f40f0b1e1f6154aefee285aebd600919c88b93"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDB",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDB.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 17724,
+      "archiveSha256": "657a95f9e0bc522cdf35a2f9cc2d10c583f0385c6ea71841559cc58000871e1e",
+      "sourceKey": "140a7883193bbe8708dcf8cd93f6a63870bab1bcf93b83d0dc0ef2eca5efec92",
+      "files": [
+        {
+          "name": "US5BOSDB.000",
+          "bytes": 39550,
+          "sha256": "9275a8c3693dc8b45c253a03067328a31e09fbb1925e5ac43a76633e0b27bc2f"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDC",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDC.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 5,
+      "update": 0,
+      "archiveBytes": 185496,
+      "archiveSha256": "bedeb40e21d585a6b100fb69c3191340dfdd50f31970d13a3ba86ab3ce5aa357",
+      "sourceKey": "1a06022f605c6f210c07df5edea3dd5188d13745a16d42cdb2bbd572bfbf75ce",
+      "files": [
+        {
+          "name": "US5BOSDC.000",
+          "bytes": 750747,
+          "sha256": "3699c7afbc0eede19f6adb0b1f220065e420ccce175969b338e168c54fda137a"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDD",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDD.zip",
+      "catalogDate": "2026-10-09T04:44:23Z",
+      "edition": 5,
+      "update": 4,
+      "archiveBytes": 226829,
+      "archiveSha256": "959567499cea99a95976a565e86e7aa8f698e2056a4836109f2de499aa31104b",
+      "sourceKey": "ece23ee5fd2ab6ab0b1846695051d98a65f33eb697f43849fd4c69dca97fc310",
+      "files": [
+        {
+          "name": "US5BOSDD.000",
+          "bytes": 714271,
+          "sha256": "d1b72f2a6111c8687760fceec48514e8c0df916beef2e4cbaf87659d600b88b8"
+        },
+        {
+          "name": "US5BOSDD.001",
+          "bytes": 2170,
+          "sha256": "011c54cee811199e4106a31ad0f74f35ba14e18e40ed15e0955ecc269bae9faf"
+        },
+        {
+          "name": "US5BOSDD.002",
+          "bytes": 2470,
+          "sha256": "57918078a03987138c2657f7f8deb2b982457c2c27dd030390d0a620cf18c78f"
+        },
+        {
+          "name": "US5BOSDD.003",
+          "bytes": 3116,
+          "sha256": "417f821875c5d2bd8cb7fb9ed8fd9650f17ce38fd19ede7652bd1105f6676bfe"
+        },
+        {
+          "name": "US5BOSDD.004",
+          "bytes": 2533,
+          "sha256": "d30aca21e6ecc96f41172ff3a376055e1e628f4d8b5f96b323cfe3712df6893c"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDE.zip",
+      "catalogDate": "2026-10-09T04:44:22Z",
+      "edition": 3,
+      "update": 5,
+      "archiveBytes": 123730,
+      "archiveSha256": "53fb18e97fb1d5178f9e052e07a530fb21eff23602031febd29e2f728da6738e",
+      "sourceKey": "e687285ede2d3759c3eb014d8f88454d1e57d04402a073db786465f9e37579e9",
+      "files": [
+        {
+          "name": "US5BOSDE.000",
+          "bytes": 312662,
+          "sha256": "ef338bea94dc2712e4ad84e4437e1bc0571ac72fb62cae0fcfb511a9357ba817"
+        },
+        {
+          "name": "US5BOSDE.001",
+          "bytes": 2430,
+          "sha256": "679cf064418bb9c2766632e4a92dc2cf1c085838610eabdfcef36d9b48c96de3"
+        },
+        {
+          "name": "US5BOSDE.002",
+          "bytes": 24849,
+          "sha256": "0a35ce985328861b9fd311be856a00951a9f1a44f8bba6a4ab537b210895e1c7"
+        },
+        {
+          "name": "US5BOSDE.003",
+          "bytes": 2234,
+          "sha256": "766286fff65c38250d448b5ccdc486696f543e604b63d7a365fcec1a71144d03"
+        },
+        {
+          "name": "US5BOSDE.004",
+          "bytes": 2370,
+          "sha256": "8bb98b8a6badcef4605c74dc7f8ca410c2b42d0daed347b7a681df33a894575b"
+        },
+        {
+          "name": "US5BOSDE.005",
+          "bytes": 2929,
+          "sha256": "7263e56fee37896ed2265b7ca0c3e51e6399e24951219e7a88a236459b305b0b"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDF.zip",
+      "catalogDate": "2026-10-09T04:44:22Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 31151,
+      "archiveSha256": "4aebcf80db0a1c654270bf1421c4b4e7c34de7459c9ed9e58c534fe655cd73f5",
+      "sourceKey": "66798bb668d6c87591631decb7301530d1fbec74a5968ddec3e5f61bc7760353",
+      "files": [
+        {
+          "name": "US5BOSDF.000",
+          "bytes": 51537,
+          "sha256": "a846b89d4e2ecc2b1398b2c46a4704b5d4b9025e5790534c40bd6b5c75b446bf"
+        }
+      ]
+    },
+    {
+      "name": "US5BOSDG",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5BOSDG.zip",
+      "catalogDate": "2026-10-09T04:44:22Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 22235,
+      "archiveSha256": "f2e3af48d1414f25a9ba058a0351fff40dbf6da8bc54d95771da0d4e89b86545",
+      "sourceKey": "ef8996d740259054455fe5e511236410566208d7c296bf5bd0e756cd7a2a0a8f",
+      "files": [
+        {
+          "name": "US5BOSDG.000",
+          "bytes": 36522,
+          "sha256": "fb73219c61b59bc29909c6888d949ef2d40f7b52d2d402b6e47d49c098875671"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IB",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IB.zip",
+      "catalogDate": "2026-10-09T04:40:21Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 22437,
+      "archiveSha256": "1513563973a5c20f9d714d748b149b450de1e0b0c7a3addca04cce6fa015156b",
+      "sourceKey": "ed12d47b24606ee6041e6c829e52bcb360a22e9c53adbe3016d618bcb1d485d9",
+      "files": [
+        {
+          "name": "US5MA1IB.000",
+          "bytes": 37198,
+          "sha256": "5707c700c9f952b18c0830714b34edd668aa284e6b6b9044743b0ec6ac7f9471"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1ID",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1ID.zip",
+      "catalogDate": "2026-10-09T04:40:21Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 97013,
+      "archiveSha256": "75fba5fa52280e8974f7ecbe3b55a11a23a77d4dfb7bdd4575114a172f3f764e",
+      "sourceKey": "e7b0235b75b23a8207866e3952be8e7044e2f2bd7c24afffc4ea6ba1d52980ea",
+      "files": [
+        {
+          "name": "US5MA1ID.000",
+          "bytes": 243219,
+          "sha256": "2d0886ccc2449ba3d96c6bd5f567b5702aa0c9e40829f1c30ac7b8867bac209a"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IE.zip",
+      "catalogDate": "2026-10-09T04:40:21Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 46578,
+      "archiveSha256": "bbf098a7a7d218de3b809cb2d04e88ac4ac8e750fb191a3884a58ed84353ed9e",
+      "sourceKey": "ecb7f4760439c5bcd0e742ca14d3c29573163105268b888eb6410144479422f2",
+      "files": [
+        {
+          "name": "US5MA1IE.000",
+          "bytes": 92198,
+          "sha256": "33fff4b2319f03f87c93a9a1977642741d3cbc78f7900359aaa4e7e31811fe06"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IL",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IL.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 4,
+      "update": 1,
+      "archiveBytes": 38182,
+      "archiveSha256": "dd427f278c09d2c810acd5a2844ed137711618851eb0fbab0ed82f1689d43c46",
+      "sourceKey": "ebb0c28dc78bc9b1a5cdd06f7de97a0bea31c2b3c1651be1731f1fe99e8a9749",
+      "files": [
+        {
+          "name": "US5MA1IL.000",
+          "bytes": 82776,
+          "sha256": "b05c8994bf3ca9f4174d478f32813ff509b15bd94c9124398c33571ccdccfd04"
+        },
+        {
+          "name": "US5MA1IL.001",
+          "bytes": 4520,
+          "sha256": "931192a674c1126c2fad0ddb49af07ce79d89de3a79e77304eb3d341be6ada5f"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IM",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IM.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 4,
+      "update": 1,
+      "archiveBytes": 36852,
+      "archiveSha256": "84257b54b42b8e8461654ad759f6862f8bb2c382d7c19292778b203c338b0ddb",
+      "sourceKey": "2afb9493353d2ef234ad94de10261686fc9f55204601210a4fd86c1075f1fcf0",
+      "files": [
+        {
+          "name": "US5MA1IM.000",
+          "bytes": 68787,
+          "sha256": "b7780bb623469577ee159844ebbc5db4b9b1bda7530df123bef50e02392ecf19"
+        },
+        {
+          "name": "US5MA1IM.001",
+          "bytes": 4192,
+          "sha256": "47030794453de71a7ec10b036c5459627abdad6d6b2bd42aa8e3733e0598b049"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IP",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IP.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 64195,
+      "archiveSha256": "60f06bc18d4f1425105b4e3415dc51cacb7bdfa9d991cf3f1e4fdcd468c2fb14",
+      "sourceKey": "8433a8f134f9bd1b23ec3f404e46d2c433b10ad0096f0811421b1c0abb3b661d",
+      "files": [
+        {
+          "name": "US5MA1IP.000",
+          "bytes": 89199,
+          "sha256": "a2c558414773c4d174265024471a3fd9ed5dac1dd31bb5093c271886d1d6fef7"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IQ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IQ.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 38347,
+      "archiveSha256": "dda27e0e804a7681ec46901f1ee2c63b7acba51e264fe3e4f874a38844321018",
+      "sourceKey": "058c39bb538206545dd3a97072f4dbf3fd0484fc5d07f1a16085a62a91a9f3b3",
+      "files": [
+        {
+          "name": "US5MA1IQ.000",
+          "bytes": 66239,
+          "sha256": "d0e65e864b511fc3315c8f8146ce629ae10a478f8362d4ae4f4bc22e1795377f"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IR",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IR.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 24150,
+      "archiveSha256": "5f8d925572d8bce87121cf35a303f479963cb00a489a74364026d78a5cb6887f",
+      "sourceKey": "b0361e55116255f79756fbc0b39092149c583fbe5a7be99876592c49804deea8",
+      "files": [
+        {
+          "name": "US5MA1IR.000",
+          "bytes": 42237,
+          "sha256": "ddf59bd2a92ab5bfea2beba16d8be36a18acf8a9a4fc73399c4253f341bd8de7"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IS",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IS.zip",
+      "catalogDate": "2026-10-09T04:40:20Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 40880,
+      "archiveSha256": "6b0203bf63496906e59a1df23995e1fa27ba006f1bd3b0e4027a601b3bb9cbe1",
+      "sourceKey": "bf676d8f90bf90c13195eafb19f039df3c991b52ad1ca129a57f5ac78146d25d",
+      "files": [
+        {
+          "name": "US5MA1IS.000",
+          "bytes": 99349,
+          "sha256": "ffe9edf882c44d0a54c06227d79788a636867e72db66c737a639631376d32efd"
+        },
+        {
+          "name": "US5MA1IS.001",
+          "bytes": 4153,
+          "sha256": "cf64de3ac3798251df85f46fb1c3a1267e4b4a30f69c88a283bc8ad9951958eb"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1IT",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1IT.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 102448,
+      "archiveSha256": "5af9f4e15665b8c988e61cb6fb08c8c84e8ea4d4dd9d70b747a81a6ca79e8017",
+      "sourceKey": "70b045073a76bb0b1626a9f4d8a9746d8bba95ecdf8d5c33fba2b248a8c30db1",
+      "files": [
+        {
+          "name": "US5MA1IT.000",
+          "bytes": 212617,
+          "sha256": "5f735460c0337ffc05a0658ef0abdbf8f07baee9004b49152a7c101190e01371"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1JD",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1JD.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 26011,
+      "archiveSha256": "c79ae870d888c6d5003fb7f98c3ea33569d586122dd2f34b13307b40c7b67eef",
+      "sourceKey": "643d80a5ddd75da68d41582ac120b198286ae8e2ad9515e7670e8b4d8d856a84",
+      "files": [
+        {
+          "name": "US5MA1JD.000",
+          "bytes": 44754,
+          "sha256": "d3771f070e313b6300830b684ab9c4bcc3a695208f3ea4442803afc0803df6ce"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1JE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1JE.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 24577,
+      "archiveSha256": "9b5239779472c9a25c838a3a8bb19d55c289cb1731335146e18d112f196ad0b7",
+      "sourceKey": "7a64b5f849418ad7c885b1dc9904000bd93604ab69aafd42d993e5068649891e",
+      "files": [
+        {
+          "name": "US5MA1JE.000",
+          "bytes": 44808,
+          "sha256": "1703c50ab59e08b4824354e1e0e5724f72c7643d7eebe0d2542136c5182725c4"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1JR",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1JR.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 71403,
+      "archiveSha256": "8577c6fdf9623a4dfd949dc46ed334fe04a55a1c8fa46db3ce910f5907848748",
+      "sourceKey": "aa094b4042cdc72e35eca2280bed4f55f8c22e6457db503aed29fa3dde1fddcf",
+      "files": [
+        {
+          "name": "US5MA1JR.000",
+          "bytes": 101833,
+          "sha256": "27ac2caef8f8309c6c6decf25dd6fda6b2212ef17ed75cf15f6be38dcc699799"
+        },
+        {
+          "name": "US5MA1JR.001",
+          "bytes": 2233,
+          "sha256": "962f9d0ea797535a7e73ef96c5714ab9edaeeab1aac443e99c778eb73b354784"
+        },
+        {
+          "name": "US5MA1JR.002",
+          "bytes": 67791,
+          "sha256": "4839ef0b7bd80f079b0666ad860c43542e997eda606edf523f59d6c6995e3859"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1JS",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1JS.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 56050,
+      "archiveSha256": "8cab01b1eef449318d1357edce1ab131eadf130d11e496354c651265e94ef691",
+      "sourceKey": "9bcf8225d1af18fef942ceec0f7f972d1d56049b02a97e68d821cf004119c914",
+      "files": [
+        {
+          "name": "US5MA1JS.000",
+          "bytes": 156104,
+          "sha256": "4467c1ee7404bf0caedb6882e1761914fe910bb4b8f17d8e292a9c47c554c5b6"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KJ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KJ.zip",
+      "catalogDate": "2026-10-09T04:40:19Z",
+      "edition": 5,
+      "update": 4,
+      "archiveBytes": 103496,
+      "archiveSha256": "cf6d6053cedb1609656e1c40719131d6e0fb624055616b5a75f8623044466f58",
+      "sourceKey": "43a39d7bfa145212badfc1f56efbf6fae7ba218130847bac4aa002b3a9a4b7d9",
+      "files": [
+        {
+          "name": "US5MA1KJ.000",
+          "bytes": 279954,
+          "sha256": "7384daddbc4dba5840fe83e7a9710c27508e262823186fa4e51dab7d8a8553c1"
+        },
+        {
+          "name": "US5MA1KJ.001",
+          "bytes": 2233,
+          "sha256": "3cffdc6c3b7867ef329d0a9164669dc5175607a22e5154298aae7e048d20581a"
+        },
+        {
+          "name": "US5MA1KJ.002",
+          "bytes": 8219,
+          "sha256": "48016429d51b9a5766e50bdd0cad4576a693601340170141b35510e0de7f59af"
+        },
+        {
+          "name": "US5MA1KJ.003",
+          "bytes": 2233,
+          "sha256": "6f26d45fe12e395c684faf33a68316937c8e8229d29c14cfdbf7e00d606ab7f5"
+        },
+        {
+          "name": "US5MA1KJ.004",
+          "bytes": 2389,
+          "sha256": "3892353c44a632aac9851d6b358c8d7f5c4db0d2feb0a98120680ce8b54257dd"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KK",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KK.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 3,
+      "update": 3,
+      "archiveBytes": 86013,
+      "archiveSha256": "21ebf297f8ed15f4ce963f26b769594c0cf950b6404c34fbc1ffb5615630114e",
+      "sourceKey": "2cefa558aaee46665055dbb97226cc3da1351a78c876c116b2ebbf5136f4ac97",
+      "files": [
+        {
+          "name": "US5MA1KK.000",
+          "bytes": 213168,
+          "sha256": "78f06c49f63d703ae82b2405f50fec7776bb6e80447ee83fc538d7e79ea6aceb"
+        },
+        {
+          "name": "US5MA1KK.001",
+          "bytes": 2471,
+          "sha256": "2b1745637ae70c0037f384721bb11511c949079ad8e476c013a28048dc700af4"
+        },
+        {
+          "name": "US5MA1KK.002",
+          "bytes": 2189,
+          "sha256": "dca0d16b280b758f1bfb304e17bd703c910889cb5b4577c6354d533d3733433a"
+        },
+        {
+          "name": "US5MA1KK.003",
+          "bytes": 2471,
+          "sha256": "ba60e475fd00fe7851f3b0065ff66374a9ebfe35ef80480f51e5c4ee5f443491"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KL",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KL.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 67573,
+      "archiveSha256": "7fed127499861cb78fec08f9439edd3ff35e1d267a03119a889e8bd7e3f0c95a",
+      "sourceKey": "29247f126a259b82748970e62620b70aefb7345fda8802e038a65856aa626633",
+      "files": [
+        {
+          "name": "US5MA1KL.000",
+          "bytes": 112435,
+          "sha256": "3fdcd5027e3e0e0574cd011e3fb2d55a68ec7bc77b78d9d19dcec794180b3623"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KP",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KP.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 13492,
+      "archiveSha256": "04d2784c8d98afe1ab98bc6be9ccb16778a85fb7232dfc542ac6633000dc1020",
+      "sourceKey": "24d04840adf42e133f367bdacde4694d681159283722dd8a73f68a3ed3c299cd",
+      "files": [
+        {
+          "name": "US5MA1KP.000",
+          "bytes": 15075,
+          "sha256": "0fc635d9a0cec429f54bd499bd31ff8fc600e2f0c99c7318151de1c123f78899"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KQ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KQ.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 15446,
+      "archiveSha256": "b723817d4ee40e736f484044c03ff1cee0dd3acfbaad5bbf46fc7a650f3d9313",
+      "sourceKey": "fa4bb9ffc7a79e0157d721496bd2220a65c65482768bd9f035eb044b7a304697",
+      "files": [
+        {
+          "name": "US5MA1KQ.000",
+          "bytes": 22018,
+          "sha256": "167eef650d0f08edabe3957c1f4d66182c8a8212ff5a9c96496171a6b4c82095"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KR",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KR.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 75110,
+      "archiveSha256": "c0e783a065314a3209d19452169956cb492305a4f4fcb6fc6d53759464361155",
+      "sourceKey": "964f5ef1369230d5371dd6d1136096f676dc963c100a7d33a8ee6903f2d811b6",
+      "files": [
+        {
+          "name": "US5MA1KR.000",
+          "bytes": 122467,
+          "sha256": "fc52d5be397ec5f581ed95b606eb2df4fc27737ca82256a44511736ab1d20eb0"
+        },
+        {
+          "name": "US5MA1KR.001",
+          "bytes": 91535,
+          "sha256": "14a03853de8cacc80eba34d967a670e8327fbf74027189215ebabccea4e26016"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1KS",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1KS.zip",
+      "catalogDate": "2026-10-09T04:40:18Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 69765,
+      "archiveSha256": "6ac1573c0ec72b1bd6235f46b24b3ecfd1e1d47d4b2f8190828426c172ead1e0",
+      "sourceKey": "1e28ae1d994f2c24d354e838f5fca371b7a0c8e819a466ecb0c620bbbc3f2b5d",
+      "files": [
+        {
+          "name": "US5MA1KS.000",
+          "bytes": 107351,
+          "sha256": "74fdb9a6f8b5bd710197fd58f3084d896614e0cfd9aeb502d7c5bec60eb3249d"
+        },
+        {
+          "name": "US5MA1KS.001",
+          "bytes": 91835,
+          "sha256": "ece6d08847ad7d0f2fff2272a5a7c63b0334209013013717c95f9bc7087f2918"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1LJ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1LJ.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 4,
+      "update": 1,
+      "archiveBytes": 170449,
+      "archiveSha256": "d07db5bbaae937581caa0d6c91c0c095901fb78b1e5cb5ebeb2e45eddb41cb61",
+      "sourceKey": "96f7b5d624e1b0eec522fc89e4340ab737a847c933c4d90c30077c7ef6c8e12c",
+      "files": [
+        {
+          "name": "US5MA1LJ.000",
+          "bytes": 420303,
+          "sha256": "5e6b19e357e6b8a9015e609057ca90becdbcf17c216856393b336f36b3c75598"
+        },
+        {
+          "name": "US5MA1LJ.001",
+          "bytes": 2233,
+          "sha256": "df345bef5bff9841e053699e8ad7fe5b9a37f9ac9ed212922058d491e6f24742"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1LK",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1LK.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 83717,
+      "archiveSha256": "8be9efbf04ff3d568f6592fd4ec4f8c829804931e9521172ee77399d08af0eb4",
+      "sourceKey": "a01b90a4d1232df60d98981d5fd54219fbd6e213c306bcd1e4a242d4f24fa9f2",
+      "files": [
+        {
+          "name": "US5MA1LK.000",
+          "bytes": 191738,
+          "sha256": "a163c22190976bb98724ed85028fe01b5a2618ca9fea15c7e62a039a5f20bc78"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1LP",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1LP.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 54963,
+      "archiveSha256": "d43430c44ed645362d3162be6b46e08f045f903333b48e6e73762daeffe9969a",
+      "sourceKey": "c9505e8dd8eecf21cf96273d1c8deccc116733a8516e4d23468a7a0d4d6d5d10",
+      "files": [
+        {
+          "name": "US5MA1LP.000",
+          "bytes": 74452,
+          "sha256": "cd44460fca5881df01b10d0276a2d35b50749e49c4473bd775dad377a70032a3"
+        },
+        {
+          "name": "US5MA1LP.001",
+          "bytes": 54511,
+          "sha256": "27eb1e7ca0734f1761fad8266b3389d673643e9a6ae9174ee681e1172a344628"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1LQ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1LQ.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 56227,
+      "archiveSha256": "b60b9ec54172908e05f286ca64c7e8da7f40f52981adfead0e8cb520b627234a",
+      "sourceKey": "858169bce3e3b41516e2490aa2c0ec0d2182076dc58ce2b43a90a048603ece9f",
+      "files": [
+        {
+          "name": "US5MA1LQ.000",
+          "bytes": 177659,
+          "sha256": "d0aed663adeda64239068d18956a36fc23ede2117def2f7f97f12e64e9bfd1a8"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1LR",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1LR.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 46509,
+      "archiveSha256": "d4464b6366fed47b99d3b814cddf6bdcbe77cf66c13be55088bd164796d0f969",
+      "sourceKey": "a38ae71bbf95e838e5acccb277f99f9bed7801e9540bfc62dabb3c280ff95f91",
+      "files": [
+        {
+          "name": "US5MA1LR.000",
+          "bytes": 89982,
+          "sha256": "c35c0f8323cccd7aa20fc72eb16c62cd96edf04de6628ad8bf68753ce9e7171a"
+        },
+        {
+          "name": "US5MA1LR.001",
+          "bytes": 35498,
+          "sha256": "3b55def1c196603d077453899f91825e2e9da1dc87ec30820eec6542a1d3bb47"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1MJ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1MJ.zip",
+      "catalogDate": "2026-10-09T04:40:17Z",
+      "edition": 4,
+      "update": 1,
+      "archiveBytes": 99348,
+      "archiveSha256": "06020379d60614c43b1fff4542c7fb2a8482fa4cb527755418db0b57f5dca40e",
+      "sourceKey": "97264fe19c09e32952b60cc161b5163c5c257f77ff2b9d8f87b3bb845b79f6c1",
+      "files": [
+        {
+          "name": "US5MA1MJ.000",
+          "bytes": 224816,
+          "sha256": "6e9eb763df421ae67a9b0fb5ea3b404cb92caaf82a2daba5218a7e29079eeb51"
+        },
+        {
+          "name": "US5MA1MJ.001",
+          "bytes": 2233,
+          "sha256": "ade57a007534879b0b43bbd5227f6536925b3bbe65354c3d30668bbf9bf45f11"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1MK",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1MK.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 6,
+      "update": 2,
+      "archiveBytes": 138744,
+      "archiveSha256": "f668a499827a25e8e599a0964be4241359128634a9f820206956345ce248174f",
+      "sourceKey": "5a1d651890eb84d1ed0bce9154efcde60bc67b8eb03cbbebef6690971de006bf",
+      "files": [
+        {
+          "name": "US5MA1MK.000",
+          "bytes": 349140,
+          "sha256": "b7542cb75105c1597239b2e2f4298af756e4c7c5f6d132f75209ac502b9c4300"
+        },
+        {
+          "name": "US5MA1MK.001",
+          "bytes": 2053,
+          "sha256": "b7b4f88a3c68f5739f5cbc95606927a4ebec06cc7636e48bb94a3a71079316c6"
+        },
+        {
+          "name": "US5MA1MK.002",
+          "bytes": 4528,
+          "sha256": "34de60648dc497eb103db136ea6dbf862ba3dfde17209cc6c3d9ee04b608e837"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1MP",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1MP.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 26101,
+      "archiveSha256": "d677876151f58d41f3c3e0a6cb58dc0bea0db8899045a02d3fab078e072cebdf",
+      "sourceKey": "e387f1d954bb1f6b34cbf4e5941f97f3603a6324841ae5cf1417ed5dd661e711",
+      "files": [
+        {
+          "name": "US5MA1MP.000",
+          "bytes": 38277,
+          "sha256": "eae61f202d824adbff475a4b0a37c5267484a83f5ccd9d964edfca71a27d7e2f"
+        },
+        {
+          "name": "US5MA1MP.001",
+          "bytes": 15112,
+          "sha256": "5dc61c3c8afcbf0f8a9ec715ae730132066216b0b869eff6f3b96bd9136997f6"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1MQ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1MQ.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 33596,
+      "archiveSha256": "43bd2b257fef05f353351784237956e9963300d692bf2fcc101dff23d3ac0765",
+      "sourceKey": "3030b375bd4692bac8df2d36a05f52d30ab14d3aed21dbbb234010b3c1a777f2",
+      "files": [
+        {
+          "name": "US5MA1MQ.000",
+          "bytes": 56265,
+          "sha256": "18d506438ebff498ad3e59914d92e48ed332d9799fe7e1f52a5a0fd5ec2e3ca4"
+        },
+        {
+          "name": "US5MA1MQ.001",
+          "bytes": 2365,
+          "sha256": "d193610caa2ca672d230835829037145124dfc14c6f62c5081dd8ce1b40347d6"
+        },
+        {
+          "name": "US5MA1MQ.002",
+          "bytes": 11821,
+          "sha256": "305632d4988561069294a0466f7f3a1cd80d43812fc926e5d11079d6f548d38d"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1MR",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1MR.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 17621,
+      "archiveSha256": "b0f4e5722ce125a98466ec3c237f506731aec3f4290bee92b9ffe03ee2b1bc60",
+      "sourceKey": "6ef4cf4bd6bd210b7e0a012c1bbf61a0e7637d9a05b828539678a91286048c8a",
+      "files": [
+        {
+          "name": "US5MA1MR.000",
+          "bytes": 25407,
+          "sha256": "91bb50f5988a8a88b1a82bfb4068adacf59f6226760a83056d3b943ef3d882b0"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1NF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1NF.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 16650,
+      "archiveSha256": "25effec96dfe40a9247e2299d9868dfa0ad0ca1a399cd99c9834bc636215b3f5",
+      "sourceKey": "1968fc5f17905bf8397e90dd78e77e77f8e23c7237c493d97722353a30cc8d43",
+      "files": [
+        {
+          "name": "US5MA1NF.000",
+          "bytes": 24420,
+          "sha256": "da781b139e728d23a14054dc82dad808058b0e4a5090c0d27478d19c59ba74b8"
+        },
+        {
+          "name": "US5MA1NF.001",
+          "bytes": 3451,
+          "sha256": "bf3f1384ffc8ece466ee6d2b4dc2f40a573a5d3f34904d6e4a18fa97d350c978"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1NI",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1NI.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 107490,
+      "archiveSha256": "199103bb4330e80f20d02f6886dafdb0ab8c971e18f4f496179a55e53a19ec65",
+      "sourceKey": "8c73473b0d190690ed27de84d7302cc96ec85e473675f33975b1e9df6f997d7f",
+      "files": [
+        {
+          "name": "US5MA1NI.000",
+          "bytes": 267936,
+          "sha256": "9c10053a53b3944b53983bb6d14914cd77ff0ca3cd26172d24ecb5b1ade85a86"
+        },
+        {
+          "name": "US5MA1NI.001",
+          "bytes": 3215,
+          "sha256": "10bbabb2c7bb3f530f263d06efdb3ec1f0e5eeea7ff666df8dc73a1599e80265"
+        },
+        {
+          "name": "US5MA1NI.002",
+          "bytes": 2233,
+          "sha256": "554e539605a4f8710a7d8cf2dcd872788ca9e2499a0442ff38d6bf5db094fe93"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1NJ",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1NJ.zip",
+      "catalogDate": "2026-10-09T04:40:16Z",
+      "edition": 4,
+      "update": 6,
+      "archiveBytes": 191715,
+      "archiveSha256": "25020adc12963e5603abc541787fb8ea176719ea75c16bc1b560d7ea2b2708ca",
+      "sourceKey": "f232171856433ac6b65fec3178d27acdf2c607789091f95540b86e15bd9adda2",
+      "files": [
+        {
+          "name": "US5MA1NJ.000",
+          "bytes": 489288,
+          "sha256": "d4cb1818617d1f6fedb8c51eb8258ffdb9865e43ba978a2b3265ec98234f2cb3"
+        },
+        {
+          "name": "US5MA1NJ.001",
+          "bytes": 3815,
+          "sha256": "8033d0978d258025513d450d0279727c65e7b2bed31d95488bfa13abea2aae35"
+        },
+        {
+          "name": "US5MA1NJ.002",
+          "bytes": 3577,
+          "sha256": "95b5cee5b8dda76106a8e5050bcc9fdbe1ffaca4a2db642d42695e6e6b642ef5"
+        },
+        {
+          "name": "US5MA1NJ.003",
+          "bytes": 2628,
+          "sha256": "e5a0e6169916b1ab53521201f4ae2ff067e3f52284bd8647136219bd8629a15d"
+        },
+        {
+          "name": "US5MA1NJ.004",
+          "bytes": 2233,
+          "sha256": "916a37fb34fd0d6525b15d9136c99e62302e3f3609694febfe2f12854049177c"
+        },
+        {
+          "name": "US5MA1NJ.005",
+          "bytes": 2505,
+          "sha256": "667a9dfbc908e7ab9d0fea7fc589db91330589fda931d425c603a0e6c2b9605a"
+        },
+        {
+          "name": "US5MA1NJ.006",
+          "bytes": 2517,
+          "sha256": "76c86fb006ac31e3db6fd0051ad302c277c87c4c36df194c54a34a66f5c0d508"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1OE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1OE.zip",
+      "catalogDate": "2026-10-09T04:40:15Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 65196,
+      "archiveSha256": "d2fcf5b16c901acc9907ede0436bf03a32373cc1754ea32ca19fb498e6e23895",
+      "sourceKey": "7d133b405766ced0fbb0105e29742e6b4938f78f9feb52177d56cec63f9df827",
+      "files": [
+        {
+          "name": "US5MA1OE.000",
+          "bytes": 165199,
+          "sha256": "381a2217e1bb4da742a5a36f17ac892db4930ed47659f6315710f90c7ea0be6d"
+        },
+        {
+          "name": "US5MA1OE.001",
+          "bytes": 4865,
+          "sha256": "83d5edbcf3f2b682b5ba875562e22bfc14bd1dc7b3eb6531fdac4f75fa815687"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1OF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1OF.zip",
+      "catalogDate": "2026-10-09T04:40:15Z",
+      "edition": 5,
+      "update": 3,
+      "archiveBytes": 193968,
+      "archiveSha256": "a5fdf9a85473d86c0e397dcafc855e774c085bf4bce2f37f143561fdecd386e3",
+      "sourceKey": "ea2563c82b4d375b804b979fe2fe894c61f68ac1728454f50c62c503cf5f7b1a",
+      "files": [
+        {
+          "name": "US5MA1OF.000",
+          "bytes": 605245,
+          "sha256": "e957397e51ce934f499181616f67430d2b007c551c0962d9c134f5be78a95e9f"
+        },
+        {
+          "name": "US5MA1OF.001",
+          "bytes": 3573,
+          "sha256": "cf2f2ad096ec34e4dd6c5606abc20efc6424117967658a584ae5e93f3d612660"
+        },
+        {
+          "name": "US5MA1OF.002",
+          "bytes": 3645,
+          "sha256": "885dbdf9e00e81e4155dd6adb4ec6c0ea9ad4134d16a6ebc68c320a195d63622"
+        },
+        {
+          "name": "US5MA1OF.003",
+          "bytes": 4821,
+          "sha256": "e5fd65bb7abe838a5c251e9544b2bb1c6632069e054dda2ff24579a2b65543da"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1OJ",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1OJ.zip",
+      "catalogDate": "2026-10-09T04:40:15Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 80385,
+      "archiveSha256": "fb66e1fcb8fc8652b5ae423825b1d47f05acc860be6c4216294cb8d4f222e762",
+      "sourceKey": "cd9481ac3217e3ca7efd7ead7dc863a122d8fec0caeb4f154742fa5057260754",
+      "files": [
+        {
+          "name": "US5MA1OJ.000",
+          "bytes": 162205,
+          "sha256": "123b2a8fcc73baaac8c12121524ade6bf89f178e167abaf83e2e1b15d4352337"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1RF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1RF.zip",
+      "catalogDate": "2026-10-09T04:40:15Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 34664,
+      "archiveSha256": "d6ddbb4727efe8dfb027c99847df8a9d21e7d61401fa66feb0c91173f071bc98",
+      "sourceKey": "fe4abcbd874908769621732e7f903cffe513c6f4ea8ec845aff3c7ff642e230b",
+      "files": [
+        {
+          "name": "US5MA1RF.000",
+          "bytes": 79562,
+          "sha256": "3f3632ba7dea04f18a8394270e740b770669a9d4e17d00f19714c0aa604a95e8"
+        },
+        {
+          "name": "US5MA1RF.001",
+          "bytes": 3705,
+          "sha256": "1120824f5216bc3f4c46ff0fe47670f6902512a3ab137d2734cc5bbb8082e421"
+        },
+        {
+          "name": "US5MA1RF.002",
+          "bytes": 2170,
+          "sha256": "5441fcdd14ae40ff1501c4a79b8f6a0409644e7766d26c658cdd8490543ec24c"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1RG",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1RG.zip",
+      "catalogDate": "2026-10-09T04:40:14Z",
+      "edition": 3,
+      "update": 5,
+      "archiveBytes": 130641,
+      "archiveSha256": "28914d2404d96374901166b888d8e9e10db1c6061f6e23f21e49ef42f8f8fed6",
+      "sourceKey": "49aebabeb688d24e651231f7cd7f9db6ebe7962214a0836d033ed997fd895733",
+      "files": [
+        {
+          "name": "US5MA1RG.000",
+          "bytes": 413839,
+          "sha256": "6642e743b301df4fc5582ac33a70ab7fb34158a96cf3ffbe1ac9782168155e13"
+        },
+        {
+          "name": "US5MA1RG.001",
+          "bytes": 10362,
+          "sha256": "c8ba150a6feb1487decf213ef7e887590cfc310abb93e05c90ac1a90ba76eedb"
+        },
+        {
+          "name": "US5MA1RG.002",
+          "bytes": 10598,
+          "sha256": "cd819fa54661ceb133cc10b954576dabb5847712648cf1dc2c2b2782cb55efe2"
+        },
+        {
+          "name": "US5MA1RG.003",
+          "bytes": 2378,
+          "sha256": "f5ac655c4eb6d892f09c7e1b65312e9cd2bb9642e4f90fa7fa5dcc8221cadb4d"
+        },
+        {
+          "name": "US5MA1RG.004",
+          "bytes": 3323,
+          "sha256": "8903fe3909f3da647415487375406b78d55833b61f55b98bc51a767e684e7b6b"
+        },
+        {
+          "name": "US5MA1RG.005",
+          "bytes": 2338,
+          "sha256": "53889b1738ba28e2b7854b4ffb4265f057cbc5c47f42b4c7b056051a780fc399"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1RH",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1RH.zip",
+      "catalogDate": "2026-10-09T04:40:14Z",
+      "edition": 4,
+      "update": 3,
+      "archiveBytes": 358825,
+      "archiveSha256": "4fafe56b99b3abc59e6a775242c548bcefc4d10aee743a514c0a55efa1594b1a",
+      "sourceKey": "ad8edc0401062a48a5b2ce3a28f75afbf136952ed7771d23c49ad0a9f996979b",
+      "files": [
+        {
+          "name": "US5MA1RH.000",
+          "bytes": 1027079,
+          "sha256": "da1a40d6f1c24fb965effbab1299c6631444bb6ba0497bd0bb7cd26f76fb6289"
+        },
+        {
+          "name": "US5MA1RH.001",
+          "bytes": 4178,
+          "sha256": "2e3900ef464c054e387ce234b09eaefe07dbfbf3c4d20746cbc5ea75b43d5e86"
+        },
+        {
+          "name": "US5MA1RH.002",
+          "bytes": 2516,
+          "sha256": "e581a7d3a260704c32693315703a5807b0a854125331de96188a9d4687533bf2"
+        },
+        {
+          "name": "US5MA1RH.003",
+          "bytes": 2389,
+          "sha256": "42dcb330e4a9a4ebdfeeeb299865706b1a66b6da9a34992876245ba16bf217eb"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1RI",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1RI.zip",
+      "catalogDate": "2026-10-09T04:40:14Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 80094,
+      "archiveSha256": "911cf9d989acd9484a39028c1dddec83129fba3c664de79d39d16e3d1a01b951",
+      "sourceKey": "2998a671016ff3da81b3032b390cb30277c85457c6a87edb30ad6b79a67222fe",
+      "files": [
+        {
+          "name": "US5MA1RI.000",
+          "bytes": 179094,
+          "sha256": "17347fe7ef7ea621ed0a04bb06822b24fcc5e8cb65bf7b2911aaeac431fe4130"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1SG",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1SG.zip",
+      "catalogDate": "2026-10-09T04:40:13Z",
+      "edition": 6,
+      "update": 2,
+      "archiveBytes": 153603,
+      "archiveSha256": "5586d3ef293915715fac3eb06546a1d78b74ce8550f945b1267343d05e06dcd3",
+      "sourceKey": "94d5f31d3de64738ff059320f95250d9d28a1142ad9d054a7b49f17a1e5f8e28",
+      "files": [
+        {
+          "name": "US5MA1SG.000",
+          "bytes": 557855,
+          "sha256": "12c301361c6f596b1e5661bf2e46f37f7484717466f56dd500ee7b1340f56d0b"
+        },
+        {
+          "name": "US5MA1SG.001",
+          "bytes": 5861,
+          "sha256": "91157fbc6d00c82db0256f80eee45900d434db8c65fb2207bcd464e0b3d54141"
+        },
+        {
+          "name": "US5MA1SG.002",
+          "bytes": 2233,
+          "sha256": "3e005d7273b54eec2a228cf5cdf5aec0409a0c04e0b7b60e7cdde70d01c3beaa"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1SH",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1SH.zip",
+      "catalogDate": "2026-10-09T04:40:13Z",
+      "edition": 5,
+      "update": 4,
+      "archiveBytes": 190388,
+      "archiveSha256": "dc896c3ccc817c618061a667da5425eb715d72cdf8e34d93608091e5e8eae733",
+      "sourceKey": "424283ed5f44b68ebe0aaec99ed75069fe9a748008ca332d1964d537f09cd939",
+      "files": [
+        {
+          "name": "US5MA1SH.000",
+          "bytes": 471285,
+          "sha256": "b8e5c3c36924a4f2483b9ad831492cdcb5623ea1876039838858d5244bd8e546"
+        },
+        {
+          "name": "US5MA1SH.001",
+          "bytes": 5342,
+          "sha256": "dbf936bfefc73062b510e67df2d85a2c56faf21a4b812137f7703ed388069993"
+        },
+        {
+          "name": "US5MA1SH.002",
+          "bytes": 7622,
+          "sha256": "59dc2276d9b7ae7ba95379a51c41eddf14ed83fe8a208775ecea32970c28ca50"
+        },
+        {
+          "name": "US5MA1SH.003",
+          "bytes": 2389,
+          "sha256": "b19c74b56b98ee6a4199fc75f9ee44414a653a815087f5ab7a61b66b9e3450fe"
+        },
+        {
+          "name": "US5MA1SH.004",
+          "bytes": 2673,
+          "sha256": "f480dcc76eae2b4301c7a1e9a123c2a99b4e03415f0d9281b486c18fc43ad8a8"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1SI",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1SI.zip",
+      "catalogDate": "2026-10-09T04:40:13Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 225443,
+      "archiveSha256": "45dba626dafeb3dcbbb7ad348f0b0c939492cdb029c51429c1c94c60615c994a",
+      "sourceKey": "e6e20dbd4a0aef5673f3c944e2475b3ffd4f88b37a6034df82eca2585f9269ff",
+      "files": [
+        {
+          "name": "US5MA1SI.000",
+          "bytes": 611904,
+          "sha256": "0523db95a70ed4af0b5d0ff5079d06bedda7f1ed55eadc95b5604d5a1e5e6a5f"
+        },
+        {
+          "name": "US5MA1SI.001",
+          "bytes": 2385,
+          "sha256": "0dd25d508f4e18c7939e034ab822a9f0f771f6f555c103e180b62eddb8ebab0e"
+        },
+        {
+          "name": "US5MA1SI.002",
+          "bytes": 2445,
+          "sha256": "5d90c18ad257a5f7fbc612a9c9de2e042bf5d155269e25e3861366626d9174d1"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1SJ",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1SJ.zip",
+      "catalogDate": "2026-10-09T04:40:12Z",
+      "edition": 3,
+      "update": 5,
+      "archiveBytes": 180402,
+      "archiveSha256": "84d080e5efe3037367e2fe8d98421cb5a9a36f6516fee224fba7e924623dc87d",
+      "sourceKey": "a7b97cf7bd2cd5d47df7f2dd18cfade58fdb52ecfa8e350094c79d1a7c79b166",
+      "files": [
+        {
+          "name": "US5MA1SJ.000",
+          "bytes": 456220,
+          "sha256": "cf167b587ee10b62b2c951e740261d310e3876a3dbf9b149bf62a71c07466f29"
+        },
+        {
+          "name": "US5MA1SJ.001",
+          "bytes": 2451,
+          "sha256": "1d9860984209436511c33a8ff268625a9f4785ccb8b33d1f042f13d6540c3f31"
+        },
+        {
+          "name": "US5MA1SJ.002",
+          "bytes": 2470,
+          "sha256": "8ecc3b6a593cf4acf01d0ece372e0b18fd6da54a8eb1d5c2e56335d598d011cb"
+        },
+        {
+          "name": "US5MA1SJ.003",
+          "bytes": 2356,
+          "sha256": "12487122c249872ffb23d1c51ce6e37fc23d5604ad9f66a80040c11bfa3ef195"
+        },
+        {
+          "name": "US5MA1SJ.004",
+          "bytes": 2179,
+          "sha256": "5834f3e7583175696c68d8786ef1ca29009733737253828e30517fcf77cc8fbb"
+        },
+        {
+          "name": "US5MA1SJ.005",
+          "bytes": 2108,
+          "sha256": "c0f99aaa2e7861dde6f13c448d346485869722b6a7f80bf6199ad468692b18c0"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1SK",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1SK.zip",
+      "catalogDate": "2026-10-09T04:40:12Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 45831,
+      "archiveSha256": "ca50542b75c0fef91f9e5fe7722dbfa63dc8179fdbb792d8c0a5ca8cc221973f",
+      "sourceKey": "c49fa92f7efbd2de1849e53186f79a0f5d9c244d33b3b14a9d12d6e87f559e0f",
+      "files": [
+        {
+          "name": "US5MA1SK.000",
+          "bytes": 94519,
+          "sha256": "8ae930d7a384e8b85a4d9b05b873ec54106a7840e5321dfbb907dfbc000ea38e"
+        },
+        {
+          "name": "US5MA1SK.001",
+          "bytes": 2387,
+          "sha256": "5c1368a03993a3e62a90d1091579e051db53da5cdfc5aa15986be53ff0b96a52"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1TI",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1TI.zip",
+      "catalogDate": "2026-10-09T04:40:12Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 143246,
+      "archiveSha256": "6d431410df622eb07add3a093b7601facb1ae9bedec1b27c22e308f95af131c6",
+      "sourceKey": "9e82bfbad31386d3e3cbfc109d2bc674b6d0613ff6bd4bbcb445746bb2cd2f8c",
+      "files": [
+        {
+          "name": "US5MA1TI.000",
+          "bytes": 324003,
+          "sha256": "a08708965845baf3259ad819ceccbe41be299eed0683ae7c08f56793dd7f6f43"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1TJ",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1TJ.zip",
+      "catalogDate": "2026-10-09T04:40:12Z",
+      "edition": 4,
+      "update": 2,
+      "archiveBytes": 444830,
+      "archiveSha256": "e319e9051632e86d004a018e8683c73f0635533c345cd96107cc3c43fb9e22a2",
+      "sourceKey": "2a898f1a0c11e5989c54f69c93f93ce8a004d12c7786cc8697bfee21b5d18b71",
+      "files": [
+        {
+          "name": "US5MA1TJ.000",
+          "bytes": 1436247,
+          "sha256": "8aeb14061c52554de08b8c1b6e2d564468d1bc9662522719d2b2dff72560f77b"
+        },
+        {
+          "name": "US5MA1TJ.001",
+          "bytes": 6808,
+          "sha256": "b4045ca751d2b1130d1aab14256af792c200ee77364817b6e3ce4098316cf8f2"
+        },
+        {
+          "name": "US5MA1TJ.002",
+          "bytes": 2233,
+          "sha256": "4a521e13433d2e6d87146001d8f58ddbf6d75cdb60b9bc3a8efcd2baec0d92b7"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1TL",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1TL.zip",
+      "catalogDate": "2026-10-09T04:40:11Z",
+      "edition": 2,
+      "update": 1,
+      "archiveBytes": 41181,
+      "archiveSha256": "391d0952d87d8d1c87a1e0ddc22527912be8b1dfc788562d323d6f8f65468ca3",
+      "sourceKey": "428e3ac590852481eb6e87541416fb37556153f1974451c9148f88632f0d68c6",
+      "files": [
+        {
+          "name": "US5MA1TL.000",
+          "bytes": 82993,
+          "sha256": "502e7c83c3f95e7c6be0d339068f1857b77e30c48bd541b629547d25e1e49b01"
+        },
+        {
+          "name": "US5MA1TL.001",
+          "bytes": 2168,
+          "sha256": "b0bc0a7356cefce8a4fd40514c04b01eaf54bf0ad1908442b8ffebe2bcb2feea"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1UH",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1UH.zip",
+      "catalogDate": "2026-10-09T04:40:11Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 214882,
+      "archiveSha256": "6553162720dc63e9a4e060662d12e6a48d3e8ef301403b8d1fb8eaf23c25640f",
+      "sourceKey": "7bc8d35505094c84319c12f49e4233303e80373f1d136eee31b3c8427226fdd2",
+      "files": [
+        {
+          "name": "US5MA1UH.000",
+          "bytes": 511338,
+          "sha256": "486a0e93794fca5f9332ff2d5f2112bbb18f4708c13c8bd313156a9ead2a0343"
+        },
+        {
+          "name": "US5MA1UH.001",
+          "bytes": 2233,
+          "sha256": "de58bbb5cc7bc6566f983b3198abe451c7f51fef5ee2f655adb60b8c1db1fb62"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1UI",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1UI.zip",
+      "catalogDate": "2026-10-09T04:40:11Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 131528,
+      "archiveSha256": "04fa0e5ed51f4729b3ad68f4a5f3d70db045ac2603881ff8d3326b58d3295787",
+      "sourceKey": "a933029ce2f257560cf2aa0c899bcbabfbe8fac23ed853821b56a3fdc67a8d51",
+      "files": [
+        {
+          "name": "US5MA1UI.000",
+          "bytes": 287165,
+          "sha256": "777ac658e036f57c80153d3c344d82beb22b79f6f153fc528a36a82d0b889278"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1UJ",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1UJ.zip",
+      "catalogDate": "2026-10-09T04:40:10Z",
+      "edition": 2,
+      "update": 1,
+      "archiveBytes": 36007,
+      "archiveSha256": "a5698890c9b72360ab130336284b9e4a238e7a1b093fa157dea281aa74dc9d4a",
+      "sourceKey": "b44d11c4a9a4594400bbb9565ae1a84b44ce0e59335d448972a9ee0b79d3cbd5",
+      "files": [
+        {
+          "name": "US5MA1UJ.000",
+          "bytes": 71610,
+          "sha256": "cf40e519ddf83a82f1cfb7ac3b3a7cecea0a2008c33a474bc716826645232dab"
+        },
+        {
+          "name": "US5MA1UJ.001",
+          "bytes": 2479,
+          "sha256": "627bae37b2182fd0670e164ec8bd708affb08da24cc8388c1bad91e1e25b458a"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1UK",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1UK.zip",
+      "catalogDate": "2026-10-09T04:40:10Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 48362,
+      "archiveSha256": "2e2b9657cc4a90ca683f76f6ec081f5ad4c2b5a24013a34f3a8b3dd26cfce83a",
+      "sourceKey": "2a801dc45663d224c8913be0034b4892e0e23e6b5cd90181354dd040870caeb7",
+      "files": [
+        {
+          "name": "US5MA1UK.000",
+          "bytes": 110912,
+          "sha256": "324ad71b91dd7a6af43c62575d4f70c3adb0cdcb0fe38b50dea04936048cc7f5"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1UL",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1UL.zip",
+      "catalogDate": "2026-10-09T04:40:10Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 16978,
+      "archiveSha256": "d4045a726bd0aa5f54990687e8ad9c7a15ee8206966aa21ea476537dd030a465",
+      "sourceKey": "795914242a68a7be081474605916167c861f64065d4c2eeaa5aba1bf0cc1a30d",
+      "files": [
+        {
+          "name": "US5MA1UL.000",
+          "bytes": 25557,
+          "sha256": "22bfd1fe1eb141934bdba8f051660cb35ac44ada3f82d40f3319d667910baff3"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1VE",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1VE.zip",
+      "catalogDate": "2026-10-09T04:40:10Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 60543,
+      "archiveSha256": "e2c1f61584e4e99faf5574effb73c4ef45738f7270106cdc77416cbab9417c51",
+      "sourceKey": "d1f71b9383a4550d8f13f4e68f8cb2628f71581e3b1e75fb132a2224cb161ca6",
+      "files": [
+        {
+          "name": "US5MA1VE.000",
+          "bytes": 167762,
+          "sha256": "cf7b264c9c618d6d6fb4e9d205fc0c095a016ed9db2cedc87705960e349df73c"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1VF",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1VF.zip",
+      "catalogDate": "2026-10-09T04:40:09Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 62388,
+      "archiveSha256": "fe568041792631f7837cf9e6a5121b8d7b444126566cce03db8563747fe854f7",
+      "sourceKey": "67fecc8ac3de6ea117f621b2f724d3e42737c9b03cc2e4ec79f9779efb533923",
+      "files": [
+        {
+          "name": "US5MA1VF.000",
+          "bytes": 164252,
+          "sha256": "3e61a12f53d3ee08b207422728edde55dd995b18d28a9532822c12028b633087"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1VG",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1VG.zip",
+      "catalogDate": "2026-10-09T04:40:09Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 57725,
+      "archiveSha256": "3f7bc85ef7299f54d5f40bbb85e10c68a57d6049da0ec3a10c32338ec6845885",
+      "sourceKey": "af3ec8a68d52af6f5b4b33c92bab996212e0801d26467e26f57fc8fc509ca296",
+      "files": [
+        {
+          "name": "US5MA1VG.000",
+          "bytes": 162791,
+          "sha256": "77a564095a12dcad09717cdb1451275bcea7d8057fcb36da159f2127aca57633"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1VH",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1VH.zip",
+      "catalogDate": "2026-10-09T04:40:09Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 234199,
+      "archiveSha256": "8d251adb54bc17109333095d69ff3e8b2fc8c07936cffeeec16f860ef492e23e",
+      "sourceKey": "068c5ec1d2ce1c42f435a9a0beec32ab20d96b40e5e21e98fb1748d60465475b",
+      "files": [
+        {
+          "name": "US5MA1VH.000",
+          "bytes": 634455,
+          "sha256": "068d7816b914e20b3e51f173541862fdf2867827949448f01466502f5b3f1c47"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1VI",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1VI.zip",
+      "catalogDate": "2026-10-09T04:40:09Z",
+      "edition": 3,
+      "update": 3,
+      "archiveBytes": 56660,
+      "archiveSha256": "854cabddfaba30c8c69d36f477f6667cdc06e081fb695ec1a31846b7288a670c",
+      "sourceKey": "01e492d9de9762b1eeccaebe1ac06218abccf8733df11e0cea4ec2b4d74dd76e",
+      "files": [
+        {
+          "name": "US5MA1VI.000",
+          "bytes": 90558,
+          "sha256": "c17d0cba6fb5c7f26485ea9c48b7d9eb9bc09d3d0a1568cb594e411537fdce1a"
+        },
+        {
+          "name": "US5MA1VI.001",
+          "bytes": 2470,
+          "sha256": "93ca1b405969be44d8c3ef8551e1d7cdbc571b550a79ef023c3350dc7efad238"
+        },
+        {
+          "name": "US5MA1VI.002",
+          "bytes": 12067,
+          "sha256": "a7b549fb411fee34ebd3bf855777cedf6a18352d9eb7378e7b0a0966cef1d74d"
+        },
+        {
+          "name": "US5MA1VI.003",
+          "bytes": 2742,
+          "sha256": "6846418d93cb4b1f97030e94e34e46f80a92428c1aa74889f1fca69ded910b4f"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1WF",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1WF.zip",
+      "catalogDate": "2026-10-09T04:40:09Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 11875,
+      "archiveSha256": "f8723c78c00d2f8ab0e5ddddab6e62423b33c268fc622c4402f8f83c4ceae0c3",
+      "sourceKey": "ca2e32419694ad3b1ab343e3bb5ac456a09e9763fde277b54da783369798feed",
+      "files": [
+        {
+          "name": "US5MA1WF.000",
+          "bytes": 12229,
+          "sha256": "1b48ba9dd5f1f51e5d330acc03cca5dd95282450df8940b2ecdfd9caa8c8090c"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1WG",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1WG.zip",
+      "catalogDate": "2026-10-09T04:40:08Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 99566,
+      "archiveSha256": "3b29c881c0e0a42302e067e0012798272cd94a79433b6706e32a9f86974f263c",
+      "sourceKey": "e0a23d9bf8e42d9119a87a9abbe839a20d178d939592d5609d146e9162d1628a",
+      "files": [
+        {
+          "name": "US5MA1WG.000",
+          "bytes": 282699,
+          "sha256": "a93efd39f48dca0e7ef65b60523f4030abca74e00ec44463f99760070af3b403"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1WH",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1WH.zip",
+      "catalogDate": "2026-10-09T04:40:08Z",
+      "edition": 5,
+      "update": 5,
+      "archiveBytes": 160796,
+      "archiveSha256": "66c898815218ae173ba86b6dcc67d94a12176af55675f735a1539d51b5d81eab",
+      "sourceKey": "a65ce2cb616901388636ac65001290410a2fd6f89a1b1d8184054eef555362ef",
+      "files": [
+        {
+          "name": "US5MA1WH.000",
+          "bytes": 353666,
+          "sha256": "03b78014fa3474708caffd5d43315b41e152fb1ce7949d692f72c1ec504a90af"
+        },
+        {
+          "name": "US5MA1WH.001",
+          "bytes": 3048,
+          "sha256": "247d80881e53b207e09432a33cc74bfac7a219af24617165179f6a29eb37cdea"
+        },
+        {
+          "name": "US5MA1WH.002",
+          "bytes": 15609,
+          "sha256": "c20d6c0a2513cef757a84ab2d9cc18166b927e79a5af9208b8081bc7101a6e4a"
+        },
+        {
+          "name": "US5MA1WH.003",
+          "bytes": 2233,
+          "sha256": "4eb8ca1b09ab02c9ecf87edcf4bedb8189de05fb54aed596a7f3726c3a1b7939"
+        },
+        {
+          "name": "US5MA1WH.004",
+          "bytes": 2271,
+          "sha256": "6d3916ab24ef5626d30c4effdc60263c07d688fb3763ed351cf01618a9a11fa8"
+        },
+        {
+          "name": "US5MA1WH.005",
+          "bytes": 6898,
+          "sha256": "2b052303f07a9c76687367cd7a34a344dc21421e282509338cf4c7aa0ce66dbc"
+        }
+      ]
+    },
+    {
+      "name": "US5MA1WI",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5MA1WI.zip",
+      "catalogDate": "2026-10-09T04:40:08Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 53145,
+      "archiveSha256": "585088744a109a12ba74f024754590ffdcd912862c5ad54957a485d2c12356b7",
+      "sourceKey": "e7a56ba9dda8e73d4d833c942cc79e6e85aca88ac477e26e0e4e1ce21d23bd06",
+      "files": [
+        {
+          "name": "US5MA1WI.000",
+          "bytes": 110991,
+          "sha256": "5eb7cd76d5e5c7c7c6c0ec0d2e57e0cb1531f930ff07854d0e91d22084cb3eac"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1AD",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1AD.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 105612,
+      "archiveSha256": "6c2e1e2918fb0a147dd65a19137abc2abaf549662b6b8ba71117489d2ebf1a64",
+      "sourceKey": "e52dec3865f8d183f299b11b90411d8d7f61c6a29c9a0455eab33460495fd18f",
+      "files": [
+        {
+          "name": "US5NH1AD.000",
+          "bytes": 235291,
+          "sha256": "0df776cb616b4958d4ce7947d7f2e4fce040217b7c14d397917a19276c951090"
+        },
+        {
+          "name": "US5NH1AD.001",
+          "bytes": 2401,
+          "sha256": "72545b2eb55de6e952f175ca28250ecca9334be807ba9f35dfb4464ce9678a87"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1AE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1AE.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 73931,
+      "archiveSha256": "5f65d0b33b60943f9e5c962eca1d5ab377f7b9ac94326a6be62be639a1550e19",
+      "sourceKey": "3bcd8618a1f7d7daf4a46d3909398e2c6adaa43d28e37715276bdd7c830e4189",
+      "files": [
+        {
+          "name": "US5NH1AE.000",
+          "bytes": 144054,
+          "sha256": "c758d2dcdf27250f660c33072f17614e90abf75fb134dff45cdf5678e7baed0c"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1AF",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1AF.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 19215,
+      "archiveSha256": "4b48ff1c81aa4ccee56de3277381a06162740405c63bf60b351209982ddbb54a",
+      "sourceKey": "d4d22be32cc6fcaca8e40c1839528622f0fbaa1d389dd5167465e86e60de8bf3",
+      "files": [
+        {
+          "name": "US5NH1AF.000",
+          "bytes": 24961,
+          "sha256": "98c93b815890a3e11f881c83df858a954eae964f2cf0ed857ece5b992dc81001"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1AG",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1AG.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 52478,
+      "archiveSha256": "8e11e929eecff7d1d8af4ead818f64e3ba24271dbb482483ce1743de09fd9844",
+      "sourceKey": "9d206f49feb257ddf92ec6b6e209e2abb96c20ca7185baab09b758ed540c4337",
+      "files": [
+        {
+          "name": "US5NH1AG.000",
+          "bytes": 116706,
+          "sha256": "28093cce223106946f71d50dd81a6c3ad1c54ac317f3d072189a7a5bcd7e41ed"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1BB",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1BB.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 11914,
+      "archiveSha256": "7a5cd749b830aa384cb3a1676403fa782152b855d935c32d77df191ef0f76b9d",
+      "sourceKey": "bc0c747f5cb819937ebf173f934402d55ef7c2fc7618427d9243594ac07f28c1",
+      "files": [
+        {
+          "name": "US5NH1BB.000",
+          "bytes": 16212,
+          "sha256": "c76efd5a6e2732447faa7aee17f0bd2724e78edc7796f98f5c6d9a76a3d0f628"
+        }
+      ]
+    },
+    {
+      "name": "US5NH1BC",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5NH1BC.zip",
+      "catalogDate": "2026-10-09T04:38:12Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 70679,
+      "archiveSha256": "e1e365c8b073e5fff40071f26ae234454543fe9eb546aeedac6061665404f961",
+      "sourceKey": "ccbe33ece0b95a805a9c59fecf7f48128fe74b6ea6140d63b8c5802dd41fa213",
+      "files": [
+        {
+          "name": "US5NH1BC.000",
+          "bytes": 166260,
+          "sha256": "da2b6deae4598e8e116c8f90da99dd2ae14dafe78dfab7d013e4f8e818f53bfe"
+        }
+      ]
+    },
+    {
+      "name": "US5PSMBC",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PSMBC.zip",
+      "catalogDate": "2026-10-09T04:35:43Z",
+      "edition": 4,
+      "update": 0,
+      "archiveBytes": 118279,
+      "archiveSha256": "7b57301a445fbbe51dc466d89e524030314e1d954d19ac9a4b96da81af950436",
+      "sourceKey": "40dd48db4571848c464daf9f2860c4bb801bfaaa39b67976c9ee25b3f32e60e8",
+      "files": [
+        {
+          "name": "US5PSMBC.000",
+          "bytes": 316093,
+          "sha256": "51c736d050cbaaf9e9b70999b7986224d5cb3f74641ef41b9cb6c11993fabfd4"
+        }
+      ]
+    },
+    {
+      "name": "US5PSMBD",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PSMBD.zip",
+      "catalogDate": "2026-10-09T04:35:43Z",
+      "edition": 3,
+      "update": 2,
+      "archiveBytes": 113789,
+      "archiveSha256": "e8cc3161aa0c6a95274b0a0184988bb2f5cf7cf003f7daccebca591dea4c9596",
+      "sourceKey": "d4d2a291ca2f75b11cd442ddb2cc967aefbebf7413092b8d7d6903da6d33236b",
+      "files": [
+        {
+          "name": "US5PSMBD.000",
+          "bytes": 236662,
+          "sha256": "ea16f5618b9aef61fa8cb3826d65f9c0c365583434cc5ea10d6d17fb3d99c0b9"
+        },
+        {
+          "name": "US5PSMBD.001",
+          "bytes": 2108,
+          "sha256": "1991134fafddb447282337526884de9457c6c49744e2ed7dc687c3e9272e25b9"
+        },
+        {
+          "name": "US5PSMBD.002",
+          "bytes": 2459,
+          "sha256": "31c10b7b337a508946e642df2fbc9ab7cbc2e4df9def3c37bb58bb4f44cb710f"
+        }
+      ]
+    },
+    {
+      "name": "US5PSMBE",
+      "catalogScale": 22000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PSMBE.zip",
+      "catalogDate": "2026-10-09T04:35:43Z",
+      "edition": 2,
+      "update": 0,
+      "archiveBytes": 130902,
+      "archiveSha256": "e42293e5429ae56e1bb52d0a9762ee675a3d63c1cc68aebda6d256102c2932bb",
+      "sourceKey": "694003e3d0f21778a01db1f292196eb3d202fff1ccd3493091ae0371b0d630fd",
+      "files": [
+        {
+          "name": "US5PSMBE.000",
+          "bytes": 310224,
+          "sha256": "2953fe300a2c55a2b814fb00a04ca20cff77d1240e0feddc12b8212997eaff3a"
+        }
+      ]
+    },
+    {
+      "name": "US5PVDHC",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PVDHC.zip",
+      "catalogDate": "2026-10-09T04:35:37Z",
+      "edition": 3,
+      "update": 1,
+      "archiveBytes": 50488,
+      "archiveSha256": "4fe14c0c258bb392ad65de468def9f3d7b6868cf66928e81fe958a0754f5299f",
+      "sourceKey": "5e06e6f1b43048a7bdca17b4c1b00f6679c87c133408be18a3e8b60e020cc683",
+      "files": [
+        {
+          "name": "US5PVDHC.000",
+          "bytes": 162716,
+          "sha256": "c1945dfd36d22ada27130720602cc8974b3f16deb4ae3c8975e8695b8fd3bc21"
+        },
+        {
+          "name": "US5PVDHC.001",
+          "bytes": 13737,
+          "sha256": "c1f3c5c66f9f88736b4c44a9e12e00cb0a377f2875f8ac20517831aede3cbb23"
+        }
+      ]
+    },
+    {
+      "name": "US5PVDHD",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PVDHD.zip",
+      "catalogDate": "2026-10-09T04:35:37Z",
+      "edition": 6,
+      "update": 0,
+      "archiveBytes": 194434,
+      "archiveSha256": "547ba4dd1aa10cade4906ef68292c741314c99db4dd5ce829da2ad8484e69cde",
+      "sourceKey": "0f576e9a6b735744e65f023870f673373562134427a0b76b578356816c6e8782",
+      "files": [
+        {
+          "name": "US5PVDHD.000",
+          "bytes": 640625,
+          "sha256": "9f12f24cc30e9c2283b26a60d327ce5886854df5dbfc4c64771567d0480f4259"
+        }
+      ]
+    },
+    {
+      "name": "US5PVDID",
+      "catalogScale": 12000,
+      "url": "https://www.charts.noaa.gov/ENCs/US5PVDID.zip",
+      "catalogDate": "2026-10-09T04:35:37Z",
+      "edition": 3,
+      "update": 0,
+      "archiveBytes": 34610,
+      "archiveSha256": "f04b025afde1eff2023288e756d9acf8fc168637fbff2f53c8e06cc3332d9dc3",
+      "sourceKey": "8742c1fa83bad9b8b07cd8a16afea5b2ab3e462c5b50dade4b8baa9f5031f4ec",
+      "files": [
+        {
+          "name": "US5PVDID.000",
+          "bytes": 86043,
+          "sha256": "45779550f67d7964cf93bce90201df03cf77350a58fa5226ffbf623af3b6cab5"
+        }
+      ]
+    }
+  ],
+  "nativeMetadataValidated": false,
+  "rendered": false,
+  "coverageComplete": false,
+  "devices": false,
+  "publication": false
+}

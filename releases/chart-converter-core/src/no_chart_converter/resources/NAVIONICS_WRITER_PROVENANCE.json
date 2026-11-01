@@ -1,0 +1,40 @@
+{
+  "currentSource": {
+    "bytes": 8429,
+    "sha256": "c0494419bc669e007205e838b4a984deeea325edb57d8f0b0380478e1d770f18"
+  },
+  "externalAcceptance": "ONLY_EXACT_166_BYTE_SYNTHETIC_INPUT_TWO_HEADERS",
+  "format": "no5-own-nav-header-writer-provenance/1",
+  "geographicSemanticsProved": false,
+  "geometryEncoded": false,
+  "nativeCallsOnImportOrWrite": false,
+  "originalRuntimeBundled": false,
+  "purchasedChartPayloadsBundled": false,
+  "scope": "OWN_CANONICAL_CLEARTEXT_HEADER_DIRECTORY_ONLY",
+  "sourceOrigins": {
+    "actualHeaderJoin": {
+      "bytes": 7286,
+      "sha256": "7646298232c9ba2bb7f5f94a6c824b35e777779f8b349c81069febc5648f0541"
+    },
+    "actualOriginalDirectoryRead": {
+      "bytes": 54351,
+      "sha256": "9ceb1cf2a965a3a83590679784ea4b115acceb0a635b3a148a0ec02665956b8c"
+    },
+    "headerWriter": {
+      "bytes": 2647,
+      "sha256": "ec24f68d1f0a1da130d626bae34cfb92eeca06ab7fb5ea43305cf584903b5c17"
+    },
+    "independentActualReview": {
+      "bytes": 3292,
+      "sha256": "c9aeb544862ab6d0d3425a62bf58d34ab29304ee0a2ff96a3db2b609deab4559"
+    },
+    "ownSyntheticInput": {
+      "bytes": 166,
+      "sha256": "dc5c48b1db5f4a01cdd8c266bc8cf293dbf161ae36a7f149f2ba0ca14d05ab89"
+    },
+    "recordWriter": {
+      "bytes": 2873,
+      "sha256": "192c1104a5094852fab7e90f5deb202ea5d333b99d105041f314cac963a1c349"
+    }
+  }
+}

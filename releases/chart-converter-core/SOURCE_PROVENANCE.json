@@ -1,0 +1,945 @@
+{
+  "baseline": {
+    "commit": "ad498341bc0855a7b8057fcb208eeefc930f7696",
+    "note": "Annotated rollback tag predates functional portability changes. Later commits add reviewed source closure while retaining original source hashes.",
+    "sourceFiles": 78,
+    "tag": "converter-source-baseline-20261016"
+  },
+  "files": [
+    {
+      "definedFunctions": 18,
+      "imported": "source_snapshot/tools/area-picker-v15/server.py",
+      "importedBytes": 18566,
+      "importedSHA256": "d0e127df2f0a16d14d2761de03bf02ef1036d499179e47cfb351e402341b9896",
+      "pathNormalizationOnly": true,
+      "source": "tools/area-picker-v15/server.py",
+      "sourceBytes": 18569,
+      "sourceSHA256": "cccfe07aeb67bd1c9e4d01f76930366cb8ab49f67bf49e544f73419797db3630"
+    },
+    {
+      "definedFunctions": null,
+      "imported": "source_snapshot/tools/area-picker-v15/static/app.js",
+      "importedBytes": 27445,
+      "importedSHA256": "00096d7f9037c3e199359091f7df50eea6e408f28396abac8cf11758c57ec6c1",
+      "pathNormalizationOnly": false,
+      "source": "tools/area-picker-v15/static/app.js",
+      "sourceBytes": 27445,
+      "sourceSHA256": "00096d7f9037c3e199359091f7df50eea6e408f28396abac8cf11758c57ec6c1"
+    },
+    {
+      "definedFunctions": null,
+      "imported": "source_snapshot/tools/area-picker-v15/static/index.html",
+      "importedBytes": 8189,
+      "importedSHA256": "91a88d7c07d33a2fb77024ff5bbf2fb500891f3170f371d3d2ca1639c7656555",
+      "pathNormalizationOnly": false,
+      "source": "tools/area-picker-v15/static/index.html",
+      "sourceBytes": 8189,
+      "sourceSHA256": "91a88d7c07d33a2fb77024ff5bbf2fb500891f3170f371d3d2ca1639c7656555"
+    },
+    {
+      "definedFunctions": null,
+      "imported": "source_snapshot/tools/area-picker-v15/static/style.css",
+      "importedBytes": 12682,
+      "importedSHA256": "5403b64e04a7b6af25ad69112606ec5b51ad4f61f115c6e185923b417d482f8b",
+      "pathNormalizationOnly": false,
+      "source": "tools/area-picker-v15/static/style.css",
+      "sourceBytes": 12682,
+      "sourceSHA256": "5403b64e04a7b6af25ad69112606ec5b51ad4f61f115c6e185923b417d482f8b"
+    },
+    {
+      "definedFunctions": 10,
+      "imported": "source_snapshot/tools/host-conversion/convert.py",
+      "importedBytes": 7530,
+      "importedSHA256": "1a7e1f28230c16d4d0270a5a0eea17201092731e9d436064de85feafa0e9f885",
+      "pathNormalizationOnly": true,
+      "source": "tools/host-conversion/convert.py",
+      "sourceBytes": 7587,
+      "sourceSHA256": "0f49c384200e69c1b504875f4980dfef9990d23130510b3b8a70664e0f980b1b"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/tools/host-conversion/country_tool.py",
+      "importedBytes": 2938,
+      "importedSHA256": "cc867989638a05666be77aefd72a39aaecfffefcc9d531f5db04026ce5103842",
+      "pathNormalizationOnly": false,
+      "source": "tools/host-conversion/country_tool.py",
+      "sourceBytes": 2938,
+      "sourceSHA256": "cc867989638a05666be77aefd72a39aaecfffefcc9d531f5db04026ce5103842"
+    },
+    {
+      "definedFunctions": 5,
+      "imported": "source_snapshot/tools/host-conversion/v3/native-grid-subset-v2/convert.py",
+      "importedBytes": 3595,
+      "importedSHA256": "3ed4ba26dc883b53bc75729940e85131dbf1ee661560ec0daa0caed9c255a6a2",
+      "pathNormalizationOnly": true,
+      "source": "tools/host-conversion/v3/native-grid-subset-v2/convert.py",
+      "sourceBytes": 3652,
+      "sourceSHA256": "dcfb1eba1c88d6130a60b4441be488f63815292aca36e153757fb8b1ab13b27f"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/build_handoff.py",
+      "importedBytes": 6948,
+      "importedSHA256": "1d5038c435bfa34b05489067af67b7a1230b63a189ddbe7a798ac60dcb23fc25",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/build_handoff.py",
+      "sourceBytes": 6948,
+      "sourceSHA256": "1d5038c435bfa34b05489067af67b7a1230b63a189ddbe7a798ac60dcb23fc25"
+    },
+    {
+      "definedFunctions": 12,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/halfplane_proxy.py",
+      "importedBytes": 5800,
+      "importedSHA256": "11b320e0d3b3d8d69254d2a0c59ad7dbf2c8c127a9698169403b8fc52a7f4f22",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/halfplane_proxy.py",
+      "sourceBytes": 5800,
+      "sourceSHA256": "11b320e0d3b3d8d69254d2a0c59ad7dbf2c8c127a9698169403b8fc52a7f4f22"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/pilot_halfplane.py",
+      "importedBytes": 6872,
+      "importedSHA256": "925257a35cfd52d72224894d6f3cb5f0aeeac0049faa663f10423b83171723a2",
+      "pathNormalizationOnly": true,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-addendum/pilot_halfplane.py",
+      "sourceBytes": 6881,
+      "sourceSHA256": "d58a4f7e1fc765bd313546ff0ba590ca9e75d21f44297ac83b542fa7b2908e11"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/build_handoff.py",
+      "importedBytes": 4544,
+      "importedSHA256": "2c0aa8976013525013501f8668947afec2c359d0ace4683743ab2fea82d87f9a",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/build_handoff.py",
+      "sourceBytes": 4544,
+      "sourceSHA256": "2c0aa8976013525013501f8668947afec2c359d0ace4683743ab2fea82d87f9a"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/halfplane_line.py",
+      "importedBytes": 3113,
+      "importedSHA256": "7b632e38a607477f8d0edcad242304c734cfdffe8ed0aaddde2bc3a1d7fbb88d",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/halfplane_line.py",
+      "sourceBytes": 3113,
+      "sourceSHA256": "7b632e38a607477f8d0edcad242304c734cfdffe8ed0aaddde2bc3a1d7fbb88d"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/pilot_lines.py",
+      "importedBytes": 5433,
+      "importedSHA256": "81d390f4a51a122e37e0ded109273ce9596af31bc9388cb20dc5f11253d6247e",
+      "pathNormalizationOnly": true,
+      "source": "work/AP02/20261016/navionics-spatial-learning-v19/halfplane-line-addendum/pilot_lines.py",
+      "sourceBytes": 5442,
+      "sourceSHA256": "422d7da98130d7cb6082341b704d647e8a8b66d9a530bf01342bb3842fb0ee13"
+    },
+    {
+      "definedFunctions": 39,
+      "imported": "source_snapshot/work/AP02/decoder.py",
+      "importedBytes": 47823,
+      "importedSHA256": "ff87e3e553c95fa85f5063825fa5666ddb8b742e29a93ac5b47b976e2f584199",
+      "pathNormalizationOnly": true,
+      "source": "work/AP02/decoder.py",
+      "sourceBytes": 47886,
+      "sourceSHA256": "d061208dafea0a4ef1f9c3d0aefbcc14d743ea19fe9c7e64ad3e4e07b8c86a3f"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP02/product-completion-20261014/scope-receipt-interning-v1/scope_interning.py",
+      "importedBytes": 4467,
+      "importedSHA256": "530c68070de112fc1aa4618049e4a0c88000aa8550349238b922cf8ad54073aa",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/product-completion-20261014/scope-receipt-interning-v1/scope_interning.py",
+      "sourceBytes": 4467,
+      "sourceSHA256": "530c68070de112fc1aa4618049e4a0c88000aa8550349238b922cf8ad54073aa"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP02/product-completion-20261014/source-selftouch-coverage-semantics-v1/source_walk.py",
+      "importedBytes": 7472,
+      "importedSHA256": "63949e55c08579f42f23d536aaefe6bc19075db0bf8288ecf4ea6e635247a3f0",
+      "pathNormalizationOnly": false,
+      "source": "work/AP02/product-completion-20261014/source-selftouch-coverage-semantics-v1/source_walk.py",
+      "sourceBytes": 7472,
+      "sourceSHA256": "63949e55c08579f42f23d536aaefe6bc19075db0bf8288ecf4ea6e635247a3f0"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/assemble_native_grid.py",
+      "importedBytes": 1872,
+      "importedSHA256": "77dc66a0efea1999ffc016aa1203694e80496fdc5dcf399a80472272d19212f4",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/assemble_native_grid.py",
+      "sourceBytes": 1872,
+      "sourceSHA256": "77dc66a0efea1999ffc016aa1203694e80496fdc5dcf399a80472272d19212f4"
+    },
+    {
+      "definedFunctions": 5,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/composite_admission.py",
+      "importedBytes": 16914,
+      "importedSHA256": "3449597010ca3ce1802390bae7a7a6aa3b0d23a359b06f3763690798baa914be",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/composite_admission.py",
+      "sourceBytes": 16914,
+      "sourceSHA256": "3449597010ca3ce1802390bae7a7a6aa3b0d23a359b06f3763690798baa914be"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/generation_api.py",
+      "importedBytes": 30793,
+      "importedSHA256": "01e5c2f216fc6c79d19e07536b45ad5888a5686991c9baa367b5fd1a594c984c",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/generation_api.py",
+      "sourceBytes": 31267,
+      "sourceSHA256": "2caece4c5e9282775525a81b9b08194439f8a4409ee801840d0bf23909235d57"
+    },
+    {
+      "definedFunctions": 14,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/generation_io.py",
+      "importedBytes": 4720,
+      "importedSHA256": "2d198f7f18eb534f0797a2e1da418be25a9c655e7e2481075561da7f6e054570",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/generation_io.py",
+      "sourceBytes": 4903,
+      "sourceSHA256": "cb860ce76b77f9e824d6da01dbf2727743840412c096db5ec03e3b057e5a424a"
+    },
+    {
+      "definedFunctions": 18,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/native_grid_patch.py",
+      "importedBytes": 17031,
+      "importedSHA256": "f3551aa754fa396fac59d3d9089e88a7c7f37fac7aecc358686f5dff716fdc69",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/native_grid_patch.py",
+      "sourceBytes": 17031,
+      "sourceSHA256": "f3551aa754fa396fac59d3d9089e88a7c7f37fac7aecc358686f5dff716fdc69"
+    },
+    {
+      "definedFunctions": 11,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/native_grid_readback.py",
+      "importedBytes": 13866,
+      "importedSHA256": "23bea3d577d016e838b803ee2b4eb19a65f86736505e305ebcc5c9ea3c5350a6",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/native_grid_readback.py",
+      "sourceBytes": 13866,
+      "sourceSHA256": "23bea3d577d016e838b803ee2b4eb19a65f86736505e305ebcc5c9ea3c5350a6"
+    },
+    {
+      "definedFunctions": 31,
+      "imported": "source_snapshot/work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/original_frame_stream.py",
+      "importedBytes": 8203,
+      "importedSHA256": "4e306c62ea27c92b5791487a37043ffe3db5e1735bda9d7e9447d2043f319089",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261013/native-grid-materializer-v3/composite-v2/original_frame_stream.py",
+      "sourceBytes": 8203,
+      "sourceSHA256": "4e306c62ea27c92b5791487a37043ffe3db5e1735bda9d7e9447d2043f319089"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/compose_details.py",
+      "importedBytes": 11666,
+      "importedSHA256": "289899ba4c4c494e844d20650058e92cf519abb82bc118f9867d115a6c470f93",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/compose_details.py",
+      "sourceBytes": 11729,
+      "sourceSHA256": "99d218b83d208ef301d2f471a827a49adfa4d3304b12a45bd3161662ff67e61a"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/producer_runtime.py",
+      "importedBytes": 5808,
+      "importedSHA256": "90d952416abc42a600b67f7ec592e79f8d69100131084f8d5428f5ba0038fd4b",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/producer_runtime.py",
+      "sourceBytes": 5808,
+      "sourceSHA256": "90d952416abc42a600b67f7ec592e79f8d69100131084f8d5428f5ba0038fd4b"
+    },
+    {
+      "definedFunctions": 0,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/reproduce_actual_ground_failure.py",
+      "importedBytes": 3895,
+      "importedSHA256": "216bf64ae3dcf501f79d0e43ee020af77a1a8a2c38f2caf02fda83ee39678e55",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/reproduce_actual_ground_failure.py",
+      "sourceBytes": 3895,
+      "sourceSHA256": "216bf64ae3dcf501f79d0e43ee020af77a1a8a2c38f2caf02fda83ee39678e55"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/source_rank.py",
+      "importedBytes": 1214,
+      "importedSHA256": "dd197b6abf61ef52d399a14b12bfe4fe755d77f92c165ca693d9da28aedfa5b3",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/source_rank.py",
+      "sourceBytes": 1214,
+      "sourceSHA256": "dd197b6abf61ef52d399a14b12bfe4fe755d77f92c165ca693d9da28aedfa5b3"
+    },
+    {
+      "definedFunctions": 10,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/writer_extension.py",
+      "importedBytes": 9615,
+      "importedSHA256": "df891de309d3042a4f10529402492814208063aa93daa5524c2b9ea4290d314a",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-detail-geometry-v1/writer_extension.py",
+      "sourceBytes": 9615,
+      "sourceSHA256": "df891de309d3042a4f10529402492814208063aa93daa5524c2b9ea4290d314a"
+    },
+    {
+      "definedFunctions": 17,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/DIAGNOSTIC_EXECUTED_COMPOSER_54a50065.py",
+      "importedBytes": 39142,
+      "importedSHA256": "11bd83fce7f6ed0bde8badb48d2094fe4e792620c8f93ed752dc9d3e2d16dc52",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/DIAGNOSTIC_EXECUTED_COMPOSER_54a50065.py",
+      "sourceBytes": 39205,
+      "sourceSHA256": "54a500651cd740abf87e07a2314d31ffc304f008ca9fb0f17283a4e1df574079"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/collect_current_ground_failures.py",
+      "importedBytes": 6078,
+      "importedSHA256": "840771d75f0013ce2e8eaff42bcde4136f97b3ed87d8c00ec29825ab2dc0cb43",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/collect_current_ground_failures.py",
+      "sourceBytes": 6141,
+      "sourceSHA256": "e8ec7d723a8b1e7906ff482c3c8e5219095254654c37ccafd15a18fdec240929"
+    },
+    {
+      "definedFunctions": 17,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/compose_country.py",
+      "importedBytes": 39142,
+      "importedSHA256": "998b611d118e246b59edf94811d305ce4de1aef283842909343f6346cdc3ba50",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/compose_country.py",
+      "sourceBytes": 39205,
+      "sourceSHA256": "51d686c65f937d0d0fd4eacb0eae10b11a4de0051dcbd1571d89e0bd5bc9780b"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/probe_sparse_layout.py",
+      "importedBytes": 4230,
+      "importedSHA256": "b190e485c8ec16fb7d541ad88a54a63f402ed8456de06d950f225dabf706f876",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/probe_sparse_layout.py",
+      "sourceBytes": 4230,
+      "sourceSHA256": "b190e485c8ec16fb7d541ad88a54a63f402ed8456de06d950f225dabf706f876"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/prove_used_ground_profiles.py",
+      "importedBytes": 6076,
+      "importedSHA256": "6b6d617920d231bba8abd6467cca5506188f116100fcee05d187135e365da516",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/country-v7/prove_used_ground_profiles.py",
+      "sourceBytes": 6139,
+      "sourceSHA256": "bd0b317835b2d34b2954b9254d05cd09657ec7f06582c7dc193e144f66a31d0b"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/build.py",
+      "importedBytes": 14588,
+      "importedSHA256": "08de2bccab86b3a191621648df0f93c5d1a04e625f0460351ef0d36f787d2041",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/build.py",
+      "sourceBytes": 14651,
+      "sourceSHA256": "1c8d360822dbe9eac351f6c275ccb72b05db099fff5c35f6f42be0991fa02598"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/ground_resolver.py",
+      "importedBytes": 12141,
+      "importedSHA256": "4b45008da42e3abf51908d1598f7fd8f17ea21f77e87cf3f4f75fb6de46d1fdb",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/ground_resolver.py",
+      "sourceBytes": 12141,
+      "sourceSHA256": "4b45008da42e3abf51908d1598f7fd8f17ea21f77e87cf3f4f75fb6de46d1fdb"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/point_visibility.py",
+      "importedBytes": 6416,
+      "importedSHA256": "64f18ae63f8591049e50d1c0bf4441b1029f743d453a134cd982a8691d251b9d",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/point_visibility.py",
+      "sourceBytes": 6416,
+      "sourceSHA256": "64f18ae63f8591049e50d1c0bf4441b1029f743d453a134cd982a8691d251b9d"
+    },
+    {
+      "definedFunctions": 10,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/prepare.py",
+      "importedBytes": 12181,
+      "importedSHA256": "faf92d100264c94f7179eec0ec326b6f1b7f086910b61ef418f822956ec1d6d9",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/prepare.py",
+      "sourceBytes": 12244,
+      "sourceSHA256": "48c95960749e088dc9787c0ce74d58abd44fa588e28fa4025bb1d67c0aec3534"
+    },
+    {
+      "definedFunctions": 14,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/readback.py",
+      "importedBytes": 16823,
+      "importedSHA256": "d4da75c7242bcaa2c89ce9219d79b866a872650823b36a7a706cf39abfd15eda",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/readback.py",
+      "sourceBytes": 16886,
+      "sourceSHA256": "9a5c90c463326af9d1f1616958e26ac4809c255f030126dc16975d433d62a7e0"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/render_activation.py",
+      "importedBytes": 5901,
+      "importedSHA256": "57b0b1f0366269eb0fcf835fefbf353d0dd78666d0eb415dc9d9f3ffb8a4ed98",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/render_activation.py",
+      "sourceBytes": 5901,
+      "sourceSHA256": "57b0b1f0366269eb0fcf835fefbf353d0dd78666d0eb415dc9d9f3ffb8a4ed98"
+    },
+    {
+      "definedFunctions": 12,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/shared_sourceinfo.py",
+      "importedBytes": 15186,
+      "importedSHA256": "de8c3fe71966767e8f0f09d53288aaaec536058cf36cf3d1237b757cdf30b8b8",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/shared_sourceinfo.py",
+      "sourceBytes": 15186,
+      "sourceSHA256": "de8c3fe71966767e8f0f09d53288aaaec536058cf36cf3d1237b757cdf30b8b8"
+    },
+    {
+      "definedFunctions": 14,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_clip.py",
+      "importedBytes": 15428,
+      "importedSHA256": "81c76339ae60b5fa56487d45b97fbf29a99ba9ac89a4c77ad3c609e425aa05df",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_clip.py",
+      "sourceBytes": 15428,
+      "sourceSHA256": "81c76339ae60b5fa56487d45b97fbf29a99ba9ac89a4c77ad3c609e425aa05df"
+    },
+    {
+      "definedFunctions": 11,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_winner.py",
+      "importedBytes": 8956,
+      "importedSHA256": "6d873b15ef2d8253daf6650be196206f6173d6988eb52b56f6fca7caad7f7f00",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/source_winner.py",
+      "sourceBytes": 8956,
+      "sourceSHA256": "6d873b15ef2d8253daf6650be196206f6173d6988eb52b56f6fca7caad7f7f00"
+    },
+    {
+      "definedFunctions": 13,
+      "imported": "source_snapshot/work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/wire.py",
+      "importedBytes": 8223,
+      "importedSHA256": "182d9059b340f20f309b56ce49f4c8cfc4082cd3f6d737df65f95bb2067deb96",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/wire.py",
+      "sourceBytes": 8223,
+      "sourceSHA256": "182d9059b340f20f309b56ce49f4c8cfc4082cd3f6d737df65f95bb2067deb96"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/build_cape.py",
+      "importedBytes": 12220,
+      "importedSHA256": "9ffc1d5e31a8bd5c9437f966e97fdfcdf602953d5acb9d5cf9ef3832da383d5a",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/build_cape.py",
+      "sourceBytes": 12220,
+      "sourceSHA256": "9ffc1d5e31a8bd5c9437f966e97fdfcdf602953d5acb9d5cf9ef3832da383d5a"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_core.py",
+      "importedBytes": 2119,
+      "importedSHA256": "4c8fa0d7d2a23ef4d55bab63125dfc7c343276d86511cc2fca3497560615f3a0",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_core.py",
+      "sourceBytes": 2119,
+      "sourceSHA256": "4c8fa0d7d2a23ef4d55bab63125dfc7c343276d86511cc2fca3497560615f3a0"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_inventory.py",
+      "importedBytes": 2766,
+      "importedSHA256": "47c84c679b51806d6ed62f2b9ce420d90a87c4f9035b9214fba065d9218002f8",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_inventory.py",
+      "sourceBytes": 2766,
+      "sourceSHA256": "47c84c679b51806d6ed62f2b9ce420d90a87c4f9035b9214fba065d9218002f8"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_tool.py",
+      "importedBytes": 7329,
+      "importedSHA256": "d9745d10cf6561cc495eb8f018708edf243d3a112c306196a3cb6cb999dc2063",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/cape_tool.py",
+      "sourceBytes": 7329,
+      "sourceSHA256": "d9745d10cf6561cc495eb8f018708edf243d3a112c306196a3cb6cb999dc2063"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/export_latest_cape.py",
+      "importedBytes": 1916,
+      "importedSHA256": "b7a76be1bbc14b57df6e56f4ec475210d9d1d5efd54199c2b057fb8d062be82b",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/export_latest_cape.py",
+      "sourceBytes": 1916,
+      "sourceSHA256": "b7a76be1bbc14b57df6e56f4ec475210d9d1d5efd54199c2b057fb8d062be82b"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/cape-town-native-update-v20/storage.py",
+      "importedBytes": 1768,
+      "importedSHA256": "69ebf1f95ece85f8cb9f1a8f81acd8daf001bced09c00d33ae9e50cc32b95962",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/cape-town-native-update-v20/storage.py",
+      "sourceBytes": 1771,
+      "sourceSHA256": "4f728a64988b16564439a962d4b1fe558cff3a6334eb5937501feea156747037"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/country-zoom-native-v15/compose_zoom.py",
+      "importedBytes": 13137,
+      "importedSHA256": "debe7c87e499f850f758cf904ff3d9851930af596f756fbe6f43cb27a500f51c",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/compose_zoom.py",
+      "sourceBytes": 13203,
+      "sourceSHA256": "6e23bf71a6c8b893bfb05f39491af4294e743c9f366d48429959a2f5cdb53925"
+    },
+    {
+      "definedFunctions": 13,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/country-zoom-native-v15/country_tool.py",
+      "importedBytes": 4047,
+      "importedSHA256": "35b8334c0511397f6275b9d4a4219c51d67297db6347a2eeec4345eb20fffa5b",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/country_tool.py",
+      "sourceBytes": 4050,
+      "sourceSHA256": "1334b6685f8ea765f79c2ccaa8533a77ddd7262b8bbed82b96c182eefa3dce9b"
+    },
+    {
+      "definedFunctions": 13,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/country-zoom-native-v15/native_hooks.py",
+      "importedBytes": 8456,
+      "importedSHA256": "ab2c8c142e061ebc3ba9bb4c22d7d600a557f8d42760a010b1d03daef7497b42",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/country-zoom-native-v15/native_hooks.py",
+      "sourceBytes": 8456,
+      "sourceSHA256": "ab2c8c142e061ebc3ba9bb4c22d7d600a557f8d42760a010b1d03daef7497b42"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-arena-v18/arena_core.py",
+      "importedBytes": 8000,
+      "importedSHA256": "af33962f02487b7d71c4b4a001cd851a75e67a3323ac9617dec22146c35d07b3",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-arena-v18/arena_core.py",
+      "sourceBytes": 8000,
+      "sourceSHA256": "af33962f02487b7d71c4b4a001cd851a75e67a3323ac9617dec22146c35d07b3"
+    },
+    {
+      "definedFunctions": 16,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-arena-v18/arena_tool.py",
+      "importedBytes": 17735,
+      "importedSHA256": "ad050a7baae5ea808cac4d8460a46ee34f011774d3101fa37b2b49a4991fe518",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/native-arena-v18/arena_tool.py",
+      "sourceBytes": 17738,
+      "sourceSHA256": "17ed3d5465cd22c4667656b3191193eaf5f4b4475494d7d9b7ed40b9f0ce83c2"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-mask-union-v22/mask_tool.py",
+      "importedBytes": 13075,
+      "importedSHA256": "0ae31eda87be2c13be5f7bae2b74e2c3c6bfb6589b88f52c7660895097e17bf6",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/mask_tool.py",
+      "sourceBytes": 13075,
+      "sourceSHA256": "0ae31eda87be2c13be5f7bae2b74e2c3c6bfb6589b88f52c7660895097e17bf6"
+    },
+    {
+      "definedFunctions": 13,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-mask-union-v22/merge_core.py",
+      "importedBytes": 7295,
+      "importedSHA256": "39c5dcfcc204bbd147ea9fd2c6d8781ed71ba55b524d5e3a8ecc55cb33548c10",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/merge_core.py",
+      "sourceBytes": 7295,
+      "sourceSHA256": "39c5dcfcc204bbd147ea9fd2c6d8781ed71ba55b524d5e3a8ecc55cb33548c10"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-mask-union-v22/potential.py",
+      "importedBytes": 2252,
+      "importedSHA256": "1ebc9d42d8acfe70d797709ff04d5412ecad1ea6a8b111695bacf43b5c0a4f38",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/potential.py",
+      "sourceBytes": 2255,
+      "sourceSHA256": "16370a475356559fc10333b2ace78e06ddab9719dfdcd7a92b24d6b1715f2614"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-mask-union-v22/title_tool.py",
+      "importedBytes": 4426,
+      "importedSHA256": "3316f9a770b64e46006a0b4756cd36eaf4cac5d9bcab1ca8e3c6ab0a7a0d415a",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/title_tool.py",
+      "sourceBytes": 4426,
+      "sourceSHA256": "3316f9a770b64e46006a0b4756cd36eaf4cac5d9bcab1ca8e3c6ab0a7a0d415a"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-mask-union-v22/v22_tool.py",
+      "importedBytes": 2250,
+      "importedSHA256": "c6b073f51011e469e3e084374b49d194b751605a5f751bd6d21a32fe84df24c8",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-mask-union-v22/v22_tool.py",
+      "sourceBytes": 2250,
+      "sourceSHA256": "c6b073f51011e469e3e084374b49d194b751605a5f751bd6d21a32fe84df24c8"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-preparation-v20/build_v20.py",
+      "importedBytes": 11487,
+      "importedSHA256": "11f8f413eae9fe74a8df6937bf1c4cc1518e4bac66279bdec37bcb3e550a577c",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-preparation-v20/build_v20.py",
+      "sourceBytes": 11487,
+      "sourceSHA256": "11f8f413eae9fe74a8df6937bf1c4cc1518e4bac66279bdec37bcb3e550a577c"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-preparation-v20/potential_v20.py",
+      "importedBytes": 5137,
+      "importedSHA256": "d4cf37c6484641a03dca5894530e9778c6705d0805dd68403b8ca9c940b4ce35",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/native-preparation-v20/potential_v20.py",
+      "sourceBytes": 5140,
+      "sourceSHA256": "f09842394d1d21bfef52c52acff6a3909038f2346ec8bede60985ad8ee267939"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-preparation-v20/preparation_core.py",
+      "importedBytes": 2386,
+      "importedSHA256": "7247d4aa8a46fc8f3078c39a229f23d595cc94456d3052d92e8ec19ad77b96b3",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-preparation-v20/preparation_core.py",
+      "sourceBytes": 2386,
+      "sourceSHA256": "7247d4aa8a46fc8f3078c39a229f23d595cc94456d3052d92e8ec19ad77b96b3"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-preparation-v20/preparation_tool.py",
+      "importedBytes": 4637,
+      "importedSHA256": "7f1a2cc43582abb19004ed2c2683bce9d9384879d213150d3f03fd1dbd8d06b4",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-preparation-v20/preparation_tool.py",
+      "sourceBytes": 4637,
+      "sourceSHA256": "7f1a2cc43582abb19004ed2c2683bce9d9384879d213150d3f03fd1dbd8d06b4"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-preparation-v20/readback_v20.py",
+      "importedBytes": 5968,
+      "importedSHA256": "ad22af76ed4c5749aa9e7f1a137a3b83bc5a99bb08236a4ec737a7a009291054",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-preparation-v20/readback_v20.py",
+      "sourceBytes": 5968,
+      "sourceSHA256": "ad22af76ed4c5749aa9e7f1a137a3b83bc5a99bb08236a4ec737a7a009291054"
+    },
+    {
+      "definedFunctions": 1,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19/diagnose_spatial.py",
+      "importedBytes": 3842,
+      "importedSHA256": "0b3e0ae3aae56d9535b618221a3c10cb00ab8dcd65125c4569a26ec189a05570",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19/diagnose_spatial.py",
+      "sourceBytes": 3842,
+      "sourceSHA256": "0b3e0ae3aae56d9535b618221a3c10cb00ab8dcd65125c4569a26ec189a05570"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19/pilot_spatial.py",
+      "importedBytes": 5436,
+      "importedSHA256": "2970b5954c141133559a21ddad556f87ac389ca281f05ac2de9bc8e8886fd3fe",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19/pilot_spatial.py",
+      "sourceBytes": 5436,
+      "sourceSHA256": "2970b5954c141133559a21ddad556f87ac389ca281f05ac2de9bc8e8886fd3fe"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19/spatial_core.py",
+      "importedBytes": 6598,
+      "importedSHA256": "9d288111509b235df992614f749d0cb46e0be67bf416c97668272061eae06fe8",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19/spatial_core.py",
+      "sourceBytes": 6598,
+      "sourceSHA256": "9d288111509b235df992614f749d0cb46e0be67bf416c97668272061eae06fe8"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19/spatial_tool.py",
+      "importedBytes": 14378,
+      "importedSHA256": "8e5aa64afef46f6a5e310e7475690d9f9d5fb5405b89f7ac22c6c717e17189a8",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19/spatial_tool.py",
+      "sourceBytes": 14378,
+      "sourceSHA256": "8e5aa64afef46f6a5e310e7475690d9f9d5fb5405b89f7ac22c6c717e17189a8"
+    },
+    {
+      "definedFunctions": 6,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/arena_companion.py",
+      "importedBytes": 8318,
+      "importedSHA256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/arena_companion.py",
+      "sourceBytes": 8318,
+      "sourceSHA256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/build_c.py",
+      "importedBytes": 13128,
+      "importedSHA256": "f172f875210d6664840ad0a5af3de97fc09c366811ed140a5455282ab57a67c6",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/build_c.py",
+      "sourceBytes": 13128,
+      "sourceSHA256": "f172f875210d6664840ad0a5af3de97fc09c366811ed140a5455282ab57a67c6"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/finish_c.py",
+      "importedBytes": 10326,
+      "importedSHA256": "e098c2123a53a8ba95ffcce4ce9dc35a393d6b951ef78b084addddf110ede545",
+      "pathNormalizationOnly": true,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/finish_c.py",
+      "sourceBytes": 10329,
+      "sourceSHA256": "6b984033504a84b73846d624e6588beb6344b040436f4d72e5df2956c0427a1d"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/proxy_core.py",
+      "importedBytes": 2385,
+      "importedSHA256": "1d49dfeba3c8cbfe0f618bb7ba1bf63c60a6dfd4acb993c92396f5a844c5d577",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/proxy_core.py",
+      "sourceBytes": 2385,
+      "sourceSHA256": "1d49dfeba3c8cbfe0f618bb7ba1bf63c60a6dfd4acb993c92396f5a844c5d577"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/readback_c.py",
+      "importedBytes": 7893,
+      "importedSHA256": "0fd2d5080f57ac53b980a000f06cd1012c2810b33b240e5b3e6a4a8e9c148070",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/readback_c.py",
+      "sourceBytes": 7893,
+      "sourceSHA256": "0fd2d5080f57ac53b980a000f06cd1012c2810b33b240e5b3e6a4a8e9c148070"
+    },
+    {
+      "definedFunctions": 11,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-spatial-v19c/spatial_c_tool.py",
+      "importedBytes": 7577,
+      "importedSHA256": "3f839efd6701a305436d4187392dd037aa89f02af6d502edcd973f0bdba36785",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-spatial-v19c/spatial_c_tool.py",
+      "sourceBytes": 7577,
+      "sourceSHA256": "3f839efd6701a305436d4187392dd037aa89f02af6d502edcd973f0bdba36785"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP04/product-completion-20261016/native-visual-prune-v23/prune_tool.py",
+      "importedBytes": 8312,
+      "importedSHA256": "64e5c0c63652ba7ca02fa87b304e8aa50b1d6b9beeb862d7c8574ae76989b0d4",
+      "pathNormalizationOnly": false,
+      "source": "work/AP04/product-completion-20261016/native-visual-prune-v23/prune_tool.py",
+      "sourceBytes": 8312,
+      "sourceSHA256": "64e5c0c63652ba7ca02fa87b304e8aa50b1d6b9beeb862d7c8574ae76989b0d4"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP08/product-completion-20261015/overlay-coverage-mask-v1/overlay_masks.py",
+      "importedBytes": 10420,
+      "importedSHA256": "7fdd584b96f2b8d871e46dfccc5e4bd67e6c64aea0288e9aa1886165be0fc5af",
+      "pathNormalizationOnly": false,
+      "source": "work/AP08/product-completion-20261015/overlay-coverage-mask-v1/overlay_masks.py",
+      "sourceBytes": 10420,
+      "sourceSHA256": "7fdd584b96f2b8d871e46dfccc5e4bd67e6c64aea0288e9aa1886165be0fc5af"
+    },
+    {
+      "definedFunctions": 4,
+      "imported": "source_snapshot/work/AP08/product-completion-20261015/overlay-coverage-mask-v1/rank_injection.py",
+      "importedBytes": 2661,
+      "importedSHA256": "ffbf5591476c409ea16159e206467dea63386386a2598fc0dde8c66a58e4ebe5",
+      "pathNormalizationOnly": false,
+      "source": "work/AP08/product-completion-20261015/overlay-coverage-mask-v1/rank_injection.py",
+      "sourceBytes": 2661,
+      "sourceSHA256": "ffbf5591476c409ea16159e206467dea63386386a2598fc0dde8c66a58e4ebe5"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP08/product-completion-20261015/vertex-projection-clip-v1/robust_clip.py",
+      "importedBytes": 9278,
+      "importedSHA256": "99a59e683c9588e7b0890a7531fa94059b8f51bfdd941add32b8a52b77297500",
+      "pathNormalizationOnly": false,
+      "source": "work/AP08/product-completion-20261015/vertex-projection-clip-v1/robust_clip.py",
+      "sourceBytes": 9278,
+      "sourceSHA256": "99a59e683c9588e7b0890a7531fa94059b8f51bfdd941add32b8a52b77297500"
+    },
+    {
+      "definedFunctions": 2,
+      "imported": "source_snapshot/work/AP09/product-completion-20261016/navionics-writer-header-v2/header_writer.py",
+      "importedBytes": 2647,
+      "importedSHA256": "ec24f68d1f0a1da130d626bae34cfb92eeca06ab7fb5ea43305cf584903b5c17",
+      "pathNormalizationOnly": false,
+      "source": "work/AP09/product-completion-20261016/navionics-writer-header-v2/header_writer.py",
+      "sourceBytes": 2647,
+      "sourceSHA256": "ec24f68d1f0a1da130d626bae34cfb92eeca06ab7fb5ea43305cf584903b5c17"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP09/product-completion-20261016/navionics-writer-prototype-v1/record_writer.py",
+      "importedBytes": 2873,
+      "importedSHA256": "192c1104a5094852fab7e90f5deb202ea5d333b99d105041f314cac963a1c349",
+      "pathNormalizationOnly": false,
+      "source": "work/AP09/product-completion-20261016/navionics-writer-prototype-v1/record_writer.py",
+      "sourceBytes": 2873,
+      "sourceSHA256": "192c1104a5094852fab7e90f5deb202ea5d333b99d105041f314cac963a1c349"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/ground-availability-mask-v2/ground_masks.py",
+      "importedBytes": 15308,
+      "importedSHA256": "55f01764c99396b52ddf8556a58185dc08964a3dcdede082bd3e7f0120944dc4",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/ground-availability-mask-v2/ground_masks.py",
+      "sourceBytes": 15308,
+      "sourceSHA256": "55f01764c99396b52ddf8556a58185dc08964a3dcdede082bd3e7f0120944dc4"
+    },
+    {
+      "definedFunctions": 15,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/integer-clip-robust-v2/robust_clip.py",
+      "importedBytes": 24515,
+      "importedSHA256": "018cc432a39dd6b92bb6d8ac51b33b15e488130d8783668468281eb243f7d856",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/integer-clip-robust-v2/robust_clip.py",
+      "sourceBytes": 24515,
+      "sourceSHA256": "018cc432a39dd6b92bb6d8ac51b33b15e488130d8783668468281eb243f7d856"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/integer-clip-robust-v3/robust_clip.py",
+      "importedBytes": 5954,
+      "importedSHA256": "0f9bc810f7378a5926bdb9b6260db8f3482b05482beeb53c6c274ea6b4dda35c",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/integer-clip-robust-v3/robust_clip.py",
+      "sourceBytes": 5954,
+      "sourceSHA256": "0f9bc810f7378a5926bdb9b6260db8f3482b05482beeb53c6c274ea6b4dda35c"
+    },
+    {
+      "definedFunctions": 7,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/owner-mask-construction-continuation-v1/scoped_construction.py",
+      "importedBytes": 4807,
+      "importedSHA256": "1989e2efad9e92a1b3e8512bd8a5e3a42d87abb2f1a3a6eaf407c2177a615c8e",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/owner-mask-construction-continuation-v1/scoped_construction.py",
+      "sourceBytes": 4807,
+      "sourceSHA256": "1989e2efad9e92a1b3e8512bd8a5e3a42d87abb2f1a3a6eaf407c2177a615c8e"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/owner-mask-construction-continuation-v2/scoped_construction.py",
+      "importedBytes": 9917,
+      "importedSHA256": "93ca063a296285d2d27ec3ef8cf927424850a3b7a7aa6abdb388acd11acbcfd7",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/owner-mask-construction-continuation-v2/scoped_construction.py",
+      "sourceBytes": 9917,
+      "sourceSHA256": "93ca063a296285d2d27ec3ef8cf927424850a3b7a7aa6abdb388acd11acbcfd7"
+    },
+    {
+      "definedFunctions": 10,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/owner-mask-service-v1/owner_masks.py",
+      "importedBytes": 9748,
+      "importedSHA256": "eacab9b8c61f4ec5f0bac007f84df46b221e577b5872ebf5414d64ee7476c9e1",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/owner-mask-service-v1/owner_masks.py",
+      "sourceBytes": 9748,
+      "sourceSHA256": "eacab9b8c61f4ec5f0bac007f84df46b221e577b5872ebf5414d64ee7476c9e1"
+    },
+    {
+      "definedFunctions": 14,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/source-winner-clip-v1/source_clip.py",
+      "importedBytes": 15428,
+      "importedSHA256": "81c76339ae60b5fa56487d45b97fbf29a99ba9ac89a4c77ad3c609e425aa05df",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/source-winner-clip-v1/source_clip.py",
+      "sourceBytes": 15428,
+      "sourceSHA256": "81c76339ae60b5fa56487d45b97fbf29a99ba9ac89a4c77ad3c609e425aa05df"
+    },
+    {
+      "definedFunctions": 3,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/source-winner-extra-clip-v1/extra_clip.py",
+      "importedBytes": 6548,
+      "importedSHA256": "e0f235e77f427b6eb072933946b06712ad06e4719a3d99c97b00facb0f1dcad7",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/source-winner-extra-clip-v1/extra_clip.py",
+      "sourceBytes": 6548,
+      "sourceSHA256": "e0f235e77f427b6eb072933946b06712ad06e4719a3d99c97b00facb0f1dcad7"
+    },
+    {
+      "definedFunctions": 5,
+      "imported": "source_snapshot/work/AP11/product-completion-20261014/source-winner-ring-clip-v1/ring_clip.py",
+      "importedBytes": 9441,
+      "importedSHA256": "039b8bc2a98438d02f3865fc270b24f130030038e585acd7c9286f4fe6c8d9db",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261014/source-winner-ring-clip-v1/ring_clip.py",
+      "sourceBytes": 9441,
+      "sourceSHA256": "039b8bc2a98438d02f3865fc270b24f130030038e585acd7c9286f4fe6c8d9db"
+    },
+    {
+      "definedFunctions": 9,
+      "imported": "source_snapshot/work/AP11/product-completion-20261015/country-v10-native-portrayal-v1/localize_metadata.py",
+      "importedBytes": 4337,
+      "importedSHA256": "d47a5481ec95006b1f40f16f7566ec779897a0e0ba9086205efac9dd54a5047d",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261015/country-v10-native-portrayal-v1/localize_metadata.py",
+      "sourceBytes": 4337,
+      "sourceSHA256": "d47a5481ec95006b1f40f16f7566ec779897a0e0ba9086205efac9dd54a5047d"
+    },
+    {
+      "definedFunctions": 33,
+      "imported": "source_snapshot/work/AP11/product-completion-20261015/region-export-v1/region_export.py",
+      "importedBytes": 29022,
+      "importedSHA256": "e938c7a7020ae874686c3d1a64bcc3964f98bffd76a925ece042f516b73d4057",
+      "pathNormalizationOnly": true,
+      "source": "work/AP11/product-completion-20261015/region-export-v1/region_export.py",
+      "sourceBytes": 29088,
+      "sourceSHA256": "15cb96cb86aed06e029652761e474eb8decf00a6ee0b173a8276e8d5ef8f1130"
+    },
+    {
+      "definedFunctions": 13,
+      "imported": "source_snapshot/work/AP11/product-completion-20261016/native-zoom-selection-v15/productive_scale_quilt.py",
+      "importedBytes": 8709,
+      "importedSHA256": "bb4bf0f36f2408b6fce52e9876a3ee60f88fca9136f9a326c732ddcc786a1daa",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261016/native-zoom-selection-v15/productive_scale_quilt.py",
+      "sourceBytes": 8709,
+      "sourceSHA256": "bb4bf0f36f2408b6fce52e9876a3ee60f88fca9136f9a326c732ddcc786a1daa"
+    },
+    {
+      "definedFunctions": 26,
+      "imported": "source_snapshot/work/AP11/product-completion-20261016/native-zoom-selection-v15/zoom_quilt.py",
+      "importedBytes": 21396,
+      "importedSHA256": "8580dd5988ba757924ee3d71cd7c59a626bc5ad3a60b7295eac30fd1d912dc43",
+      "pathNormalizationOnly": false,
+      "source": "work/AP11/product-completion-20261016/native-zoom-selection-v15/zoom_quilt.py",
+      "sourceBytes": 21396,
+      "sourceSHA256": "8580dd5988ba757924ee3d71cd7c59a626bc5ad3a60b7295eac30fd1d912dc43"
+    }
+  ],
+  "format": "no5-chart-converter-source-provenance/1",
+  "kind": "CURATED_OWN_SOURCE_SNAPSHOT_WITH_ORIGINAL_HASHES",
+  "normalization": "Personal machine/input/output path prefixes and external volume identifier replaced by neutral placeholders; original hashes retained. No input manifests, chart data, OEM binaries or runtime records imported.",
+  "notYetPortable": "source_snapshot preserves the historical layout and pin constraints as rollback source; subsequent package modules replace machine-specific orchestration.",
+  "sourceTree": "chart-conversion-workspace/raymarine-export-plan"
+}

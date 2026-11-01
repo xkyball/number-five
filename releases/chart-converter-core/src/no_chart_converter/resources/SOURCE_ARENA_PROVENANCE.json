@@ -1,0 +1,41 @@
+{
+  "OEMLibrariesOrChartDataImported": false,
+  "actualDeviceLoadTimeClaim": false,
+  "coordinateOrDepthDecodingOrQuantizationChanged": false,
+  "format": "no5-own-per-source-arena-wrapper-provenance/1",
+  "fullOriginalPrefixInverseRequired": true,
+  "independentCLIApproval": {
+    "bytes": 2037,
+    "path": "work/AP11/product-completion-20261017/source-arena-review-v30/CLI_APPROVAL.json",
+    "sha256": "b3337fb12ec5d75b5d2c0c29ba3996148e022af5556f065b3dc96a8a76ff753e"
+  },
+  "independentSourceApproval": {
+    "bytes": 5507,
+    "path": "work/AP11/product-completion-20261017/source-arena-review-v30/SOURCE_APPROVAL.json",
+    "sha256": "8a5b9623214f3bf8470dab18002e3520baaac689dc55b7e130c623b457b3e48f"
+  },
+  "origin": "New own generic wrapper around existing frozen typed span union kernel; no coordinate filtering or new geometry convention.",
+  "originalGeometryQueryProgrammeSourceSelectionRetained": true,
+  "originalOwnTypedSpanKernel": {
+    "bytes": 8318,
+    "path": "work/AP04/product-completion-20261016/native-spatial-v19c/arena_companion.py",
+    "sha256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+  },
+  "packageFiles": {
+    "cli.py": {
+      "bytes": 17032,
+      "sha256": "e4aa1ca052a798f19790c0cea54fc455eae2bd65c8bf60fa683e1a514e360e7d"
+    },
+    "rx5/arena.py": {
+      "bytes": 8318,
+      "sha256": "c45d560d7093e61df5f3cbf8184c8e980aa78e42d9493c1170a0b0d86bfb9335"
+    },
+    "rx5/source_arena.py": {
+      "bytes": 13068,
+      "sha256": "4e3319a525139974411e4ecea09c573a8199dca4bed741fd142c0c2f8d5b7384"
+    }
+  },
+  "policy": "lossless-per-source-full-typed-span-union-append-arenas/1",
+  "sourceAndKernelAndScopePlanSHARequired": true,
+  "sourceRoot": "raymarine-export-plan"
+}

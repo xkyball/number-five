@@ -1,0 +1,92 @@
+Recorded Sonard replay with bounded archive retention
+
+Scope
+  tools/replay_view.py runs the retained, immutable protocol-60s.zip through
+  a private PTY and the exact pinned Sonard0.4.16 wheel. It never opens an
+  existing USB/serial endpoint. It is historical replay, not new acoustic
+  evidence. The normal Sonard host and its archiving remain unchanged.
+
+Inputs on this checkout
+  .verification/offline-fixtures/protocol-60s.zip
+    SHA25608b494893d8c0fc77a4cc2bc456b3a9b0583b05b6690a8fda5d6eb113320797c
+  .verification/recovery/no5_sonard_openecho-0.4.16-py3-none-any.whl
+    SHA256590af7330c4ac5dbb9a23d91c91a47ebe1030fc45ffb96515f268bf13bf36ed3
+  Dependencies come from the existing runtime-030 environment; no installation.
+  Raw source files, values, flags, sample period and sample geometry are retained.
+  Command/events and PING identity/time are explicitly remapped for replay.
+
+Start and stop
+  Run the existing environment's Python with tools/replay_view.py --output
+  NEW_INTERNAL_DIRECTORY. Default duration is3600s; --duration-s 0 means until
+  explicit STOP. The output parent must exist on the internal home filesystem.
+  --port 0 uses an OS-assigned local port; read output/current.json afterwards.
+  To replace an old owned source, first stop it and verify its stopped.json;
+  only then reuse that port. --id-offset must be a multiple of the1118-PING
+  source span; choose it so the first new ID exceeds the previous source's last
+  ID. This is an explicit new source session, not a continuation of a measurement.
+  Create the current.json stop_file to stop THIS replay. The API is read-only;
+  ARM/FIRE/USB access to a physical Pico is unavailable. No automatic restart.
+  For an unattended view, launch with detached session, DEVNULL stdin and a real
+  log file for stdout/stderr; do not bind lifetime to an interactive exec/PTY.
+
+Scheduling and STOP
+  The virtual producer and consumer share one process/event loop. A measured
+  process pause longer than3s is excluded from ONLY that owned PTY's silence
+  budget until the next complete packet. Last-receive times and sample/ping
+  timestamps remain unchanged; the missing delivery interval remains visible.
+  A complete packet already received after resume receives no extra allowance.
+  A genuinely stalled producer still faults after3s of runnable opportunity.
+  Physical-USB transport, its timeouts, TX and the pinned .16 wheel are untouched.
+  STOP first quiesces the virtual producer under its packet lock, completing
+  a current write before cancellation. It then drains/closes the receiver and
+  verifies the complete archive. A3s quiescence failure still fails closed and
+  retains the affected part; it never authorizes deletion or truncated frames.
+
+Rotation
+  Every256 delivered PINGs, the producer holds its packet lock and waits for
+  the receiving client's last packet, raw-PING queue and processing to drain.
+  Raw Zarr writers and all three wire-audit handles are then closed. A new
+  owned archive part is opened without resetting the PTY, clock, public USB
+  segment, detection pipeline, publication cursor or WebSocket connection.
+  The closed part's CRC-checked wire packets, every raw sample/time/flag/geometry
+  and derived PING inventory are reconciled against the pinned original.
+  Only then is a durable verification receipt written and an older owned,
+  closed, verified part removed. Open, unknown, symlinked or failed parts are
+  never adopted/deleted. At most one verified closed part plus the active part
+  remain (briefly three during the synchronous swap/check/prune transition).
+
+Bounds and failure
+  Processed IDs <=256 per active part; source epoch mapping retains3 epochs;
+  receipt history retains4 entries and rolls older results into counters and a
+  SHA256 chain. Original input remains fully available. Old per-PING provenance
+  outside this mapping window returns404 instead of inventing original times.
+  A whole-output storage guard checks every2s (default stop threshold256MiB,
+  not a filesystem quota). Integrity, drain, source, archive or storage errors
+  stop the replay and preserve failed parts. Normal STOP flushes/verifies the
+  last part and removes remaining verified temporary archive parts.
+  current.json, storage.json, rotation.json and stopped.json expose actual state.
+
+Data and display
+  API /api/v1/replay marks historical_not_live and new_hardware_evidence=false.
+  /api/v1/replay/pings/{id} links replay/source IDs and device times plus sample
+  hash. Source time spacing is retained at1x; the loop boundary has an explicit
+  100ms pause. Rotation may add processing latency; it is not hidden with old
+  frames or a fabricated acoustic connection.
+  Sonard0.4.16 re-evaluates local_adc_background_v2 from each original ADC profile
+  for the display; detection reads original ADC. noiseActive denotes application
+  of that stage, not complete removal of noise. HELM Linear/Nearest is a separate
+  rendering choice; this tool does not change it or any installed app/Gateway.
+
+Checks
+  SONARD_REPLAY_INTEGRATION=1 with the existing interpreter and pinned wheel on
+  PYTHONPATH enables tests/test_replay_archive_rotation.py's private-fixture PTY
+  test. The ordinary tests cover60 archive transitions, all three raw geometries,
+  corruption/partial packets/pending WAL, open handles, foreign ownership and
+  symlink refusal. The optional integration test checks a persistent real WS,
+  stable session/segment, read-only controls and full STOP reconciliation/cleanup.
+  It additionally suspends the entire replay process with SIGSTOP for3.8s and
+  resumes it with SIGCONT, preserving the same WebSocket/session and complete
+  packet/raw/derived reconciliation. Unit checks reproduce the original pinned
+  transport's silence fault and ensure a real producer stall is still rejected;
+  a controlled partial-write check proves packet-boundary STOP ordering.
+  These are software/replay checks, not a new hardware or one-hour wall-time test.

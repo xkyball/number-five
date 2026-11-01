@@ -1,0 +1,108 @@
+{
+  "archives": [
+    {
+      "files": [
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/pico_emulator.py",
+          "sha256": "af2b29879d98065197751367b3f6027595790a8fda58e92e8bac401326a3f8c7"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/protocol.py",
+          "sha256": "2dcc7449daeebd1e733d788f9f5fbead98fce2807c70987ba9578d5045f0c456"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/clock_sync.py",
+          "sha256": "e6ae78bc2149fbda226f63efe59677001886997107079b24f5a2ff28e60e5740"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/__main__.py",
+          "sha256": "2049d8febf6bce02d2834ba141e8ede3dccb41f4f170bd02767b4da3f56c74b9"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/config.py",
+          "sha256": "01d5da599d9a520f65f035c7299b5c972f52b7f9886957c9f52a8ccfa248b475"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/__init__.py",
+          "sha256": "667d4a15b970b851e20d17510224670c14646cfb6d5a1e388ca6b9cc6da8bf41"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/pico_protocol.py",
+          "sha256": "539d44eebb95a186ef02b8b35ef40c3f4df42aad5a05b6cfa3469d0b21cfc806"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/processing_m1.py",
+          "sha256": "959fd6117960f447d89d3b53101e533e19146213e8c362c9cc99d6267f439edc"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/service.py",
+          "sha256": "226f4157bb72b095d316ac27ad0a9c1405048513fb09fe72713bcced38f74c77"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/pico/client.py",
+          "sha256": "04c9b81a858ccee7aba8e8aecca2c2f48407545ddf0441bf2f888741f7d14e1a"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/pico/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/transport/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/transport/serial_posix.py",
+          "sha256": "7f4ae962c2f0b63eaeafb78e2456a7887f3014631c30b9d479036447186f4e0b"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/static/index.html",
+          "sha256": "76ba96065674e12c55a75f81c305f106251fc2e25f359efb95790d0517d14d97"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/static/app.js",
+          "sha256": "16984711867a0136f0577e968af9102f40285dd7193fc8b02529cfa0c5c5fe91"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/static/style.css",
+          "sha256": "575718f556a013f3f6d54376d51c6dcc686d97e367c5b9b8e301ef1e91520ef0"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/storage/__init__.py",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/storage/raw_zarr.py",
+          "sha256": "1997536c2dba0ae1575f1eb6f16860995c6cc6bb4a8edfdaef2d41fc2f86b763"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/hub.py",
+          "sha256": "7c9ef97041b258cd5d7579dc602d80a96e551801bbe7252cd1bf26e89f7bc9d4"
+        },
+        {
+          "disposition": "retained",
+          "retained_path": "m1/src/no5_sonard/app.py",
+          "sha256": "edd0c6bbd3ef7a2edc4058c93e6c5355eeb1738f7f0cb16bc61ee6753847e802"
+        }
+      ]
+    }
+  ]
+}

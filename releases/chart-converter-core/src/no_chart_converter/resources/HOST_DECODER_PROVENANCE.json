@@ -1,0 +1,126 @@
+{
+  "activeSourceAndTestPins": [
+    {
+      "bytes": 6750,
+      "path": "README.md",
+      "sha256": "c832b445935c84856f6ea2188af17241147b019deda04c21ece52f089281ae8b"
+    },
+    {
+      "bytes": 762,
+      "path": "pyproject.toml",
+      "sha256": "5f01b56b95d3fe49154b0a6b38e785db9d3c4f1f76b4b9dff00f3e3cbf4b4225"
+    },
+    {
+      "bytes": 4041,
+      "path": "docs/DECODER_ANALYSIS.md",
+      "sha256": "81f0585bf370a12f7499bdb08df183d22a4c561c888bb0dd671c4f2ace78ccb7"
+    },
+    {
+      "bytes": 2335,
+      "path": "docs/HOST_RUNTIME.md",
+      "sha256": "09f4dbfe8270d35e4cc42ff85cc3c4f3ebf5cd6c3a8ba649a92068878d56f434"
+    },
+    {
+      "bytes": 23118,
+      "path": "src/no_chart_converter/cli.py",
+      "sha256": "bb226bf8def8c2bd1d53c3b07e27a2b9fbba8f6605126add63ac1e5b05619eb1"
+    },
+    {
+      "bytes": 24030,
+      "path": "src/no_chart_converter/rx5/fill_duplicates.py",
+      "sha256": "48041f28e7099f31ef09a1fd189b9f9f49fa9ae47b8a72280f0e601c3de980fe"
+    },
+    {
+      "bytes": 6824,
+      "path": "src/no_chart_converter/rx5/area_polygon_groups.py",
+      "sha256": "0de221587ec04fbaf4d18ea3ce418f9f578ad2254113d24cce153aed7b331d6d"
+    },
+    {
+      "bytes": 2103,
+      "path": "src/no_chart_converter/host_runtime/no5_mutex.c",
+      "sha256": "4188273502bcc66bc21aefbd495739e31cf79a9869d6de74880d5f87ec5d3c47"
+    },
+    {
+      "bytes": 2615,
+      "path": "src/no_chart_converter/host_runtime/no5_mutex.h",
+      "sha256": "b194c8b7a78e8531cc0d6b831cf57b3012acda6b244abbea9a14327697b1f714"
+    },
+    {
+      "bytes": 2368,
+      "path": "src/no_chart_converter/host_runtime/README.txt",
+      "sha256": "c23533bb0e8bd5716875c6b7172bad795c4395ba933e1b7ef9094e2c9880ac3e"
+    },
+    {
+      "bytes": 8557,
+      "path": "tests/test_area_polygon_groups.py",
+      "sha256": "42995168c96c072c250f910ec68c288b3d7caac94ef46cb2cc31cdea06646f0e"
+    },
+    {
+      "bytes": 7719,
+      "path": "tests/test_fill_duplicate_anchor_policy.py",
+      "sha256": "3443d76c8c71cf5029e79c00968324981106ca2b047b6faa56c48ed98c095b1b"
+    },
+    {
+      "bytes": 14114,
+      "path": "tests/test_fill_anchor_exclusions.py",
+      "sha256": "31d8ad639e8a8f8e9bc76b6ee53be12c165ce99a3b31cb40433a96a76ba878de"
+    },
+    {
+      "bytes": 11254,
+      "path": "tests/test_fill_anchor_properties.py",
+      "sha256": "4c521d010ff63456afb1ccc63797d187ed8a27cd2c5b931b4ff622b65683d3d4"
+    },
+    {
+      "bytes": 3627,
+      "path": "tests/test_fill_anchor_cli.py",
+      "sha256": "1b1943ccfc73f4cdab153c78de0b9ba24e8c65dc47d3a04ea5d3f6ecf3602a91"
+    },
+    {
+      "bytes": 1908,
+      "path": "tests/test_host_runtime_package.py",
+      "sha256": "c087d8161db64c598f5e305c9a8950c099f00b6c61f32e8e65fdd38190af9139"
+    },
+    {
+      "bytes": 13228,
+      "path": "tests/native/host_primitives_test.c",
+      "sha256": "02a7f6c88652aa8f2683354d2cfb40016cd9c215a65ebd891dec1ad5ed70f4b1"
+    }
+  ],
+  "baselineCommit": "e3d0edaae70567adb60adc9ca66e71efb21d188d",
+  "format": "no-chart-converter-host-decoder-source-provenance/1",
+  "origin": "Own new source, saved static method-model evidence and invented synthetic fixtures only; no original ELF/chart or device-record payloads",
+  "preservedHistoricalVersionRecord": "resources/DECODER_ANALYSIS_PROVENANCE.json describes0.2.12 and remains frozen",
+  "rollbackTag": "converter-before-host-decoder-v35-20261017",
+  "scope": {
+    "automaticCCompilationOrLoading": false,
+    "automaticHarnessExecution": false,
+    "chartMaterializationApproved": false,
+    "closedRoot1PolygonMembershipClassifier": true,
+    "manualOwnLinuxHarnessSourceIncluded": true,
+    "nativeAnchorFallbackExecutionApproved": false,
+    "nativeQueryEquivalenceApproved": false,
+    "optionalPolygon0SourceInputProtection": true,
+    "originalReaderStartupClaim": false,
+    "ownPOSIXCSourceIncluded": true,
+    "ownPOSIXVendorABIMatchClaim": false,
+    "physicalA97SpeedClaim": false
+  },
+  "sourceOnlyReviews": [
+    {
+      "bytes": 5566,
+      "path": "AP11/product-completion-20261017/host-decoder-review-v35/ANCHOR_SOURCE_REVIEW.json",
+      "sha256": "9932efecea7056c0073d2a9489b4e61b42b7deb9e05358a35b2a17b1a30bdfec"
+    },
+    {
+      "bytes": 3574,
+      "path": "AP11/product-completion-20261017/host-decoder-review-v35/MUTEX_SOURCE_REVIEW.json",
+      "sha256": "7a0a625555aa4cc254716083a0e80ab17a4dd7acac2ba9efaaab507b9f66d01b"
+    },
+    {
+      "bytes": 4798,
+      "path": "AP11/product-completion-20261017/host-decoder-review-v35/CLI_PACKAGE_SOURCE_REVIEW.json",
+      "sha256": "0cd8615ade720efd97b750d635d786fe9af1461c55bd0648928554b4771cd255"
+    }
+  ],
+  "version": "0.2.13"
+}

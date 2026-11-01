@@ -1,0 +1,272 @@
+{
+  "helm-day": {
+    "title": {
+      "de": "HELM · Tagmodus",
+      "en": "HELM · day mode"
+    },
+    "caption": {
+      "de": "HELM mit simulierten Boots- und Motorwerten. Historische Android-Prüfabbildung; kein realer Sensordurchlauf.",
+      "en": "HELM with simulated boat and engine values. Historical Android test rendering; not a real sensor run."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_simulated_boat_data",
+    "date": "2026-10-07",
+    "version": "approved-023-api35",
+    "sourceRelative": "no-apps/helm/verification/renders/approved-023-api35/helm-day.png",
+    "sha256": "662027223d39493b7be5adf9e99bd2e1169aa8c9d5863943d299c915e0355487",
+    "src": "/images/helm-day.png"
+  },
+  "helm-night": {
+    "title": {
+      "de": "HELM · Rotnacht",
+      "en": "HELM · red night"
+    },
+    "caption": {
+      "de": "Dieselbe Instrumentenanordnung bei Rotnacht, mit simulierten Werten.",
+      "en": "The same instrument layout in red night mode, with simulated values."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_simulated_boat_data",
+    "date": "2026-10-07",
+    "version": "approved-023-api35",
+    "sourceRelative": "no-apps/helm/verification/renders/approved-023-api35/helm-night.png",
+    "sha256": "e70994f070ae231f10d2aba6dc899345a6843dc0ff0e644d79176631fd54380d",
+    "src": "/images/helm-night.png"
+  },
+  "audio-day": {
+    "title": {
+      "de": "Audio · Tagmodus",
+      "en": "Audio · day mode"
+    },
+    "caption": {
+      "de": "Die eigene AUDIO-Oberfläche mit Demotitel und simulierten Pegeln: Wiedergabe, drei Audiobereiche und Hauptlautstärke.",
+      "en": "The AUDIO interface with a demo track and simulated levels: playback, three audio areas and master volume."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_demo_audio",
+    "date": "2026-10-15",
+    "version": "audio-v2",
+    "sourceRelative": "no-apps/helm/verification/renders/audio-v2/day-console.png",
+    "sha256": "6f93e0651259c0b08b13b766e15649514ef79d7495ee9511bc96b3a6c7f8646a",
+    "src": "/images/audio-day.png"
+  },
+  "audio-night": {
+    "title": {
+      "de": "Audio · Rotnacht",
+      "en": "Audio · red night"
+    },
+    "caption": {
+      "de": "AUDIO bei Rotnacht. Titel und Pegel sind Demodaten; dies ist keine aktuelle Spotify-Wiedergabe.",
+      "en": "AUDIO in red night mode. Track and levels are demo data, rather than current Spotify playback."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_demo_audio",
+    "date": "2026-10-15",
+    "version": "audio-v2",
+    "sourceRelative": "no-apps/helm/verification/renders/audio-v2/night-console.png",
+    "sha256": "5c9962a4e6ace4a93fd5ea5ae8d58f150067aee444603d90ce125ec7ad95f13e",
+    "src": "/images/audio-night.png"
+  },
+  "audio-eq": {
+    "title": {
+      "de": "Klang gestalten",
+      "en": "Shaping the sound"
+    },
+    "caption": {
+      "de": "Die entwickelte Equalizer-Bedienung in einer Android-Prüfumgebung. Das Bild belegt die Oberfläche, keine akustische Einmessung.",
+      "en": "The developed equalizer controls in an Android test fixture. The image shows the interface, not an acoustic calibration."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_test_fixture",
+    "date": null,
+    "version": "audio-textfit/en-eq-day-font1.0",
+    "sourceRelative": "no-apps/helm/verification/renders/audio-textfit/en-eq-day-font1.0.png",
+    "sha256": "116370f59ae9b0722ccb7bb189186439821e7489e7e6a04c0788854295b0d64c",
+    "src": "/images/audio-eq.png"
+  },
+  "audio-presets": {
+    "title": {
+      "de": "Klangprofile",
+      "en": "Sound presets"
+    },
+    "caption": {
+      "de": "Klangprofile und Kanalzuordnung in einer vorhandenen UI-Prüfabbildung.",
+      "en": "Sound presets and channel routing in an existing UI test rendering."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "ui_test_fixture",
+    "date": null,
+    "version": "p1-catalog/catalog-en-day-font1.0",
+    "sourceRelative": "no-apps/helm/verification/renders/p1-catalog/catalog-en-day-font1.0.png",
+    "sha256": "55c34b5e0285b8611d318eab8adc08c7d9825e44fe2c0bb80e483b315075e4e2",
+    "src": "/images/audio-presets.png"
+  },
+  "map-cream": {
+    "title": {
+      "de": "Eigene Kartenansicht · Cream",
+      "en": "Custom chart rendering · Cream"
+    },
+    "caption": {
+      "de": "Boston aus NOAA-ENC-Daten, gerendert für die Kartenstudie Revision 05. Experimentelle Darstellung auf dem Entwicklungsrechner; keine fertige Navigationsabnahme.",
+      "en": "Boston from NOAA ENC data, rendered for chart study revision 05. Experimental rendering on the development host; not a completed navigation acceptance."
+    },
+    "width": 2400,
+    "height": 1440,
+    "kind": "experimental_renderer_open_chart_data",
+    "date": "2026-10-06",
+    "version": "chart-styles/revision-05/A S52-GLES",
+    "sourceRelative": "no-apps/map/studies/chart-styles/revision-05/A-day-cream.png",
+    "sha256": "decfe7c7b012d4e73edc30a06277c2c980ab836a49ef5a69dd654cba38bae4af",
+    "src": "/images/map-cream.png"
+  },
+  "map-graphite": {
+    "title": {
+      "de": "Eigene Kartenansicht · Graphite",
+      "en": "Custom chart rendering · Graphite"
+    },
+    "caption": {
+      "de": "Derselbe NOAA-Datensatz im eigenen 2,5D-Renderpfad. Graphite ist ein Tagesstil; Relief und Schatten sind Gestaltungseffekte.",
+      "en": "The same NOAA dataset in the custom 2.5D renderer. Graphite is a day style; relief and shadows are presentation effects."
+    },
+    "width": 2400,
+    "height": 1440,
+    "kind": "experimental_renderer_open_chart_data",
+    "date": "2026-10-06",
+    "version": "chart-styles/revision-05/B own-ENC",
+    "sourceRelative": "no-apps/map/studies/chart-styles/revision-05/B-day-graphite.png",
+    "sha256": "f172e60ac95c3d2ce17fabc79e3ea8c43d81de81e2fb26dcfeb4bfb0c66be73d",
+    "src": "/images/map-graphite.png"
+  },
+  "routes-editor": {
+    "title": {
+      "de": "Routen bearbeiten",
+      "en": "Editing routes"
+    },
+    "caption": {
+      "de": "Routenbearbeitung mit drei synthetischen Wegpunkten in der nativen Android-UI-Simulation. Die Fläche rechts ist keine Seekarte.",
+      "en": "Route editing with three synthetic waypoints in the native Android UI simulation. The area on the right is not a nautical chart."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_harness_simulation",
+    "date": "2026-10-06",
+    "version": "native-five-screens/routes-editor-day",
+    "sourceRelative": "no-apps/map/preparation/native-five-screens/previews/routes-editor-day.png",
+    "sha256": "db55b1b5f3200bc7ea45162451aefd50ab51b8e216464cefa63fd63c5ccdfca0",
+    "src": "/images/routes-editor.png"
+  },
+  "sonar-board": {
+    "title": {
+      "de": "Der Fishfinder von innen",
+      "en": "Inside the fishfinder"
+    },
+    "caption": {
+      "de": "Die echte Platine des untersuchten Venterior-Fishfinders. Vorhandener Fotoausschnitt aus der Hardwareerkundung im Oktober 2026.",
+      "en": "The actual board of the Venterior fishfinder under investigation. Existing photograph crop from hardware exploration in October 2026."
+    },
+    "width": 1044,
+    "height": 1392,
+    "kind": "historical_physical_hardware_photo",
+    "date": "2026-10-19",
+    "version": "fritzing-power-temperature-20261019/photo-crops",
+    "sourceRelative": "no-pi/projects/no5-sonard-openecho/hardware/fritzing-power-temperature-20261019/photo-crops/electronics-overview.png",
+    "sha256": "f96a970099c5f1d6a775ae3c50d78620997cb234cde2de96166815755a8a0a25",
+    "src": "/images/sonar-board.png"
+  },
+  "sonar-wiring": {
+    "title": {
+      "de": "Vom Messpunkt zum Aufbau",
+      "en": "From test point to assembly"
+    },
+    "caption": {
+      "de": "Historischer Aufbauplan der Lochraster-Erweiterung vom 14. Oktober 2026. Er zeigt eine Entwicklungsetappe; aktuelle Anschlussdaten sind getrennt zu prüfen.",
+      "en": "Historical perfboard extension layout from 14 October 2026. It shows a development stage; current connection data must be checked separately."
+    },
+    "width": 1300,
+    "height": 1100,
+    "kind": "historical_build_diagram",
+    "date": "2026-10-14",
+    "version": "openecho-perfboard-own-tx-assembly",
+    "sourceRelative": "no-pi/projects/no5-sonard-openecho/hardware/openecho-perfboard-own-tx-assembly-20261014.png",
+    "sha256": "218b101259e034f6bb98806c0293662cbe6b29e6d5b7e442be3e6d4298df98c1",
+    "src": "/images/sonar-wiring.png"
+  },
+  "enclosure-exploded": {
+    "title": {
+      "de": "Pi-Box als Baugruppe",
+      "en": "Pi box assembly"
+    },
+    "caption": {
+      "de": "Historische Explosionsansicht der Pi-Box P4.3 mit Elektronik, Anschlüssen und Gehäuseteilen. CAD-Entwurf; reale Passung und heutiger Bauzustand werden damit nicht belegt.",
+      "en": "Historical exploded view of Pi-box P4.3 with electronics, connections and enclosure parts. A CAD design; not proof of physical fit or today’s build state."
+    },
+    "width": 1700,
+    "height": 1250,
+    "kind": "historical_cad_presentation",
+    "date": null,
+    "version": "Pi-Box P4.3 as printed in source image",
+    "sourceRelative": "no-pi/projects/no5-rebuild/hardware/pi-box/mechanical/views/exploded.png",
+    "sha256": "9b4339cf84027fc9bad1914d866cc901994c6b1083c7eaa71e3056aecd69f3c6",
+    "src": "/images/enclosure-exploded.png"
+  },
+  "print-preparation": {
+    "title": {
+      "de": "Für den Druck vorbereitet",
+      "en": "Prepared for printing"
+    },
+    "caption": {
+      "de": "Vorhandene Druckbahnansicht für 24 Innenteile von Pi-Box und Venterior, Revision 6 vom 31. Oktober 2026. Vorschau; kein Foto eines abgeschlossenen Drucks.",
+      "en": "Existing toolpath view for 24 internal Pi-box and Venterior parts, revision 6 from 31 October 2026. A preview, not a photograph of a completed print."
+    },
+    "width": 1800,
+    "height": 1450,
+    "kind": "slicer_toolpath_preview",
+    "date": "2026-10-31",
+    "version": "pi-box-venterior-20261031-r6/Bett-01",
+    "sourceRelative": "no-pi/projects/no5-rebuild/hardware/print-batches/pi-box-venterior-20261031-r6/Bett-01/druckaufbau-3d.png",
+    "sha256": "26e98af0cf28b5aa887da2cc0f3b03e9b0ffbe7b91802600597c665e98e52be8",
+    "src": "/images/print-preparation.png"
+  },
+  "yamaha-enclosure": {
+    "title": {
+      "de": "Trimmsensor-Adapter im Gehäuse",
+      "en": "Trim-sensor adapter enclosure"
+    },
+    "caption": {
+      "de": "Vorhandener CAD-Entwurf des Yamaha-Trimmsensor-Adapters: Elektronik, Kabeldurchführungen und äußere Befestigungslaschen. Keine Aufnahme eines fertigen Einbaus.",
+      "en": "Existing CAD design of the Yamaha trim-sensor adapter: electronics, cable entries and external mounting tabs. Not a photograph of a completed installation."
+    },
+    "width": 1500,
+    "height": 1200,
+    "kind": "historical_cad_presentation",
+    "date": null,
+    "version": "yamaha-trim-adapter/enclosure",
+    "sourceRelative": "no-pi/projects/no5-rebuild/hardware/yamaha-trim-adapter/enclosure/offene-box-3d.png",
+    "sha256": "9d02a01dc149d7badeb3bd84fdbbc4af27688051ff72390a53d310b101e23559",
+    "src": "/images/yamaha-enclosure.png"
+  },
+  "sonar-physical-b205": {
+    "title": {
+      "de": "Echte Echos am Android-Display",
+      "en": "Real echoes on the Android display"
+    },
+    "caption": {
+      "de": "Sonaransicht auf dem physischen Lumina, HELM B205 vom 31. Oktober 2026. Die Aufnahme zeigt den laufenden Versuchsaufbau mit 19,2 Pings/s, 18,8 Tiefenwerten/s und angezeigten 1,07 m; keine Bootserprobung.",
+      "en": "Sonar view on the physical Lumina, HELM B205 on 31 October 2026. The capture shows the running test setup at 19.2 pings/s, 18.8 depth values/s and a displayed 1.07 m; not a boat trial."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "historical_physical_device_capture_real_sonar",
+    "date": "2026-10-31",
+    "version": "HELM B205; com.no5.helm",
+    "sourceRelative": null,
+    "sha256": "4f473aa6e74048b9dd0834099ad0f8a0c543f311ff9a7a694630c181d2695fb9",
+    "src": "/images/sonar-physical-b205.png"
+  }
+}

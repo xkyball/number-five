@@ -1,0 +1,88 @@
+import groovy.json.JsonOutput
+import groovy.json.JsonSlurper
+import java.security.MessageDigest
+import org.gradle.api.DefaultTask
+import org.gradle.api.file.DirectoryProperty
+import org.gradle.api.tasks.OutputDirectory
+
+abstract class No5ReleaseMetadataTask extends DefaultTask {
+    @OutputDirectory abstract DirectoryProperty getAssetsDirectory()
+}
+
+// Source bridge applied explicitly by each application. No root module/build aggregation.
+def bridge = new File(buildscript.sourceFile.parentFile, '.').canonicalFile
+def inventory = new JsonSlurper().parse(new File(bridge, 'apps.json'))
+def repo = bridge.parentFile
+def app = inventory.apps.find { new File(repo, it.module).canonicalFile == project.projectDir.canonicalFile }
+if (app == null) throw new GradleException("No release inventory entry for ${project.projectDir}")
+def catalogueFile = new File(repo, app.catalogue)
+def registerMetadata = { String variantName ->
+ tasks.register('generateNo5' + variantName.capitalize() + 'ReleaseMetadata', No5ReleaseMetadataTask) {
+    assetsDirectory.convention(layout.buildDirectory.dir('generated/no5-release-assets/' + variantName))
+    // Source commit and worktree changes are evaluated afresh on each build.
+    outputs.upToDateWhen { false }
+    doLast {
+        def catalogue = new JsonSlurper().parse(catalogueFile)
+        def current = catalogue.releases.findAll { it.versionCode == app.versionCode && it.versionName == app.versionName }.last()
+        def config = project.extensions.getByName('android').defaultConfig
+        if (current.versionCode != config.versionCode || current.versionName != config.versionName || catalogue.packageName != config.applicationId)
+            throw new GradleException('App version and release catalogue disagree; append a documented release first')
+        def git = { List arguments ->
+            project.providers.exec { workingDir repo; commandLine(['git'] + arguments) }.standardOutput.asText.get().trim()
+        }
+        def paths = [app.key, 'release-info', 'keyboard-contract', 'ui-state', 'header-artwork']
+        if (app.key in ['launcher', 'helm', 'map']) paths += ['gateway-config', 'gateway-protocol', 'helm/domain', 'control-contract', 'control-wire', 'header-contract', 'header-android', 'header-native', 'app-control']
+        if (app.key == 'helm') paths += ['header-consumer', 'shared-eq']
+        if (app.key.startsWith('map-') || app.key == 'map' || app.key == 'renderer-baseline') paths += ['map/chart-api', 'map/chart-engine', 'map/chart-library', 'map/app/src/main/assets']
+        def files = git(['ls-files', '--cached', '--others', '--exclude-standard', '-z', '--'] + paths).split('\u0000').findAll { it && !it.contains('/verification/') && !it.contains('/build/') }
+        def digest = MessageDigest.getInstance('SHA-256')
+        digest.update(git(['rev-parse', 'HEAD']).getBytes('UTF-8'))
+        digest.update(variantName.getBytes('UTF-8'))
+        files.sort().each { name ->
+            def source = new File(repo, name)
+            if (source.isFile()) { digest.update(name.getBytes('UTF-8')); digest.update((byte)0); digest.update(source.bytes) }
+        }
+        def data = [schema: 1, packageName: catalogue.packageName, versionName: current.versionName,
+                    versionCode: current.versionCode, releaseId: current.id, sequence: current.sequence,
+                    sourceCommit: git(['rev-parse', 'HEAD']), sourceDirty: !git(['status', '--porcelain', '--'] + paths + [':(exclude,glob)**/verification/**']).isEmpty(),
+                    buildId: digest.digest().encodeHex().toString()]
+        def directory = new File(assetsDirectory.get().asFile, 'no5-release'); directory.mkdirs()
+        new File(directory, 'current.json').text = JsonOutput.prettyPrint(JsonOutput.toJson(data)) + '\n'
+        new File(directory, 'history.json').text = catalogueFile.getText('UTF-8')
+    }
+}
+}
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    def generate = registerMetadata(variant.name)
+    variant.sources.java.addStaticSourceDirectory(new File(bridge, 'src/main/java').absolutePath)
+    variant.sources.assets.addGeneratedSourceDirectory(generate, { task -> task.assetsDirectory })
+}
+
+// Check the delivered artifact as well as compiling sources: missing generated assets fail assembly.
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    // Applied scripts do not inherit the isolated AGP plugin classpath on AGP9.
+    // Resolve this public API singleton through the owning plugin's classloader.
+    def apkArtifact = variant.class.classLoader.loadClass('com.android.build.api.artifact.SingleArtifact$APK').getField('INSTANCE').get(null)
+    def apkDirectory = variant.artifacts.get(apkArtifact)
+    tasks.matching { it.name == 'assemble' + variant.name.capitalize() }.configureEach {
+        doLast {
+            def apks = project.fileTree(apkDirectory.get().asFile).matching { include '*.apk' }.files
+            if (apks.isEmpty()) throw new GradleException('No APK available for release metadata validation')
+            apks.each { apk ->
+                new java.util.zip.ZipFile(apk).withCloseable { zip ->
+                    def entry = zip.getEntry('assets/no5-release/current.json')
+                    def history = zip.getEntry('assets/no5-release/history.json')
+                    if (entry == null || history == null) throw new GradleException('Packaged APK is missing release metadata')
+                    def identity = new JsonSlurper().parse(zip.getInputStream(entry))
+                    def catalogue = new JsonSlurper().parse(zip.getInputStream(history))
+                    def config = project.extensions.getByName('android').defaultConfig
+                    if (identity.packageName != config.applicationId || identity.versionCode != config.versionCode || identity.versionName != config.versionName
+                            || !(identity.buildId ==~ /[0-9a-f]{64}/) || !(identity.sourceCommit ==~ /[0-9a-f]{40}/)
+                            || !catalogue.releases.any { it.id == identity.releaseId && it.sequence == identity.sequence })
+                        throw new GradleException('Packaged APK release identity does not match this build')
+                }
+            }
+            logger.lifecycle('Verified packaged release metadata for ' + apks.size() + ' APK(s)')
+        }
+    }
+}

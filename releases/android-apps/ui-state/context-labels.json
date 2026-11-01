@@ -1,0 +1,32 @@
+{
+  "fader.visibility": [
+    "Sichtbar",
+    "Show",
+    "Wys"
+  ],
+  "action.apply": [
+    "Übernehmen",
+    "Apply",
+    "Pas toe"
+  ],
+  "import.phase.saving": [
+    "Speichern",
+    "Saving",
+    "Stoor"
+  ],
+  "import.state.completed": [
+    "Import abgeschlossen",
+    "Import complete",
+    "Invoer voltooi"
+  ],
+  "import.state.cancelling": [
+    "Abbruch angefordert",
+    "Cancellation requested",
+    "Kansellasie versoek"
+  ],
+  "route.latitude": [
+    "Breite",
+    "Latitude",
+    "Breedte"
+  ]
+}

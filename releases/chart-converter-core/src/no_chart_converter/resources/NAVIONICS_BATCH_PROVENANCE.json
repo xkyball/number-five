@@ -1,0 +1,51 @@
+{
+  "finiteCrosspageHistory": {
+    "actualReportSHA256": "a36560e5abe206ecc3bbe45a1db649c50013b2183783b1fc0b2807d41ff93440",
+    "inputBytes": 4153,
+    "inputSHA256": "162817871b40a945a4b84ea83ed8165c9f1b3cbe4d1f74ad4c6a7686ae70036c",
+    "nativeChunks": 12,
+    "nativeRawPointOccurrences": 761,
+    "normalEOFAndCleanupObserved": true,
+    "observedU16CrossingOffsets": [
+      4095,
+      4096
+    ],
+    "profile": "ONE_LINE32_CLASS29_RAW_U16_NO_ATTRIBUTES",
+    "scope": "This exact file and genuine lowlevel plain/no-overlay reader. Not every8KiB input, U32 crossing, renderer, LoadXF2 or collection qualification.",
+    "sourcePointCount": 750,
+    "state5CarryBoundaries": 11
+  },
+  "format": "no5-own-plain-feature-batch-source-provenance/1",
+  "includesOriginalImplementations": false,
+  "includesRuntimeOrPurchasedPayloads": false,
+  "limits": [
+    "Default4096 compatibility is retained; explicit budgets1..8192 are own software scope. Above4096 is source-bound contiguous plain generalization; the finite4153B U16 result is separate history, not a format maximum or general native approval.",
+    "Empty attributes/flags only; no holes, reversal bits, authentication, keys, signatures, native UIDs, CRS, geography, portrayal or full product admission.",
+    "Raw input/arithmetic validation is not native Header/LOD/Scale qualification; no N65536 native approval.",
+    "All part coordinates bind the plan. Sink writes are sequential; partial failure does not imply rollback.",
+    "Original finite input acceptance is not transferred to mixed/multipart batches without separate native readback."
+  ],
+  "nativeAcceptance": "UNTESTED_GENERALIZATION",
+  "origin": "INDEPENDENT_OWN_RAW_WIRE_WRITER",
+  "originalLibrariesLoaded": false,
+  "outputBudget": {
+    "boundedSourceProofMaximumBytes": 8192,
+    "defaultBytes": 4096,
+    "nativeCrosspageQualification": "FINITE_U16_CASE_ONLY_GENERIC_UNQUALIFIED",
+    "nondefaultBudgetInPlanSHA": true,
+    "physicalProfile": "CONTIGUOUS_PLAIN_NO_OVERLAY_SOURCE_ONLY"
+  },
+  "priorFiniteOwnWireInputs": {
+    "line197": "2c87a6a11d703bc0a5b5f83aae010acfd04e4e21fe243c7ebf6e37e4208916fb",
+    "point370": "e4a9c11fad40af1adeab9c09fbb9634fb46661552d4643fa3acb1326493218b9"
+  },
+  "scope": "ONE_HEADER_ONE_LAYER_MULTIPLE_POINT40_LINE32_AREA24_FEATURES_AND_PARTS",
+  "sourceContracts": {
+    "independentBatchPropertiesSourceSHA256": "8a31b1472f85823a4889c6f1445556e8cb00c07d4c997c2fe11eb8ec20d835fa",
+    "ownRawGuardSourceSHA256": "96d814b4c30df5ecc23929fd3259696b42733583ad8ffd3a57f36e55183b5e01",
+    "plainCacheOffsetAndPageContractSHA256": "3c063862fa98baeb51653d09dfd708fcc0e145b0e0673945da087b17b4ee49bc",
+    "portedRawGuardTestsSHA256": "332ded7e735ab0988f2099937862f289818d2f0c42af1bae3b9109e013d079d6",
+    "upstreamStandaloneRawGuardTestsSHA256": "94a8876d5734f1e002fd3a5a5ed20c60e9a1ca1361a82ee03188eb6d3681de92",
+    "widthAndOffsetContractSHA256": "69f3024be2b0cb3c4f8925700f0a7f585756469c7b7e64113bdfdd9cc432c5f4"
+  }
+}

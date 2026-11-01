@@ -1,0 +1,642 @@
+{
+  "id": "pico",
+  "board": {
+    "nominal_size_mm": [
+      60,
+      40
+    ],
+    "grid_columns_rows": [
+      20,
+      14
+    ],
+    "pitch_mm": 2.54,
+    "hole_origin_mm": [
+      5.870000000000001,
+      3.4899999999999984
+    ],
+    "hole_diameter_mm": 1,
+    "pad_diameter_mm": 2,
+    "thickness_mm": 1.6,
+    "source": "https://www.robotics.org.za/PROTO-46DS-P254?manufacturer_id=20&page=42",
+    "source_status": "manufacturer_nominal; received grid origin/pad/drill not measured",
+    "copper": "double-sided isolated plated eyes; no implicit buses",
+    "received_part_fit_checked": false
+  },
+  "components": [
+    {
+      "ref": "PICO",
+      "cad_reference": "U2",
+      "kind": "pico",
+      "value": "vorhandener Pico RP2040 / normales USB",
+      "pins": {
+        "1": null,
+        "2": null,
+        "3": "GND",
+        "4": null,
+        "5": null,
+        "6": null,
+        "7": null,
+        "8": "GND",
+        "9": null,
+        "10": null,
+        "11": null,
+        "12": null,
+        "13": "GND",
+        "14": null,
+        "15": null,
+        "16": null,
+        "17": null,
+        "18": "GND",
+        "19": null,
+        "20": null,
+        "21": "GP16_MARKER",
+        "22": null,
+        "23": "GND",
+        "24": "GP18_SOURCE",
+        "25": null,
+        "26": "GP20_POWER",
+        "27": null,
+        "28": "GND",
+        "29": "GP22_SOURCE",
+        "30": null,
+        "31": "GP26_ADC0",
+        "32": "GP27_TEMP_ADC1",
+        "33": "GND",
+        "34": "GP28_STATE_ADC2",
+        "35": null,
+        "36": "PICO_3V3",
+        "37": null,
+        "38": "GND",
+        "39": null,
+        "40": "USB_5V"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            1,
+            4
+          ],
+          "net": null,
+          "name": "GP0"
+        },
+        "2": {
+          "hole": [
+            2,
+            4
+          ],
+          "net": null,
+          "name": "GP1"
+        },
+        "3": {
+          "hole": [
+            3,
+            4
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "4": {
+          "hole": [
+            4,
+            4
+          ],
+          "net": null,
+          "name": "GP2"
+        },
+        "5": {
+          "hole": [
+            5,
+            4
+          ],
+          "net": null,
+          "name": "GP3"
+        },
+        "6": {
+          "hole": [
+            6,
+            4
+          ],
+          "net": null,
+          "name": "GP4"
+        },
+        "7": {
+          "hole": [
+            7,
+            4
+          ],
+          "net": null,
+          "name": "GP5"
+        },
+        "8": {
+          "hole": [
+            8,
+            4
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "9": {
+          "hole": [
+            9,
+            4
+          ],
+          "net": null,
+          "name": "GP6"
+        },
+        "10": {
+          "hole": [
+            10,
+            4
+          ],
+          "net": null,
+          "name": "GP7"
+        },
+        "11": {
+          "hole": [
+            11,
+            4
+          ],
+          "net": null,
+          "name": "GP8"
+        },
+        "12": {
+          "hole": [
+            12,
+            4
+          ],
+          "net": null,
+          "name": "GP9"
+        },
+        "13": {
+          "hole": [
+            13,
+            4
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "14": {
+          "hole": [
+            14,
+            4
+          ],
+          "net": null,
+          "name": "GP10"
+        },
+        "15": {
+          "hole": [
+            15,
+            4
+          ],
+          "net": null,
+          "name": "GP11"
+        },
+        "16": {
+          "hole": [
+            16,
+            4
+          ],
+          "net": null,
+          "name": "GP12"
+        },
+        "17": {
+          "hole": [
+            17,
+            4
+          ],
+          "net": null,
+          "name": "GP13"
+        },
+        "18": {
+          "hole": [
+            18,
+            4
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "19": {
+          "hole": [
+            19,
+            4
+          ],
+          "net": null,
+          "name": "GP14"
+        },
+        "20": {
+          "hole": [
+            20,
+            4
+          ],
+          "net": null,
+          "name": "GP15"
+        },
+        "21": {
+          "hole": [
+            20,
+            11
+          ],
+          "net": "GP16_MARKER",
+          "name": "GP16"
+        },
+        "22": {
+          "hole": [
+            19,
+            11
+          ],
+          "net": null,
+          "name": "GP17"
+        },
+        "23": {
+          "hole": [
+            18,
+            11
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "24": {
+          "hole": [
+            17,
+            11
+          ],
+          "net": "GP18_SOURCE",
+          "name": "GP18"
+        },
+        "25": {
+          "hole": [
+            16,
+            11
+          ],
+          "net": null,
+          "name": "GP19"
+        },
+        "26": {
+          "hole": [
+            15,
+            11
+          ],
+          "net": "GP20_POWER",
+          "name": "GP20"
+        },
+        "27": {
+          "hole": [
+            14,
+            11
+          ],
+          "net": null,
+          "name": "GP21"
+        },
+        "28": {
+          "hole": [
+            13,
+            11
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "29": {
+          "hole": [
+            12,
+            11
+          ],
+          "net": "GP22_SOURCE",
+          "name": "GP22"
+        },
+        "30": {
+          "hole": [
+            11,
+            11
+          ],
+          "net": null,
+          "name": "RUN"
+        },
+        "31": {
+          "hole": [
+            10,
+            11
+          ],
+          "net": "GP26_ADC0",
+          "name": "GP26/ADC0"
+        },
+        "32": {
+          "hole": [
+            9,
+            11
+          ],
+          "net": "GP27_TEMP_ADC1",
+          "name": "GP27/ADC1"
+        },
+        "33": {
+          "hole": [
+            8,
+            11
+          ],
+          "net": "GND",
+          "name": "AGND"
+        },
+        "34": {
+          "hole": [
+            7,
+            11
+          ],
+          "net": "GP28_STATE_ADC2",
+          "name": "GP28/ADC2"
+        },
+        "35": {
+          "hole": [
+            6,
+            11
+          ],
+          "net": null,
+          "name": "ADC_VREF"
+        },
+        "36": {
+          "hole": [
+            5,
+            11
+          ],
+          "net": "PICO_3V3",
+          "name": "3V3"
+        },
+        "37": {
+          "hole": [
+            4,
+            11
+          ],
+          "net": null,
+          "name": "3V3_EN"
+        },
+        "38": {
+          "hole": [
+            3,
+            11
+          ],
+          "net": "GND",
+          "name": "GND"
+        },
+        "39": {
+          "hole": [
+            2,
+            11
+          ],
+          "net": null,
+          "name": "VSYS"
+        },
+        "40": {
+          "hole": [
+            1,
+            11
+          ],
+          "net": "USB_5V",
+          "name": "VBUS"
+        }
+      },
+      "pin_names": {
+        "1": "GP0",
+        "2": "GP1",
+        "3": "GND",
+        "4": "GP2",
+        "5": "GP3",
+        "6": "GP4",
+        "7": "GP5",
+        "8": "GND",
+        "9": "GP6",
+        "10": "GP7",
+        "11": "GP8",
+        "12": "GP9",
+        "13": "GND",
+        "14": "GP10",
+        "15": "GP11",
+        "16": "GP12",
+        "17": "GP13",
+        "18": "GND",
+        "19": "GP14",
+        "20": "GP15",
+        "21": "GP16",
+        "22": "GP17",
+        "23": "GND",
+        "24": "GP18",
+        "25": "GP19",
+        "26": "GP20",
+        "27": "GP21",
+        "28": "GND",
+        "29": "GP22",
+        "30": "RUN",
+        "31": "GP26/ADC0",
+        "32": "GP27/ADC1",
+        "33": "AGND",
+        "34": "GP28/ADC2",
+        "35": "ADC_VREF",
+        "36": "3V3",
+        "37": "3V3_EN",
+        "38": "GND",
+        "39": "VSYS",
+        "40": "VBUS"
+      },
+      "module": "pico",
+      "dnp": false
+    },
+    {
+      "ref": "JP_BASE",
+      "cad_reference": "J1420",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "USB_5V",
+        "2": "GND",
+        "3": "PICO_3V3",
+        "4": "GND",
+        "5": "GP26_ADC0",
+        "6": "GP22_SOURCE",
+        "7": "GP18_SOURCE",
+        "8": "GP16_MARKER"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            1,
+            14
+          ],
+          "net": "USB_5V"
+        },
+        "2": {
+          "hole": [
+            3,
+            14
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "hole": [
+            5,
+            14
+          ],
+          "net": "PICO_3V3"
+        },
+        "4": {
+          "hole": [
+            8,
+            14
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "hole": [
+            10,
+            14
+          ],
+          "net": "GP26_ADC0"
+        },
+        "6": {
+          "hole": [
+            12,
+            14
+          ],
+          "net": "GP22_SOURCE"
+        },
+        "7": {
+          "hole": [
+            17,
+            14
+          ],
+          "net": "GP18_SOURCE"
+        },
+        "8": {
+          "hole": [
+            20,
+            14
+          ],
+          "net": "GP16_MARKER"
+        }
+      },
+      "module": "pico",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "JP_AUX",
+      "cad_reference": "J1421",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "GND",
+        "2": "PICO_3V3",
+        "3": "GP28_STATE_ADC2",
+        "4": "GP27_TEMP_ADC1",
+        "5": "GP20_POWER",
+        "6": null,
+        "7": null,
+        "8": null
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            3,
+            13
+          ],
+          "net": "GND"
+        },
+        "2": {
+          "hole": [
+            5,
+            13
+          ],
+          "net": "PICO_3V3"
+        },
+        "3": {
+          "hole": [
+            7,
+            13
+          ],
+          "net": "GP28_STATE_ADC2"
+        },
+        "4": {
+          "hole": [
+            9,
+            13
+          ],
+          "net": "GP27_TEMP_ADC1"
+        },
+        "5": {
+          "hole": [
+            15,
+            13
+          ],
+          "net": "GP20_POWER"
+        },
+        "6": {
+          "hole": [
+            2,
+            13
+          ],
+          "net": null
+        },
+        "7": {
+          "hole": [
+            4,
+            13
+          ],
+          "net": null
+        },
+        "8": {
+          "hole": [
+            6,
+            12
+          ],
+          "net": null
+        }
+      },
+      "module": "pico",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "JP_LOCAL_3V3",
+      "cad_reference": "J1422",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "PICO_3V3"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            6,
+            13
+          ],
+          "net": "PICO_3V3"
+        }
+      },
+      "module": "pico",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    }
+  ],
+  "internal_buses": [
+    [
+      "PICO.3",
+      "PICO.8",
+      "PICO.13",
+      "PICO.18",
+      "PICO.23",
+      "PICO.28",
+      "PICO.33",
+      "PICO.38"
+    ]
+  ],
+  "bare_wire": false,
+  "construction": "0.6mm tinned solid bridges, individual insulation; underside routing"
+}

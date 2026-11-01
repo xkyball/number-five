@@ -1,0 +1,91 @@
+{
+  "activeSourceAndTestPins": [
+    {
+      "bytes": 14899,
+      "path": "src/no_chart_converter/rx5/fill_duplicates.py",
+      "sha256": "8c67c4952910141785e086ff1d0b3a6d9398c22e9c9c158b7a22ec430463cb23"
+    },
+    {
+      "bytes": 23757,
+      "path": "src/no_chart_converter/decoder_profile.py",
+      "sha256": "0e5dfa800b69d33b75a934c0d6684f3f148f705e049029f7d991360b71283f35"
+    },
+    {
+      "bytes": 22563,
+      "path": "src/no_chart_converter/cli.py",
+      "sha256": "224187e4fabe5b4d6c7e172c1735da9982d35f88c13d209c933a9e1fb527d70d"
+    },
+    {
+      "bytes": 10493,
+      "path": "tests/test_fill_duplicates.py",
+      "sha256": "00ad91b87e7fb601bcbe5e67adc3b8df46715cb435ce9c52d084a1a754d48b8e"
+    },
+    {
+      "bytes": 11652,
+      "path": "tests/test_fill_duplicate_properties.py",
+      "sha256": "4b2e729a5c41f657f7e4b475faa662e88688fb8729466b6af58b578087bbbdc6"
+    },
+    {
+      "bytes": 12523,
+      "path": "tests/test_fill_duplicate_exclusions.py",
+      "sha256": "360f919fa800817aa92d2315d12cf52a3307ef93b01af72daf4fcf68308b5f8b"
+    },
+    {
+      "bytes": 4266,
+      "path": "tests/test_fill_duplicates_cli.py",
+      "sha256": "55b8e6285035bbd779b54f430aedbb9d421adff978ab6c907c3f30585f7c7cab"
+    },
+    {
+      "bytes": 19110,
+      "path": "tests/test_decoder_profile.py",
+      "sha256": "7413966b5256e20d3f3ccc6521a6d879d0d5adaac418def24d85fdd4d3789c7b"
+    },
+    {
+      "bytes": 3991,
+      "path": "tests/test_decoder_profile_cli.py",
+      "sha256": "3c576fc7f78b7715361396b45dbda363c46b0824d44a500a754dcfe900f17d9c"
+    },
+    {
+      "bytes": 3130,
+      "path": "docs/DECODER_ANALYSIS.md",
+      "sha256": "a03f7ca85fb164b625a421af821c806260e51a35361aaff40e65bdaf44dfd9ce"
+    },
+    {
+      "bytes": 6309,
+      "path": "README.md",
+      "sha256": "f2e239b513adb46baee38c290f5bd34b2e3f4036234a03819d131930a1394857"
+    },
+    {
+      "bytes": 744,
+      "path": "pyproject.toml",
+      "sha256": "22c18d467b0a6e1d9f43040309ae1c07605289bd44aeac7c98d00795cc2191df"
+    }
+  ],
+  "additionalSyntheticTestSource": {
+    "bytes": 12523,
+    "path": "AP02/product-completion-20261017/decoder-detail-v34/test_fill_duplicate_exclusions.py",
+    "sha256": "360f919fa800817aa92d2315d12cf52a3307ef93b01af72daf4fcf68308b5f8b"
+  },
+  "baselineCommit": "49e8fba656af68329deb574f0ec25b29b044b7e3",
+  "boundaries": {
+    "chartMaterializerProvided": false,
+    "existingCountryAndOptimizerKernelsChanged": false,
+    "nativeAnchorFallbackEquivalenceApproved": false,
+    "nativeDecoderExecutedByTheseTools": false,
+    "nativeQueryEquivalenceApproved": false,
+    "physicalA97TimingClaim": false
+  },
+  "fillSourceReview": {
+    "bytes": 6014,
+    "path": "AP11/product-completion-20261017/decoder-review-v34/FILL_DUPLICATES_SOURCE_REVIEW.json",
+    "sha256": "ece601b0369447ec1c5768fb8d7213046dcbb26218266441295975f950642002"
+  },
+  "format": "no-chart-converter-decoder-analysis-provenance/1",
+  "modules": {
+    "fillDuplicates": "rx5.fill_duplicates",
+    "profileComparison": "decoder_profile"
+  },
+  "origin": "New own source and invented tests; no acquired chart, proprietary binary, or retained runtime data",
+  "rollbackTag": "converter-before-decoder-v34-20261017",
+  "version": "0.2.12"
+}

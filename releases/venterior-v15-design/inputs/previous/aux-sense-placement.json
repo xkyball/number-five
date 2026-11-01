@@ -1,0 +1,526 @@
+{
+  "id": "aux-sense",
+  "board": {
+    "nominal_size_mm": [
+      60,
+      40
+    ],
+    "grid_columns_rows": [
+      20,
+      14
+    ],
+    "pitch_mm": 2.54,
+    "hole_origin_mm": [
+      5.870000000000001,
+      3.4899999999999984
+    ],
+    "hole_diameter_mm": 1,
+    "pad_diameter_mm": 2,
+    "thickness_mm": 1.6,
+    "source": "https://www.robotics.org.za/PROTO-46DS-P254?manufacturer_id=20&page=42",
+    "source_status": "manufacturer_nominal; received grid origin/pad/drill not measured",
+    "copper": "double-sided isolated plated eyes; no implicit buses",
+    "received_part_fit_checked": false
+  },
+  "components": [
+    {
+      "ref": "U_AUX",
+      "kind": "dual_opamp",
+      "value": "TS272CN",
+      "pins": {
+        "1": "TEMP_BUF",
+        "2": "TEMP_BUF",
+        "3": "TEMP_SENSE",
+        "4": "GND",
+        "5": "STATE_SENSE",
+        "6": "STATE_BUF",
+        "7": "STATE_BUF",
+        "8": "PICO_3V3"
+      },
+      "dnp": false,
+      "cad_reference": "U8",
+      "pads": {
+        "1": {
+          "hole": [
+            8,
+            6
+          ],
+          "net": "TEMP_BUF"
+        },
+        "2": {
+          "hole": [
+            8,
+            7
+          ],
+          "net": "TEMP_BUF"
+        },
+        "3": {
+          "hole": [
+            8,
+            8
+          ],
+          "net": "TEMP_SENSE"
+        },
+        "4": {
+          "hole": [
+            8,
+            9
+          ],
+          "net": "GND"
+        },
+        "5": {
+          "hole": [
+            11,
+            9
+          ],
+          "net": "STATE_SENSE"
+        },
+        "6": {
+          "hole": [
+            11,
+            8
+          ],
+          "net": "STATE_BUF"
+        },
+        "7": {
+          "hole": [
+            11,
+            7
+          ],
+          "net": "STATE_BUF"
+        },
+        "8": {
+          "hole": [
+            11,
+            6
+          ],
+          "net": "PICO_3V3"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_T_IN",
+      "kind": "resistor",
+      "value": "1000000 ohm",
+      "pins": {
+        "1": "TEMP_RAW",
+        "2": "TEMP_SENSE"
+      },
+      "dnp": false,
+      "cad_reference": "R801",
+      "pads": {
+        "1": {
+          "hole": [
+            2,
+            3
+          ],
+          "net": "TEMP_RAW"
+        },
+        "2": {
+          "hole": [
+            6,
+            3
+          ],
+          "net": "TEMP_SENSE"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_T_G",
+      "kind": "resistor",
+      "value": "330000 ohm",
+      "pins": {
+        "1": "TEMP_SENSE",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "R802",
+      "pads": {
+        "1": {
+          "hole": [
+            6,
+            5
+          ],
+          "net": "TEMP_SENSE"
+        },
+        "2": {
+          "hole": [
+            2,
+            5
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_T_OUT",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "pins": {
+        "1": "TEMP_BUF",
+        "2": "GP27_TEMP_ADC1"
+      },
+      "dnp": false,
+      "cad_reference": "R803",
+      "pads": {
+        "1": {
+          "hole": [
+            6,
+            12
+          ],
+          "net": "TEMP_BUF"
+        },
+        "2": {
+          "hole": [
+            2,
+            12
+          ],
+          "net": "GP27_TEMP_ADC1"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "C_T_IN",
+      "kind": "capacitor",
+      "value": "10 nF",
+      "pins": {
+        "1": "TEMP_SENSE",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "C801",
+      "pads": {
+        "1": {
+          "hole": [
+            6,
+            7
+          ],
+          "net": "TEMP_SENSE"
+        },
+        "2": {
+          "hole": [
+            4,
+            7
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "C_T_ADC",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "pins": {
+        "1": "GP27_TEMP_ADC1",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "C802",
+      "pads": {
+        "1": {
+          "hole": [
+            3,
+            14
+          ],
+          "net": "GP27_TEMP_ADC1"
+        },
+        "2": {
+          "hole": [
+            5,
+            14
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "D_T_LO",
+      "kind": "diode",
+      "value": "BAT85",
+      "pins": {
+        "A": "GND",
+        "K": "TEMP_SENSE"
+      },
+      "dnp": false,
+      "cad_reference": "D801",
+      "pads": {
+        "A": {
+          "hole": [
+            2,
+            8
+          ],
+          "net": "GND"
+        },
+        "K": {
+          "hole": [
+            2,
+            11
+          ],
+          "net": "TEMP_SENSE"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_S_IN",
+      "kind": "resistor",
+      "value": "1000000 ohm",
+      "pins": {
+        "1": "STATE_RAW",
+        "2": "STATE_SENSE"
+      },
+      "dnp": false,
+      "cad_reference": "R804",
+      "pads": {
+        "1": {
+          "hole": [
+            14,
+            3
+          ],
+          "net": "STATE_RAW"
+        },
+        "2": {
+          "hole": [
+            18,
+            3
+          ],
+          "net": "STATE_SENSE"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_S_G",
+      "kind": "resistor",
+      "value": "330000 ohm",
+      "pins": {
+        "1": "STATE_SENSE",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "R805",
+      "pads": {
+        "1": {
+          "hole": [
+            18,
+            5
+          ],
+          "net": "STATE_SENSE"
+        },
+        "2": {
+          "hole": [
+            14,
+            5
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "R_S_OUT",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "pins": {
+        "1": "STATE_BUF",
+        "2": "GP28_STATE_ADC2"
+      },
+      "dnp": false,
+      "cad_reference": "R806",
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            11
+          ],
+          "net": "STATE_BUF"
+        },
+        "2": {
+          "hole": [
+            16,
+            11
+          ],
+          "net": "GP28_STATE_ADC2"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "C_S_IN",
+      "kind": "capacitor",
+      "value": "10 nF",
+      "pins": {
+        "1": "STATE_SENSE",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "C803",
+      "pads": {
+        "1": {
+          "hole": [
+            18,
+            7
+          ],
+          "net": "STATE_SENSE"
+        },
+        "2": {
+          "hole": [
+            16,
+            7
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "C_S_ADC",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "pins": {
+        "1": "GP28_STATE_ADC2",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "C804",
+      "pads": {
+        "1": {
+          "hole": [
+            16,
+            13
+          ],
+          "net": "GP28_STATE_ADC2"
+        },
+        "2": {
+          "hole": [
+            18,
+            13
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "C_AUX",
+      "kind": "capacitor",
+      "value": "100 nF",
+      "pins": {
+        "1": "PICO_3V3",
+        "2": "GND"
+      },
+      "dnp": false,
+      "cad_reference": "C805",
+      "pads": {
+        "1": {
+          "hole": [
+            12,
+            3
+          ],
+          "net": "PICO_3V3"
+        },
+        "2": {
+          "hole": [
+            10,
+            3
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "aux-sense"
+    },
+    {
+      "ref": "J_AUX_FIELD",
+      "cad_reference": "J1430",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "TEMP_RAW",
+        "2": "STATE_RAW"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            1,
+            3
+          ],
+          "net": "TEMP_RAW"
+        },
+        "2": {
+          "hole": [
+            20,
+            3
+          ],
+          "net": "STATE_RAW"
+        }
+      },
+      "module": "aux-sense",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "J_AUX_PICO",
+      "cad_reference": "J1431",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "PICO_3V3",
+        "2": "GND",
+        "4": "GP27_TEMP_ADC1",
+        "5": "GP28_STATE_ADC2"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            1
+          ],
+          "net": "PICO_3V3"
+        },
+        "2": {
+          "hole": [
+            11,
+            1
+          ],
+          "net": "GND"
+        },
+        "4": {
+          "hole": [
+            1,
+            14
+          ],
+          "net": "GP27_TEMP_ADC1"
+        },
+        "5": {
+          "hole": [
+            20,
+            13
+          ],
+          "net": "GP28_STATE_ADC2"
+        }
+      },
+      "module": "aux-sense",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    }
+  ],
+  "internal_buses": [],
+  "bare_wire": false,
+  "construction": "0.6mm tinned solid bridges, individual insulation; underside routing",
+  "optional": true,
+  "installation_gate": "K1 and temperature hardware unqualified; no firmware or live connection change"
+}

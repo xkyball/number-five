@@ -1,0 +1,202 @@
+# Copy to /etc/no5-pi-gateway/config.toml and edit only after the upstream
+# service identity has been confirmed on the Pi.  No credential is stored here.
+
+[gateway]
+# Keep localhost unless the boat-LAN exposure and its TLS/firewall policy are
+# explicitly approved.  The Android client must be configured to match.
+bind_host = "127.0.0.1"
+port = 8789
+
+[source]
+# disabled starts an honest UNAVAILABLE gateway.  m0 is ALWAYS SIMULATED.
+# m1 means Pico-host frames; it does not certify the Venterior electrical path.
+producer = "disabled"
+# upstream_base_url = "http://127.0.0.1:8787"
+name = "no5-sonard"
+declared_cadence_hz = 8.0
+stale_after_s = 5.0
+reconnect_delay_s = 1.0
+status_poll_s = 1.0
+upstream_timeout_s = 4.0
+
+[security]
+# Set this variable in /etc/no5-pi-gateway/environment when commands are ever
+# enabled by a verified future adapter.  The shipped M0/M1 adapters reject all
+# start/stop commands and never mutate their upstream producer.
+command_token_env = "NO5_GATEWAY_COMMAND_TOKEN"
+# AUDIO GET and POST use the existing TLS proxy X-No5-Gateway-Key. Set this
+# variable name to a root-provisioned SHA-256 verifier of that key; never copy
+# the raw key into this TOML file or an Android build.
+audio_gateway_key_hash_env = "NO5_GATEWAY_HEADER_KEY_SHA256"
+
+# Optional browser access to an existing CamillaGUI process. This is not an
+# Android API: the daemon must bind only to loopback and Nginx must provide the
+# matching HTTPS/session proxy described in docs/CAMILLAGUI_BROWSER_ACCESS.md.
+# The browser submits the existing gateway key once; this service retains only
+# its SHA-256 verifier and returns a short-lived Secure/HttpOnly cookie.
+[camilla_gui]
+enabled = false
+public_origin = "https://lysmarine.local"
+session_secret_env = "NO5_CAMILLAGUI_SESSION_SECRET"
+cookie_name = "no5_camillagui"
+session_max_age_s = 900
+
+# The local simulation control is opt-in and cannot write to Signal K,
+# CamillaDSP, librespot or sonard. When enabled it persists only a bounded
+# field-selection document, and its browser API requires this separate bearer
+# token from /etc/no5-pi-gateway/environment. The TLS reverse proxy denies
+# /admin/; open it directly on the Pi or through an SSH tunnel.
+[simulation]
+enabled = false
+# state_file = "/var/lib/no5-pi-gateway/simulation-state.json"
+token_env = "NO5_GATEWAY_SIMULATION_TOKEN"
+source_name = "no5-pi-gateway-simulator"
+
+[calibration]
+# M0/M1 echogram headers provide a direct displayed-range scale but not a
+# reviewed app calibration.  Leave invalid until a hardware calibration record
+# is accepted.  sound_speed_mps is required by the Android schema and is not a
+# measurement while valid=false.
+revision = 0
+valid = false
+# sample_period_us = 4.0 # Set only together with valid=true after acceptance.
+sound_speed_mps = 1500.0
+depth_reference = "TRANSDUCER"
+# transducer_offset_m = 0.0
+# keel_offset_m = 0.0
+
+# HELM is read-only.  Signal K installations differ; this gateway deliberately
+# has no default endpoint or assumed data paths.  Enable only after recording a
+# read-only response and mapping its actual value/timestamp fields below.
+[helm]
+enabled = false
+# snapshot_url = "http://127.0.0.1:3000/<confirmed-read-only-snapshot>"
+source_name = "signalk"
+# published_at_pointer = "/<confirmed/producer/publishedAt>"
+# vessel_time_pointer = "/<confirmed/vessel/time>"
+# vessel_time_format = "hms" # hms, or rfc3339_utc for a timezone-aware value
+# poll_interval_s = 0.25
+# Optional complete leaves in this same snapshot; no second GPS connection.
+# position_pointer = "/<confirmed/navigation/position>"
+# gnss_pointer = "/<confirmed/navigation/gnss>"
+# An empty pointer explicitly selects the snapshot root. See docs/POSITION_SOURCES.md.
+
+# Every field must have both its real source value and its original observation
+# time.  The gateway never stamps a GET as a new observation.  Supported
+# transforms are identity, radians_to_degrees and metres_per_second_to_knots.
+# [[helm.fields]]
+# name = "speed"
+# value_pointer = "/<confirmed/speed/value>"
+# timestamp_pointer = "/<confirmed/speed/observedAt>"
+# transform = "metres_per_second_to_knots"
+
+# AUDIO needs both CamillaDSP evidence and a local Raspotify/librespot onevent
+# state file.  The event bridge receives only documented playback events; it
+# publishes no guessed media clock, no artwork URL and no transport control.
+# Keep this unavailable until the service hook and its ownership are accepted.
+[audio]
+enabled = false
+source_name = "no5-audio"
+media_provider = "unavailable" # or "raspotify_onevent_file"
+# Spotify transport commands remain unavailable because librespot --onevent is
+# observation-only. A reviewed healthy CamillaDSP exposes its configured fader
+# ranges to every gateway-authenticated client; there is no separate write
+# permission. Set hardware_available only after the hardware review.
+# hardware_available = true
+
+# [audio.fader_limits.MASTER]
+# min_db = -60.0
+# max_db = 0.0
+# step_db = 1.0
+#
+# A configured range is published by GET /v1/audio while writes remain
+# disabled. It is the app's truthful slider range, not permission to change
+# audio. Configure every displayed fader explicitly; do not derive a range
+# from its current dB value.
+# [audio.fader_limits.SUB]
+# min_db = -60.0
+# max_db = 0.0
+# step_db = 1.0
+# [audio.fader_limits.REAR]
+# min_db = -60.0
+# max_db = 0.0
+# step_db = 1.0
+# [audio.fader_limits.AUX3]
+# min_db = -60.0
+# max_db = 0.0
+# step_db = 1.0
+# [audio.fader_limits.AUX4]
+# min_db = -60.0
+# max_db = 0.0
+# step_db = 1.0
+
+[audio.camilla]
+# Opt in only after the pinned No5 Camilla extension and approved profiles
+# have passed the deployment recipe. This is gateway-owned private state;
+# root presets and the previous master-equalizer.json remain untouched.
+# sound_state_file = "/var/lib/no5-pi-gateway/sound-state.json"
+enabled = false
+# websocket_url = "ws://127.0.0.1:<confirmed-camilladsp-port>"
+expected_version = "4.1.3"
+poll_interval_s = 0.25
+# Explicit mapping is required before enabling.  MASTER is CamillaDSP Main
+# fader 0 and master volume/mute use Get/SetVolume and Get/SetMute exclusively.
+# [audio.camilla.channel_faders]
+# MASTER = 0
+# SUB = 1
+# REAR = 2
+# AUX3 = 3
+# AUX4 = 4
+# Names shown by the app are not CamillaDSP's fixed internal Main/Aux1..Aux4
+# names. They are only a gateway default: the app may give each stable fader
+# ID any local display name and uses the ID solely to target the Camilla fader.
+# [audio.camilla.channel_labels]
+# MASTER = "Main salon"
+# SUB = "Subwoofer"
+# REAR = "Aft cabin"
+# AUX3 = "Deck"
+# AUX4 = "Wheelhouse"
+#
+# CamillaDSP has no preset-list command.  The gateway scans only this explicit
+# local directory, then asks CamillaDSP to read each matching file before it
+# is advertised.  The app receives the title from the validated config, never
+# a backup filename guessed by the gateway.
+# preset_directory = "/etc/camilladsp"
+# preset_pattern = "preset_*.yml"
+# Optional and preferred when backup files live in the same directory: only
+# these exact filenames may become selectable, after CamillaDSP validates them.
+# preset_files = ["preset_stereo.yml", "preset_immersive.yml"]
+# preset_refresh_s = 10.0
+
+# This file is written atomically by `no5-raspotify-event-bridge`, which
+# librespot invokes using its documented --onevent option. The Raspotify and
+# gateway accounts need read/write permissions through an explicitly reviewed
+# common service group; never make the state directory world-writable.
+[audio.raspotify]
+enabled = false
+# state_file = "/var/lib/no5-pi-gateway/raspotify-event.json"
+poll_interval_s = 0.25
+
+# Gateway weather reads only a freshly observed explicit Signal K boat position
+# and gets the model from the fixed HTTPS Open-Meteo endpoint.  No fixed
+# fallback coordinate, phone location or write endpoint exists.
+[weather]
+enabled = false
+source_name = "no5-weather"
+# snapshot_url = "http://127.0.0.1:3000/signalk/v1/api/vessels/self"
+# latitude_value_pointer = "/navigation/position/value/latitude"
+# latitude_timestamp_pointer = "/navigation/position/timestamp"
+# longitude_value_pointer = "/navigation/position/value/longitude"
+# longitude_timestamp_pointer = "/navigation/position/timestamp"
+# position_stale_after_s = 30.0
+# refresh_interval_s = 300.0
+# retry_interval_s = 60.0
+
+# Opt-in V2 direct Android tokens. The root-owned registry contains public
+# keys and revocation state only. Bootstrap credentials never appear here.
+[lumina_tokens]
+enabled = false
+# audience = "https://lysmarine.local:9443"
+# registry_file = "/var/lib/no5-lumina-registry/registry.json"
+# registry_socket = "/run/no5-lumina-registry/registry.sock"
+allow_legacy_gateway_key = true

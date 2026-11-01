@@ -1,0 +1,148 @@
+{
+  "schema": "no5.venterior.power-control-design-contract/1",
+  "at_utc": "2026-10-17T16:59:29.770320+00:00",
+  "status": "DESIGN_REQUIREMENTS_NOT_IMPLEMENTED_OR_QUALIFIED",
+  "gpio_assignment": null,
+  "thresholds_and_times": null,
+  "contact": {
+    "type": "Normally open potential-free electronic contact across verified original K1 groups",
+    "default_during_boot_reset_USB_loss": "open",
+    "pulse_duration": "bounded; actual validated button duration pending",
+    "original_button_retained": true
+  },
+  "feedback": {
+    "D_candidate": "R42 lower vs confirmed GND; measuredON3.3V, OFF decay approx3s to unspecified mV, displayedzero much later",
+    "loaded_voltage_test": "HumanU0=3.3V andUL=3.3V;101kΩ betweenred/black measuringends consistentwithparallelD/GND. LCDnormalafter, notvisibleduring; heldfixture. About32.7µA calculated for reportedparallelarrangement, no visible drop at reportedprecision. Manualroundclosed; no fullinput/backfeed/fault qualification or directGPIO approval.",
+    "states": [
+      "ON",
+      "OFF_QUALIFIED",
+      "UNKNOWN"
+    ],
+    "required_inputs": [
+      "valid Venterior supply",
+      "fresh qualified state evidence",
+      "demonstrated feedback wiring-fault handling"
+    ],
+    "single_low_D_voltage_is_sufficient": false,
+    "fault_handling_gap": "Current endpoint observations do not prove an intact feedback lead or a valid OFF state. A disconnected lead must never become an OFF/start permission.",
+    "candidate_resolution": "Prove supervised wiring or independently qualified operating-current feedback after measuring ON/OFF current ranges; no current sensor selected yet. Monitor-side supply voltage and low current alone do not prove the downstream device connection.",
+    "evaluated_current_monitor_candidate": "evidence/feedback-current-candidate-20261017.json",
+    "device_connection_proof_required": true,
+    "monitor_side_valid_voltage_and_low_current_are_sufficient": false
+  },
+  "start_rule": "One intentional bounded contact pulse only when supply and feedback are valid and stable OFF is independently qualified; never pulse for ON or UNKNOWN",
+  "retry_policy": "No blind repeated button presses. A failed/unconfirmed start becomes a visible fault/manual recovery condition. Manual OFF does not trigger an immediate loop of new presses.",
+  "TX_control": "Own sonar transmissions remain separately gated; automatic power-on never grants TX permission",
+  "required_acceptance": [
+    {
+      "case": "Cold start, supply valid, confirmed OFF, feedback healthy",
+      "expected": "One bounded start press; verify resultingON; no TX permission implied"
+    },
+    {
+      "case": "Pico reset while LCD/Venterior alreadyON",
+      "expected": "No button press"
+    },
+    {
+      "case": "D lead disconnected while VenteriorON",
+      "expected": "UNKNOWN/fault; no button press"
+    },
+    {
+      "case": "Feedback ground disconnected",
+      "expected": "UNKNOWN/fault; no button press"
+    },
+    {
+      "case": "Venterior supply missing or out of valid range",
+      "expected": "No press; do not equate a lowD voltage withOFF"
+    },
+    {
+      "case": "Pico USB lost while VenteriorON",
+      "expected": "Contact opens; no unintended press or backfeed"
+    },
+    {
+      "case": "Venterior supply interrupted while Pico remains powered",
+      "expected": "Contact inactive through interruption; new start only after supply and feedback requalify"
+    },
+    {
+      "case": "State readout missing, stale or mutually inconsistent",
+      "expected": "UNKNOWN/fault; no press"
+    },
+    {
+      "case": "Device positive or return lead interrupted downstream of a powered current monitor",
+      "expected": "UNKNOWN/connection fault; monitor-side valid voltage and low current must not become OFF/start permission"
+    },
+    {
+      "case": "Current monitor communicates but returns old conversions or reset/unqualified configuration",
+      "expected": "UNKNOWN/fault; fresh state and sensor configuration must requalify before any press"
+    },
+    {
+      "case": "Original button used to turn VenteriorOFF after successful start",
+      "expected": "No immediate automatic button-press loop"
+    },
+    {
+      "case": "Start pulse issued but validON not confirmed",
+      "expected": "Stop attempts; retain accessible original controls and report fault"
+    }
+  ],
+  "release_requires_physical_fault_injection_tests": true,
+  "firmware_changed": false,
+  "hardware_changed": false,
+  "automatic_start_enabled": false,
+  "solder_release": false,
+  "planning_reservation": {
+    "output_candidate": {
+      "gpio": 2,
+      "physical_pin": 4
+    },
+    "input_candidate": {
+      "gpio": 3,
+      "physical_pin": 5
+    },
+    "spare_gpio": [
+      20,
+      21
+    ],
+    "area_mm": [
+      55.88,
+      48.26
+    ],
+    "actual_gpio_assignment_or_activation": false,
+    "input_ADC_shared_engine_constraint": "GP3 is a digital input; continuousGP26/ADC0 unchanged. HistoricalGP27/ADC1 proposal must not switch the sharedADC.",
+    "external_interface": "K1A/K1B potential-free, D andGND, tworeserve, plusseparate6V connector",
+    "area_holes_component_view": [
+      2,
+      3,
+      24,
+      22
+    ],
+    "placement_revision": "power-candidate-v3, proposed only; frozen core remainsbare-wire-v2",
+    "historical_output_input_proposal": {
+      "gpio_output": 19,
+      "gpio_input": 27,
+      "reason_revised": "Two left-bank digital pins simplify noncrossing access from reserved area; no live GPIO assignment changed."
+    },
+    "remaining_free_area_holes_candidate": [
+      14,
+      18,
+      24,
+      22
+    ],
+    "candidate_geometry_proof": "perfboard/power-candidate-v3/validation.json",
+    "candidate_detail": "perfboard/power-candidate-v3/power-state-detail.svg",
+    "new_candidate_does_not_qualify_K1_D_feedback_or_supply": true
+  },
+  "operator_requirements": "evidence/operator-requirements-20261018.json",
+  "input_source": "12V boat electrical system",
+  "converter_normal_operation_operator_confirmed": true,
+  "local_ZA_procurement_only": true,
+  "external_LED_and_Pi_status_required": true,
+  "latest_power_revision": "box-v4/VERSORGUNG-EIN-BUCK.md",
+  "latest_power_rule": {
+    "one12V_box_input": true,
+    "Pi_separate": true,
+    "one_existing_buck": true,
+    "Pico": "local5V to VSYS39; no USB VBUS power path to local box load",
+    "shared5V_candidate": true,
+    "fallback": "existing buck6V +5V LDO",
+    "current_live_hardware_changed": false
+  }
+}

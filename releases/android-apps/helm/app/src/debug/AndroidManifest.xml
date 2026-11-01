@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Normal permission required by API29 VirtualDisplay power attribution in private fixtures. -->
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <application>
+        <activity android:name="com.no5.helm.watchdog.PrivateRestartProbeActivity"
+            android:process=":sonar_restart_probe" android:exported="false"
+            android:launchMode="standard" android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Material.NoActionBar" />
+        <receiver android:name="com.no5.helm.watchdog.PrivateRestartProbeReceiver"
+            android:process=":sonar_restart_probe" android:exported="false" />
+    </application>
+</manifest>

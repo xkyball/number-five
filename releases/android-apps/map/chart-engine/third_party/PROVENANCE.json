@@ -1,0 +1,98 @@
+[
+  {
+    "repository": "https://github.com/lvandeve/lodepng",
+    "commit": "ff206aa97444bd39fad60ebaae7a959c2b88ba83",
+    "path": "lodepng.cpp",
+    "local_path": "chart-engine/third_party/lodepng/lodepng.cpp",
+    "sha256": "3b88f84b56c78e4b50f533b84973ebfc50ec8d5978298088a00f7c7b1b3a06f8"
+  },
+  {
+    "repository": "https://github.com/lvandeve/lodepng",
+    "commit": "ff206aa97444bd39fad60ebaae7a959c2b88ba83",
+    "path": "lodepng.h",
+    "local_path": "chart-engine/third_party/lodepng/lodepng.h",
+    "sha256": "276479a13247c6ed324132f5bee5ad8d8b1f4c04077736f24f8d179ef71682fd"
+  },
+  {
+    "repository": "https://github.com/lvandeve/lodepng",
+    "commit": "ff206aa97444bd39fad60ebaae7a959c2b88ba83",
+    "path": "LICENSE",
+    "local_path": "chart-engine/third_party/lodepng/LICENSE",
+    "sha256": "bdafa318b8e637d600ca1b60545e894881977a16a16b74809c95e805701621e3"
+  },
+  {
+    "repository": "https://github.com/nothings/stb",
+    "commit": "2c980bb59875b0d32144a71867fbdebb2f77cd20",
+    "path": "stb_truetype.h",
+    "local_path": "chart-engine/third_party/stb/stb_truetype.h",
+    "sha256": "ecd30b05e0dd4fea3a13c26810dd9e1992dc379049482c393d5a19e6b5090aab"
+  },
+  {
+    "repository": "https://github.com/nothings/stb",
+    "commit": "2c980bb59875b0d32144a71867fbdebb2f77cd20",
+    "path": "LICENSE",
+    "local_path": "chart-engine/third_party/stb/LICENSE",
+    "sha256": "bebfe904b14301657e4e5d655c811d51fd31b97c455b9cc2d8600d6bac6cff63"
+  },
+  {
+    "repository": "https://dejavu-fonts.github.io/",
+    "version": "Debian fonts-dejavu-core 2.37-8",
+    "local_path": "chart-engine/src/main/assets/DejaVuSans.ttf",
+    "sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280"
+  },
+  {
+    "repository": "https://dejavu-fonts.github.io/",
+    "version": "Debian fonts-dejavu-core 2.37-8",
+    "local_path": "chart-engine/third_party/dejavu/LICENSE",
+    "sha256": "63d3ba759d12804c5b31a9d5940d855c1820d1f5999e6b0872eb1c7ff045fbc9"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/GLES2/gl2.h",
+    "local_path": "chart-engine/no5/port/GLES2/gl2.h",
+    "sha256": "0704835ae4d63ef570d8e2351201a22346cfd8d16571d0811f3102a6491a8c31"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/GLES2/gl2platform.h",
+    "local_path": "chart-engine/no5/port/GLES2/gl2platform.h",
+    "sha256": "8f25443c4c5b3c8e702c3510f12b6ec8c23c2e3c1ca1c71bb07d148653696d9a"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/GLES2/gl2ext.h",
+    "local_path": "chart-engine/no5/port/GLES2/gl2ext.h",
+    "sha256": "0d29a1cc08d63595a28571079677f36a4df54b702d6ebd302b98c68a64dfa3eb"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/KHR/khrplatform.h",
+    "local_path": "chart-engine/no5/port/KHR/khrplatform.h",
+    "sha256": "c0c4d12cbb14161c88509b3d7a853730da6ea5a68592ca613668428dd2381129"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/EGL/egl.h",
+    "local_path": "chart-engine/no5/port/EGL/egl.h",
+    "sha256": "d3da24f2b91d45571e2169c624ea1badffed16895bec8fa0acc39dadbc4600a6"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/EGL/eglplatform.h",
+    "local_path": "chart-engine/no5/port/EGL/eglplatform.h",
+    "sha256": "25b5391655effcf363a38fa00c3154f356a3eab3d35dc067847875513cf1e441"
+  },
+  {
+    "repository": "https://android.googlesource.com/platform/ndk",
+    "version": "NDK 29.0.14206865",
+    "path": "sysroot/usr/include/EGL/eglext.h",
+    "local_path": "chart-engine/no5/port/EGL/eglext.h",
+    "sha256": "83bfbe8ef5f1eb096fd77bf025216e01ae9276c2d1d8bf99e770f9c78376cfe2"
+  }
+]

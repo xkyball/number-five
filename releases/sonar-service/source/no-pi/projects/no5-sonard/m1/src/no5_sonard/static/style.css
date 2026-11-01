@@ -1,0 +1,35 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #071016;
+  color: #e8f1f5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: radial-gradient(circle at top, #122530 0, #071016 48%); min-height: 100vh; }
+.shell { width: min(1500px, 98vw); margin: 0 auto; padding: 20px; }
+header { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 14px; }
+.eyebrow { font-size: 12px; letter-spacing: 0.18em; color: #7ca1b2; font-weight: 700; }
+h1 { margin: 4px 0 0; font-size: clamp(24px, 3vw, 42px); line-height: 1; }
+.badge { display: inline-block; font-size: 11px; letter-spacing: .08em; padding: 5px 8px; vertical-align: middle; border: 1px solid #426373; border-radius: 999px; color: #9fc0cf; }
+.status-grid { display: grid; grid-template-columns: repeat(4, minmax(90px, 1fr)); gap: 10px; }
+.status-grid div { background: rgba(14, 32, 42, .82); border: 1px solid #233f4d; border-radius: 10px; padding: 9px 12px; min-width: 100px; }
+.status-grid span { display: block; color: #7897a6; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.status-grid strong { display: block; margin-top: 3px; font-size: 19px; font-variant-numeric: tabular-nums; }
+.panel { border: 1px solid #203a48; background: rgba(5, 14, 20, .88); border-radius: 12px; box-shadow: 0 18px 60px rgba(0,0,0,.25); }
+.controls { display: flex; align-items: center; gap: 20px; padding: 10px 14px; margin-bottom: 12px; flex-wrap: wrap; }
+.controls label { font-size: 12px; color: #9db4c0; display: flex; align-items: center; gap: 8px; }
+select, button { background: #10232d; color: #e7f0f4; border: 1px solid #31505f; border-radius: 7px; padding: 7px 10px; }
+button { cursor: pointer; }
+input[type="range"] { width: 150px; }
+.connection { margin-left: auto; padding: 5px 9px; border-radius: 999px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+.connection.online { color: #bceec7; border: 1px solid #376c45; background: #102919; }
+.connection.offline { color: #f0bdbd; border: 1px solid #704141; background: #2a1111; }
+.echogram-wrap { position: relative; height: min(72vh, 820px); min-height: 420px; overflow: hidden; }
+#echogram { width: 100%; height: 100%; display: block; image-rendering: pixelated; }
+.depth-axis { pointer-events: none; position: absolute; z-index: 2; top: 8px; bottom: 8px; left: 8px; display: flex; flex-direction: column; justify-content: space-between; color: rgba(255,255,255,.74); font-size: 11px; text-shadow: 0 1px 3px #000; }
+footer { color: #607f8d; font-size: 12px; padding: 12px 4px; }
+@media (max-width: 900px) {
+  header { align-items: stretch; flex-direction: column; }
+  .status-grid { grid-template-columns: repeat(2, 1fr); }
+  .connection { margin-left: 0; }
+}

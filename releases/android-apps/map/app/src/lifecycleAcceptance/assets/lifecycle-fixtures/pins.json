@@ -1,0 +1,88 @@
+{
+  "schema": "no5-lifecycle-acceptance-fixtures/1",
+  "purpose": "Isolated offline lifecycle test data. Not an active user selection or a navigation dataset.",
+  "noaaPublisher": "NOAA Office of Coast Survey",
+  "noaaSourceAccessed": "2026-10-03",
+  "noaaSources": [
+    "https://www.charts.noaa.gov/ENCs/US5BOSCC.zip",
+    "https://www.charts.noaa.gov/ENCs/US5BOSDD.zip"
+  ],
+  "wsvPublisher": "Wasserstrassen- und Schifffahrtsverwaltung des Bundes",
+  "wsvOriginalZip": "WW82_Untere_Havel_2026-07-14.zip",
+  "wsvOriginalZipSha256": "f034b0b399257b0d08e5ee038ec23e85df75d5404d306f8b806a839657dce740",
+  "files": [
+    {
+      "name": "US5BOSCC.000",
+      "asset": "US5BOSCC.000.s57",
+      "bytes": 1113399,
+      "sha256": "c84c54a6f12fa4800b04f64b379c604bb56f3a75cac2c891d2130d9bf80ce6e7",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSCC.000"
+    },
+    {
+      "name": "US5BOSCC.001",
+      "asset": "US5BOSCC.001.s57",
+      "bytes": 3306,
+      "sha256": "6e05fd4f2d8984a6c88b83cfb248b561a3f67ae499f3945569b6b6eb8da6b5a1",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSCC.001"
+    },
+    {
+      "name": "US5BOSCC.002",
+      "asset": "US5BOSCC.002.s57",
+      "bytes": 3289,
+      "sha256": "66f4f1f0412c8d589090983c994277c6bafc001320c6caf6d285c3bd63512723",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSCC.002"
+    },
+    {
+      "name": "US5BOSCC.003",
+      "asset": "US5BOSCC.003.s57",
+      "bytes": 2108,
+      "sha256": "8b430aabdf6fcbd7e9e2dadc173d4084051578a0b2db7106ffc12ad21399dc07",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSCC.003"
+    },
+    {
+      "name": "US5BOSCC.004",
+      "asset": "US5BOSCC.004.s57",
+      "bytes": 5172,
+      "sha256": "d6b16a4d28c47f98065f710fb6076fb330ffebf4df432ff26e42d8fa402c5d9b",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSCC.004"
+    },
+    {
+      "name": "US5BOSDD.000",
+      "asset": "US5BOSDD.000.s57",
+      "bytes": 714271,
+      "sha256": "d1b72f2a6111c8687760fceec48514e8c0df916beef2e4cbaf87659d600b88b8",
+      "sourceCommit": "0014763fa00badcfb97e5949f882815bd0f97a0a",
+      "sourcePath": "map/chart-engine/src/main/assets/charts/noaa/US5BOSDD.000"
+    },
+    {
+      "name": "1W7BRW02.000",
+      "asset": "1W7BRW02.000.s57",
+      "bytes": 535597,
+      "sha256": "1dc717215270e1c702ed99d7736cd315956f68bd0e9732bb9849caa27a05eed9",
+      "sourceZipSha256": "f034b0b399257b0d08e5ee038ec23e85df75d5404d306f8b806a839657dce740",
+      "sourceEntry": "Untere-Havel-Wasserstrasse_0-69_2026-07-14/ENC_ROOT/1W7BRW02.000"
+    }
+  ],
+  "seed": [
+    "US5BOSCC.000",
+    "US5BOSCC.001",
+    "US5BOSCC.002",
+    "US5BOSDD.000"
+  ],
+  "update": [
+    "US5BOSCC.003",
+    "US5BOSCC.004"
+  ],
+  "gap": [
+    "US5BOSCC.004"
+  ],
+  "wsv": [
+    "1W7BRW02.000"
+  ],
+  "scope": "No synthetic DSID/cancellation bytes, no user or restored Florida files."
+}

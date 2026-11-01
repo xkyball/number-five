@@ -1,0 +1,179 @@
+{
+  "schema": "number-five.source-collection/1",
+  "prepared_on": "2026-11-01",
+  "scope": "Eleven bounded source components covering main Android apps, Pi services, firmware, chart conversion and hardware. Each package has its own build/test limits; not a prequalified boat system.",
+  "secret_review": {
+    "high_findings": 0,
+    "unresolved": 0,
+    "reviewed_false_positives": 31,
+    "report": "secret-review.json"
+  },
+  "components": [
+    {
+      "component": "android-apps",
+      "archive": "android-apps-source-20261101.zip",
+      "sha256": "1714011f115e91ba6681c5fb196ba1abe3d9056f5bd1dde209113af94d2c71e9",
+      "bytes": 46300184,
+      "files": 1927,
+      "source_files": 1926,
+      "scope": "Actual HELM206,MAP110,Launcher31 and required shared/build sources;no charts/OEM/runtime/signing;not full Lumina root runtime.",
+      "limits": [
+        "No Android/device rebuild performed.",
+        "Geographic chart/recorded fixture data absent.",
+        "Exact shared EQ Rust/NDK pins and public dependencies needed.",
+        "Production signing identity not included;debug builds are not installed-device upgrades."
+      ],
+      "manifest_sha256": "f5f0cb35eb18a1a4a1c7d2e8884e788d37a1719f7ee506409603fdb4f1391704",
+      "archive_url": "https://github.com/xkyball/number-five/releases/download/source-2026-11-01/android-apps-source-20261101.zip"
+    },
+    {
+      "component": "pi-gateway",
+      "archive": "pi-gateway-source-20261101.zip",
+      "sha256": "b837f80c2071859588db7625434be88a772a1333485a7d2637b42746aaa8d49b",
+      "bytes": 615689,
+      "files": 195,
+      "source_files": 194,
+      "scope": "Current complete own runtime package,build metadata,public examples,source helpers,synthetic contract fixtures and tests. Current untracked position-combination and sonar-forwarding dependencies are included.",
+      "limits": [
+        "Separate Signal K,CamillaDSP,Spotify receiver,Sonard and HELM apps are not bundled.",
+        "Actual installed private configuration,credential material,real runtime/evidence and hardware profiles are excluded.",
+        "Archived original-failure replay test and external HELM integration need excluded inputs; use the release test runner for self-contained core tests."
+      ],
+      "manifest_sha256": "64355d569c4ac6f0f7d04453e3367a92d1cbf6c0bd297f3e12a6f57614596829",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/pi-gateway-source-20261101.zip"
+    },
+    {
+      "component": "gps-live-map",
+      "archive": "gps-live-map-source-20261101.zip",
+      "sha256": "3b9b4415e85db8bdf5e3c987c3ba08dbb5cd72671eb4fcf89609a25801083b5b",
+      "bytes": 97387,
+      "files": 23,
+      "source_files": 22,
+      "scope": "Complete small read-only Python/Leaflet application,public installer/service,synthetic tests. Requires a compatible No5 Gateway position-source endpoint.",
+      "limits": [
+        "Runtime accounts,Gateway secrets and real positions are not included.",
+        "No on-water acceptance implied; release checks are reported separately."
+      ],
+      "manifest_sha256": "d0cd27562a897ecda97e8e0347971e18adcf8bcc7238dcf42bd37942aa70811d",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/gps-live-map-source-20261101.zip"
+    },
+    {
+      "component": "spotify-receiver",
+      "archive": "spotify-receiver-source-20261101.zip",
+      "sha256": "b492a48f998693420992c69337ab719b84d1cc590befc55aeaf3c4c8f31c145c",
+      "bytes": 189238,
+      "files": 48,
+      "source_files": 47,
+      "scope": "Complete current Rust Spotify Connect receiver,local control/state/media/EQ-volume code,Cargo.lock,own librespot patches,vendored librespot-connect source and public deployment templates.",
+      "limits": [
+        "Spotify accounts/content are not included; live Spotify/ALSA behavior is not verified by source packaging.",
+        "Cargo downloads pinned public dependencies on first clean build unless you provide a Cargo cache.",
+        "Existing MIT licenses remain; other crate licenses apply to their own crates."
+      ],
+      "manifest_sha256": "34e4e25117752e89cf0072cdf74d00e7bc95e7f80083c7c2682eda9d401b64fe",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/spotify-receiver-source-20261101.zip"
+    },
+    {
+      "component": "camilladsp-extensions",
+      "archive": "camilladsp-extensions-2026-11-01.zip",
+      "sha256": "4228357d126bdcd18a0e382051157e5620b149a83076a7c0bad405a8833db6dc",
+      "bytes": 120837,
+      "files": 24,
+      "scope": "MPL-2.0 Rust extension/kernel; GPL-3.0-only own Python tools; CC-BY-SA-4.0 docs; upstream remains dual GPL/MPL",
+      "validation_report": "camilladsp-extensions/VALIDATION.json",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/camilladsp-extensions-2026-11-01.zip"
+    },
+    {
+      "component": "sonar-service",
+      "archive": "sonar-service-source-20261101.zip",
+      "sha256": "ab602b72b3f1b2faab0d0168a10e89710bf88c5b6916b74ac6e0baecd24e9ff7",
+      "bytes": 429122,
+      "files": 167,
+      "source_files": 166,
+      "scope": "Current0.4.31 own Sonard/OpenEcho extension sources plus20original own M1 runtime members,the6hash-bound preserved own deltas,and a portable release-only build adapter. Original M1 Pico transport firmware source is included separately; current0.7.x TX firmware is not included.",
+      "limits": [
+        "This is host source; current own-transmit Pico0.7.x firmware and board calibration/hardware profiles remain outside this package.",
+        "Recorded-data/device-specific tests need recordings or running hardware and are not a clean-clone acceptance claim.",
+        "No raw captures,archive state or real device identities are shipped.",
+        "The original build script is preserved; use build_release.py to bind portable local source inputs."
+      ],
+      "manifest_sha256": "120d368e73b1e70df7aff81d0b50b9728d19f6a3bb9efe4c6781b9b08d24134b",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/sonar-service-source-20261101.zip"
+    },
+    {
+      "component": "pico-tx-firmware",
+      "archive": "pico-tx-firmware-source-20261101.zip",
+      "sha256": "15d3edeaadbea853322747e032e1f4eaaa475f048b3f0107ab5d0332a28ec95b",
+      "bytes": 97485,
+      "files": 53,
+      "source_files": 52,
+      "scope": "Current own Pico TX C/PIO/USB source:0.7.0default,0.7.13clip;synthetic host tests;exact own parser/predecessor dependencies.",
+      "limits": [
+        "No flash,native ARM rebuild or physical test performed.",
+        "Public Pico SDK/ARM toolchain required;SDK revision not pinned in original source.",
+        "Electrical hardware profiles and full oscilloscope app omitted."
+      ],
+      "manifest_sha256": "8db48149de202ca9127b8f954558f6925531d384597b5d33636b5585bea2e9bd",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/pico-tx-firmware-source-20261101.zip"
+    },
+    {
+      "component": "chart-converter-core",
+      "archive": "chart-converter-core-2026-11-01.zip",
+      "sha256": "d451f287365d35c9bd666b276594159937a5224fbcc1ddf9b61bbc47db6c509f",
+      "bytes": 1054050,
+      "files": 319,
+      "scope": "GPL-3.0-only own converter; CC-BY-SA-4.0 docs; separate external dependencies retain licenses",
+      "validation_report": "chart-converter-core/VALIDATION.json",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/chart-converter-core-2026-11-01.zip"
+    },
+    {
+      "component": "venterior-v15-design",
+      "archive": "venterior-v15-design-source-20261101.zip",
+      "sha256": "a794f0db880657da0fec9005d242a96b98c8495888d98ff63673ae55641dad46",
+      "bytes": 124917,
+      "files": 40,
+      "source_files": 39,
+      "scope": "Current V15-2 parametric CAD source and circuit-placement input,plus own electronics/wiring/check source for inspection. Portable adapter can reconstruct the exact nominal model using build123d.",
+      "limits": [
+        "Current missing materials,real purchased-part measurements,active electrical behavior and on-boat fit remain OPEN.",
+        "This source package omits private inventory export,manufacturer PDFs/photos and all historical test evidence.",
+        "Release adapter exports nominal geometry only; it does not perform the original full electrical/mechanical/slicing acceptance."
+      ],
+      "manifest_sha256": "8fafe07ed96662dd571e717ac908d87496e683154f624a05e3f898d3490c680c",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/venterior-v15-design-source-20261101.zip"
+    },
+    {
+      "component": "yamaha-trim-r3-design",
+      "archive": "yamaha-trim-r3-design-source-20261101.zip",
+      "sha256": "af849700a46b7a8402d667a0a3e59c36fd27315ec551c601280070e603b357b2",
+      "bytes": 136449,
+      "files": 49,
+      "source_files": 48,
+      "scope": "Current parametric CAD,design/net contract,AVR firmware and host-test sources. Four own nominal purchased-reference BReps are retained as required frozen geometry inputs; no manufacturer PDF/model is copied.",
+      "limits": [
+        "Analog stability,5ohm output target,real fault timing,thermal margin and Yamaha operating acceptance remain OPEN; two current SPICE reference reports fail.",
+        "Full QA references central native-tools and manufacturer SPICE inputs not bundled. The portable CAD path does not establish full electrical acceptance.",
+        "No print,upload,inventory booking or on-boat action is part of this archive."
+      ],
+      "manifest_sha256": "370e1d8c0bbd08a4101597aeed2a9cc72a474a6d3d86020a028996a103514d78",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/yamaha-trim-r3-design-source-20261101.zip"
+    },
+    {
+      "component": "pi-box-r5-design",
+      "archive": "pi-box-r5-design-source-20261101.zip",
+      "sha256": "6fb18879e8b0e075aaf361630072e77484ffa1db58a1f73cca8070582b730412",
+      "bytes": 7308635,
+      "files": 256,
+      "source_files": 255,
+      "scope": "Current R5 own nominal mechanical source chain,200 frozen inherited own reference bodies,retained converter STEP/predecessor tray,current contact data,portable path adapter and two exact example recipes.",
+      "limits": [
+        "No full CAD rebuild performed during packaging;portable full source chain statically inspected only.",
+        "Frozen inherited BReps are own reference source,not newly reconstructed parametric predecessor features.",
+        "Full electrical routing/report/slicer toolchain requires separate public libraries/central helpers.",
+        "Actual three-carrier print failure and current functional-audit faults remain;no real fit/operation acceptance."
+      ],
+      "manifest_sha256": "1eb88c8eec2260c9d4e3eec443f2080b8af74ce871c0b52565f817ebc7d918fc",
+      "archive_url": "https://number-five.xkyball.chatgpt.site/downloads/pi-box-r5-design-source-20261101.zip"
+    }
+  ]
+}

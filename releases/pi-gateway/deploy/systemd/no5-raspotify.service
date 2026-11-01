@@ -1,0 +1,29 @@
+[Unit]
+Description=No5 Spotify Connect receiver routed through CamillaDSP
+Documentation=https://github.com/librespot-org/librespot
+Requires=camilladsp.service
+After=network-online.target camilladsp.service
+Wants=network-online.target
+Conflicts=raspotify.service
+StartLimitIntervalSec=120
+StartLimitBurst=6
+
+[Service]
+Type=simple
+# CamillaDSP is deliberately operated as this account too; this preserves the
+# known ALSA loopback route instead of adding a second PipeWire/Pulse path.
+User=user
+Group=no5media
+SupplementaryGroups=audio
+ExecStart=/usr/bin/librespot --name No5 --backend alsa --device camilladsp --format S16 --bitrate 320 --mixer softvol --initial-volume 50 --onevent /usr/local/libexec/no5-raspotify-event
+Restart=on-failure
+RestartSec=5
+UMask=0027
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/no5-media
+
+[Install]
+WantedBy=multi-user.target

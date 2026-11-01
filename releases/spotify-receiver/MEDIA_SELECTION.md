@@ -1,0 +1,15 @@
+# Session-bound music navigation
+
+The approved No5 navigation adds `READ_NAVIGATION`, `SELECT_QUEUE` and `SELECT_COLLECTION` to the existing root-owned local control socket. Gateway GET `/v1/audio/navigation` and POST `/v1/audio/select` require the existing gateway key. No credentials, TLS policy, account login, DSP preset or Main-volume contract changes.
+
+The old media/artwork/browse V1 schemas remain compatible. Navigation enriches missing song titles/artists from bounded metadata calls using the current Connect session, outside the playback and Main actors. Cache: 256 entries, 10-minute positive / 15-second negative leases, four concurrent lookups, 1.5-second soft per-read budget. Missing labels remain missing. Actual image behavior remains unchanged.
+
+Queue revision is an opaque No5 actor version over the current context, queue revision, current entry and next-entry identity/visibility. It changes if the actual ordered queue changes. Queue selection contains the expected receiver session, this version, the displayed ordinal and exact URI. The actor checks its current snapshot immediately before advancing. Duplicate occurrences are distinguished by ordinal and actual entry UID. Hidden/unavailable items do not become visible rows. Unsupported hidden predecessors reject before mutation.
+
+Collection selection additionally contains the displayed query/page identity and row ordinal. A fresh collection read must match. The page identity includes underlying ordered context URI/UID/GID data or upstream playlist revision and excludes label-cache completion. Context preparation uses the same authenticated session and preserves real continuation pointers. The actor applies the exact resolved position, without the ordinary `load` fallback to another index. Main, manual queue and repeat/shuffle options are retained; selecting a collection deliberately changes the playback context.
+
+One selection mutex, one actor command and one individual receipt. VERIFIED requires a new matching player Loading/Playing request plus the actual selected URI and current UID. A timeout, session change or lost readback is UNKNOWN; no replay. Gateway retains at most 128 terminal request receipts and rejects reuse of an identity for another body. The client consumes each POST once and retains uncertain outcomes after closing the queue. Another client can change playback afterward; this receipt is an observation at confirmation time, not exclusive ownership of Spotify playback.
+
+Queue is at most 80 observed upcoming items, not a complete playlist. Collection reads are bounded to 40 rows and at most eight resolved pages; incomplete access remains explicit. Account/private-endpoint availability is not fabricated. No additional OAuth flow or unimplemented Spotify feature is introduced.
+
+Local source validation is in `projects/no5-pi-gateway/evidence/spotify-navigation-20261009/validation.json`. Host tests do not establish native Linux/ALSA or live account/device acceptance. Runtime changes are recorded separately when performed; this source checkpoint does not claim activation or a verified song switch on a device.

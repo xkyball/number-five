@@ -1,0 +1,212 @@
+{
+  "id": "aux-switch",
+  "board": {
+    "nominal_size_mm": [
+      26,
+      18
+    ],
+    "grid_columns_rows": [
+      8,
+      6
+    ],
+    "pitch_mm": 2.54,
+    "hole_origin_mm": [
+      5.87,
+      1.81
+    ],
+    "hole_diameter_mm": 1,
+    "pad_diameter_mm": 2,
+    "thickness_mm": 1.6,
+    "source": "https://www.robotics.org.za/PROTO-46DS-P254?manufacturer_id=20&page=42",
+    "source_status": "manufacturer_nominal; received grid origin/pad/drill not measured",
+    "copper": "double-sided isolated plated eyes; no implicit buses",
+    "received_part_fit_checked": false,
+    "raw_cut": "60x40 raw board4: rail60x20, kerf2, offcut60x18; switch26x18 cut from offcut; no additional whole raw board"
+  },
+  "components": [
+    {
+      "ref": "R_K_BASE",
+      "kind": "resistor",
+      "value": "10000 ohm",
+      "pins": {
+        "1": "GP20_POWER",
+        "2": "K1_BASE"
+      },
+      "dnp": false,
+      "cad_reference": "R807",
+      "pads": {
+        "1": {
+          "hole": [
+            7,
+            1
+          ],
+          "net": "GP20_POWER"
+        },
+        "2": {
+          "hole": [
+            3,
+            1
+          ],
+          "net": "K1_BASE"
+        }
+      },
+      "module": "aux-switch"
+    },
+    {
+      "ref": "R_K_OFF",
+      "kind": "resistor",
+      "value": "100000 ohm",
+      "pins": {
+        "1": "K1_BASE",
+        "2": "K1_RETURN"
+      },
+      "dnp": false,
+      "cad_reference": "R808",
+      "pads": {
+        "1": {
+          "hole": [
+            3,
+            5
+          ],
+          "net": "K1_BASE"
+        },
+        "2": {
+          "hole": [
+            7,
+            5
+          ],
+          "net": "K1_RETURN"
+        }
+      },
+      "module": "aux-switch"
+    },
+    {
+      "ref": "R_K_TEST",
+      "kind": "resistor",
+      "value": "1000 ohm",
+      "pins": {
+        "1": "K1_HIGH",
+        "2": "K1_COLLECTOR"
+      },
+      "dnp": false,
+      "cad_reference": "R809",
+      "pads": {
+        "1": {
+          "hole": [
+            1,
+            1
+          ],
+          "net": "K1_HIGH"
+        },
+        "2": {
+          "hole": [
+            1,
+            5
+          ],
+          "net": "K1_COLLECTOR"
+        }
+      },
+      "module": "aux-switch"
+    },
+    {
+      "ref": "Q_POWER",
+      "kind": "npn",
+      "value": "BC547",
+      "pins": {
+        "C": "K1_COLLECTOR",
+        "B": "K1_BASE",
+        "E": "K1_RETURN"
+      },
+      "dnp": false,
+      "cad_reference": "Q8",
+      "pads": {
+        "C": {
+          "hole": [
+            2,
+            3
+          ],
+          "net": "K1_COLLECTOR"
+        },
+        "B": {
+          "hole": [
+            3,
+            3
+          ],
+          "net": "K1_BASE"
+        },
+        "E": {
+          "hole": [
+            4,
+            3
+          ],
+          "net": "K1_RETURN"
+        }
+      },
+      "lead_order_status": "functional C/B/E pad assignment; real purchased package face/lead order requires check",
+      "module": "aux-switch"
+    },
+    {
+      "ref": "J_K_CTRL",
+      "cad_reference": "J1440",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "GP20_POWER"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            8,
+            1
+          ],
+          "net": "GP20_POWER"
+        }
+      },
+      "module": "aux-switch",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "J_K_FIELD",
+      "cad_reference": "J1441",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "K1_HIGH",
+        "2": "K1_RETURN"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            2,
+            1
+          ],
+          "net": "K1_HIGH"
+        },
+        "2": {
+          "hole": [
+            8,
+            5
+          ],
+          "net": "K1_RETURN"
+        }
+      },
+      "module": "aux-switch",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    }
+  ],
+  "internal_buses": [],
+  "bare_wire": false,
+  "construction": "0.6mm tinned solid bridges, individual insulation; underside routing",
+  "optional": true,
+  "installation_gate": "K1 and temperature hardware unqualified; no firmware or live connection change"
+}

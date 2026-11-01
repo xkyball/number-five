@@ -1,0 +1,7 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #10151b; color: #edf3f7; }
+main { width: min(28rem, calc(100vw - 2rem)); padding: 2rem; border: 1px solid #3a4a56; border-radius: .75rem; background: #17212a; }
+h1 { margin-top: 0; } p { line-height: 1.5; color: #c5d1d8; }
+form { display: grid; gap: .75rem; } input, button { font: inherit; padding: .7rem; border-radius: .35rem; }
+input { border: 1px solid #718896; background: #0c1116; color: inherit; } button { border: 0; background: #2c9ec4; color: #081218; font-weight: 700; cursor: pointer; }
+#status { min-height: 1.5rem; }

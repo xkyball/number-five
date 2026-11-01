@@ -1,0 +1,43 @@
+{
+  "externalPrerequisites": [
+    "Separately reviewed runtime factory and real runtime manifest, each caller-pinned",
+    "Separately authorized process plan and runtime acquisition",
+    "Optional separately reviewed segment helper with explicit SHA256"
+  ],
+  "files": [
+    {
+      "bytes": 22135,
+      "path": "tools/original_query_probe/run_area_query.py",
+      "sha256": "215ab3d6187873dbe7a96c420c0dda5c1efa9af110606a3b10ee818610bb9718"
+    },
+    {
+      "bytes": 5534,
+      "path": "tools/original_query_probe/build_query_fixtures.py",
+      "sha256": "b52ee94bf14cb664488f7da181b746ae026a4a0183000467c6fc62dd01b9a58c"
+    },
+    {
+      "bytes": 7675,
+      "path": "tools/original_query_probe/bounded_probe_controller.py",
+      "sha256": "6ed1b683ba5d5b1e85c5e4d5a62ae0f40cee37589fd5c3c34164be766740ac06"
+    },
+    {
+      "bytes": 4702,
+      "path": "tests/test_original_query_probe_tools.py",
+      "sha256": "2d9fd71f1172ba20bcb30e68818aee8b2115b8dd37a910cce29fedb95424acbb"
+    }
+  ],
+  "format": "no5-own-manual-query-tools-provenance/1",
+  "limits": [
+    "Finite synthetic Area/query/centroid experiment only",
+    "No Chart/Collector/FileOpen or complete renderer claim",
+    "Instrumented host execution seconds are not physical device timing",
+    "No production chart transformation or apply authorization"
+  ],
+  "packageVersionUnchanged": "0.2.14",
+  "peerReview": {
+    "kind": "Source-only and13 host controls; no new original execution",
+    "sha256": "a0d1d29090f1bdcf6e2fb2c145a8eb35167a480df18f15dfb1e1b1979ac6976f"
+  },
+  "scope": "Explicit manual component experiment tools, not installed package or automatic native execution",
+  "sourceOrigin": "Own original source and invented synthetic wires; no OEM implementation, library or chart payload"
+}

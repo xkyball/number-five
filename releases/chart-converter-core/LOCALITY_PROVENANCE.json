@@ -1,0 +1,88 @@
+{
+  "activation": "Explicit scoped planning/application with independent allowlist; default only pure AC Kind3 fills in known drawing contexts. No automatic country application.",
+  "api": {
+    "no_chart_converter.rx5.locality_empty.certify": {
+      "input": "Complete raw-context programme byte sequence and complete Root1 closed typed parts of one Kind3 owner; original source tile (level,x,y).",
+      "output": "No-ink geometry certificate or None; raises ValueError for the explicit guard/source-level contract. No input mutation or file I/O.",
+      "scope": "Source levels0..15, destination proof through29 with exact full-translation signed32 safety; geometry64 protects32-sourcepixel geometric halo. Actual admission/query applicability remains separately scoped.",
+      "signature": "certify(kind, programmes, parts, tile, guard_pixels=64)"
+    },
+    "no_chart_converter.rx5.locality_parts.local_whole_parts": {
+      "input": "Immutable original record/index/coordinate/render buffers and actual source tile. Every raw programme context is checked, including duplicate keys.",
+      "output": "Feature/index bytes plus per-part receipts; original coordinate/render buffers unchanged and at least one part retained per owner. No whole owner removal or file I/O.",
+      "scope": "Complete Root1 parts; exact terminal separator handling and full descendant intervals through29; unsafe signed32 cases retained. Broader LS/AP kernel eligibility is conditional proposal only; default wrapper accepts pureAC only.",
+      "signature": "local_whole_parts(features,indexes,coordinates,render,tile,*,guard_pixels=32,max_level=29)"
+    }
+  },
+  "format": "no5-chart-converter-locality-kernels-provenance/1",
+  "gitOperationsByThisAgent": false,
+  "importedChartsOrProofPayloads": false,
+  "importedOEMLibraries": false,
+  "importedRuntimeData": false,
+  "independentV31SourceApproval": {
+    "bytes": 6099,
+    "path": "work/AP11/product-completion-20261017/decoder-locality-review-v31/SOURCE_APPROVAL.json",
+    "sha256": "a3e338414ddf0ae396113e1b740db002349ae75085e0dd81809dae5ae9d4670d"
+  },
+  "newProjectionTests": {
+    "bytes": 7770,
+    "inventedDataOnly": true,
+    "path": "tests/test_locality_projection_domain.py",
+    "sha256": "e7a2e10701f5be65c94cba0b59207196e0eef6f47431669fefccf6e4b2e05776"
+  },
+  "rows": [
+    {
+      "adaptation": "OWN_REVIEWED_V31_PROJECTION_DOMAIN_EXTENSION_OF_EXACT_PORT",
+      "functionIdentity": "ADAPTED_EXPLICIT_DESCENDANT_INTERVAL_AND_SIGNED32_GUARDS; ORIGINAL_SOURCE_HASH_RETAINED",
+      "imports": [
+        "dataclasses",
+        "locality_parts",
+        "re"
+      ],
+      "packagePath": "src/no_chart_converter/rx5/locality_empty.py",
+      "packagedBytes": 4341,
+      "packagedSHA256": "786245e2c155f59b0b7c7961bf38786cc7b785a9b958ea38be1d8a5b7cf614d7",
+      "priorExactPortPackagedBytes": 4180,
+      "priorExactPortPackagedSHA256": "d2f9ae8c77295a1453874fbe95f0b1d00097687ea63b39e34b8b2c6200fa6b70",
+      "source": "work/AP04/product-completion-20261016/native-loading-v24/empty_owner_core.py",
+      "sourceBytes": 4180,
+      "sourceSHA256": "d2f9ae8c77295a1453874fbe95f0b1d00097687ea63b39e34b8b2c6200fa6b70"
+    },
+    {
+      "adaptation": "OWN_REVIEWED_V31_PROJECTION_DOMAIN_EXTENSION_OF_EXACT_PORT",
+      "functionIdentity": "ADAPTED_EXPLICIT_DESCENDANT_INTERVAL_AND_SIGNED32_GUARDS; ORIGINAL_SOURCE_HASH_RETAINED",
+      "imports": [
+        "functools",
+        "hashlib",
+        "math",
+        "re",
+        "struct"
+      ],
+      "packagePath": "src/no_chart_converter/rx5/locality_parts.py",
+      "packagedBytes": 10572,
+      "packagedSHA256": "0ef90896b6897139fa5c5bd25416247df1536d65de286c646056b85027445540",
+      "priorExactPortPackagedBytes": 7406,
+      "priorExactPortPackagedSHA256": "3d4decba065b9bddb50ffa167a0a056a1ba0b8fa18ed16d6b5e9e3505c98a004",
+      "source": "work/AP02/product-completion-20261016/native-loading-v24/whole_part_core.py",
+      "sourceBytes": 7406,
+      "sourceSHA256": "3d4decba065b9bddb50ffa167a0a056a1ba0b8fa18ed16d6b5e9e3505c98a004"
+    }
+  ],
+  "status": "REVIEWED_V31_PURE_AC_DEFAULT",
+  "tests": {
+    "additional": "Whole-owner geometric winding/contact guards, all-context exclusion, signed Kind4/9 noninterference, malformed record/level bounds.",
+    "bytes": 8896,
+    "command": ".venv/bin/python -B -m pytest -q tests/test_rx5_locality.py",
+    "inheritedControls": {
+      "adaptation": "Own synthetic wire fixture moved to L15 and generic TEST/SYNTHETIC tokens, preserving the eleven control intents and four malformed refusal assertions.",
+      "bytes": 3993,
+      "malformedRefusals": 4,
+      "positiveAndPreservationCases": 11,
+      "sha256": "c4341f175563a3bd2063475df583a708001c8ca3247bd1dcbaf464332ea09de9",
+      "source": "work/AP02/product-completion-20261016/native-loading-v24/check_core.py"
+    },
+    "passed": 33,
+    "path": "tests/test_rx5_locality.py",
+    "sha256": "c4b58a270bc1339dc6a01d16ba8e98c9413e314a6ba321712947c708e222cb9e"
+  }
+}

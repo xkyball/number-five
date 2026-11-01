@@ -1,0 +1,21 @@
+android.sourceSets.getByName('main').java.srcDir('../../helm/domain/src/main/kotlin')
+android.sourceSets.getByName('main').java.srcDir('../../gateway-protocol/src/main/kotlin')
+android.testOptions.unitTests.includeAndroidResources = true
+// AGP9 built-in Kotlin has its own source API; the legacy Java source set alone is insufficient.
+androidComponents.onVariants(androidComponents.selector().all()) { variant ->
+    ['../../gateway-config/src/main/kotlin', '../../helm/domain/src/main/kotlin', '../../gateway-protocol/src/main/kotlin'].each { path ->
+        variant.sources.kotlin.addStaticSourceDirectory(new File(projectDir, path).canonicalPath)
+    }
+}
+def api29Runtime = configurations.create('api29Runtime') { transitive = false }
+dependencies.add('api29Runtime', 'org.robolectric:android-all-instrumented:10-robolectric-5803371-i7')
+def prepareRuntime = tasks.register('prepareRuntime', Copy) {
+    from(api29Runtime)
+    into(layout.buildDirectory.dir('robolectric-runtime'))
+}
+android.testOptions.unitTests.all { task ->
+    task.dependsOn(prepareRuntime)
+    task.systemProperty('robolectric.offline', 'true')
+    task.systemProperty('robolectric.dependency.dir', layout.buildDirectory.dir('robolectric-runtime').get().asFile.absolutePath)
+    task.inputs.files(rootProject.fileTree('../helm/contracts') { include('**/*.json') })
+}

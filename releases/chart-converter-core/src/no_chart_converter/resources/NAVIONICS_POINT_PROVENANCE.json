@@ -1,0 +1,45 @@
+{
+  "OEMRuntimeOrPurchasedPayloadsBundled": false,
+  "acceptedLowerPointFixture": {
+    "bytes": 150,
+    "sha256": "6767cff834bf266d7b6414840e860ebe1872acc020c2dc43fcb14df5b4738c89"
+  },
+  "activeEndCorrectionContract": {
+    "bytes": 18482,
+    "sha256": "9ce5350e55675c49ce8f94d92cd2af765b881c35b6722c7fc59727dc15401719"
+  },
+  "currentMetadataSource": {
+    "bytes": 3072,
+    "sha256": "8b50ffa78078ee217a377e29d24f94141947347a54fdb62ffa0499a8049ef076"
+  },
+  "currentPointSource": {
+    "bytes": 5968,
+    "sha256": "17daca0581d9ecfb6f1c2edeabb9a610c4a42b42c3e9e4b72ec4dec2588f5d50"
+  },
+  "externalOriginalPointReadback": {
+    "bytes": 80763,
+    "sha256": "6393a3e64b8741d60d181d71d996da9fe19aa4687242962c6b00fa90ede48563"
+  },
+  "format": "no5-own-nav-point-provenance/1",
+  "geographicInterpretation": "UNPROVEN",
+  "metadataSource": {
+    "bytes": 3072,
+    "sha256": "8b50ffa78078ee217a377e29d24f94141947347a54fdb62ffa0499a8049ef076"
+  },
+  "metadataWireContract": {
+    "bytes": 14205,
+    "sha256": "ba69a5d8d2cdfbb6def68f33de6726f9dc0ad8173bb3c09cd13c3a60ea96cad4"
+  },
+  "nativeCallsOnImportOrWrite": false,
+  "pointSource": {
+    "bytes": 4627,
+    "sha256": "fb126c9db5c7ca8630e7a44dcc95f0785a9e93ae756b39e012b57d2d724b6e4e"
+  },
+  "pointWireContract": {
+    "bytes": 46311,
+    "sha256": "98283f0c8b9fc5c858d56032803b4dbc9e22d36a6ca686a8c74d1d889d073377"
+  },
+  "scope": "ONE_FIXED_RAW_POINT40_AND_OPTIONAL_TYPED_METADATA",
+  "styleOrRendererAcceptance": false,
+  "type16NativeAcceptance": "NOT_YET_TESTED"
+}

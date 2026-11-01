@@ -1,0 +1,14 @@
+#!/bin/sh
+# librespot 0.8 invokes its onevent program without positional arguments and
+# exposes the PlayerEvent name as PLAYER_EVENT.  Preserve that boundary: do
+# not turn arbitrary command-line input into a gateway observation.
+event=${PLAYER_EVENT:-}
+if [ -z "$event" ] || [ "$#" -ne 0 ]; then
+  printf '%s\n' 'no5-raspotify-event: PLAYER_EVENT is required and no positional arguments are accepted' >&2
+  exit 64
+fi
+
+# The Python bridge validates the event vocabulary and persists only supported
+# observations.  No audio control, routing, or DSP command is performed here.
+exec /opt/no5-pi-gateway/current/.venv/bin/no5-raspotify-event-bridge \
+  --state-file /var/lib/no5-media/raspotify-event.json "$event"

@@ -1,0 +1,44 @@
+{
+  "atlasSource": {
+    "bytes": 9622,
+    "sha256": "5439b0f5d20ada1de04b68340e84d5d192825128cd926aec2219335fed51a657"
+  },
+  "compatibility": "Existing <=8192 layered dictionaries/SHA/bytes unchanged; one-map Atlas bytes equal layered output",
+  "format": "no5-own-atlas-source-provenance/1",
+  "formatLimitsInferred": false,
+  "nativeQualification": "PENDING_MULTI_MAP_AND_SCALED_NATIVE_READBACK",
+  "notClaimed": [
+    "Complete-cell conversion",
+    "General native attributes",
+    "Area hole semantics",
+    "All native grids or file extents",
+    "MFD portrayal",
+    "Datum or navigation accuracy"
+  ],
+  "origin": "Own additive source; no original bodies, binary payloads, credentials or source-cell data included",
+  "ownControls": {
+    "existingLayeredTests": 120,
+    "independentAtlasTests": 11,
+    "newOriginalCalls": 0,
+    "passed": 147,
+    "portableFixtureOnly": true,
+    "portableTests": 27,
+    "privateInputReads": 0
+  },
+  "priorLayeredSourceSHA256": "bee9f7c095d813308fd615db27d344ce6462feba7e47b31eef6220cff1153fb6",
+  "sourceContracts": {
+    "contiguousCacheOffsetsSHA256": "3c063862fa98baeb51653d09dfd708fcc0e145b0e0673945da087b17b4ee49bc",
+    "headerOverlayPayloadBoundarySHA256": "af67a57a50d93d5666c7f51d10efb038bf28d8a1336a789a59aea8f8d2aabb63",
+    "singleActiveOverlayTupleSHA256": "a088da2d8e83bd21559646c1b76c67f72163d4d03401da4a000e675c51b4df45"
+  },
+  "stagedLayeredSource": {
+    "bytes": 16386,
+    "sha256": "fe6ee5f69989538942e2a34bd772c04c969f9373bdaadcda406d061162c4edd9"
+  },
+  "priorAtlasSource": {
+    "bytes": 8648,
+    "sha256": "47ebd2d5a8a3436bd436ac6b4d825ba0ea3c0f4b24d977ea367eb10a269babc7"
+  },
+  "mixedAtlasSourceStageSHA256": "e0ffa38838625f454cf317754c0f5aaf9d74482f72fd4b773022bf164b0a421d",
+  "typedMapSupport": "Explicit finite E/M profiles plus unchanged raw maps; general attributes remain unqualified"
+}

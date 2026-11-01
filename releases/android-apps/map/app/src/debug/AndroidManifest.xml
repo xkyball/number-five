@@ -1,0 +1,13 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application>
+        <!-- Shell/signature callers only. No receiver exists in release builds. -->
+        <receiver android:name="com.no5.helm.RendererBenchmarkReceiver" android:exported="true" android:permission="android.permission.DUMP">
+            <intent-filter>
+                <action android:name="com.no5.map.benchmark.START" />
+                <action android:name="com.no5.map.benchmark.CANCEL" />
+                <action android:name="com.no5.map.benchmark.STATUS" />
+                <action android:name="com.no5.map.benchmark.T0_MODE" />
+            </intent-filter>
+        </receiver>
+    </application>
+</manifest>

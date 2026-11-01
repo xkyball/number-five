@@ -1,0 +1,73 @@
+{
+  "date": "2026-11-01",
+  "archives": [
+    {
+      "id": "android-apps",
+      "bytes": 46300184,
+      "sha256": "1714011f115e91ba6681c5fb196ba1abe3d9056f5bd1dde209113af94d2c71e9",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "pi-gateway",
+      "bytes": 615689,
+      "sha256": "b837f80c2071859588db7625434be88a772a1333485a7d2637b42746aaa8d49b",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "gps-live-map",
+      "bytes": 97387,
+      "sha256": "3b9b4415e85db8bdf5e3c987c3ba08dbb5cd72671eb4fcf89609a25801083b5b",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "spotify-receiver",
+      "bytes": 189238,
+      "sha256": "b492a48f998693420992c69337ab719b84d1cc590befc55aeaf3c4c8f31c145c",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "camilladsp-extensions",
+      "bytes": 120837,
+      "sha256": "4228357d126bdcd18a0e382051157e5620b149a83076a7c0bad405a8833db6dc",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "sonar-service",
+      "bytes": 429122,
+      "sha256": "ab602b72b3f1b2faab0d0168a10e89710bf88c5b6916b74ac6e0baecd24e9ff7",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "pico-tx-firmware",
+      "bytes": 97485,
+      "sha256": "15d3edeaadbea853322747e032e1f4eaaa475f048b3f0107ab5d0332a28ec95b",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "chart-converter-core",
+      "bytes": 1054050,
+      "sha256": "d451f287365d35c9bd666b276594159937a5224fbcc1ddf9b61bbc47db6c509f",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "venterior-v15-design",
+      "bytes": 124917,
+      "sha256": "a794f0db880657da0fec9005d242a96b98c8495888d98ff63673ae55641dad46",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "yamaha-trim-r3-design",
+      "bytes": 136449,
+      "sha256": "af849700a46b7a8402d667a0a3e59c36fd27315ec551c601280070e603b357b2",
+      "zip_crc": "PASS"
+    },
+    {
+      "id": "pi-box-r5-design",
+      "bytes": 7308635,
+      "sha256": "6fb18879e8b0e075aaf361630072e77484ffa1db58a1f73cca8070582b730412",
+      "zip_crc": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "scope": "Archive identities, CRC and unsafe path/sensitive-extension checks; not hardware/device acceptance."
+}

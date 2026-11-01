@@ -1,0 +1,260 @@
+{
+  "schema": "number-five.source-release/1",
+  "component": "gps-live-map",
+  "prepared_on": "2026-11-01",
+  "base_commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+  "base_commit_date": "2026-10-29T16:26:01+02:00",
+  "included_scope": "Complete small read-only Python/Leaflet application,public installer/service,synthetic tests. Requires a compatible No5 Gateway position-source endpoint.",
+  "limitations": [
+    "Runtime accounts,Gateway secrets and real positions are not included.",
+    "No on-water acceptance implied; release checks are reported separately."
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/.gitignore",
+      "source_sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "bytes": 19,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "README.md",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/README.md",
+      "source_sha256": "bbe88f384ec7c544270d6cdb09f41cfbe5d6bccf83b62723bee1bd1e436bb2a5",
+      "sha256": "bbe88f384ec7c544270d6cdb09f41cfbe5d6bccf83b62723bee1bd1e436bb2a5",
+      "bytes": 3769,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "install.py",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/install.py",
+      "source_sha256": "c731b43cc25294a41c0403d965ddc395eac918891b9cb6a528c4f88726adf9f4",
+      "sha256": "c731b43cc25294a41c0403d965ddc395eac918891b9cb6a528c4f88726adf9f4",
+      "bytes": 5758,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "no5-gps-map.service",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/no5-gps-map.service",
+      "source_sha256": "4d4ce0549026daaee0d7129d0077981951e56a0be15a3a319b0c3e4d46731d97",
+      "sha256": "4d4ce0549026daaee0d7129d0077981951e56a0be15a3a319b0c3e4d46731d97",
+      "bytes": 847,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "package.json",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/package.json",
+      "source_sha256": "6e54d8728c7ae8f780cb76214db93b90d4fe8eeede6391385043676cc3576e4c",
+      "sha256": "6e54d8728c7ae8f780cb76214db93b90d4fe8eeede6391385043676cc3576e4c",
+      "bytes": 87,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "server.py",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/server.py",
+      "source_sha256": "be64e1fc840dde94cfffd2922fd9aa7eea242e1f9f9ff0da5461639f2b4c0318",
+      "sha256": "be64e1fc840dde94cfffd2922fd9aa7eea242e1f9f9ff0da5461639f2b4c0318",
+      "bytes": 9265,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/app.js",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/app.js",
+      "source_sha256": "980de71e5f43ced9a25009e02c1e0b58cd92aea4fb8bd4c518d8a9264a7b53f8",
+      "sha256": "980de71e5f43ced9a25009e02c1e0b58cd92aea4fb8bd4c518d8a9264a7b53f8",
+      "bytes": 9946,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/index.html",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/index.html",
+      "source_sha256": "4c2d27f7d7fb95851c5d63553eaf21a351d581f53994430f10a3a652aca5093a",
+      "sha256": "4c2d27f7d7fb95851c5d63553eaf21a351d581f53994430f10a3a652aca5093a",
+      "bytes": 1313,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/model.js",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/model.js",
+      "source_sha256": "8946bf3cb56aa6bf9f0edd67b49156f184594de32554a5ac7927210254794965",
+      "sha256": "8946bf3cb56aa6bf9f0edd67b49156f184594de32554a5ac7927210254794965",
+      "bytes": 2674,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/style.css",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/style.css",
+      "source_sha256": "f5dfb765f9b66ced3c37e031e2f7211e28a4b77843e073f18b748a82f250a008",
+      "sha256": "f5dfb765f9b66ced3c37e031e2f7211e28a4b77843e073f18b748a82f250a008",
+      "bytes": 4182,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/vendor/LICENSE",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/vendor/LICENSE",
+      "source_sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+      "sha256": "53e8dc25862014e4324741ca18fbe3611e11d42ef69f59f86ea8c5389647d4cb",
+      "bytes": 1395,
+      "license": "upstream license text",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/vendor/leaflet.css",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/vendor/leaflet.css",
+      "source_sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+      "sha256": "a7837102824184820dfa198d1ebcd109ff6d0ff9a2672a074b9a1b4d147d04c6",
+      "bytes": 14806,
+      "license": "BSD-2-Clause",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "static/vendor/leaflet.js",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/static/vendor/leaflet.js",
+      "source_sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+      "sha256": "db49d009c841f5ca34a888c96511ae936fd9f5533e90d8b2c4d57596f4e5641a",
+      "bytes": 147552,
+      "license": "BSD-2-Clause",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "tests/browser.cjs",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/tests/browser.cjs",
+      "source_sha256": "0f087adb39438ec8efb9a625b8c4703ba4801ef641b9ffc3c5502dae081c7e93",
+      "sha256": "0f087adb39438ec8efb9a625b8c4703ba4801ef641b9ffc3c5502dae081c7e93",
+      "bytes": 5808,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "tests/fixture.py",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/tests/fixture.py",
+      "source_sha256": "c87e70d5389b0f2f275d440be77c49e2256162f14eeeae715bc93aff8dbea431",
+      "sha256": "c87e70d5389b0f2f275d440be77c49e2256162f14eeeae715bc93aff8dbea431",
+      "bytes": 373,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "tests/model.test.mjs",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/tests/model.test.mjs",
+      "source_sha256": "ed2c18c9c1b5c69ebe65f7386a592dc2f18493c9bc2e3907616a24322db96fef",
+      "sha256": "ed2c18c9c1b5c69ebe65f7386a592dc2f18493c9bc2e3907616a24322db96fef",
+      "bytes": 2397,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "tests/test_server.py",
+      "source_path": "no-pi/projects/no5-rebuild/tools/gps-live-map/tests/test_server.py",
+      "source_sha256": "10d152277900597046d056199dea8a6e7e14753c6334bb61e721721093c873f2",
+      "sha256": "10d152277900597046d056199dea8a6e7e14753c6334bb61e721721093c873f2",
+      "bytes": 4174,
+      "license": "GPL-3.0-only",
+      "provenance": "tracked-clean",
+      "commit": "c1f42c02dfb73eb67db8929c17f2f9b6478dfcd4",
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/CERN-OHL-S-2.0.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "d6475a84171f0cf7ff52667dea714df268fc65cea42f0bf328b0b70d4cd0ebab",
+      "bytes": 13419,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/GPL-3.0-only.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "bytes": 35149,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES/CC-BY-SA-4.0.txt",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "cde7883b9050a1104f4ac19a1572aafd6e5d7323b68351aaf51fbf4beba54966",
+      "bytes": 18375,
+      "license": "license text; exact SPDX copy",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "LICENSES.md",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "81def9f12f24923ebfb27dff72f24a1a7c79d6d7c10a02e9356e4ea6b9e32ece",
+      "bytes": 644,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    },
+    {
+      "path": "README_RELEASE.md",
+      "source_path": null,
+      "source_sha256": null,
+      "sha256": "857021c0248a9e27f9681dee8e81b55e88538b476230f4ecc6933d7143acc7bf",
+      "bytes": 1298,
+      "license": "CC-BY-SA-4.0",
+      "provenance": "release-packaging-addition",
+      "commit": null,
+      "transformation": null
+    }
+  ],
+  "exclusions": [],
+  "license_policy": "Per-file license,existing third-party notices preserved;see LICENSES.md",
+  "new_runtime_or_hardware_tests": false,
+  "publication_transformations": []
+}

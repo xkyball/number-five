@@ -1,0 +1,99 @@
+{
+  "contextPaintPolicy": "Optional explicit OWN_MAX_PRIORITY_MOST_VISIBLE_CATEGORY/1 chooses one own target ordering state; original per-context selections and drawing packets remain exact. Different states do not claim original source paint-order parity.",
+  "coverageWalkPolicy": "Original projected coverage walks, including retraced zero-area boundaries, remain in PointWinner and SourceInfo. Separate exact-integer even-odd area faces are used only for Boolean area masks; no historical cell/count dispatch.",
+  "derivedRepresentationPolicy": "Primary source UID/query retained; source triangle fill and source topology LS/LC boundary become explicitly related records with independently bound programmes. Own F64 first-exterior Root-Q vertex mean excludes closing duplicate; no original all-view fallback parity claim.",
+  "format": "no5-fresh-cache-country-source-provenance/1",
+  "geometryOrigins": [
+    {
+      "source": "work/AP05/source-depth-checkpoint",
+      "use": "Existing own exact binary-value times-ten ties-even signed decimetre encoder"
+    },
+    {
+      "source": "work/AP05/vector-contract-v2/SCAMIN_CONTRACT.md",
+      "use": "Explicit native U32 target level/multiplier; never source denominator substitution"
+    },
+    {
+      "source": "work/AP04/product-completion-20261014/basic-view-lod-v1/cpt-container-v1/wire.py",
+      "use": "Own bounded plain RX5 streams, records, rebasing and resources"
+    }
+  ],
+  "geometryPolicy": "Exact source-null triangles stay empty; declared Root rounding zero-area/orientation events retain original source bytes and explicit receipts. Self-intersecting coverage uses even-odd faces only at exact integer Root intersections; unsupported subgrid intersections refuse.",
+  "modules": [
+    {
+      "bytes": 149,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/__init__.py",
+      "sha256": "bad1b8f04581e314b691f2a3f8c40e85ba4504eb5165532bd721e8caf2897a82"
+    },
+    {
+      "bytes": 23236,
+      "origin": "OWN_PORTABLE_CA_NUMERIC_AND_VECTOR_KERNEL_SOURCE_ONLY",
+      "path": "src/no_chart_converter/cache_country/ca_resources.py",
+      "sha256": "066ed7822d0088a5c42dc40ea23e99f30d3c2e62026c63fd552936439ef381e3"
+    },
+    {
+      "bytes": 44280,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/geometry.py",
+      "sha256": "c8e2a1014c339bb4fcbcd9f4a6658c6bd98d66f93b4e240d95a5a7f1fa168c5f"
+    },
+    {
+      "bytes": 10306,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/light_sectors.py",
+      "sha256": "57cbcd5b92fac14ab16716bbbe8f296cd13f2f8204330aadf330526c744b4ba5"
+    },
+    {
+      "bytes": 22081,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/metadata.py",
+      "sha256": "eb4aa47d7780f85d7787ceadde5d75297bd2f05a3faccaa4a767b8af3efa5b7e"
+    },
+    {
+      "bytes": 743,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/native/CMakeLists.txt",
+      "sha256": "60e0bad87cdc9e07e7134c9b3102a9a72c2ae0d9956e42dd4bafd031558f9356"
+    },
+    {
+      "bytes": 3051,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/native/README.md",
+      "sha256": "228bcd845d8c20e7a900ae8abf305d767c020538f107859721b1f2b490e50552"
+    },
+    {
+      "bytes": 13684,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/native/s52_provider.cpp",
+      "sha256": "6365f130e46db3a7b0db058cc9901ac2a678197f53a7b53528530e453cd43504"
+    },
+    {
+      "bytes": 12572,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/native_provider.py",
+      "sha256": "4794f92d8047e8bd98503da07e80cedba6a5bdc53fec9ba6b642c19f5dc7923b"
+    },
+    {
+      "bytes": 25745,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/pipeline.py",
+      "sha256": "778608c65c8bc140b73d73f4098f03bfd609794a0b3619fa48cd8ab4bc895df3"
+    },
+    {
+      "bytes": 51736,
+      "origin": "OWN_FRESH_CACHE_ADAPTER_INTEGRATION_SOURCE",
+      "path": "src/no_chart_converter/cache_country/presentation.py",
+      "sha256": "990d7652434d98d04fe03e992ed2444ee8194e1c328b31007eb83eb140152e09"
+    }
+  ],
+  "physicalA97AcceptanceClaim": false,
+  "publicNativeParserPolicy": "Actual public _LUP2rules/StringToRules chain and conditional procedures; resolved Rule symbol binding recorded explicitly, including actual public QUESMRK1 fallback; bounded stdout and stderr preserved on failure.",
+  "publicationPolicy": "Supported-filesystem atomic decoder; unsupported external filesystem uses explicitly bounded temporary workspace plus verified copy/completion receipt, no atomic external-directory claim.",
+  "quantizedEmptyPolicy": "EMPTY_DECLARED_ROOT_GRID_FILL_ORIGINAL_SOURCE_RETAINED: genuine GEOS valid_output empty clipped fill, exact empty serialization and retained source/reference/loss receipts; no arbitrary source-feature skip",
+  "resourcePolicy": "Reusable explicit pinned profiles; no licensed charts, source snapshots with owner data, OEM binaries or chart-specific runtime artifacts in Git.",
+  "resumePolicy": "Explicit completed retained IR manifest and source SHA, exact decoder receipt/catalog/source join and all cell pins; immutable manifest bound into context and before success. No IR copy or historical prepared owner reuse.",
+  "runtimeDependencies": "Shapely/GEOS through package dependencies; optional public S52 provider links an explicitly selected external No5/OpenCPN tree and assets. No external library or resource payload is redistributed.",
+  "runtimeFillQuantizationPolicy": "own-root-u32-grid1-valid-output-fill/1 and own-root-u32-grid1-serialized-role-roundtrip/1; GEOS valid_output on one Root unit, exact serialized inverse, actual added/lost area and topology diagnostics; no global Hausdorff/pixel/zero-leak guarantee; Kind2 unchanged",
+  "sourceTruth": "Retained no5-chart-ir/1 from the actual no5-pi-map-cache-v1 ZIP; no historical chart owner manifests",
+  "tests": "Invented multi-cell plaintext OSENC exports, typed queries, geometry/scale/portrayal bindings, actual country and region readback, explicit refusals and optional separately selected actual public native engine."
+}

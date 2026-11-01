@@ -1,0 +1,234 @@
+{
+  "id": "venterior-terminal",
+  "board": {
+    "nominal_size_mm": [
+      60,
+      20
+    ],
+    "grid_columns_rows": [
+      20,
+      7
+    ],
+    "pitch_mm": 2.54,
+    "hole_origin_mm": [
+      5.87,
+      3.49
+    ],
+    "hole_diameter_mm": 1,
+    "pad_diameter_mm": 2,
+    "thickness_mm": 1.6,
+    "source": "https://www.robotics.org.za/PROTO-46DS-P254?manufacturer_id=20&page=42",
+    "source_status": "manufacturer_nominal; received grid origin/pad/drill not measured",
+    "copper": "double-sided isolated plated eyes; no implicit buses",
+    "received_part_fit_checked": false
+  },
+  "components": [
+    {
+      "ref": "JV_SIGNALS",
+      "cad_reference": "J1450",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "ECHO_AD",
+        "2": "GND",
+        "3": "TX_INJECT_Q10_3",
+        "4": "GND"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            2
+          ],
+          "net": "ECHO_AD"
+        },
+        "2": {
+          "hole": [
+            11,
+            2
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "hole": [
+            10,
+            3
+          ],
+          "net": "TX_INJECT_Q10_3"
+        },
+        "4": {
+          "hole": [
+            11,
+            3
+          ],
+          "net": "GND"
+        }
+      },
+      "module": "venterior-terminal",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "JV_AUX",
+      "cad_reference": "J1451",
+      "kind": "connector",
+      "value": "2.54mm male signal pins / labelled removable female crimps",
+      "pins": {
+        "1": "TEMP_RAW",
+        "2": "STATE_RAW",
+        "3": "K1_HIGH",
+        "4": "K1_RETURN"
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            10,
+            5
+          ],
+          "net": "TEMP_RAW"
+        },
+        "2": {
+          "hole": [
+            11,
+            5
+          ],
+          "net": "STATE_RAW"
+        },
+        "3": {
+          "hole": [
+            10,
+            6
+          ],
+          "net": "K1_HIGH"
+        },
+        "4": {
+          "hole": [
+            11,
+            6
+          ],
+          "net": "K1_RETURN"
+        }
+      },
+      "module": "venterior-terminal",
+      "dnp": false,
+      "family": "signal-254",
+      "pitch_mm": 2.54,
+      "termination": "DUP-F-100 + DUP-1P-SH-100; 0.22mm2 only; labelled keyed printed comb",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up"
+    },
+    {
+      "ref": "JV_POWER",
+      "cad_reference": "J1452",
+      "kind": "connector",
+      "value": "YC100-508-4P-MF / matched screw plug and PCB header",
+      "pins": {
+        "1": "VENT_SUPPLY",
+        "2": "GND",
+        "3": null,
+        "4": null
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            2,
+            4
+          ],
+          "net": "VENT_SUPPLY"
+        },
+        "2": {
+          "hole": [
+            4,
+            4
+          ],
+          "net": "GND"
+        },
+        "3": {
+          "hole": [
+            6,
+            4
+          ],
+          "net": null
+        },
+        "4": {
+          "hole": [
+            8,
+            4
+          ],
+          "net": null
+        }
+      },
+      "module": "venterior-terminal",
+      "dnp": false,
+      "family": "YC100-5.08",
+      "pitch_mm": 5.08,
+      "termination": "Exact delivered clamp/ferrule/marker pulse suitability remain open; NC contacts empty",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up",
+      "terminal_header": true,
+      "supplier_sku": "YC100-508-4P-MF",
+      "supplier_url": "https://www.robotics.org.za/YC100-508-4P-MF",
+      "mounting": "vertical"
+    },
+    {
+      "ref": "JV_MARKER",
+      "cad_reference": "J1453",
+      "kind": "connector",
+      "value": "YC100-508-4P-MF / matched screw plug and PCB header",
+      "pins": {
+        "1": "T1_BLUE",
+        "2": null,
+        "3": null,
+        "4": null
+      },
+      "pads": {
+        "1": {
+          "hole": [
+            14,
+            4
+          ],
+          "net": "T1_BLUE"
+        },
+        "2": {
+          "hole": [
+            16,
+            4
+          ],
+          "net": null
+        },
+        "3": {
+          "hole": [
+            18,
+            4
+          ],
+          "net": null
+        },
+        "4": {
+          "hole": [
+            20,
+            4
+          ],
+          "net": null
+        }
+      },
+      "module": "venterior-terminal",
+      "dnp": false,
+      "family": "YC100-5.08",
+      "pitch_mm": 5.08,
+      "termination": "Exact delivered clamp/ferrule/marker pulse suitability remain open; NC contacts empty",
+      "retention": "removable insulated harness clamp, not solder-pad tension",
+      "orientation": "up",
+      "terminal_header": true,
+      "supplier_sku": "YC100-508-4P-MF",
+      "supplier_url": "https://www.robotics.org.za/YC100-508-4P-MF",
+      "mounting": "vertical"
+    }
+  ],
+  "internal_buses": [],
+  "bare_wire": false,
+  "construction": "0.6mm tinned solid bridges, individual insulation; underside routing"
+}
