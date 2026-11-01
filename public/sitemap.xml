@@ -170,4 +170,6 @@
 <xhtml:link rel="alternate" hreflang="de" href="https://no5.christophhoffmann.net/de/projects/build"/>
 <xhtml:link rel="alternate" hreflang="en" href="https://no5.christophhoffmann.net/en/projects/build"/>
 </url>
+<url><loc>https://no5.christophhoffmann.net/de/platform</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://no5.christophhoffmann.net/de/platform"/><xhtml:link rel="alternate" hreflang="en" href="https://no5.christophhoffmann.net/en/platform"/></url>
+<url><loc>https://no5.christophhoffmann.net/en/platform</loc><lastmod>2026-11-01</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://no5.christophhoffmann.net/de/platform"/><xhtml:link rel="alternate" hreflang="en" href="https://no5.christophhoffmann.net/en/platform"/></url>
 </urlset>

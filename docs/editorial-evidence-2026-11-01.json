@@ -1,0 +1,167 @@
+{
+  "schema": 1,
+  "created": "2026-11-01",
+  "scope": "Editorial evidence leads for the website; scoped facts, not a fresh live system acceptance.",
+  "episodes": [
+    {
+      "id": "protocol-is-not-usability",
+      "title": {
+        "de": "Die Daten waren da. Die Bedienung noch nicht.",
+        "en": "The data existed. The experience did not yet."
+      },
+      "problem": "Signal K/NMEA solve data exchange, but not the individual touch interaction, stale-data treatment, command confirmation and physical control paths needed for the chosen devices.",
+      "response": "Native Android clients consume canonical gateway state. Source timestamps, authority, capabilities and confirmed command results distinguish a responsive local preview from an actual applied hardware state.",
+      "practicalGain": "Different screens can reuse the same service contract while presenting a purpose-built instrument/audio/chart experience; integration work becomes reusable.",
+      "limit": "This is not proof that every arbitrary device or future service already works. Existing touch-friendly projects such as KIP must be acknowledged rather than declaring all alternatives desktop-only.",
+      "sources": [
+        "no-apps/helm/docs/AUDIO_GATEWAY_V1.md",
+        "no-apps/helm/docs/AUDIO_FADER_STREAM.md",
+        "no-pi/projects/no5-rebuild/docs/MAP_ROUTES_LAB_HANDOFF.md"
+      ]
+    },
+    {
+      "id": "optional-home-crash",
+      "title": {
+        "de": "Eine optionale Integration legte die ganze Karte lahm.",
+        "en": "An optional integration stopped the whole chart."
+      },
+      "problem": "MAP51 crashed on physical Lumina before renderer startup because the older Home6 lacked an optional content provider; the same APK had the provider available in the Home11 emulator environment.",
+      "response": "MAP52 made observer registration optional, retried when the provider became available and retained the protected config path. The exact SecurityException path was reproduced in regression tests.",
+      "practicalGain": "A missing optional Home integration no longer needs to prevent local chart startup. This illustrates why local rendering and optional service integration should be separable.",
+      "limit": "The contemporaneous fix report proved host regression behavior and artifact identity, not a successful fresh physical startup. Later physical MAP evidence belongs to its own versions.",
+      "date": "2026-10-08",
+      "sources": [
+        "no-apps/map/docs/MAP52_STARTUP_REPAIR.md",
+        "no-apps/map/verification/audit-integration-20261008/MAP51_STARTUP_CRASH.json"
+      ]
+    },
+    {
+      "id": "android-label",
+      "title": {
+        "de": "Android 14 auf dem Karton war Android 10 im Gerät.",
+        "en": "The Android 14 label hid an Android 10 platform."
+      },
+      "problem": "Lumina2 displayed Android14 because an OEM file and framework override substituted the version string. Native properties, Settings package and actual interface level established Android10/API29.",
+      "response": "Compatibility and native tests target API29 rather than relying on the marketing/version display. The investigation was read-only and retained exact firmware binding.",
+      "practicalGain": "Cheap hardware can be useful when its actual platform is understood; the recovery recipe captures that knowledge instead of making each builder rediscover it.",
+      "limit": "Do not generalize this vendor mechanism to every inexpensive Android product. Only the investigated devices and bindings are evidenced.",
+      "date": "2026-10-23",
+      "sources": [
+        "no-pi/projects/no5-rebuild/docs/LUMINA_ANDROID_VERSION.md",
+        "no-pi/projects/no5-rebuild/artifacts/lumina-parallel-setup/LUMINA_2_ANDROID14_DISPLAY_CAUSE_20261023.json"
+      ]
+    },
+    {
+      "id": "two-displays-not-identical-firmware",
+      "title": {
+        "de": "Gleiches Display heißt nicht gleiche Firmware.",
+        "en": "The same display does not mean the same firmware."
+      },
+      "problem": "Both Luminas report the same UIS8581A/PowerVR GE8322 base, 4GiB class, 64GB class and 2000×1200 surface, yet flash product/firmware identities and OEM software differ. OEM knob/start behavior therefore cannot simply share one unchecked profile.",
+      "response": "Device-bound control/start profiles, actual rotary/short/long input cases and a real boot with No5 Home, Control and GPS were retained. Lumina2 has eight actual MAP input cases in the accepted source chain.",
+      "practicalGain": "The path from bargain display to integrated control position becomes a repeatable, versioned setup instead of a one-off configuration.",
+      "limit": "The base hardware report is not a full bill of materials, sunlight/waterproof test or complete long-run stability acceptance. 75 euros remains Christoph's stated device price, not an invoice-verified installed-system cost.",
+      "date": "2026-10-23",
+      "sources": [
+        "no-pi/projects/no5-rebuild/docs/LUMINA_HARDWARE_COMPARISON.md",
+        "no-pi/projects/no5-rebuild/docs/LUMINA_CURRENT_REBUILD.md",
+        "no-pi/projects/no5-rebuild/artifacts/lumina-parallel-setup/LUMINA_2_HOME_WIFI_CONTROL_GPS_REAL_BOOT_PASS_20261023.json"
+      ]
+    },
+    {
+      "id": "rendering-without-dropping-chart-meaning",
+      "title": {
+        "de": "Schneller zeichnen, ohne die Karte auszudünnen.",
+        "en": "Draw with less overhead without thinning the chart."
+      },
+      "problem": "Early chart rendering had costly draw submission and repeated shader lookups. Performance symptoms differed between emulators, software GL and the physical Android GPU, so a desktop result could not substitute for device evidence.",
+      "response": "Bounded batching preserved original vertices/order and fallback paths. Uniform/attribute locations were cached with context/program lifecycle rules. Frame sequences were compared byte-for-byte against the preserved renderer.",
+      "practicalGain": "The optimization target is redundant work, while chart content and safety portrayal retain an explicit comparison baseline. The device's GPU can be used locally without shipping a rendered desktop screen.",
+      "limit": "The original reports establish reduced submission/query counts and unchanged comparison pixels; they explicitly do not establish a universal FPS gain or measured GPU time. Do not reuse those counts as a physical speed claim.",
+      "sources": [
+        "no-apps/map/docs/RENDER_SUBMIT_PREVIEW.md",
+        "no-apps/map/docs/RENDER_QUERY_CACHE.md",
+        "no-apps/map/docs/MAP_OPTIMIZATION_028.md"
+      ]
+    },
+    {
+      "id": "touch-ownership",
+      "title": {
+        "de": "Ein Zoomfinger darf keinen Button auslösen.",
+        "en": "A zooming finger must not trigger a button."
+      },
+      "problem": "A native chart surface and overlaid Compose controls share touch input. During a pinch/rotation, a second finger could encounter controls in the short interval before the UI redraw removed them; Android system gestures impose their own edge constraints.",
+      "response": "Touch ownership, gesture masks and lifecycle cancellation were made explicit. Buttons and dock disappear during accepted map touch, the native tracker retains complete pointer events, and a bounded edge gesture opens the dock outside protected zones.",
+      "practicalGain": "A deliberately designed touch surface needs integration across controls, gestures and Android lifecycle, not simply larger desktop buttons.",
+      "limit": "The cited regression includes actual MotionEvent paths and native test pixels, but its documented OEM/system-navigation check remains separately scoped.",
+      "sources": [
+        "no-apps/map/docs/MAP_DOCK_TOUCH_UI.md"
+      ]
+    },
+    {
+      "id": "audio-one-volume",
+      "title": {
+        "de": "Drei Lautstärkeregler brauchen eine gemeinsame Wahrheit.",
+        "en": "Three volume controls need one common truth."
+      },
+      "problem": "Spotify Connect, screen faders and physical knobs could otherwise each carry their own gain or stale target. A smooth animation alone would not say whether the Pi actually applied a value.",
+      "response": "The retained audio path moves receiver and HELM Main control onto the same Camilla gain and confirms commands against state revisions. WSS sends bounded/coalesced fader updates; stale leases and uncertain replies are not replayed. The source records the actual HTTP-to-WSS transitions rather than treating an async label as proof of a stream.",
+      "practicalGain": "Multiple control positions can share one actual volume state instead of multiplying volume stages. This is a concrete foundation for another knob or client.",
+      "limit": "The historical HELM84 physical run confirmed174/174 WSS commands; this is not a fresh complete two-client audible latency or current long-run acceptance. New radio/wired remotes still need their own adapter and device validation.",
+      "date": "2026-10-15",
+      "sources": [
+        "no-apps/helm/docs/AUDIO_FADER_STREAM.md",
+        "no-apps/helm/docs/AUDIO_GATEWAY_V1.md"
+      ]
+    },
+    {
+      "id": "eq-math-and-smoothness",
+      "title": {
+        "de": "Die Kurve war richtig. Die Bedienung noch nicht schnell genug.",
+        "en": "The curve was right. Editing was not yet fast enough."
+      },
+      "problem": "EQ projection could require substantial Pi compute, while the physical Android edit gesture still showed long revision gaps and missed frame budgets. Correct coefficients did not by themselves make editing fluid.",
+      "response": "The native projection reused exact unchanged ratios/results in bounded caches while retaining the same search/grid/validity contract. Confirmed values and the visible curve are kept distinct from optimistic input.",
+      "practicalGain": "The shared Pi service can do careful sound processing once while clients focus on interaction. Actual bottlenecks are measured rather than solved by merely purchasing a more expensive display.",
+      "limit": "Short21Oct Pi runs improved ordinary16-point median confirmation166→116ms and constrained957→93ms under documented conditions. A3749.5ms outlier remains. The HELM143 fluid-editing acceptance remains FAIL; screenshots do not override it, and no universal latency/acoustic claim is warranted.",
+      "date": "2026-10-21",
+      "sources": [
+        "no-pi/projects/no5-rebuild/docs/EQ_PROJECTION_OPTIMIZATION_20261021.md",
+        "no-apps/helm/docs/EQ_TOUCH_VERIFICATION_20261021.md"
+      ]
+    },
+    {
+      "id": "routes-standard-and-failure",
+      "title": {
+        "de": "Routen gehören in einen vorhandenen Standard.",
+        "en": "Routes belong in an existing standard."
+      },
+      "problem": "A chart editor alone does not provide persistent shared routes, safe offline drafts or protection against conflicting changes.",
+      "response": "Signal K resources remain the route authority; the gateway exposes authenticated route operations and MAP separates local drafts from an origin-bound confirmed cache. The actual native workspace shows a schematic coordinate editor that remains usable without a loaded chart.",
+      "practicalGain": "Route work reuses the same backend foundation rather than creating another incompatible route silo.",
+      "limit": "The25Oct native route screenshot is a local test-route edit. Its remote save/delete attempt returned503 and must not be presented as fully accepted route synchronization.",
+      "sources": [
+        "no-pi/projects/no5-rebuild/docs/MAP_ROUTES_LAB_HANDOFF.md",
+        "MapParity/20261025/lumina2-map105-route-order-r2/device/result.json",
+        "MapParity/20261025/map106-physical-route-notice-assertion.json"
+      ]
+    },
+    {
+      "id": "own-pings-not-a-fake-fast-depth",
+      "title": {
+        "de": "20Hz war ein Messproblem, kein neuer Anzeigewert.",
+        "en": "20Hz was a measurement problem, not a new display number."
+      },
+      "problem": "A cheap fishfinder's display/update cycle does not expose a high-rate qualified sonar. A captured waveform is not enough without a real transmit reference, echo qualification and usable depth window.",
+      "response": "Pico acquisition, own transmit control, physical markers and raw-ping identity were bound through the pipeline. The documented600-second16Oct trial retained8807own starts/markers/raw pings and8502usable detections; five-second usable rates ranged6.4–19.6Hz, mean14.17Hz.",
+      "practicalGain": "The experiment moves beyond reading a slow LCD: the same measurement stream can feed an own echogram and depth service, independently of the display chosen.",
+      "limit": "Depth-dependent trial on one investigated fishfinder, no arbitrary-fishfinder compatibility or sustained20Hz at all depths. Absolute depth calibration, later continuity failures and boat-installation acceptance remain separate. Temperature investigation exists, but no complete real temperature chain was proven by these selected media.",
+      "date": "2026-10-16",
+      "sources": [
+        "no-pi/projects/no5-sonard-openecho/docs/INTERFACE_DEPTH_RATE_0411.md",
+        "no-pi/projects/no5-sonard-openecho/evidence/depth-rate-physical-20261016.json",
+        "no-pi/projects/no5-sonard-openecho/hardware/venterior-temperature-measurement-20261018.png"
+      ]
+    }
+  ]
+}

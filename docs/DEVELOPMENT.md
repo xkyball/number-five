@@ -29,7 +29,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ## Validation
 
-`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises34 bilingual pages, images, mobile layout/menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
+`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises36 bilingual pages, images, both native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
 
 `outputs/` contains ignored local QA captures and logs. The public QA report identifies performed checks and limits.
 

@@ -268,5 +268,438 @@
     "sourceRelative": null,
     "sha256": "4f473aa6e74048b9dd0834099ad0f8a0c543f311ff9a7a694630c181d2695fb9",
     "src": "/images/sonar-physical-b205.png"
+  },
+  "map-routes-native": {
+    "title": {
+      "de": "Routen auf dem Touchgerät bearbeiten",
+      "en": "Editing routes on the touch device"
+    },
+    "caption": {
+      "de": "Ausschnitt der nativen MAP-B105-Arbeitsseite auf Lumina 2, 25. Oktober. Die vier Punkte gehören zur eigenen Prüfroutenfolge, die Rasterfläche ist keine Seekarte. Der damalige entfernte Speicherversuch blieb mit HTTP 503 offen.",
+      "en": "Cropped native MAP B105 workspace on Lumina 2, 25 October. The four points belong to an own test route; the grid is not a nautical chart. The remote save attempt remained open with HTTP 503."
+    },
+    "width": 2000,
+    "height": 937,
+    "kind": "physical_device_ui_crop",
+    "date": "2026-10-25",
+    "sha256": "d17945074867da1a91f2cfb1bc3407a1167789150419f64e1c31dc5ae9123189",
+    "alt": {
+      "de": "Routen auf dem Touchgerät bearbeiten – Ausschnitt der nativen MAP-B105-Arbeitsseite auf Lumina 2, 25. Oktober. Die vier Punkte gehören zur eigenen Prüfroutenfolge, die Rasterfläche ist keine Seekarte. Der damalige entfernte Speicherversuch blieb mit HTTP 503 offen.",
+      "en": "Editing routes on the touch device – Cropped native MAP B105 workspace on Lumina 2, 25 October. The four points belong to an own test route; the grid is not a nautical chart. The remote save attempt remained open with HTTP 503."
+    },
+    "version": "MAP B105",
+    "sourceRelative": "device-evidence/MapParity/20261025/lumina2-map105-route-order-r2/device/route-edited.png",
+    "src": "/images/map-routes-native.webp",
+    "sourceMode": "Native Android physical screenshot; own test route",
+    "originalSha256": "5c9b679cae9ed77e6916c243cc495ffc8e5295878b8ecd2032ee686788548b2e",
+    "crop": [
+      0,
+      0,
+      2000,
+      937
+    ]
+  },
+  "map-layers-native": {
+    "title": {
+      "de": "Karteninhalt nach Aufgabe auswählen",
+      "en": "Choosing chart content for the task"
+    },
+    "caption": {
+      "de": "Die Inhaltssteuerung von MAP B100 auf Lumina 1: Ebenen, Beschriftungen, Tiefenzahlen und Objektklassen. Ausschnitt der eigenen Arbeitsseite vom 24. Oktober; Hintergrundkarte außerhalb des Ausschnitts.",
+      "en": "MAP B100 content controls on Lumina 1: layers, labels, soundings and object classes. Cropped own workspace from 24 October; the background chart is outside the crop."
+    },
+    "width": 2000,
+    "height": 937,
+    "kind": "physical_device_ui_crop",
+    "date": "2026-10-24",
+    "sha256": "a586793aa7fb0f6b2372c92b9e9ef69d286009014453fa380fc83162b5478dd3",
+    "alt": {
+      "de": "Karteninhalt nach Aufgabe auswählen – Die Inhaltssteuerung von MAP B100 auf Lumina 1: Ebenen, Beschriftungen, Tiefenzahlen und Objektklassen. Ausschnitt der eigenen Arbeitsseite vom 24. Oktober; Hintergrundkarte außerhalb des Ausschnitts.",
+      "en": "Choosing chart content for the task – MAP B100 content controls on Lumina 1: layers, labels, soundings and object classes. Cropped own workspace from 24 October; the background chart is outside the crop."
+    },
+    "version": "MAP B100",
+    "sourceRelative": "device-evidence/MapM1/20261024/lumina1/content.png",
+    "src": "/images/map-layers-native.webp",
+    "sourceMode": "Native Android physical screenshot",
+    "originalSha256": "290d4db8a571257834d14b8c27e229dd5b69471e9c488a193d6573c46f8a5de3",
+    "crop": [
+      0,
+      0,
+      2000,
+      937
+    ]
+  },
+  "map-library-native": {
+    "title": {
+      "de": "Kartenpakete statt Einzeldateien",
+      "en": "Chart packages instead of loose files"
+    },
+    "caption": {
+      "de": "Die native Kartenbibliothek auf Lumina 1 zeigt vorhandene Pakete und Zellzahlen. Ausschnitt vom 24. Oktober; gezeigt werden Verwaltungsoberfläche und Paketnamen, keine Kartendaten zum Herunterladen.",
+      "en": "The native chart library on Lumina 1 shows installed packages and cell counts. Cropped on 24 October; it shows the management interface and package names, not downloadable chart data."
+    },
+    "width": 2000,
+    "height": 937,
+    "kind": "physical_device_ui_crop",
+    "date": "2026-10-24",
+    "sha256": "db8ae571fb6b5827e9960f7050569e18b96f43daf2e1f8952e8c37e1a740a552",
+    "alt": {
+      "de": "Kartenpakete statt Einzeldateien – Die native Kartenbibliothek auf Lumina 1 zeigt vorhandene Pakete und Zellzahlen. Ausschnitt vom 24. Oktober; gezeigt werden Verwaltungsoberfläche und Paketnamen, keine Kartendaten zum Herunterladen.",
+      "en": "Chart packages instead of loose files – The native chart library on Lumina 1 shows installed packages and cell counts. Cropped on 24 October; it shows the management interface and package names, not downloadable chart data."
+    },
+    "version": "MAP B100",
+    "sourceRelative": "device-evidence/MapM1/20261024/lumina1/library.png",
+    "src": "/images/map-library-native.webp",
+    "sourceMode": "Native Android physical screenshot",
+    "originalSha256": "42abdbd0656b859aad61999475fffe9ae3023ca4442504cc2173d028eaf44b4d",
+    "crop": [
+      0,
+      0,
+      2000,
+      937
+    ]
+  },
+  "map-night-history": {
+    "title": {
+      "de": "Frühe Rotnacht-Kartenstudie",
+      "en": "Early red-night chart study"
+    },
+    "caption": {
+      "de": "Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, keine aktuelle Geräteaufnahme und keine Navigationsabnahme.",
+      "en": "Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, not a current device capture or navigation acceptance."
+    },
+    "width": 2400,
+    "height": 1440,
+    "kind": "historical_host_renderer_open_chart",
+    "date": "2026-10-06",
+    "sha256": "b678f2831faa63e0d4dbc30adc4d27e1da4add9e7d10848ae8dde8b6b43b5393",
+    "alt": {
+      "de": "Frühe Rotnacht-Kartenstudie – Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, keine aktuelle Geräteaufnahme und keine Navigationsabnahme.",
+      "en": "Early red-night chart study – Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, not a current device capture or navigation acceptance."
+    },
+    "version": "chart-styles revision 03 / Redshore",
+    "sourceRelative": "no-apps/map/studies/chart-styles/revision-03/no5-redshore.png",
+    "src": "/images/map-night-history.webp",
+    "sourceMode": "Real chart rendering; no physical-device performance claim",
+    "originalSha256": "bfb4013bdf46a73d7d0bb649b870ee544be2508ba9f3d8a86516a5f38d4b7e9f",
+    "crop": null
+  },
+  "audio-eq-expanded": {
+    "title": {
+      "de": "Klang direkt auf der Kurve gestalten",
+      "en": "Shaping sound directly on the curve"
+    },
+    "caption": {
+      "de": "Die native Equalizer-Prüfabbildung DIR1 vom 21. Oktober zeigt Frequenz, Verstärkung und Bandbreite im direkten Zugriff. Der bestätigte Prüfzustand ist kein Nachweis einer akustischen Einmessung oder flüssiger Bedienung auf jedem Gerät.",
+      "en": "The native DIR1 equalizer test rendering from 21 October puts frequency, gain and width under direct control. The confirmed fixture state is not proof of acoustic calibration or smooth editing on every device."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": "2026-10-21",
+    "sha256": "ab7c6680d04846ec5137fbc1587733dfe65449311d0c36df9bbe5d9c2e7f6185",
+    "alt": {
+      "de": "Klang direkt auf der Kurve gestalten – Die native Equalizer-Prüfabbildung DIR1 vom 21. Oktober zeigt Frequenz, Verstärkung und Bandbreite im direkten Zugriff. Der bestätigte Prüfzustand ist kein Nachweis einer akustischen Einmessung oder flüssiger Bedienung auf jedem Gerät.",
+      "en": "Shaping sound directly on the curve – The native DIR1 equalizer test rendering from 21 October puts frequency, gain and width under direct control. The confirmed fixture state is not proof of acoustic calibration or smooth editing on every device."
+    },
+    "version": "EQ direct DIR1",
+    "sourceRelative": "device-evidence/EqFlow/20261021/direct-corrected/renders/eq-direct-DIR1/en-day-font1.0-settled.png",
+    "src": "/images/audio-eq-expanded.webp",
+    "sourceMode": "Synthetic fixture / settled confirmation",
+    "originalSha256": "700e2f87aab29d9d72d495a22e5f1065992a5bd5e784ed8ae9f7e6656bc45e8d",
+    "crop": null
+  },
+  "audio-eq-night": {
+    "title": {
+      "de": "Equalizer bei Rotnacht",
+      "en": "Equalizer in red night mode"
+    },
+    "caption": {
+      "de": "EXPT-Equalizer als native Prüfansicht vom 21. Oktober. Die Kurve gehört zu einem kontrollierten UI-Prüffall; reale Wiedergabe, Klang und Geräteleistung wurden durch dieses Bild nicht gemessen.",
+      "en": "EXPT equalizer in a native test view from 21 October. The curve belongs to a controlled UI fixture; this image does not measure real playback, sound or device performance."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": "2026-10-21",
+    "sha256": "dabb035be909e3670824139b5a2ea1fb083f43d94686b51614de61dcbc34b576",
+    "alt": {
+      "de": "Equalizer bei Rotnacht – EXPT-Equalizer als native Prüfansicht vom 21. Oktober. Die Kurve gehört zu einem kontrollierten UI-Prüffall; reale Wiedergabe, Klang und Geräteleistung wurden durch dieses Bild nicht gemessen.",
+      "en": "Equalizer in red night mode – EXPT equalizer in a native test view from 21 October. The curve belongs to a controlled UI fixture; this image does not measure real playback, sound or device performance."
+    },
+    "version": "EQ experimental EXP1",
+    "sourceRelative": "device-evidence/EqShared/20261021/renders/eq-experimental-production/de-night-font1.0-normal.png",
+    "src": "/images/audio-eq-night.webp",
+    "sourceMode": "Synthetic fixture",
+    "originalSha256": "ce2072ddeec6658a46eebce4a2d01b9236f100c2c9b4934b85934ad6bec154fd",
+    "crop": null
+  },
+  "audio-room-layout": {
+    "title": {
+      "de": "Lautsprecher als Teil des Bootes",
+      "en": "Speakers as part of the boat"
+    },
+    "caption": {
+      "de": "Native UI-Prüfansicht mit virtuellem Bootsraum und Lautsprecherpositionen. Die Raumform dient der Bedienung; sie belegt weder den fertigen Einbau noch eine vermessene Raumakustik.",
+      "en": "Native UI test view with a virtual boat room and speaker positions. The room model supports the controls; it does not prove a completed installation or measured room acoustics."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": null,
+    "sha256": "09839b425fefde80799e6579ab94862ed8cdc276500897c4b4eda1f703c30c3d",
+    "alt": {
+      "de": "Lautsprecher als Teil des Bootes – Native UI-Prüfansicht mit virtuellem Bootsraum und Lautsprecherpositionen. Die Raumform dient der Bedienung; sie belegt weder den fertigen Einbau noch eine vermessene Raumakustik.",
+      "en": "Speakers as part of the boat – Native UI test view with a virtual boat room and speaker positions. The room model supports the controls; it does not prove a completed installation or measured room acoustics."
+    },
+    "version": "sound-bodies room-known",
+    "sourceRelative": "no-apps/helm/verification/renders/sound-bodies/en-day-font1.0-room-known.png",
+    "src": "/images/audio-room-layout.webp",
+    "sourceMode": "Synthetic room fixture",
+    "originalSha256": "df5b132902a536ea9fc032e4ebd19385cfed36e199296524d49c4c1394fd05d0",
+    "crop": null
+  },
+  "audio-zones-setup": {
+    "title": {
+      "de": "Musik und getrennte Ausgangsbereiche",
+      "en": "Music and separate output areas"
+    },
+    "caption": {
+      "de": "Historische Audio-Prüfansicht: eigene Demo-Musik, simulierte Pegel und getrennte Regler. Die Titelgrafik ist eigenes Demo-Artwork; dies ist keine aktuelle Spotify-Wiedergabe.",
+      "en": "Historical audio test view: own demo music, simulated levels and separate controls. The cover is own demo artwork; this is not current Spotify playback."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_demo_audio",
+    "date": "2026-10-15",
+    "sha256": "123de1c295d563f3c1f07a8b94d396283c43f6680a62154afff8010689b15a42",
+    "alt": {
+      "de": "Musik und getrennte Ausgangsbereiche – Historische Audio-Prüfansicht: eigene Demo-Musik, simulierte Pegel und getrennte Regler. Die Titelgrafik ist eigenes Demo-Artwork; dies ist keine aktuelle Spotify-Wiedergabe.",
+      "en": "Music and separate output areas – Historical audio test view: own demo music, simulated levels and separate controls. The cover is own demo artwork; this is not current Spotify playback."
+    },
+    "version": "audio-v2",
+    "sourceRelative": "no-apps/helm/verification/renders/audio-v2/day-setup.png",
+    "src": "/images/audio-zones-setup.webp",
+    "sourceMode": "Simulated media / levels",
+    "originalSha256": "6f93e0651259c0b08b13b766e15649514ef79d7495ee9511bc96b3a6c7f8646a",
+    "crop": null
+  },
+  "helm-stale-state": {
+    "title": {
+      "de": "Wenn Daten alt werden, muss man es sehen",
+      "en": "Old data must be visible as old"
+    },
+    "caption": {
+      "de": "HELM-Prüfansicht mit bewusst veralteten simulierten Daten. Die zurückgenommene Anzeige gehört zur entwickelten Zustandslogik, nicht zu einem dokumentierten Motorfehler.",
+      "en": "HELM test view with deliberately stale simulated data. The subdued readout belongs to the developed state handling; it does not record an engine fault."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": null,
+    "sha256": "bff046301e5fc3a84096d36438f2c5e8f1b35274ed16b514d0d332a333efa1b1",
+    "alt": {
+      "de": "Wenn Daten alt werden, muss man es sehen – HELM-Prüfansicht mit bewusst veralteten simulierten Daten. Die zurückgenommene Anzeige gehört zur entwickelten Zustandslogik, nicht zu einem dokumentierten Motorfehler.",
+      "en": "Old data must be visible as old – HELM test view with deliberately stale simulated data. The subdued readout belongs to the developed state handling; it does not record an engine fault."
+    },
+    "version": "retained-parity API35 / KNOTS STALE",
+    "sourceRelative": "no-apps/helm/verification/renders/retained-parity-35/day-KNOTS-STALE.png",
+    "src": "/images/helm-stale-state.webp",
+    "sourceMode": "Simulated stale boat data",
+    "originalSha256": "dbed5bc79423b15e41e238ae3181518e7e630c2eff22a3da1311655e077a0a5f",
+    "crop": null
+  },
+  "sonar-range": {
+    "title": {
+      "de": "Den interessanten Tiefenbereich wählen",
+      "en": "Choosing the interesting depth range"
+    },
+    "caption": {
+      "de": "Die Bereichseinstellung von HELM B205 auf dem physischen Lumina 1, 31. Oktober. Der Bildanfang wurde auf 0,30 m eingestellt. Das Bild zeigt die Bedienung im Versuchsaufbau, keinen abgeschlossenen Bootseinsatz.",
+      "en": "HELM B205 range controls on physical Lumina 1, 31 October. Display start was set to 0.30 m. The image shows controls in the test setup, not completed boat operation."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_ui",
+    "date": "2026-10-31",
+    "sha256": "8f540b9985f8aa7d1b53d1b26d82a48288a60ee1b783b5c60e1628bdece1e58d",
+    "alt": {
+      "de": "Den interessanten Tiefenbereich wählen – Die Bereichseinstellung von HELM B205 auf dem physischen Lumina 1, 31. Oktober. Der Bildanfang wurde auf 0,30 m eingestellt. Das Bild zeigt die Bedienung im Versuchsaufbau, keinen abgeschlossenen Bootseinsatz.",
+      "en": "Choosing the interesting depth range – HELM B205 range controls on physical Lumina 1, 31 October. Display start was set to 0.30 m. The image shows controls in the test setup, not completed boat operation."
+    },
+    "version": "HELM B205",
+    "sourceRelative": "device-evidence/lumina-wlan/2026-10-31/Lumina1-range-applied030-screen205.png",
+    "src": "/images/sonar-range.webp",
+    "sourceMode": "Native physical screenshot, hardware test setup",
+    "originalSha256": "4344d8d9fcf38d5358f7d1a1ac18b89b28df83aae1f23ada1e0e48c815495b6c",
+    "crop": null
+  },
+  "sonar-scope-history": {
+    "title": {
+      "de": "Echogramm und Einzelping zusammen betrachten",
+      "en": "Viewing the echogram and one ping together"
+    },
+    "caption": {
+      "de": "Historische native Prüfansicht mit synthetischer Echospur und seitlichem A-Scope für einen einzelnen Ping. Die Testtiefe ist kein reales Messergebnis.",
+      "en": "Historical native test view with a synthetic echo track and a side A-scope for one ping. The fixture depth is not a real measurement."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": null,
+    "sha256": "83590098467e1d6b6026ce7f18bb05363e2278d9e23a3677f6a058eb4d7463d9",
+    "alt": {
+      "de": "Echogramm und Einzelping zusammen betrachten – Historische native Prüfansicht mit synthetischer Echospur und seitlichem A-Scope für einen einzelnen Ping. Die Testtiefe ist kein reales Messergebnis.",
+      "en": "Viewing the echogram and one ping together – Historical native test view with a synthetic echo track and a side A-scope for one ping. The fixture depth is not a real measurement."
+    },
+    "version": "sonar-day-scope",
+    "sourceRelative": "no-apps/helm/verification/renders/sonar-day-scope.png",
+    "src": "/images/sonar-scope-history.webp",
+    "sourceMode": "Synthetic sonar fixture",
+    "originalSha256": "7a6d7eb6e90e86ec5c22ec0954281a1c30e82ec3cafc16414ffb827a13640bbe",
+    "crop": null
+  },
+  "sonar-night-history": {
+    "title": {
+      "de": "Sonar bei Rotnacht",
+      "en": "Sonar in red night mode"
+    },
+    "caption": {
+      "de": "Historische native Sonar-Prüfansicht in breiter Darstellung. Echos und Tiefenwert sind synthetische Testdaten; keine zweite reale Messfahrt.",
+      "en": "Historical native sonar test view in the wide layout. Echoes and depth are synthetic test data, not a second real survey."
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "native_ui_test_fixture",
+    "date": null,
+    "sha256": "b578f892b51bae1326a56167d77a18388cc54bd76c6bf823c0e7d324a42d1b65",
+    "alt": {
+      "de": "Sonar bei Rotnacht – Historische native Sonar-Prüfansicht in breiter Darstellung. Echos und Tiefenwert sind synthetische Testdaten; keine zweite reale Messfahrt.",
+      "en": "Sonar in red night mode – Historical native sonar test view in the wide layout. Echoes and depth are synthetic test data, not a second real survey."
+    },
+    "version": "sonar-night-wide",
+    "sourceRelative": "no-apps/helm/verification/renders/sonar-night-wide.png",
+    "src": "/images/sonar-night-history.webp",
+    "sourceMode": "Synthetic sonar fixture",
+    "originalSha256": "15ab3fd1a4c277715d9eb918070d8e85ee135833ebb39a5cc4f30def4afb4104",
+    "crop": null
+  },
+  "sonar-temperature-research": {
+    "title": {
+      "de": "Erst messen: der Temperaturanschluss",
+      "en": "Measure first: the temperature connection"
+    },
+    "caption": {
+      "de": "Eigene Fotos mit Messpunkten aus der Temperaturerkundung am geöffneten Fishfinder, 18. Oktober. Der Plan dokumentiert die Untersuchung, noch keine vollständig bestätigte Temperaturkette bis zur Anzeige.",
+      "en": "Own photographs with measurement points from temperature investigation inside the fishfinder, 18 October. The sheet documents the investigation, not a fully confirmed temperature chain through to the display."
+    },
+    "width": 1700,
+    "height": 1430,
+    "kind": "historical_hardware_photo_with_annotations",
+    "date": "2026-10-18",
+    "sha256": "1076fecac3afc4dfc32fda8426ec7d5f12601f2df125603757a3d1716e33fa57",
+    "alt": {
+      "de": "Erst messen: der Temperaturanschluss – Eigene Fotos mit Messpunkten aus der Temperaturerkundung am geöffneten Fishfinder, 18. Oktober. Der Plan dokumentiert die Untersuchung, noch keine vollständig bestätigte Temperaturkette bis zur Anzeige.",
+      "en": "Measure first: the temperature connection – Own photographs with measurement points from temperature investigation inside the fishfinder, 18 October. The sheet documents the investigation, not a fully confirmed temperature chain through to the display."
+    },
+    "version": "temperature measurement sheet",
+    "sourceRelative": "no-pi/projects/no5-sonard-openecho/hardware/venterior-temperature-measurement-20261018.png",
+    "src": "/images/sonar-temperature-research.webp",
+    "sourceMode": "Physical photographs / investigation instructions",
+    "originalSha256": "86fd5e0bdc3df067a53a0e12b08a5ab3b8bb96f35123bcb340aece5085147639",
+    "crop": null
+  },
+  "sonar-perfboard-history": {
+    "title": {
+      "de": "Von der Messklemme zum eigenen Adapter",
+      "en": "From test clips to an adapter"
+    },
+    "caption": {
+      "de": "Historischer eigener Lochraster-Aufbauplan für Pico und Sendeadapter, 14. Oktober. Spätere Schaltungs- und Gehäuserevisionen sind maßgeblich; das Bild ist keine aktuelle Anschlussanweisung.",
+      "en": "Historical own perfboard assembly plan for the Pico and transmit adapter, 14 October. Later circuit and enclosure revisions take precedence; this image is not a current wiring instruction."
+    },
+    "width": 1300,
+    "height": 1100,
+    "kind": "historical_assembly_diagram",
+    "date": "2026-10-14",
+    "sha256": "38b5d4efbae7cbaa98b5d58a09ebb51cb20581329b8395e091f9399d39c399c1",
+    "alt": {
+      "de": "Von der Messklemme zum eigenen Adapter – Historischer eigener Lochraster-Aufbauplan für Pico und Sendeadapter, 14. Oktober. Spätere Schaltungs- und Gehäuserevisionen sind maßgeblich; das Bild ist keine aktuelle Anschlussanweisung.",
+      "en": "From test clips to an adapter – Historical own perfboard assembly plan for the Pico and transmit adapter, 14 October. Later circuit and enclosure revisions take precedence; this image is not a current wiring instruction."
+    },
+    "version": "own-tx assembly 20261014",
+    "sourceRelative": "no-pi/projects/no5-sonard-openecho/hardware/openecho-perfboard-own-tx-assembly-20261014.png",
+    "src": "/images/sonar-perfboard-history.webp",
+    "sourceMode": "Own assembly diagram",
+    "originalSha256": "218b101259e034f6bb98806c0293662cbe6b29e6d5b7e442be3e6d4298df98c1",
+    "crop": null
+  },
+  "sonar-scope-points-history": {
+    "title": {
+      "de": "Ein Signal ist noch kein qualifiziertes Echo",
+      "en": "A signal is not yet a qualified echo"
+    },
+    "caption": {
+      "de": "Eigene Platinenaufnahme mit den beiden R17-Messpunkten. Die passive Untersuchung vom 15. Oktober half, Sendezeitpunkt und Empfangssignal auseinanderzuhalten; die Markierung allein belegt keine Tiefenmessung.",
+      "en": "Own board photograph with the two R17 measurement points. Passive investigation on 15 October helped separate transmit timing from received signal; the markings alone do not prove a depth measurement."
+    },
+    "width": 1400,
+    "height": 1410,
+    "kind": "historical_hardware_photo_with_annotations",
+    "date": "2026-10-15",
+    "sha256": "811a28634dfa26a76c814867444cf6db2fdd9f48b85b8ad60c34737a8169d5b1",
+    "alt": {
+      "de": "Ein Signal ist noch kein qualifiziertes Echo – Eigene Platinenaufnahme mit den beiden R17-Messpunkten. Die passive Untersuchung vom 15. Oktober half, Sendezeitpunkt und Empfangssignal auseinanderzuhalten; die Markierung allein belegt keine Tiefenmessung.",
+      "en": "A signal is not yet a qualified echo – Own board photograph with the two R17 measurement points. Passive investigation on 15 October helped separate transmit timing from received signal; the markings alone do not prove a depth measurement."
+    },
+    "version": "R17 passive scope sheet",
+    "sourceRelative": "no-pi/projects/no5-sonard-openecho/hardware/venterior-r17-scope-20261015.png",
+    "src": "/images/sonar-scope-points-history.webp",
+    "sourceMode": "Physical photograph / measurement instructions",
+    "originalSha256": "9a64aaa321c5a593518c48544ce868b2c0406138a572e4961c29cf205f690314",
+    "crop": null
+  },
+  "map-symbols-history": {
+    "title": {
+      "de": "Kartenstil ohne erfundene Geografie",
+      "en": "Chart styling without invented geography"
+    },
+    "caption": {
+      "de": "Detailvergleich aus Kartenstudie R07: verschiedene eigene Zeichenkörper auf vorhandenen NOAA-Geometrien. Entwicklungsrechner-Studie, keine neue Installation auf dem Plotter.",
+      "en": "Detail comparison from chart study R07: different own symbol bodies on existing NOAA geometries. Development-host study, not a new installation on a plotter."
+    },
+    "width": 2850,
+    "height": 749,
+    "kind": "historical_host_renderer_open_chart",
+    "date": null,
+    "sha256": "c84b3b94f02726d8586684defb56a30ee32d155f1da244b8fc101f54c5774763",
+    "alt": {
+      "de": "Kartenstil ohne erfundene Geografie – Detailvergleich aus Kartenstudie R07: verschiedene eigene Zeichenkörper auf vorhandenen NOAA-Geometrien. Entwicklungsrechner-Studie, keine neue Installation auf dem Plotter.",
+      "en": "Chart styling without invented geography – Detail comparison from chart study R07: different own symbol bodies on existing NOAA geometries. Development-host study, not a new installation on a plotter."
+    },
+    "version": "chart-styles revision 07",
+    "sourceRelative": "no-apps/map/studies/chart-styles/revision-07/No5-Tonnen-R07-Details.png",
+    "src": "/images/map-symbols-history.webp",
+    "sourceMode": "Own symbol study / NOAA reference data",
+    "originalSha256": "4d6af9e2a06c2091d1801e3fa5ebb92b30f75c3435adc2d3593968f55c9301d0",
+    "crop": null
+  },
+  "sonar-current": {
+    "src": "/videos/sonar-native-20261101-poster.jpg",
+    "width": 1280,
+    "height": 768,
+    "date": "2026-11-01",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "title": {
+      "de": "Reale Sonarechos auf dem Lumina",
+      "en": "Real sonar echoes on the Lumina"
+    },
+    "caption": {
+      "de": "Physischer Lumina, HELM 206 am 1. November: eigene Echos im laufenden Versuchsaufbau. Sonarquelle anschließend lesend bestätigt; übrige Kopfzeilenwerte als Simulation markiert. Tiefe nicht absolut kalibriert.",
+      "en": "Physical Lumina, HELM 206 on 1 November: own-source echoes in the running test setup. Sonar source subsequently verified read-only; other header values labelled as simulated. Depth not absolutely calibrated."
+    },
+    "sha256": "3ebc5588bc479d22dc353d767cd4396547187cb51da8e164eb2a92e12abccd8d",
+    "sourceRelative": "native-recording/sonar-native-20261101-poster.jpg"
   }
 }

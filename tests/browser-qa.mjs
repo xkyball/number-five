@@ -11,7 +11,7 @@ try{
  const context=await browser.newContext({viewport:{width:1440,height:1050},reducedMotion:'reduce'});
  const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
  const slugs=['system','helm','audio','displays','maps','plotters','sonar','electronics','build'];
- for(const lang of ['de','en'])for(const path of ['', '/projects','/story','/build','/contribute','/contact','/sources','/privacy',...slugs.map(s=>'/projects/'+s)]){
+ for(const lang of ['de','en'])for(const path of ['', '/projects','/story','/platform','/build','/contribute','/contact','/sources','/privacy',...slugs.map(s=>'/projects/'+s)]){
   const response=await page.goto(base+'/'+lang+path,{waitUntil:'networkidle'});
   assert.equal(response.status(),200,lang+path);
   assert.equal(await page.locator('html').getAttribute('lang'),lang,'HTML language');
@@ -21,9 +21,9 @@ try{
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);assert.equal(overflow,false,'desktop overflow '+path);
   report.pages.push({path:'/'+lang+path,status:response.status()});
  }
- await page.goto(base+'/de');await page.screenshot({path:'outputs/qa/desktop.png'});
+ await page.goto(base+'/de');assert.match(await page.locator('h1').innerText(),/Dein Boot/);assert.equal(await page.locator('video').count(),2);for(const v of await page.locator('video').all()){assert.equal(await v.getAttribute('autoplay'),null);assert.notEqual(await v.getAttribute('controls'),null);assert.equal(await v.locator('track').count(),2);const source=await v.locator('source').getAttribute('src');assert.equal((await context.request.get(base+source)).status(),200);for(const track of await v.locator('track').all()){const src=await track.getAttribute('src');const text=await (await context.request.get(base+src)).text();assert.match(text,/^WEBVTT/);}await v.scrollIntoViewIfNeeded();await v.evaluate(async video=>{video.muted=true;await video.play();});await page.waitForTimeout(400);assert.ok(await v.evaluate(video=>video.currentTime>0),'native video advances');await v.evaluate(video=>video.pause());}report.checks.push('Two native videos: manual playback, bilingual captions and downloadable sources');await page.screenshot({path:'outputs/qa/desktop.png'});
  await page.getByRole('link',{name:'DE/EN',exact:false}).count().catch(()=>0);
- await page.goto(base+'/de/projects/sonar');const switchLink=page.locator('.lang-switch');await switchLink.click();assert.equal(new URL(page.url()).pathname,'/en/projects/sonar');report.checks.push('Language switch preserves matching project');
+ await page.goto(base+'/de/platform');await page.locator('.lang-switch').click();assert.equal(new URL(page.url()).pathname,'/en/platform');await page.goto(base+'/de/projects/sonar');const switchLink=page.locator('.lang-switch');await switchLink.click();assert.equal(new URL(page.url()).pathname,'/en/projects/sonar');report.checks.push('Language switch preserves matching project');
  await page.goto(base+'/de/contact');await page.getByLabel('Dein Name',{exact:true}).fill('Number Five QA');await page.getByLabel('E-Mail',{exact:true}).fill('qa-number-five@example.test');await page.getByLabel('Worum geht es?').selectOption('sonar');await page.getByLabel('Deine Nachricht',{exact:true}).fill('Synthetic contact test. Checking persistent storage and owner-only inbox access.');
  await page.waitForTimeout(1700);await page.getByRole('button',{name:'Nachricht senden'}).click();await page.getByRole('heading',{name:'Danke für deine Nachricht.'}).waitFor();report.checks.push('Anonymous form confirmed server storage');
  const anon=await context.request.get(base+'/api/inbox');assert.equal(anon.status(),403);report.checks.push('Anonymous inbox API forbidden');
@@ -32,7 +32,7 @@ try{
  const message=page.locator('.message').filter({hasText:'qa-number-five@example.test'});await message.getByRole('button',{name:'Als gelesen markieren'}).click();await message.locator('.eyebrow').filter({hasText:'read'}).waitFor();await message.getByRole('button',{name:'Erledigt',exact:true}).click();await message.locator('.eyebrow').filter({hasText:'done'}).waitFor();await page.screenshot({path:'outputs/qa/inbox.png'});await message.getByRole('button',{name:'Löschen',exact:true}).click();await message.getByRole('button',{name:'Endgültig löschen'}).click();await message.waitFor({state:'detached'});report.checks.push('Owner login, read, complete and delete persisted; synthetic message removed');
  await context.close();
  const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,reducedMotion:'reduce'});const phone=await mobile.newPage();phone.on('pageerror',e=>report.errors.push(String(e)));
- for(const path of ['/de','/en','/de/projects/sonar','/en/projects/audio','/de/build','/de/contact']){await phone.goto(base+path,{waitUntil:'networkidle'});assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'mobile overflow '+path);}
+ for(const path of report.pages.map(p=>p.path)){await phone.goto(base+path,{waitUntil:'networkidle'});assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'mobile overflow '+path);}
  await phone.goto(base+'/de');await phone.screenshot({path:'outputs/qa/mobile.png'});await phone.locator('.mobile-menu summary').click();await phone.getByRole('navigation',{name:'Mobile Navigation',exact:true}).getByRole('link',{name:'Teilprojekte'}).click();assert.equal(new URL(phone.url()).pathname,'/de/projects');
  await phone.keyboard.press('Tab');assert.notEqual(await phone.evaluate(()=>document.activeElement?.tagName),'BODY');report.checks.push('Mobile menu and keyboard focus work; reduced motion respected');await mobile.close();
  assert.deepEqual(report.errors,[],'No uncaught page errors');report.status='PASS';

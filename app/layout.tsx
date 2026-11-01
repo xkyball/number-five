@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
   metadataBase: new URL('https://no5.christophhoffmann.net'),
   title: { default: 'Number Five · Offene Technik fürs Boot', template: '%s · Number Five' },
-  description: 'Ein Boot. Offene Technik. Die Entwicklung von Android-Instrumenten, Karten, Audio und eigenem Sonar – mit Quellen, Ergebnissen und einer Einladung zum Mitbauen.',
+  description: 'Dein Boot. Deine Hardware. Ein gemeinsames System. Ein offener Smart-Boat-Baukasten im Aufbau mit nativen Apps, gemeinsamen Diensten, Werkstattgeschichte und Quellen.',
   icons: { icon: '/favicon.svg' },
 };
 export default async function RootLayout({ children }: { children: React.ReactNode }) {

@@ -1,0 +1,390 @@
+{
+  "schemaVersion": 1,
+  "preparedAt": "2026-11-01",
+  "purpose": "Sanitized evidence for Number Five website rewrite; not a quotation or manufacturing acceptance",
+  "inventoryReadMethod": "python3 workshop-inventory/app.py state; no direct SQL, no DB writes",
+  "costNarrativeDe": "Das günstige Display ist der aufmerksamkeitsstarke Einstieg. Der eigentliche Preis entsteht aus modular wählbaren Komponenten sowie Fertigung und Einbau. Keine belastbare Gesamtsumme verfügbar; Unbekanntes nicht als null rechnen.",
+  "mainCostBlocks": [
+    {
+      "id": "display",
+      "labelDe": "Display / native Bedienung",
+      "parts": [
+        "Lumina Diamond 2K 11.8 Android Auto/CarPlay Head Unit"
+      ],
+      "evidenceCategory": "supported inventory CLI; historical purchase and ownership fields",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "priceStatus": "unknown in inventory price field",
+      "amount": 75,
+      "currency": "EUR",
+      "amountBasis": "user-reported display price; not invoice verified",
+      "noteDe": "€75 ist die direkte Nutzerangabe für das günstige Display, kein aus der Inventardatenbank belegter Rechnungsbetrag. Zwei vorhandene Luminas sind inventarisiert; deren individuelle Einkaufspreise fehlen im Preisfeld."
+    },
+    {
+      "id": "pi",
+      "labelDe": "Pi, Datenspeicher und Kühlung",
+      "parts": [
+        "Raspberry Pi 5 8 GB",
+        "Raspberry Pi 5 Gehäuse schwarz mit Lüfter/Kühlkörper",
+        "Raspberry Pi A2 microSD 64 GB / OS 64 Bit"
+      ],
+      "evidenceCategory": "supported inventory CLI; historical purchase and ownership fields",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "priceStatus": "unknown in inventory price field",
+      "amount": null,
+      "currency": null,
+      "amountBasis": null,
+      "noteDe": "Historische Käufe und vorhandene Teile belegt; die Kostenfelder dieser konkreten Beschaffungen sind leer."
+    },
+    {
+      "id": "power",
+      "labelDe": "Bordnetzversorgung und Schutz",
+      "parts": [
+        "XL6009AUD Buck-Boost 4–32 V / 1,2–35 V"
+      ],
+      "evidenceCategory": "supported inventory CLI; historical purchase and ownership fields",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "priceStatus": "unknown in inventory price field",
+      "amount": null,
+      "currency": null,
+      "amountBasis": null,
+      "noteDe": "Wandler allein ist keine vollständige Bootsversorgung: Sicherungen, Dioden, Leitungen, Wärmeabfuhr und Lastprüfung kommen hinzu. Kein abgeschlossener Systempreis."
+    },
+    {
+      "id": "audio",
+      "labelDe": "Audioelektronik",
+      "parts": [
+        "USB-Soundkarte 6 Kanal / 5.1"
+      ],
+      "evidenceCategory": "supported inventory CLI; historical purchase and ownership fields",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "priceStatus": "unknown in inventory price field",
+      "amount": null,
+      "currency": null,
+      "amountBasis": null,
+      "noteDe": "USB-Mehrkanalausgabe ist vorhanden; Preis des konkreten Kaufes nicht erfasst. Verstärker, Lautsprecher, Kabel und Einbau gehören getrennt in einen Gesamtaufbau."
+    },
+    {
+      "id": "sonar",
+      "labelDe": "Sonar-Hardware",
+      "parts": [
+        "Wired Sonar Transducer & LCD Fish Finder Display",
+        "RASPBERRY PI PICO"
+      ],
+      "evidenceCategory": "supported inventory CLI; historical purchase and ownership fields",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "priceStatus": "unknown in inventory price field",
+      "amount": null,
+      "currency": null,
+      "amountBasis": null,
+      "noteDe": "Gerät und Pico als historische Käufe/Bestand erfasst. Umbau, Analogstufe, Kabel und Gehäuse sind zusätzlich, kein vollständiger Sonarpreis."
+    }
+  ],
+  "fabrication": {
+    "currency": null,
+    "amount": null,
+    "materials": [
+      {
+        "part": "VenteriorV15-2",
+        "plannedFilamentGrams": 337.83,
+        "roundedMaterialNeedGrams": 338,
+        "basis": "four PETG plates sliced offscreen; includes supports and coupon",
+        "source": "printSonar"
+      },
+      {
+        "part": "Pi-BoxP4.3 historical planning",
+        "plannedFilamentGrams": 861.5,
+        "basis": "eight3MF plates sliced offscreen",
+        "source": "printPi"
+      }
+    ],
+    "excludedUnknowns": [
+      "filament unit price",
+      "print electricity and machine time",
+      "failed prints",
+      "soldering labour",
+      "assembly labour",
+      "mounting labour",
+      "shipping",
+      "tax treatment where not documented"
+    ],
+    "limit": "Slicer estimates are not actual consumed material or invoiced manufacturing cost; current variant must be matched."
+  },
+  "datedProcurementExamples": [
+    {
+      "labelDe": "Audio: vier isolierte RCA-Buchsen",
+      "article": "4 WAY INSULATED RCA SOCKET [K272]",
+      "amount": 24.38,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Mantech",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-19T08:22:30+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Versorgung: Sicherungshalter",
+      "article": "BLADE FUSE HOLDER IN LINE 10A 32 [F108-C]",
+      "amount": 18.57,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Mantech",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-19T08:22:30+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Versorgung: zusätzlicher HW-64-Wandler",
+      "article": "DC-DC STEP-DOWN  I=4-38 O=1.2-36 [HW-64]",
+      "amount": 72.1,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Mantech",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-19T08:22:30+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Vierpoliges abnehmbares Steckpaar",
+      "article": "YC100 4P steckbare Schraubklemme, kompletter Steckersatz",
+      "amount": 14.0,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Micro Robotics",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-20T06:39:36+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Vier 40×60-mm-Lochplatinen",
+      "article": "Lochplatine 40×60mm doppelseitig / 4er-Pack",
+      "amount": 16.0,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 4,
+      "supplier": "Micro Robotics",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-20T06:39:36+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Signallitze schwarz 0,22 mm² pro Meter",
+      "article": "CAB01,22MBK · Einzellitze schwarz0,22mm²",
+      "amount": 2.15,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Communica",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-20T21:27:28+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    },
+    {
+      "labelDe": "Tischversuch: geregeltes 5-V-/6-A-Netzteil",
+      "article": "Geregeltes 5-V-/6-A-Netzteil · 30 W · Hohlstecker 2,1/5,5 mm",
+      "amount": 168.0,
+      "currency": "ZAR",
+      "priceBasis": "recorded field price_ex_vat, per listed purchasing unit/pack; tax not added",
+      "packContent": 1,
+      "supplier": "Micro Robotics",
+      "evidenceCategory": "historical procurement record with confirmed receipt quantity",
+      "recordImportedAt": "2026-10-30T07:01:09+00:00",
+      "checkedAt": "2026-11-01T12:15:53+00:00",
+      "purchaseDateVerified": false,
+      "useLimitDe": "Historisches Beschaffungsbeispiel, kein aktuelles Angebot und kein belegter Materialanteil eines fertigen Gesamtsystems."
+    }
+  ],
+  "researchOnlyCost": {
+    "module": "active noise reduction / ANC",
+    "status": "research and procurement plan, not working ANC",
+    "date": "2026-10-19",
+    "currency": "ZAR",
+    "coreHardwareIncludingRegulator": 572.7,
+    "phase2Additional": 914.17,
+    "phase1And2MaterialTotal": 1486.87,
+    "excluded": [
+      "shipping",
+      "consumables",
+      "development work",
+      "unpriced adapted microphone carriers"
+    ],
+    "source": "anc",
+    "additionalSource": "ancReadme",
+    "limitDe": "Diese Forschungssumme nicht als Preis des bestehenden Musik- oder Gesamtsystems verwenden."
+  },
+  "obstacles": [
+    {
+      "id": "lumina-truth",
+      "date": "2026-10-23",
+      "problemDe": "Android-14-Anzeige entsprach nicht der tatsächlich ausgelesenen Android-10-/API-29-Plattform. Zwei gleich bezeichnete Luminas besaßen außerdem unterschiedliche Flash-/OEM-Firmware.",
+      "decisionDe": "Die wirkliche Geräteplattform wurde ausgelesen; Start- und Controlprofile blieben pro Firmware getrennt.",
+      "valueDe": "Der Nachbau kann sich auf belegte Fähigkeiten stützen, statt auf ein irreführendes Versionslabel.",
+      "limitDe": "Gleiche Grundausstattung beweist keine vollständige Hardware-/Firmwaregleichheit.",
+      "source": "lumina"
+    },
+    {
+      "id": "map-native",
+      "date": "2026-10-03 onward",
+      "problemDe": "Die frühere CPU-Kartenbild-Lösung war laut dokumentiertem Nutzer-Smoke träge.",
+      "decisionDe": "Der ursprüngliche OpenCPN-GLES-Pfad wurde auf Android eingebunden; kein vollständiges CPU-Kartenbild wird mehr hochgeladen.",
+      "valueDe": "Karte und Gesten werden lokal auf dem Gerät verarbeitet; die Kartenansicht benötigt den Boot-Backenddienst nicht.",
+      "limitDe": "Native Ausführung allein ist keine Garantie flüssiger FPS auf jeder Karte.",
+      "source": "mapEarly"
+    },
+    {
+      "id": "map-performance",
+      "date": "2026-10-06",
+      "problemDe": "Ein echter Lumina-Lauf mit vier Boston-Zellen und 8.202 Objekten maß im damaligen MAP42 rund291ms mittlere native Framearbeit; hohe Renderthread-CPU statt hoher Swapzeit.",
+      "decisionDe": "CPU-/Zeichenaufrufe wurden gezielt profiliert statt die GPU pauschal für jede Verzögerung verantwortlich zu machen.",
+      "valueDe": "Die Entwicklung konnte die teuren Darstellungsschritte konkret angehen.",
+      "limitDe": "Historischer Stand; nicht als heutige Leistung und nicht gegen ungleiche Auflösungen als Speedup ausgeben.",
+      "source": "mapPerf"
+    },
+    {
+      "id": "map-residency",
+      "date": "2026-10-10/11",
+      "problemDe": "Ein großer Kartenbestand passt nicht automatisch gleichzeitig als geladene Geometrie in das Displaygerät. 687 ausgewählte Florida-Zellen waren ein Quellenbestand, kein Nachweis gleichzeitiger Speicherkapazität.",
+      "decisionDe": "Gespeicherten Katalog und tatsächlich geladene Zellen trennen, nach sichtbarem Beitrag laden, Budgets sowie Quellen-/Kameragenerationen beachten.",
+      "valueDe": "Mehr Karten können verwaltet werden, ohne blind alles gleichzeitig zu laden.",
+      "limitDe": "Ein Budget ist keine gemessene Hardwaregrenze; vollständige sichtbare Abdeckung, Speicher und Temperatur brauchen Gerätebelege.",
+      "source": "mapCapacity",
+      "additionalSource": "mapCatalog"
+    },
+    {
+      "id": "eq-confirmed",
+      "date": "2026-10-20",
+      "problemDe": "Ein stark begrenzter EQ-Reglerzug war trotz geringer DSP-Dauerlast teuer: im kurzen Pi-Versuch etwa92% eines Kerns und955–957ms bis bestätigter Vorschau. Bereits ein EQ-Punkt löste die teure Kontrollberechnung aus.",
+      "decisionDe": "Audio-Loop, Kontrollvorbereitung und gesamte bestätigte Vorschau getrennt messen; wiederholte sichere Vorbereitung ist ein Optimierungsziel.",
+      "valueDe": "Eine hübsche Kurve reicht nicht: der gemeinsame Dienst muss einen gültigen, bestätigten Klangzustand liefern.",
+      "limitDe": "Historische kurze Messung vor Optimierung;92% eines Kerns ist nicht92% des gesamten Pi. Keine akustische Dropoutabnahme.",
+      "source": "audioEq"
+    },
+    {
+      "id": "sonar-ping",
+      "date": "2026-10-15",
+      "problemDe": "Höhere Pingrate war kein bloßer Softwaretimer: Sendestufenleistung, Erholungszeit, Empfangsfenster, Capturelänge und Tiefe wirkten zusammen.",
+      "decisionDe": "Originale Messdaten, Modelle und neue eigene Sende-/Erfassungskette getrennt untersuchen.",
+      "valueDe": "Der spätere Versuch bis19,6 brauchbare Messungen/s lässt sich als überwundene konkrete Grenze erzählen.",
+      "limitDe": "Der15Oct-Bericht ist historische Ausgangslage, nicht heutige maximal zulässige Rate; der spätere600s-Versuch benötigt seinen eigenen Beleg.",
+      "source": "sonarTenHz"
+    },
+    {
+      "id": "sonar-temp",
+      "date": "2026-10-19/31",
+      "problemDe": "Zwei LCD-Temperaturpunkte ergeben keine Kennlinie; die Temperaturerweiterung verlangte eigenen geschützten ADC-Pfad und Kalibrierung.",
+      "decisionDe": "Temperatur als getrennten Messkanal planen und kalibrieren.",
+      "valueDe": "Echte Temperatur lässt sich später zusammen mit Tiefe integrieren, ohne unkalibrierte Zahlen als Messung auszugeben.",
+      "limitDe": "19Oct noch keine neue Temperaturtelemetrie,31Oct Temperaturkalibrierung weiterOPEN. Vollständiger Temperatur-Echtbetrieb ist damit nicht belegt.",
+      "source": "sonarTemp",
+      "additionalSource": "printSonar"
+    },
+    {
+      "id": "mounting",
+      "date": "2026-10-31",
+      "problemDe": "Druckbare Einzelteile garantierten weder Schraubeneingriff noch Steckerhalt oder Entnahme. VenteriorV15-2 korrigierte15 zuvor festgestellte nominale Mechanikfehler.",
+      "decisionDe": "Befestigungen, Rückanschläge, austauschbare Steckereinsätze, Klemmbacken und Wartungswege im Gesamtaufbau prüfen.",
+      "valueDe": "Der Baukasten umfasst den Weg vom Bildschirm zum tatsächlich montierbaren Bauteil.",
+      "limitDe": "Reale Passung, Steckermaße, Kabelmantel und Lasten bleibenOPEN.",
+      "source": "printSonar"
+    },
+    {
+      "id": "sourcing",
+      "date": "2026-10-19",
+      "problemDe": "Für ANC war die ursprüngliche ADC-/Mikrofonstückliste in Südafrika nicht vollständig als lagernd belegt. Ein Preis mit Warenkorbknopf war kein Lagerbeweis.",
+      "decisionDe": "Datierte Quellen prüfen und eine lokal belegte Alternative mit Pico2W und zwei digitalen Mikrofonen planen.",
+      "valueDe": "Beschaffbarkeit wird Teil des Designs; die Alternative war konkret zu bekommen, erforderte aber andere Firmware.",
+      "limitDe": "Forschung, nicht aufgebauter ANC-Nachweis; damaliger Lagerstand ist keine heutige Verfügbarkeitszusage.",
+      "source": "anc"
+    }
+  ],
+  "sourceRefs": {
+    "lumina": {
+      "path": "no-pi/projects/no5-rebuild/docs/LUMINA_HARDWARE_COMPARISON.md",
+      "lines": "9–28;41–45",
+      "sha256": "247ce912adb4ebe5254f05505503621a2c4c6e370186731487e1204bc637cf15"
+    },
+    "mapEarly": {
+      "path": "no-apps/map/docs/LOCAL_SMOKE.md",
+      "lines": "3–7",
+      "sha256": "d942eb5db36663059ded5c5938d8ba62605df9cf0104e2cf272a044842bdc7fa"
+    },
+    "mapCatalog": {
+      "path": "no-apps/map/docs/CATALOG_RESIDENCY.md",
+      "lines": "3–7;29–42;81–119",
+      "sha256": "7be4a4280279ddb1ff14e83610e08fa635ca473f387a766cb84c9dde9c5ca85b"
+    },
+    "mapCapacity": {
+      "path": "no-apps/map/docs/LIFECYCLE_AND_CAPACITY.md",
+      "lines": "3–27;35–39",
+      "sha256": "9fff6c3e91f296f5042add2178377bee8e37c09cb8184b56d61bb009bab16619"
+    },
+    "mapPerf": {
+      "path": "no-apps/deliveries/map43-diagnostics/new-lumina-report-20261006/README.md",
+      "lines": "3–11",
+      "sha256": "a95e12eb9431e8ec1af4b128c5e9ad019d20cfca2c3fa81a4b861eebe33ead8c"
+    },
+    "audioEq": {
+      "path": "no-pi/projects/no5-camilladsp/verification/CPU_EQ_FINDINGS_20261020.md",
+      "lines": "3–57",
+      "sha256": "20395c480d09fbb116c914d8830da9f59c8f76acb7fdc6d6d5277647115969f6"
+    },
+    "printSonar": {
+      "path": "no-pi/projects/no5-rebuild/hardware/venterior-service/box-v15-build123d/README.md",
+      "lines": "1–31",
+      "sha256": "09765ecd77edb2fc4a736270120ecb22694090d29aee55268a19dacc6e4bf67b"
+    },
+    "printPi": {
+      "path": "no-pi/projects/no5-rebuild/hardware/pi-box/bauplan.md",
+      "lines": "1–16;27–55;57–77",
+      "sha256": "ac0751d49e6da9a838cf67eeaacd1141b5a435988762454f680f1f01702d607f"
+    },
+    "sonarTenHz": {
+      "path": "no-pi/projects/no5-sonard-openecho/hardware/TEN_HZ_FEASIBILITY_20261015.md",
+      "lines": "1–6;57–91",
+      "sha256": "8c0397ef9842b413b7afeaf6e9066f17b4bedde3d851f97cc2264e44e897a598"
+    },
+    "sonarTemp": {
+      "path": "no-pi/projects/no5-sonard-openecho/hardware/fritzing-power-temperature-20261019/README.md",
+      "lines": "105–128",
+      "sha256": "1d1014992ab31d0848f8166768f461daa89e7b4bc120cefac8a0db5eb792a307"
+    },
+    "anc": {
+      "path": "no-pi/projects/no5-active-noise-control/SOURCING_SOUTH_AFRICA_20261019.md",
+      "lines": "1–21;50–54",
+      "sha256": "9354aa71ce49dea45d40233e4a6f20516176181c97b7d685f8754b8502996533"
+    },
+    "ancReadme": {
+      "path": "no-pi/projects/no5-active-noise-control/README.md",
+      "lines": "3–16",
+      "sha256": "aa85d9d8b3ea319da6f8e189015cc1e7ef480b674899d27673c979a774a8bbc8"
+    },
+    "antenna": {
+      "path": "no-pi/projects/no5-rebuild/docs/LUMINA_RF_ANTENNAS.md",
+      "lines": "110–122",
+      "sha256": "307915b96d6fb141a732b6999bfb188fb524791667a32411179114c813a05b31"
+    }
+  },
+  "publicationRules": [
+    "Do not publish private order numbers, source IDs, source keys, addresses, receipts or runtime data.",
+    "Historical price_ex_vat examples are exVAT; no unverified tax/currency conversion.",
+    "Do not add EUR and ZAR amounts.",
+    "Do not treat known workshop ownership as evidence of final installation.",
+    "Do not turn unknown work or delivery cost into zero.",
+    "No generic €1500 competitor comparison is substantiated by this evidence."
+  ]
+}

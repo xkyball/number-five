@@ -1,0 +1,64 @@
+[
+  {
+    "id": "sonar-native-20261101",
+    "title": {
+      "de": "Eigene Echos. Auf dem echten Display.",
+      "en": "Own-source echoes. On the real display."
+    },
+    "description": {
+      "de": "32 Sekunden aus der nativen HELM-App auf dem physischen Lumina: laufendes Echogramm und A-Scope aus dem vorhandenen Versuchsaufbau. Die A-Scope-Ansicht wird aus- und wieder eingeblendet.",
+      "en": "32 seconds from the native HELM app on a physical Lumina: the live echogram and A-scope on the existing test setup. The A-scope view is hidden and shown again."
+    },
+    "src": "/videos/sonar-native-20261101.mp4",
+    "poster": "/videos/sonar-native-20261101-poster.jpg",
+    "durationSeconds": 32.002833,
+    "captions": {
+      "de": "/videos/sonar-native-20261101.de.vtt",
+      "en": "/videos/sonar-native-20261101.en.vtt"
+    },
+    "date": "2026-11-01",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200 (recording: 1280 × 768)",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "dataSource": "Own-source sonar display; read-only Pico source status after capture confirms physical_own_marker_raw_match, selected source own, depth 1.071 m, uncalibrated. Other header telemetry is explicitly simulated/unavailable.",
+    "kind": "physical-device-native-recording",
+    "speed": 1,
+    "limitations": {
+      "de": "Versuchsaufbau, keine Bootsabnahme und keine absolute Tiefenkalibrierung. Temperatur wird nicht gezeigt. Die übrige Kopfzeilen-Telemetrie ist als Simulation gekennzeichnet. Aufzeichnungsrate ist keine App- oder GPU-Messung.",
+      "en": "Test setup, not acceptance aboard a boat or absolute depth calibration. Temperature is not shown. Other header telemetry is labelled as simulated. Recording frame rate is not an app or GPU measurement."
+    },
+    "sha256": "e3e9778c8c73c2f8d40dc2275b731d475293332a4945218d44a1760571c75721",
+    "bytes": 5215908,
+    "encodingNote": "Native screenrecord, variable frame rate; faststart remux only, original packet timing preserved. Recording cadence is not app FPS."
+  },
+  {
+    "id": "map-workspaces-native-20261101",
+    "title": {
+      "de": "Arbeitsseiten statt Desktop-Menüs.",
+      "en": "Workspaces instead of desktop menus."
+    },
+    "description": {
+      "de": "Eine ungeschnittene Bedienfolge auf dem physischen Lumina: Darstellung, schematische Stilvorschau, Karteninhalt und vorhandener Kartenbestand. Alle Seiten stammen aus der installierten nativen MAP-App.",
+      "en": "An uncut sequence on the physical Lumina: appearance, schematic style preview, chart content and the existing chart library. Every screen comes from the installed native MAP app."
+    },
+    "src": "/videos/map-workspaces-native-20261101.mp4",
+    "poster": "/videos/map-workspaces-native-20261101-poster.jpg",
+    "durationSeconds": 39.971089,
+    "captions": {
+      "de": "/videos/map-workspaces-native-20261101.de.vtt",
+      "en": "/videos/map-workspaces-native-20261101.en.vtt"
+    },
+    "date": "2026-11-01",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200 (recording: 1280 × 768)",
+    "version": "MAP 110 · 0.5.42-memory-budget-v8",
+    "dataSource": "Native workspace UI only. The style preview is explicitly schematic. The library listing names the existing South Africa package but no chart pixels are shown.",
+    "kind": "physical-device-native-recording",
+    "speed": 1,
+    "limitations": {
+      "de": "Ergänzende Bedienvorführung; kein Verschiebe-, Zoom-, Rotations- oder Geschwindigkeitsnachweis der Karte. Die schematische Stilvorschau ist keine gerenderte Seekarte. Keine Einstellungen wurden angewendet.",
+      "en": "Supplementary UI tour; not proof of chart panning, zooming, rotation or rendering speed. The schematic style preview is not a rendered nautical chart. No settings were applied."
+    },
+    "sha256": "c7c3a8027f01c52b5078e27fa0fa906fd27d3360e9abe881d26e16e5268d80c2",
+    "bytes": 641326,
+    "encodingNote": "Native screenrecord, variable frame rate; faststart remux only, original packet timing preserved. Recording cadence is not app FPS."
+  }
+]
