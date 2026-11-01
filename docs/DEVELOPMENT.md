@@ -35,4 +35,8 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ## Hosting and reuse
 
-This checkout's `.openai/hosting.json` identifies the actual Sites project. Preserve it for updates to this site. A fork deployed by another owner must register its own Sites identity and secrets. Use the installed Sites workflow to push the exact source, build/package, save and deploy. Database migrations are applied by Sites. Keep credentials, `.dev.vars`, runtime caches and publication archives out of Git.
+This checkout's `.openai/hosting.json` identifies the actual Sites project. Preserve it for updates to this site. A fork deployed by another owner must register its own Sites identity and secrets. Database migrations are applied by Sites. Keep credentials, `.dev.vars`, runtime caches and publication archives out of Git.
+
+The public GitHub repository contains the complete reviewed source snapshots, including large CAD files. Its history is too large for the Sites source service. Publication therefore uses a separate, smaller checkout, currently `../number-five-site`, with its own Sites Git history. It contains the same website files and ten small download archives; of `releases/`, it retains only `manifest.json`, `checks.json` and `README.md`. The large Android archive is a GitHub release asset. The source snapshots remain available in GitHub and the downloadable packages.
+
+Apply website changes to the public repository and synchronize those website files to the publication checkout, including deletions. Do not copy `.git`, credentials, runtime state, generated outputs, `node_modules` or the large raw source snapshots. Run the installed Sites workflow from the publication checkout to check, build/package, push its exact source, save and deploy. Do not push the complete public repository history to the Sites source service. Retain both histories; neither repository replaces the other.
