@@ -701,5 +701,1074 @@
     },
     "sha256": "3ebc5588bc479d22dc353d767cd4396547187cb51da8e164eb2a92e12abccd8d",
     "sourceRelative": "native-recording/sonar-native-20261101-poster.jpg"
+  },
+  "audio-current-day": {
+    "src": "/images/audio-current-day.webp",
+    "title": {
+      "de": "Audio am Tag",
+      "en": "Audio by day"
+    },
+    "caption": {
+      "de": "Aktuelle native Audioansicht auf dem Lumina. Haupt- und Zonenregler stammen vom laufenden Pi-DSP; beim Aufnehmen war kein Wiedergabegerät verbunden. Bootstelemetrie in der Kopfzeile ist als Simulation gekennzeichnet.",
+      "en": "Current native audio view on the Lumina. Main and zone controls come from the running Pi DSP; no playback source was connected during capture. Boat telemetry in the header is labelled as simulated."
+    },
+    "alt": {
+      "de": "Audio am Tag",
+      "en": "Audio by day"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:27:13.974287+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-day.png",
+    "originalSha256": "79a32e6eca553de82a2d24a3f81eb56f00a044289e7b51f645e8d45dfc32d3ee",
+    "sha256": "3c09e4044330ad77281825964bd00a19bc2de8a6924abea7a3c55e048de9f0b8",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-night": {
+    "src": "/images/audio-current-night.webp",
+    "title": {
+      "de": "Audio bei Nacht",
+      "en": "Audio at night"
+    },
+    "caption": {
+      "de": "Aktuelle native Audioansicht auf dem Lumina. Haupt- und Zonenregler stammen vom laufenden Pi-DSP; beim Aufnehmen war kein Wiedergabegerät verbunden. Bootstelemetrie in der Kopfzeile ist als Simulation gekennzeichnet.",
+      "en": "Current native audio view on the Lumina. Main and zone controls come from the running Pi DSP; no playback source was connected during capture. Boat telemetry in the header is labelled as simulated."
+    },
+    "alt": {
+      "de": "Audio bei Nacht",
+      "en": "Audio at night"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:27:16.761935+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-night.png",
+    "originalSha256": "760608af86775312442c7e8aa3c71cd8747bc117bfec51b54cbb40dadcc7e7f6",
+    "sha256": "25ca5d1ed19a910839d0c6c2728c1cf5da2a8883722d45ce5d2bca7fb015de6e",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-presets": {
+    "src": "/images/audio-current-presets.webp",
+    "title": {
+      "de": "Gespeicherte Klangpresets",
+      "en": "Saved sound presets"
+    },
+    "caption": {
+      "de": "Aktuelle Bibliothek mit drei vorhandenen Presets. „No 5 – Immersive 4.1“ ist aktiv; beim Aufnehmen wurde kein anderes Preset geladen.",
+      "en": "Current library with three existing presets. “No 5 – Immersive 4.1” is active; no other preset was loaded during capture."
+    },
+    "alt": {
+      "de": "Gespeicherte Klangpresets",
+      "en": "Saved sound presets"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:27:48.145772+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-presets.png",
+    "originalSha256": "42910d7f0beb0406fe2df83a69cb06be60304191dc11f81628dabf2fb7f3893e",
+    "sha256": "038e07bcf189aafc31aebfc14e2497da4d126557e644bdd9e8225b1dd58d50a4",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-eq": {
+    "src": "/images/audio-current-eq.webp",
+    "title": {
+      "de": "Equalizer mit bestätigtem Zustand",
+      "en": "Equalizer with confirmed state"
+    },
+    "caption": {
+      "de": "Das vorhandene aktive Preset: EQ ausgeschaltet, gespeicherter Punkt und 12 dB Reserve. Der Pi liefert reale Klangdaten; es läuft keine Musik und kein künstliches Spektrum.",
+      "en": "The existing active preset: EQ off, saved point and 12 dB reserve. The Pi supplies real sound settings; no music or artificial spectrum is playing."
+    },
+    "alt": {
+      "de": "Equalizer mit bestätigtem Zustand",
+      "en": "Equalizer with confirmed state"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:09.296159+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-eq.png",
+    "originalSha256": "b24a92cb0d769d031486235b534b9c0732da7e6f7a49f73ac244882d1f6300a9",
+    "sha256": "91f2a751b5598e9088e8bc98cdb4bcc5483a6371c5ef7a828d98e55709f365b2",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-eq-night": {
+    "src": "/images/audio-current-eq-night.webp",
+    "title": {
+      "de": "Equalizer im Nachtmodus",
+      "en": "Equalizer in night mode"
+    },
+    "caption": {
+      "de": "Dieselbe native EQ-Arbeitsfläche bei Nacht. Der vorhandene EQ-Auszustand wurde erhalten.",
+      "en": "The same native EQ workspace at night. The existing EQ-off state was preserved."
+    },
+    "alt": {
+      "de": "Equalizer im Nachtmodus",
+      "en": "Equalizer in night mode"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:21.025671+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-eq-night.png",
+    "originalSha256": "351f6a3a802e236b990d2d2d68829d808679982ebc2e959abc48519b1159fd6e",
+    "sha256": "e91280ccb6996b8b97aab2ddb630b7053885aea94663b499d752764331c5e2e3",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-room": {
+    "src": "/images/audio-current-room.webp",
+    "title": {
+      "de": "Raumwirkung im eigenen Bootsplan",
+      "en": "Room effects in the boat layout"
+    },
+    "caption": {
+      "de": "Aktuelle Raumansicht des aktiven Presets: gerundet 34 % Raumwirkung und 57 % Raumgröße. Reflexionslinien sind ausdrücklich schematisch; keine akustische Messung.",
+      "en": "Current room view of the active preset: rounded 34% effect amount and 57% room size. Reflection lines are explicitly schematic; not an acoustic measurement."
+    },
+    "alt": {
+      "de": "Raumwirkung im eigenen Bootsplan",
+      "en": "Room effects in the boat layout"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:12.515970+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-room.png",
+    "originalSha256": "91bbf8a40c65dd0b62b1b5a5d329b8ab6eaa99207f726a0d07864eba89ca1b10",
+    "sha256": "70bb7c51b53ef19f1664a6202c6814182cb0b6b53e814aa1cb00e7c06e6b9a3b",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-room-night": {
+    "src": "/images/audio-current-room-night.webp",
+    "title": {
+      "de": "Raumansicht bei Nacht",
+      "en": "Room view at night"
+    },
+    "caption": {
+      "de": "Native Rotnacht-Darstellung derselben gespeicherten Raumwerte. Im Aufnahmeablauf wurden keine Klangwerte geändert.",
+      "en": "Native red night view of the same saved room settings. No sound values were changed during capture."
+    },
+    "alt": {
+      "de": "Raumansicht bei Nacht",
+      "en": "Room view at night"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:15.303828+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-room-night.png",
+    "originalSha256": "efa5eced4c3840e23a232560a95c404c5cca79c1a5b61c311b89a907f57b31de",
+    "sha256": "1e7dfe2935b2b9da26babefb19d65129e248bbf46646bb91f02450f6160bd910",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-speakers": {
+    "src": "/images/audio-current-speakers.webp",
+    "title": {
+      "de": "Laufzeit und Lautsprecher abgleichen",
+      "en": "Align speaker delays"
+    },
+    "caption": {
+      "de": "Die aktuelle native Lautsprecherseite zeigt vorhandene Geometrie und abgeleitete Laufzeiten. Zweidimensionale Näherung; keine neue Einmessung oder akustische Abnahme.",
+      "en": "The current native speaker page shows existing geometry and derived delays. A two-dimensional approximation; not a new measurement or acoustic acceptance test."
+    },
+    "alt": {
+      "de": "Laufzeit und Lautsprecher abgleichen",
+      "en": "Align speaker delays"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:35.591104+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-speakers.png",
+    "originalSha256": "3b82830ff0a29fd0215867cf63c3d2b0dde98f28e1dcf12f0320461b014e598c",
+    "sha256": "1fb03becff23dce219b17628f9264bc7f3d3b5b75cac1118d45ff9e93f703948",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-positions": {
+    "src": "/images/audio-current-positions.webp",
+    "title": {
+      "de": "Hörplatz und Subwoofer positionieren",
+      "en": "Position listener and subwoofer"
+    },
+    "caption": {
+      "de": "Gespeicherte Hörplatz- und Subwooferpositionen im eigenen Bootsgrundriss. Die Ansicht wurde geöffnet, ohne Positionen zu verschieben.",
+      "en": "Saved listener and subwoofer positions in the own boat plan. The view was opened without moving positions."
+    },
+    "alt": {
+      "de": "Hörplatz und Subwoofer positionieren",
+      "en": "Position listener and subwoofer"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:54.189611+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-positions.png",
+    "originalSha256": "d08a5d90caa33495cb1fe37e08099635a6a958e649a5fee6b63cc4936ec6880f",
+    "sha256": "f3a51275fe847c475d8648dab66a3944d4264ec59d1ff6b2d01a76a166694990",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-positions-night": {
+    "src": "/images/audio-current-positions-night.webp",
+    "title": {
+      "de": "Positionierung bei Nacht",
+      "en": "Positioning at night"
+    },
+    "caption": {
+      "de": "Dieselben gespeicherten Positionen in der nativen Nachtansicht.",
+      "en": "The same saved positions in the native night view."
+    },
+    "alt": {
+      "de": "Positionierung bei Nacht",
+      "en": "Positioning at night"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:28:56.983218+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-positions-night.png",
+    "originalSha256": "8c474fa6fd949180a625710a9f2f4ffef3563f940468befc53233e4e59bb65e5",
+    "sha256": "3c123e5eded60478b27e2549f6360a87d81eef6d49cb424b79b5789c42b34338",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-position-details": {
+    "src": "/images/audio-current-position-details.webp",
+    "title": {
+      "de": "Exakte Positionsangaben",
+      "en": "Exact position values"
+    },
+    "caption": {
+      "de": "Aktueller Detaildialog für einen vorhandenen Lautsprecher. Koordinaten sind gespeicherte Planwerte; die Höhe bleibt unbekannt.",
+      "en": "Current detail dialog for an existing speaker. Coordinates are saved planning values; height remains unknown."
+    },
+    "alt": {
+      "de": "Exakte Positionsangaben",
+      "en": "Exact position values"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:29:09.131916+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-position-details.png",
+    "originalSha256": "df9887518bd6b9fb0162b3cac832c64a9e54e9685806bbe1e2e76a9f11cb5da2",
+    "sha256": "e1aaaf6213f6adefc78db0a0bf0f57e7bdb24bbcba9a88526458bd98815ed362",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-routing": {
+    "src": "/images/audio-current-routing.webp",
+    "title": {
+      "de": "Kanalverteilung und Grundprofile",
+      "en": "Channel routing and base profiles"
+    },
+    "caption": {
+      "de": "Drei vorhandene Kanalprofile in der aktuellen App. „Immersive 4.1“ ist geladen; beim Aufnehmen wurde keine Verteilung gewechselt.",
+      "en": "Three existing routing profiles in the current app. “Immersive 4.1” is loaded; no routing profile was switched during capture."
+    },
+    "alt": {
+      "de": "Kanalverteilung und Grundprofile",
+      "en": "Channel routing and base profiles"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:29:39.685956+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-routing.png",
+    "originalSha256": "570b027d0165ee8e23420c3f579cbe6321250f22417e01be88c04a5960fea6e4",
+    "sha256": "aeec4b453338273221b1ed518deffc2d7596e8b6bbc447cb9d7a4bcc054c785e",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "audio-current-faders": {
+    "src": "/images/audio-current-faders.webp",
+    "title": {
+      "de": "Regler und linken Drehknopf zuordnen",
+      "en": "Assign faders and left knob"
+    },
+    "caption": {
+      "de": "Aktuelle Zuordnung der vier Regler. Der linke Drehknopf bedient „Haupt“; Sichtbarkeit und Zuordnung wurden unverändert gelassen.",
+      "en": "Current assignment of the four faders. The left knob controls “Main”; visibility and assignments were left unchanged."
+    },
+    "alt": {
+      "de": "Regler und linken Drehknopf zuordnen",
+      "en": "Assign faders and left knob"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:29:47.990661+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_pi_audio_simulated_other_header",
+    "sourceMode": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "dataSource": "Physical Raspberry Pi gateway sourceKind REAL, simulated=false; CamillaDSP 4.1.3 Running. Direct DSP configuration SHA matches gateway configGeneration ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b; preset revision13, calibration revision1. Playback source not connected. Separate HELM header telemetry is simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/audio-current-faders.png",
+    "originalSha256": "fb09d65659cb831cdb1a25e2c9358c2e7e6a024f3f0b71c4cc2b347185364b9a",
+    "sha256": "ca719de2ec01499e8510545ce64b72c03dbfda59c35c90cb39fd1461e97634ba",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "helm-current-day": {
+    "src": "/images/helm-current-day.webp",
+    "title": {
+      "de": "Instrumente: heutige Tagesansicht",
+      "en": "Instruments: current day view"
+    },
+    "caption": {
+      "de": "Frische Aufnahme der installierten HELM-App. Telemetrie aus der Netzwerk-Simulation und fehlende Werte bleiben sichtbar gekennzeichnet; keine Aufnahme während einer Bootsfahrt.",
+      "en": "Fresh capture of the installed HELM app. Network-simulated telemetry and missing values remain visibly labelled; not captured underway."
+    },
+    "alt": {
+      "de": "Instrumente: heutige Tagesansicht",
+      "en": "Instruments: current day view"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:27:09.514650+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_simulated_helm_telemetry",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "sourceRelative": "native-captures/2026-11-01/helm-current-day.png",
+    "originalSha256": "5f137df5d98704c5b194544a6e460c4bc64c35a012bc5c60ff89c3ce8fc0378f",
+    "sha256": "4fdd294f3ed6896fab8cdcd8e013ca842c1965aa5f80ddf8272b947286b87281",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "helm-current-night": {
+    "src": "/images/helm-current-night.webp",
+    "title": {
+      "de": "Instrumente: heutige Nachtansicht",
+      "en": "Instruments: current night view"
+    },
+    "caption": {
+      "de": "Frische Aufnahme der installierten HELM-App. Telemetrie aus der Netzwerk-Simulation und fehlende Werte bleiben sichtbar gekennzeichnet; keine Aufnahme während einer Bootsfahrt.",
+      "en": "Fresh capture of the installed HELM app. Network-simulated telemetry and missing values remain visibly labelled; not captured underway."
+    },
+    "alt": {
+      "de": "Instrumente: heutige Nachtansicht",
+      "en": "Instruments: current night view"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:26:51.368632+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_simulated_helm_telemetry",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "sourceRelative": "native-captures/2026-11-01/helm-current-night.png",
+    "originalSha256": "93d09db8b70f3922b5a9e4717b31c2e8e2d1a13520f312494816330f0ee7dccf",
+    "sha256": "3f4ccdfa3e9fd6ba824865c29fecbdf4dfc1c696e151d96ed31e1cd05be7f5d0",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "dashboard-current": {
+    "src": "/images/dashboard-current.webp",
+    "title": {
+      "de": "Das aktuelle gemeinsame Dashboard",
+      "en": "The current shared dashboard"
+    },
+    "caption": {
+      "de": "Native Instrumente, Sonar und Audiobedienung in einer Ansicht. Sonar-Echos stammen aus dem realen Versuchsaufbau; andere Bootswerte sind als Simulation markiert. Die Wiedergabequelle ist nicht verbunden.",
+      "en": "Native instruments, sonar and audio controls in one view. Sonar echoes come from the real test setup; other boat values are labelled as simulated. Playback source is not connected."
+    },
+    "alt": {
+      "de": "Das aktuelle gemeinsame Dashboard",
+      "en": "The current shared dashboard"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:26:36.469682+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_mixed_real_sonar_simulated_helm",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof. Real own-source sonar; physical Pi audio DSP, no playback source.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof. Real own-source sonar; physical Pi audio DSP, no playback source.",
+    "sourceRelative": "native-captures/2026-11-01/dashboard-current-day.png",
+    "originalSha256": "2457c35c4fad6591308268084d167018785f79ba7dfc4a11139253186842b383",
+    "sha256": "66a17dfb840a89b0ab0407597ee6fe448b5296cabb1a1df7eca77dd1e48a13cd",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "dashboard-current-night": {
+    "src": "/images/dashboard-current-night.webp",
+    "title": {
+      "de": "Dashboard bei Nacht",
+      "en": "Dashboard at night"
+    },
+    "caption": {
+      "de": "Native Instrumente, Sonar und Audiobedienung in einer Ansicht. Sonar-Echos stammen aus dem realen Versuchsaufbau; andere Bootswerte sind als Simulation markiert. Die Wiedergabequelle ist nicht verbunden.",
+      "en": "Native instruments, sonar and audio controls in one view. Sonar echoes come from the real test setup; other boat values are labelled as simulated. Playback source is not connected."
+    },
+    "alt": {
+      "de": "Dashboard bei Nacht",
+      "en": "Dashboard at night"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:26:47.803671+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_mixed_real_sonar_simulated_helm",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof. Real own-source sonar; physical Pi audio DSP, no playback source.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof. Real own-source sonar; physical Pi audio DSP, no playback source.",
+    "sourceRelative": "native-captures/2026-11-01/dashboard-current-night.png",
+    "originalSha256": "b49864ee0b26c1c18aa048fcb9146501c25b1d8b5ac71b91ae949ec44978fdd1",
+    "sha256": "5524f541167518ee59eb730c5f830b4eaf9806c60f31c4ddcbd1035e23c72103",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "controls-current": {
+    "src": "/images/controls-current.webp",
+    "title": {
+      "de": "Einstellungen nach Aufgaben",
+      "en": "Settings organised by task"
+    },
+    "caption": {
+      "de": "Die aktuelle native Einstellungsübersicht: Anzeige, Einheiten, gemeinsamer Zugang und Diagnose. Keine Zugangsdaten im Bild.",
+      "en": "The current native settings overview: appearance, units, shared connection and diagnostics. No credentials shown."
+    },
+    "alt": {
+      "de": "Einstellungen nach Aufgaben",
+      "en": "Settings organised by task"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:30:17.987126+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_native_settings",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "sourceRelative": "native-captures/2026-11-01/controls-current.png",
+    "originalSha256": "864a2f2e93568069015ac06f9dcf954c9c0a6ae11c6843c05275bcb95821ddb9",
+    "sha256": "90f33ef19315eeab226f2b0a5b50183c6e30d21d9b5adf51fe67054a0bc5a226",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "connection-current": {
+    "src": "/images/connection-current.webp",
+    "title": {
+      "de": "Ein Zugang für mehrere Anwendungen",
+      "en": "One connection for several applications"
+    },
+    "caption": {
+      "de": "Aktuelle Verbindungsübersicht des installierten Clients. Zugang wird über Lumina Control eingerichtet; einzelne Datenquellen behalten ihren eigenen Status.",
+      "en": "Current connection overview of the installed client. Access is set up through Lumina Control; individual data sources retain their own status."
+    },
+    "alt": {
+      "de": "Ein Zugang für mehrere Anwendungen",
+      "en": "One connection for several applications"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:30:21.956569+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_native_settings",
+    "sourceMode": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "dataSource": "Installed native HELM206 on physical Lumina; external gateway telemetry explicitly simulated, partially unavailable/lost; independent Open-Meteo forecast. No boat-operation proof.",
+    "sourceRelative": "native-captures/2026-11-01/connection-private.png",
+    "originalSha256": "e5cc676b593a8a4520177266364ad075ee0b03fa7e39012f628fe0bab9ae4844",
+    "sha256": "2096413d4e7a42b811602529411af4772a151641a106f7017860afe85e15cff8",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "launcher-current": {
+    "src": "/images/launcher-current.webp",
+    "title": {
+      "de": "No5 HOME: der gemeinsame Einstieg",
+      "en": "No5 HOME: the common entry point"
+    },
+    "caption": {
+      "de": "Aktueller Launcher 31 auf dem physischen Lumina. HELM, MAP, System und Wartung teilen sich den Einstieg und die gemeinsame Gerätebedienung.",
+      "en": "Current Launcher 31 on the physical Lumina. HELM, MAP, system and maintenance share an entry point and common device controls."
+    },
+    "alt": {
+      "de": "No5 HOME: der gemeinsame Einstieg",
+      "en": "No5 HOME: the common entry point"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:32:24.867396+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HOME 31 · 0.5.12-ui-parity-v8",
+    "kind": "physical_device_capture_native_launcher",
+    "sourceMode": "Installed No5 HOME31. Gateway session ready. Own boat background. Playback source unavailable; header boat telemetry is simulated.",
+    "dataSource": "Installed No5 HOME31. Gateway session ready. Own boat background. Playback source unavailable; header boat telemetry is simulated.",
+    "sourceRelative": "native-captures/2026-11-01/launcher-current.png",
+    "originalSha256": "fd712f86b596afd6f2bd3d6f5a59549a2588185a3ba62fda1e92b8e92485f59b",
+    "sha256": "bdfda12e58e4952d70406a669b2b17b409a7286e33f6cf916859b6a7564fd201",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "sonar-current-scope": {
+    "src": "/images/sonar-current-scope.webp",
+    "title": {
+      "de": "Aktuelle Echos und A-Scope",
+      "en": "Current echoes and A-scope"
+    },
+    "caption": {
+      "de": "Frische Geräteaufnahme: laufende eigene Echos, bestätigte Tiefenanzeige 1,07 m und A-Scope. Versuchsaufbau; keine absolute Kalibrierung oder Bootsabnahme.",
+      "en": "Fresh device capture: live own-source echoes, confirmed displayed depth 1.07 m and A-scope. Test setup; no absolute calibration or boat acceptance."
+    },
+    "alt": {
+      "de": "Aktuelle Echos und A-Scope",
+      "en": "Current echoes and A-scope"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:32:12.763971+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "sourceMode": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "dataSource": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/sonar-current-scope.png",
+    "originalSha256": "57b64ef20fee50c8317949a4476e45797b7543657bccb2fd80303878fe368c7e",
+    "sha256": "49bea6cb67cca6fa829a56832c4a73aff0f5ac2a86e7226a4eeacb0f194b7a70",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "sonar-current-wide": {
+    "src": "/images/sonar-current-wide.webp",
+    "title": {
+      "de": "Echos über die volle Anzeigebreite",
+      "en": "Echoes across the full display width"
+    },
+    "caption": {
+      "de": "Aktuelle Ansicht ohne A-Scope. Nach dem Ansichtswechsel füllt sich das Zeitfenster erneut; die sichtbaren Echos sind echte Versuchsdaten.",
+      "en": "Current view without A-scope. The time window fills again after changing view; visible echoes are real test data."
+    },
+    "alt": {
+      "de": "Echos über die volle Anzeigebreite",
+      "en": "Echoes across the full display width"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:35:02.392816+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "sourceMode": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "dataSource": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/sonar-current-wide.png",
+    "originalSha256": "2d76e68879819ef4d5f266ae18aa9465e53d311df366da652688b107a3ca4137",
+    "sha256": "b12c995d1548e171b6485b0a1a9dcec7704327a7cb64413c0440c8935a52160d",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "sonar-current-night": {
+    "src": "/images/sonar-current-night.webp",
+    "title": {
+      "de": "Sonar bei Nacht",
+      "en": "Sonar at night"
+    },
+    "caption": {
+      "de": "Laufendes Echogramm im nativen Rotnacht-Modus, unveränderter physischer Versuchsaufbau.",
+      "en": "Live echogram in native red night mode, with the physical test setup unchanged."
+    },
+    "alt": {
+      "de": "Sonar bei Nacht",
+      "en": "Sonar at night"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:32:16.489778+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "sourceMode": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "dataSource": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/sonar-current-night.png",
+    "originalSha256": "1dc88e3f6d9badd50672ac93e00757c2ea8f7d957a39a467493a706ead0de279",
+    "sha256": "493114f2bb821ec9fddf4503535fa3a40fa3ed66c38aa2ce15fb151327683579",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "sonar-current-range": {
+    "src": "/images/sonar-current-range.webp",
+    "title": {
+      "de": "Tiefenausschnitt und Bereichsautomatik",
+      "en": "Depth window and automatic range"
+    },
+    "caption": {
+      "de": "Aktueller nativer Bereichsdialog mit vorhandener Automatik und Anfangstiefe. Es wurden keine Mess- oder Filterwerte verändert.",
+      "en": "Current native range dialog with existing automatic mode and start depth. No acquisition or filter settings were changed."
+    },
+    "alt": {
+      "de": "Tiefenausschnitt und Bereichsautomatik",
+      "en": "Depth window and automatic range"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:31:15.742387+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "sourceMode": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "dataSource": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/sonar-current-range-controls.png",
+    "originalSha256": "2af76b7a2ab6ded181449738c707348396794ca46f668ef1d08f5554307aa83c",
+    "sha256": "515ab3aedc49fd58c2fffc53a4a115a04874841cc3a2b3ac69f97a3c2dc9868b",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "sonar-current-image-controls": {
+    "src": "/images/sonar-current-image-controls.webp",
+    "title": {
+      "de": "Bildsteuerung für reale Echos",
+      "en": "Image controls for real echoes"
+    },
+    "caption": {
+      "de": "Aktuelle Bildarbeitsseite: Auto, Tiefenbereich, Gain und weitere Darstellungsoptionen. Reale Quelle, keine simulierten Ersatzpings.",
+      "en": "Current image workspace: auto, depth range, gain and more presentation options. Real source; no simulated substitute pings."
+    },
+    "alt": {
+      "de": "Bildsteuerung für reale Echos",
+      "en": "Image controls for real echoes"
+    },
+    "width": 2000,
+    "height": 1200,
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:31:11.678228+00:00",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "kind": "physical_device_capture_real_sonar_simulated_other_header",
+    "sourceMode": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "dataSource": "Own-source physical sonar test setup, source selected own, live echoes and 1.07m displayed depth. Depth not absolutely calibrated; no temperature reading proved. Separate HELM header telemetry simulated/unavailable.",
+    "sourceRelative": "native-captures/2026-11-01/sonar-current-image-controls.png",
+    "originalSha256": "75731f4ba23bddc44f0f020bc759801e20edbda7a404a0847f43a32ac3e3cf8f",
+    "sha256": "5a6ed7e122ee65ba4b841820f44f7f7ff5edd4401f8928bec98fc26eb1dd5085",
+    "crop": null,
+    "rights": "Own application UI; own boat illustration/background. No Spotify artwork or recorded music.",
+    "captureRole": "current-device"
+  },
+  "map-current-overview": {
+    "src": "/images/map-current-overview.webp",
+    "title": {
+      "de": "Boston Harbour auf MAP 110",
+      "en": "Boston Harbour on MAP 110"
+    },
+    "caption": {
+      "de": "Aktuelle Geräteaufnahme vom 1. November: NOAA-Boston-Karten werden lokal auf dem Lumina gerendert. Der Kartendatenbestand wurde am 3. Oktober übernommen; Position außerhalb des Kartengebiets, übrige Kopfzeilendaten simuliert oder nicht verfügbar.",
+      "en": "Current device capture on 1 November: NOAA Boston charts rendered locally on the Lumina. The chart dataset was accessed on 3 October; position outside the chart area, other header data simulated or unavailable."
+    },
+    "alt": {
+      "de": "Boston Harbour auf MAP 110",
+      "en": "Boston Harbour on MAP 110"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:32:43.427566+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-harbour.png",
+    "originalSha256": "fa3383aca237251eb4cc46b63fd6674e60e6af3a980bab1ae86134c53efda60e",
+    "sha256": "f9e567662de14f09d793edfb7e9d338bc778ef0686fa3e46978f049851217705",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-detail": {
+    "src": "/images/map-current-detail.webp",
+    "title": {
+      "de": "Nähe statt grauer Kartenränder",
+      "en": "A closer chart view"
+    },
+    "caption": {
+      "de": "Detailansicht nach dem nativen Zoomschritt in MAP 110. NOAA-S57-Bestand Boston; aktuelle App-Aufnahme, kein aktueller nautischer Kartendienst und keine Geschwindigkeitsmessung.",
+      "en": "Detailed view after a native zoom step in MAP 110. NOAA S57 Boston dataset; current app capture, not a current nautical chart service or a speed measurement."
+    },
+    "alt": {
+      "de": "Nähe statt grauer Kartenränder",
+      "en": "A closer chart view"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:41:24.170144+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-zoom-proof.png",
+    "originalSha256": "385f24cc826e5d6f4d86b26fa3e56baf74af1eb3d3439aa0dc53c8342602d3a7",
+    "sha256": "0811c1ea4d123244feb85f5a6d9731f69cc576e114959f0f4fb1f00e736fc02d",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-rotation": {
+    "src": "/images/map-current-rotation.webp",
+    "title": {
+      "de": "Die Karte um 45 Grad drehen",
+      "en": "Rotating the chart 45 degrees"
+    },
+    "caption": {
+      "de": "Aktuelle native Geräteansicht nach einer Zweifingerdrehung um 45 Grad. Originale NOAA-Boston-Geometrie, keine nachträglich gedrehte Bilddatei.",
+      "en": "Current native device view after a 45-degree two-finger rotation. Original NOAA Boston geometry; the image file was not rotated afterwards."
+    },
+    "alt": {
+      "de": "Die Karte um 45 Grad drehen",
+      "en": "Rotating the chart 45 degrees"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:33:12.734813+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-rotation.png",
+    "originalSha256": "e89579ad27bbff1729225785a4a5473c577a7941985a8ffc34983c98078676e6",
+    "sha256": "6f9f0498ff16f97b01a2f4461c56f8ff426aaa59fbccc07847328521006ef001",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-north": {
+    "src": "/images/map-current-north.webp",
+    "title": {
+      "de": "Mit einem Tippen zurück nach Norden",
+      "en": "One tap back to north"
+    },
+    "caption": {
+      "de": "MAP 110 nach Betätigung der vorhandenen Nordausrichtung: gleicher Boston-Ausschnitt, wieder ohne Drehung.",
+      "en": "MAP 110 after using the existing north-up control: the same Boston view, with rotation reset."
+    },
+    "alt": {
+      "de": "Mit einem Tippen zurück nach Norden",
+      "en": "One tap back to north"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:33:33.772349+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-north.png",
+    "originalSha256": "b93ace3c34488091dcd6001ddc3a28fcc8f47f0cdfae756996ba5780dc882696",
+    "sha256": "f8837041cfcca238e5473820834e68a22834a72f1555a1fc06417dc966d173fa",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-night": {
+    "src": "/images/map-current-night.webp",
+    "title": {
+      "de": "Rotnacht auf der echten Karte",
+      "en": "Red night on the real chart"
+    },
+    "caption": {
+      "de": "Der vorhandene Rotnachtstil auf der aktuellen nativen MAP 110-Geräteansicht mit NOAA-Boston-Daten. Keine historische Stil-Simulation.",
+      "en": "The existing red-night style on the current native MAP 110 device view using NOAA Boston data. Not a historical style simulation."
+    },
+    "alt": {
+      "de": "Rotnacht auf der echten Karte",
+      "en": "Red night on the real chart"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:33:37.222116+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-night.png",
+    "originalSha256": "ede778bb472eb01f0e03ca6320a7ce0be7c6aa87097ca05292b4854c9e4213f0",
+    "sha256": "4db066101d92f3b67c75be0045b5d3b6570e32b75fe438345e90cfe9975b9563",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-routes": {
+    "src": "/images/map-current-routes.webp",
+    "title": {
+      "de": "Der aktuelle Routenbestand",
+      "en": "The current route list"
+    },
+    "caption": {
+      "de": "Die native Routenarbeitsseite am1. November. Der verbundene Signal-K-Bestand meldete 0 Routen; diese Aufnahme behauptet keinen vorhandenen geplanten Törn.",
+      "en": "The native routes workspace on 1 November. The connected Signal K list reported 0 routes; this capture does not claim an existing planned voyage."
+    },
+    "alt": {
+      "de": "Der aktuelle Routenbestand",
+      "en": "The current route list"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:34:09.597695+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-routes.png",
+    "originalSha256": "3a50fc861208f12c1622d6e091d454ce45ea97baccdbddba96e4af980617a928",
+    "sha256": "4567b73373ddf5728f0d4737bb315df1e6f1c61a82e19ee10459b0a8eea2dc1a",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-route-editor": {
+    "src": "/images/map-current-route-editor.webp",
+    "title": {
+      "de": "Routeneditor ohne erfundene Beispieldaten",
+      "en": "Route editor without invented example data"
+    },
+    "caption": {
+      "de": "Aktueller MAP 110-Editor mit einem neu geöffneten leeren Entwurf. Die Koordinatenansicht ist schematisch. Der Entwurf wurde anschließend verworfen; es wurde keine Route im Dienst gespeichert.",
+      "en": "Current MAP 110 editor with a newly opened empty draft. The coordinate view is schematic. The draft was subsequently discarded; no route was saved to the service."
+    },
+    "alt": {
+      "de": "Routeneditor ohne erfundene Beispieldaten",
+      "en": "Route editor without invented example data"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:34:26.718680+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-route-editor.png",
+    "originalSha256": "e3bec16a716d92f9cbf3cf03a75876f008cdce1004d741464f84afd65d1b6bb3",
+    "sha256": "c189507c312ed088422049efd329e5d5a75830129349f79d8dd3a9a97a368832",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-layers": {
+    "src": "/images/map-current-layers.webp",
+    "title": {
+      "de": "Zusätzliche Ebenen gezielt einblenden",
+      "en": "Selecting additional layers"
+    },
+    "caption": {
+      "de": "Aktuelle Ebenenarbeitsseite: Bootsposition, Wegpunkte und Route/Entwurf. AIS wird von diesem Dienststand ausdrücklich als nicht unterstützt angezeigt.",
+      "en": "Current layers workspace: boat position, waypoints and route/draft. AIS is explicitly shown as unsupported by this service state."
+    },
+    "alt": {
+      "de": "Zusätzliche Ebenen gezielt einblenden",
+      "en": "Selecting additional layers"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:35:58.495561+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-layers.png",
+    "originalSha256": "3955ada4871c12d9bd7cbd3af2eaf00dc703debe063bd85e870d73ef5d7b5cd7",
+    "sha256": "9f6da5a0bae653fe815744ba9fbedde8462423918b6499d777d5e6897f7621e0",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-objects": {
+    "src": "/images/map-current-objects.webp",
+    "title": {
+      "de": "Objektabfrage: konkrete offene Stelle",
+      "en": "Object query: a concrete remaining issue"
+    },
+    "caption": {
+      "de": "Die aktuelle Objektabfrage nach Antippen einer sichtbaren Tonne lieferte NO_CONFIRMED_PORTRAYAL statt Attributen. Der Fehler wird als beobachteter Stand gezeigt; keine erfundenen Objektinformationen.",
+      "en": "The current object query after tapping a visible buoy returned NO_CONFIRMED_PORTRAYAL rather than attributes. This shows the observed issue; object information has not been invented."
+    },
+    "alt": {
+      "de": "Objektabfrage: konkrete offene Stelle",
+      "en": "Object query: a concrete remaining issue"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:36:46.173499+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-objects.png",
+    "originalSha256": "870af3026e161a64f048e337f15bcf922620fd5b1f782fc2b9bf4ad09a225e1f",
+    "sha256": "60000d27881c58f54e17ab8f143671eb4f2037e6153f46cfab5d943e045a49fa",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-settings": {
+    "src": "/images/map-current-settings.webp",
+    "title": {
+      "de": "Einstellungen als Touch-Arbeitsseite",
+      "en": "Settings as a touch workspace"
+    },
+    "caption": {
+      "de": "Darstellung, Position, Anzeige und Kartenbestand in der installierten nativen MAP 110-App auf dem physischen Lumina.",
+      "en": "Appearance, position, display and chart library in the installed native MAP 110 app on the physical Lumina."
+    },
+    "alt": {
+      "de": "Einstellungen als Touch-Arbeitsseite",
+      "en": "Settings as a touch workspace"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:42:10.946006+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-settings.png",
+    "originalSha256": "629dc2d7afca81f926ed8a241c42ca0a4bd56b86ac149792830c78d74d262a53",
+    "sha256": "55f09c3324abcea9b4e8e0707d6564b34e6ab65fcf2aecc632a0d408b2881559",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
+  },
+  "map-current-library": {
+    "src": "/images/map-current-library.webp",
+    "title": {
+      "de": "Zusätzliche Karten importieren, Bestand erhalten",
+      "en": "Importing more charts while retaining the library"
+    },
+    "caption": {
+      "de": "Das eigene NOAA-Boston-Aufnahmepaket wurde über den normalen ZIP-Import hinzugefügt. Der vorhandene Südafrika-Bestand blieb erhalten und wurde nach der Aufnahme wieder ausgewählt.",
+      "en": "The NOAA Boston capture package was added through the regular ZIP import. The existing South Africa library was retained and selected again after capture."
+    },
+    "alt": {
+      "de": "Zusätzliche Karten importieren, Bestand erhalten",
+      "en": "Importing more charts while retaining the library"
+    },
+    "width": 2000,
+    "height": 1200,
+    "kind": "physical_device_current_native_capture",
+    "date": "2026-11-01",
+    "capturedAt": "2026-11-01T13:42:14.023713+00:00",
+    "device": "Lumina K706 · Android10 ·2000×1200",
+    "version": "MAP110 ·0.5.42-memory-budget-v8",
+    "dataSource": "NOAA S57 Boston US5BOSCC/CD/DC/DD with available updates, accessed2026-10-03; native local rendering; other telemetry labelled simulated/unavailable",
+    "sourceMode": "Physical Android screen capture, original app pixels; no compositing",
+    "sourceRelative": "device-captures/2026-11-01/lumina-map/map-current-library.png",
+    "originalSha256": "32adaf898a862e09791e943367d902f150752abf9fd8e0314f83de85e7fae30f",
+    "sha256": "c38cb454368fbc8912e9609b8236802964c8516d95730b853cab9ac09b7d6afa",
+    "rights": "Own UI capture; NOAA chart source attribution and terms retained. NOAA chart data is not relicensed as own artwork.",
+    "captureRole": "current-device"
   }
 }

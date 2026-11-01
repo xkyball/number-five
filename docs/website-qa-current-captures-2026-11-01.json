@@ -1,0 +1,170 @@
+{
+  "headless": true,
+  "browser": "149.0.7827.55",
+  "pages": [
+    {
+      "path": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/projects",
+      "status": 200
+    },
+    {
+      "path": "/de/story",
+      "status": 200
+    },
+    {
+      "path": "/de/platform",
+      "status": 200
+    },
+    {
+      "path": "/de/build",
+      "status": 200
+    },
+    {
+      "path": "/de/contribute",
+      "status": 200
+    },
+    {
+      "path": "/de/contact",
+      "status": 200
+    },
+    {
+      "path": "/de/sources",
+      "status": 200
+    },
+    {
+      "path": "/de/privacy",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/projects",
+      "status": 200
+    },
+    {
+      "path": "/en/story",
+      "status": 200
+    },
+    {
+      "path": "/en/platform",
+      "status": 200
+    },
+    {
+      "path": "/en/build",
+      "status": 200
+    },
+    {
+      "path": "/en/contribute",
+      "status": 200
+    },
+    {
+      "path": "/en/contact",
+      "status": 200
+    },
+    {
+      "path": "/en/sources",
+      "status": 200
+    },
+    {
+      "path": "/en/privacy",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/helm",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/audio",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/displays",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/maps",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/plotters",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/build",
+      "status": 200
+    }
+  ],
+  "checks": [
+    "5 native videos: manual playback, bilingual captions and downloadable sources",
+    "Language switch preserves matching project",
+    "Anonymous form confirmed server storage",
+    "Anonymous inbox API forbidden",
+    "Cross-origin writes forbidden",
+    "Owner login, read, complete and delete persisted; synthetic message removed",
+    "Mobile menu and keyboard focus work; reduced motion respected",
+    "Every application case-study hero and homepage hero resolves to current physical-device media; hardware print preparation remains separately labelled."
+  ],
+  "errors": [],
+  "status": "PASS",
+  "scope": "Current device media replacement · 2026-11-01",
+  "currentPhysicalScreenshots": 36,
+  "nativeVideos": 5,
+  "limits": [
+    "Native capture records identify unavailable library/queue and the observed chart object-query error.",
+    "Contact persistence and owner lifecycle exercised against isolated local D1; this is not a whole-boat qualification.",
+    "Screen recording cadence and automated gesture timing are not performance measurements."
+  ]
+}

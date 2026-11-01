@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+Zu sehen ist Lumina 1 mit HELM 206. Die Bedienung erfolgt auf dem anderen Gerät, Lumina 2.
+
+00:06.000 --> 00:12.000
+Auf Lumina 2 wird der Hauptregler einmal von −39 auf −40 dB gestellt.
+
+00:12.000 --> 00:20.000
+Auch dieser Empfangsclient zeigt jetzt −40 dB. Gateway und laufender Pi-DSP bestätigen denselben Wert.
+
+00:20.000 --> 00:26.000
+Auf dem anderen Gerät wird der ursprüngliche Wert −39 dB wiederhergestellt. Dieser Client folgt.
+
+00:26.000 --> 00:32.175
+Gemeinsamer Zustand bestätigt, ohne laufende Musik. Ungeschnitten und in Originalgeschwindigkeit; keine bildgenaue Synchronisations- oder Latenzmessung.

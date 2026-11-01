@@ -1,0 +1,66 @@
+{
+  "date": "2026-11-01T13:33:25.652142+00:00",
+  "target": "physical-pi",
+  "method": "Read-only gateway GETs and direct CamillaDSP Get* WebSocket requests over existing verified SSH connection",
+  "source": "no5-audio",
+  "sourceKind": "REAL",
+  "simulated": false,
+  "audioSource": {
+    "connected": false,
+    "active": false,
+    "name": null,
+    "quality": {
+      "status": "LOST",
+      "timestampEpochMs": 1793539393008,
+      "source": "no5-audio",
+      "simulated": false
+    }
+  },
+  "revision": 24678,
+  "authority": "CAMILLA_DSP_MASTER",
+  "soundAvailable": true,
+  "writable": true,
+  "presetRevision": 13,
+  "calibrationRevision": 1,
+  "configurationRevision": 1,
+  "configGeneration": "ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b",
+  "preset": {
+    "name": "No 5 - Immersive 4.1",
+    "eqEnabled": false,
+    "reserveDb": 12.0,
+    "room": {
+      "amount": 0.3353293538093567,
+      "size": 0.57485032081604
+    }
+  },
+  "dspVersion": "4.1.3",
+  "dspState": "Running",
+  "dspTitle": "No 5 - Immersive 4.1",
+  "dspFaders": [
+    {
+      "volume": -39.0,
+      "mute": false
+    },
+    {
+      "volume": 0.0,
+      "mute": false
+    },
+    {
+      "volume": 0.0,
+      "mute": false
+    },
+    {
+      "volume": 0.0,
+      "mute": false
+    },
+    {
+      "volume": 0.0,
+      "mute": false
+    }
+  ],
+  "directDspConfigSha256": "ef7281b4371f8e1c39ee0354e2d2c35a4262e75f62e58dd5cce659b3917a406b",
+  "media": {
+    "state": "STOPPED"
+  },
+  "claimLimit": "Network simulation label belongs to separate HELM telemetry. This audio source explicitly reports simulated=false; no acoustic calibration or actual music playback proved."
+}

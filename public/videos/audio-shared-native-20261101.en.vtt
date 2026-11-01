@@ -1,0 +1,16 @@
+WEBVTT
+
+00:00.000 --> 00:06.000
+You are watching Lumina 1 running HELM 206. Controls are operated on the other device, Lumina 2.
+
+00:06.000 --> 00:12.000
+On Lumina 2, the main fader is moved once from −39 to −40 dB.
+
+00:12.000 --> 00:20.000
+This receiving client also shows −40 dB. The gateway and running Pi DSP confirm the same value.
+
+00:20.000 --> 00:26.000
+The original −39 dB setting is restored on the other device. This client follows.
+
+00:26.000 --> 00:32.175
+Shared state confirmed without playing music. Uncut at original speed; not a frame-accurate synchronization or latency measurement.

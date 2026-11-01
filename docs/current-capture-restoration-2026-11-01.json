@@ -1,0 +1,21 @@
+{
+  "captureDate": "2026-11-01",
+  "map": {
+    "status": "PASS",
+    "original96CellSelectionRestored": true,
+    "cameraAndPreferencesRestored": true,
+    "addedNoaaPackage": "retained inactive; existing chart collection preserved"
+  },
+  "helmAndAudio": {
+    "status": "PASS",
+    "originalScreensAndThemesRestored": true,
+    "originalPresetRoomCalibrationAndDspConfigurationRestored": true,
+    "masterFaderSequenceDb": [
+      -39,
+      -40,
+      -39
+    ],
+    "allFadersRestored": true
+  },
+  "scope": "Native current capture and bounded control proof only; no application installation, firmware update or service repair."
+}

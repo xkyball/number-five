@@ -1,5 +1,95 @@
 [
   {
+    "id": "map-navigation-native-20261101",
+    "title": {
+      "de": "Die aktuelle Karte auf dem günstigen Display.",
+      "en": "The current chart on the affordable display."
+    },
+    "description": {
+      "de": "Knapp 45 Sekunden aus der installierten nativen MAP 110-App: Boston Harbour verschieben, hinein- und herauszoomen, um 45 Grad drehen, nach Norden zurückkehren und kurz die Ebenenarbeitsseite öffnen. Ungekürzte Originalgeschwindigkeit, ohne Musik.",
+      "en": "Almost 45 seconds from the installed native MAP 110 app: pan Boston Harbour, zoom in and out, rotate 45 degrees, return north up and briefly open the Layers workspace. Uncut original speed, without music."
+    },
+    "src": "/videos/map-navigation-native-20261101.mp4",
+    "poster": "/videos/map-navigation-native-20261101-poster.jpg",
+    "durationSeconds": 44.706856,
+    "captions": {
+      "de": "/videos/map-navigation-native-20261101.de.vtt",
+      "en": "/videos/map-navigation-native-20261101.en.vtt"
+    },
+    "date": "2026-11-01",
+    "device": "Lumina K706 · Android 10 · 2000×1200 (recording: 1280×768)",
+    "version": "MAP 110 · 0.5.42-memory-budget-v8",
+    "dataSource": "Four NOAA Boston S57 cells (US5BOSCC/CD/DC/DD), accessed 2026-10-03, imported through the installed app ZIP workflow. Chart pixels rendered locally. Other header telemetry is labelled simulated/unavailable; current device position lies outside the chart area.",
+    "kind": "physical-device-native-recording",
+    "speed": 1,
+    "limitations": {
+      "de": "Vier vorhandene NOAA-Boston-Zellen als Darstellungsbeispiel, kein aktueller nautischer Kartendienst und keine Bootsabnahme. Die Berührungseingaben wurden per ADB automatisiert, darunter eine schrittweise Zweifingerdrehung, deren automatisierte Eingabe hier rund 19 Sekunden dauert. Aufzeichnungsrate und Eingabeablauf sind keine Messung von App-Bildrate, GPU-Zeit oder Displaylatenz. Die Objektabfrage lieferte separat NO_CONFIRMED_PORTRAYAL.",
+      "en": "Four existing NOAA Boston cells as a rendering example, not a current nautical chart service or acceptance aboard a boat. Touch input was automated through ADB, including a stepwise two-finger rotation whose automated input takes about 19 seconds here. Recording rate and input sequence do not measure app frame rate, GPU time or display latency. A separate object query returned NO_CONFIRMED_PORTRAYAL."
+    },
+    "bytes": 3067355,
+    "sha256": "6d2989eb5952c61c15bb141d865fb4e634943566fcda7106961c2b8c2b9f113c"
+  },
+  {
+    "id": "audio-shared-native-20261101",
+    "title": {
+      "de": "Zwei Geräte. Ein bestätigter Lautstärkewert.",
+      "en": "Two devices. One confirmed volume setting."
+    },
+    "description": {
+      "de": "32 Sekunden native Aufnahme des Empfangsclients Lumina 1: Auf Lumina 2 wird der Hauptregler von −39 auf −40 dB und wieder zurückgestellt. Beide Geräte sowie Gateway und Pi-DSP zeigen denselben Zustand.",
+      "en": "32 seconds of native recording on receiving client Lumina 1: the main fader is moved from −39 to −40 dB and restored on Lumina 2. Both devices, the gateway and Pi DSP show the same state."
+    },
+    "src": "/videos/audio-shared-native-20261101.mp4",
+    "poster": "/videos/audio-shared-native-20261101-poster.jpg",
+    "durationSeconds": 32.175678,
+    "captions": {
+      "de": "/videos/audio-shared-native-20261101.de.vtt",
+      "en": "/videos/audio-shared-native-20261101.en.vtt"
+    },
+    "date": "2026-11-01",
+    "device": "Receiving Lumina 1 K706 · Android10 · 2000 × 1200 (recording1280 × 768); controller Lumina2 K706",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls on both devices",
+    "dataSource": "Physical Raspberry Pi gateway REAL/simulated=false, CAMILLA_DSP_MASTER. Native control on Lumina2, native recording on Lumina1. Gateway revisions24763→24765→24767 and direct CamillaDSP readbacks confirm −39→−40→−39dB. Separate boat telemetry labelled simulation; playback source not connected.",
+    "kind": "physical-device-native-recording",
+    "speed": 1,
+    "limitations": {
+      "de": "Bestätigt den gemeinsamen Hauptreglerzustand in diesem Aufbau; keine Aussage über bildgenaue Synchronisation oder gemessene Verzögerung. Kein Videoschnitt, keine laufende Musik und keine akustische Messung. Andere Bootswerte bleiben als Simulation gekennzeichnet.",
+      "en": "Confirms the shared main-fader state in this setup; no claim of frame-accurate synchronization or measured latency. No montage, music playback or acoustic measurement. Other boat values remain labelled as simulated."
+    },
+    "bytes": 1071574,
+    "sha256": "420269a725bfd545a40de3920c8467d852f2fcb265cff7ab1c11bd18c72a1f06"
+  },
+  {
+    "id": "audio-controls-native-20261101",
+    "title": {
+      "de": "Klang, Raum und Hörplatz auf dem Gerät",
+      "en": "Sound, room and listening position on the device"
+    },
+    "description": {
+      "de": "31 Sekunden aus der aktuellen nativen HELM-App: vorhandene Klangpresets, EQ, Raumansicht und Lautsprecherpositionen. Die realen Pi-Klangdaten wurden anschließend unabhängig mit dem laufenden DSP abgeglichen.",
+      "en": "31 seconds from the current native HELM app: existing sound presets, EQ, room view and speaker positions. Real Pi sound settings were independently checked against the running DSP."
+    },
+    "src": "/videos/audio-controls-native-20261101.mp4",
+    "poster": "/videos/audio-controls-native-20261101-poster.jpg",
+    "durationSeconds": 30.716733,
+    "captions": {
+      "de": "/videos/audio-controls-native-20261101.de.vtt",
+      "en": "/videos/audio-controls-native-20261101.en.vtt"
+    },
+    "date": "2026-11-01",
+    "device": "Lumina K706 · Android 10 · 2000 × 1200 (recording: 1280 × 768)",
+    "version": "HELM 206 · 0.8.134-sonar-start-depth-controls",
+    "dataSource": "Physical Pi CamillaDSP 4.1.3; sourceKind REAL, simulated false; preset and room values read-only verified against direct DSP configuration. Separate HELM telemetry is labelled simulation. No playback source connected.",
+    "kind": "physical-device-native-recording",
+    "speed": 1,
+    "limitations": {
+      "de": "Keine Wiedergabequelle verbunden; keine Musik, künstlichen Spektren oder Änderungen der Klangwerte. Der Bootsheader ist als Simulation gekennzeichnet. Diese Vorführung zeigt die Bedienung auf einem Client und keine Zweiclient-Synchronisation, akustische Abnahme oder GPU-Leistungsmessung.",
+      "en": "No playback source connected; no music, artificial spectra or changed sound settings. The boat header is labelled as simulated. This demonstrates operation on one client, not two-client synchronization, acoustic acceptance or GPU performance."
+    },
+    "bytes": 481633,
+    "sha256": "b633ec3fd632f51cb5f2383676e19bbbb3c1b3e5c8a117b3cdb3ca0e39aba803"
+  },
+  {
     "id": "sonar-native-20261101",
     "title": {
       "de": "Eigene Echos. Auf dem echten Display.",
@@ -26,9 +116,8 @@
       "de": "Versuchsaufbau, keine Bootsabnahme und keine absolute Tiefenkalibrierung. Temperatur wird nicht gezeigt. Die übrige Kopfzeilen-Telemetrie ist als Simulation gekennzeichnet. Aufzeichnungsrate ist keine App- oder GPU-Messung.",
       "en": "Test setup, not acceptance aboard a boat or absolute depth calibration. Temperature is not shown. Other header telemetry is labelled as simulated. Recording frame rate is not an app or GPU measurement."
     },
-    "sha256": "e3e9778c8c73c2f8d40dc2275b731d475293332a4945218d44a1760571c75721",
     "bytes": 5215908,
-    "encodingNote": "Native screenrecord, variable frame rate; faststart remux only, original packet timing preserved. Recording cadence is not app FPS."
+    "sha256": "e3e9778c8c73c2f8d40dc2275b731d475293332a4945218d44a1760571c75721"
   },
   {
     "id": "map-workspaces-native-20261101",
@@ -57,8 +146,7 @@
       "de": "Ergänzende Bedienvorführung; kein Verschiebe-, Zoom-, Rotations- oder Geschwindigkeitsnachweis der Karte. Die schematische Stilvorschau ist keine gerenderte Seekarte. Keine Einstellungen wurden angewendet.",
       "en": "Supplementary UI tour; not proof of chart panning, zooming, rotation or rendering speed. The schematic style preview is not a rendered nautical chart. No settings were applied."
     },
-    "sha256": "c7c3a8027f01c52b5078e27fa0fa906fd27d3360e9abe881d26e16e5268d80c2",
     "bytes": 641326,
-    "encodingNote": "Native screenrecord, variable frame rate; faststart remux only, original packet timing preserved. Recording cadence is not app FPS."
+    "sha256": "c7c3a8027f01c52b5078e27fa0fa906fd27d3360e9abe881d26e16e5268d80c2"
   }
 ]
