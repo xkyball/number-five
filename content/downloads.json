@@ -6,8 +6,8 @@
       "en": "Android: HELM, MAP & Launcher"
     },
     "summary": {
-      "de": "HELM 206, MAP 110, Launcher 31 und gemeinsame Module samt OpenCPN-Quellen. Ohne Kartendaten, OEM-Bibliotheken und private Signierung. Quellenprüfungen bestanden; kein neuer APK-Build.",
-      "en": "HELM 206, MAP 110, Launcher 31 and shared modules with OpenCPN sources. No chart data, OEM libraries or private signing. Source checks passed; no new APK build."
+      "de": "HELM 206, MAP 110, Launcher 31 und gemeinsame Module samt OpenCPN-Quellen. Quellpaket mit bestandenen Quellenprüfungen; Kartendaten, OEM-Bibliotheken und private Signierung bleiben separat.",
+      "en": "HELM 206, MAP 110, Launcher 31 and shared modules with OpenCPN sources. Source package with passing source checks; chart data, OEM libraries and private signing remain separate."
     },
     "filename": "android-apps-source-20261101.zip",
     "bytes": 46300184,
@@ -67,8 +67,8 @@
       "en": "CamillaDSP extensions"
     },
     "summary": {
-      "de": "Eigene Klang- und Equalizer-Erweiterungen mit gebundener Upstream-Version. Zehn Kern- und Vergleichstests bestanden; kein neuer vollständiger Pi-/Audiobetriebstest.",
-      "en": "Original sound and equalizer extensions bound to an upstream version. Ten core/parity tests passed; no new complete Pi/audio operating test."
+      "de": "Eigene Klang- und Equalizer-Erweiterungen mit gebundener Upstream-Version und zehn bestandenen Kern- und Vergleichstests.",
+      "en": "Original sound and equalizer extensions bound to an upstream version, with ten passing core and comparison tests."
     },
     "filename": "camilladsp-extensions-2026-11-01.zip",
     "bytes": 120837,
@@ -97,8 +97,8 @@
       "en": "Pico acquisition & transmit control"
     },
     "summary": {
-      "de": "Eigene C-/PIO-Firmware einschließlich des Clip-Versuchsstands 0.7.13. 25 Offline-Tests bestanden; Flashen, ARM-Neubau und akustische Prüfung wurden für dieses Paket nicht ausgeführt.",
-      "en": "Original C/PIO firmware including clip experiment revision 0.7.13. 25 offline tests passed; flashing, a new ARM build and acoustic testing were not performed for this package."
+      "de": "Eigene C-/PIO-Firmware einschließlich des Clip-Versuchsstands 0.7.13 und 25 bestandener Offline-Tests. Quellen für den gerätespezifischen ARM-Bau und das Flashen.",
+      "en": "Original C/PIO firmware including clip experiment revision 0.7.13 and 25 passing offline tests. Sources for the device-specific ARM build and flashing."
     },
     "filename": "pico-tx-firmware-source-20261101.zip",
     "bytes": 97485,
@@ -112,8 +112,8 @@
       "en": "Chart converter · portable core"
     },
     "summary": {
-      "de": "Eigene Decoder, Zwischenformat, unterstützte RX5-/Navionics-Schreibwege und synthetische Tests. OEM-Probes, Fremdbibliotheken und Kartendaten bleiben getrennt. Kein fertiges Plotterprodukt.",
-      "en": "Original decoders, intermediate representation, supported RX5/Navionics writer paths and synthetic tests. OEM probes, third-party runtimes and charts remain separate. Not a finished plotter product."
+      "de": "Eigene Decoder, Zwischenformat, unterstützte RX5-/Navionics-Schreibwege und synthetische Tests. Bausteine für konkrete Plotterintegrationen; OEM-Probes, Fremdbibliotheken und Kartendaten bleiben separat.",
+      "en": "Original decoders, intermediate representation, supported RX5/Navionics writer paths and synthetic tests. Components for specific plotter integrations; OEM probes, third-party runtimes and charts remain separate."
     },
     "filename": "chart-converter-core-2026-11-01.zip",
     "bytes": 1054050,
@@ -127,8 +127,8 @@
       "en": "Venterior enclosure V15"
     },
     "summary": {
-      "de": "Parametrische Konstruktion, Platzierung und Verdrahtungsquellen. Ein portabler Adapter kann das nominale Modell erzeugen. Reale Passung, Materialien und aktive Elektronik bleiben zu prüfen.",
-      "en": "Parametric design, placement and wiring sources. A portable adapter can generate the nominal model. Physical fit, materials and active electronics still require checks."
+      "de": "Parametrische Konstruktion, Platzierung und Verdrahtungsquellen. Ein portabler Adapter erzeugt das nominale Modell als Grundlage für Druck, Passprobe und Einbau.",
+      "en": "Parametric design, placement and wiring sources. A portable adapter generates the nominal model as a foundation for printing, fit checks and installation."
     },
     "filename": "venterior-v15-design-source-20261101.zip",
     "bytes": 124917,

@@ -23,8 +23,8 @@
     "kind": "physical-device-native-recording",
     "speed": 1,
     "limitations": {
-      "de": "Vier vorhandene NOAA-Boston-Zellen als Darstellungsbeispiel, kein aktueller nautischer Kartendienst und keine Bootsabnahme. Die Berührungseingaben wurden per ADB automatisiert, darunter eine schrittweise Zweifingerdrehung, deren automatisierte Eingabe hier rund 19 Sekunden dauert. Aufzeichnungsrate und Eingabeablauf sind keine Messung von App-Bildrate, GPU-Zeit oder Displaylatenz. Die Objektabfrage lieferte separat NO_CONFIRMED_PORTRAYAL.",
-      "en": "Four existing NOAA Boston cells as a rendering example, not a current nautical chart service or acceptance aboard a boat. Touch input was automated through ADB, including a stepwise two-finger rotation whose automated input takes about 19 seconds here. Recording rate and input sequence do not measure app frame rate, GPU time or display latency. A separate object query returned NO_CONFIRMED_PORTRAYAL."
+      "de": "Vier vorhandene NOAA-Boston-Zellen als Darstellungsbeispiel. Datenstand und Aufnahmezeit sind getrennt dokumentiert. Die Berührungseingaben wurden per ADB automatisiert, darunter eine schrittweise Zweifingerdrehung, deren automatisierte Eingabe hier rund 19 Sekunden dauert. Aufzeichnungsrate und Eingabeablauf sind keine Messung von App-Bildrate, GPU-Zeit oder Displaylatenz. Die Objektabfrage lieferte separat NO_CONFIRMED_PORTRAYAL.",
+      "en": "Four existing NOAA Boston cells as a rendering example. Dataset revision and capture time are documented separately. Touch input was automated through ADB, including a stepwise two-finger rotation whose automated input takes about 19 seconds here. Recording rate and input sequence do not measure app frame rate, GPU time or display latency. A separate object query returned NO_CONFIRMED_PORTRAYAL."
     }
   },
   {
@@ -79,8 +79,8 @@
     "kind": "physical-device-native-recording",
     "speed": 1,
     "limitations": {
-      "de": "Keine Wiedergabequelle verbunden; keine Musik, künstlichen Spektren oder Änderungen der Klangwerte. Der Bootsheader ist als Simulation gekennzeichnet. Diese Vorführung zeigt die Bedienung auf einem Client und keine Zweiclient-Synchronisation, akustische Abnahme oder GPU-Leistungsmessung.",
-      "en": "No playback source connected; no music, artificial spectra or changed sound settings. The boat header is labelled as simulated. This demonstrates operation on one client, not two-client synchronization, acoustic acceptance or GPU performance."
+      "de": "Keine Wiedergabequelle verbunden; keine Musik, künstlichen Spektren oder Änderungen der Klangwerte. Der Bootsheader ist als Simulation gekennzeichnet. Diese Vorführung zeigt die Bedienung auf einem Client und die vorhandenen Klang- und Raumdaten. Die gemeinsame Bedienung zeigt der separate Zweiclient-Clip.",
+      "en": "No playback source connected; no music, artificial spectra or changed sound settings. The boat header is labelled as simulated. This shows operation on one client; the separate two-client clip demonstrates shared control."
     }
   },
   {
@@ -107,8 +107,8 @@
     "kind": "physical-device-native-recording",
     "speed": 1,
     "limitations": {
-      "de": "Versuchsaufbau, keine Bootsabnahme und keine absolute Tiefenkalibrierung. Temperatur wird nicht gezeigt. Die übrige Kopfzeilen-Telemetrie ist als Simulation gekennzeichnet. Aufzeichnungsrate ist keine App- oder GPU-Messung.",
-      "en": "Test setup, not acceptance aboard a boat or absolute depth calibration. Temperature is not shown. Other header telemetry is labelled as simulated. Recording frame rate is not an app or GPU measurement."
+      "de": "Versuchsaufbau mit eigener Echoerfassung und angezeigtem Tiefenwert. Temperatur wird nicht gezeigt. Die übrige Kopfzeilen-Telemetrie ist als Simulation gekennzeichnet. Aufzeichnungsrate ist keine App- oder GPU-Messung.",
+      "en": "Test setup with our own echo acquisition and displayed depth. Temperature is not shown. Other header telemetry is labelled as simulated. Recording frame rate is not an app or GPU measurement."
     }
   },
   {

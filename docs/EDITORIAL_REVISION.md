@@ -15,3 +15,7 @@ Contact routes, inbox authentication and D1 schema are unchanged. Source snapsho
 36 new physical-device stills replace historical primary application imagery. Current device galleries and explicitly historical expandable galleries are now separate. Native chart images use an ordinary import of the existing NOAA Boston package in MAP110; the original96-cell collection, camera and preferences are restored. The additional NOAA package remains inactive to avoid an unrelated deletion lifecycle test.
 
 HELM206 Audio EQ, room, speaker positions, presets and routing use actual Pi sound models, independently matched against CamillaDSP. Missing music-source metadata blocks library and queue opening, not sound controls. The observed MAP object-query error is shown rather than fabricated attributes. Device identities, data sources, timestamps and hashes are in `current-device-captures-2026-11-01.json`; source confirmation is in `current-audio-source-proof-2026-11-01.json`.
+
+## Current philosophy revision · 1 November 2026
+
+The publication now leads with usable technology that grows through use. The philosophy is stated in Christoph’s first-person voice on `/de/philosophy` and `/en/philosophy`. Website copy, Q&A, repository descriptions and community texts follow that approach. Earlier reports above remain historical records. Original data, archived test outcomes, source packages and licence terms retain their original scope.

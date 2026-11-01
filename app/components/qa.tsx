@@ -16,7 +16,7 @@ export function QaPage({lang}:{lang:Lang}) {
     <header className="page-intro wrap"><a className="breadcrumb" href={`/${lang}`}>Number Five <span>/</span></a>
       <p className="eyebrow">Q&A / {t(lang,'FRAGEN AUS DER COMMUNITY','QUESTIONS FROM THE COMMUNITY')}</p>
       <h1>{t(lang,'Fragen mit Gegenwind.','Questions worth asking.')}</h1>
-      <p className="page-deck">{t(lang,'Gute Ideen halten Gegenfragen aus. Hier erklären wir unsere Entscheidungen, nehmen berechtigte Einwände auf und sagen, wo noch Arbeit vor uns liegt.','Good ideas can stand up to questions. Here we explain our decisions, take valid concerns seriously and identify the work still ahead.')}</p>
+      <p className="page-deck">{t(lang,'Gute Ideen wachsen durch Gegenfragen. Hier erklären wir unsere Entscheidungen, greifen Rückmeldungen auf und zeigen, wie wir daraus weiterbauen.','Good ideas grow through questions. Here we explain our decisions, take up feedback and show how we build on it.')}</p>
     </header>
     <div className="wrap qa-layout">
       <aside className="qa-guide"><p className="eyebrow">{t(lang,'AM WERKSTATTTISCH','AT THE WORKBENCH')}</p>
@@ -29,7 +29,7 @@ export function QaPage({lang}:{lang:Lang}) {
         <h2 id={`${entry.id}-title`}>{entry.question[lang]}</h2>
         <div className="qa-short-answer"><p className="eyebrow">{t(lang,'DIE KURZE ANTWORT','THE SHORT ANSWER')}</p><p>{entry.summary[lang]}</p></div>
         <div className="prose qa-answer">{entry.sections.map((section,i)=><section key={i}><h3>{section.heading[lang]}</h3><p>{section.body[lang]}</p></section>)}</div>
-        <div className="qa-consequence"><h3>{t(lang,'Was wir daraus machen','What we do with it')}</h3><p>{entry.action[lang]}</p><h3>{t(lang,'Was offen bleibt','What remains open')}</h3><p>{entry.open[lang]}</p></div>
+        <div className="qa-consequence"><h3>{t(lang,'Was wir daraus machen','What we do with it')}</h3><p>{entry.action[lang]}</p><h3>{t(lang,'So bauen wir weiter','How we build further')}</h3><p>{entry.open[lang]}</p></div>
         <nav className="qa-related" aria-label={t(lang,'Zum Thema weiterlesen','Read more on this topic')}>{entry.links.map(link=><a className="text-link" key={link.path} href={`/${lang}/${link.path}`}>{link.label[lang]} <Arrow/></a>)}</nav>
       </article>)}</div>
     </div>

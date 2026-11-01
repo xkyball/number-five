@@ -4,7 +4,11 @@
 
 Project website: https://no5.christophhoffmann.net/de · [English](https://no5.christophhoffmann.net/en)
 
-Number Five connects native Android instruments, charts, audio, a Raspberry Pi gateway, experimental sonar and practical hardware builds. This is a personal development project by Christoph, built with substantial AI assistance and on existing open-source foundations. It is still evolving; a source package is not a completed on-water system acceptance.
+Number Five verbindet native Android-Instrumente, Karten, Audio, Pi-Dienste, Sonar und eigene Hardware zu einem offenen Smart-Boat-Baukasten. Eine funktionierende Version ist ein Ergebnis und der Anfang der nächsten Verbesserung. Erfahrungen aus Nutzung, Einbau und Fertigung fließen in die gemeinsamen Quellen zurück. Entwickelt mit KI-Unterstützung und auf den ausdrücklich genannten offenen Grundlagen.
+
+Number Five connects native Android instruments, charts, audio, Pi services, sonar and custom hardware in an open Smart-Boat building kit. A working version is an achievement and the starting point for the next improvement. Experience from use, installation and fabrication feeds back into the shared sources. Developed with AI assistance and on the credited open foundations.
+
+[Philosophie](https://no5.christophhoffmann.net/de/philosophy) · [Philosophy](https://no5.christophhoffmann.net/en/philosophy)
 
 ## What is here
 

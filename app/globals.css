@@ -50,6 +50,22 @@
 .qa-answer p,.qa-consequence p{font-size:16px;line-height:1.9;color:var(--muted)}
 .qa-consequence{padding-block:30px 6px;border-top:1px solid var(--line)}
 .qa-consequence p{margin-bottom:28px}
+.philosophy-teaser{padding-block:45px;border-block:1px solid var(--line);margin-block:15px 45px}
+.philosophy-teaser h2{font-size:clamp(30px,3.2vw,44px);max-width:950px;margin-block:16px 20px}
+.philosophy-teaser>p:not(.eyebrow){max-width:820px;color:var(--muted);font-size:19px;line-height:1.8;margin-bottom:23px}
+.philosophy-layout{display:grid;grid-template-columns:260px minmax(0,820px);gap:85px;align-items:start;padding-bottom:90px}
+.philosophy-layout>aside{position:sticky;top:35px}
+.philosophy-layout nav{display:grid;margin-top:20px}
+.philosophy-layout nav a{display:flex;gap:16px;padding-block:16px;border-bottom:1px solid var(--line);font-size:14px;line-height:1.6}
+.philosophy-layout nav a span{font-size:12px;color:var(--muted);padding-top:2px}
+.philosophy-body{max-width:none}
+.philosophy-body .philosophy-intro{font-size:22px;line-height:1.85;margin:0 0 48px;color:var(--ink)}
+.philosophy-body>section{padding-block:32px;border-top:1px solid var(--line);scroll-margin-top:35px}
+.philosophy-body>section>h2{font-size:34px;line-height:1.18;margin-block:17px 24px}
+.philosophy-body>section>p:not(.eyebrow){font-size:17px;line-height:1.9;color:var(--muted);margin-block:18px}
+@media(min-width:981px) and (max-width:1160px){.site-header{position:relative}.site-header>nav{display:none}.mobile-menu{display:block;font-size:13px}.mobile-menu summary{cursor:pointer;list-style:none;display:flex;gap:10px;align-items:center;min-height:44px}.mobile-menu nav{position:absolute;top:100%;left:0;right:0;z-index:15;background:var(--paper);border-bottom:1px solid var(--line);padding:15px 32px 24px;display:grid;gap:7px}.mobile-menu nav a{padding-block:10px}}
+@media(max-width:1100px){.philosophy-layout{grid-template-columns:220px minmax(0,1fr);gap:45px}}
+@media(max-width:760px){.philosophy-layout{grid-template-columns:1fr;gap:32px;padding-bottom:45px}.philosophy-layout>aside{position:static}.philosophy-body .philosophy-intro{font-size:19px;margin-bottom:30px}.philosophy-body>section>h2{font-size:29px}.philosophy-body>section>p:not(.eyebrow){font-size:16px}.philosophy-teaser{padding-block:32px;margin-bottom:30px}.philosophy-teaser>p:not(.eyebrow){font-size:17px}}
 .qa-related{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
 .qa-invitation{padding-block:50px 80px;border-top:1px solid var(--line)}
 .qa-invitation h2{margin-block:18px 24px;max-width:850px}

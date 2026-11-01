@@ -113,8 +113,8 @@
       "en": "Custom chart rendering · Cream"
     },
     "caption": {
-      "de": "Boston aus NOAA-ENC-Daten, gerendert für die Kartenstudie Revision 05. Experimentelle Darstellung auf dem Entwicklungsrechner; keine fertige Navigationsabnahme.",
-      "en": "Boston from NOAA ENC data, rendered for chart study revision 05. Experimental rendering on the development host; not a completed navigation acceptance."
+      "de": "Boston aus NOAA-ENC-Daten, gerendert für die Kartenstudie Revision 05. Darstellungsstudie auf dem Entwicklungsrechner.",
+      "en": "Boston from NOAA ENC data, rendered for chart study revision 05. Rendering study on the development host."
     },
     "width": 2400,
     "height": 1440,
@@ -365,8 +365,8 @@
       "en": "Early red-night chart study"
     },
     "caption": {
-      "de": "Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, keine aktuelle Geräteaufnahme und keine Navigationsabnahme.",
-      "en": "Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, not a current device capture or navigation acceptance."
+      "de": "Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, historischer Entwicklungsstand.",
+      "en": "Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, historical development revision."
     },
     "width": 2400,
     "height": 1440,
@@ -374,8 +374,8 @@
     "date": "2026-10-06",
     "sha256": "b678f2831faa63e0d4dbc30adc4d27e1da4add9e7d10848ae8dde8b6b43b5393",
     "alt": {
-      "de": "Frühe Rotnacht-Kartenstudie – Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, keine aktuelle Geräteaufnahme und keine Navigationsabnahme.",
-      "en": "Early red-night chart study – Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, not a current device capture or navigation acceptance."
+      "de": "Frühe Rotnacht-Kartenstudie – Boston aus vorhandenen NOAA-ENC-Daten in der Redshore-Studie. Echtes GLES-Rendering auf dem Entwicklungsrechner im Oktober, historischer Entwicklungsstand.",
+      "en": "Early red-night chart study – Boston from the existing NOAA ENC dataset in the Redshore study. Actual GLES rendering on the development host in October, historical development revision."
     },
     "version": "chart-styles revision 03 / Redshore",
     "sourceRelative": "no-apps/map/studies/chart-styles/revision-03/no5-redshore.png",
@@ -919,8 +919,8 @@
       "en": "Align speaker delays"
     },
     "caption": {
-      "de": "Die aktuelle native Lautsprecherseite zeigt vorhandene Geometrie und abgeleitete Laufzeiten. Zweidimensionale Näherung; keine neue Einmessung oder akustische Abnahme.",
-      "en": "The current native speaker page shows existing geometry and derived delays. A two-dimensional approximation; not a new measurement or acoustic acceptance test."
+      "de": "Die aktuelle native Lautsprecherseite zeigt vorhandene Geometrie und abgeleitete Laufzeiten. Zweidimensionale Näherung; Geometrie und abgeleitete Laufzeiten aus dem vorhandenen Profil.",
+      "en": "The current native speaker page shows existing geometry and derived delays. Two-dimensional geometry and derived delays from the existing profile."
     },
     "alt": {
       "de": "Laufzeit und Lautsprecher abgleichen",
@@ -1309,8 +1309,8 @@
       "en": "Current echoes and A-scope"
     },
     "caption": {
-      "de": "Frische Geräteaufnahme: laufende eigene Echos, bestätigte Tiefenanzeige 1,07 m und A-Scope. Versuchsaufbau; keine absolute Kalibrierung oder Bootsabnahme.",
-      "en": "Fresh device capture: live own-source echoes, confirmed displayed depth 1.07 m and A-scope. Test setup; no absolute calibration or boat acceptance."
+      "de": "Frische Geräteaufnahme: laufende eigene Echos, bestätigte Tiefenanzeige 1,07 m und A-Scope. Tiefe als Anzeige des Versuchsaufbaus.",
+      "en": "Fresh device capture: live own-source echoes, confirmed displayed depth 1.07 m and A-scope. Depth is the reading from the test setup."
     },
     "alt": {
       "de": "Aktuelle Echos und A-Scope",

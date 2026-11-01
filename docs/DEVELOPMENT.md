@@ -35,7 +35,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ## Validation
 
-`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises 38 bilingual pages, images, the native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
+`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises 40 bilingual pages, images, the native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
 
 `outputs/` contains ignored local QA captures and logs. The public QA report identifies performed checks and limits.
 
@@ -46,3 +46,7 @@ This checkout's `.openai/hosting.json` identifies the actual Sites project. Pres
 The public GitHub repository contains the complete reviewed source snapshots, including large CAD files. Its history is too large for the Sites source service. Publication therefore uses a separate, smaller checkout, currently `../number-five-site`, with its own Sites Git history. It contains the same website files and ten small download archives; of `releases/`, it retains only `manifest.json`, `checks.json` and `README.md`. The large Android archive is a GitHub release asset. The source snapshots remain available in GitHub and the downloadable packages.
 
 Apply website changes to the public repository and synchronize those website files to the publication checkout, including deletions. Do not copy `.git`, credentials, runtime state, generated outputs, `node_modules` or the large raw source snapshots. Run the installed Sites workflow from the publication checkout to check, build/package, push its exact source, save and deploy. Do not push the complete public repository history to the Sites source service. Retain both histories; neither repository replaces the other.
+
+## Editorial philosophy · 1 November 2026
+
+The current publication describes an open Smart-Boat building kit. A useful version is a result and a basis for improvement. The paired `content/philosophy.json` explains Christoph’s approach in the first person. Avoid global product-readiness disclaimers; describe present functions and specific next improvements. Keep actual measurements, capture conditions, simulated data labels, reproducible faults and licence terms precise. Update and recovery distribution is an architectural direction supported by separate services, device profiles and recovery recipes; this editorial change does not install a remote-update system. Preserve original technical reports and historical revisions.

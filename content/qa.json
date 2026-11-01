@@ -6,50 +6,90 @@
   "entries": [
     {
       "id": "why-an-open-system",
-      "character": { "de": "Donald Duck", "en": "Donald Duck" },
+      "character": {
+        "de": "Donald Duck",
+        "en": "Donald Duck"
+      },
       "question": {
         "de": "Meine vorhandene Bootselektronik reicht mir. Warum brauche ich eine Alternative – und wie zuverlässig ist ein selbst aufgebautes System?",
         "en": "My existing marine electronics do everything I need. Why would I want an alternative—and how reliable is a system I assemble myself?"
       },
       "summary": {
-        "de": "Wenn deine Ausstattung deine Anforderungen erfüllt, ist das gut. Number Five bietet eine offene Alternative für Menschen, die Geräte, Bedienung und Erweiterungen selbst bestimmen möchten. Selbst bauen können heißt dabei nicht, alles selbst löten zu müssen.",
-        "en": "If your equipment meets your needs, that is a good outcome. Number Five offers an open alternative for people who want to choose their devices, controls and extensions. Being able to build it yourself does not mean having to solder everything yourself."
+        "de": "Wenn deine Ausstattung zu dir passt, ist das gut. Ich möchte mit Number Five die Freiheit schaffen, Geräte, Bedienung und Erweiterungen selbst zu wählen. Eine funktionierende Version ist für mich ein Ergebnis – und die Grundlage für die nächste Verbesserung.",
+        "en": "If your equipment suits you, that is a good outcome. With Number Five I want the freedom to choose devices, controls and extensions. To me, a working version is an achievement—and the foundation for the next improvement."
       },
       "sections": [
         {
-          "heading": { "de": "Andere Anforderungen sind kein Fehler.", "en": "Different needs are valid." },
+          "heading": {
+            "de": "Du entscheidest, was du brauchst.",
+            "en": "You decide what you need."
+          },
           "body": {
-            "de": "Aus „mir reicht mein System“ folgt nicht „niemand braucht eine Alternative“. Vielleicht möchtest du einen weiteren Bedienplatz, eine andere Kartenansicht oder einen eigenen Regler. Vielleicht willst du vorhandene Geräte weiterverwenden. Der Baukasten soll solche Entscheidungen ermöglichen, ohne jede Erweiterung an einen einzigen Systemanbieter zu binden. Das verlangt jeweils passende Schnittstellen und eine konkrete Integration. Es ist kein Versprechen, dass heute jedes Gerät einfach funktioniert.",
-            "en": "“My system is enough for me” does not mean “nobody needs an alternative”. You may want another control position, a different chart view or a custom control. You may want to keep existing equipment. The building kit aims to support these choices without tying every extension to a single system supplier. Each case still needs suitable interfaces and a specific integration. This is not a promise that every device works today."
+            "de": "Ein weiterer Bedienplatz, eine eigene Kartenansicht oder ein zusätzlicher Regler: Andere Anforderungen sind ein guter Grund, etwas anders zu bauen. Gemeinsame Dienste und Schnittstellen geben solchen Ideen einen Anschluss. Du kannst einzelne Bausteine nutzen und vorhandene Geräte weiterverwenden.",
+            "en": "Another control position, your own chart view or an extra control: different needs are a good reason to build differently. Shared services and interfaces give those ideas somewhere to connect. You can use individual components and keep existing equipment."
           }
         },
         {
-          "heading": { "de": "Offen bauen heißt auch: bauen lassen.", "en": "Open designs can also be built for you." },
+          "heading": {
+            "de": "Selbst bauen können heißt auch: bauen lassen.",
+            "en": "Being able to build it also means having it built."
+          },
           "body": {
-            "de": "Offene Schaltungen und Fertigungsunterlagen erlauben unterschiedliche Wege: selbst aufbauen, Leiterplatten fertigen und bestücken lassen oder einen Fachbetrieb mit Aufbau und Einbau beauftragen. Was davon für einen bestimmten Baustein schon möglich ist, hängt von dessen Unterlagen und Entwicklungsstand ab. Unsere Quellen sind eine Grundlage dafür; sie sind noch kein vollständig bestellbares Gesamtpaket. Wer Fertigung oder Einbau anbieten möchte, kann genau hier mitarbeiten.",
-            "en": "Open circuits and fabrication documents support different approaches: assemble it yourself, have circuit boards manufactured and populated, or commission a specialist to build and install it. Which options are already practical for a particular component depends on its documentation and development stage. Our sources provide a foundation; they are not yet a complete system you can order. People who want to offer fabrication or installation can contribute here."
+            "de": "Für eigene Reparaturen möchte ich einen verständlichen Aufbau, zugängliche Anschlüsse und austauschbare Module. Für eine kompakte, individuell gestaltete Installation können Leiterplattenfertigung und beauftragte Bestückung passen. Offene Quellen lassen mir diese Wahl. Wer Fertigung, Einbau oder Betreuung anbieten möchte, kann daraus unter den jeweiligen Lizenzen ein eigenes Angebot machen.",
+            "en": "For my own repairs, I want a build I understand, accessible connections and replaceable modules. For a compact, custom installation, board manufacture and commissioned assembly may fit. Open sources leave that choice to me. People offering fabrication, installation or maintenance can build their own services under the applicable licences."
           }
         },
         {
-          "heading": { "de": "Die Frage nach Zuverlässigkeit ist berechtigt.", "en": "Reliability is a fair question." },
+          "heading": {
+            "de": "Meine Antwort ist kontinuierliche Verbesserung.",
+            "en": "My answer is continuous improvement."
+          },
           "body": {
-            "de": "Offenheit ist kein Gütesiegel. Ein Markenname oder ein hoher Preis beweist für sich ebenso wenig Zuverlässigkeit. Entscheidend sind nachvollziehbare Prüfungen am konkreten Aufbau. Bei Number Five gibt es Geräteversuche, Softwareprüfungen und dokumentierte Sonarmessungen. Das belegt jeweils die geprüfte Funktion unter den genannten Bedingungen. Der vollständige Einbau und gemeinsame Dauerbetrieb an Bord sind damit noch nicht nachgewiesen. Diese Grenze gehört zur Antwort, genauso wie die vorhandenen Ergebnisse.",
-            "en": "Openness is not a quality certificate. A brand name or a high price alone does not prove reliability either. What matters is traceable testing of the actual setup. Number Five has device trials, software checks and documented sonar measurements. Each establishes the tested function under the stated conditions. They do not yet establish a complete installation and integrated endurance operation aboard. That limit belongs in the answer alongside the results already obtained."
+            "de": "Ich setze auf Wartbarkeit, Updates, Wiederherstellung und Lernen im echten Einsatz. Wenn ein Fehler auftaucht, möchte ich ihn nachvollziehen, beheben und die Verbesserung teilen können. Erfahrungen mit Daten, Bedienung und Einbau fließen in die nächste Version zurück. Dass wir weiterentwickeln, nimmt dem heutigen Ergebnis seinen Wert nicht.",
+            "en": "I believe in maintainability, updates, recovery and learning through real use. When a fault appears, I want to trace it, fix it and share the improvement. Experience with data, controls and installation feeds into the next version. Continuing to develop does not take away the value of today’s result."
+          }
+        },
+        {
+          "heading": {
+            "de": "Software und Werkstatt gehören zusammen.",
+            "en": "Software and the workshop belong together."
+          },
+          "body": {
+            "de": "Getrennte Dienste, Geräteprofile und Wiederherstellungsrezepte sind bereits Teil unserer Grundlage. Darauf möchte ich Updates und Fernwartung für weitere Komponenten aufbauen und vorhandene Infrastruktur für den Zugang nutzen. Eine Lötstelle reparieren wir am Aufbau; eine Softwarekorrektur können wir verteilen. Beides gehört zu einer Technik, die wir selbst verstehen und verändern können.",
+            "en": "Separate services, device profiles and recovery recipes already belong to our foundation. I want to build updates and remote maintenance for further components on that base and use existing infrastructure for access. We repair a solder joint on the assembly; we can distribute a software fix. Both belong to technology we can understand and change ourselves."
           }
         }
       ],
       "action": {
-        "de": "Wir erklären auf der Baukasten- und Nachbauseite deutlicher, für wen die offene Alternative gedacht ist, welche Fertigungswege sie ermöglichen soll und wie weit die Erprobung reicht. Die jeweiligen Teilprojektseiten nennen vorhandene Ergebnisse und offene Prüfungen.",
-        "en": "We clarify on the platform and build pages who the open alternative is for, which fabrication routes it aims to enable and how far testing extends. Each project page identifies existing results and outstanding checks."
+        "de": "Wir machen die Haltung hinter Number Five sichtbar: heute nutzbare Bausteine zeigen, Erfahrungen aus der Anwendung aufnehmen und gemeinsam weiterbauen. Die Philosophieseite verbindet diese Gedanken mit Software, Fertigung und Einbau.",
+        "en": "We make the thinking behind Number Five visible: show useful components today, learn from their use and keep building together. The philosophy page connects that approach with software, fabrication and installation."
       },
       "open": {
-        "de": "Der vollständige Wiederaufbau, reale Pass- und Einbauprüfungen sowie der gemeinsame Dauerbetrieb an Bord bleiben Entwicklungsaufgaben. Welche Nachweise fehlen, steht beim jeweiligen Baustein. Aus diesem Eintrag folgt keine pauschale Zuverlässigkeitszusage.",
-        "en": "A complete rebuild, physical fit and installation checks, and integrated endurance operation aboard remain development tasks. Each component identifies its missing evidence. This entry does not imply a blanket reliability claim."
+        "de": "Weitere Geräteprofile, einfachere Installation, Updates, neue Sensoren und lokale Fertigungsangebote sind konkrete Möglichkeiten zum Mitmachen. Wähle den Baustein, der dir hilft, und teile, was du dabei lernst.",
+        "en": "More device profiles, simpler installation, updates, new sensors and local fabrication services are concrete ways to join in. Choose the component that helps you and share what you learn."
       },
       "links": [
-        { "path": "platform#who-it-is-for", "label": { "de": "Für wen der Baukasten gedacht ist", "en": "Who the building kit is for" } },
-        { "path": "build#fabrication", "label": { "de": "Selbst bauen oder bauen lassen", "en": "Build it or have it built" } },
-        { "path": "projects/system#next", "label": { "de": "Offene Systemprüfungen", "en": "Outstanding system checks" } }
+        {
+          "path": "philosophy",
+          "label": {
+            "de": "Die Philosophie hinter Number Five",
+            "en": "The philosophy behind Number Five"
+          }
+        },
+        {
+          "path": "platform#who-it-is-for",
+          "label": {
+            "de": "Für wen der Baukasten gedacht ist",
+            "en": "Who the building kit is for"
+          }
+        },
+        {
+          "path": "build#fabrication",
+          "label": {
+            "de": "Selbst bauen oder bauen lassen",
+            "en": "Build it or have it built"
+          }
+        }
       ]
     }
   ]
