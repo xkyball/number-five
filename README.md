@@ -11,7 +11,7 @@ Number Five connects native Android instruments, charts, audio, a Raspberry Pi g
 - This bilingual Sites/Vinext website (`app/`, `content/`, `public/`).
 - Source snapshots under `releases/`, each with its own scope, provenance, licences and build notes. Most download archives are in `public/downloads/`; the large Android source archive is a GitHub release asset.
 - Public evidence notes and image provenance under `docs/`.
-- Community drafts are delivered separately and have not been posted.
+- The [BBN introduction](https://github.com/orgs/bareboat-necessities/discussions/562) is published in “Show and tell”. A separate German OBP introduction is prepared.
 
 The nine website modules explain system/data, HELM, audio, displays/controls, maps/routes, existing plotter formats, sonar, sensors/electronics, and enclosures/installation. Experimental active noise control is a separate research note. Existing private working repositories have not been made public or replaced by this repository.
 

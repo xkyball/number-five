@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-01T11:37:44.140Z",
+  "origin": "https://no5.christophhoffmann.net",
+  "tlsCertificateValidation": true,
+  "dnsOverride": "Current Sites CNAME edge IPv4 used while the local resolver retains the old A answer",
+  "pages": [
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/en/contact",
+      "status": 200
+    },
+    {
+      "path": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/de/contact",
+      "status": 200
+    }
+  ],
+  "checks": [
+    "/robots.txt",
+    "/sitemap.xml",
+    "Anonymous and spoofed owner inbox rejected on custom hostname"
+  ],
+  "contact": {
+    "status": 201,
+    "syntheticMessageRetained": true,
+    "independentD1Readback": "PASS"
+  },
+  "status": "PASS",
+  "defaultDnsChecks": [
+    {
+      "path": "/en",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/system",
+      "status": 200
+    },
+    {
+      "path": "/en/projects/sonar",
+      "status": 200
+    },
+    {
+      "path": "/en/contact",
+      "status": 200
+    },
+    {
+      "path": "/de",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/electronics",
+      "status": 200
+    },
+    {
+      "path": "/de/projects/build",
+      "status": 200
+    },
+    {
+      "path": "/de/contact",
+      "status": 200
+    }
+  ],
+  "defaultDnsCheckCompletedAt": "2026-11-01T11:41:44.328Z",
+  "dnsPropagation": "Default local resolver now serves the Site; all eight forum destinations passed without an override",
+  "sitesDomainStatus": "active",
+  "sitesSslStatus": "active",
+  "sourceCommit": "6451b6ff676888047692f6ea7c4f852191b7e3e7",
+  "deploymentId": "appgdep_6ae7245109d88191ab2eef789801f38f"
+}
