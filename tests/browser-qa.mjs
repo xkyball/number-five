@@ -16,6 +16,7 @@ try{
   assert.equal(response.status(),200,lang+path);
   assert.equal(await page.locator('html').getAttribute('lang'),lang,'HTML language');
   assert.equal(await page.locator('h1').count(),1,'one main heading');
+  for(const img of await page.locator('img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());}
   const missing=await page.locator('img').evaluateAll(imgs=>imgs.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.src));assert.deepEqual(missing,[],'loaded pictures');
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1);assert.equal(overflow,false,'desktop overflow '+path);
   report.pages.push({path:'/'+lang+path,status:response.status()});

@@ -41,7 +41,16 @@
     "No new boat/device/electrical tests were performed for the website.",
     "Historical module evidence has its own scope and failures."
   ],
-  "hosted": "Pending initial publication; final live smoke report delivered separately.",
+  "hosted": {
+    "status": "PASS",
+    "report": "live-smoke.json",
+    "routes": 34,
+    "verifiedDownloads": 11,
+    "contactStorage": "PASS, independently read back from hosted D1",
+    "anonymousAndSpoofedInboxAccess": "Rejected",
+    "ownerHostedLogin": "NOT RUN; local mock lifecycle passed",
+    "syntheticTestMessage": "One retained in owner inbox for inspection/removal"
+  },
   "downloads": {
     "archives": 11,
     "archiveBytes": 56473993,

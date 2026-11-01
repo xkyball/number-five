@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-01T11:12:17.036Z",
+  "origin": "https://number-five.xkyball.chatgpt.site",
+  "headless": true,
+  "pages": [
+    "/de",
+    "/de/projects",
+    "/de/story",
+    "/de/build",
+    "/de/contribute",
+    "/de/contact",
+    "/de/sources",
+    "/de/privacy",
+    "/de/projects/system",
+    "/de/projects/helm",
+    "/de/projects/audio",
+    "/de/projects/displays",
+    "/de/projects/maps",
+    "/de/projects/plotters",
+    "/de/projects/sonar",
+    "/de/projects/electronics",
+    "/de/projects/build",
+    "/en",
+    "/en/projects",
+    "/en/story",
+    "/en/build",
+    "/en/contribute",
+    "/en/contact",
+    "/en/sources",
+    "/en/privacy",
+    "/en/projects/system",
+    "/en/projects/helm",
+    "/en/projects/audio",
+    "/en/projects/displays",
+    "/en/projects/maps",
+    "/en/projects/plotters",
+    "/en/projects/sonar",
+    "/en/projects/electronics",
+    "/en/projects/build"
+  ],
+  "checks": [
+    "Matching language switch",
+    "Anonymous inbox GET/PATCH/DELETE rejected",
+    "Spoofed owner identity headers rejected at hosted boundary",
+    "Cross-origin contact rejected",
+    "Invalid form rejected",
+    "Anonymous inbox page contains sign-in only",
+    "Anonymous live form confirmed durable storage",
+    "Identical retry returns same reference",
+    "Token reuse with changed message rejected",
+    "Honeypot rejected",
+    "Oversized request rejected",
+    "Live mobile layout and navigation"
+  ],
+  "downloads": [
+    {
+      "filename": "android-apps-source-20261101.zip",
+      "bytes": 46300184,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "pi-gateway-source-20261101.zip",
+      "bytes": 615689,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "gps-live-map-source-20261101.zip",
+      "bytes": 97387,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "spotify-receiver-source-20261101.zip",
+      "bytes": 189238,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "camilladsp-extensions-2026-11-01.zip",
+      "bytes": 120837,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "sonar-service-source-20261101.zip",
+      "bytes": 429122,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "pico-tx-firmware-source-20261101.zip",
+      "bytes": 97485,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "chart-converter-core-2026-11-01.zip",
+      "bytes": 1054050,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "venterior-v15-design-source-20261101.zip",
+      "bytes": 124917,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "yamaha-trim-r3-design-source-20261101.zip",
+      "bytes": 136449,
+      "sha256": "PASS",
+      "status": 200
+    },
+    {
+      "filename": "pi-box-r5-design-source-20261101.zip",
+      "bytes": 7308635,
+      "sha256": "PASS",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "ownerHostedLogin": "NOT RUN: no owner browser session used; local mock lifecycle passed separately",
+  "contact": {
+    "status": 201,
+    "syntheticMessageRetainedForOwner": true,
+    "independentD1Readback": "PASS"
+  },
+  "status": "PASS",
+  "publicSourceCommit": "0afafda",
+  "deploymentSourceCommit": "3275e7e8a278a1d1862f42a2c6feeeda6b6513fe",
+  "deploymentId": "appgdep_6ae71e02af8c8191b88a4cac506b0aac"
+}
