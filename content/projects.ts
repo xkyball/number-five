@@ -149,4 +149,4 @@ export const sourceLinks = [
   { id: 'hardware', title: 'Enclosures & electrical checks', path: 'docs/evidence/hardware.md' },
 ];
 export const repository = 'https://github.com/xkyball/number-five';
-export const siteOrigin = 'https://number-five.xkyball.chatgpt.site';
+export const siteOrigin = 'https://no5.christophhoffmann.net';

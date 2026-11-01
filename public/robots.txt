@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Disallow: /api/
-Sitemap: https://number-five.xkyball.chatgpt.site/sitemap.xml
+Sitemap: https://no5.christophhoffmann.net/sitemap.xml

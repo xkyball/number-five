@@ -2,7 +2,7 @@
 
 **Ein Boot, neun offene Teilprojekte. / One boat, nine open projects.**
 
-Project website: https://number-five.xkyball.chatgpt.site/de · [English](https://number-five.xkyball.chatgpt.site/en)
+Project website: https://no5.christophhoffmann.net/de · [English](https://no5.christophhoffmann.net/en)
 
 Number Five connects native Android instruments, charts, audio, a Raspberry Pi gateway, experimental sonar and practical hardware builds. This is a personal development project by Christoph, built with substantial AI assistance and on existing open-source foundations. It is still evolving; a source package is not a completed on-water system acceptance.
 
@@ -35,4 +35,4 @@ New original website software: GPL-3.0-only. New original hardware contributions
 
 ## Mitmachen / Contribute
 
-Nachbauen, messen, drucken, löten, Teile beschaffen und verständlich dokumentieren hilft genauso wie Code. Read [CONTRIBUTING.md](CONTRIBUTING.md), or use the [private contact form](https://number-five.xkyball.chatgpt.site/de/contact).
+Nachbauen, messen, drucken, löten, Teile beschaffen und verständlich dokumentieren hilft genauso wie Code. Read [CONTRIBUTING.md](CONTRIBUTING.md), or use the [private contact form](https://no5.christophhoffmann.net/de/contact).
