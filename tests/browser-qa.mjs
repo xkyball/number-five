@@ -5,6 +5,7 @@ const require=createRequire(import.meta.url);
 const {chromium}=require(process.env.PLAYWRIGHT_MODULE || 'playwright');
 const base=process.env.QA_ORIGIN||'http://127.0.0.1:5185';
 const media=JSON.parse(await readFile('content/media.json','utf8'));
+const search=JSON.parse(await readFile('content/search.json','utf8'));
 const expectedDemos=JSON.parse(await readFile('content/demos.json','utf8'));
 const currentIds=new Set(Object.entries(media).filter(([,m])=>m.captureRole==='current-device').map(([id])=>id));
 await mkdir('outputs/qa',{recursive:true});
@@ -14,11 +15,26 @@ try{
  const context=await browser.newContext({viewport:{width:1440,height:1050},reducedMotion:'reduce'});
  const page=await context.newPage();page.on('pageerror',e=>report.errors.push(String(e)));
  const slugs=['system','helm','audio','displays','maps','plotters','sonar','electronics','build'];
- for(const lang of ['de','en'])for(const path of ['', '/projects','/story','/platform','/philosophy','/qa','/build','/contribute','/contact','/sources','/privacy',...slugs.map(s=>'/projects/'+s)]){
+ for(const lang of ['de','en'])for(const path of ['', '/projects','/story','/platform','/refit','/fabrication','/philosophy','/qa','/build','/contribute','/contact','/sources','/privacy',...slugs.map(s=>'/projects/'+s)]){
   const response=await page.goto(base+'/'+lang+path,{waitUntil:'networkidle'});
   assert.equal(response.status(),200,lang+path);
   assert.equal(await page.locator('html').getAttribute('lang'),lang,'HTML language');
   assert.equal(await page.locator('h1').count(),1,'one main heading');
+  const entry=search.pages[path.replace(/^\//,'')];assert.ok(entry,'registered metadata');
+  assert.equal(await page.title(),entry.title[lang]+' · Number Five','specific page title');
+  assert.equal(await page.locator('meta[name=description]').getAttribute('content'),entry.description[lang],'specific description');
+  const canonical='https://no5.christophhoffmann.net/'+lang+path;
+  assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'),canonical);
+  for(const other of ['de','en'])assert.equal(await page.locator('link[hreflang="'+other+'"]').getAttribute('href'),'https://no5.christophhoffmann.net/'+other+path);
+  const data=JSON.parse(await page.locator('script[type="application/ld+json"]').innerText());
+  assert.equal(data['@context'],'https://schema.org');assert.ok(data['@graph'].some(n=>n['@type']==='Person'&&n.name==='Christoph Hoffmann'));
+  assert.ok(data['@graph'].some(n=>n['@type']==='WebPage'&&n.url===canonical&&n.inLanguage===lang));
+  assert.equal(data['@graph'].filter(n=>n['@type']==='VideoObject').length,await page.locator('video').count(),'visible video schema only');
+  for(const video of data['@graph'].filter(n=>n['@type']==='VideoObject')){const mediaPath=new URL(video.contentUrl).pathname;assert.equal(await page.locator('video source[src="'+mediaPath+'"]').count(),1);assert.ok(video.duration.startsWith('PT'));}
+  if(path.startsWith('/projects/')){assert.equal(await page.locator('#planning h2').count(),search.questions[path.slice(10)].length);}
+  const links=await page.locator('a[href^="/'+lang+'"]').evaluateAll(es=>es.map(e=>e.getAttribute('href')));
+  for(const href of new Set(links)){const target=new URL(href,base);const route=target.pathname.split('/').slice(2).join('/');assert.ok(Object.hasOwn(search.pages,route),'known internal route '+href);if(target.hash&&target.pathname==='/'+lang+path)assert.equal(await page.locator('[id="'+decodeURIComponent(target.hash.slice(1))+'"]').count(),1,'local anchor '+href);}
+
   if(path.startsWith('/projects/')&&path!=='/projects/build'){const hero=page.locator('.article-hero figure');const id=await hero.getAttribute('data-media-id');assert.ok(currentIds.has(id),'current physical hero for '+path);}
   for(const summary of await page.locator('.historical-media summary').all())await summary.click();
   for(const img of await page.locator('img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(i=>i.decode());}
@@ -28,6 +44,13 @@ try{
  }
  await page.goto(base+'/de');assert.match(await page.locator('h1').innerText(),/Dein Boot/);assert.ok(currentIds.has(await page.locator('.workshop-hero-image figure').getAttribute('data-media-id')),'current physical homepage hero');assert.equal(await page.locator('video').count(),expectedDemos.length);for(const v of await page.locator('video').all()){assert.equal(await v.getAttribute('autoplay'),null);assert.notEqual(await v.getAttribute('controls'),null);assert.equal(await v.locator('track').count(),2);const source=await v.locator('source').getAttribute('src');assert.equal((await context.request.get(base+source)).status(),200);for(const track of await v.locator('track').all()){const src=await track.getAttribute('src');const text=await (await context.request.get(base+src)).text();assert.match(text,/^WEBVTT/);}await v.scrollIntoViewIfNeeded();await v.evaluate(async video=>{video.muted=true;await video.play();});await page.waitForTimeout(400);assert.ok(await v.evaluate(video=>video.currentTime>0),'native video advances');await v.evaluate(video=>video.pause());}report.checks.push(expectedDemos.length+' native videos: manual playback, bilingual captions and downloadable sources');await page.screenshot({path:'outputs/qa/desktop.png'});
  await page.getByRole('link',{name:'DE/EN',exact:false}).count().catch(()=>0);
+
+ for(const lang of ['de','en'])for(const route of ['refit','fabrication']){await page.goto(base+'/'+lang+'/'+route);assert.equal(await page.locator('.planning-contact a[href="/'+lang+'/contact"]').count(),2);await page.locator('.lang-switch').click();assert.equal(new URL(page.url()).pathname,'/'+(lang==='de'?'en':'de')+'/'+route);}
+ for(const route of ['refit','fabrication']){await page.goto(base+'/de/'+route);await page.screenshot({path:'outputs/qa/'+route+'-desktop.png',fullPage:true});}
+ const fabrication=await context.request.get(base+'/en/fabrication');assert.ok((await fabrication.text()).includes('Custom boat electronics.'),'new guide in server HTML');
+ const siteMap=await context.request.get(base+'/sitemap.xml');assert.equal(((await siteMap.text()).match(/<loc>/g)||[]).length,44);
+ const nonexistent=await context.request.get(base+'/de/does-not-exist');assert.equal(nonexistent.status(),404,'unknown page is a true 404');
+ report.checks.push('44 unique metadata pairs, canonical/hreflang, matching structured data, source HTML and guide actions');
  await page.goto(base+'/de/platform');await page.locator('.lang-switch').click();assert.equal(new URL(page.url()).pathname,'/en/platform');await page.goto(base+'/de/projects/sonar');const switchLink=page.locator('.lang-switch');await switchLink.click();assert.equal(new URL(page.url()).pathname,'/en/projects/sonar');report.checks.push('Language switch preserves matching project');
  for(const lang of ['de','en']){await page.goto(base+'/'+lang+'/philosophy');assert.equal(await page.locator('.philosophy-body>section').count(),7);await page.screenshot({path:'outputs/qa/philosophy-'+lang+'-desktop.png',fullPage:true});}
  await page.goto(base+'/de/philosophy#updates');await page.locator('.lang-switch').click();assert.equal(new URL(page.url()).pathname,'/en/philosophy');assert.equal(new URL(page.url()).hash,'#updates');report.checks.push('Six bilingual philosophy chapters, links and language-switch anchor');
@@ -48,6 +71,7 @@ try{
  await context.close();
  const mobile=await browser.newContext({viewport:{width:390,height:844},deviceScaleFactor:1,reducedMotion:'reduce'});const phone=await mobile.newPage();phone.on('pageerror',e=>report.errors.push(String(e)));
  for(const path of report.pages.map(p=>p.path)){await phone.goto(base+path,{waitUntil:'networkidle'});assert.equal(await phone.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false,'mobile overflow '+path);}
+ for(const route of ['refit','fabrication']){await phone.goto(base+'/en/'+route);await phone.screenshot({path:'outputs/qa/'+route+'-mobile.png',fullPage:true});}
  for(const lang of ['de','en']){await phone.goto(base+'/'+lang+'/philosophy');await phone.screenshot({path:'outputs/qa/philosophy-'+lang+'-mobile.png',fullPage:true});await phone.goto(base+'/'+lang+'/qa');await phone.screenshot({path:'outputs/qa/qa-'+lang+'-mobile.png',fullPage:true});}
  await phone.goto(base+'/de/qa');await phone.locator('.mobile-menu summary').click();await phone.getByRole('navigation',{name:'Mobile Navigation',exact:true}).getByRole('link',{name:'Q&A',exact:true}).click();assert.equal(new URL(phone.url()).pathname,'/de/qa');
  await phone.goto(base+'/de');await phone.screenshot({path:'outputs/qa/mobile.png'});await phone.locator('.mobile-menu summary').click();await phone.getByRole('navigation',{name:'Mobile Navigation',exact:true}).getByRole('link',{name:'Teilprojekte'}).click();assert.equal(new URL(phone.url()).pathname,'/de/projects');

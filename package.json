@@ -13,7 +13,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "check": "tsc --noEmit",
-    "test:core": "node --experimental-strip-types --test tests/contact.test.mjs tests/qa-content.test.mjs"
+    "test:core": "node --experimental-strip-types --test tests/contact.test.mjs tests/qa-content.test.mjs",
+    "prebuild": "node scripts/generate-sitemap.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

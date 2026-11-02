@@ -35,7 +35,7 @@ node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1
 
 ## Validation
 
-`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises 40 bilingual pages, images, the native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
+`npm run check` and `npm run test:core` check types and meaningful token, authorization, origin and body-limit cases. The headless browser script exercises 44 bilingual pages, images, the native videos and captions, all-page mobile overflow checks, mobile menu, language preservation, contact persistence and inbox state changes with synthetic data that it removes. Its local Playwright resolution is environment-specific; use an installed Playwright and a genuinely headless browser on another machine. No visible GUI fallback.
 
 `outputs/` contains ignored local QA captures and logs. The public QA report identifies performed checks and limits.
 
@@ -50,3 +50,7 @@ Apply website changes to the public repository and synchronize those website fil
 ## Editorial philosophy · 1 November 2026
 
 The current publication describes an open Smart-Boat building kit. A useful version is a result and a basis for improvement. The paired `content/philosophy.json` explains Christoph’s approach in the first person. Avoid global product-readiness disclaimers; describe present functions and specific next improvements. Keep actual measurements, capture conditions, simulated data labels, reproducible faults and licence terms precise. Update and recovery distribution is an architectural direction supported by separate services, device profiles and recovery recipes; this editorial change does not install a remote-update system. Preserve original technical reports and historical revisions.
+
+## Search and planning content · 2 November 2026
+
+`content/search.json` is the paired route metadata and editorial planning-question source. `content/planning.json` supplies the refit and fabrication guides; questions are editorial guidance and must not be described as received feedback. `lib/search.ts` emits metadata and structured descriptions from the same content. Visible media, device revisions and source conditions remain authoritative. `npm run prebuild` generates the 44-page sitemap with the content update date, not the build date. Unknown routes return 404. No analytics, contact API or database changes are part of this work.

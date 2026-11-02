@@ -1,6 +1,6 @@
 # Number Five · offene Technik fürs Boot
 
-**Ein Boot, neun offene Teilprojekte. / One boat, nine open projects.**
+**Bootselektronik nachrüsten. Individuell bauen. Gemeinsam verbessern. / Refit boat electronics. Build it your way. Improve it together.**
 
 Project website: https://no5.christophhoffmann.net/de · [English](https://no5.christophhoffmann.net/en)
 
@@ -10,12 +10,17 @@ Number Five connects native Android instruments, charts, audio, Pi services, son
 
 [Philosophie](https://no5.christophhoffmann.net/de/philosophy) · [Philosophy](https://no5.christophhoffmann.net/en/philosophy)
 
+**Dein Einstieg / Your starting point:**
+
+- [Bootselektronik nachrüsten](https://no5.christophhoffmann.net/de/refit) · [Boat electronics refit](https://no5.christophhoffmann.net/en/refit): vorhandene Instrumente, Android-Displays, Karten, Audio und nachvollziehbare Kostenbausteine. / Existing instruments, Android displays, charts, audio and transparent cost components.
+- [Individuelle Fertigung und Einbau](https://no5.christophhoffmann.net/de/fabrication) · [Custom fabrication and installation](https://no5.christophhoffmann.net/en/fabrication): offene Quellen für Bootseigner, Fertiger und Installateure. / Open sources for boat owners, fabricators and installers.
+
 ## What is here
 
 - This bilingual Sites/Vinext website (`app/`, `content/`, `public/`).
 - Source snapshots under `releases/`, each with its own scope, provenance, licences and build notes. Most download archives are in `public/downloads/`; the large Android source archive is a GitHub release asset.
 - Public evidence notes and image provenance under `docs/`.
-- The [BBN introduction](https://github.com/orgs/bareboat-necessities/discussions/562) is published in “Show and tell”. A separate German OBP introduction is prepared.
+- The [BBN introduction](https://github.com/orgs/bareboat-necessities/discussions/562) is published in “Show and tell”. The [German OBP introduction](https://www.segeln-forum.de/thread/99091-number-five-dein-boot-deine-hardware-ein-gemeinsames-system/) is also published. Existing introductions are linked to the same public website.
 
 The nine website modules explain system/data, HELM, audio, displays/controls, maps/routes, existing plotter formats, sonar, sensors/electronics, and enclosures/installation. Experimental active noise control is a separate research note. Existing private working repositories have not been made public or replaced by this repository.
 

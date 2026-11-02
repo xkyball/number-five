@@ -67,6 +67,25 @@
 @media(max-width:1100px){.philosophy-layout{grid-template-columns:220px minmax(0,1fr);gap:45px}}
 @media(max-width:760px){.philosophy-layout{grid-template-columns:1fr;gap:32px;padding-bottom:45px}.philosophy-layout>aside{position:static}.philosophy-body .philosophy-intro{font-size:19px;margin-bottom:30px}.philosophy-body>section>h2{font-size:29px}.philosophy-body>section>p:not(.eyebrow){font-size:16px}.philosophy-teaser{padding-block:32px;margin-bottom:30px}.philosophy-teaser>p:not(.eyebrow){font-size:17px}}
 .qa-related{display:flex;flex-direction:column;align-items:flex-start;gap:18px}
+.planning-links{display:grid;grid-template-columns:1fr 1fr;gap:65px;padding-block:42px 50px;border-block:1px solid var(--line);margin-block:10px 35px}
+.planning-links h2{font-size:clamp(27px,2.5vw,38px);line-height:1.2;margin-block:17px 20px;max-width:560px}
+.planning-links h2 a{display:block}.planning-links h2 a:hover{color:var(--orange)}
+.planning-links p:not(.eyebrow){max-width:590px;line-height:1.85;color:var(--muted)}
+.planning-hero{margin-bottom:55px}.planning-hero figure{max-width:1050px;margin-inline:auto}.planning-hero img{max-height:540px;object-fit:contain}
+.planning-layout{display:grid;grid-template-columns:240px minmax(0,860px);gap:75px;align-items:start;padding-bottom:35px}
+.planning-layout>aside{position:sticky;top:30px}.planning-layout>aside nav{display:grid;margin-block:20px 28px}
+.planning-layout>aside nav a{display:flex;gap:14px;padding-block:15px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.65}.planning-layout>aside nav a span{color:var(--muted)}
+.planning-layout>aside .small-note{font-size:12px;line-height:1.8;color:var(--muted)}
+.planning-body{max-width:none;min-width:0}.planning-body .planning-answer{font-size:22px;line-height:1.85;color:var(--ink);margin-bottom:40px}
+.planning-body>section{padding-block:33px;border-top:1px solid var(--line);scroll-margin-top:30px}.planning-body h2{font-size:32px;line-height:1.2}.planning-body p{margin-block:18px}
+.planning-related{display:flex;flex-wrap:wrap;gap:15px 25px;margin-top:24px}.planning-related .text-link{font-size:14px;line-height:1.7}
+.planning-body .architecture{grid-template-columns:minmax(0,1fr) 25px minmax(0,1fr) 25px minmax(0,1fr);font-size:13px}.planning-body .arch-column{padding:15px 10px;min-width:0}.planning-body .arch-column strong{font-size:19px}.planning-body .arch-column span{overflow-wrap:anywhere}
+.planning-costs{padding-block:35px 50px;scroll-margin-top:30px}.planning-costs>h2{max-width:950px;font-size:clamp(29px,3.4vw,44px);margin-block:20px 25px}.planning-costs>p:not(.eyebrow){max-width:850px;color:var(--muted);line-height:1.85;margin-bottom:30px}
+.planning-contact{padding-block:40px 70px;border-top:1px solid var(--line)}.planning-contact h2{font-size:clamp(32px,4vw,52px);margin-block:20px 25px}.planning-contact>p:not(.eyebrow){max-width:800px;line-height:1.85;color:var(--muted);margin-bottom:28px}
+.planning-questions{padding-block:35px;border-top:1px solid var(--line);scroll-margin-top:30px}.planning-questions>div>h2{font-size:29px;margin-block:25px 20px}.planning-questions .small-note{font-size:13px;line-height:1.8}
+@media(min-width:1161px) and (max-width:1350px){.site-header{gap:30px;padding-inline:32px}.site-header>nav{gap:18px}.header-end{gap:18px}}
+@media(max-width:1100px){.planning-layout{grid-template-columns:205px minmax(0,1fr);gap:40px}.planning-links{gap:40px}}
+@media(max-width:760px){.planning-links{grid-template-columns:1fr;gap:30px;padding-block:30px 35px}.planning-links>div+div{border-top:1px solid var(--line);padding-top:28px}.planning-hero{margin-bottom:30px}.planning-layout{grid-template-columns:1fr;gap:25px}.planning-layout>aside{position:static}.planning-layout>aside nav{grid-template-columns:1fr 1fr;gap:0 20px}.planning-layout>aside nav a{font-size:12px}.planning-body .planning-answer{font-size:19px}.planning-body h2{font-size:28px}.planning-body .architecture{grid-template-columns:1fr}.planning-body .arch-column{padding:20px}.planning-body .arch-column strong{font-size:22px}.planning-body .arch-link{transform:none}.planning-body .arch-link>small{display:none}.planning-contact{padding-block:35px 50px}.planning-related{flex-direction:column;align-items:flex-start}.planning-questions>div>h2{font-size:26px}.mobile-menu nav{max-height:calc(100dvh - 110px);overflow-y:auto}}
 .qa-invitation{padding-block:50px 80px;border-top:1px solid var(--line)}
 .qa-invitation h2{margin-block:18px 24px;max-width:850px}
 .qa-invitation>p:not(.eyebrow){max-width:760px;color:var(--muted);line-height:1.85;margin-bottom:28px}
