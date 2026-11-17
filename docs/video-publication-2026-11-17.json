@@ -1,0 +1,73 @@
+{
+  "checkedOn": "2026-11-17",
+  "meaning": "VideoObject.uploadDate uses the first confirmed successful public deployment containing this video, not the capture date or correction date. Successful deployment timestamps provide the publication record; the precise instant of an individual viewer request is not claimed.",
+  "captureDateField": "content/demos.json date remains the original capture day",
+  "publicationField": "content/demos.json publishedAt is a timezone-qualified ISO 8601 timestamp",
+  "sources": [
+    {
+      "version": 3,
+      "commit": "6451b6ff676888047692f6ea7c4f852191b7e3e7",
+      "contentDemosPresent": false
+    },
+    {
+      "version": 4,
+      "commit": "bbe163ba6aff375b7ccf4518281859373a2ef07c",
+      "deploymentId": "appgdep_6ae7306b86ac819199759bc7df062d90",
+      "status": "succeeded",
+      "deploymentUpdatedAt": "2026-11-01T12:29:34.510322Z",
+      "demos": [
+        "map-workspaces-native-20261101",
+        "sonar-native-20261101"
+      ]
+    },
+    {
+      "version": 5,
+      "commit": "dc4eae08f34edd5834955236484f96f922693e6c",
+      "demos": [
+        "map-workspaces-native-20261101",
+        "sonar-native-20261101"
+      ]
+    },
+    {
+      "version": 6,
+      "commit": "918fbef4bb5a1b1a230f8c6c8e64bd08ee2a5107",
+      "deploymentId": "appgdep_6ae744ce104881918e27f2af47d30bae",
+      "status": "succeeded",
+      "deploymentUpdatedAt": "2026-11-01T13:56:31.072865Z",
+      "demos": [
+        "map-navigation-native-20261101",
+        "audio-shared-native-20261101",
+        "audio-controls-native-20261101",
+        "sonar-native-20261101",
+        "map-workspaces-native-20261101"
+      ]
+    }
+  ],
+  "videos": {
+    "map-navigation-native-20261101": {
+      "captureDate": "2026-11-01",
+      "publishedAt": "2026-11-01T13:56:31.072865Z",
+      "firstPublicationVersion": 6
+    },
+    "audio-shared-native-20261101": {
+      "captureDate": "2026-11-01",
+      "publishedAt": "2026-11-01T13:56:31.072865Z",
+      "firstPublicationVersion": 6
+    },
+    "audio-controls-native-20261101": {
+      "captureDate": "2026-11-01",
+      "publishedAt": "2026-11-01T13:56:31.072865Z",
+      "firstPublicationVersion": 6
+    },
+    "sonar-native-20261101": {
+      "captureDate": "2026-11-01",
+      "publishedAt": "2026-11-01T12:29:34.510322Z",
+      "firstPublicationVersion": 4
+    },
+    "map-workspaces-native-20261101": {
+      "captureDate": "2026-11-01",
+      "publishedAt": "2026-11-01T12:29:34.510322Z",
+      "firstPublicationVersion": 4
+    }
+  }
+}

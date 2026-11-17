@@ -50,6 +50,6 @@ export function pageStructuredData(lang:Lang,path:string) {
     graph.push({'@type':'Article','@id':url+'#article',headline:entry.title[lang],description:entry.description[lang],inLanguage:lang,author:{'@id':person},publisher:{'@id':person},mainEntityOfPage:{'@id':webPageId},datePublished:['refit','fabrication'].includes(path)?searchData.updated:'2026-11-01',dateModified:updated,image:siteOrigin+image.src});
   }
   const shownDemos=demoData.filter(d=>path===''||projectSlug==='maps'&&d.id.startsWith('map')||projectSlug==='audio'&&d.id.startsWith('audio')||projectSlug==='sonar'&&d.id.startsWith('sonar'));
-  for(const demo of shownDemos) graph.push({'@type':'VideoObject','@id':`${url}#demo-${demo.id}`,name:demo.title[lang],description:demo.description[lang],thumbnailUrl:[siteOrigin+demo.poster],contentUrl:siteOrigin+demo.src,uploadDate:demo.date,duration:`PT${Math.round(demo.durationSeconds*1000)/1000}S`,inLanguage:['de','en'],encodingFormat:'video/mp4',isPartOf:{'@id':webPageId},creator:{'@id':person}});
+  for(const demo of shownDemos) graph.push({'@type':'VideoObject','@id':`${url}#demo-${demo.id}`,name:demo.title[lang],description:demo.description[lang],thumbnailUrl:[siteOrigin+demo.poster],contentUrl:siteOrigin+demo.src,uploadDate:demo.publishedAt,duration:`PT${Math.round(demo.durationSeconds*1000)/1000}S`,inLanguage:['de','en'],encodingFormat:'video/mp4',isPartOf:{'@id':webPageId},creator:{'@id':person}});
   return {'@context':'https://schema.org','@graph':graph};
 }

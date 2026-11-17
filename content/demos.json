@@ -25,7 +25,8 @@
     "limitations": {
       "de": "Vier vorhandene NOAA-Boston-Zellen als Darstellungsbeispiel. Datenstand und Aufnahmezeit sind getrennt dokumentiert. Die Berührungseingaben wurden per ADB automatisiert, darunter eine schrittweise Zweifingerdrehung, deren automatisierte Eingabe hier rund 19 Sekunden dauert. Aufzeichnungsrate und Eingabeablauf sind keine Messung von App-Bildrate, GPU-Zeit oder Displaylatenz. Die Objektabfrage lieferte separat NO_CONFIRMED_PORTRAYAL.",
       "en": "Four existing NOAA Boston cells as a rendering example. Dataset revision and capture time are documented separately. Touch input was automated through ADB, including a stepwise two-finger rotation whose automated input takes about 19 seconds here. Recording rate and input sequence do not measure app frame rate, GPU time or display latency. A separate object query returned NO_CONFIRMED_PORTRAYAL."
-    }
+    },
+    "publishedAt": "2026-11-01T13:56:31.072865Z"
   },
   {
     "id": "audio-shared-native-20261101",
@@ -53,7 +54,8 @@
     "limitations": {
       "de": "Bestätigt den gemeinsamen Hauptreglerzustand in diesem Aufbau; keine Aussage über bildgenaue Synchronisation oder gemessene Verzögerung. Kein Videoschnitt, keine laufende Musik und keine akustische Messung. Andere Bootswerte bleiben als Simulation gekennzeichnet.",
       "en": "Confirms the shared main-fader state in this setup; no claim of frame-accurate synchronization or measured latency. No montage, music playback or acoustic measurement. Other boat values remain labelled as simulated."
-    }
+    },
+    "publishedAt": "2026-11-01T13:56:31.072865Z"
   },
   {
     "id": "audio-controls-native-20261101",
@@ -81,7 +83,8 @@
     "limitations": {
       "de": "Keine Wiedergabequelle verbunden; keine Musik, künstlichen Spektren oder Änderungen der Klangwerte. Der Bootsheader ist als Simulation gekennzeichnet. Diese Vorführung zeigt die Bedienung auf einem Client und die vorhandenen Klang- und Raumdaten. Die gemeinsame Bedienung zeigt der separate Zweiclient-Clip.",
       "en": "No playback source connected; no music, artificial spectra or changed sound settings. The boat header is labelled as simulated. This shows operation on one client; the separate two-client clip demonstrates shared control."
-    }
+    },
+    "publishedAt": "2026-11-01T13:56:31.072865Z"
   },
   {
     "id": "sonar-native-20261101",
@@ -109,7 +112,8 @@
     "limitations": {
       "de": "Versuchsaufbau mit eigener Echoerfassung und angezeigtem Tiefenwert. Temperatur wird nicht gezeigt. Die übrige Kopfzeilen-Telemetrie ist als Simulation gekennzeichnet. Aufzeichnungsrate ist keine App- oder GPU-Messung.",
       "en": "Test setup with our own echo acquisition and displayed depth. Temperature is not shown. Other header telemetry is labelled as simulated. Recording frame rate is not an app or GPU measurement."
-    }
+    },
+    "publishedAt": "2026-11-01T12:29:34.510322Z"
   },
   {
     "id": "map-workspaces-native-20261101",
@@ -137,6 +141,7 @@
     "limitations": {
       "de": "Ergänzende Bedienvorführung; kein Verschiebe-, Zoom-, Rotations- oder Geschwindigkeitsnachweis der Karte. Die schematische Stilvorschau ist keine gerenderte Seekarte. Keine Einstellungen wurden angewendet.",
       "en": "Supplementary UI tour; not proof of chart panning, zooming, rotation or rendering speed. The schematic style preview is not a rendered nautical chart. No settings were applied."
-    }
+    },
+    "publishedAt": "2026-11-01T12:29:34.510322Z"
   }
 ]

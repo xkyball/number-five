@@ -1,0 +1,33 @@
+{
+  "checkedOn": "2026-11-17",
+  "scope": "Video publication DateTime and initial-head metadata correction",
+  "status": "PASS",
+  "build": "PASS",
+  "typeCheck": "PASS",
+  "coreTests": {
+    "passed": 6,
+    "failed": 0
+  },
+  "rawProductionHtmlPages": 44,
+  "videoSources": 5,
+  "videoObjectOccurrences": 20,
+  "canonicalAndLanguagesInInitialHead": true,
+  "simulatedCrawlerRequests": {
+    "passed": true,
+    "actualCrawlerVisit": false
+  },
+  "headlessNavigation": {
+    "widths": [
+      1440,
+      390
+    ],
+    "checks": 12,
+    "uncaughtPageErrors": []
+  },
+  "contactToken": "200",
+  "anonymousInbox": "403",
+  "normalPrivacyPage": "200",
+  "malformedMetadataIdentifier": "404",
+  "sourceAndBuildRuntimeFilesCompared": 61,
+  "liveCheck": "Performed separately after deployment; this file records local production-build checks only."
+}

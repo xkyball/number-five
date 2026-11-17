@@ -33,3 +33,11 @@ Count relevant installation ideas, fabrication offers and technical contribution
 ## Checks
 
 The headless regression covers all 44 pages, unique paired metadata, canonical/language links, matching structured video descriptions, images, playback, mobile layout, language switching, keyboard access, local contact persistence and owner-only inbox actions. A separate audit checked 1,736 internal links with no missing fragment target. Screenshots stay in ignored `outputs/`; results are never opened automatically.
+
+## Metadata correction · 17 November 2026
+
+`next.config.ts` uses `htmlLimitedBots: /.*/` so ordinary browsers and crawlers with a user-agent receive the same complete metadata in the initial HTML head. This uses Vinext’s supported configuration, without patching the framework. The head contains the unique title, description, canonical URL and both language alternatives before the body; no JavaScript is needed to discover them. The prior route-shaped `metadataKey` from streamed metadata is no longer needed on these pages. Requests without a user-agent remain subject to the framework’s documented implementation; the regression records the exact agents it checks.
+
+`VideoObject.uploadDate` comes from the separate `publishedAt` field. The original `date` remains the capture day. First successful deployment records establish the publication timestamps for the two videos in version 4 and the three additional videos in version 6; see `video-publication-2026-11-17.json`. Do not invent midnight timestamps or reset publication dates when correcting metadata.
+
+Run `node tests/seo-http-qa.mjs` against a local production build, then the custom domain after deployment. This regression reads the raw HTTP HTML for all 44 routes and checks the initial head, unique metadata, paired language links and timezone-qualified video dates. Additional user-agent checks are diagnostic simulations, not evidence of actual crawler visits. This correction and an indexing request do not establish that Google has indexed a page or improved its ranking.
